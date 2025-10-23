@@ -1,0 +1,523 @@
+# Introducción a AWS y Cloud Computing
+
+## Introducción a la Clase
+Clase teórico-práctica sobre AWS y cloud computing.
+-> Enfoque práctico con ejemplos
+-> Conectar con AWS Academy para laboratorios
+-> Cada estudiante tiene 50 créditos (equivalente a $50 USD)
+-> Créditos se consumen, importante para obligatorios
+
+## Modelos de Despliegue Tradicional
+
+### On-Premise (En Premisa)
+Características del modelo tradicional:
+-> Aplicación desplegada en servidores físicos de la empresa
+-> Infraestructura propia (puede incluir máquinas virtuales)
+-> Problemas principales:
+    -> Costo alto de inversión inicial (servidores, equipo de red, administradores)
+    -> Mantenimiento constante del sistema
+-> Escalado problemático:
+    -> Para eventos masivos (Cyber Monday, Black Friday) hay que comprar servidores nuevos
+    -> Una vez pasada la demanda, queda infraestructura ociosa
+
+## Cloud Computing
+
+### ¿Qué es Cloud Computing?
+-> Desacople de infraestructura física
+-> Concepto de servicios en lugar de hardware
+-> Proveedor cloud gestiona la infraestructura
+-> Pago por uso en lugar de inversión inicial
+
+### Ventajas del Modelo Cloud
+-> Bajo costo de infraestructura inicial
+-> Pago según uso real del servicio
+-> Escalado flexible según demanda
+-> Sin infraestructura ociosa
+
+## Modelos de Servicio (IaaS, PaaS, SaaS)
+
+### Infraestructura como Servicio (IaaS)
+Características:
+-> Proveedor provee infraestructura base
+-> Empresa gestiona desde sistema operativo hacia arriba
+-> Ejemplo en AWS: EC2
+-> Responsabilidades del cliente:
+    -> Sistema operativo
+    -> Seguridad
+    -> Configuración de red (VPCs)
+    -> Bases de datos
+    -> Instalación de software
+-> Ventaja: control total sobre configuración
+-> Desventaja: más gestión y configuración
+
+### Plataforma como Servicio (PaaS)
+Características:
+-> Proveedor gestiona infraestructura y plataforma
+-> Desarrollador se enfoca solo en la aplicación
+-> Ejemplos: AWS App Runner, Elastic Beanstalk
+-> Todo hacia abajo lo gestiona el proveedor
+-> Aumenta costo pero simplifica desarrollo
+
+### Software como Servicio (SaaS)
+Características:
+-> Pago directo por aplicación utilizada
+-> Sin gestión de ninguna capa inferior
+-> Ejemplos: Zoom, Microsoft Teams, Dropbox
+-> Solo se consume el servicio
+-> Ejemplo: servicio de email con API de AWS (SES)
+
+### Comparación de Modelos
+-> IaaS: más control, más gestión
+-> PaaS: balance entre control y simplicidad
+-> SaaS: mayor simplicidad, menos control
+-> Más hacia la derecha = más caro en suscripción
+-> Menos gestión hacia abajo
+-> Más escalable porque proveedor asume responsabilidades
+
+## Ventajas de Servicios Cloud (SaaS)
+
+Desde perspectiva de negocio:
+-> Instalación y configuración reducida
+-> Prueba fácil sin compromiso (free tier disponible)
+-> Accesible desde cualquier plataforma
+-> Actualizaciones automáticas
+-> Pago por uso según consumo
+-> Escalado según crecimiento
+-> Seguridad alta (sin piratería, sin servers mal configurados)
+-> Altamente escalable
+
+## Proveedores Cloud
+
+Principales proveedores:
+-> AWS (Amazon Web Services): ~30% del mercado
+-> Google Cloud Platform (GCP)
+-> Azure (Microsoft)
+-> IBM Cloud
+-> Alibaba Cloud
+
+### AWS como Proveedor Principal
+Ventajas de AWS:
+-> Costo: solo pagas lo que usas, sin costo inicial
+-> Escalado bajo demanda según necesidades
+-> Liberación de recursos cuando termina demanda
+-> Infraestructura global: presencia en casi todo el mundo
+-> Alta disponibilidad: 99.99% o superior según servicio
+-> SLA rígidos con compensación por outages
+-> Seguridad y monitoreo 24/7
+-> Plataforma completa con servicios variados
+
+## Regiones y Availability Zones
+
+### Regiones
+-> Lugares físicos donde AWS tiene data centers
+-> Cada región tiene múltiples Availability Zones
+-> Ubicaciones geográficas para proximidad con usuarios
+-> Permite escalado entre regiones
+-> Fallas regionales no afectan otras regiones
+-> Precios varían por región (ej: US East más barato que São Paulo)
+
+### Availability Zones (AZs)
+-> Datacenters dentro de una región
+-> Conectados entre sí con cableado dedicado
+-> Zonas separadas físicamente
+-> Permite redundancia y resiliencia
+-> Si cae una zona, servicio continúa desde otra
+-> Distribución de carga entre zonas
+
+### Estructura de Resiliencia
+-> Pruebas de simulación: empresas grandes apagan zonas a propósito
+-> Ejemplo: Netflix apaga regiones enteras para pruebas
+-> Objetivo: verificar que sistema soporta fallas
+-> Resiliencia es pilar fundamental de AWS
+
+## Data Centers
+
+Características físicas:
+-> Instalaciones físicas con servidores en racks
+-> Seguridad física: guardias privados
+-> Sistemas redundantes:
+    -> Energía redundante
+    -> Refrigeración redundante
+    -> Conexión redundante
+-> Prevención de downtime
+-> Equipos de seguridad 24/7 para configuración e infraestructura
+
+## AWS Academy
+
+### Características
+-> Servicio orientado a educación
+-> Experiencia limitada de AWS
+-> Algunos servicios no disponibles o limitados
+-> Suficiente para el curso
+
+### Créditos y Límites
+-> 50 créditos por estudiante = $50 USD
+-> Si se exceden créditos, se cierra lab y se pierde todo
+-> Importante: reservar créditos para obligatorios
+-> Créditos son por cuenta (no combinables entre cuentas)
+-> Casos excepcionales: contactar docentes para cuenta adicional
+
+### Uso del Free Tier
+-> No todos los servicios tienen free tier perpetuo
+-> Algunos con trial gratuito
+-> EC2 tiene máquinas gratuitas
+-> Otras máquinas consumen créditos
+-> Free tier bastante generoso
+
+## Servicios Principales de AWS
+
+### Servicios para Despliegue
+-> EC2: máquinas virtuales (Infrastructure as a Service)
+-> App Runner: plataforma de despliegue (Platform as a Service)
+-> Elastic Beanstalk: gestión de deploys
+-> Lightsail: para aplicaciones simples
+
+### Servicios de Base de Datos
+-> RDS: bases de datos relacionales
+-> DynamoDB: base de datos NoSQL (key-value)
+-> DocumentDB: MongoDB managed
+
+### Servicios de Almacenamiento
+-> S3: almacenamiento de archivos (imágenes, fotos, archivos estándar)
+-> Glacier: almacenamiento para backups (costo bajo)
+
+### Servicios de Red
+-> VPC: definición de redes privadas
+-> Load Balancer: distribución de carga
+-> Route 53: gestión de DNS
+-> Elastic IP: manejo de IPs elásticas
+
+### Otros Servicios
+-> CloudWatch: monitoreo y logs
+-> Lambda: funciones serverless
+-> API Gateway: gestión de APIs
+-> CloudFront: CDN (Content Delivery Network)
+
+## Servicios Globales vs Regionales
+
+### Servicios Globales
+-> Aplican para todos los data centers de todas las regiones
+-> IAM: manejo de identidades y permisos
+-> S3: archivos se replican en todas las regiones
+-> CloudFront: sistema de caché global
+-> Route 53: DNS global
+-> Secrets Manager: gestión de credenciales globales
+
+### Servicios Regionales
+-> Específicos de una región
+-> EC2: máquina virtual en región específica
+-> RDS: instancia en región específica
+-> DynamoDB: tabla en región específica
+-> Pueden replicarse entre regiones manualmente
+
+## Servicios Managed vs No Managed
+
+### Servicios No Managed (EC2)
+Responsabilidades del cliente:
+-> Gestionar sistema operativo
+-> Instalar dependencias
+-> Escalar manualmente (dar más recursos)
+-> Redundancia manual
+-> Load balancer manual
+-> Backups manuales
+-> Monitoreo manual
+-> Patches y actualizaciones
+-> Manteimiento de SO
+-> Acceso SSH a máquina
+
+### Servicios Managed (RDS)
+Gestionado por AWS:
+-> Actualizaciones y patches automáticos
+-> Replicación automática entre zonas
+-> Backups y restore automáticos
+-> Solo gestionar tablas y usuarios
+-> No acceso SSH a servidor de base de datos
+-> Más nivel PaaS
+-> Cliente se enfoca en aplicación, todo lo demás delegado
+
+## IAM (Identity and Access Management)
+
+### ¿Qué es IAM?
+-> Servicio para gestión de identidades en AWS
+-> Manejo centralizado de usuarios, roles y permisos
+-> Control de acceso a recursos AWS
+-> Gestión de credenciales y keys
+-> Auditoría y logging de accesos
+
+### Conceptos de IAM
+-> Usuario root: creado al crear cuenta AWS (usuario máster)
+-> Mejor práctica: crear usuarios con menos permisos
+-> Principio de menor privilegio: dar mínimos permisos necesarios
+-> Service account: cuentas de servicio específicas para aplicaciones
+-> Reduce blast radius si cuenta se compromete
+-> MFA (Multi-Factor Authentication): requerido para usuarios
+-> Roles: configurar roles según necesidades
+
+### AWS Academy y IAM
+-> En Academy no pueden configurar IAM completamente
+-> Roles y usuarios pre-establecidos
+-> LabRole: rol por defecto con permisos limitados
+-> Suficiente para el curso
+
+## EC2 (Elastic Compute Cloud)
+
+### ¿Qué es EC2?
+-> Servicio de máquinas virtuales
+-> Infraestructura como Servicio (IaaS)
+-> Opciones: EC2 o Lambda para ejecución
+
+### Creación de Instancia EC2
+
+#### Paso 1: Nombre e Imagen
+-> Launch instance
+-> Nombre: identificador de la instancia
+-> AMI (Amazon Machine Image): imagen base del sistema operativo
+    -> Amazon Linux: distribución basada en Debian para AWS
+    -> Otras distribuciones Linux disponibles
+    -> Windows Server disponible
+    -> Imágenes especializadas disponibles
+
+#### Paso 2: Arquitectura
+-> Consideración importante para Macs con arquitectura ARM
+-> x86: arquitectura clásica
+-> ARM: nuevas arquitecturas de procesador (ej: Mac M1, M2)
+-> No todos los paquetes disponibles en ARM igual que en x86
+-> Docker puede compilar diferente según plataforma
+-> Recomendación: usar x86 para evitar problemas
+
+#### Paso 3: Tipo de Instancia
+-> Define hardware de la máquina
+-> Familias de instancias:
+    -> General Purpose: propósito general, equilibradas
+    -> Compute Optimized: optimizadas para cómputo
+    -> Memory Optimized: optimizadas para memoria
+-> Recomendación: usar instancias t2 o t3 con free tier
+-> Free tier generoso: no consume créditos
+
+#### Paso 4: Key Pair
+-> Par de claves pública/privada para SSH
+-> Descargar archivo .pem (privada)
+-> Cambiar permisos: chmod 400 para Linux/Mac
+-> Windows: proceso diferente
+-> Usar para conectar por SSH a la máquina
+
+#### Paso 5: Network Settings
+-> VPC: red privada virtual
+-> Security groups: firewall de la máquina
+-> Configurar acceso público si se necesita
+
+### Tipos de Instancias
+
+#### On-Demand
+-> Precio fijo, garantizada
+-> Pagas por hora de uso
+-> No te la pueden quitar
+
+#### Spot
+-> Mucho más barato que On-Demand (~50% menos)
+-> AWS puede quitártela cuando necesite
+-> Bueno para pruebas o cargas no críticas
+-> Ejemplo en producción: MercadoLibre usa para pruebas
+
+#### Reserved
+-> Reservar capacidad por más tiempo
+-> Más barato que On-Demand
+
+### Network y Security Groups
+
+#### VPC (Virtual Private Cloud)
+-> Red privada virtual
+-> Entorno aislado para recursos AWS
+-> Recursos dentro de VPC pueden comunicarse entre sí
+-> Security groups definen acceso externo
+
+#### Security Groups
+-> Firewall de AWS
+-> Define reglas de entrada (inbound) y salida (outbound)
+-> Default: todo permitido hacia afuera
+-> Importante: configurar inbound según necesidades
+-> Ejemplo: abrir puerto 80 para HTTP, puerto 22 para SSH
+-> Source: 0.0.0.0/0 permite acceso desde cualquier IP
+
+### Conexión a EC2
+Comando SSH:
+```bash
+ssh -i ruta/al/archivo.pem ubuntu@ip-publica
+```
+-> Primero: dar permisos con chmod 400
+-> Luego: conectar con comando ssh
+-> Usuario por defecto: ec2-user o ubuntu según AMI
+
+### Automatización con Infrastructure as Code
+-> CloudFormation: genera JSON con configuración
+-> Permite reproducir infraestructura
+-> Versionado de infraestructura
+-> Más controlado que creación manual
+-> Recomendado para producción
+
+## RDS (Relational Database Service)
+
+### ¿Qué es RDS?
+-> Servicio de AWS para bases de datos relacionales
+-> Versiones: MySQL, PostgreSQL, Aurora
+-> Aurora: desarrollo propio de AWS (más costoso, mejor performance)
+
+### Creación de Base de Datos RDS
+
+#### Paso 1: Configuración Básica
+-> Engine: elegir motor (MySQL, PostgreSQL, Aurora)
+-> Template: producción/dev/test (probar con dev/test más barato)
+-> DB instance identifier: nombre de la base de datos
+-> Master username: usuario para conectarse
+-> Master password: contraseña (o usar Secret Manager)
+-> Para práctico: contraseña simple
+
+#### Paso 2: Capacidad
+-> Instance configuration: tipo de máquina
+-> Recomendación: usar más barato para no consumir créditos
+-> Multi-AZ deployment: replicación en otra zona (más caro)
+
+#### Paso 3: Conectividad
+-> VPC: red donde estará la base de datos
+-> Subnet: subnet específica
+-> Public access: habilitar si necesitas conectar desde fuera
+-> Security groups: configurar reglas de acceso
+
+#### Paso 4: Monitoring y Logs
+-> Performance Insights: monitoreo de performance
+-> Enhanced monitoring: monitoreo avanzado
+-> Para práctico: no necesario
+
+### Recomendaciones para Obligatorio
+-> Usar DynamoDB en lugar de RDS si es posible
+-> DynamoDB más fácil para dominio chico
+-> Sin relaciones complejas
+-> No relacional es más flexible
+-> Desventaja: correr migraciones es complejo
+
+## Arquitectura del Ejemplo (Movie Manager)
+
+Sistema de gestión de películas:
+-> Frontend: Angular
+-> Backend API: Movie Manager
+-> Base de datos relacional: MySQL en RDS
+-> Imágenes: S3
+-> Worker para procesamiento: conectado a DynamoDB
+-> DynamoDB: metadata
+
+### Flujo de Trabajo
+1. Frontend Angular comunica con API
+2. API consulta MySQL para datos de películas
+3. Imágenes almacenadas en S3
+4. Worker procesa y guarda metadata en DynamoDB
+
+## Recomendaciones para Obligatorio
+
+### Arquitectura
+-> Primer obligatorio: monolito
+-> Segundo obligatorio: microservicios
+-> Código modular desde el inicio
+-> Separar dominio por módulos
+-> Facilitar transición a microservicios después
+
+### Base de Datos
+-> Opción 1: DynamoDB (recomendado)
+    -> Más fácil para dominio chico
+    -> Sin relaciones complejas
+    -> Más flexible
+-> Opción 2: RDS MySQL/PostgreSQL
+    -> Más complejo por migraciones
+    -> Si sienten cómodos con SQL, pueden usarlo
+
+### Desarrollo
+-> Tener todo funcionando en local primero
+-> Probar completamente en local
+-> Documentar todo
+-> Docker Compose para levantar localmente
+-> Conectar todo en local antes de deployar
+-> Deployar al final cuando todo funcione
+
+### AWS Academy
+-> Usar créditos con cuidado
+-> Apagar recursos cuando no se usen
+-> Evitar servicios muy costosos
+-> 50 créditos suficientes para el curso
+
+## Configuración de Credenciales AWS
+
+### Ubicación de Archivos
+Windows:
+-> C:\Users\[usuario]\.aws\credentials
+
+Mac/Linux:
+-> ~/.aws/credentials
+
+### Contenido del Archivo
+Formato:
+```
+[default]
+aws_access_key_id = TU_ACCESS_KEY
+aws_secret_access_key = TU_SECRET_KEY
+aws_session_token = TU_SESSION_TOKEN
+```
+
+### Por qué Copiar Credenciales
+-> Cada vez que apagas y prendes lab, cambian
+-> Copiar todo nuevamente
+-> Default profile o crear perfiles personalizados
+-> Ejemplo: perfil para tesis
+
+## Consola de AWS
+
+### Acceso
+-> Botón "Open AWS Console" desde AWS Academy
+-> Dash muestra servicios disponibles
+-> Más de 300 servicios disponibles
+-> No todos disponibles en Academy
+
+### Regiones en Academy
+-> US East 1: Ohio
+-> US West 2: California
+-> Recomendación: usar US East 1 (más cerca geográficamente)
+
+### Explorador de Servicios
+-> Documentación útil para certificación
+-> Explicación de cada servicio
+-> Lo que está permitido y lo que no
+
+## Conceptos Clave para Entender AWS
+
+### Terminología
+-> Consola de AWS Academy ≠ AWS CLI
+-> Console: interfaz web
+-> CLI: línea de comandos
+-> Amazon Linux: distribución específica de AWS
+-> Free tier: servicios gratuitos
+
+### Buenas Prácticas
+-> No dejar recursos corriendo cuando no se usan
+-> Usar servicios más económicos en Academy
+-> Documentar cambios en infraestructura
+-> Usar Infrastructure as Code en producción
+-> Principio de menor privilegio en seguridad
+
+## Resumen de la Clase
+
+### Qué se Cubrió
+-> Introducción a cloud computing
+-> Modelos de servicio (IaaS, PaaS, SaaS)
+-> Conceptos de AWS
+-> Regiones y Availability Zones
+-> AWS Academy y créditos
+-> Introducción a EC2
+-> Introducción a RDS
+-> IAM básico
+-> Próximos pasos: ejemplo práctico con Movie Manager
+
+### Próxima Clase
+-> Crear instancia EC2 y conectarse
+-> Subir imagen al registry
+-> Crear base de datos DynamoDB
+-> Desplegar aplicación con ECS
+-> Ejemplo completo del sistema Movie Manager
+

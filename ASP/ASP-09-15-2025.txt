@@ -1,0 +1,377 @@
+# Arquitectura de Software: Pruebas de Performance
+
+## Introducción
+
+    -> Organización de grupos para actividades
+    -> Grupos de tres estudiantes para micro tareas y actividades
+    -> Micro tarea de Docker publicada en Teams
+    -> Entrega en dos semanas aproximadamente
+    -> Actividad presencial/remota miércoles siguiente
+    -> Prueba parcial miércoles también
+
+## Organización de Grupos
+
+### Micro Tareas y Actividades
+
+    -> Grupos de tres estudiantes
+    -> Recomendación: esos grupos de tres ya queden a lo largo de todas las actividades
+    -> Pueden cambiarlos pero sabe bastante complejo porque vamos a usar el mismo classroom a lo largo de todo el curso
+    -> Classroom se usa a lo largo de todo el semestre
+    -> Ya corren, fíjense bien con quién van a hacer
+    -> Si van a ese grupo de tres de dos o lo que sea
+    -> Y mismo para la corrección, o sea yo van a quedar las micro tareas
+    -> Las que sean grupales que normalmente van a hacer toda
+    -> Y después van a tener las individuales
+    -> Van a tener las actividades también que van a quedar en el mismo
+    -> Todo es eso ya queda avisado
+
+### Micro Tarea 1: Docker
+
+    -> Tarea utilizando Dockerfile que cree la imagen en el backend tanto usando Dockerfile pero una carpeta docker y el repositorio
+    -> Parte uno y parte dos bastante clara de letra
+    -> Tiene que usar README para responder las preguntas del cuestionario de la parte cuatro
+    -> Así mismo para la parte uno, dos y tres
+    -> Además de subir el código tienen que subir capturas del deploy
+    -> Esta tarea normalmente decía que grupo de dos este semestre es el primero que se hacen con grupo de tres
+    -> Recomendación: las salas, o sea es muy sencillo
+    -> No para dos ni para tres o complicar
+    -> La micro tarea es presencial pero hay la presencial
+    -> La presencial es la que voy a hablar ahora porque todos los grupos la tuvieron el primer día de esta semana
+
+### Actividad Miércoles
+
+    -> Nosotros cómo recién me están volviendo ahora
+    -> No cambia nada hacerlo hoy mañana
+    -> Luego vamos a hacer la prueba ya le doy el aviso
+    -> Voy a publicar por Teams vamos a hacer la prueba miércoles
+    -> Tengo que ir definiendo el cronograma
+    -> Terminemos con los feriados
+    -> Nosotros tenemos un feriado creo que la semana que viene el miércoles estaba
+    -> Ya hemos tenido un feriado lunes
+    -> La realidad es que esa prueba es presencial presencial es muy chiquito
+    -> No va a dar para que todo no
+    -> Y después van a tener un tiempo de extra post prueba
+    -> Así que organicen no tienen por qué venir
+    -> Mi consejo: si vienen a la prueba y además esta prueba los grupo de la noche es remoto
+    -> Entonces estamos de acuerdo que no no es presencial
+    -> La actividad siempre da un ratito más para que las solucionen
+    -> Capaz que esta las 12 del día de hoy o algo así se entiende
+    -> Tampoco quiero mensajes de profe no pude venir de prueba
+    -> No se cuánto tienen tiempo
+    -> Si todo el día no pueden hacerla bueno ahí no es
+    -> En el caso de que sea un problema mayor ahí si se comunican
+    -> Pero si ya está excede mi no no es una prueba común
+    -> Es como que bueno le doy la prueba tiene ratito la clase y un rato más
+    -> Van a tener un rato más para poder cerrarlo
+
+### Recomendaciones para Actividades
+
+    -> Mi consejo al ser de a tres cuál sería
+    -> Como me llama para ahorita al chequear algo como a hacer alguna acepta ya o
+    -> No tanto la actividad que soy funcion de como en avión mi es
+    -> Pero todavía no la actividad
+    -> La actividad ambas van a ser de grupo de tres y no
+    -> Voy detectar que todas las actividades van a ser a tres
+    -> Recuerda que las micro tareas son individual o por cinco
+    -> Las actividades como que va a comer horario de clase
+    -> Nosotros la clase que viene lo que vamos a hacer o sea esa es la diferencia
+    -> Por ser la actividad tiene más puntos porque es una actividad que se dan clases
+    -> Yo le da la letra y me encargan mirándolo te nos me miran yo los miro y tal ahí trabajan
+    -> Es un poco de eso
+    -> La idea de la actividad es esa que se realiza en clases que quiere pero siempre se da un rato más
+    -> Yo eso se lo había hecho al principio del semestre que siempre van a tener como hasta la noche o algo así
+    -> Van a tener como un plazo donde van a poder limpiar
+    -> Pero normalmente ha ido ya hasta la hasta el poquito de la madrugada
+    -> Cosa de que bueno no es hasta las 12 en puntual sino que ahí sino pudo trabajar y llegó el trabajo
+    -> Bueno también tenés como que un plazo para limpiarlo
+    -> También individual como que
+    -> Lo que pasa sí sí
+    -> Mi consejo sería que tengan en cuenta que la clase que se puede usar para eso da
+    -> Pues luego solo lo voy tirando notas yo
+    -> Entonces ustedes ahí pueden tirar dudas
+    -> O también puede decir ché mira y solo o sea son 25 tienen que encuadrarse
+    -> O si tiene que ser con lo de la clase para el obligatorio si pueden hacerlo puede hacerlo
+    -> Me este cruzado por grupo de la noche o de la mañana
+    -> Pero estas actividades yo sería que las haga porque ya cuando quedes ese grupo va a ser hablar largo de todo el semestre
+    -> Entonces si te no te matas haciendo todas las actividades de sol que es un poco lo que yo decía en el classroom
+    -> Ustedes ya van a crear un equipo entonces después es un problema para destruir ese equipo bajarlo
+    -> Y yo tengo que ver cuando a la hora de corregir se me complica pila
+    -> Entonces tengo que andar en cuenta a ver cómo cambiaron
+    -> Entonces lo más sano es que publiquen publiquen ahí busquen te si
+    -> O si deberían todos tener a alguien para poder este cuadrar equipo
+    -> Y si alguien queda solo me dice pero deberían todos tener equipo no se deberían armar un grupo de a tres
+    -> A ver somos 25 por lo que me parece ahí en solicitud
+    -> No son pero qué pasa una persona abandonó en curso entonces no no debería o sea yo envié 25 invitaciones
+    -> En realidad hay una persona que ya no está
+    -> Entonces el grupo entonces sí deberían cuadrar perfecto todos los grupos a tres
+    -> No debería haber inconveniente usen los channel que tienen y cualquier cosa me dice y yo los los marqué
+
+### Modalidad Actividad Miércoles
+
+    -> Consejo: curso es como la mañana y a la noche
+    -> Entonces la mañana es remoto y presencial algo remoto y presencial sí
+    -> Entonces qué es lo que sucede mire lo que es el salón mire la cantidad de chupes yo lo que le reco sí
+    -> Y ahí tenemos dos no más yo lo que le recomiendo es si van a venir a la actividad corren para venir en todo el equipo
+    -> Y por qué qué pasa si no estás consumo que no sé qué que hablando que a los gritos es un problema
+    -> Entonces mi consejo o se coordinan todo para venir o se quedan todo su casita calentito
+    -> Yo estoy acá también contento este tranquilo y bueno y van van trabajando en la actividad
+    -> Pero no además no es un salón con mucho el chufe entonces van a entrar todas las computadoras
+    -> Hace una locura no sé no no no lo estoy incitando a que la van remoto
+    -> Pero vean ustedes cómo coordinarse si quieren venir venga entregan las computadoras cargadas porque podemos pedir alguna zapatilla o algo para la para como alargue pero no no mucha cosa
+    -> Este por lo que veo estoy mirando capaz que más allá hay 50 chupes de escondidas
+    -> Entonces este no carga si si ese chuf está ah ya va perfecto
+    -> Si la permitamos allí no pero a ver podemos podemos conseguir algo y vengan si tienen dudas
+    -> Porque como la actividad la pueden seguir en la noche pueden sacar capaz que la persona que le gusta venir presencial y sacarse la todo presencial y mostrar
+    -> Los mi consejo el venga todo el equipo pues si no van hasta los gritos se vuelve un barullo
+    -> Mire en salón lo que es y es insoportable estaba o sea no es una actividad 100 por ciento presencial
+    -> Digo porque sino van a venir todos y pas hacer una locura y capaz que hay gente que quería hacerlo remoto
+    -> La actividad de que se va a tratar docker y deploy
+    -> Todos están en la organización ahí vi que ahí me mandó recién vi que me mandó el fin de semana se ya me parecía invitada
+    -> Después este re chequeamos y este también todos tienen el acceso a AWS Academy
+    -> Hay alguien que no tenga acceso no es un habla ahora calle para siempre
+    -> Si alguien está escuchando esto me escribe por teams y lo echo
+
+## AWS Academy y Créditos
+
+    -> La actividad como el obligatorio como todos ustedes habrán visto que AWS Academy tiene créditos
+    -> Qué pasa con esos créditos te gastas donde usted no puede dejar todo el deploy hasta que yo corrija que no sabe cuándo va a ser si esta semana la que viene o a fin de curso
+    -> Entonces yo se siempre les pido las actividades evidencia capturas y video
+    -> Ya le voy diciendo porque ese ese va a ser el mecanismo mismo lo obligatorio uno y dos
+    -> Lo que tienen es que te tienen que hacer una defensa el video donde en el video tienen que quedar claro ustedes desplegaron abren la consola AWS me muestran el deploy abren el link y me muestran el link del deploy
+    -> Me muestran el acceso a los base de datos y es remoto
+    -> O sea es imposible dejar todas las aplicaciones de producción y que cuando yo haya corregido deployan
+    -> Entonces este quiere decir qué pasa también ustedes van a tener la parte de Docker van a tener que levantar todo con Docker Compose
+    -> Entonces yo debería poder correr sus aplicaciones en forma local o por lo menos hasta cierto punto
+    -> Pero las defensas y las actividades que se pide AWS todas van a tener ese formato
+    -> Alguna duda yo igual voy a tirar un aviso por teams sobre la actividad que se va a realizar el día miércoles
+    -> Este miércoles solo estamos a 15 o sea algo ser el 17 y este nada a mi voy a este se va a crear la actividad ahí todas esas cosas
+    -> Y luego van a verlo ya viajar la noche así que tal qué más
+
+## Pruebas de Performance
+
+### Introducción
+
+    -> Nosotros hoy vamos a hablar de performance test
+    -> Voy a compartir pantalla y vamos a empezar a charlar sobre eso
+    -> Si nos da el tiempo vamos a hablar sobre long-running tasks
+    -> Y si no nos vamos a quedar con performance testing
+    -> Algo en obligatorio que nos piden el testing
+    -> Ahora vamos a ver un poquito este el testing pero sí es un poco la idea
+    -> No es como en arquitectura de software que ustedes agarraron y corrían contra local en Docker
+    -> Lo corren eso van tener que correr el deploy problem y los problemas que tienen ahí hay un tema de costo
+    -> Entonces pueden hacer alguna prueba y decir bueno esta prueba se cae porque por los créditos se cae pero tienen que justificar tienen que demostrarlo justifica cómo
+    -> Saber mont compro imaginá la corro dos días antes la entrega
+    -> Bueno pero hay una tema si correr y correr dos días antes de la entrega estamos o sea a ver
+    -> Ustedes o las herramientas que nosotros les damos deberían poder tener la capacidad
+    -> No va haber pruebas de carga super eficiente pero poder hacer pero más que nada
+    -> Si tienen casarlo tendrían que podrían agarrar y desplegar lo que hicieron
+    -> Y no es que tipo de deploy yo eso ya está
+    -> Y si se me termina los créditos se finish no ustedes deberían poder tener como una especie de deploy manual para todo eso agarrarlo y lo mandan por otro lado
+    -> Porque ustedes no es que están manteniendo data clave no es que están manteniendo data de cliente y no tengo que mantener la cuenta AWS
+    -> Entonces tienen que tener eso
+    -> Entonces perfectamente podrían agarrar la cuenta compañero de AWS toda esa la prueba de carga y reventar esos $50 que tiene no deberías a la muerte
+    -> Eso está digo para que lo tengan en cuenta
+    -> Las pruebas normalmente no gastan tanto que va a gastar más el uso común de repente que dejaron la instancia abierta de repente que dejaron sin quererlo configurarlo mal
+    -> Puedo quiere verse les sacado los 50 dólares
+    -> Por eso también los grupos de tres para que puedan maniobrar
+    -> Y uno bueno nos va a dar cuenta de fulanito
+    -> Y cuando elito se de acá vamos con la menganito y así este sucesivamente
+
+### Contexto y Necesidad
+
+    -> Qué se hace una vez que se termina la aplicación
+    -> Desarrollar la aplicación o el desarrollo la mi bueno ustedes hasta ahora creo que han visto los tres tipos de test no
+    -> En diseño vieron en diseño vieron unit test integración test
+    -> Porque en diseño uno no hicieron del todo unit test en muchos casos entonces hicieron de integración
+    -> Pues en diseño dos vieron de integración sí
+    -> Y también vieron de de regresión
+    -> Esto bueno sí tenía este bastante sencillo la intuitivamente simplemente salvo camino
+    -> No me gusta y de lego percent pero ta pero esta pero es clave y está bueno
+    -> Y el manual eso estaba lleva pilati cuál el manual se en vez de hacerte de regresión de que se corra todo automático
+    -> Nunca que hacer la parte de manual la localización con código manual sí es se hace muchas veces y muchas veces no queda otra que hacer código manual porque está todo muy lindo a los ustedes de de regresión o o con CI/CD pero cambia mucho
+    -> Está pero qué pasa con estos tests
+    -> Sí qué pasa con estos tests unitarios qué pasa con estos tests
+    -> Si yo quiero tengo como un requerimiento que la performance sea de tal forma que que te respondan tanto segundos
+    -> Que soporte pruebas de carga esto no no decir sí
+    -> Entonces con qué es lo que vamos a hacer cómo tenemos que encarar
+
+### Definición de Performance Testing
+
+    -> Bueno es un poco lo que dice ahora está sobre prueba los aspectos funcionales
+    -> Y estas pregunta mitad se soporta el tráfico que espero qué tanto tráfico más soporta
+    -> Qué pasa si alguien me ataca
+    -> Qué pasa si mi aplicación maneja muchos datos
+    -> Qué pasa si mi aplicación soporta estar 24/7
+    -> O sea tiene disponibilidad casi 99.9 99.99
+    -> Bueno esto es lo que ustedes vieron voy adelantarme es un poco lo que vivieron con k6 sino no me equivoco si entré pasado en arquitectura de software
+    -> Y no solo lo que vamos a hablar ahora es darle un poquito más de color a lo que son estas tácticas
+    -> Para que sepan cuáles son las que es buena aplicar según el caso cuál es la que se necesitas según el caso
+    -> Bueno performance test un tipo de prueba de software probar aspectos no funcionales asegura que la aplicación tolera y la carga esperada
+    -> El foco de las pruebas de performance hace determinar velocidad es escalabilidad y disponibilidad
+
+### Velocidad
+
+    -> La velocidad no solo es la velocidad que responde sino la velocidad del que escala
+    -> O sea es algo que también tiene que tener en poder la escalabilidad que tanto escala la aplicación
+    -> Pero ahí es donde mezcla un poco porque está todo muy lindo pero si tenemos Elastic Beanstalk
+    -> Y cuando pasamos a Elastic Beanstalk para escalar pero esa escalabilidad demora 20 minutos no sirve estamos toda en con eso no no sirve
+    -> Entonces también tienen que tener en cuenta eso en particular porque si no está todo muy lindo
+    -> No va falta una aplicación que escalaba me dejaba pero claro escalaba y demoraba 15 minutos entonces esos 15 minutos que hace con todo la carga que además se supone se supone que si estás escalando es porque estás saturado estás saturado o estás por estar saturado
+    -> Y ahí está el tema tenés que darte cuenta antes de estar ahogado
+    -> Entonces ahí es donde tenés que jugar y decir bueno si aplicación demora tres cuatro minutos en desplegar yo tengo que darme cuenta un poco antes que necesito escalar y no esperar a que estar ahogado para escalar
+
+### Estabilidad
+
+    -> Qué se piensa en que es la estabilidad
+    -> Yo ya tenemos la velocidad tenemos la escalabilidad que a qué se piensa que es la estabilidad
+    -> Si hay 500 usuarios a la vez si hay 20 o menos tenga algo parejo de cómo responde quizás que sea parejo en cuanto responden y que siga exacto
+    -> O sea quiere el parejo que se mantenga igual en cuanto a los tiempo de respuesta
+    -> Y no es que en algún momento tenga algún pico de descarga con el sistema sin sentido sino que pueda trabajar con varios usuarios a la vez de forma tranquila
+    -> Porque puede ser que tengamos cierto que queramos probar que tenemos cierto flujo de usuarios activo normal
+    -> Tenemos 10,000 usuarios activos y queremos trabajar de forma normal
+    -> Entonces queremos ver que nuestro sistema está estable sí con esos 10,000 usuarios nadie no tiene ningún problema y poder responder sí hecho es un poco para día
+
+### Propósito de las Pruebas de Performance
+
+    -> Vamos ir a cada una de las tácticas por qué hacerlo probé información sobre la velocidad escalabilidad y estabilidad
+    -> Descubre que tiene que ser mejorado antes de salir de producción
+    -> Ahora vamos a hablar un poco de eso antes de salir a producción hay veces que eso no es posible
+    -> Pues por el simple hecho de que nosotros en producción vamos a gastar ciertos recursos que en desarrollo no
+    -> Entonces hay veces que eso lo tenemos que estimar
+    -> Pero si podemos predecir que si ya en los ambientes de prueba estamos teniendo este problema o lo que podemos hacer es levantar equiparar un segundo los ambientes de prueba los de producción en cuanto a recursos para hacer esas pruebas y después volverlos volverlos para atrás
+    -> Lo ideal en un mundo ideal sería poder tener idénticamente a los ambientes de prueba un ambiente de producción un ambiente de prueba con los mismos recursos de la misma característica
+    -> Qué es lo que pasa y no es lo normal un tema de costo que parece que es muy costo el ambiente de producción es costoso es necesario tenerlo
+    -> No podemos tener dos más podemos hacerlo por un ratito pero no por no por todo el rato no siempre para ser prueba
+
+### Costo de Downtime
+
+    -> El costo de cinco minutos de downtime en Google son 500k
+    -> De alguna manera lo que está queriendo decir ahí es que si están bajos si la aplicación se baja está desactivada por mucho tiempo
+    -> Sí el costo en las búsquedas el costo en las referencias ahí todo una parte deseo en las aplicaciones encuentran las búsquedas
+    -> Yo no sé cómo está todavía no no termino como por de no lo terminaba analizar pero la ahí hoy en día se han visto de Google por ejemplo ya te aplica Henry
+    -> Yo creo por lo que tengo entendido creo que reutiliza todos los índices de Google para búsquedas y los chat también para cuando aparezca más arriba o más abajo este
+    -> Pero no sé también si el modelo en el aprendizaje no no altera un poco eso que es lo que se venía trabajando sin embargo toda la parte SEO sigue siendo clave
+    -> Y lo que está diciendo ahí es si tengo a mi aplicación está bajada por o sea desactivada pagada por cinco minutos mientras que estoy desplegando lo que sea normalmente esas referencia toda esa parte SEO toda esa esas búsquedas donde mi aplicación aparecía va a tener un impacto impresionante en lo que es la búsqueda de mi página
+    -> Sí entonces la recomendación es nada vamos a tener que ver estrategias de deploy sí que eso este que son cosas que vamos a hablar
+    -> Se vieron en arquitectura eso son cuasi a un patrón de sí eso lo vieron tab perfect ahí va genial
+    -> El Elastic Beanstalk no sé si lo comentaron cuando vieron el Elastic Beanstalk vieron que tiene configuraciones para poder poner esas estrategias para que no tiene los mismos nombres
+    -> Este en qué materia vieron eso ubicarme lisa y en arquitectura también ahí va lo tiene visto con Gastón y van y después este con
+    -> Nosotros permitimos digamos que ese enlance cero directamente apunte a hacer
+    -> Y una de las cosas que hice ahí es los softwares as a service tienen que estar disponibles 24/7
+    -> Por qué porque softwares as a service es un servicio que brinda varios clientes entonces no es que tenemos un cliente el avisado un che fulanito di que vamos a pagar y prendemos
+    -> No tenemos 10,000 personas o tenemos 10 clientes o 20 o 30 o 50 100 que están usando esos ojos
+    -> Sí entonces este esos clientes necesitan a distintos momentos en distintos momentos y a distintos tiempos tener tener disponibilidad
+    -> Entonces nosotros no podemos d una lujo que por un deploy y se cae sí siempre tiene que tener esas estrategias para el deploy nosotros ahora tenemos un deploy de 10 correcto vamos
+
+## Tipos de Pruebas de Performance
+
+### Resumen de Tipos
+
+    -> Vamos ir a cada una de las tácticas
+    -> Cortamos 10 volvemos 10 y seguimos alguna consulta duda tenía a cortar
+    -> Y después este seguimos con tipos de prueba de performance que estamos viendo sí perfecto
+    -> Sí bien de digamos los siguientes tipos
+    -> Load testing carga actual stress testing carga extrema endurance testing periodos largos spike testing pico de tráfico volume testing muchos datos scalability testing escala
+    -> Bien en estos tipo de preguntita parcial sigo por si algo así quiere guardarlo pero bueno estos son los que nosotros vamos a dar
+    -> En particular entonces cada uno intenta hacer una prueba en particular
+    -> Vamos ir justificando vamos a ir justificando qué tipo de prueba podemos hacer nosotros
+
+### Caso de Estudio: InfoCasas
+
+    -> Lo que tenemos es a esta personita que esto sé si es la cabeza o el pelo tenemos la web el backend y la base de datos sí
+    -> Entonces creé mi aplicación en AWS con los siguientes recursos dos máquinas de EC2 micro para el backend
+    -> Obviamente que parece al parecer es como una API o no mantiene estado el backend
+    -> Por eso puede tener dos
+    -> No sabemos que hizo una rede con MySQL instalado la web deploy allá en Elastic Beanstalk
+    -> Fíjense este pequeño detalle qué es lo que yo le decía por qué desplegaríamos la web en Elastic Beanstalk bueno capaz que queremos que el front tenga algún procesamiento y no que sea una web estática
+    -> Sí entonces por eso es que lo hacemos de esta forma las imágenes de las casas las guardo en S3
+    -> Voy de nuevo un poquito a este punto para que no que colgado cuando hacen una web estática como diseño dos ustedes todos su javascript lo ponen un solo archivo
+    -> Si es algo que pueden hacer en Angular los React es que cargue javascript dependiendo la página que tienen
+    -> Bien de alguna manera es este como llama la parte de súper carga del sí
+    -> Y eso lo pueden hacer para optimizar un frontend ustedes se imaginarán si pusieran todo el javascript de una página como Facebook o como Instagram o como MercadoLibre si lo pusieran todo en un solo archivo lo cada vez que vamos a cargar Mercado como que traer toda su lógica a nuestro navegador
+    -> Y eso estático haces eso cuando ese estático haces eso únicamente lo también no las más rápidas
+    -> O cargas cargar lo que estás viendo a la página y deja escribir necesario para escribir esa página no es todo
+    -> Okey después lo que hace se lo divide en chunks que son como compilados y traen los chunks que necesitan en particular de esa cara
+    -> Si lo levantas como ambiente normal que solo digamos no precauciones creo que no creo que no te de configurar porque tenés que decir que páginas son que página vas a cargar así como lo vas a cargar que vas a escribir al lado de servidor el diseño si se acuerdan cuando cargan Angular nada de las pruebas son cosas que hacen es mostrar des esa script
+    -> Y si tiene carga y mostr el HTML y lo que dice es un root y el tipo vacío lo que trae la primera carga todo eso cuando haces el deploy ya te llena todo el esqueleto en el servidor del HTML para todo eso es lo que tendría sentido desplegar un front en Elastic Beanstalk o no
+    -> Sí nosotros han sigue con en obligatorio para mostrar dashboard se puede lograr con estáticos
+    -> Se puede lograr con estáticos usted no tiene necesidades yo lo comento para que sepan que no hablemos no hable de conceptos que no se entienda
+    -> Y bueno las imágenes de las casas la guardan S3 sí este no sé si vieron S3 tiene dos mecanismos
+    -> Esto ya es más de su lado pero S3 ustedes pueden subir las cosas hacer un bucket público pero no es la manera de subir las cosas
+    -> Pueden hacer visibles cierta con Content Delivery Network con CloudFront pueden ser visible por ejemplo pública una carpeta dentro de S3 todo ese resto de backend crea privado
+    -> Eso es una estrategia y la otra para subir archivos se utiliza lo que es una URL pre-firmada
+    -> Por la yo comento cosa que se meen a cabeza para no olvidarme para que en ningún momento la llamo mencionado que lo que hacen de alguna manera es ustedes tienen en su en su backend de una clave porque en el backend porque en el frontend no recordemos que todo el código compilados javascript lo ponemos ahí
+    -> Entonces si cualquiera nos podría hacer bolsa nosotros lo decimos a en che generamos un link seguro con una clave que tiene el backend una variable entorno le pega S3 y le dice decime un link por tanto tiempo
+    -> Es más ustedes pueden especificar va a subir un PDF con tal el nombre con tal tamaño exacto sea el client ustedes arrastran haciendo archivo al frontend
+    -> Ustedes pueden de ese archivo sacar esa información clave y pasarle para que el backend genere exactamente eso
+    -> Y eso cuando lo generan que lo que hacen simplemente agarran sí este y eso que agarran lo pasan a este como llaman lo o sea eso que agarraban así lo lo que hacen es lo pasan a este como llaman le pasan al al backend de S3 que es una API y le dicen generamos link te paso la API te genero una URL pre-firmada que se llama el preset por lo quieren buscar
+    -> Y ahí ustedes en esa pres URL pueden subir el archivo tiene determinado tiempo
+    -> Y de nuevo ustedes pueden especificarle todo creo que va a ser un PDF que se va a llamar doc pdf y va a tener tal tamaño
+    -> Y quiero tenés dos minutos para subir entonces es como que de esa manera no pueden subir cosas y también no dejas libre que suban cualquier cosa sino que van a subir un archivo en tal lugar específico
+    -> Esa es la forma seguro
+
+### Caso 1: 50 Usuarios Reportan Lentitud
+
+    -> Siguiendo en el caso de estudio la web consta de un home que muestra las más populares con sus respectivas fotos anuncio de centro el backend les pone los servicios de obtener casas y reserva de casas
+    -> Tengo mi aplicación lista y desplegada fue promocionada por meses
+    -> Y una consultora contratada estimó un flujo de 50 usuarios por día al salir de producción
+    -> Algunos usuarios reportan que la página anda lenta qué cosa puede estar mal de los 50 al mismo momento capaz que no pretendía eso no hiciste ninguna prueba
+    -> Sí o sea qué qué pero qué puede estar andando mal de todo lo que nosotros vimos nivel en la infraestructura pasa ya en que sí habría que haber hecho una prueba para detectar esto
+    -> No puede estar andando mal o sea que cambi según la arquitectura que yo le mostré qué puede acá estar haciendo un poquito de ruido siempre en S3 o hace más siempre tenemos en S3
+    -> Una callada no sí a algo que que noto ahí que que que como que parece que ya las instancias de EC2 son micro o sea son chiquitas más tenemos que levantarla un poco más sí
+    -> Estamos hablando una base de torre relacional pero qué qué recursos tiene qué tipo de base o sea sabemos no sabemos lo desconocéis
+    -> Ah qué otra lo que decía de S3 nosotros estamos yendo siempre S3 a buscar las cosas y la manera más eficiente y no capaz que tenemos que buscar otro método sí
+    -> Entonces qué dice acá la web qué tanto contenido estático mu donde se carga donde está cargando la información en el backend necesito cargar todas las casas
+    -> Algo más lógico a poquito que hacer un paginado sí mis queries son eficientes base datos mi infraestructura mi infra soporta para no decir bancos como hice ahí 100 usuarios sí
+    -> Entonces acá es donde venimos poner el load test
+    -> Verifica el comportamiento de la aplicación antes de salida producción simula la carga actual o inmediata intenta encontrar cuello de botella antes salida de production
+    -> Si vamos a los a los tipos es carga actual sí de alguna manera la carga normal entonces nosotros lo que queremos hacer con el load test es fijarnos el comportamiento actual de nuestro sistema
+    -> Si explota básicamente o tenemos que darle un poquito más pero es con lo que nosotros esperamos de carga normal sí entonces decimos bueno normalmente nosotros calculamos que tener sí por que prob vamos a hacer un para COVID entonces nosotros tenemos 10 usuarios porque tenemos 10 personas administrativas no
+    -> Sí bueno probar con 10 usuarios activos realizando acciones abandonado o sea acciones que hay en usuarios administrativos de carga normal y lo probamos
+    -> Entonces intenta encontrar cuello de botella con el uso normal de la aplicación sí entonces eso es el load test alguna duda hasta ahí
+
+### Caso 2: Errores 500 en Reservas
+
+    -> Caso dos InfoCasas compra backend y en un momento voy a empezar a recibir requests de su web más luego de unos días InfoCasas reporta que varios casos aislados de periodo de reservas que devuelven en errores 500
+    -> Qué es lo que pasó antes de venderle el backend o mientras que le vendía el backend más al lado cosas la que si lo veníamos qué pruebas tenemos que haber hecho para poder intentar mitigar o atacar el problema
+    -> Sí bien qué es lo que nosotros desconocemos ustedes cuando venden un software queda un de client sí está bien nosotros lo desconocemos cuántas va a tener el cliente pero que nosotros sí podemos conocer nosotros el límite de la aplicación el límite de la aplicación eso nosotros tenemos que tener un estimativo de cuánto soporta
+    -> Sí ustedes tiene que ver si su aplicación su aplicación soporta tanto y eso esa prueba la tiene que hacer hasta qué punto o sea no otra palabra es como que buscar romper entonces de alguna manera ustedes saben en el límite de su aplicación y también ustedes lo que pueden digo para más allá de la teoría y las prácticas vamos viviendo ustedes
+    -> Es una cosa que pueden hacer es como ir haciendo pruebas y el dice no bueno mira que a partir de tal punto la aplicación ya empieza como que sentirse un poquito a entonces ustedes como que tienen barreras nosotros en particular yo tengo alarmas de barreras que sé que la aplicación empieza a sentirse un poco y ahí dependiendo el momento y las transacciones que se están haciendo si tomo la decisión o no de de darle más recursos en ciertos puntos si se le da recursos entonces es todo son todo métrica que pueden usar
+    -> Sí para tener idea en este caso lo que dice es escalado no tengo una política de escalada la infra va a estar comprometida una máquina se queda sin memoria se CPU a full tres build vacío
+    -> O sea no tiene para seguir agarrando hilos este entonces ahí pueden hacer lo que es la la táctica de este cómo se llama múltiples copias de compute sí y base de datos conexiones a la base de datos pueden acabarse esas son razones por la que empieza a servir
+    -> Dividir en múltiples base de datos puede empezar a atacar una arquitectura de microservicio pero eso son las soluciones la manera de nosotros de de detectar esto son con los stress test o pruebas de estrés tres prueba la aplicación sobre cargas extremas dos por ciento más de lo actual intenta anticipar qué componentes van a empezar a fallar o sea de alguna mañana lo que estamos haciendo es reventar de bombardeo obligación para saber donde cu si algún día pasa donde va a empezar a pasar y y si podemos hacer algo no puede ser que ya está no podemos hacer más nada o sea no podemos hacer más nada rápido capaz que la soluciones es más compleja sí alguna duda de esta dos hasta acá
+
+### Caso 3: Caída en Convención Importante
+
+    -> No genial caso tres luego de tres meses sin tener que arreglar nada su aplicación parece funcionar estable integrada con InfoCasas un día durante la convención más importante de venta de casas del país la aplicación se cae
+    -> Tuviste mala suerte pero también que te pasó o sea tuviste mal mala suerte no por favor sabías que ese evento podrías desconocido disponibilidad disponibilidad pero qué fue lo que pasó o sea analicemos el caso fue un día un día que hubo el pico no todo disponible no est
+    -> Estuve disponible pero fue un pico pico exacto de alguna manera lo que sucedió fue que en un momento en particular nosotros tenemos un pico fue un día que nosotros podíamos algo anticipado sí entonces venía todo muy lindo todo pero un momento nosotros íbamos aprender ese a subir entonces qué es lo que fall ahí fall escalado no no escaló ese para un problema por haber sido que el sistema no escaló no estaba configurado para escalar o su límite era el caso de de uso normal sí silenciosamente menos memoria con el tiempo son memoria le con ese con base de datos cerrarlas o sea que se dice dice posibles causas no conexión y base de datos cerrarlas
+    -> O sea si solo vamos leyendo aplicaciones y quinientas conexión a la base de datos obviamente que lote lógica de la aplicación uso el lenguajes este sin gar coleco todos los días guardo memoria de las casas más usadas y no borra las anteriores es un poco lo que hablábamos de no más un ratito hay muchos paginados que lo hace local trae todo y después ustedes hay en cuanto a lógica en la librería de AWS que ofrece AWS ustedes hacen ciertos paginados
+    -> Si quieren poner lógicas de complejo entonces si usan un un nado le ese o una Elastic Beanstalk con una instancia de EC2 micro con un chico de RAM o sea lo que sea si hacen eso respectivamente capaz que en el uso normal no pasa nada pero el día como dice ahí de la visión de las este de la convención o bueno lo que sea puff explota sí porque nosotros no deberíamos guardar en memoria nada ni hacer lógica nada el paginado siempre se tiene que hacer en el backend siempre siempre siempre ustedes no no deberían hacer maos complejos más lo único que podrían las o sea no llegar al filtrado complejos en este su aplicación si pueden hacer algún Mao recibo toda esta data y de repente quiero filtrarla sí pueden hacerlo pero no deberían hacerlo para hacerlo deberían tener más recursos sí entonces qué tipo de prueba habría que hacer acá spike testing prueba la aplicación sobre carga puntuales estrés un ratito pero que le duras es como que bueno todo el día da todo el día una cantidad de rato sí el spike testing es son unas horitas un momento en concreto y después este para pa bien entonces después de este spike testing nosotros vamos a tener el caso cinco
+
+### Caso 4: Escalado y Costos
+
+    -> Luego de cuatro años escaló a más de 5,000,000 de usuarios bastante bien el InfoCasas en 10 países se encuentra con el problema de que la carga de casas se cada vez más lenta y continuamente tiene que hacer constantes mejoras para mantenerlo
+    -> Swap corre máquinas de la NASA es como decir que la aplicación corre en máquinas de la NASA o sea que de alguna manera no no es problema de de la de de lo que sería la aplicación sí de lo que sería el hardware bien este entonces sacar lo que empieza a hablar es de la parte de manejo de datos son sus queries eficientes capaz que escalamos tanto que ya empezamos a hacer programar con CPU la máquina donde corre el motor de la base de datos es acorde o sea pues capaz que tenemos toda nuestra aplicación imaginada de NASA pero la base de datos la tenemos en los primeros herredes utiliza las herramientas que necesita tenés toda una base de datos o tenes réplicas de la base de datos
+    -> Por ejemplo lo que hablábamos hace un rato yo necesito tener más eficiencia en ciertas cosas y lo que hago es un ser un y salimos a producción bien nosotros lo que necesitamos es de repente cómo se llama tener ciertas búsquedas hacerlas un poco más eficiente nosotros empezamos con los problemas de lectura y escritura ya eso no podemos tenerlo en mismo lado bien entonces ahí es donde viene el volume test se carga un set de datos en la base de datos muy grande porque todas estas pruebas de repente fueron interacción sí pero qué pasa si la base de datos esta es la primera prueba que va directamente contra la base de datos qué pasa si la base de datos está muy muy muy muy cargada sí una base datos que se encuentra muy cargada cómo va a empezar a funcionar esas queries cómo va a empezar a funcionar esas consultas no sé si les ha pasado el trabajo cómo perdón muy lento no sí no solo lento sino que se va a empezar a trancar y vos puedes tener el problema de de lo que son las transacciones si no también armadas empezás a guardar cualquier cosa entonces pero todas estas pruebas a lo que hoy es nosotros muchas veces probamos la API casi seis agarra inserta una cantidad de datos pero el volume test y lo que dice bueno nuestra base de datos cómo va a funcionar cómo va a funcionar nuestro pensar como tengamos 10 clientes 20 clientes tengamos 20,000 clientes y hagamos búsqueda de nombres o alguna cosa en particular va a funcionar bien cómo va a funcionar está todo muy lindo tenemos un like ahí para buscar las compañías a los usuarios y anda precioso pronto y justo hacemos unos joins y cómo va a empezar a funcionar eso cuando tengamos 1,000,000 de records por capaz que el usuarios a nivel bajo oficinas administrativo entonces vas pasa muchas veces cuántas veces una oficina pública o lo que sea que de repente se les tra con un sistema tienen una cantidad de usuario y se les tranca y bueno en vez de demorarte segundo te demora 10 pero nosotros no vamos a gas estar en infraestructura para esto te dan de de oficina pública hubo cualquier lugar privado puede pasar lo mismo bueno tenéis necesidad de optimizar eso porque si el cliente le demora cinco segundo cuando búsqueda al al administrativo no es instantáneo no te cambia porque lo importante de repente es sí gastar en que el cliente le han de excelente pero esto nosotros tenemos que tenerlo claro y hay algo que si tienen que llevar de todas estas pruebas de nuevo es que son cosas para que nosotros conozcamos como se va a comportar nuestro sistema y nosotros de antemano cuando sucede algo sí ustedes di su cabeza digan ah pero la pucha tal cosa se rompió o llegamos este punto sí pero todo esto es lo que le va a permitir o mismo predecir si ustedes ya saben que el cliente va a tener ciertas necesidades si ustedes con estas pruebas se están atajando y pueden apoyar la cabeza remua ah no nos olvide porque todas estas aplicaciones son cosas que están vivas en producción sí y la las consumen una cantidad de cliente entonces cuando explota va a terminar levantando un teléfono o no sé si algunos de ustedes trabaja con guardias en su trabajo pararon en pedido ya en pedido ya y en mercado libre tienen esas guardias quiche por ejemplo cuando trabajas a veces que yo cuando miraba sus clases que si había arrancado decía este justo estoy de guardia por si llega a pasar algo tengo que tengo que ir este yo a mí en particular yo estoy 24 y siete de guardias como acaban de ver recién está este o sea es normal entonces este pero eso por qué pasa por bug o lo que sea o muchas veces puede pasar porque vos detectas algo y así sabes mira está el cosa y tienes que saber tienes que tener una acción manual sí entonces todas este tipo de herramientas hacen que el equipo que la persona vos a que te pasa enfrentar entonces es como los logs porque cuando encontrar los logs de lo log dice tal cosas bueno esto es lo mismo no solo nos permite adelantarnos al problema que ya sabemos cómo tener sino que si la aplicación escala ya preci hasta donde va y como puedes explotar bueno y como ahí dice ahí scalability testing se realiza una prueba de carga con un incremento de usuario ramp up intenta verificar el escal del de la aplicación ayuda a planificar la capacidad de plan de la planificación este test es más común un test de práctica para ver la configuración que se hizo y lo que para mí ten si es que ustedes van a hacer toda la configuración de Elastic Beanstalk van a hacer todo eso y eso que hacen lo lo dan de bomba a contra lo que tienen y prueban que cuanto está escalando está escalando correctamente los tiempos o no está funcionando sí entonces estos bueno acá tienen load test es una hora normalmente es una carga habitual normal nada muy raro es como el más común a utilizar en durante testing de repente son cinco horas y un pico de carga este fijo muy parecido al no test es stress testing si nosotros es como que vamos subiendo hasta hacerlo hasta hacerlo bolsa de alguna manera o bueno hasta un punto que nosotros consideremos que es un máximo este el spike testing de alguna manera como como el spike que como va subiendo y vas teniendo eso el el volume testing no obviamente que no está está acá pero lo que la idea es podemos usar un load testing por ejemplo o un endurance testing yo creo que iría más por load testing la única diferencia es que cargaría la base de datos con mucho datos para ver cómo se maneja frente a esas escuelas sí la obligante alcanza donde es para la obligatorio va a alcanzar puede alcanzar con load testing puede alcanzar con este es depender de lo que requiera requerimiento funcional si dicen que la aplicación va a tener picos de carga de tanto depende lo que diga la letra sin embargo si dicen que van a tener necesitan siempre en uso normal poder responder en 200 segundos capaz tenemos load testing basta y no tiene que complicarse porque es el uso normal de la aplicación se entiende bien y más que un estrés capaz que tienen que ir por un este spike este algo más puntual si dicen la aplicación tiene que poder escalar entonces pueden ir por un estrés pero pueden también por spike también en algún momento dependiendo de lo que diga la letra y la interpretación igual ahí pueden escribirme y lo echamos juntos
+
+## Problemas Comunes de Performance
+
+### Tiempo de Carga Elevado
+
+    -> Tiempo en que una aplicación demora en inicial cuanto menos demora antes queda disponible para atender solicitud y esto es un problema que pasa cuando configura el Elastic Beanstalk por ejemplo con un blue green o algo por el estilo donde en realidad lo que pasa es que levanto una instancia actualiza una instancia la instancia actual apaga la instancia vieja en todo momento no perdiste disponibilidad sí en cambio de todas manera haces eso cuando pasa puede ser que demora 15 minutos pero porque porque levantó una pagó otra y se fijó que en ningún momento perdía a disponible la aplicación en deploy no debería ser casi instantánea si debería ser casi instantánea si tantas años es casi nada demora que muere minutos sí o sea siempre vas a tener el npm y todas esas cosas que no te queda otra que puede demorar en el Elastic Beanstalk con las holandas es más inmediato pero no son tan escalables pero con el Elastic Beanstalk deberías tener dos tres minutos cuatro minutos así tipo debería desplegar y más porque tiene un cache de los npm o sea que si detecta lo mismo no debería cambiar ustedes tienen que tener controlado este tiempo de carga porque tienen que tener alerta tal clave cuando ramp up es muy al muy muy agresivo o sea si tienen spike muy normalmente si por esos cupones como hace mercado libre tienen que tener configurado todo esto y saber cuáles son los tipos de carga y si saben que demora dos minutos ya en cierto punto de carga ya empiezan a levantar las instancias para poder simular anar
+
+### Response Time Elevado
+
+    -> Tiempo de que uno salió la expedición hasta que obtien la respuesta clave para otorgar una buena UX el por ciento de usuarios deja una web si demora más de tres segundo basta o sea esos son métricas lo que sí les puedo afirmar es que más allá de esa métrica si no capaz que no es tres segundos la primera vez pero si ya empezás con la segunda página con tres segundos también ya te va bien este a menos que estés en gestión o en aula que ahí te quedas como campeón y entregaste y y si no carga recargas 10 veces va sea yo creo que esa él la excepción a la a la norma pero más allá de eso este si vos pensa que vos muchas veces es una web tenéis varias cargas por sector sí entonces este en esos sectores que vas cargando sin cada request demora más de tres segundos claro la página entera te demora segundo capaz que la primera carga que demore menos de tres segundos esta bien y lo que va a pasar en ahí ya me vue un poco más técnico pero en frontend en lo que empieza a pasar es que por ejemplo los fonts side las imágenes en todas cosas no solo el con individual venía empieza a cachear y empecé más rápido sino que tu navegador mismo utiliza el cache entonces ya la segunda carga es eficiente por ejemplo el sitio de nuestra actualmente la primera carga son dos segundos y algo pero te carga todo con animación es todo y ya la la próxima vez son cero como segundos o sea nada y tan pero claro la primera vez tienes que cargar ciertas cosas que son para funcionamiento y si es una cosa que está no te queda otra pero ya después el resto de requests el funcionamiento tiene que ser instant sí y ahí es todo ya empezamos con una arquitectura de diseño súper compleja si vamos cargando páginas que esa pequeña página que cargue no no le detecte el usuario o sea que no le afecte la UX
+
+### Dificultades de Escalabilidad
+
+    -> Cuando la aplicación no puede manejar el incremento de usuarios cuello de botella son obstrucciones en parte del sistema que degrada la performance en general de mismo a nivel de hardware CPU memoria y uso de discos sí ustedes el Elastic Beanstalk seleccionan instancias conar con cierta performance con cierta perfume con cierto procesador con cierta CPU con cierta procesador CPU con cierta memoria RAM con cierta disco duro sí con cierta velocidad y acceso a internet todo eso son configuraciones que hacen el sistema operativo hardware dependiendo de del sistema de bajo response time sí bueno acá tiene como un proceso este de test de performance e identifica el ambiente determina los criterios de performance luego hace una planificación configuran el ambiente de pruebas sí implementan el ambiente el ambiente de prueba lo diseñan corren los tests y analiza y acá es como que volvería una fl hacia el principio donde este chequean todo esto es una especie de planificación recomendada a la hora de de diseñar y correr esto estos de performance identificarlo determinar los criterios vamos a poner diseñar un plan para correrlo configurar eso es el ambiente de prueba a implementar esos test de ir a implementación correrlos y analizar y hacer la part five tuning o sea a ajustar lo que haya que ajustar y volver a correr los test de como que hay una flta a hacer sí bueno como estamos los campito identificar ambiente de test ambiente físico servidores y sus capacidades de detalle de la configuración de software con configuración de network y no que dijimos muchas veces se la mente de testing puede que no
+
+## Próximos Temas
+
+    -> Continuar con configuración del ambiente de testing
+    -> Implementación de pruebas específicas según requisitos del obligatorio
+    -> Análisis de resultados y ajustes
+

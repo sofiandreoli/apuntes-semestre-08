@@ -1,0 +1,330 @@
+# Arquitectura de Software: Escalabilidad y Microservicios
+
+## Introducción y Repaso
+
+    -> Continuación de clase anterior donde no se llegó a ver escalabilidad de base de datos
+    -> Aclaración sobre puntos del curso:
+        -> Actividades: 3 actividades de 5 puntos cada una, se puntúan las 2 mejores
+        -> Micro tareas: 5 micro tareas de 1 punto cada una
+        -> Obligatorios: 60 puntos (2 obligatorios de 30 puntos cada uno)
+        -> Parcial: 25 puntos
+
+## Escalabilidad de Base de Datos
+
+### Escalado Vertical vs Horizontal
+
+    -> Escalado vertical: incrementar recursos de la misma máquina (CPU, RAM)
+        -> Es lo más sencillo pero tiene límites
+    -> Escalado horizontal: agregar más instancias de base de datos
+        -> Permite usar réplicas de lectura para análisis y reportes
+        -> Sincronización automática entre réplicas
+
+### Particionamiento de Datos
+
+    -> Dividir datos entre múltiples bases de datos en distintos hosts
+    -> Particionamiento vertical: separar según columnas
+        -> Misma tabla original pero dividida por columnas
+    -> Particionamiento horizontal: separar por filas
+        -> División por rangos o criterios específicos
+
+### Configuración de Máxima Salud
+
+    -> Al desplegar bases de datos replicadas, configurar máximo número de réplicas
+    -> Decidir estrategia de réplicas según necesidades
+
+## Teorema CAP vs ACID
+
+### ACID (Monolito)
+
+    -> Atomicidad: todas las operaciones se realizan o ninguna
+    -> Consistencia: datos siempre en estado válido
+    -> Aislamiento: transacciones concurrentes no interfieren
+    -> Durabilidad: cambios persisten ante fallos
+
+### Teorema CAP (Sistemas Distribuidos)
+
+    -> Un sistema distribuido no puede garantizar más de dos de estas tres características simultáneamente:
+        -> Consistencia: todos los nodos ven los mismos datos al mismo tiempo
+        -> Disponibilidad: sistema responde siempre
+        -> Tolerancia a particiones: sistema funciona aunque haya fallos de red
+    -> Si tenemos particionamiento y consistencia: probablemente no tendremos disponibilidad
+        -> Si una transacción falla, hacemos rollback completo
+    -> Si tenemos particionamiento y disponibilidad: probablemente no tendremos consistencia
+        -> Los datos pueden quedar inconsistentes temporalmente
+    -> Si tenemos consistencia y disponibilidad: probablemente no tendremos particionamiento
+        -> Todo queda en una sola base de datos
+
+### Transición de ACID a CAP/BASE
+
+    -> Monolito cumple con ACID
+    -> Microservicios cumplen con CAP/BASE:
+        -> Disponibilidad básica
+        -> Estado soft
+        -> Consistencia eventual
+    -> Diferencias clave:
+        -> No podemos tener transacciones atómicas entre microservicios
+        -> Los microservicios pueden tener réplicas de datos que no siempre están actualizadas
+        -> Hay que elegir entre diferentes compromisos según el caso
+
+## Microservicios: Introducción
+
+### ¿Cuántas Bases de Datos por Microservicio?
+
+    -> Mínimo una base de datos por microservicio (lo usual)
+    -> Puede no tener base de datos si es solo cómputo
+    -> Cada microservicio debería tener su propia base de datos
+
+### Comunicación entre Microservicios
+
+    -> Dos mecanismos obligatorios:
+        -> Sincrónica mediante HTTP
+        -> Asincrónica mediante cola de mensajes
+    -> Permite usar distintos lenguajes y bases de datos porque la comunicación es mediante protocolos estándar
+    -> Beneficio: flexibilidad tecnológica
+
+### Lenguajes de Programación
+
+    -> Requerimiento del obligatorio: al menos un microservicio en lenguaje diferente
+    -> No cuenta usar TypeScript en JavaScript (mismo motor)
+    -> Debe ser lenguajes distintos: Python, Go, Ruby, etc.
+    -> Recomendación: usar lenguaje diferente en servicios simples (ej: servicio de emails)
+    -> Ventaja: cada equipo puede elegir la tecnología que mejor se adapte a su microservicio
+
+## Boilerplates y Templates
+
+### ¿Qué es un Boilerplate?
+
+    -> Base común para crear microservicios
+    -> Incluye estructura básica: controladores, servicios, lógica, acceso a datos, repositorios
+    -> Configuración de Docker con PostgreSQL
+    -> Endpoint de health check
+    -> Librerías y dependencias básicas
+    -> Permite crear repositorios nuevos basados en ese template
+
+### Beneficios del Boilerplate
+
+    -> Acelera creación de nuevos microservicios
+    -> Garantiza estándares comunes
+    -> Consistencia entre servicios
+
+### Estándares en Empresas Grandes
+
+    -> Ejemplo Netflix: fijan estándares pero permiten elección dentro de ellos
+    -> Deciden cuál base de datos usar
+    -> Permiten elegir entre ciertos lenguajes (Go, Node, Python)
+    -> Balance entre libertad y mantenibilidad
+    -> Problemática sin estándares: cada equipo podría elegir cualquier tecnología, complicando mantenimiento
+
+## Beneficios de Microservicios
+
+### Escalabilidad
+
+    -> Monolito: toda la aplicación escala junta detrás de un load balancer
+    -> Microservicios: cada microservicio escala independientemente según necesidad
+    -> Cada área de negocio puede escalar por separado
+    -> Ejemplo: servicio de auditoría necesita menos escalado que servicio de envío de emails
+    -> Beneficio: aislar recursos y escalar solo lo necesario
+
+### Deploy Independiente
+
+    -> Monolito: cambio pequeño requiere desplegar todo el sistema
+    -> Microservicios: cambios se aplican solo al servicio afectado
+    -> Cada microservicio vinculado a un repositorio y codebase
+    -> Cada microservicio tiene su propia integración continua y deployment continuo
+    -> Cada microservicio tiene su ambiente de prueba
+    -> Si falla auditoría, se puede seguir creando empresas
+    -> Si falla envío de emails, la cola de mensajes sigue funcionando y se envían cuando se recupere
+
+### Mantenibilidad
+
+    -> Monolito: función usada en 10 lugares requiere revisar todos los lugares que la usan
+    -> Microservicios: código más pequeño con menor cantidad de funcionalidades
+    -> Más difícil que un cambio introduzca un bug porque solo hay código necesario
+    -> Impacto de cambios es menor
+    -> Versionado de APIs: avisar a otros equipos sobre cambios
+    -> Migración gradual a nuevas versiones sin cambios inmediatos
+
+### Resiliencia
+
+    -> Monolito: si falla el servicio, todo deja de funcionar
+    -> Microservicios bien implementados: si un microservicio falla, el resto sigue funcionando
+    -> Más servicios implican más probabilidad de fallos individuales
+    -> Importante: bien configurado el networking y canales de comunicación
+    -> Los protocolos HTTP y colas de mensajes no deben manejar lógica
+    -> La lógica debe estar en los microservicios
+
+## Dificultades de Microservicios
+
+### Complejidad del Sistema
+
+    -> Aumenta la complejidad general del sistema
+    -> Con pocos desarrolladores es complejo (como en el obligatorio)
+    -> En producción real: múltiples servicios requieren más infraestructura
+
+### Consistencia de Datos
+
+    -> Ya no tenemos transacciones ACID como en monolito
+    -> Surgen problemas de consistencia de datos
+    -> Ejemplo con microservicios múltiples: datos distribuidos requieren gestión más compleja
+
+### Infraestructura y Costos
+
+    -> Se necesita infraestructura adecuada para soportar microservicios
+    -> Requiere más costo de infraestructura y desarrollo
+    -> Deploy lleva mucho más tiempo
+    -> No todas las organizaciones pueden costear esto
+
+### Testing
+
+    -> Más complejo que en monolito
+    -> Testing de integración interno requiere diferentes conexiones y bases de datos
+    -> Cada equipo es responsable de su testing
+    -> Surge necesidad de fijar normas y estándares
+
+### Tenancy de Multi-tenant
+
+    -> División lógica requiere aplicar queries de tenancy en todos los microservicios
+    -> Si se quisiera single-tenant (cada tenant con copias únicas): levantar todos los microservicios para cada tenant nuevo
+    -> Se complica significativamente
+
+### Monitoreo y Observabilidad
+
+    -> Más complejo que tener logs en un solo lugar
+    -> Necesitamos mecanismo para centralizar logs de todos los servicios
+    -> Herramientas útiles: New Relic, Elasticsearch, CloudWatch
+    -> CloudWatch puede replicar logs automáticamente a Elasticsearch
+    -> Problema con DynamoDB para logs: búsquedas ineficientes
+    -> DinamoDB no cumple requerimiento porque las búsquedas son costosas e ineficientes
+    -> Por eso se usan bases de datos no relacionales tipo Elasticsearch
+    -> Monitoreo por servicio también se vuelve complejo
+
+### Seguridad
+
+    -> Más compleja que en monolito
+    -> Ya no es solo seguridad a nivel de aplicación completa
+    -> Cada microservicio requiere seguridad individual
+
+## Transiciones y Tácticas
+
+### Transición Gradual
+
+    -> Normalmente no se pasa directamente a microservicios
+    -> Es difícil arrancar MVP con arquitectura de microservicios completa
+    -> Proceso típico:
+        1. Arrancar con monolito
+        2. O arquitectura orientada a servicios
+        3. Luego migrar a microservicios cuando sea necesario
+    -> Pasaje a microservicios no es algo de una vez: se va haciendo gradualmente
+
+### Librerías Compartidas
+
+    -> Problema: módulos compartidos entre microservicios
+    -> Ejemplo: constantes de negocio en librería compartida
+    -> No cumple con el beneficio de independencia de microservicios
+    -> Nos acoplamos a cierto lenguaje o módulos compartidos
+    -> Medio camino posible: tener librerías compartidas pero aceptar cierto acoplamiento
+    -> Conclusión: no cumple completamente con los principios de microservicios
+
+### Separación en Monolito Modular
+
+    -> Muchos separaron en monolito modular para facilitar el pasaje
+    -> Después pasan gradualmente cada módulo a microservicio
+    -> Se da cuenta cuáles cosas conviene separar
+
+## Cuándo Usar Microservicios
+
+### Requisitos Previos
+
+    -> Capacidad del equipo: equipos autónomos y auto-mantenidos
+    -> Cultura de DevOps y automatización
+    -> Buena infraestructura que pueda soportar los costos
+    -> Sistema que realmente amerite esta complejidad
+
+### Organización Adecuada
+
+    -> Cada equipo responsable de su servicio
+    -> Automatización clave: CI/CD, pequeños cambios frecuentes
+    -> Buena gestión de codebase con Git Flow y features atómicas
+    -> Despliegues pequeños y frecuentes
+    -> Equipos pequeños (2-3 ingenieros con varias habilidades)
+    -> Cada microservicio necesita ser administrado
+
+### Complejidad que lo Amerite
+
+    -> No debe venir "de una"
+    -> Probablemente arrancar con monolito o arquitectura orientada a servicios
+    -> Detectar cuándo se alcanza el límite y migrar a microservicios
+    -> Ejemplo: pasar de 20 personas en 3-4 servicios a 50 personas
+
+### Errores Comunes
+
+    -> MVP con microservicios desde el inicio
+    -> No tener dominio definido aún
+    -> No tener claro el foco de negocio
+    -> Solución: usar plataformas no-code o monolito para validar el negocio primero
+    -> Migrar cuando detectemos problemas que el monolito no puede solucionar
+
+### Productividad vs Complejidad
+
+    -> Monolito: más sencillo cuando el sistema es poco complejo
+    -> Cambios son pequeños y en un solo lugar
+    -> Cumple con ACID
+    -> Una sola base de datos
+    -> Microservicios: más complejos desde el inicio
+    -> Hay un punto de equilibrio: cuando conviene pasar a microservicios
+    -> Si la aplicación crece en complejidad, mantener monolito se vuelve muy complejo
+    -> Ejemplo: equipo de 20 personas trabajando en el mismo codebase ya no es viable
+
+### Problemas que Indican Necesidad de Microservicios
+
+    -> Equipos bloqueados por otros equipos
+    -> Feature flags complicándose
+    -> Múltiples features en desarrollo simultáneas
+    -> Clientes grandes con requerimientos personalizados
+    -> Base de código desvirtuándose con lógica específica de clientes
+
+## Organizaciones y Microservicios
+
+### Spotify Example
+
+    -> Pasaron de roles fijos a squads y alianzas
+    -> Mezclan equipos para trabajar en microservicios
+    -> Beneficio: poder mover desarrolladores entre microservicios
+    -> Estándares permiten que desarrolladores trabajen en diferentes servicios
+    -> Al contratar desarrolladores, se buscan características específicas
+    -> Permite rotación entre microservicios según necesidad
+
+### Similitud con Ciudades
+
+    -> Monolito: como manejar una torre
+    -> Microservicios: como manejar una ciudad
+    -> Netflix: miles de conexiones y servicios complejos
+    -> Requiere visión arquitectónica diferente
+
+## Resumen: Microservicios como Estilo Arquitectónico
+
+    -> Beneficios cuando se implementan correctamente
+    -> Contras y dificultades agregadas
+    -> Requisitos previos de la organización
+    -> Cambio de mindset necesario para arquitectos
+    -> Próximos temas:
+        -> Principios de microservicios
+        -> Migración de monolito a microservicios
+        -> Patrones de comunicación
+        -> Deploy, autenticación
+        -> Complejidades técnicas
+        -> Monitorización y testing
+
+## Consideraciones de Arquitectura
+
+### Capas en Microservicios
+
+    -> Controlador: maneja requests HTTP
+    -> Lógica de negocio: servicios/dominio
+    -> Acceso a datos/Repositorios: donde se hacen llamadas a otros microservicios
+    -> Analogía: los repositorios son como "data access"
+    -> Comunicación con otros microservicios va en la capa de datos/repositorios
+    -> Antes: llamabas directamente al modelo de compañía (find, insert)
+    -> Ahora: mismo método pero llama a axios o inserta en cola de mensajes
+    -> No comunicar controlador a controlador porque pierdes separación de lógica de negocio
+    -> La comunicación es por necesidad de negocio, no solo técnica

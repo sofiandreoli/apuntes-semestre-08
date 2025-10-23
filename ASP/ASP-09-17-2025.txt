@@ -1,0 +1,262 @@
+# Arquitectura de Software: Métricas de Performance y Pruebas de Carga
+
+## Introducción
+
+    -> Organización de grupos para actividad
+    -> Formación de equipos de tres estudiantes
+    -> Algunos grupos de dos se completan
+    -> Actividad tiene hasta las 3 de la mañana del día siguiente para entregar
+    -> No deberían crear ninguna rama
+    -> Recomendación: suban todo directamente
+
+## Actividad y Micro Tarea
+
+### Entrega de Evidencia
+
+    -> Evidencia puede ser en video
+    -> El video lo pueden subir en Drive, en YouTube o lo que quieran
+    -> Link público
+    -> No tiene por qué tener audio
+    -> Una cosa es la micro tarea y la actividad
+    -> Otra cosa es la defensa del obligatorio
+    -> No vayan a poner un video de defensa del obligatorio sin audio
+    -> Tiene que ser un video lento o lo que sea que se muestre y lo que está desplegado
+    -> Que se vea ese video queda claro
+    -> No es que tengo que andar pausando para otras cosas
+    -> Hagan señales, todo eso
+    -> Y si pueden hablar mejor siempre mejor, porque pueden explicar más de lo que se hizo
+    -> Video o capturas, lo más recomendable son videos
+    -> Tengan en cuenta que lo que yo veo evaluando es lo que yo vea
+    -> Si las capturas no son claras, yo no voy a contactar con ustedes para decirles que vuelvan a hacerla
+    -> Porque obviamente que van a hacer el video captura
+    -> Entonces algo claro
+    -> Como cualquier evaluación capturar la carrera del día poder demostrar
+    -> Pero no tiene ninguna complejidad
+    -> Lo ponen en el README o pueden, por ejemplo, subir el video en el repositorio y poner una referencia del README que aparece el video ahí
+    -> O ponen en README el link o subimos el Drive no está pegado con el repositorio
+    -> Se sube el Drive alguna duda con respecto a eso
+
+### Validaciones
+
+    -> No es lo que se busca la tarea que hagan super validaciones complejas nada por el estilo
+    -> Pero nada hasta ahora
+    -> Se espera que ciertas validaciones básicas las asuman ustedes y las implementen igual
+    -> No es lo que se está buscando
+    -> Cada haga lo que es CRUD básico o todas las operaciones que están bien
+    -> Hay alguna duda con los grupos? Recuerden que tienen hasta hoy a las 3 de la mañana
+    -> Más por si hay que no puedo venir junto a hoy tienen que trabajar algo que no sea hasta las 12
+    -> Sino que tengan un plazo más
+    -> Recuerden que una vez que se termina esa fecha es lo mismo que la micro tarea
+    -> Entonces tienen tiempo de sobra para hacerlo
+    -> Lo mismo con esta actividad
+
+### Grupos
+
+    -> Esos grupos ya van a quedar para micro tarea y van a quedar para el resto de actividades
+    -> Es como lo tomamos como una especie de grupo de trabajo
+    -> Si necesitan algún cambio por una situación muy, muy, muy particular, me escriben a mí por privado y lo veo
+    -> Es un poco de entonces igual no queda ninguna duda a la tarea
+
+## Métricas de Performance
+
+### Medición de Estrategias
+
+    -> Cuando mirábamos la performance hace bueno, las estrategias que teníamos
+    -> Pero ¿cómo medimos que esas estrategias se están cumpliendo?
+    -> Bueno, tenemos el tiempo de respuesta
+    -> El throughput que es las requests por minuto
+    -> El uso de CPU
+    -> El uso de memoria RAM
+    -> El uso de disco
+    -> Recuerden que tienen instancia de Elastic Beanstalk
+    -> Entonces todo esto ustedes los seleccionan y es donde pueden sacar métricas
+    -> Mismo para tomar en cuenta cuando sacan estas métricas con el uso de disco, el uso de memoria, el uso de CPU
+    -> Es donde las pueden utilizar para después configurar el escalado
+    -> Cantidad de conexiones a base de datos, cliente, etcétera
+    -> Locks en base de datos: ustedes, por ejemplo, en PostgreSQL pueden hacer ese tipo de consultas
+    -> Ver las conexiones activas que tienen y los logs que están sucediendo
+    -> Pueden de repente hacer como un record para acabar cantidad de hilos, cantidad de threads
+    -> Recuerden que no es un solo hilo
+    -> Recuerden en arquitectura lo que vieron que es como un solo hilo que funciona con varios procesos
+    -> Recuerdan todo eso? Eso que se vio en arquitectura de software
+    -> Sino lo pueden chequear
+    -> Error rate exacto también se puede definir métrica de negocios: órdenes por horas, nuevos clientes por día
+    -> Si ustedes podrían tomar métricas de repente su aplicación o por el software está bien desarrollado o no
+    -> Es que está bien desarrollado sino que no tiene la necesidad de escalar
+    -> Capaz que si quisieran brindar algún servicio en particular o asegurarse de que todo ande bien
+    -> Si tenemos muchas órdenes o muchos clientes, si también pueden sumar esas métricas
+
+### Herramientas de Performance
+
+    -> El semestre pasado vieron que la más común está BlazeMeter, Apache JMeter, Locust
+    -> Normalmente lo que vamos a traer es un ejemplo en k6
+    -> Y van a tener una tarea, una micro tarea de k6 que probablemente la haya de la semana que viene
+    -> Son dos en no, no sé si son dos por ahí
+    -> Les confirmo normalmente son como tres micro tareas igual
+    -> Les confirmo la semana que viene igual
+    -> No voy a superponer ahora estamos metiendo muchas, muchas tareas y actividades
+    -> Entonces revisar pero creo que una de las tareas va a ser con k6
+    -> No les confirmo porque si ven la presentación van a ver una micro tarea pero esa confirmar para o sea
+    -> No se pongan a hacer más, se quieren hacer la y para así que pregunten mejor
+    -> Normalmente las micro tareas como ahora visto son introductorias para que después puedan utilizar en el obligatorio
+    -> Lo mismo que la actividad JMeter tiene una interfaz gráfica un poco más agradable con GUI
+    -> Dicen ustedes tienen que instalar el runtime y lo logran correr
+
+## k6 (Herramienta de Pruebas de Carga)
+
+### Introducción a k6
+
+    -> Herramienta de prueba de carga y rendimiento moderna
+    -> Open Source facilita la simulación de múltiples usuarios concurrentes
+    -> Y medir el rendimiento de aplicación API y servicio web
+    -> Está desarrollada en Go
+    -> Pero el código que desarrollan ahora verán mostrado un ejemplo bien sencillo
+    -> Es JavaScript
+    -> Utiliza un motor de ejecución eficiente
+    -> Lo que permite ejecutar a grandes cargas de usuarios con un uso de recursos moderados
+    -> Van a poder configurar pruebas de carga testing
+    -> Y con esto van a poder validar contra su aplicación que está bueno que está cumpliendo con los requerimientos que se piden
+
+### Seguridad y Pruebas de Carga
+
+    -> Algo muy importante comentar con estas herramientas es que normalmente sí están en alguna barrera de seguridad para hacer estas pruebas de carga
+    -> Si su aplicación tiene alguna barrera de seguridad, muy probablemente que k6 no puedan sacar las métricas suficientemente
+    -> Porque esa barrera de seguridad va a detectar irregularidad y lo va a bloquear
+    -> No es normal que una computadora empiecen a interactuar si en usuario siendo usuario
+    -> Entonces eso lo puede detectar
+    -> Entonces ahí normalmente se desactiva
+    -> No se tienen en cuenta esa barrera de seguridad
+    -> No les va a pasar porque normalmente van a desplegar en Elastic Beanstalk
+    -> Y no van a probablemente no porque vamos a dar por arriba
+    -> No van a configurar nada de WAF o algún mecanismo de seguridad en lo que es el link que genera Elastic Beanstalk
+    -> Entonces podrían hacerlo pero genera costo
+    -> Y para lo que es la clase no se necesita
+    -> Pero sepan que pueden ese link que tienen Elastic Beanstalk utilizar no solo código propio para detectar estos pagos
+    -> Sino las herramientas mismas pueden incorporarle mecanismo en seguridad
+    -> Por ejemplo, AWS WAF detecta esto muy utilizado
+    -> Si van a sacar una API, no pueden sacar una API con Elastic Beanstalk no más
+    -> Ya está todo muy lindo que deployamos que acá
+    -> Pero es una locura porque sino cualquiera puede hacerle de negación de servicio, cualquier tipo de ataque
+    -> Entonces ahí normalmente lo que se incorpora que obviamente es algún mecanismo de ustedes
+    -> O en algún Content Delivery Network o CloudFront
+    -> Es como una capa arriba del link que ponen de Elastic Beanstalk
+    -> Y esa capa les permitirá ya tener HTTPS
+    -> Entonces habrá visto que los links de Elastic Beanstalk son HTTP
+    -> Entonces díganse cuenta de ese pequeño detalle
+    -> Con CloudFront que es un servicio que vamos a ver más adelante
+    -> Les permite poner con una capa para que sea HTTPS y sea seguro
+    -> Pero eso no es suficiente, a esa capa después podemos agregarle Route 53 un dominio
+    -> Y además WAF es el servicio que ofrece AWS para incorporar que empieza a detectar patrones irregulares
+    -> Por ejemplo, tantos accesos en tantos minutos
+    -> Y empieza a bloquear
+    -> Empieza con todo ese mecanismo que les va a servir para que su sitio sea seguro
+    -> Si no pueden ir con hay otro contenido dinero muy conocido fuera de AWS
+    -> También tienen estos mecanismos de acceso por país
+    -> Pueden hacer tracking de quién accede a mi sitio por país
+    -> Y hacer cierto estos bloqueos tanto a nivel IP como país, región
+    -> Esos son aspectos de seguridad que hay que tener en cuenta
+    -> Y más también cuando se corren estas pruebas de carga
+    -> Una de las cosas que vimos ayer que la prueba de carga muchas veces va a encontrar
+    -> Entonces por un lado si no ponemos nada de seguridad va a estar todo bien
+    -> Va a dar todo bien si ponemos la prueba de seguridad vamos a ver que después de 50 fallos
+    -> Y no estamos probando de entrar la carga real que en realidad son 50 usuarios distribuidos
+    -> No 50 usuarios desde una hora computadora
+
+### Uso Típico de k6
+
+    -> Simulación de carga para verificar cómo responde una aplicación bajo diferentes niveles de tráfico
+    -> Prueba de estrés para identificar el punto de quiebre de un sistema
+    -> Monitoreo de rendimiento para monitorear el rendimiento de API aplicación a lo largo del tiempo
+    -> Con k6 usar la simulación de carga, prueba de estrés
+    -> También pueden configurar los tipos de test que vimos anteriormente menos el volume testing
+    -> Que ahí es donde tienen que manualmente hacer una simulación de carga normal
+    -> La simulación normal
+    -> Pero lo que no tienen que hacer previamente es cargar la base de datos con datos
+
+### Ejemplo de k6
+
+    -> Tiene un ejemplo de k6
+    -> En particular acá les mostré un ejemplo a donde le esto después se los sube
+    -> Pero es muy genérico
+    -> Instalan a nivel de lo que es un sistema operativo
+    -> Como librería instalan k6
+    -> Esto es como instalar no como librería no como runtime para poder correr
+    -> Lo dijimos es un runtime paralelo
+    -> No basta con no, no es una librería sino que hay que traerlo
+    -> Pero el código JavaScript para correrlo tienen que tener unos comandos en especial
+    -> Ahí está cuando vean la presentación a ver qué están los comandos en exclusivo y cómo instalarlo
+    -> Lo que quiero centrarme ahora es en un ejemplo bien sencillo
+    -> Donde la prueba acá consiste hacer pruebas de carga básica para una búsqueda en Google en particular de que hay
+    -> Y ver cuáles son las respuestas
+    -> Nosotros primero tenemos las librerías
+    -> Este código está super comentado para que lo tengan y para que sea más sencillo de explicar
+    -> Tenemos la librería de k6
+    -> Tenemos métricas
+    -> Si vemos que k6 ya no ofrece ciertas métricas, podríamos configurar algunas
+    -> Tenemos el error rate que dice porcentaje de requests que fallan
+    -> Y tiempo de espera hasta el primer bit
+    -> O sea, hasta que se envía el primer bit
+    -> Recibe el primer byte
+    -> Luego tenemos opciones o sea son los tres criterios de éxito para caso del test
+    -> Si no se cumple k6 retorna el código de salida como falso, estaba como cero
+    -> Y esto es útil porque podemos vean que k6 a diferencia de JMeter
+    -> JMeter es una aplicación que todo esto se hace en una interfaz gráfica
+    -> Normalmente como se daba JMeter antes k6 se daba AWS
+    -> Después si quieren podemos ver un ejemplo de JMeter pero es bastante más intuitivo
+    -> La ventaja de repente que tiene k6 es que como habrán visto de estos códigos entonces lo podremos poner en CI
+    -> Entonces es cada vez que creamos una pull request podemos probar que todo esto esté funcionando
+    -> Por eso dice útil para Continuous Integration y Continuous Deploy
+    -> Recuerdan que Continuous Integration y Continuous Deployment lo vieron en Twelve-Factor?
+    -> Sí, lo comentaron como uno de los factores
+
+### Configuración de Thresholds
+
+    -> Finjamos un percentil que el 95% de requests debe tardar 800,000 segundos
+    -> Esto es muy común a la hora de tests donde no queremos decir bueno todas las requests porque puede haber alguna excepción en particular
+    -> Sino queremos decir el 95, el 90, el 85 por ciento de requests tienen que tener este comportamiento
+    -> Es muy común pueden poner el 100 y después de alguna manera es que van a tener un uno percent vale
+    -> Pueden tener uno de errores
+    -> Que es el rate que se está configurado después
+    -> Simulamos una carga creciente
+    -> Vean que es totalmente configurable
+    -> Ahí le ponemos de 15 segundos que suba este que suba 10 usuarios
+    -> Después los 30 segundos va a mantener esa carga
+    -> Y después los 15 segundos restantes va a bajar
+    -> Entonces en los 30 segundos que estamos simulando si recuerda la gráfica de ayer son 30 segundos usuarios constante
+    -> De 10 usuarios con aquí primero es una subida
+    -> Luego acá lo único que están haciendo es pueden poner HTTP personalizado
+    -> Pueden poner headers personalizados
+    -> Pueden poner tags en lo que es el request que van en parámetros
+    -> Van a consultar en este caso estamos siendo user acá k6
+    -> Acá registramos lo que es las métricas
+    -> Y bueno luego lo único que hacemos es hacer el check
+    -> Y si la variación falla lo contamos en la métrica de errores
+    -> Y bueno esta pausa es opcional entre el request para simular un tiempo de procesamiento del usuario
+    -> A veces entonces sleep son buenos o son claves porque simulan un uso más real
+    -> No es que 10 usuarios van a subirse todos instantáneamente
+    -> Entonces es un poco esto si están con la cabecita a la prueba y quieren entregarlo para llegar a acá
+    -> Y no tienen que esa am nada pero bueno esto es lo que nos había quedado de la parte de performance testing
+
+## Comparación de Herramientas
+
+### k6 vs JMeter
+
+    -> Recuerden que tienen esto JMeter y cualquiera de las otras herramientas
+    -> Y cualquier duda los podemos lo podemos citar o ver un poquito en clase
+    -> Esto que hacía lo había dicho en arquitectura pero es un tema con que está implementado
+    -> Y qué pasa? A diferencia de JMeter va más de la mano porque permite Continuous Integration Continuous Deployment
+    -> Entonces es como que está más bueno volver a darle que lo vuelva a utilizar
+    -> Normal antes lo que se hacía en arquitectura era JMeter
+    -> Y acá se da entonces se complementaba
+    -> JMeter realmente es más intuitivo
+    -> El que no le gusta código y configuración y quiere ir por más con la interfaz gráfica
+    -> Una persona que reporte y quiere usar un manejador para también lo puede hacer
+    -> O parcialmente puede usar uno otro la idea de lo que es
+    -> Creo que no tiene requerimiento de letra usar k6 para el obligatorio pero sí puede ser que haya una tarea con k6
+
+## Próximos Temas
+
+    -> Continuar con ejemplos prácticos de k6
+    -> Posible micro tarea con k6 para la semana próxima
+    -> Continuar con tema de métricas y observabilidad
+

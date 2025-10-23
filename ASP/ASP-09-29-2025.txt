@@ -1,0 +1,697 @@
+# Arquitectura de Software: Observabilidad y CloudWatch
+
+## Introducción
+
+    -> Consultas sobre el obligatorio antes de empezar la clase
+    -> Micro tarea dos publicada (lectura de artículo individual)
+    -> Continuación del tema de observabilidad
+    -> Práctico sobre CloudWatch y Elastic Beanstalk
+
+## Consultas del Obligatorio
+
+### Cobertura de Pruebas
+
+    -> Requerimiento no funcional de cobertura en dos funcionalidades
+    -> Cobertura debe incluir líneas y branches
+    -> Si piden 100% de cobertura, debería ser en ambas
+    -> ¿Cómo testear tal funcionalidad?
+    -> ¿Cómo estructurar los tests?
+    -> Si quieren testear la lógica y no quieren poner 1000w world
+    -> Ejemplo: interceptor medio global
+    -> Si están testeando la funcionalidad y asumen que el interceptor está testeado
+    -> Pueden ignorarlo justo el 1000 world
+    -> Realidad 1000 serían como pruebas en particular
+    -> Están hablando de pruebas para la parte de autenticación
+    -> De validar que el usuario es quien dice ser
+    -> Entonces podrían ignorar eso
+    -> Está bueno sumarlo
+    -> Pero si no lo ignoran qué otra pregunta
+
+### Cambio de Contraseña Después de Primer Login
+
+    -> Pregunta sobre requerimiento de obligatorio
+    -> Requerimiento: después de que se loguea por primera vez, tiene que cambiar la contraseña
+    -> Implementación: cuando se loguea tiene que poner la contraseña temporal
+    -> Cuando se loguea (por primera vez), se genera una contraseña temporal
+    -> El usuario se loguea con esa contraseña temporal
+    -> En vez de llevarlo para el dashboard, lo que hace es que se loguea
+    -> Lo que hace es que carga otra página
+    -> Si lo hicieron por letra, no tienen mucha opción
+    -> No hay mucha interpretación que dar
+    -> Nosotros no teníamos con la que pa necesitamos
+    -> Pero tiene cierto sentido: en el momento que te logueas por primera vez, ahí está
+    -> Porque si no cualquiera puede ir sería una contraseña por el bien
+    -> Parte de la herencia del trabajo
+    -> Si la letra lo especifica, ya está
+    -> No podemos igual
+    -> Tiene coherencia porque te está diciendo que lo tenés que obligar
+    -> Tiene total sentido porque sino cualquiera podría poner imp podría alguna con otra contraseña
+    -> Como a veces los obligatorios tienen cierta parte de que haga la interpretación
+
+### Página de Registro con Contraseña Temporal
+
+    -> Cuando le envías un link de invitación, le pedirá la contraseña al usuario
+    -> Hay una diferencia en lo que dice el requerimiento con la rúbrica
+    -> Cuando accedes al link de invitación, el requerimiento dice cuando se accede al link de invitación le pedirá la contraseña al usuario
+    -> La rúbrica te dice después del primer login se solicita cambiarlo
+    -> Por lo que está diciendo es como que de una manera, le vas a dar una contraseña temporal para el primer login
+    -> Supone que es algo único que ahora estás compartiendo por correo
+    -> No es lo mismo el requerimiento
+    -> Dice le pedí la contraseña cuando le da el link de invitación
+    -> Cuando esa línea de invitación te va a parecer un cartelito que vas a tener que completar la contraseña que te pasaron por el link de invitación
+    -> Te paso un link de invitación y además ahí te van a agregar una contraseña temporal
+    -> Pueden agregar en el link de invitación o pueden asumir que se la pasaron por otro lado
+    -> Lo más correcto sería agregar ya en el mail de invitación una contraseña temporal
+    -> Tiene sentido que si ningún me mande directamente al login que se registre con esa contraseña temporal con el mail
+    -> No es necesario hacer otra página para eso
+    -> Va eso lo que deberían asumir
+    -> Se puede encargarlo como quiera
+    -> Pueden poner un código que se dé cuenta el frontend y cargue la página de cambiar contraseña
+    -> O pueden directamente que el backend les diga: tenés que cambiar contraseña cuando te ves por primera vez
+    -> Entonces va directo ahí te llega, te pide cambiar la contraseña
+    -> Y ahí vos lo redireccionas a tu página de cambiar contraseña
+    -> Eso como lo implementan es tema de ustedes
+    -> La idea es que le comparten el correo, pueden pasarle como no me especifica mucho cómo le pasa la contraseña
+    -> Pueden sumarla al correo (lo más sencillo)
+    -> O asumir que se la están pasando con otro método o mecanismo
+    -> Ustedes cuándo hacen eso: se loguea
+    -> Y de alguna manera cuando se loguea tienen que darse cuenta: es la primera vez que se loguea
+    -> Recibe la contraseña temporal
+    -> Ese es uno, tiene ahí cómo lo hace en el mecanismo de frontend o en toda cosa queda a su lado
+    -> Tampoco especifica si quieren compartir en ese primer correo porque lo están diciendo la contraseña
+
+### Separación de Módulos por Dominio
+
+    -> Pregunta sobre arquitectura
+    -> Separaron los módulos del monolito por dominio
+    -> Cada dominio tiene su propio módulo
+    -> Cada módulo está dividido internamente
+    -> Está separado: controladores, domain logic y datos
+    -> Con qué lo están conectando con el otro dominio
+    -> Conexión que quiere comparar porque nosotros del servicio ponemos de interfaz que usar el controlador
+    -> Esa misma interfaz tiene funciones que no usa el controlador
+    -> Por ejemplo, es que la con la que exponen para otro servicio para otro
+    -> Están conectando dominios por el controlador, no por la interfaz de la domain logic
+    -> El tema es que esa interfaz de la domain logic tiene tanto funciones que usan otros dominios como funciones que usa el controlador
+    -> Tendrían que separar eso en dos interfaces
+    -> Una que sea para la conexión interna y otra que sea para el controlador
+    -> Porque tienen en esa interfaz funciones como create que no la necesita otro dominio
+    -> Solamente la necesita el controlador
+    -> Pero cuando separen esto, van a pasar todo junto
+    -> La que van a tener dos interfaces
+
+## Observabilidad
+
+### Contexto y Necesidad
+
+    -> Errores en producción no ocurren con los datos que tienen a nivel local
+    -> Cuando suceden esos errores, tienen que saber cómo recrearlos
+    -> Ahí es donde se complejo un poco
+    -> Si no saben cómo recrearlos, no pueden solucionar los bugs o problemas
+    -> No pueden darse cuenta qué es lo que está pasando mal
+    -> Problema: hay una aplicación corriendo en producción
+    -> Si el proyecto recién arranca, lo que hacer es localmente se conectan a la base de datos de producción
+    -> Intentan hacer una prueba
+    -> Si el proyecto muy chiquito que pa acá hasta hacer un clon de la base de datos de producción e intentan probar algo
+    -> Pero imagínense que un ambiente grande eso hacer un clon de la base de datos de producción todos los días
+    -> No es posible
+    -> Van a hacer clon de base de datos de producción y tampoco conectarse a producción para recrear algo
+    -> El mecanismo para darse cuenta cuál fue el flujo, qué fue lo que fue pasando
+    -> Es poder tener visibilidad sobre cada paso
+    -> A gran escala: qué fue lo que pasó cuando sucedió esa request cuando sucedió esa acción
+    -> Qué fue lo que pasó antes de insertar un record en la base de datos
+    -> Cuál fue todo el proceso anterior
+    -> Para poder tener el mecanismo de poder recrear
+    -> Esto no se da cuenta hasta que empieza a tener una base, un servicio en producción con arquitectura grande
+    -> Y ahí empezamos de allí
+
+### Definición de Observabilidad
+
+    -> Como dice ahí, la observabilidad es la capacidad de medir y entender cómo es que funciona el sistema internamente
+    -> Con el objetivo de responder preguntas sobre performance, seguridad o fallas
+    -> De alguna manera observabilidad engloba no solo la parte de logs
+    -> Sino que también poder observar cómo viene nuestro sistema
+    -> A nivel de lo que es CPU, a nivel de lo que es memoria
+    -> Queremos saber cómo viene nuestro sistema para poder tener toda la información de lo que está sucediendo con nuestro sistema de producción
+    -> Observabilidad es algo que se afecta directamente a producción
+    -> No es algo que se que no afecta a nivel local
+    -> Qué local ustedes puedan recrear las cosas, hacer una cantidad de cosas y no pasa nada
+    -> Pero cuando están en producción, tienen que saber qué es lo que está pasando
+    -> Y más en un contexto de la nube donde están corriendo todo en un servidor que no es de ustedes
+    -> Sino que en realidad lo están administrando
+
+### Tres Pilares de la Observabilidad
+
+#### Métricas
+
+    -> Medidas que reporta el sistema y que son agregadas en un periodo de tiempo
+    -> Ejemplos:
+        -> Cuántas requests soporta tu sistema por segundo
+        -> Cuánta memoria es usada
+        -> Porcentaje de CPU
+    -> Son todos métricas que le van a permitir evaluar cómo viene su sistema
+    -> Si el sistema viene fallando, si tenemos mucha requests
+    -> Son métricas que podemos ir sacando
+    -> También por lo que habíamos hablado antes que CloudWatch también lo permite: alertas
+    -> Quieren configurar alertas
+    -> Pueden definir métricas para decir: a partir de que sucede tal requerimiento de negocio
+    -> O a partir de que sucede, por ejemplo, que nos queda sin memoria
+    -> Voy a tener una alerta
+    -> Con AWS se puede configurar con Elastic Beanstalk y los otros servicios acciones a dicha alerta
+    -> También es un poco automatizar lo que es esta observabilidad
+
+#### Logs
+
+    -> Logs: datos y eventos que ocurrieron en cierto instante de tiempo
+    -> Nos permiten identificar comportamientos no deseados
+    -> Proveen insight sobre qué fue lo que sucedió
+    -> Estos logs no se imaginan son los logs de la aplicación
+    -> Pueden ser logs de cómo fue impactando, cómo se fue usando la memoria a lo largo del tiempo
+    -> No tienen que quedarse solamente con los logs de la aplicación
+    -> Sino que pueden necesitar logs de cómo estaba el sistema, cómo venía la CPU del sistema de las cinco de la tarde
+    -> Y eso también es logs
+
+#### Trazas
+
+    -> Muestran las operaciones por las que atravesó un cierto request o transacción
+    -> Flujo a lo largo y ancho de todos los nodos
+    -> Permite saber en detalle qué componente fallaron, conocer su flujo y encontrar performance bottlenecks
+    -> Las trazas están muy orientadas también a microservicios
+    -> Pero permiten saber dónde es que falló
+    -> Ahora estamos construyendo monolito
+    -> Pero si van a estar conectando muchos microservicios, van a estar conectando muchos servicios
+    -> En arquitectura que tenían algunos servicios que llamaban a otro servicio
+    -> Necesitan tener traza de dónde fue que falló el usuario original en una request
+    -> Pero de repente esa request desencadena a varias requests entre servicios
+    -> Ejemplo arquitectura: construyeron una especie de API Gateway para recibir todas esas consultas
+    -> Decía Gateway llama otro servicio o un servicio que llamaba otro servicio que llama otro primer servicio
+    -> Después el contestado al usuario
+    -> Todo es información que se agrupa
+    -> Necesitan saber dónde es que falló
+    -> A nivel local a nivel de monolito no es tan complicado
+    -> Porque de alguna manera pueden ir poniendo que esto falló en su domain logic, que falló su controlador, que falló su repositorio
+    -> Pero ya cuando estamos hablando de conexión entre servicios
+    -> Tenemos que saber si la cosa fue en uno o en otro
+    -> Son los tres pilares de la observabilidad
+    -> Primero las métricas, después los logs o registro de que fue sucediendo en cada evento
+    -> Y por último las trazas
+    -> No vale solo con tener métricas y los logs
+    -> Sino que a veces nosotros tenemos que recrear qué fue lo que sucedió
+    -> Y para poder recrear eso, tenemos que tener estas trazas
+
+### Diferencia entre Logs y Trazas
+
+    -> Pregunta: a nivel de código, cómo diferencias un log normal de una traza
+    -> En realidad viene de la mano
+    -> No tienen trazabilidad cuando hablan de memoria, CPU van a saber en qué servicio fue
+    -> Porque en realidad ya no viene relacionado una request, viene relacionado un momento del tiempo como estaba el servicio
+    -> En cambio, si hablan de un servicio en particular y estamos hablando del login
+    -> Lo van a hacer a nivel de código
+    -> El log tiene niveles y es como en Winston puede tener varios detalles que le ayuden a tener esa trazabilidad
+    -> Pero la trazabilidad puede o no estar enlazada
+    -> Por ejemplo, con el famoso console.log podés hacer algo directamente interno
+    -> Lo que está bueno es que tengan una trazabilidad relacionada
+    -> Tenés que tener un mecanismo de que si falla algo, nada naturalmente
+    -> Y más cuando estás haciendo conexión inter-servicio, tenés que poder recrear todo
+    -> Ejemplo: suponer una creación de un usuario
+    -> La creación del usuario desencadena otro evento en otro servicio
+    -> Si ese flujo falla, me va a interesar tener la información de en qué paso falló
+    -> Si falló controlador en el servicio, la domain logic, servicio viene login
+    -> O falló repositorio o falló la API de otros servicios
+    -> Entonces tengo que con la información que ya obtuve poder ver qué es lo que sucedió también ahí
+    -> Para poder tener trazabilidad de todo lo que fue sucediendo en ese momento
+    -> Puedo necesitar saber el instante de tiempo que eso fue sucediendo
+    -> Porque ahí puedo ver, por ejemplo: la memoria estaba alta entonces me dio algún fallo de memoria me explotó acá
+    -> Por un fallo de memoria que raro, voy a mirar a esta hora
+    -> Y claro, teníamos el porcentaje de la memoria del servicio ocupada
+    -> Entonces explotó
+    -> Entonces ahí podemos ver y tener visibilidad del estado del sistema
+    -> Podrían meter encontrar al mismo: llevar una request y la social ya único de una
+    -> Esos son mecanismos que vamos a ver en particular con los microservicios
+    -> Es algo que podés hacer para tener idea dónde fue que ocurrió algo
+    -> Y todos los logs que lo siguen
+    -> Y sería lo más sano porque vos ahí vos capaz que no vos querés cuando analizas todo el flujo de un cierto evento en un servicio
+    -> Vos querés chequear que en ese evento salió todo bien y que realmente problemas de allí lado
+    -> Y vos tenés que tener un identificador (un ID, puede ser lo que quiera)
+    -> Pero es algo para poder chequear en ambos servicios
+    -> El error que ha sucedido
+
+### Niveles de Logs
+
+    -> Habíamos hablado de niveles de logs
+    -> Hablaron en Twelve-Factor si no me equivoco de la parte de logs
+    -> Vieron los niveles
+    -> Los logs tienen niveles, tienen una estructura
+    -> Puede distribuir esta parte de logs
+    -> Se refiere con esto: pueden tener logs de todo el sistema
+    -> Y a la vez cuando empezamos a hablar de servicios, podrían ir un servicio en particular
+    -> Van a ver que hay herramientas para poder analizar esos logs
+    -> Por ejemplo, CloudWatch permite hacer queries sobre logs
+    -> Y después van a ver herramientas donde pueden centralizar todos los logs
+    -> Si tienen varios servicios, pueden recibir todos los logs de su aplicación
+    -> Entonces ahí es importante que si tienen una estructura o niveles, también pueden hacer análisis de eso
+    -> Logs pueden sacar métricas
+    -> Si tienen una aplicación, tienen todos sus servidores ahora, por ejemplo, van a New Relic
+    -> Porque CloudWatch lo que hace es conecta por servicio
+    -> Entonces acá CloudWatch conecta por servicio y de repente New Relic tratamiento
+    -> Quieren ver todos los logs del sistema
+    -> Y bueno, ahí es esa trazabilidad
+    -> Busco ese ID, ya me pone todos los logs
+    -> Me va a poner de repente que el primer servicio el usuario salió todo bien
+    -> Pero el segundo servicio cuando se fue enlazar con la compañía falló
+    -> Entonces, capaz que estaría bueno tener que más centralizar
+    -> Eso es lo que va a dar un poco la parte de logs
+    -> Entonces tenemos niveles, la estructura, distribuir esos logs entre todos los servicios
+    -> Y un análisis de los logs
+
+#### Niveles Comunes
+
+    -> Niveles comunes son esos tres: ERROR, WARN, INFO
+    -> Lo más común es tener estas tres funciones
+    -> INFO viene relacionado información general
+    -> Entonces no está bien que lo pongan en error
+    -> Pueden tener OFF, FATAL, ERROR, WARN, INFO, DEBUG, TRACE
+    -> OFF: todo la información
+    -> Lo más comunes son ERROR, WARN, INFO
+    -> Estaría bueno que si hacen algo que está muy bueno, pueden usar herramientas
+    -> Pero también pueden hacer su propia clase de logs
+    -> Si hacen una clase de logs, ponen estas tres funciones
+    -> Utilizan alguna librería
+    -> La que vimos que hacen ahí, por ejemplo, es poner los logs bonitos
+    -> Algo que se suele utilizar en esa clase es también se puede hacer alguna especie de filtrado
+    -> Para que sin querer no se pase ningún log
+    -> Y si ninguna clave o ninguna información sensible
+    -> Y si detecta alguna información sensible también que avise
+    -> Puede hacer una alerta, por ejemplo
+    -> Puede tener un problema
+    -> Eso lo pueden haber visto en Twelve-Factor
+    -> La idea es que los impriman en consola
+    -> Y sea la distancia donde despliegan su aplicación la que se encargue de agarrar todos esos outputs de consola
+    -> Imprimir, persistir
+    -> Lo más sencillo es poner el stdout y guardarlo un archivo
+    -> Es eso lo más sencillo que entonces ahí vas a guardar todos los inputs, todos los outputs que tenga tu aplicación
+    -> Y ya CloudWatch te lo hace solo
+    -> Esto que no tenés que instalar nada ni configurar nada ni ninguna cosa
+    -> Eso es lo más sencillo porque ya te invito a que usted que tiene una parte de lo que muestra
+    -> El Elastic Beanstalk tiene los registros que te permite descargar
+    -> Tiene métricas en sí del servicio
+    -> Que ahí vos métrica de lo fue pasando
+    -> Y después tenés tener los logs con CloudWatch que seguro que son esos lo que me estás hablando para ver en la actividad
+    -> Son eso
+    -> El servicio en realidad el Elastic Beanstalk por defecto te permite hacer queries sobre esos logs
+    -> Vos por defecto sí cuando los deployas te agarra todo esos output y te los ponen registros y te lo guardan
+    -> Si no se después vos podés decir quiero ver los registros y te dejar el S3 con todo lo que fue pasando
+    -> Si vos querés ver eso sin tener que descargar, usar el otro servicio AWS que se llama CloudWatch
+    -> Entonces vos cuando deployas el servicio le ponés quiero activar CloudWatch
+    -> Entonces vos con eso ya podés ver toda la salida
+    -> Eso si lo implementamos, están cumpliendo con la parte de logs
+    -> Obviamente que también viene de la mano de una buena implementación en cuanto a lo que son niveles de log
+    -> Parece un obligatorio de trazabilidad pero más allá de eso
+    -> Si hacen eso, ya están guardando y persistiendo todo
+    -> Están persistiendo todo lo que hace ese con console.log y eso
+    -> Ya hacen un console.log y eso lo guardas directamente se guarda ahí en CloudWatch
+    -> Sería correcto hacer una clase como generador de logs por que pases el tipo de log
+    -> Está bueno, es más con el nivel y el mensaje
+    -> O si estás en ambiente de desarrollo es directamente el ambiente de producción
+    -> Pueden hacer una clase que tenga hasta tres funciones directamente que esconda toda la complejidad
+
+### Centralización de Logs
+
+    -> Estaría bueno tener algún mecanismo para poder acceder a todos los logs de forma remota
+    -> Algo que comenta acá es que estaría bueno guardar todos los logs en un solo lugar
+    -> O tener un mecanismo para poder acceder a todos los logs de forma remota
+    -> Como les comentaba, el Elastic Beanstalk les ofrece por defecto guarda los registros de la administración
+    -> Te deja descargar un S3 hermoso que tiene toda la información ahí
+    -> No es lo más sano: cada vez que van a ver un log de cargar todo ese S3 con toda la información y bajarse todo
+    -> Entonces ahí que es lo más sano
+    -> Conectan con CloudWatch o alguna otra herramienta que nos permite ver toda esa información muy rápido
+
+## Elastic Stack
+
+### Introducción
+
+    -> Parte práctica
+    -> Se van a adelantar un poquito con la parte de Elastic Stack
+    -> Habrán visto en el primer obligatorio de arquitectura de software la parte de Elasticsearch
+    -> Para que usar el Elasticsearch para búsquedas más eficientes
+    -> Entonces de repente tenían algún sub-modelo
+    -> No tenía de repente el mismo modelo que tenía el dominio
+    -> Sino que tenían un sub-modelo subconjunto de datos que los utilizaban para guardar
+    -> Capaz que guardaban todos los datos, pero capaz que algún dato no lo guardaba
+    -> Y el Elasticsearch era un mecanismo para poder hacer búsquedas eficientes cuando tenían muchos datos
+    -> Pero de un solo modelo
+    -> No es que decía consultas relacionadas, sino es: yo tengo información y quiero hacer consultas
+    -> Acá es donde el Elastic Stack junto con Elasticsearch nos provee un mecanismo o flujo
+    -> Igual con Kibana para que nosotros podamos sacarle jugo a eso para los logs
+
+### Arquitectura del Elastic Stack
+
+    -> Coleccionar esa data, procesarla y ordenarla
+    -> Almacenarla toda en Elasticsearch para que indexe y se guarde
+    -> Y después que van a hacer es analiza esa información
+    -> Ver la falta es como que coleccionamos toda esa data
+    -> Recibimos toda esa información, le agregamos, la procesamos
+    -> Eso se puede encargar Logstash
+    -> Y el Elasticsearch lo que hace es esa información directamente la almacena y la indexa para trabajar con ella
+    -> Entonces con Kibana la consultamos
+
+### Uso del Elastic Stack para Observabilidad
+
+    -> Esto no tienen que hacerlo para obligatorio
+    -> Pero estoy mostrando un stack que tienen muy buena pregunta
+    -> No tienen que hacerlo en el obligatorio
+    -> Pueden usar Elasticsearch OpenSearch en particular, pero no tienen que usarlo obligatorio
+    -> Sin lugar a duda que está bueno
+    -> Está bueno que conozcan que existen herramientas
+    -> Y más que nada, todo este tipo de herramientas está bueno cuando necesitamos analizar cosas
+    -> El problema surge en particular no ahora con un monolito o con servicios concretos
+    -> Sino si tenemos varios servicios interactuando empezamos a hablar de muchos microservicios o muchos servicios mañana
+    -> Hablemos de microservicios: van a tener muchos servicios conectados
+    -> Imaginense 10, 20, 30 a 40 servicios que tienen corriendo y se interconectan entre sí
+    -> Necesitan tener toda esta trazabilidad en un solo panel para poder ver toda esta información
+    -> Por ejemplo, una de las cosas que muestra con el Elastic Stack es que tienen varios tipos de aplicaciones
+    -> Con Node, con Apache, con Nginx, lo que sea
+    -> Lo que hace es recolecta todo esos logs y los procesa por un solo flujo para que lo puedan utilizar
+    -> Y desde Kibana lo puedan consultar
+    -> Entonces este mecanismo es un mecanismo para que puedan chequear todas esa información
+
+### Herramientas del Elastic Stack
+
+    -> Ustedes acá tienen varias herramientas
+    -> Yo en particular nunca me tocó usar esto pero no lo implementé
+    -> O sea, si he usado este OpenSearch que lo van a encontrar
+    -> No van a encontrar Elasticsearch
+    -> Es una librería pública que lo que hizo AWS fue implementar su propia versión
+    -> Como OpenSearch hizo su propia versión de Elasticsearch
+    -> Esto lo que hace es de alguna manera ofrece este stack de herramientas
+    -> Y vos lo tenés que ir integrando y conectando
+    -> O sea, si me preguntas, nunca me puse a instalar todo esto y a ponerlo porque
+    -> Digamos esto es cuando vos tenés muchos servicios y es una solución
+    -> Hay varias soluciones
+    -> Es más útil que tener tres servicios
+    -> Y si tienes una buena trazabilidad lo manejas con CloudWatch
+    -> Ya no pasa nada
+    -> Lo que yo decía es que si tienen 20 servicios ya se vuelve bastante incómodo manejarlo con CloudWatch
+    -> Que guarda o persiste la información de un solo servicio
+    -> Imagínense queriendo hacer trazabilidad de algo teniendo cinco pestañas en el Chrome de cada uno de los CloudWatch de los servicios para poder tener trazabilidad
+    -> Pero si estamos hablando de uno, dos servicios y bueno, no vas a desplegar toda esta infraestructura
+    -> Que además los costos de pensar para que sea eficiente son elevados en AWS
+    -> Entonces hay que tener cuidado
+
+## New Relic
+
+### Introducción
+
+    -> Pasé con la interfaz
+    -> Esto es Kibana que tiene los logs, me equivoqué
+    -> Y acá tienen New Relic que tiene otra interfaz
+    -> Sí que mide
+    -> Lo mismo que puede medir Kibana: el throughput, el response time, el error rate
+    -> La parte de infraestructura CPU, RAM, etcétera
+    -> Traces y más obviamente que esto
+    -> Tenemos que enlazarlo con AWS
+    -> Dónde está la complejidad de esto a nivel de su obligatorio
+    -> Porque para las herramientas que necesitan, intento de solucionarlo por CloudWatch mismo
+    -> Cuando se paren microservicios, no van a hacer más de 10 incluso servicio
+    -> Entonces tampoco va a valer la pena de repente
+    -> Que se tire más que nada por este lado
+    -> No hay un requerimiento de letra que diga hagan New Relic
+    -> Ni un requirement tienen que enlazarnos con todas sus instancias
+    -> Y qué es lo que pasa: consolida todo en una razón
+    -> Ahora es una sola
+    -> Después va a hacer pero qué problema tienen: académico y cada levanta todo
+    -> Es súper costoso
+    -> Entonces ahí no ustedes no estas herramientas tienen que saber porque la vida real se utiliza
+    -> Ni más que nada en un ambiente de microservicios
+    -> Pero sumamente es difícil o complejo
+    -> Si ustedes tienen que a no ser que haya algo, yo no recuerdo que en la letra haya algún requerimiento
+    -> Ni algo que ustedes no puedan entrar a teams y pedir que empiece a mostrar esas métricas
+    -> Si o también entrar a CloudWatch y poder hacer observabilidad
+    -> Eso configurándolo con el código
+    -> Si pero porque de nuevo, levantar varias cosas se maneja es un problema
+    -> Pero sepan que esto existe y está y lo pueden utilizar
+
+### Configuración de New Relic
+
+    -> Acá tienen un poquito la parte de lo que es la gráfica
+    -> Piensen que pueden tener varios servicios conectados la misma a la misma vez
+    -> Entonces acá van a tener mucho más información
+    -> Pueden conectar acceso a base de datos y otras cosas
+    -> Con New Relic pueden tener mucho más información
+    -> Esto lo único que es conectarlo a su aplicación
+    -> No es nada complejo
+    -> Es parte de lo que se busca en este práctico de hoy que puedan hacer esa conexión
+    -> Si pueden hacer el registro que tienen que hacer y hacer esa conexión
+    -> Primero la parte de CloudWatch que es lo clave
+    -> Y segundo esa conexión de New Relic
+    -> Lo que dice demo es que es el práctico de que el obligatorio pide las ciertas métricas especiales
+    -> Y esas métricas, pueden entrar a Elastic Beanstalk y configurarlas en la parte del estado
+    -> Ya lo deberían haber visto
+    -> El Elastic Beanstalk está, si no lo muestra, por ejemplo
+    -> Ya lo descargué igual
+    -> Lo tengo acá porque mostramos sobre ejemplo
+    -> Lo que hago es únicamente conectar la clase
+    -> Ya no es necesario a nivel de la tienda, calcular no, no, no
+    -> Porque en realidad vos esas métricas de CPU y todas esas cosas
+    -> Voy a necesitas obtener con el manejador de la distancia que vas a ya
+    -> Entonces es lo más sencillo como también CloudWatch es la solución más sencilla ustedes ahí
+    -> Enable lo y abajo dice CloudWatch cuando levanta la distancia a las titow
+    -> Que es la idea de lo que necesitan hacer ahora
+    -> Ya quedaría eso pronto
+
+### Métricas Personalizadas
+
+    -> Además de la métrica que ya se han enviadas por el agente del APM
+    -> Esto New Relic que configuran en su repositorio, su código, su aplicación para que envíe esta información a New Relic
+    -> Si no no puede recolectar esta información
+    -> Tienen que conectar
+    -> Si podemos enviar nuestras propias métricas
+    -> Ya habíamos hablado de custom metrics
+    -> Con por ejemplo, métricas de negocios que pueden ser útiles para nuestro negocio
+    -> Por ejemplo, ahí en la imagen muestra las métricas de éxito de compra
+    -> Da el orden es el volumen de órdenes
+    -> La conversión
+    -> Vean que desde que entran
+    -> Si tienen trazabilidad de todo su flujo, pueden decir desde que entran hasta que terminan comprando
+    -> Cuántas personas como ese embudo
+    -> Vean que ahí se ve el embudo de ventas
+    -> Hasta los que terminan comprar
+    -> Entonces pueden decir: entran tantos usuarios al home y hacen tras de lo que es desde el home hasta que ese mismo usuario termina comprado
+    -> Con esa información pueden decir eso tenemos todo este
+    -> Y ahí se ve clarito el embudo de venta que tienen
+
+## Práctico: CloudWatch y Elastic Beanstalk
+
+### Repositorio del Práctico
+
+    -> Voy a compartir el enlace en el zoom
+    -> También en teams
+    -> El repositorio de un proyecto simple
+    -> Tiene todo el código actualizado
+    -> No tiene mucha cosa
+    -> Tiene SQS, tiene un POST
+    -> Para que generen estas colas y puedan simular flujo
+    -> Tiene un POST y tiene un Docker Compose particular
+    -> Levanta lo que es el Docker Compose con la instancia de SQS local
+    -> Y tiene conexión a DynamoDB local
+    -> Algo que está muy bueno es que agregué en SQS
+    -> Pueden hacer los custom scripts
+    -> Todo está agarrado
+    -> Y de DynamoDB: pueden configurar un script con DynamoDB para que levante y haga las configuraciones en la tabla de DynamoDB cuando levanten docker compose
+    -> Como ahora vamos hace un ratito, Amazon permite que simulen la conexión por la tabla de base de datos local
+    -> También pueden tener esto para otro servicio AWS como S3
+    -> Ya hace poco un docente compartió algo que hay una herramienta y una librería que permite emular cualquier servicio AWS mañana local
+    -> O varios o mucho más servicios
+    -> Ya acá está el Docker DynamoDB
+    -> Lo único que hace es se conecta con el DynamoDB, en este caso continual local y configura la tabla
+    -> Corren esto cuando levantan el Docker Compose se corre estos comandos y ya configura la tabla de forma
+    -> Eso está bueno también porque con esto habrán visto que hay ejemplos
+    -> Pueden usar en tareas o actividades que se usa este script
+    -> Que son como scripts pequeños para que de esta manera puedan por ejemplo deploy en AWS te puedan hacer todo el configurado credenciales con variable de entorno
+    -> Pueden hacer eso
+    -> La idea
+    -> Tiene un README ahora lo vamos a leer que es un poco lo que la aplicación Docker Compose
+
+### Aplicación del Ejemplo
+
+    -> Acá tenemos el script texto para la parte del push
+    -> Vean que esto lo que hace es deploya todo
+    -> Se utilizan varios scripts acá
+    -> Está bueno para que les permita ver como se maneja eso
+    -> Porque acá, por ejemplo, obtiene las credenciales de AWS automáticamente
+    -> Hace un push a las teams
+    -> Para intentar deploy
+    -> Entonces esto vean que bastante útil
+    -> Y nosotros lo que tenemos acá es un simple index de Express
+    -> Que lo único que hace es expone varios endpoints
+    -> Nada más
+    -> Utiliza Winston que es para lo que es la parte de logs
+    -> Vean que ahí tienen log.error y log.info
+    -> Se separan lo que es producción de lo que es desarrollo
+    -> En base una variable de entorno
+    -> Es muy sencillo, separa lo que es producción de lo que es desarrollo en base una variable de entorno
+    -> Cuando creamos el logger ahora vamos a ver cómo se utiliza
+    -> Generamos el puerto y la conexión a DynamoDB todo en un mismo
+    -> Es un ejemplo de clase
+    -> Y acá tenemos log.info, log.error
+    -> Fíjense que el logger al usar esta librería ya nos trae los niveles de error
+    -> Ya nos trae los niveles de info
+    -> Y esta herramienta ya imprime todo un poquito más lindo acá
+    -> Acá tiene un modo en producción y un modo development
+    -> Donde al ponerlo de development, pone colores, pone cierta configuración simple
+    -> Y acá lo que hace es poner todo un formato más claro
+    -> Y permite configurar el nivel
+    -> Esto podría ser mucho más configurado
+    -> Te podría antes que como habíamos charlado crear una clase y configurarla
+    -> Pero esta es una de las librerías que poder utilizar para los logs todo un poquito más lindo
+
+### Endpoints del Ejemplo
+
+    -> Expone varios endpoints esta aplicación
+    -> Más que nada este es un muy sencillo
+    -> Tenemos las tareas de TODO
+    -> Las creamos, las sostenemos
+    -> Les ponemos el server
+    -> Y acá también cuando se levanta la aplicación, cuando se muere la aplicación, cuando se levanta imprimamos log.info
+    -> Ya nada
+    -> Película más Amazon
+
+### Objetivo del Práctico
+
+    -> Esta aplicación tiene todas esas herramientas
+    -> La idea de esto
+    -> Este práctico es dos cosas:
+        1. Que se junten en equipos y logren desplegar esto bien sencillo en el Elastic Beanstalk
+        2. Que haga muestra cómo levantar todo
+    -> La idea es dos cosas a utilizar acá en este práctico
+    -> Que este práctico después mañana puede transformarse en tarea como el práctico
+    -> Como lo que voy a mostrar el código que si me deja de guiarme en
+    -> Me vamos a ver el ejemplo de la clase que viene
+    -> Pero la idea de este práctico y este ratito que nos queda es que intenten hacer esto
+    -> Este tipo de cosas son las que se transforman en tarea o micro tarea o en tarea particular
+    -> Entonces si ya hacen esta conexión y imaginen cómo hacerlo después sale de una
+    -> Si no se van a enfrentar al problema tarde
+    -> La idea es que intenten configurar CloudWatch (deploy sencillo)
+    -> Intenten configurar CloudWatch para poder ver esos logs
+    -> Pueden comentar la parte de DynamoDB
+    -> No hay problema, pueden comentar la parte de DynamoDB
+    -> No hay inconveniente, cosa que solo tengan el endpoint GET
+    -> Pero lo importante es que hagan un deploy al Elastic Beanstalk
+    -> Como vieron hasta ahora que utilizamos en dos que 10, 15 minutos que nos queda para hacer un deploy y poder ver eso
+    -> Viendo que nos queda hace tiempo
+    -> Y si no, al final del práctico no es práctico
+    -> Voy a dejar ese tiempo y la clase que viene para que le interese vamos a ver este repositorio
+    -> Lo pueden buscar el usuario que aparece enseguida
+    -> Lo que vamos a hacer es un ejemplo bien sencillo
+    -> También la idea es hacer medio como que no es práctico, una clase media de práctico
+    -> Vamos a hacer un ejemplo medio sencillo donde vamos a conectar con SQS
+    -> Que es una cola, una cola de mensajes que ofrece AWS
+    -> Y van a ver qué sencillo es
+    -> Conectar va el ejemplo tiene un frontend
+    -> Entonces ahí vamos a conectar con DynamoDB y vamos a poder encolar datos y poder ver el estado de lo que se va a hacer
+    -> Y acá hay una especie de ejercicio que probablemente no nos dé tiempo
+    -> Tengo que ver cómo estamos de tiempo
+
+## Consideraciones Docker Compose Local
+
+    -> Pregunta sobre Docker Compose
+    -> El Docker Compose te levanta con una base de datos MySQL
+    -> Ustedes lo levantan
+    -> El dónde está levantando
+    -> El Elastic Beanstalk te lo levanta base de datos con costo local
+    -> Nosotros en local tenemos un Docker Compose que tiene un servicio de base de datos local
+    -> Y la levantamos
+    -> Cuando lo queremos desplegar en AWS, ahí no quiero Redis
+    -> Y tampoco quiero una base de datos
+    -> Pero vas a crear un Docker
+    -> Vas a crear una imagen de Docker únicamente con volumen para solo para, para no
+    -> Podés tener como que vas a subir la imagen
+    -> En realidad no vas a porque en realidad vos tenés el Docker Compose que te levanta todo
+    -> Claro, en realidad el Docker Compose los vos tenés se conecta la imagen
+    -> Vos vos construíste esto con Dockerfile desde tu instancia de Node
+    -> Entonces vos ahí lo que vas a subir en particular es el Dockerfile con tu proyecto
+    -> Y el Docker va a levantar la instancia de Node
+    -> Gracias
+    -> Y por otro lado Redis
+    -> Exacto
+    -> Documentación viene algunas vistas
+    -> O pone de pie en la
+    -> Sería bueno como uno de local y otro no
+    -> Porque en realidad bueno, la
+    -> Es como lo estás desplegando hasta ahora
+    -> Ustedes nunca hicieron en la nube
+    -> Pero en realidad decía la nube como lo vas a desplegar
+    -> Claro, pero te cambia el no
+    -> Lo bueno, vas a hacer al hacer cosas, me entré, voy a ser un deploy local porque no llegué
+    -> La idea es que ustedes ya hagan diagrama deploy para la nube
+    -> Claro ya
+    -> Pero como la letra pedían funcionalidad local también
+    -> Claro, pero eso funciona local
+    -> Es que corra localmente
+    -> Comparte despliegue
+    -> Está bien local
+    -> Tiene por ahí
+    -> Y en esas instancias metemos Redis o no
+    -> Perdón en las mismas ponemos Redis también
+    -> Hace falta vamos a claro
+    -> Si no especifica te digo justificar pero no
+    -> No tiene
+    -> Si está bueno, si está bueno, si lo hacen es una pero si
+    -> No, no, no he que se está evaluando sin todo
+    -> Ya pasante arquitectura
+    -> Te desespera que vos salgas haga eso, pero no es algo que está que está explícito
+
+## Contraseñas y Seguridad en Logs
+
+    -> Uno que es objetivo en sentido de que qué es de bucket y que es de info
+    -> Segundo, lo que es el filtrado de información
+    -> Este tipo de herramientas nos ayuda mucho a que nosotros en todos nuestros servidores
+    -> Haciendo una simple búsqueda podemos detectar enseguida que salta un log de este estilo
+    -> Y automáticamente le va a dar una alerta
+    -> Como se enlazar métricas con alerta para hacer búsqueda o queries
+    -> De encontrar a palabras clave como a password
+    -> Si igual por algún formato en particular con un largo especial
+    -> Siendo cosas random, por ejemplo
+    -> Para poder decir bueno, cuando detectamos esto
+    -> O mismo que esa herramienta conozca las claves y las busque
+    -> Busque las claves, haga queries de las claves para poder detectarlas
+    -> Y decir bueno, se alguien mostró una clave de algo que no tendría que mostrar
+    -> Entonces también estas herramientas tiene utilidad para protegernos a nosotros mismos de mal uso del logging
+
+## Consideraciones de Complejidad
+
+    -> Acá pasé yo con la interfaz
+    -> Esto es Kibana que tiene los logs, me equivoqué
+    -> Y acá tienen New Relic que tiene otra interfaz
+    -> Sí que mide
+    -> Lo mismo que puede medir Kibana: el throughput, el response time, el error rate
+    -> La parte de infraestructura CPU, RAM, etcétera
+    -> Traces y más obviamente que esto
+    -> Tenemos que enlazarlo con AWS
+    -> Dónde está la complejidad de esto a nivel de su obligatorio
+    -> Porque para las herramientas que necesitan, intento de solucionarlo por CloudWatch mismo
+    -> Cuando se paren microservicios, no van a hacer más de 10 incluso servicio
+    -> Entonces tampoco va a valer la pena de repente
+    -> Que se tire más que nada por este lado
+    -> No hay un requerimiento de letra que diga hagan New Relic
+    -> Ni un requirement tienen que enlazarnos con todas sus instancias
+    -> Y qué es lo que pasa: consolida todo en una razón
+    -> Ahora es una sola
+    -> Después va a hacer pero qué problema tienen: académico y cada levanta todo
+    -> Es súper costoso
+    -> Entonces ahí no ustedes no estas herramientas tienen que saber porque la vida real se utiliza
+    -> Ni más que nada en un ambiente de microservicios
+    -> Pero sumamente es difícil o complejo
+    -> Si ustedes tienen que a no ser que haya algo, yo no recuerdo que en la letra haya algún requerimiento
+    -> Ni algo que ustedes no puedan entrar a teams y pedir que empiece a mostrar esas métricas
+    -> Si o también entrar a CloudWatch y poder hacer observabilidad
+    -> Eso configurándolo con el código
+    -> Si pero porque de nuevo, levantar varias cosas se maneja es un problema
+    -> Pero sepan que esto existe y está y lo pueden utilizar
+
+## Próximos Temas
+
+    -> Continuar con el práctico en la clase que viene
+    -> Ejemplo completo con SQS y procesamiento de mensajes
+    -> Práctico sobre conexión con colas de mensajes y DynamoDB
+

@@ -1,0 +1,485 @@
+# Arquitectura de Software: Long-Running Tasks y Patrones de Background
+
+## Introducción
+
+    -> Consultas sobre micro tarea y actividad
+    -> Micro tarea dos: lectura de artículo individual
+    -> Entrega: crear un commit en el repositorio con análisis del artículo
+    -> Última clase del obligatorio será de dudas
+    -> Práctico sobre CloudWatch y configuración de logs
+    -> Siguiente clase: ejemplo con SQS (AWS Simple Queue Service)
+
+## Cronograma del Curso
+
+### Actividades
+
+    -> Semana 9 (10-11-12 de octubre): Segunda actividad
+        -> Probablemente sobre performance y probabilidad
+        -> Micro tarea adicional esta semana
+    -> Semana 14 (17 de noviembre): Tercera actividad (a definir)
+
+### Micro Tareas
+
+    -> Cinco micro tareas en total
+    -> Se liberarán progresivamente
+    -> Después del obligatorio quedan tres por liberar
+    -> Una de performance y parte de bases de datos
+
+### Obligatorio
+
+    -> Entrega: 9 de octubre
+    -> Última clase (miércoles antes de entrega): clase de dudas
+    -> Consulta sobre modalidad: probablemente remoto
+    -> La semana próxima quedarán espacios al final de clase para consultas
+
+## Consideraciones sobre el Obligatorio
+
+### Capturas de Pantalla y README
+
+    -> Para micro tarea y actividad: captura de imagen de pantalla
+    -> Mostrar que se completó
+    -> Debería estar en el README
+    -> Crear un commit indicando captura de imagen de pantalla
+    -> Mostrar el tamaño y dejar completado
+    -> Referencia de imagen automática al leer el repositorio
+    -> Si la captura no es suficiente, pueden armar un video
+    -> Importante: vayan subiendo la captura
+    -> Garantizar que haya quedado un README en el repositorio
+
+### Conexión a Base de Datos
+
+    -> Problema común: conectar la base de datos
+    -> Forma de hacerlo: con grupos de seguridad
+    -> Conectan la base de datos después conectan el Elastic Beanstalk
+    -> También se pueden conectar de manera remota desde su computadora
+    -> Cuando se conectan de manera remota: no es la forma más segura de conectarse a una base de datos
+    -> Dejar que la única capa de seguridad sea la contraseña: eso no se maneja así
+    -> Se pone en grupo de seguridad
+    -> La única que deberían acceder a la base de datos son el mismo backend y el mismo servidor
+    -> Puede ser varios servidores que accedan esa base de datos
+    -> La letra dice igual que tiene privado o implementar un mecanismo en seguridad específico por la aplicación
+    -> Vamos a hablar de seguridad semana 8 (semana del 10)
+    -> Capaz que lo podemos echar un poquito antes
+    -> Ahí vamos a hablar de VPC y una cantidad de cosas
+    -> Por si lo quieren hacer, pero lo básico es que puedan para este obligatorio
+    -> Si se te hace la contraseña, bueno, defender un poco de eso
+    -> Vamos a ver la parte de seguridad
+    -> Vamos a hablar de VPCs y esas configuraciones para que la puedan manejar
+    -> Perfectamente van a poder agregar esa base de datos a una VPC
+    -> Y la pueden hacer si quieren si para este obligatorio no llegara hasta ahí
+    -> Buena defensa hasta donde maneja la parte de seguridad
+    -> También deberían configurar algún SSL o algo
+    -> Habrán visto cómo cuando configuran la base de datos
+    -> Cómo se conectan también con TLS
+    -> Cómo se conectan de forma remota
+    -> Pero de todas maneras vamos a volver a tocar el tema
+
+### Paginado y Filtrado
+
+    -> Pregunta sobre paginado en backend vs frontend
+    -> Respuesta: paginado en backend
+    -> Quemando la base de datos para traer mis datos ahí mismo
+    -> Hago el filtrado y la paginación que necesite dependiendo de los parámetros que me llegaron
+    -> Eso se toma como paginado en el backend
+    -> Si estás mandando en la query y el paginado, estás haciendo una consulta de SQL que tiene el paginado
+    -> Lo estaba haciendo la base de datos
+    -> Si hacés le decís quiero recibir ciertos datos y ese dato que recibir puede aplicar un map o filter o cualquier operación a nivel de servidor
+    -> Ahí lo estás haciendo en el servidor
+    -> Diferencia con librería de DynamoDB: a veces DynamoDB les ofrece hacer ciertos filtros
+    -> Y entonces se dan cuenta por las malas porque el servidor empieza a dar lento
+    -> Hay ciertos filtros que hace esa query que por más que parecen que lo están haciendo en la consulta
+    -> En realidad lo que está pasando es que la librería trae todos los datos y hace el filtrado, la agrupación o lo que hayan marcado a nivel de servidor
+    -> Pero eso lo hace abajo nivel local
+    -> Y ustedes si no se sientan a ver qué operaciones hace o cómo está haciendo operaciones, no se dan cuenta
+    -> Piensan que están haciendo todo en la base de datos
+    -> Cuando mandan un GROUP BY, un LIMIT tal que es la parte del paginado, el OFFSET para indicar a partir de tal página
+    -> Eso cuando lo hacen con DynamoDB hasta cierto punto lo hace en servidor en la base de datos
+    -> Ya hace la consulta
+    -> Pero hay ciertas cosas que ciertas funcionalidades que ofrece librería de filtrado, agrupación
+    -> Por ejemplo, cuando buscan por un nombre que como DynamoDB y MongoDB también trae por página
+    -> Pueden ser que hasta primero que van a ser cierto filtrado a nivel local
+    -> Entonces ahí lo que están haciendo es local, no lo están haciendo en el servidor
+    -> Y segundo: tengan cuidado con la lógica de paginado
+    -> Pueden ser que no están trayendo datos que están en dos o tres páginas
+    -> Y esos datos ustedes los cuándo se dan cuenta cuando prueban datos con cuando prueban con una base de datos con bastante datos
+    -> La realidad es que tiene para su obligatorio que carguen datos tanto
+    -> Entonces recomendación: carguen más de una página de datos cuando hacen paginado filtrado
+    -> Se fijen si está trayendo los datos de las dos páginas
+    -> Cuidado con la librería porque parece que están haciendo paginado cuando quieren estar haciendo todo del lado del servidor
+    -> Por ejemplo, la búsqueda por nombre o lo que sea, por algún atributo que no sea la clave primaria o el sort key
+    -> Lo están haciendo todo del lado del servidor
+
+## Long-Running Tasks
+
+### Definición
+
+    -> Operaciones largas cada
+    -> Ejemplo: generar un reporte
+    -> Operaciones que pueden tomar bastante tiempo
+    -> ¿Qué operaciones se les ocurren que pueden tomar bastante tiempo?
+    -> Cuando hablamos de bastante tiempo: más de 2 segundos
+
+### Timeouts y Límites
+
+    -> Límite de tiempo por defecto en APIs
+    -> Normalmente son 2 segundos
+    -> Express Node tiene 2 segundos y tiene que tiene
+    -> Creo que da 2 segundos
+    -> Se puede configurar pero por defecto tiene ese timeout
+    -> ¿Qué sucede cuando configuran Express Node con Elastic Beanstalk o con otro servicio API?
+    -> El problema se multiplica por dos porque no solo tiene la configuración del servidor
+    -> Sino que cuando sale con Elastic Beanstalk utilizan Nginx o el puerto que pone Docker
+    -> Y eso tiene otro timeout
+    -> Error muy común: manejo mal una request y demora más de 2 segundos
+    -> Voy y lo cambio el código, lo subo local
+    -> Y funciona y no me da error
+    -> Es porque hay otra configuración más de Elastic Beanstalk que hay que hacer
+    -> Hay que configurar o si los subieron con una imagen de Docker
+    -> El Elastic Beanstalk hay que configurar cambiar esa configuración de esa imagen
+    -> Y si no hay que subir un archivo de configuración de Nginx
+    -> Tiempo máximo o normal o natural para un API: 2 segundos
+    -> Normalmente la base de datos también tienen para usar las consultas
+    -> Creo que no es 2 segundos, creo que es 2 minutos
+    -> Por ejemplo, PostgreSQL tiene algo ya por defecto
+    -> Y si pasa eso, se trata
+    -> Y volviendo al mismo problema: si deployan en RDS puede ser que hagan la configuración en la base de datos
+    -> Pero RDS tiene que tener configuración también
+    -> Hay que tenerlo en cuenta: son pequeños detalles a tener en cuenta
+
+### Problemas de Timeout
+
+    -> ¿Qué pasa de para maravilla si tengo buena indexación?
+    -> Si hago buenos endpoints, no deberíamos tener endpoints que demoren 2 segundos
+    -> Como tampoco tendríamos que tener consultas a base de datos que demoren minutos
+    -> No vamos a tener el cliente esperando una request de tanto tiempo
+    -> Puede haber alguna excepción que tiene que ser una excepción
+    -> ¿Dónde se puede trancar un poco más?
+    -> Porque ustedes dicen nada así, pero yo puedo tocar en algún sitio
+    -> Por ejemplo, hay veces que tarda más de 2 segundos en cargar toda una página o hacer una request
+    -> Si prestan atención a ese detalle, la mayoría a veces ese fue que esa request todavía no llegó al servidor
+    -> Por eso está demorando tanto
+    -> Ustedes dicen una request y todavía todo el proceso de la comunicación, la request todavía no llegó al servidor
+    -> Cuando llega el servidor ahí se tiene que procesar enseguida
+    -> Ejemplo: cuando cargan una página y dice no, pero yo cargo una página y acá voy al network
+    -> Abro el network y veo que la request demoró más de 2 segundos
+    -> Pero desde que cuando llega el servidor, se procesa y se consulta la base de datos
+
+### Problemas que Podemos Tener
+
+    -> Mala experiencia del usuario
+    -> Recuerden que al final del día todos estos procesamientos que hacemos
+    -> Tenemos dos tipos de software:
+        -> Uno que es ese software que tiene que hacer algo con una necesidad
+        -> Entonces, no importa si toma tiempo, pero tenemos casos me importa la experiencia del usuario
+        -> Y después tenemos el software casi general que siempre está enfocado en el usuario
+    -> ¿Por qué dice para uno y otro?
+    -> Porque de repente hay problemas muy complejos y cuánto software que de repente yo no me he prestado aún
+    -> Pero que es importante solucionarlos y de repente encontrar alguna solución, un problema y que ande
+    -> No importa que la experiencia del usuario sea mala o capaz que sinceramente no es la importancia de que ande para el usuario
+    -> Con hacer alguna algoritmo o algo que demore y necesiten para solucionar el problema
+    -> La mayoría de programas, si son para que ustedes hacen y más todo este curso
+    -> Van a ver software SaaS son problemas o programas enfocados en el usuario
+    -> Entonces cuando demoran mucho tiempo, la experiencia del usuario se vuelve desagradable
+    -> Está lo está afectando y está y no soltar de tanto usuario
+    -> El usuario es muchas veces es su cliente
+    -> Hay veces que no muchas veces es su cliente
+    -> Entonces es, si es su cliente, no está contento con el software
+    -> No lo va a usar o buscar una alternativa
+
+### Timeout de Posiciones
+
+    -> El servidor tiene límite
+    -> Es una de las cosas que, por ejemplo, retomando hablamos por el paginado
+    -> Si no hacemos el paginado en la base de datos, lo hacemos en el frontend
+    -> Si lo hacemos en el backend, está bien
+    -> Algunas ahora vamos a muy podido de nuevo eso
+    -> Pero si lo hacemos en el backend, ¿qué es lo que va a pasar?
+    -> Vamos a empezar a comer memoria RAM
+    -> Vamos a empezar a comer memoria porque cada request empieza a comer un poquito
+    -> Porque de repente recibe 1000 datos y lo filtra ahí
+    -> Y obviamente que vas a aturcar el servidor
+    -> Lo mismo pasa si procesan PDF
+    -> Capaz que procesan PDF en dos minutos, al minuto y los 52 segundos
+    -> Pero piensen que esa request estuvo trancando el servidor un minuto 52 segundos
+    -> Eso a medida que se va moviendo, es un problema
+    -> Y también la parte de los problemas síncronos es que cuando falla, ustedes no pueden manejar de manera resiliente
+    -> Lo más común que manejan es que se traba el cliente porque ustedes y corrígeme cuando fallan
+    -> Por ejemplo, inserción de un usuario, lo que sea todo el tiempo, el que he hecho hasta ahora retorno un error
+    -> El cliente lo vuelve a intentar
+    -> No es que ustedes agarran intenta retornar
+    -> Insertada de nombre y más poco ustedes hasta ahora desarrollan API REST que le damos que el POST
+    -> Por ejemplo, no es si el POST sí, vamos alineados con eso
+    -> Entonces no lo tratamos así
+    -> Estos son los tipos de problemas que podemos manejar
+    -> Esto quiere decir que está mal o no, no se tiene que hacer
+    -> O sea, no se puede hacer paginado
+    -> Se le prote porque es lo que que con tema no se puede hacer SOA el ustedes
+    -> No que puede eso cualquiera, pues hacer lo que más le gusten
+    -> Y es más para solucionar los problemas
+    -> Si tienen que brindar una aplicación rápida o cliente una funcionalidad rápida
+    -> Y se le paginaron el frontend y esos no les afecte y les permite tener al cliente y poder seguir trabajando
+    -> Está perfecto
+
+### Ejemplo Práctico: Reporte de Usuarios
+
+    -> Comentario: yo hasta en su momento creo que lo comenté en esta clase, pero lo vuelvo a comentar
+    -> Yo necesito hacer un reporte por base de datos de los usuarios por DB, por ejemplo
+    -> Y yo agarro toda la base de datos que agarro y genero un Excel con eso
+    -> Entonces me lo más práctico
+    -> Y como sé que son 50 haciendo usuarios, si nunca se mueve de ese número, no hay problema
+    -> Creo que lo había charlado acá, pero como es una operación que se hace en el backend, no me interesa
+    -> O sea, si hoy en día se empieza a atrancar, que es lo que hago, la saco y la pago
+    -> Y me solucionó el problema y no tuve que hacer un paginado y otro para obtener el documento
+    -> Cuando sé que los usuarios, el rango usuarios que manejo es ese y es lo más rápido
+    -> Entonces no voy a complicarme la vida
+    -> Y fue algo que salió en cinco segundos
+    -> Y eso quiere decir que está bien si las mejores prácticas ya ver no, obviamente que no
+    -> Pero para solucionar un problema, lo ataca
+    -> Como todo lo que vamos a ver ahora son recomendaciones y cosas que pueden hacer
+    -> Todo este curso se trata de microservicios
+    -> Es una cantidad de cosas que la realidad que ustedes para atacar esos problemas
+    -> Es muy difícil que se ponga implementar todo esos microservicios a nivel de un proyecto personal
+    -> De repente pueden hacer una tesis de grado imaginándose si van a tener 1,000,000 de usuarios
+    -> Y atacar ese tipo de problemas
+    -> Pero si no, no tiene mucho sentido tratar, o sea así, tener de repente varios servicios
+    -> Si se encuentran la justificación: sí
+    -> Pero si no, si van a tener un solo usuario, pueden tener un Elastic Beanstalk que haga todo
+    -> Se lo pueden atacar perfectamente
+    -> Entonces, solo ustedes los que estos son recomendaciones y más o menos para escalar
+    -> Porque van a hacer que yo en sistema entonces va allá les toca trabajar en una software factor y chiquita que hace batimiento
+    -> El proyecto o le toca trabajar en MercadoLibre, pedido ya, Amazon que tiene que trabajar con microservicios
+    -> Tiene que tener idea las buenas prácticas y porque hace todas cosas bien
+    -> Asumo que no hay dudas igual
+
+## Analogía del Restaurante (Overcooked)
+
+    -> Pregunta: ¿qué problema ven en el juego?
+    -> ¿Quién tenía que atender a todo?
+    -> Entonces era como que iban tenían que recibir la consulta y esperar a que estuviera pronto tanto de la gente
+    -> Cuando demora ustedes demoraban en contestarle porque no le estaban dando feedback de alguna manera
+    -> Como que la persona estaba ahí esperando su comida se empezaba a molestar
+    -> Y salía la comida de repente ustedes tenía que servirle a otro
+    -> Entonces, como ya y voy luego a recalcar esa parte como en ningún momento ustedes le estaban diciendo en cuál era el estado de la comida
+    -> O le estaban dando algún tipo de información al cliente
+    -> Y qué es lo que pasa? El cliente se queja
+    -> Eso pasa también en software con clientes donde ustedes, por ejemplo, piden alguna documentación
+    -> Compran algún producto, lo que sea
+    -> Y ustedes pasa semanas que no tienen un equipo de soporte agarre ese comunique algo tan sencillo como decirle mira que estamos trabajando en esto
+    -> Que eso a veces baja estadísticamente hablando, baja las consultas
+    -> No quiero ir volando un 70 percent
+    -> O sea, vital
+    -> Entonces acá es uno de los problemas que tenían, ¿cómo las manejamos?
+
+## Background Jobs
+
+### Concepto
+
+    -> Si el cliente no precisa resultado de la operación, lo hacemos en background
+    -> El primer fondo, o sea, si nosotros no necesitamos que el cliente tenga el resultado de esa operación
+    -> Sino que es algo que el cliente hace y ya está
+    -> ¿Para qué tenerlo esperando?
+    -> No es el caso de la comida, pero para qué vamos a tener esperando el cliente si nosotros no necesitamos esperar este también
+    -> ¿Qué es lo que vamos a hacer?
+    -> ¿Cuál es una de las soluciones que podemos hacer?
+    -> Bueno, manejarlo background
+    -> ¿Quién dijo manejar mandar mail?
+    -> Sí, claro
+    -> O sea, nosotros cuando vas a enviar un mail, no tenés que avisarle che mail envió
+    -> Entonces, bueno, en la parte web, tenés varios conceptos
+    -> El proceso que atiende la request HTTP el worker, tal que sería como el cocinero
+    -> La web sería como la que atiende y el worker sería el cocinero
+    -> Entonces tenés como esos dos
+    -> Y puede compartir código o hace o no que era un poquito de lo que estábamos hablando hace un rato
+    -> Que si hacen un monolito en el mismo monolito pueden tener la API y pueden tener una función que haga trabajos en segundo plano
+    -> O los trabajos pesados sí que escuche de una en el mismo servicio
+    -> Pueden tener una cola de mensaje que escuche
+    -> Y además se pone una API Express
+    -> Por poner un ejemplo, el Elastic Beanstalk que en particular ofrece esta funcionalidad de worker
+    -> Donde se va a integrar con un servicio que se llama
+    -> Lo pueden integrar con un servicio que llama AWS SQS o directamente
+    -> Pueden ponerlo como worker, como trabajador y configurarle lo que se llama
+    -> Cron Job
+    -> ¿Alguno ha configurado cron job para hacer trabajo?
+    -> Sí
+    -> Por ejemplo, lo más común que se me ocurre es cuando creas enviar el famoso mail de carrito vacío
+    -> Entonces haces una consulta todas las requests, todas las solicitudes que tenés sin procesar
+    -> Lo que hago es este, busco todas esas solicitudes y a esos usuarios les envío mail
+    -> De repente tenés 100 solicitudes, no lo vas a hacer así
+    -> No lo haces en cierto, no lo vas a hacer sin lo haces en cierta hora
+    -> Y cierto horario algo que también suele estar bueno para los cron jobs es las limpiezas de la base de datos
+    -> Si querés hacer una limpieza la base de datos
+
+### Implementación de Background Jobs
+
+    -> Un usuario hace una petición o un endpoint
+    -> En este caso, por ejemplo, yo caso que le decía es un usuario agarra y actualiza sus datos
+    -> Cuando un usuario actualiza sus datos personales llega el servidor esa información
+    -> Y el servidor encola un background job para realizar el trabajo pesado restante
+    -> Por ejemplo, generar un reporte nuevo con esos datos
+    -> Un reporte de usuario capaz que solamente queremos generar, por ejemplo, un PDF con los últimos datos
+    -> O con todos los datos que tiene usuario que nosotros cuando llamamos vamos a descargar tengamos siempre el último PDF
+    -> Entonces lo hacemos background
+    -> Retorna una respuesta síncrona de "se procesaron tus datos"
+    -> Esta se va a procesar esto
+    -> El caso más común de background job es el envío de email
+    -> Y el background job el punto cuatro el worker realiza el trabajo y actualiza los datos que necesite
+    -> Entonces, ahí algo que siempre se recomienda con el envío de mail y que ya habrán comentado en arquitectura
+    -> Y bueno, cuando tengo servidor que envía mails, ¿qué es lo que hago?
+    -> Bueno, el usuario envía un mail hace la petición a tu servidor
+    -> El servidor le responde "voy a enviar el mail"
+    -> Encola el mail a enviar y le dice cuando "voy el mail se va se va a enviar"
+    -> No le dice "se envió su mail" sino "se va a enviar" y ya está
+    -> Y si ese fue el feedback que le diste, se terminó
+    -> Ya no le estás dando actualización en real time sino que le estás diciendo "tu operación fue exitoso"
+    -> Algo bueno del background job es que hace que de repente lo que podíamos esperar tres, cuatro minutos
+    -> Pasa hacer una operación de 200,000 segundos
+    -> Y el cliente de la nada en unos segundos se le envían menos
+    -> Usted ha visto capaz que tiene esa experiencia cuando pone a recuperar contraseña o algo se le va a enviar el mail o lo que sea
+    -> Todo esto se hace así en primer lugar para darle la respuesta cuanto antes al cliente
+    -> Y segundo porque es un proceso que demora que puede demorar tiempo
+    -> Y cuántas veces ha pasado que es algo super común que ustedes envían en un mail de recuperación
+    -> No llega
+    -> Sí que algo que alguien le tiene que haber pasado en vida
+    -> Si no me está llegando el mail, bueno, a veces se puede ser por una falla
+    -> Porque le das de nuevo y de repente si llega
+    -> Entonces puede hacer una falla de servidor
+    -> Como siempre tenés también patrón de re intento
+    -> El background job el problema que tiene es que el cliente nunca puede reportar si se hizo o no el trabajo
+    -> O sea más allá que después puede chequear si se generó el PDF si le llegó link mail o lo que sea
+    -> No se le da feedback si el trabajo se realizó sino que se le dice "se va a realizar, se va a enviar" está "se está enviando" alguna cosa así
+    -> Entonces, ¿qué es lo que hacemos nosotros?
+    -> Bueno, tenemos que en este paso cuatro que es este worker si poder este meter logs
+    -> Poder hacer auditoría de esto estaba para poder y saber qué se está enviando
+    -> No da este y bueno, un poco de eso nosotros tenemos que tener logs
+    -> Tenemos que tener auditoría tan mecanismos que nos den alertas en el caso de sea necesario
+    -> Mecanismos que nos permitan darnos cuenta que estos trabajos en background fallan
+    -> Da este ahí hay mucho
+    -> Hay varios servicios de auditoría que ustedes pueden poner el log
+    -> O pueden directamente configurar un alarma cuando explota un error
+    -> Porque por más que sin lugar a duda que el paso 4 va a ser un servicio y eso se va a ejecutar y todas esas cosas
+    -> Ese servicio no va a darse cuenta a ustedes
+    -> No van a darse cuenta a ustedes que falló y nunca va venir ni un cliente a criticarle
+    -> Lo más común que falló es algo que normalmente es código que por consola escupió se manejó la excepción
+    -> Entonces si ustedes no ponen algún mecanismo para saberlo, nunca se van a dar cuenta
+
+### Diagrama de Secuencia de Background Job
+
+    -> Vean que hay dos tipos de servicios tienen acá todos los servicios
+    -> Tienen el consumidor que hace el request de forma síncrona
+    -> En cola y enseguida responde
+    -> O sea que demos nos gastamos tiempo en el consumidor el servidor hasta ahí se terminó
+    -> Y véase que si se dan cuenta es como que hace acá agrega como una especie de cuenta porque supone que alguna validación síncrona
+    -> Por ejemplo, en el caso yo le ponía ponía el caso de un usuario que inserta sus datos
+    -> Actualiza sus datos personales y eso triggera que nosotros generemos un PDF
+    -> Entonces no vamos a cada vez que actualiza su dato personal es en el mismo la misma vez generar un PDF nuevo
+    -> ¿Qué es lo que hacemos? Bueno, y es lo que simula un poco acá antes de encolar o puede ser de puede ser después de encolar
+    -> Acá lo hace después puede haber cierto trabajo síncrono o puede controlar de encolar pues
+    -> O sea, no hay le encolar puede estar en cualquier momento
+    -> Pero lo importante que marca el diagrama es que la request puede hacer alguna validación lo que sea luego se para hacer después y queda acá acá quedan una cola
+    -> Y se responde al cliente
+    -> Y esto se va a realizar después
+    -> Esto se va a revisar a síncrono los diagramas de secuencia
+    -> Recuerden que tienen dos formas de representar la flecha es una una manera de representar si no me equivoco
+    -> La flecha recta que es la manera síncrona y la flecha normal así que es asíncrona o al revés
+    -> Pero recuerden que a síncrono nos está diferenciando
+    -> Sí, pero este el background for la es algo que se está haciendo a sí
+    -> Ustedes se lo dieron más secuencia tienen esa referencia para indicar cuando esa asíncrono
+    -> En este caso esta flecha sería igual síncrono
+    -> Es como que insertamos hay una confirmación de alguna manera, pero toda es esta patita acá se va a hacer a síncrono
+    -> Y cuando el background job le cante o pueda trabajar va desencolar ese trabajo y lo va a revisar
+    -> Sí, cómo a los bueno
+    -> Pero otra cosa es super importante acá que está que está bueno marcarlo con respecto a las colas
+    -> Tengan en cuenta los mecanismos de retry y que por ejemplo hay colas que a veces pueden enviar duplicados o
+    -> Tienen varios mecanismos no me acuerdo
+    -> Si en esta clase creo que en otra clase que lo vemos pero ese tipo de cosas hay que tenerlos en cuenta
+
+## Notificaciones y Actualización de Estado
+
+    -> Pregunta: ahora ustedes me imagino que reciben notificaciones de su aplicación de su celular
+    -> O sea, muchas veces recibió la famosa notificación push
+    -> Bueno, hay dos mecanismos darle esa notificación de push
+    -> Y esto está relacionado por el patrón siguiente que nosotros
+    -> Lo que dijimos que vamos a hacer a síncrono nuestra transactions lo que dijimos que va a hacer es queremos mantener notificación de aquí del estado de lo que se está haciendo
+    -> Por ejemplo, supongamos que nosotros enviamos una solicitud a procesar en background
+    -> Nosotros queremos saber esa información para saber esa información
+    -> Hay tres formas de hacerlo
+
+### Tres Formas de Monitorear Estado
+
+#### 1. Recargar la Web
+
+    -> Actualizando el estado
+    -> Tengo un record en la base de datos que me dice "in progress", "fail" o "done"
+    -> Entonces cuando estoy recargando me muestra ahí
+    -> Eso es lo más común
+
+#### 2. Polling
+
+    -> Si queremos que cuando la persona deje la aplicación abierta le vayas haciendo refresh de la información
+    -> Es el famoso polling
+    -> Que es como que bueno no solo ponemos algún timeout o alguna espera
+    -> Algún tiempo de espera y nosotros que hacemos ahí es a tres segundos segundos, 10 segundos, 20 segundos
+    -> Volvemos a consultar el estatus de esto y nos vuelve a tirar toda la información
+    -> Está las veces que está actualizado
+    -> Ahora eso es más barato y no es más barato, más fácil es más fácil
+    -> Y también a veces es más barato dependiendo que el contribuyente
+    -> Y a veces es menos barato
+    -> Si tener request es muy pesado lo que sea es muy no es barato
+    -> Y terminar sobre que de requests de servidor pero sino es mucho más barato porque ¿qué pasa?
+    -> La solución es el famoso webhook
+
+#### 3. Webhooks
+
+    -> Que es la mejor experiencia y parece mucho más óptimo
+    -> Pero recuerden que webhook uno de los problemas que tienes que vos siempre tienes que tener como una conexión ahí viva
+    -> Puede estar consultando porque eso se trae tal el famoso WebSocket es lo que lo que hace es mantiene a nosotros
+    -> Entonces es lo más suficiente cuando implementar uno u otro
+    -> Porque obviamente que la solución siempre es el webhook en la medida lo posible
+    -> Bueno, si tenemos un sistema que tiene varias notificaciones está y vamos a tener muchos clientes consultando
+    -> Y obviamente más sano, sigue webhook
+    -> Ahora si tenemos una pantalla que nosotros queremos actualizar y tenemos algunos clientes que no que entran recurrentemente
+    -> Pero cuando entran nos actualizamos cada un minuto y nos vamos a levantar todo un servidor y a poner un WebSocket por esos clientes que entra en unos minutos
+    -> Y no vamos ir un porque no vamos a gastar en hacer toda esa implementación
+    -> Digo porque a veces que ven esta presentaciones está y dice nada, las soluciones siempre WebSocket como que es algo que mucha que cuando yo hablaba con los compañeros que habían hecho esta materia
+    -> Este cuando yo la dice decía nada bueno mismo me espacio el trabajo estaba de modelo microservicio también que disfrutarse por mis servicio
+    -> Y si ustedes se llevan es ese concepto de esta materia yo me siento tristísimo porque la realidad es como que siempre hay que hacer el análisis y vale la pena
+    -> Entonces acá la presentación va la vez y decide la solución es WebSocket
+    -> Si la solución es WebSocket pero ¿cuánto te lleva a implementar un WebSocket?
+
+## Twelf-Factor App y Logs
+
+    -> Hablamos de logs en Twelve-Factor App si no me equivoco
+    -> Corrector o está ahora vamos a hablar vamos a repasar un poquito de eso
+    -> Vamos a ver un poco los niveles en nos idea más allá hay que hay varios hacer estrategias a mí
+    -> Lo que me interesa es que el día de hoy más o menos la mayoría o bueno tenga una idea de cómo los configuró CloudWatch
+    -> Pueda cada uno chequearlo, hacerlo se pueden juntar en equipo
+    -> Pueden hacerlo entre varios eso no importa
+    -> Pero la idea es que hagan un simple deploy a Elastic Beanstalk y puedan ver esos logs cómo se ven
+    -> Y también que veamos una librería para que puedan subir esos logs
+    -> Para que puedan visualizar esos logs un poquito más lindo
+    -> Pero la idea es calcula que varios de ustedes tuvieron algún temita ahí conectando la base de datos en particular
+
+## Microservicios: Recomendaciones vs Realidad
+
+    -> Todo este curso se trata de microservicios
+    -> Es una cantidad de cosas que la realidad que ustedes para atacar esos problemas
+    -> Es muy difícil que se ponga implementar todo esos microservicios a nivel de un proyecto personal
+    -> De repente pueden hacer una tesis de grado imaginándose si van a tener 1,000,000 de usuarios
+    -> Y atacar ese tipo de problemas
+    -> Pero si no, no tiene mucho sentido tratar, o sea así, tener de repente varios servicios
+    -> Si se encuentran la justificación: sí
+    -> Pero si no, si van a tener un solo usuario, pueden tener un Elastic Beanstalk que haga todo
+    -> Se lo pueden atacar perfectamente
+    -> Entonces, solo ustedes los que estos son recomendaciones y más o menos para escalar
+    -> Porque van a hacer que yo en sistema entonces va allá les toca trabajar en una software factor y chiquita que hace batimiento
+    -> El proyecto o le toca trabajar en MercadoLibre, pedido ya, Amazon que tiene que trabajar con microservicios
+    -> Tiene que tener idea las buenas prácticas y porque hace todas cosas bien
+    -> Asumo que no hay dudas igual
+
+## Próximos Temas
+
+    -> Práctico sobre CloudWatch en la próxima clase
+    -> Ejemplo con SQS (AWS Simple Queue Service)
+    -> Observabilidad y estrategias de logs
+    -> Twelve-Factor App principios
+

@@ -1,0 +1,349 @@
+# Arquitectura de Software: AWS SQS, DynamoDB y Escalabilidad
+
+## Introducción
+
+    -> Laboratorio práctico con AWS
+    -> Descarga de credenciales AWS para trabajar con servicios
+    -> Implementación práctica de colas de mensajes (SQS) y DynamoDB
+    -> Preparación para el obligatorio
+
+## Credenciales AWS
+
+### Tipos de Credenciales
+
+    -> Access Key ID
+    -> Secret Access Key
+    -> Session Token (STS)
+    -> Session Token cambia cada vez que levantan la sesión
+    -> Parte tediosa: copiar y pegar esas credenciales
+
+### Uso de Credenciales
+
+    -> Reconendación: siempre trabajar con las tres credenciales
+    -> Más necesario trabajar con las tres mismo con S3 para poder subir las cosas en producción
+    -> A veces con estas dos basta (Access Key ID y Secret Access Key)
+    -> Pero para correr algunas cosas locales necesitan el Session Token
+
+## Amazon SQS (Simple Queue Service)
+
+### Creación de Cola en AWS
+
+    -> Cola por defecto que ofrece AWS
+    -> Pueden implementar Redis y levantarlo en instancias de EC2
+    -> Recomendación: ir por el camino de SQS (más sencillo)
+    -> Una instancia de SQS que van a tener todo ahí para desplegar y no tienen que andar levantando más nada
+
+### Tipos de Cola
+
+#### Cola Estándar
+
+    -> Más barata
+    -> No se conserva el orden de los mensajes (orden de mejor esfuerzo)
+    -> Entrega al menos una vez
+    -> Problema de entrega al menos una vez:
+        -> Puede entregar más de una vez
+        -> Puede procesar más de una vez
+        -> No tiene orden, puede ser que envíen cosas y se procesen en distinto orden
+
+#### Cola FIFO
+
+    -> Conserva el orden de mensajes: primero en entrar es primero en salir
+    -> Procesamiento único: garantiza procesamiento único
+    -> Por qué: porque vamos a crear un identificador único
+    -> Implementación FIFO: pueden ver la que quieran
+    -> Lo que sí tengan en cuenta: la versión estándar es más barata
+    -> Pero si quieren garantizar el orden que sea prolijo, pueden venir por una implementación FIFO
+
+### Configuración de Cola
+
+    -> Puede tener claves o etiquetas para buscar y filtrar
+    -> Monitoreo:
+        -> Antigüedad aproximada del mensaje más antiguo
+        -> Número del grupo de mensajes
+        -> Número de mensajes en propiedad
+        -> Todo un sistema de seguimiento
+    -> Dead Letter Queue: cuando lleguen y se conecte la cola de mensajes fallido canal
+    -> Canalizaciones de Dead Letter
+    -> SNS (Simple Notification Service):
+        -> Es un servicio que viene antes de SQS
+        -> Permite tener varios tópicos
+        -> Cuando publican en un tópico, va por una cola y lo consume cierta cola
+        -> Ejemplo: todo lo que publican de compañías vaya para cierta cola, todo lo que publican de usuarios vaya para cierta cola
+        -> Es para la parte de tópicos
+        -> SNS es el que permite esa configuración
+        -> Recordarán de arquitectura de software que podían configurar eso
+        -> La parte de tópicos también lo tiene de esta forma
+
+## DynamoDB
+
+### Creación de Tabla
+
+    -> Crear tabla linda para el ejemplo
+    -> Definir clave de partición (partition key)
+    -> Definir clave de ordenación (sort key) opcional
+    -> Configuraciones adicionales que pueden hacer de la tabla
+    -> Proceso rápido de creación
+
+### Ventajas de DynamoDB
+
+    -> Sencillo levantar base de datos
+    -> Solo crear algunas cositas y ya quedó pronta
+    -> No que configurar nada
+    -> Para el obligatorio: pueden usar DynamoDB porque tienen algún problema en el monolito de escritura y lectura
+    -> Quieren guardar alguna cosa en DynamoDB para escribir más rápido
+    -> Para microservicios: si hay un microservicio que no guarda relaciones, pueden almacenar datos
+    -> Es mucho más práctico para búsquedas sencillas de esos datos
+    -> Para no andar levantando 10 instancias de base de datos
+    -> Levantan un DynamoDB en cinco minutos, ponen una tabla y empiezan a crear
+    -> Para obligatorio: cuentan con dos instancias máximo, una paga
+
+## Ejemplo Práctico: Envío y Procesamiento de Mensajes
+
+### Funcionalidad del Ejemplo
+
+    -> Frontend que permite enviar mensajes y mostrar el estado de los procesos almacenados
+    -> Flujo:
+        1. Envío un mensaje a la cola SQS
+        2. Recibe y procesa mensaje de SQS
+        3. Almacena en DynamoDB
+    -> Tecnología: JavaScript (Node.js)
+
+### Interfaz Web
+
+    -> Desde la interfaz web podemos enviar cosas a la cola
+    -> Podemos ver que hay cosas a consumir en nuestra cola de mensajes
+    -> Procesar esos mensajes y almacenarlos en la base de datos
+    -> Dos botones:
+        -> Enviar mensaje que queramos poner
+        -> Procesar mensajes, procesarlo y guardarlos
+
+### Levantamiento del Proyecto
+
+    -> Clonar repositorio
+    -> Pararse en carpeta frontend, hacer npm install
+    -> Node 22 funcionó perfecto
+    -> Node 18 superior dice las instrucciones
+    -> Si están actualizadas todas las librerías por ahí se ve repasado
+    -> Librerías actualizadas para ser un ejemplo de estándar
+
+### Funcionalidad del Backend
+
+    -> Backend tiene un punto .env.test
+    -> Lo que tienen que rellenar con las credenciales
+    -> Configuración necesaria para conectarse a AWS
+
+### Ejercicio del Ejemplo
+
+    -> Almacenar el objeto cuando se envía en un mensaje a la cola de SQS con el estado "pending"
+    -> Cuando se procesa el mensaje, actualizar el estado a "complete"
+    -> Ejercicio bueno porque muchas veces primero es muy parecido de una micro tarea o actividad
+    -> Puede surgir tema más complejo pero esto perfectamente puede transformarse en eso
+    -> Con esta simple funcionalidad ya le damos seguimiento
+    -> Podrían agregar tres estados: pending, complete, fail
+    -> Para poder tener trazabilidad de qué fue lo que sucedió
+    -> Crear un endpoint en el backend que sea consumido por el frontend para obtener todos los mensajes almacenados en la tabla de DynamoDB
+    -> Mostrarlos en la interfaz con su respectivo estado
+    -> Muy parecido a lo que vimos para las transacciones
+    -> Queremos ver el estado de lo que estamos corriendo
+    -> Mecanismo que pregunte cada cinco segundos si hay mensajes en la cola de SQS para procesarlos
+    -> Si almacenarlos en la tabla de DynamoDB
+    -> Si está activa la variable de entorno "procesar mensaje automático"
+    -> Cuando activan la variable de entorno, la funcionalidad de procesar mensaje manual ya no corre ni se corre esa función
+
+### Uso del Ejemplo para el Obligatorio
+
+    -> Pueden hacer pruebas con este código
+    -> Conectarlo con un ejemplo bastante simple
+    -> Lo que demoraron en hacerlo es poquito tiempo
+    -> Si tienen alguna duda para el obligatorio, pueden hacer estos ajustes con este código
+    -> De esa forma poder de esta manera simplemente ver cómo se conecta, cómo funciona SQS
+    -> Hacer algunas pruebas
+    -> Hacer pruebas de configuración de los tiempos para saber qué tienen que poner cuando desplieguen
+
+## Consideraciones para el Obligatorio
+
+### Sobre Workers Separados
+
+    -> Pregunta: crearse un worker de Elastic Beanstalk que envíe mensajes a la cola de mensajes
+    -> Eso estaría bien, estaría mal
+    -> Respuesta: Worker tiene un Apache HTTP, tiene un Tomcat
+    -> Worker: ¿cuántos servicios vas a poner en tu obligatorio?
+    -> Haciendo así sería uno por cada worker
+    -> Eso no es un monolito
+    -> Aunque que la letra pidió un monolito en particular
+    -> Deben tener un solo servicio de backend
+    -> Si lo escalan es otra cosa
+    -> Están corriendo distintas instancias, no están usando escalabilidad
+    -> Sino que están corriendo distinta instancia
+    -> No tienen por eso
+    -> Para microservicios: está bien, es una forma de hacerlo
+    -> Pueden tener un microservicio que solo escucha de una cola de mensajes
+    -> Es válido
+    -> Pero para el obligatorio uno no, porque necesitan el monolito es una sola cosa
+    -> Para levantar el monolito deberían correr frontend, correr backend, levantar las base de datos
+    -> Si usan más de una base de datos, deberían usar una sola
+    -> Para correr, tienen que levantar el worker, la API: eso no es un monolito
+    -> La letra habla de que la idea es hacer un monolito y pasar un monolito a microservicio
+    -> Para el segundo obligatorio
+    -> Por eso también la micro tarea dos que habla un poco la diferencia entre un monolito y un microservicio
+    -> No tiren ese código: todo el código es útil
+    -> Solo tienen que poner una función donde están exponiendo su API para que escuche de la cola de mensajes
+    -> Ya está, no que consultar de eso
+    -> Es mucho más simple la sacar un worker porque directamente te pega el endpoint y te tira la información de la cola
+    -> No tienen que andar consultando
+    -> Pero consultar no es nada complejo
+    -> Pueden perfectamente probar local
+
+### Escalabilidad y Monolito
+
+    -> Cuando escalan la misma instancia de Node puede estar bien
+    -> Puede no estar bien pero está bien que lo hagan
+    -> Pero tienen que configurarlo todo en AWS
+    -> Entonces en código local no tenía sentido
+    -> Pero si están levantando dos proyectos de Node distintos, uno que escucha y otra que hace otra cosa
+    -> Ahí no tienen un monolito
+    -> Forzar a hacer un monolito porque queremos que tengan esa estructura monolítica que tienen todos metidos en una sola instancia
+    -> Que pase a estar en varias instancias
+    -> Es diferencia de arquitectura que ya lo hicieron con varios servicios
+    -> La idea es que vamos a buscar que esos servicios cumplan con lo que es un microservicio
+
+### Almacenamiento: DynamoDB vs Aurora
+
+    -> Pregunta: en vez de usar DynamoDB, usar Aurora
+    -> Respuesta: no hay problema, está perfecto
+    -> Realidad DynamoDB: porque capaz que tienen algún problema en el monolito de escritura y lectura
+    -> Quieren guardar alguna cosa en DynamoDB para escribir más rápido
+    -> Para microservicios: si hay un microservicio que no guarda relaciones, pueden almacenar datos
+    -> Es mucho más práctico para búsquedas sencillas de esos datos
+    -> Para no andar levantando 10 instancias de base de datos
+    -> Levantan un DynamoDB en cinco minutos, ponen una tabla y empiezan a crear
+    -> Para obligatorio: cuentan con dos instancias máximo, una paga
+
+## Escalabilidad
+
+### Definiciones
+
+    -> Escalar: el acto de cambiar el tamaño de un sistema para cumplir los cambios de demanda o requisitos operativos
+    -> Autoscaling: un sistema informático que cambia su tamaño automáticamente durante funcionamiento normal para cumplir los requisitos basados en métricas
+    -> Todo lo que hagan no van a estar manualmente levantando instancias de forma manual y redirigiendo con load balancer
+    -> Van a tener mecanismos de autoscaling ya programado
+    -> Lo pueden hacer manual para determinados casos
+    -> Lo que está bueno es saber cómo es el flujo de uso, cómo van a hacer otros clientes
+    -> Y ahí empezar a definir lo que es auto scale
+
+### Escalabilidad Horizontal
+
+    -> Tener varias instancias de lo mismo
+    -> Ejemplo: pueden tener varias instancias del mismo servicio
+    -> Algo que tienen que tener en cuenta:
+        -> Si tienen escala horizontalmente y tienen esta función que escucha de una cola de mensajes
+        -> Ahí es donde les conviene tener una cola FIFO que consuma y que solo permite que una de esas colas consuma a la vez
+        -> Por qué: si levantan 10 instancias y en todas esas instancias tiene algo que consume de SQS y hacen una cola estándar
+        -> Puede ser que las 10 instancias consuman la cola y también envíen de 10 el email
+        -> Jugando con la cola FIFO evitan la duplicación
+        -> O de alguna manera pueden hacer una especie de condición de carrera
+        -> Jugar con su base de datos y guardar las cosas en base de datos
+        -> Cada vez que van a enviar un email, chequean la base de datos y ya alguien envió el email o alguien empezó a enviar el email
+        -> No lo vuelven a enviar
+        -> Tienen varias maneras de atacar eso con la API
+    -> No tienen problema del escalado horizontal porque si hacen una API
+    -> Recuerden que uno de los principios será que la información no se guarda, no se persiste en el servidor
+    -> Sino donde se persiste es en los backing services
+    -> Siguen la base de datos
+    -> En S3, Redis ustedes necesiten
+    -> El frontend tiene que tener cache para poder guardar el flujo que viene transitando
+    -> Si hacen un API, no va a pasar nada que tengan 10 instancias
+    -> Que tengan múltiples copias de cómputo no debería suceder ningún problema
+    -> Ya lo deberían haber visto en arquitectura
+    -> Pero no es lo mismo tan sencillo
+    -> Escalado de un servicio
+    -> Ejemplo: si hacen un worker, tienen que tener otros cuidados porque ya no es una API
+    -> Están consumiendo de una cola
+    -> Tienen que asegurarse de que no consuman más de una vez de forma duplicada
+
+### Balanceador de Carga
+
+    -> Componente de arquitectura informática que se encarga de distribuir la carga entre un cluster de nodos
+    -> Con el balanceador de carga vamos a hacer que a nosotros nos llegó una request
+    -> Utilizando round robin o algún mecanismo vamos a distribuir la request lo más equitativamente posible
+    -> Para la configuración que hayamos hecho al resto de servidores
+    -> Cómo determinar a qué servidor enviar el request:
+        -> Round robin: uno a cada uno
+        -> Varios mecanismos después
+    -> Pueden configurar con Nginx
+    -> Recuerdan en el obligatorio uno de arquitectura de software cómo configuraron
+    -> Herramienta que hacía era Nginx
+    -> Pueden hacerlo con Nginx
+    -> Configuraban varias instancias
+    -> Problema que tenía Nginx: tenían que dejar una instancia física
+    -> Tenían que dejar un número fijo
+    -> Se podía funcionalizar pero era más complejo
+    -> La mayoría dejó un número fijo
+    -> Bueno, vamos a correr tres instancias
+    -> Con eso demostraban que su sistema escalaba horizontalmente
+    -> Con Elastic Beanstalk pueden configurar
+    -> Así mismo el escalado de levantar varias instancias porque el Beanstalk lo va a hacer
+    -> El que levanta las instancias
+    -> Pueden acompañar con levantar nuevas instancias
+    -> Algo que configura el Elastic Load Balancer es bueno: qué pasa cuando bajo o apago esas instancias
+    -> Cómo voy a ir redistribuyendo la carga cuando voy apagando esas instancias que ya están prendidas
+    -> Cómo determinar si un servidor no está vivo
+
+### Métricas para Escalabilidad
+
+    -> Requests por segundo
+    -> Cantidad de usuarios conectados en simultáneo en un chat room
+    -> Todas podemos tener también métricas de negocio
+    -> Llevadas ahí almacenadas en una base de datos
+    -> Radio de response rate en la base de datos
+    -> Hit rate en un cache
+    -> Podemos configurar la métrica que queramos
+    -> No solo para que nos lleguen alertas
+    -> Sino para lanzar triggers que provoquen dicha escalabilidad
+    -> Tenemos el throughput, el response time y la latencia
+
+### Impacto de la Escalabilidad
+
+    -> La escalabilidad está relacionada con el costo, con la performance y la disponibilidad
+    -> Está en qué impacta toda la escalabilidad y en qué termina impactando todo
+    -> La escalabilidad impacta la disponibilidad
+    -> La disponibilidad tiene costo
+    -> La disponibilidad impacta las performances
+    -> Las performances terminan impactando en la responsabilidad
+    -> Lo cómico es que todos impactan en el costo
+    -> Si queremos tener buenas performance, buena disponibilidad, el costo va a ser el factor
+
+### Autoscaling y CloudWatch
+
+    -> Recuerdan que cuando hablamos de CloudWatch dijimos que permite analizar métricas
+    -> Esas métricas pueden configurar alarmas
+    -> Ya que estamos: si van a levantar una instancia EC2 o cualquier momento de su vida en AWS
+    -> Lo primero que tienen que hacer en seguida que configuran el MFA y todas esas cosas es configurar el arma de costos
+    -> Si llega, si pasa de ustedes tienen AWS en particular
+    -> Tienen dos tipos de costo: el costo efectivo y el estimativo que van a tener a fin de mes
+    -> De alguna manera con los servicios que tienen activo ya les dice buenos dólares te van a costar
+    -> Voy a cobrar dólares a fin de mes
+    -> Acá con lo que voy con esto es levanten todas esas alarmas
+    -> Cosas que le lleguen mail y todo lo que sea necesario
+    -> Ese es como primero configuro el usuario y antes configurar otros usuarios
+    -> Configuro todas las alarmas para que lleguen a todos los correos
+    -> Es un pequeño detalle
+
+## Ejemplo Comercial
+
+    -> Ejemplo hipotético de una aplicación que vende entradas para espectáculos
+    -> En un momento determinado puede haber picos de tráfico cuando se abren las ventas
+    -> Por ejemplo a las 10 de la mañana se abren las ventas
+    -> Entonces todos los usuarios empiezan a consultar
+    -> No quieren reventar la plataforma
+    -> Pero tienen ganancia por ese momento que es llamado momento donde ya vendiste la entrada
+    -> La gente está consultando por eso
+    -> Van a brindar un mejor servicio pero tampoco van a reventar la plataforma
+    -> Parámetros de carga
+
+## Próximos Temas
+
+    -> Continuar con escalabilidad después del recreo
+    -> CloudFront y configuración de distribución
+    -> Más detalles sobre configuración de servicios AWS
+

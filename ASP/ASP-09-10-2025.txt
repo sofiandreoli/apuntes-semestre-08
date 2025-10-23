@@ -1,0 +1,364 @@
+# Arquitectura de Software: Servicios AWS para Deployment
+
+## Introducción
+
+    -> Clase práctica sobre servicios AWS para deployment
+    -> Contenido útil para el obligatorio
+    -> Práctica para levantar aplicación que se entregará la semana próxima
+    -> Ejemplo guiado y después trabajo práctico de los estudiantes
+    -> Tema de hoy: Elastic Beanstalk, S3, Amplify
+
+## Elastic Beanstalk (Winston)
+
+### Introducción
+
+    -> Servicio de plataforma para hacer deploy de aplicaciones
+    -> Simplifica bastante el trabajo de desplegar un backend
+    -> En vez de ser Infrastructure as a Service es Platform as a Service
+    -> Permite subir aplicaciones rápidamente
+    -> Se pueden subir aplicaciones usando Docker
+    -> También se puede configurar bastantes cosas por ejemplo autoscaling en base al CPU uso de CPU el uso de la memoria
+    -> Se usa bastante en la industria
+
+### Conceptos Básicos
+
+#### Aplicación y Environments
+
+    -> Cuando creamos una aplicación en Elastic Beanstalk primero hay que entender que es una aplicación en Elastic Beanstalk y qué es un environment
+    -> Aplicación en sí se le llama es como una organización dentro de Elastic Beanstalk
+    -> Dentro de una aplicación se pueden tener diferentes environments
+    -> Por ejemplo como tener una aplicación que se llame vamos tener una aplicación que sea solo de la parte de producto que sea el admin panel o ese tipo de cosas
+    -> Y adentro tener el environment para el admin panel
+    -> Es más que nada para organizar
+    -> Cuando se crea una aplicación una aplicación acá ya nos crea un environment que es justamente lo que vamos a ver
+    -> Pero que sepan que pueden tener más de un environment dentro de una aplicación
+    -> O sea pueden tener en una aplicación solo pueden tener dos deploys tres deploys cuatro deploys
+
+#### Tipos de Environments
+
+    -> Dos tipos de environments
+    -> Uno es el web server que este es el que sirve para desplegar nuestras aplicaciones nuestras API
+    -> También front end
+    -> Tenemos otro environment que es un environment de worker
+
+### Web Server vs Worker
+
+#### Web Server
+
+    -> Una aplicación que expone y escucha por HTTP
+    -> Expone un puerto para escuchar por HTTP
+    -> Puede ser una API y puede ser una aplicación completa con API backend
+    -> Uno escucha HTTP
+
+#### Worker
+
+    -> Una aplicación que se queda escuchando
+    -> Se queda esperando puede ser una cola puede ser un evento para realizar cierta acción
+    -> El otro puede estar escuchando a una cola
+    -> Por ejemplo va a estar viendo en más adelante en el curso
+    -> La idea de worker no es estar escuchando HTTP directamente
+    -> Es solo realizar distintas tareas que se le va a asignar al worker
+    -> Las realiza termina y sigue escuchando nada más
+    -> No escucha al usuario final digamos
+
+### Arquitectura de Web Server
+
+    -> Cuando creamos un web server lo que nos va a crear va a hacer primero va a estar todo dentro de una región
+    -> Luego nos va a colocar un load balancer que esto se puede configurar para que lo coloque o no dependiendo de lo que queramos
+    -> Va a colocar un load balancer
+    -> Si le pedimos que tenga más de una instancia de nuestra aplicación que sea que escale en nuestra aplicación se puede configurar el auto escalado dejarlo por defecto que no escale
+    -> Por detrás aunque estamos usando Elastic Beanstalk aunque estamos usando una instancia de Elastic Beanstalk por atrás nos crea muchas Amazon machines de EC2 o sea nos crea un Amazon machine por la instancia que tengamos
+    -> Y está Amazon machine después vamos a ir a la parte EC2 van a ver que están ahí creadas pero no tenemos que hacer nada
+    -> Eso se encarga directamente Elastic Beanstalk de crearlas y de borrarlas inclusive si las borramos manuales Elastic Beanstalk se da cuenta que la máquina no existe más y la crea de nuevo
+    -> Es totalmente gestionado por AWS
+    -> También se puede configurar para que nos cree o no una base de datos que también está bueno
+    -> En nuestro caso no vamos a crearla hoy porque la idea es que creemos la base de datos con RDS directamente y después solo configurarle nuestra app que utilice la base de datos
+
+### Arquitectura de Worker
+
+    -> Cuando creamos un environment de worker lo que nos crea es primeramente el environment de web server que se trata más de ver que el internet llega al web server llegó al load balancer que distribuye a nuestra aplicación a la instancia que sea esa carga
+    -> Pero el worker que es lo de la derecha nosotros en vez de estar controlando como en un worker normal que tenemos que estar tratando de hacer polling de nuestras colas acá automáticamente nos configura todo lo que es SQS en el medio que es un sistema de colas de AWS que nuestra aplicación va a meter datos en la cola y nuestro worker va a estar escuchando con un daemon que lo proporciona AWS que es un código que está corriendo de atrás y escuchando directamente a SQS
+    -> Y cuando encuentra una petición directamente este daemon le hace un request HTTP a nuestro worker que procesa procesar lo que tiene que procesar
+    -> Con un worker nos agrega el sistema de colas sin que lo tengamos que hacer manualmente
+    -> Utilizamos la app como si fuera una API básicamente nuestro worker pero en realidad no es un API porque está escuchando directamente una cola sin que tengamos que hacer nada
+    -> Desventaja: nos vamos a estar acoplando a AWS porque vamos a estar dependiendo de este servicio de AWS que es un servicio de AWS
+
+### Ejemplo de Worker
+
+    -> En código tenemos en dos carpetas separadas lo que viene a hacer la aplicación y por otro lado el worker
+    -> Para hacer un deploy en Elastic Beanstalk haría en realidad una aplicación solo pero tendríamos dos ambientes
+    -> Environment uno para la aplicación que sería web server y otro environment para el worker
+    -> El web server es el que escucha las peticiones del usuario
+    -> Y el worker es el que se queda escuchando a esta cola que es la que usa el web server para darle órdenes al worker o sea pasarle tareas como por ejemplo enviar un mail en vez de quedarse esperando que el mail se envíe para devolverle algo al usuario le devuelve al usuario vamos a enviar el mail le devuelve una promesa o lo que sea
+    -> Y en cola esta petición en la cola en SQS y el worker que luego escucha SQS procesa esa petición y envía el mail en segundo plano sin frenar al usuario sin cortar la ejecución del usuario lo deja continuar con su flujo
+
+### Codificación de Worker
+
+    -> Cuando usamos SQS no hace falta que hagamos el mecanismo de escucha en la cola de SQS sino que solo tenemos que exponer un endpoint como en este caso process que lo que hace es el worker el daemon que AWS nos da se queda escuchando esa cola
+    -> Y cuando encuentra datos hace el request HTTP en nuestro endpoint y lo procesa
+    -> Acá no tenemos que hacer nada nosotros queda totalmente en las manos de AWS el tema de las colas
+
+### Implementación sin Daemon (Alternativa)
+
+    -> Cuando no tenemos cola tenemos que hacer el polling nosotros de la cola
+    -> Cada un segundo corremos este método o sea nosotros estamos haciendo como un loop cada un segundo que utilidades setTimeout cada un segundo que se ponga a escuchar la cola SQS y que cuando encuentre algún dato que recién ahí lo procese
+    -> Esa es la diferencia entre usar un web server bien configurado sin necesidad de hacer nosotros el polling el loop verdad y acá esta es la manera de hacerlo sin daemon
+
+### Proceso de Deployment
+
+    -> Paso a paso del deploy en Elastic Beanstalk documentado en teams
+    -> Archivos que nosotros subimos acá
+    -> Ejemplo con código que muestra Hola esta es mi web API está escuchando en el puerto 3000 y por eso se conectó todo
+    -> Es bastante más sencillo que la clase pasada lo hicimos en 20 minutos
+    -> Puede ser más complejo si tienen una aplicación más compleja
+
+## Amazon S3
+
+### Introducción
+
+    -> Servicio de almacenamiento en la nube
+    -> Se utiliza bastante en los proyectos en producción para por ejemplo tengo archivos en vez de guardar mis archivos en la base de datos me conecto a un bucket de S3 que es un lugar donde puedo crear carpetas y crear files
+    -> Guardo los files ahí y luego me puedo traer esos files haciendo un GET S3 también
+    -> Y me los cargo los uso para lo que tenga que hacer
+
+### Casos de Uso
+
+    -> Por ejemplo otro caso de uso también son para guardar los assets de la aplicación las imágenes los logos
+    -> Por ejemplo en mi trabajo trabajamos bastante con procesamiento de documentos
+    -> Y tenemos documentos que son de páginas a veces que no está bueno guardarlo en la base de datos
+    -> Entonces tenemos un bucket que subimos cuando el usuario hace upload del documento no lo subimos en nuestra base de datos ni nada subimos directamente a S3
+    -> Y cuando vamos a procesar el documento lo traemos de S3 y lo procesamos digamos o sea no lo guardamos nosotros local
+
+### Características
+
+    -> Región y disponibilidad: S3 es uno de los servicios que es global o sea que no interesa demasiado la región no es como en caso de Elastic Beanstalk y otro servicio que dimos que si cambiamos de región no vamos a ver lo que está desplegado
+    -> S3 es uno de los servicios globales
+    -> Tiene escalabilidad horizontal o sea podemos subirle millones de archivos y nunca nos vamos a quedar sin espacio
+    -> El sistema de cobros que tiene es un pago por uso o sea tiene pago por espacio pero también tiene pago por la cantidad de veces que pedimos los datos
+    -> Hay diferentes opciones hay opciones que puedo dejar si tengo datos que no los voy a leer demasiado solo quiero guardarlos puedo guardarlos en un cierto tipo de storage que se llama glacier los datos están archivados los datos que solo escribo y en algún otro momento una vez al mes los leo para hacer un reporte por ejemplo
+    -> Pero si tenemos datos que tenemos que estar constantemente leyendo y escribiendo nos conviene usar las instancias normales de S3
+
+### S3 para Páginas Estáticas
+
+    -> Además de guardar archivos tiene opción para guardar para desplegar páginas estáticas
+    -> Página estática: nosotros no dependemos de un servidor o sea tenemos ya la página un HTML con los CSS puede tener un JavaScript inclusive
+    -> Nosotros cuando levantamos esa website en S3 o lo que sea automáticamente aunque no esté conectado al backend nos va a cargar una página seguramente capaz algún dato que sí precisaba del backend no lo va a tener pero la página en sí el título cómo está organizada la página de la estructura HTML se va a estar renderizando del lado del cliente
+    -> La página desplegada es la que se va a encargar de crear el HTML o sea de mostrar el HTML que en realidad ya está creado dentro de esa instancia
+    -> Esa es la gracia de estática vs dinámica
+
+### Diferencia: Estática vs Dinámica
+
+    -> Estática: yo ya tengo creada la página tengo ya la infraestructura de la página como se ve todo me puede faltar algún dato por ejemplo si estoy tengo de pedir es una página de un marketplace y estoy vendiendo algo capaz que la lista de cosas a vender la tengo que pedir pero la página sí aunque yo no esté conectado al backend me puede tirar errores esa pequeña pestaña de ahí pero la página la veo
+    -> Dinámica: si dependo totalmente en una página dinámica del servidor si el servidor está caído no voy a ver nada en mi página porque el que me arma la página es el servidor o sea es del lado del servidor rendering
+
+### Ejemplos de Páginas Estáticas
+
+    -> React si no es server side sea la parte client side se puede hacer esto
+    -> Angular también tiene server side y client side si no tiene la parte de server side se puede desplegar con esto
+    -> Páginas HTML puro y duro con CSS JavaScript también
+    -> Diferencia importante: estática no quiere decir que la página no cambie porque puede tener un JavaScript solo que ese archivo de JavaScript lo va a ejecutar el cliente
+    -> El cliente va a ser el que ejecuta el archivo de JavaScript el que da el click lo que sea es el cliente nunca va a ser el servidor
+
+### Ejemplos de Páginas Dinámicas
+
+    -> Next.js no Node NestJS también vieron que Node también se puede hacer front end también PHP entre otros otros tipos son dinámicas porque nos dependemos del servidor para mostrar la página
+
+### Proceso de Deployment en S3
+
+    -> Para seguir con el ejemplo crear un bucket de S3
+    -> Bucket name por ejemplo ejemplo clase miércoles
+    -> Configuraciones de ownership básicamente si tenemos varios archivos en nuestro bucket queremos que sean todos de nosotros o podemos especificarle al bucket que queremos que ciertos archivos pertenezcan a otra persona esto es más que nada para compartir archivos entre varias aplicaciones
+    -> Configuraciones de bloqueo público ACL deshabilitado
+    -> Block all public access esto puede ser un poco confuso porque queremos que nuestra página web sea accesible públicamente pero no queremos que todo sea público sino que queremos que solo esta carpeta en específico del bucket sea pública y el resto sea privado
+    -> Quitar la flag de block all public access y luego hay una opción que se llama static website hosting que habilita esto y ahí elegimos host a static website
+    -> Index document: index.html que es el archivo que se va a cargar cuando alguien entre a nuestra página web
+    -> Error document opcional para cuando haya un error por ejemplo 404.html
+    -> Guardar y después viene la parte de permisos donde tenemos que ir a bucket policy y crear una política que le permita a todo el mundo leer el contenido del bucket porque queremos que nuestra página web sea accesible
+    -> Subir los archivos del frontend compilado al bucket y nuestro sitio web va a estar disponible
+
+## AWS Amplify
+
+### Introducción
+
+    -> Servicio para desplegar la parte de web o sea la parte del frontend
+    -> Es un platform as a service también porque tenemos la plataforma y nos permite directamente desplegar nuestro servicio
+    -> Es diferente con S3 que lo han puesto como un SaaS para lo que nosotros le enseñamos
+    -> Van a tener que elegir entre S3 y Amplify para la parte de front aunque como les comenté pueden tener más de un bucket de S3
+    -> Por ejemplo si eligen el front con S3 pueden tener el front en un bucket y pueden crear otro bucket para subir archivos subir imágenes
+
+### Ventajas de Amplify
+
+    -> Es bastante más fácil de usar
+    -> Nos ayuda con el tema de escalabilidad
+    -> Es ideal para tener la aplicación de staging por ejemplo pero a su vez también sirve para tener producción
+    -> Se le puede configurar dominios de uno o sea dominios que compremos
+    -> Está bueno porque es bastante sencillo de configurar si quieren no perder tiempo con configuraciones de front Amplify definitivamente una opción que está buena que sepan
+
+### Integración con Control de Versiones
+
+    -> Tiene dos opciones una es desplegar una aplicación de ustedes u otra es empezar con un template que le provee de Amplify
+    -> Si quieren desplegar algo en la nube y no quieren probarlo nada más para desplegar una aplicación en el caso vamos a desplegar la misma que desplegamos con S3
+    -> Se nos abre un menú que es mucho más mucho mejor para el usuario
+    -> Todas las consideraciones que se hacen automáticamente
+    -> Está lo que le digo de integraciones con terceros por ejemplo GitHub pero también se puede serlo sin Git sin Git sin ninguna de las herramientas de control de versiones también son para control de versiones en el caso nuestro tuve que darle permisos al repositorio local
+    -> A ustedes les va a pedir que le den permisos a Amplify en su repositorio local
+    -> Lo que conviene hacer para no darle acceso a todos los repositorios que pueda haber en esa organización
+
+### Proceso de Deployment
+
+    -> Primero elegimos GitHub los conectamos next
+    -> Ahí trató de hacerme una especie de deploy ya movió al step two que acá seleccionamos qué repositorio queremos usar para el deploy en caso nuestro yo le dio el acceso a front al repositorio front
+    -> Después tenemos que elegir una branch en qué branch tenemos que hacer o sea cuando hago push a qué branch quiero que se haga el despliegue acá puede elegir main lo que sea
+    -> Luego acá el nombre de la aplicación claro AWS front clase por las dudas por si no hay nada privado
+    -> Pueden hacer si es tan fácil su aplicación como correr un comando lo tienen configurado que con un comando se compile el front solo llaman ese comando y ya está
+    -> Y en el caso contrario tienen pueden poner el comando aquí o pueden editar este yel que le indica básicamente como compilar la imagen cómo verificar el dónde está el directorio el artifact que se crea cuando hago el build todo eso se configura este archivo
+    -> Acá como pueden ver tengo dos fases la fase de prebuild en mi caso es como mi repo pueden ver que tengo la app de Angular y la app de Node
+    -> En este caso quiero expresar la de Angular entonces tengo que decirle que primero se mueva a ver dónde está mi carpeta primero le tengo que decir que se mueva a la carpeta donde está mi app de Angular
+    -> Y luego que corran comando que en este caso es el npm pero tiene una se adelante que lo que hace es clean primero o sea limpia la dependencia si las instala de nuevo
+    -> Y después que pasa esa fase de prebuild lo que sí tiene que hacer es enviar npm run build o npm build o lo que sea
+    -> Y ahí me va a generar la carpeta le digo el build va a estar en la carpeta dist y dentro la carpeta dist en esta carpeta va a estar en angular que si ven acá es justamente lo que tengo tengo dist y después tengo la carpeta angular
+    -> O sea le estoy diciendo acá va a estar los archivos que a vos te importa con esto y que me copie todos los files y nada
+    -> Acá le damos save y automáticamente ya ven que me generó sabe cuál es el comando para compilar sabe dónde está el output directory entonces acá ya no hay que tocarle más nada
+    -> Le vamos a next nada más y acá podemos ver el review te dice el repositorio dónde está cuál es la branch nada esto para que tengan control nada
+    -> Y le dan a save and deploy y acá me empieza a desplegar la aplicación
+    -> Es bastante sencillo también no está bastante bueno Amplify por lo rápido que puede ser desplegar una app
+
+### Configuraciones Adicionales
+
+    -> Acá pueden hacer diferentes cosas por ejemplo como les comentaba así es producción pueden agregarle un dominio de ustedes para que no diga amplify-app todo este dominio que nos genera AWS sino que diga el dominio de ustedes su aplicación de su trabajo lo que quieran se configuran acá
+    -> Para esto hay que comprar un dominio que sale se rentan por mes los dominios o se puede comprar pero bastante más caro
+    -> Luego si le quieren agregar conectar a otras branches también para tener varios ambientes tipo le conecta a la branch main para que eso sea mi producción y le conecta a la branch staging por ejemplo para que tener dos ambientes tengo desplegado por un lado producción y por otro lado tengo desplegado staging se puede hacer eso y se maneja todo el mismo panel
+
+### Variables de Entorno
+
+    -> Para comunicarme con la API se dice si tienen bien configurado el front tienen que tener las cosas importantes como la URL de la API la que quiero hacer los endpoints con variables de entorno
+    -> Entonces para poder configurarlo tienen que venir a la parte de variables de entorno manage variables
+    -> Y acá le pueden agregar unas variables tal cual hicimos en Elastic Beanstalk por ejemplo y le dan a guardar y automáticamente hace un redeploy que no tiene que compilar todo de nuevo sino que solamente redeploya la última versión compilada o sea el último artifact ya compilado y le agregas esa configuración
+
+### Diferencias con S3
+
+    -> Como vieron demoró más acá de levantar que en S3 porque acá el build se hace directamente en la nube no lo hace local
+    -> Por eso demoró más pero ya pueden ver que está desplegado y ahora acá debería entrar y cargarnos también la aplicación es tal cual la misma aplicación que desplegamos en S3 pero les quería mostrar también esta otra opción de Amplify
+    -> Pueden elegir cualquiera los dos es una buena opción S3 es más barato si por algún motivo están quedando sin créditos capaz que conviene más hacer S3 porque es mucho más barato de desplegar que Amplify e infinitamente más barato
+    -> Pero si no no veo porque no usar Amplify es una muy buena opción también y tienen todo el tema también de control todo el tema de los logs el tema de los settings de building
+
+## Comparación de Servicios AWS
+
+### Tipos de Servicios
+
+    -> Infraestructura as a Service infra service
+    -> Platform as a Service platform service
+    -> Software as a Service SaaS
+    -> Database as a Service data services
+
+### Infraestructura as a Service
+
+    -> Lo dieron con Nahuel era el servicio de EC2
+    -> Básicamente era un servicio que nos permitía elegir una Amazon Machine Image que era el sistema operativo que íbamos a usar podía ser Linux podía ser Windows
+    -> Y en base a Amazon Machine nos podíamos conectar por SSH que fue lo que hicieron en el práctico con Nahuel
+    -> Ahí podían instalarle Docker instalar hacer pings salir a la red hacer en cosas pueden por ejemplo desplegar la aplicación entera ahí pueden desplegar sobre el backend sobre el front
+    -> Esa es una de las opciones que tienen es la más abajo nivel la que tienen que hacerse cargo de todo eso sería más que nada
+    -> Disclaimer: muchas de las otras que vamos a ver abajo nivel usan EC2 por ejemplo Elastic Beanstalk usa EC2 pero les quería no más comentar eso
+
+### Platform as a Service
+
+    -> Hay un poco en una zona gris entre si es platform o infrastructure todo el tema de ECS y ECR
+    -> Lo pondría en parte de la parte de platform as a service porque nosotros en sí no tenemos que encargarnos de nada de lo que es el sistema operativo
+    -> Solo le configuramos nada más la arquitectura si es ARM o no o si es la x86
+    -> Para usar ECS lo que hicimos acá fue con el ejemplo de DynamoDB compilamos la imagen local y la subimos a ECR
+    -> Y después configuramos ECS toda la parte de task definition task definition hay que configurarle las task definition hay que configurarle el cluster crear el cluster y configurarle los servicios
+    -> Nosotros tenemos la imagen subida en ECR primero tenemos que configurar la task definition que sería algo muy parecido a la parte de Docker Compose por ejemplo como vamos a levantar esa imagen cuál es la imagen base la seleccionamos de ECR y le configuramos como la vamos a levantar que poder de cómputo le vamos a dar
+    -> Después la parte de cluster se acuerdan que habíamos hablado que era más que nada una agrupación lógica nosotros podemos tener un cluster que sea para el equipo de gerencia que tenga la que tengan el servicio corriendo nada más la aplicación del admin panel o sea el panel administrativo que no tengan acceso por ejemplo al backend que está corriendo en otro container en otro servicio en otro cluster
+    -> Lo que sirve esto es para eso más toda la parte de IAM podemos darle permiso directamente al usuario de solo ver un cluster o ver el otro inclusive dentro de un cluster ver solo un servicio ver el otro o tener accesos de escritura o sea poder modificar el servicio o solo de poder leerlo
+
+### Elastic Beanstalk
+
+    -> Para explicarlo rápidamente también es bastante igual
+    -> Nosotros lo dimos de que se pueden subir el backend compilado
+    -> Y eso lo que hace en diferencia con ECS que tenemos que compilar la imagen y subirla no en este caso de acá automáticamente solo dándole los archivos el construye la imagen y la sirve también
+    -> O sea hace las dos cosas construye la imagen arriba en la nube esa es la diferencia y es bastante más fácil de usar
+    -> Tenemos la parte de autoscaling load balancer se puede configurarle también también en ECS se puede configurar load balancer el único que no es ECR porque es a más bajo nivel
+    -> Estos un platform as a service
+
+### Servicios para Backend
+
+    -> Para el obligatorio seguramente tengan que elegir uno de estos servicios o sea EC2 combinado o ECS o ECR o Elastic Beanstalk para desplegar la API
+    -> Tienen que elegir uno de estos servicios o si saben alguna otra clave o algún otro servicio externo que despleguen la API también no están agotados pero en el ecosistema AWS
+    -> Para tener que usar uno de esos por son los que tienen el acceso a hay otros servicios pero no tienen acceso con el roll de estudiante
+
+### Software as a Service
+
+    -> Voy a poner acá lo que dimos hoy por ejemplo de S3
+    -> Y por qué digo que es un SaaS porque al final del día ya tenemos el servicio andando y solo lo estamos utilizando para guardar archivos o imágenes
+    -> En este caso estamos guardando las imágenes de la web
+    -> Y en ese caso lo usamos como un platform porque desplegamos ahí nuestra aplicación pero normalmente como se usa para subir archivos y subir imágenes se usa como un SaaS
+    -> Así que se puede tener en cualquiera de estos dos tipos de servicio así que no creo que les digan mal si saben decir en cuál está está perfecto y por qué
+
+### Amplify
+
+    -> Servicio para desplegar la parte de web o sea la parte del frontend
+    -> Es un platform as a service también porque tenemos la plataforma y nos permite directamente desplegar nuestro servicio
+    -> Es diferente con S3 que lo han puesto como un SaaS para lo que nosotros le enseñamos
+    -> Van a tener que elegir entre S3 y Amplify para la parte de front aunque como les comenté pueden tener más de un bucket de S3
+    -> Por ejemplo si eligen el front con S3 pueden tener el front en un bucket y pueden crear otro bucket para subir archivos subir imágenes
+
+### Database as a Service
+
+    -> Entonces les mostramos primero RDS que es el servicio de para base de datos relacionales de Amazon que nos permitía elegir el tipo de base de datos
+    -> El motor también tenía los Auroras que eran de Amazon
+    -> Y ahí podríamos crear nuestra aplicación en nuestra base de datos perdón y con DynamoDB hoy
+    -> Con cualquiera estas opciones en realidad cuando tengamos la base de datos creadas se acuerdan que hicimos un login en la base de datos en la clase pasada usando esa misma credencial username password desde Elastic Beanstalk con desde ECS o con RDS
+    -> Van a poder directamente conectarse esta base de datos y usarla
+    -> También tienen DynamoDB por si quieren tener una base de datos no relacional que tal tiene que configurarle todo el tema de claves de partición y esas cosas
+    -> También tiene Docker para emularlo en local y poder usarlo local así como usan base de datos locales levantadas en Docker pueden levantar la base datos de DynamoDB en Docker para hacerlo local y después lo suben cuando vayan a desplegar
+
+### Otros Servicios
+
+    -> CloudWatch lo mencionamos varias veces pero no lo vamos a dar que es más que nada para logging y monitoreo de los logs y esas cosas lo vamos a estar más adelante también
+    -> IAM para la parte de permisos pero no lo utilizamos en sí porque por los permisos que tenemos en el laboratorio que no son demasiado no podemos hacer demasiadas cosas con IAM en este ejemplo de AWS
+    -> SQS sistema de colas de AWS que estuve para interactuar una web con worker etcétera
+    -> SNS sistema de notificaciones que sirve por ejemplo si tenemos que cuando ocurra un evento queremos enviarlo a un mail a nuestros clientes N clientes se usa un sistema de notificaciones de AWS
+
+## Resumen por Tipo de Deployment
+
+### Para Backend (Monolito)
+
+    -> Pueden desplegarla con estas opciones:
+        -> EC2 (Infrastructure as a Service)
+        -> ECS + ECR (Platform as a Service)
+        -> Elastic Beanstalk (Platform as a Service)
+
+### Para Frontend
+
+    -> Pueden desplegarla con estas opciones:
+        -> S3 (Software as a Service o Platform as a Service)
+        -> Amplify (Platform as a Service)
+
+### Para Base de Datos
+
+    -> Pueden usar:
+        -> Relacional: RDS
+        -> No relacional: DynamoDB
+        -> O solo una o solo la otra depende de la dirección de ustedes
+
+## Próximos Temas
+
+    -> Luego también vamos a tener que implementar cosas con CloudWatch SQS y SNS
+    -> La parte de monitoreo todavía no se estrena por el obligatorio la parte de monitoreo que vamos a darla no van a tener que inventarse nada a ustedes
+    -> También quería comentarles que vamos a dar otro servicio seguramente la semana que viene en la parte de observabilidad que esto no es un servicio de Amazon es uno de los que está por afuera se llama New Relic o según ustedes quiere ir leyendo para esa clase o quiere ir investigándolo por su cuenta
+    -> Está muy bueno también te permite conectarlo directamente con tu app cuando la despliegues o inclusive el local y te mide todo este tema que les mostré Amplify de las métricas por minuto el tiempo de respuesta el error rate todo eso vamos a usar en New Relic para eso en una semana o dos
+
+## Recomendaciones para el Obligatorio
+
+    -> Una recomendación que estamos dando en todas las clases es que si van haciendo la obligatorio ya tienen alguna cosa avanzada no dejen para último momento hacer el deploy porque pueden tener errores que no se dan cuenta de no se el Dockerfile capaz está mal o cosas así y al final no llegan a tiempo con la entrega porque la parte que más consume en realidad la parte del deploy porque el código en sí no tampoco tan completo como en otras materias anteriores
+    -> Así que de ahí no se duerman con toda la parte de subir y probar
+    -> Lean también prueben que es un ejercicio cómo la prueba es un ejercicio sí ahí les comento por arriba la prueba va a hacer una letra también les van a dar acceso a un repositorio que va a traer clon selo también y nada hacer el despliegue usando el Dockerfile tengo que hacer un despliegue usando una de las herramientas que vimos y tienen que hacerlo en las dos horas de la clase
+    -> Pueden hacerlo con EC2 Elastic Beanstalk ahí es como ustedes quieran creo que no tiene la parte de frontend así que ahí no se preocupen pero si tienen esta la parte del backend está bueno por lo menos uno de ellos ya ya vayan practicando para que en el día lo pueden hacer en las dos horas que son la clase
+    -> Creo que sí lo practican una vez no más ya en la prueba lo lo hacen enseguida también tenemos los manuales que les subí no se olviden de los libros en teams
+
+## Próximos Temas
+
+    -> Next tema que van a ver con Santy también van a ver varias cosas que es bastante práctica bastante completo
+    -> Continuar con más servicios AWS y herramientas
+    -> Práctica adicional antes de la evaluación
+

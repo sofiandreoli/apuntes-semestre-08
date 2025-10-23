@@ -1,0 +1,340 @@
+# Arquitectura de Software con AWS
+
+## Introducción
+El profesor Bruno Silva presenta la clase práctica sobre AWS.
+-> Se cubrirá RDS, DynamoDB, ECR y ECS
+-> El enfoque es crear una arquitectura en AWS
+-> Contenido útil para la industria
+
+### Recursos del Laboratorio
+-> Acceso a través de AWS Academy
+-> Cada laboratorio crea un usuario de estudiante con roles limitados
+-> Recomendación: crear bookmark para acceso rápido
+-> El lab tarda ~20 minutos la primera vez, luego ~5 minutos
+
+## RDS (Relational Database Service)
+
+### ¿Qué es RDS?
+-> Servicio administrado para base de datos relacionales
+-> Beneficios principales:
+    -> No gestionar infraestructura (OS, escalado, mantenimiento)
+    -> Escalado configurable con clicks
+    -> Alta disponibilidad con réplicas automáticas
+
+### Opciones de Base de Datos en RDS
+-> Aurora: desarrollado por AWS, mejor performance y escalabilidad (más caro)
+-> MySQL, PostgreSQL: bases de datos estándar
+-> Para laboratorios: usar bases estándar (más baratas), no Aurora
+
+### Creación de Base de Datos RDS
+
+#### Paso 1: Configuración Básica
+-> Botón "Create database"
+-> Modo: Standard create (alternativa: Easy create)
+-> Engine: MySQL
+-> Template: Sandbox (más económico que Production/Dev/Test)
+    -> Sandbox solo permite instancia única (single read replica)
+    -> Production permite múltiples réplicas de lectura y Multi-AZ
+
+#### Paso 2: Escalabilidad y Disponibilidad
+-> Sandbox: solo instancia única
+-> Production/Dev permite:
+    -> Multi-AZ: base de datos principal y secundaria
+    -> Si cae la principal, la secundaria toma control automáticamente
+    -> Sin downtime cuando falla una base de datos
+-> Availability: 99.95%
+
+#### Paso 3: Configuración de Instancia
+-> DB Instance Identifier: nombre de la base de datos
+-> Master username: usuario de autenticación
+-> Master password: contraseña a recordar
+-> Configuration: 2 CPU, 1GB RAM por defecto (suficiente para laboratorio)
+
+#### Paso 4: Conectividad
+-> Connectivity: habilitar "Public access" (importante)
+-> Network type: IPv4
+-> VPC: usar default o crear virtual
+-> Security group: configuración crítica para conexión externa
+
+### Security Groups - Configuración Importante
+-> Configurar reglas inbound para permitir conexión externa
+-> Tipo: TCP
+-> Puerto: 3306 (MySQL)
+-> Source: 0.0.0.0/0 (cualquier IP)
+-> Sin esta configuración no se puede conectar desde fuera de la VPC
+
+### Conexión a la Base de Datos
+-> Endpoint: dirección de conexión de la base de datos
+-> Importante guardar en variable de entorno para cambiar entre ambientes
+-> Puerto: 3306 (por defecto)
+-> Credenciales: username y password configurados
+
+### Conexión desde Cliente Local
+-> Usar herramienta como DBeaver
+-> Datos de conexión:
+    -> Host: endpoint de RDS
+    -> Port: 3306
+    -> User: master username
+    -> Password: contraseña configurada
+-> Base de datos por defecto: information_schema
+-> Crear nueva base de datos con queries SQL
+
+### Connection String
+Formato para usar en aplicaciones:
+```
+mysql://username:password@host:port/database
+```
+
+### Gestión de Costos
+-> RDS cobra por tiempo que está levantado (no por uso)
+-> CRÍTICO: apagar la base de datos cuando no se use
+-> Si se olvida apagada, puede consumir todos los créditos
+-> Recomendación: crear backup antes de apagar
+
+### Backup en RDS
+-> Vacuaciones automáticas configuradas
+-> Configurar días de retención
+-> Posibilidad de hacer backup manual desde cliente de BD
+
+## DynamoDB
+
+### Introducción a DynamoDB
+-> Base de datos NoSQL de AWS
+-> Cumple principios ACID (Atomicidad, Consistencia, Aislamiento, Durabilidad)
+-> Sistema key-value
+-> Valores flexibles (JSON) sin estructura fija
+
+### Características de DynamoDB
+-> Baja latencia constante
+-> Alto rendimiento independiente del volumen de datos
+-> Servicio completamente administrado
+-> Sin acceso SSH a la máquina virtual donde corre
+-> Solo consultas mediante SDK
+
+### Estructura de Datos
+-> Primary Key (obligatoria): identificador único del registro
+-> Sort Key (opcional): clave secundaria para ordenamiento
+-> Los values son JSON flexibles
+-> Una misma tabla puede almacenar estructuras diferentes
+
+### Funcionamiento Interno
+-> Hash function aplicada a Primary Key determina en qué réplica guardar
+-> Escalado horizontal automático
+-> Función determinística: siempre devuelve la misma réplica para la misma key
+-> Para leer: misma función hash indica dónde buscar
+-> Velocidad constante: siempre encuentra en tiempo determinado
+
+### Limitaciones de Búsqueda
+-> Solo se puede buscar por Primary Key eficientemente
+-> NO se puede buscar por otros campos (nombre, email, etc.)
+-> Soluciones:
+    -> Guardar dato múltiples veces con diferentes Primary Keys
+    -> Crear tabla separada que mapee a Primary Key
+    -> Tablas suelen tener millones de registros por esta razón
+
+### Casos de Uso
+-> Ideal cuando se conoce la Primary Key de antemano
+-> Bueno para: sistemas de compras, pedidos ya (ejemplo en producción)
+-> Malo para: búsquedas complejas, consultas por campos variables
+
+### Creación de Tabla en DynamoDB
+-> Table name: nombre descriptivo
+-> Partition key: Primary Key (tipo String)
+-> Sort key: opcional
+-> Configuration type: Standard (recomendado para laboratorio)
+-> Alternate mode: Standard-IA (más barato, para datos poco accedidos)
+
+### Capacity Mode
+-> On-demand: escala automáticamente según uso
+-> Provisioned: capacidad fija de lecturas/escrituras por segundo
+-> Para laboratorio: usar Default (Standard)
+
+### Conexión a DynamoDB desde Aplicación Local
+-> AWS SDK incluye emulación local de DynamoDB
+-> Útil para desarrollo sin gastar recursos de AWS
+-> Misma interfaz que DynamoDB real pero sin escalabilidad
+-> Se puede usar local y luego deployar a la nube
+
+## ECR (Elastic Container Registry)
+
+### ¿Qué es ECR?
+-> Registro privado de imágenes Docker
+-> Similar a Docker Hub pero privado
+-> Permite compartir imágenes con equipo
+
+### Beneficios de ECR
+-> Totalmente administrado por AWS
+-> Integración nativa con otros servicios AWS
+-> Seguridad con IAM (control de acceso)
+-> Escalabilidad y alta disponibilidad
+-> Misma imagen funciona en local y producción
+
+### Servicios Complementarios
+-> ECR + ECS trabajan juntos
+-> ECR: subir imágenes
+-> ECS: ejecutar imágenes
+
+### Creación de Repository en ECR
+-> Repository name: nombre descriptivo
+-> Image tag mutability: Mutable o Immutable
+    -> Mutable: permite versionar imágenes
+    -> Immutable: no sobrescribe imágenes existentes
+-> General settings: configuración básica
+
+### Subir Imagen a ECR
+-> Tag local: nombre de la imagen
+-> Push a registry: comando desde terminal
+-> URI generada para compartir imagen
+
+## ECS (Elastic Container Service)
+
+### ¿Qué es ECS?
+-> Servicio de orquestación de contenedores
+-> Permite ejecutar aplicaciones containerizadas
+-> Dos modos de ejecución:
+    -> EC2: control total del sistema operativo
+    -> Fargate: sin gestión de infraestructura
+
+### Conceptos Clave
+
+#### Task Definition
+-> "Receta" de cómo ejecutar un contenedor
+-> Define: imagen, CPU, memoria, variables de entorno
+-> Similar a docker-compose pero para AWS
+-> Es una configuración, no una ejecución
+
+#### Cluster
+-> Agrupación lógica de servicios
+-> Facilita organización y control de acceso por equipos
+-> Puede contener múltiples servicios
+
+#### Service
+-> Ejecuta múltiples réplicas de una Task Definition
+-> Incluye configuración de Load Balancer
+-> Define escalado y health checks
+
+### Tipos de Ejecución
+
+#### Fargate
+-> Completamente administrado
+-> Define CPU y memoria
+-> No gestiona servidores ni OS
+-> Simplicidad vs control limitado
+
+#### EC2
+-> Control total del servidor
+-> Instala dependencias adicionales
+-> Gestión de OS y mantenimiento
+-> Requiere SSH y configuración manual
+
+### Task Definition - Configuración Detallada
+
+#### Family
+-> Identificador único de la Task Definition
+
+#### Container Definition
+-> Container name: nombre del contenedor
+-> Image URI: imagen desde ECR
+-> Essential: si es crítico para la aplicación
+-> Port mappings: puertos a exponer
+-> Environment variables: configuración por ambiente
+-> Health check: endpoint para verificar salud
+-> Graceful shutdown: manejo de señales SIGTERM y SIGINT
+
+### Health Check Configuración
+-> Endpoint: ruta de health check (ej: /health)
+-> Interval: tiempo entre checks
+-> Timeout: tiempo máximo de espera de respuesta
+-> Start period: tiempo de espera antes del primer check
+-> Retries: número de reintentos antes de fallar
+
+### Graceful Shutdown
+-> SIGINT (Ctrl+C): interrupción del proceso
+-> SIGTERM: término del proceso por otro proceso
+-> Permite cerrar conexiones abiertas correctamente
+-> Evita pérdida de datos en transacciones
+
+### Service Configuration
+
+#### Network Configuration
+-> Assigned public IP: habilitar para acceso público
+-> Security groups: usar grupos por defecto o personalizados
+-> VPC: red virtual a usar
+
+#### Load Balancer
+-> Application Load Balancer recomendado
+-> Puerto 80 para acceso público
+-> Target group: grupo que recibe el tráfico
+-> Health check en target group apunta al endpoint configurado
+-> Redirige tráfico basado en health checks
+
+#### Service Auto Scaling
+-> Configurar número de réplicas mínimo y máximo
+-> Políticas de escalado automático
+-> Puede crecer o decrecer según carga
+
+### Flujo de Deploy Completo
+
+1. Crear imagen Docker localmente
+2. Subir imagen a ECR con push
+3. Crear Task Definition con configuración
+4. Crear Cluster (agrupación lógica)
+5. Crear Service dentro del Cluster
+6. Service levanta contenedores según Task Definition
+7. Load Balancer expone aplicación públicamente
+
+### Ventajas de ECS con Fargate
+-> No gestionar infraestructura
+-> Escalado automático configurable
+-> Integración con otros servicios AWS
+-> Deploy rápido una vez configurado
+
+### Desventajas de ECS vs Alternativas
+-> Configuración más compleja inicialmente
+-> Más pasos manuales en comparación con alternativas
+-> Alternativa más simple: AWS App Runner (ver siguiente clase)
+
+### Alternativas Avanzadas
+-> App Runner: aún más simplificado, solo subir código
+-> LightSail: para aplicaciones simples
+-> Amplify: para frontend
+
+## Otros Servicios Complementarios
+
+### CloudWatch
+-> Monitoreo y observabilidad
+-> Logs de aplicaciones
+-> Métricas de rendimiento
+-> Alertas y notificaciones
+
+### ElastiCache
+-> Caché en memoria
+-> Mejora performance de consultas
+-> Compatible con Redis
+
+## Resumen de Clase
+
+### Qué se cubrió hoy
+-> Creación de base de datos relacional en RDS (MySQL)
+-> Conexión desde cliente local (DBeaver)
+-> Configuración de Security Groups
+-> Introducción a DynamoDB (NoSQL)
+-> Subida de imágenes a ECR
+-> Configuración de ECS con Fargate
+-> Health checks y graceful shutdown
+-> Load Balancer con Application Load Balancer
+
+### Próxima Clase
+-> AWS App Runner (más simple que ECS)
+-> Deploy simplificado
+-> Configuración automática de infraestructura
+
+### Notas Importantes para el Obligatorio
+-> Usar bases de datos estándar (no Aurora) para ahorrar créditos
+-> Implementar health checks
+-> Configurar graceful shutdown
+-> Variables de entorno para diferentes ambientes
+-> Apagar recursos cuando no se usen
+-> Crear backup antes de apagar bases de datos
+-> Usar Security Groups correctamente para acceso público
+

@@ -1,0 +1,553 @@
+# Introducción a 12-Factor App
+
+## Presentación del Concepto
+
+Metodología desarrollada por Heroku para aplicaciones SaaS (Software as a Service).
+-> Heroku: plataforma PaaS pionera para desarrollo cloud
+-> Enfoque práctico y fácil para desarrollar aplicaciones cloud-native
+-> 12 principios específicos para diseño de aplicaciones
+-> Originalmente propiedad de Heroku, ahora dominio público
+-> Sigue siendo relevante hoy en día
+
+## Contexto de Cloud Computing
+
+### Diferencias entre On-Premise y Cloud
+En on-premise:
+-> Cobran por cosas fijas (hardware, licencias, infraestructura)
+-> Estás atado a hardware específico
+-> Adaptación compleja a nuevas necesidades
+
+En cloud:
+-> Cobran por uso (pago por uso)
+-> Flexibilidad para cambiar configuración
+-> Puedes cambiar procesadores en segundos
+-> Escalamiento dinámico según demanda
+
+### Objetivo de la Metodología
+-> Buenas prácticas para desarrollo cloud
+-> Aprovechar ventajas de cloud computing
+-> Despliegue rápido y continuo
+-> Implementación de CI/CD (Continuous Integration/Continuous Deployment)
+-> Aplicación de DevOps
+-> Mantener software en estado desplegable (deployment readiness)
+
+## Introducción a los Factores
+
+Los 12 factores cubren distintos aspectos:
+-> Desarrollo (proceso de desarrollo)
+-> Despliegue (momento de deployment)
+-> Arquitectura (planificación arquitectónica)
+-> Portabilidad (independencia de plataforma)
+-> Equipos (colaboración multi-equipo)
+
+Muchos factores están relacionados entre sí y con conceptos de cloud, CI/CD y operaciones.
+
+## Factor I: Codebase
+
+### Principio Fundamental
+-> Una sola base de código por aplicación
+-> Todos los cambios bajo control de versiones
+-> Múltiples deploys de la misma base de código
+
+### Reflexión sobre Codebases
+Ejemplo: aplicación de venta de casas con múltiples equipos.
+
+Opciones evaluadas:
+-> Una por aplicación? NO
+-> Una por ambiente? NO
+-> Una por equipo? Depende
+-> Una por proyecto? RECOMENDADO
+
+### ¿Por qué un Solo Codebase?
+-> Frontend y backend evolucionan juntos
+-> Cambios relacionados íntimamente
+-> Necesitan coordinación de versiones
+-> Facilita auditoría y colaboración
+
+### Excepciones
+Si aplicaciones son totalmente independientes:
+-> Diferentes tecnologías (React + Java)
+-> Evolución separada
+-> Pueden tener repositorios separados
+-> Aún requieren coordinación de versiones (ej: front v25 con backend v28)
+
+## Factor II: Dependencies
+
+### Problema
+Nuevo integrante al equipo no puede compilar:
+-> No tiene herramientas instaladas
+-> Versiones incorrectas
+-> Dependencias globales diferentes
+
+### Solución: Manifiestos de Dependencias
+Ejemplos según tecnología:
+-> Node.js: package.json
+-> Python: requirements.txt
+-> Ruby: Gemfile
+-> Java: pom.xml / build.gradle
+
+### Funcionalidad de Manifiestos
+-> Especifican dependencias exactas
+-> Versionamiento claro
+-> Herramientas de entorno virtual (venv, nvm, rbenv)
+-> Ambiente autocontenido
+-> No depende de instalaciones globales
+
+### Importante
+-> No depender de paquetes instalados en el sistema
+-> No depender de herramientas globales
+-> Todas las dependencias declaradas explícitamente
+-> Herramientas que generan ambiente automáticamente
+
+## Factor III: Config
+
+### Problema
+Diferentes ambientes con distintas configuraciones:
+-> Desarrollo: localhost, puerto 3000
+-> Staging: staging.houses.com, puerto 80
+-> Producción: houses.com, puerto 80
+
+### Solución: Variables de Entorno
+-> Configuración separada del código
+-> Todo lo que varía entre ambientes va en configuración
+-> Archivos de configuración por ambiente
+-> Variables de entorno para acceder a configuración
+
+### Ejemplos de Uso
+-> .env para desarrollo local
+-> Configuración de servidor para producción
+-> Amazon Secrets Manager para credenciales
+-> Herramientas que gestionan configuraciones
+
+### Beneficios
+-> Portabilidad entre ambientes
+-> Mismo código funciona en todos lados
+-> Solo cambia configuración
+-> Seguridad (no hardcodear credenciales)
+
+## Factor IV: Backing Services
+
+### Concepto
+Servicios externos que la aplicación consume:
+-> Base de datos
+-> Cola de mensajes (RabbitMQ, SQS)
+-> Servicio de almacenamiento (S3)
+-> Servicio de cache (Redis)
+-> Servicio de mailing (SES)
+
+### Principio Fundamental
+-> No depender de servicios específicos
+-> Servicios son recursos adjuntos
+-> Conexión dinámica mediante configuración
+-> Protocolo estándar (SMTP, HTTP, TCP)
+
+### Ejemplo
+RabbitMQ local vs Amazon SQS:
+-> Protocolo AMQP es el mismo
+-> Solo cambia dirección y credenciales
+-> Aplicación no sabe si es local o cloud
+-> Configuración externa maneja la diferencia
+
+### Manejo mediante Variables de Entorno
+-> Dirección del servicio
+-> Credenciales de conexión
+-> Puerto y protocolo
+-> Configuración del cliente
+
+## Factor V: Build, Release, Run
+
+### Separación de Etapas
+
+#### Build
+-> Convierte código fuente en ejecutable
+-> Descarga dependencias
+-> Compila código
+-> Genera artefacto ejecutable
+-> NO incluye configuración de ambiente
+
+#### Release
+-> Artefacto + configuración de ambiente específico
+-> Paquete completo para deploy
+-> Identificable con número de versión
+-> Inmutable una vez creado
+
+#### Run
+-> Ejecuta release en ambiente de producción
+-> Proceso manager ejecuta procesos de la aplicación
+-> No incluye construir ni hacer release
+
+### Importancia de Separar
+-> Build es independiente del ambiente
+-> Configuración viaja aparte
+-> Release identificable por número de versión
+-> Mismo release funciona en desarrollo, staging y producción
+
+### Versionamiento
+Semantic Versioning (MAJOR.MINOR.PATCH):
+-> 1.0.0: versión inicial
+-> 1.1.0: nueva funcionalidad
+-> 1.1.1: corrección de bug
+-> 2.0.0: cambios incompatibles con versiones anteriores
+
+Convención de versionamiento:
+-> Primer número: compatibilidad hacia atrás
+-> Segundo número: nuevas funcionalidades
+-> Tercer número: fixes
+
+### Ejemplo de Flujo
+```
+Desarrollo → Build → Artefacto → Release (v1.0.0 + config dev) → Deploy dev
+                    ↓
+                 Release (v1.0.0 + config staging) → Deploy staging
+                    ↓
+                 Release (v1.0.0 + config prod) → Deploy producción
+```
+
+## Factor VI: Processes
+
+### Principio Fundamental
+-> Procesos son stateless (sin estado)
+-> No deben compartir nada entre procesos
+-> Pueden caerse en cualquier momento
+-> Otro proceso debe poder continuar
+
+### Problema de Estado
+Con múltiples instancias:
+-> Load balancer distribuye requests
+-> No puedes guardar estado en memoria del proceso
+-> Si cae proceso en medio de operación, se pierde estado
+-> Otro proceso no sabe qué estaba haciendo el primero
+
+### Solución: Externalizar Estado
+Estado compartido va en:
+-> Base de datos
+-> Cola de mensajes
+-> Cache externo (Redis)
+-> Sistema de almacenamiento compartido
+
+NO guardar en:
+-> Variables en memoria
+-> Archivos locales
+-> Session del servidor web
+-> Cualquier cosa vinculada al proceso
+
+### Ejemplo: Compra de Casa
+Flujo:
+1. Usuario inicia compra
+2. Estado guardado en cola de mensajes
+3. Worker procesa compra
+4. Si worker cae, estado sigue en cola
+5. Otro worker puede continuar
+
+### Concurrencia
+-> Múltiples instancias procesan requests
+-> Cada instancia es independiente
+-> Escalamiento horizontal
+-> Sin coordinación compleja entre procesos
+
+## Factor VII: Port Binding
+
+### Principio
+-> Aplicación autocontenida
+-> Expone servicios mediante puertos
+-> No depende de servidor web externo
+-> Servidor web embebido en la aplicación
+
+### Estándar en Cloud
+-> Aplicación escucha en puerto específico
+-> Load balancer mapea puerto externo a interno
+-> Configuración externa maneja puertos
+-> No hardcodear puertos en código
+
+### Ejemplo en Docker
+```dockerfile
+EXPOSE 3000
+CMD ["node", "server.js"]
+```
+-> Aplicación escucha en puerto 3000
+-> Docker mapea puerto host:container
+-> Ejemplo: -p 8080:3000
+-> Externo accede por 8080, interno usa 3000
+
+### Separación de Responsabilidades
+Mundo externo → Configuración → Tu aplicación
+-> Mundo externo conoce puerto de acceso
+-> Tu aplicación conoce puerto donde escucha
+-> Configuración en el medio los conecta
+
+## Factor VIII: Concurrency
+
+### Concepto
+-> Escalar horizontalmente según demanda
+-> Procesos especializados para funciones específicas
+-> Cada tipo de proceso escala independientemente
+
+### Tipos de Procesos
+Ejemplo aplicación de casas:
+-> Web: recibe requests HTTP (escala según tráfico)
+-> Workers: procesan compras (escala según cola)
+-> Analytics: analiza datos (escala según procesamiento)
+
+### Escalamiento
+Horizontal vs Vertical:
+-> Horizontal: agregar más instancias (recomendado en cloud)
+-> Vertical: agregar recursos a instancia existente
+
+Escalamiento dinámico:
+-> Reglas basadas en métricas (CPU, memoria, requests)
+-> Auto-scaling automático
+-> Picos de carga manejados automáticamente
+-> Reducción de instancias cuando baja carga
+
+### Ejemplo de Escalamiento
+Escenario: black Friday
+-> 10:00 AM: 1 instancia web, 1 worker
+-> 10:30 AM: carga crece → 5 instancias web, 3 workers
+-> 11:00 PM: pico máximo → 20 instancias web, 10 workers
+-> 12:00 AM: baja carga → vuelve a 1 web, 1 worker
+
+### Ventajas en Cloud
+-> Solo pagas por lo que usas
+-> Puedes probar con grandes cantidades sin inversión
+-> Escalamiento automático
+-> Reglas configurables
+
+## Factor IX: Disposability
+
+### Principio
+-> Procesos deben iniciar rápido
+-> Deben terminar gracefulmente
+-> No deben dejar estado corrupto
+-> Deben ser reemplazables en cualquier momento
+
+### Por qué es Importante
+En cloud:
+-> Procesos se crean y destruyen dinámicamente
+-> Auto-scaling mata procesos cuando baja carga
+-> Deploys reemplazan procesos corriendo
+-> Fallos matan procesos para reemplazarlos
+
+### Start-up Rápido
+-> Cargar configuración
+-> Conectar a servicios externos
+-> Iniciar servicios necesarios
+-> Responder a requests inmediatamente
+
+### Shutdown Graceful
+Manejo de señales:
+-> SIGTERM: señal de terminación
+-> SIGINT: interrupción (Ctrl+C)
+-> Tiempo para cerrar conexiones
+-> Finalizar transacciones en curso
+-> Guardar estado si es necesario
+
+### Ejemplo con Cola de Mensajes
+Worker procesando mensaje:
+-> Recibe SIGTERM
+-> Termina procesamiento actual
+-> Marca mensaje como completado
+-> Cierra conexiones
+-> Proceso muere
+
+Si muere abruptamente:
+-> Mensaje vuelve a cola (ack en cola de mensajes)
+-> Otro worker lo procesa
+-> Sistema resiliente
+
+## Factor X: Dev/Prod Parity
+
+### Problema Tradicional
+Gap grande entre ambientes:
+-> Desarrollo: Windows, base local, librerías viejas
+-> Producción: Linux, base remota, librerías nuevas
+-> Bugs aparecen solo en producción
+-> Problemas difíciles de reproducir
+
+### Solución
+Mantener ambientes similares:
+-> Mismo manejador de base de datos
+-> Mismas versiones de dependencias
+-> Misma configuración de sistema
+-> Misma infraestructura básica
+
+### Herramientas que Ayudan
+Contenedores Docker:
+-> Mismo ambiente en todos lados
+-> Todas las dependencias incluidas
+-> Mismo sistema operativo
+-> Comportamiento idéntico
+
+Otros factores ayudan:
+-> Manifiestos aseguran mismas dependencias
+-> Configuración separada para diferencias necesarias
+-> Mismo código en todos los ambientes
+
+### Beneficios
+-> Bugs reproducibles localmente
+-> Deploys más confiables
+-> Menos sorpresas en producción
+-> Desarrollo más rápido
+
+## Factor XI: Logs
+
+### Principio
+-> Logs son streams de eventos
+-> Aplicación no gestiona almacenamiento de logs
+-> Escribe a stdout/stderr
+-> Herramientas externas capturan y procesan
+
+### Estándar
+-> stdout para output normal
+-> stderr para errores
+-> Formato estructurado recomendado
+-> Stack traces completos
+
+### Por qué no Gestionar Logs
+NO hacer:
+-> Escribir a archivos en disco
+-> Enviar logs a base de datos
+-> Manejar rotación de logs
+-> Depender de ubicación específica
+
+NO hacer porque:
+-> Archivos se pierden si proceso muere
+-> Disco puede llenarse
+-> Base de datos puede ser costosa
+-> No puedes cambiar destino sin cambiar código
+
+### Herramientas Externas
+CloudWatch, Splunk, DataDog, etc.:
+-> Capturan stdout/stderr
+-> Almacenan en servicios gestionados
+-> Buscar y analizar logs
+-> Alertas configurables
+-> Configuración externa, no código
+
+### Stack Traces
+-> Incluir excepción completa
+-> Incluir causa raíz (nested exceptions)
+-> Incluir contexto de request
+-> Información útil para debugging
+
+## Factor XII: Admin Processes
+
+### Principio
+-> Procesos administrativos se ejecutan como one-off
+-> Usan mismo código que procesos normales
+-> Mismo ambiente que aplicación corriendo
+-> NO se ejecutan manualmente en producción
+
+### Ejemplos de Admin Processes
+-> Migraciones de base de datos
+-> Seed de datos iniciales
+-> Scripts de limpieza
+-> Tareas de mantenimiento
+-> Cálculos batch
+
+### Problema con Procesos Manuales
+NO hacer en producción:
+-> Conectarse directamente a base de datos
+-> Modificar datos manualmente
+-> Ejecutar queries sin documentar
+-> Hacer cambios sin proceso
+
+Riesgos:
+-> Difícil replicar cambios
+-> Difícil auditar qué se hizo
+-> Sin rollback
+-> Puede romper aplicación
+
+### Solución
+Como release separado:
+-> Script de migración en código
+-> Versionado y rastreado
+-> Ejecutado como parte de deploy
+-> Documentado y reproducible
+
+Ejemplo con Docker:
+```bash
+docker-compose run web rails db:migrate
+```
+-> Mismo ambiente que app corriendo
+-> Script versionado
+-> Reproducible
+-> Auditable
+
+## Resumen de Factores
+
+### Factores de Desarrollo
+-> I: Codebase - un repositorio por aplicación
+-> II: Dependencies - manifiestos explícitos
+-> III: Config - configuración separada
+-> IV: Backing Services - servicios adjuntos
+-> V: Build, Release, Run - etapas separadas
+
+### Factores de Arquitectura
+-> VI: Processes - procesos stateless
+-> VII: Port Binding - self-contained
+-> VIII: Concurrency - escalamiento horizontal
+-> IX: Disposability - inicio y shutdown rápidos
+-> X: Dev/Prod Parity - ambientes similares
+
+### Factores de Operaciones
+-> XI: Logs - streams de eventos
+-> XII: Admin Processes - one-off con mismo código
+
+## Principios Transversales
+
+### Portabilidad
+-> Aplicación funciona en cualquier ambiente
+-> No depende de características específicas
+-> Fácil mover entre proveedores cloud
+-> Independencia de plataforma
+
+### Separación de Responsabilidades
+-> Desarrollo vs Operaciones
+-> Código vs Configuración
+-> Build vs Runtime
+-> Estado vs Procesos
+
+### Simplicidad
+-> Principios claros y prácticos
+-> No son extraños ni innovadores
+-> Muchas veces ya se aplican inconscientemente
+-> Consciencia trae beneficios
+
+## Aplicación Práctica
+
+### En el Curso
+Se pide respetar estos factores en el obligatorio:
+-> Configuración separada (variables de entorno)
+-> Procesos stateless
+-> Logs a stdout
+-> Manifiestos de dependencias
+-> Portabilidad entre ambientes
+
+### Herramientas que Facilitan
+-> Docker: paridad de ambientes
+-> Variables de entorno: configuración
+-> package.json / requirements.txt: dependencias
+-> Git: versionamiento
+-> CI/CD: automatización de build/release/run
+
+### Beneficios
+-> Desarrollo más rápido
+-> Deploys más confiables
+-> Bugs más fáciles de reproducir
+-> Escalamiento flexible
+-> Costos optimizados
+
+## Reflexión Final
+
+No son nuevas tecnologías:
+-> Son prácticas conocidas
+-> Sistematizadas en metodología
+-> Aplicables conscientemente
+-> Beneficios significativos cuando se aplican juntas
+
+Objetivo fundamental:
+-> Mantener código siempre en estado deployable
+-> Minimizar tiempo entre cambios y producción
+-> Aprovechar ventajas de cloud computing
+-> Facilitar trabajo en equipo
+

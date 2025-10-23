@@ -1,0 +1,524 @@
+# Introducción a Docker y Contenedores
+
+## Introducción
+
+Repaso de tecnologías esenciales para desarrollo cloud-native.
+-> Enfoque en dependencias y configuración
+-> Necesario usar Docker para despliegue en la nube
+-> Tecnologías de contenedores fundamentales para el curso
+
+## Contenedores vs Máquinas Virtuales
+
+### Máquinas Virtuales (Virtual Machines)
+Características:
+-> Virtualizan hardware completo
+-> Ejecutan sistema operativo completo
+-> Ejemplo: VirtualBox (tipo 2) sobre sistema operativo host
+-> Permite correr múltiples sistemas operativos independientes
+-> Cada VM tiene su propio kernel y recursos asignados
+
+### Contenedores
+Características:
+-> Virtualizan el sistema operativo, no el hardware
+-> Comparten el kernel del host
+-> Más ligeros que VMs
+-> Inicio más rápido
+-> Menor consumo de recursos
+
+### Comparación
+Ventajas de máquinas virtuales:
+-> Mayor aislamiento (sistemas operativos completamente separados)
+-> Más seguras por aislamiento total
+-> Útiles para sistemas legacy que necesitan sistema operativo específico
+
+Ventajas de contenedores:
+-> Mucho más rápidos de iniciar
+-> Más livianos (megabytes vs gigabytes)
+-> Eficientes en recursos compartidos
+-> Paridad de ambientes (mismo ambiente en desarrollo, staging, producción)
+-> Portabilidad entre diferentes sistemas
+
+## Historia de Contenedores
+
+### Evolución
+-> Tecnología basada en conceptos antiguos de Linux
+-> Docker: 2013-2014, libertad de uso (relativamente nueva)
+-> Solucionó problemas de dependencias y ambientes
+
+### Problema que Resuelve
+Antes de contenedores:
+-> Dependencias diferentes en desarrollo y producción
+-> Configuración compleja en cada ambiente
+-> Desarrollo local atado a hardware específico
+-> Divergencia entre ambientes de desarrollo y producción
+
+Con contenedores:
+-> Imagen única que funciona en todos lados
+-> Viaja con todo el software necesario
+-> Paridad entre ambientes
+-> Simplificación del desarrollo y despliegue
+
+## Conceptos Fundamentales de Docker
+
+### Imagen (Image)
+-> Plantilla read-only con capas de filesystem
+-> Receta para crear contenedores
+-> Define sistema operativo base, librerías y aplicación
+-> No se modifica una vez creada
+
+### Contenedor (Container)
+-> Instancia ejecutándose de una imagen
+-> Proceso corriendo sobre el sistema operativo host
+-> Contiene solo lo necesario para ejecutar la aplicación
+-> Puede iniciarse y detenerse
+
+### Dockerfile
+-> Archivo con instrucciones para construir imagen
+-> Define pasos de construcción
+-> Comando `docker build` usa el Dockerfile
+-> Es la receta para armar la imagen
+
+## Arquitectura de Imágenes Docker
+
+### Sistema de Capas
+Cómo funciona:
+-> Basado en conceptos de Linux (filesystem, namespaces)
+-> Cada comando en Dockerfile crea una nueva capa
+-> Capas se apilan una sobre otra
+-> Capas inmutables (no se modifican)
+-> Última capa es escribible (contenedor)
+
+### Analogía de Capas
+-> Como discos apilados
+-> Base: sistema operativo
+-> Capa siguiente: librerías de Node.js
+-> Siguiente: programa
+-> Resultado: imagen con todas las capas necesarias
+
+## Comandos Básicos de Docker
+
+### Gestión de Imágenes
+-> `docker images`: lista imágenes disponibles
+-> `docker build`: construye imagen desde Dockerfile
+-> `docker pull`: descarga imagen desde registry
+-> `docker rmi`: elimina imagen
+-> `docker inspect`: inspecciona imagen o contenedor
+
+### Gestión de Contenedores
+-> `docker run`: crea y ejecuta contenedor
+-> `docker ps`: lista contenedores corriendo
+-> `docker ps -a`: lista todos los contenedores (corriendo y detenidos)
+-> `docker stop`: detiene contenedor (envía señal SIGTERM)
+-> `docker kill`: mata contenedor inmediatamente
+-> `docker rm`: elimina contenedor
+-> `docker exec`: ejecuta comando en contenedor corriendo
+-> `docker logs`: muestra logs del contenedor
+
+### Ejemplos de Uso
+Correr contenedor interactivo:
+```bash
+docker run -it ubuntu bash
+```
+
+Correr contenedor en background:
+```bash
+docker run -d alpine sleep 200
+```
+
+Ejecutar comando en contenedor detenido:
+```bash
+docker exec <container_id> ls
+```
+
+Ver logs de contenedor:
+```bash
+docker logs <container_id>
+```
+
+## Dockerfile: Construcción de Imágenes
+
+### Instrucciones Comunes
+```dockerfile
+FROM node:14
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+EXPOSE 3000
+CMD ["node", "server.js"]
+```
+
+### Instrucciones Explicadas
+-> `FROM`: imagen base
+-> `WORKDIR`: directorio de trabajo dentro del contenedor
+-> `COPY`: copia archivos al contenedor
+-> `RUN`: ejecuta comando durante construcción
+-> `EXPOSE`: documenta puerto que usa la aplicación
+-> `CMD`: comando que se ejecuta al iniciar contenedor
+
+### Entrypoint vs CMD
+-> `ENTRYPOINT`: comando fijo, parte de la imagen
+-> `CMD`: puede sobrescribirse con parámetros
+-> `ENTRYPOINT` ejecuta siempre
+-> `CMD` es el argumento por defecto para ENTRYPOINT
+
+## Comandos Avanzados
+
+### Flags Importantes
+-> `-it`: modo interactivo con terminal
+-> `-d`: ejecutar en background (detached)
+-> `-p`: mapear puertos (host:container)
+-> `--name`: dar nombre al contenedor
+-> `--rm`: eliminar contenedor al detenerlo
+
+### Ejemplo de Binding de Puertos
+```bash
+docker run -p 3000:3000 mi-app
+```
+-> Puerto 3000 del host mapea a puerto 3000 del contenedor
+-> Permite acceso desde fuera del contenedor
+
+## Volúmenes en Docker
+
+### Tipos de Volúmenes
+
+#### Bind Mount
+-> Conecta directorio del host al contenedor
+-> Mal práctica según 12-factor app
+-> Archivos compartidos entre host y contenedor
+-> Puede causar problemas (borrado de archivos)
+
+#### Named Volume
+-> Volumen gestionado por Docker
+-> Creado con `docker volume create`
+-> Persiste datos fuera del contenedor
+-> Ejemplo: base de datos
+
+#### tmpfs Mount
+-> Volumen en memoria RAM
+-> Datos temporales protegidos
+-> Se pierde al detener contenedor
+
+### Mejores Prácticas
+-> No usar bind mount para código de aplicación
+-> Usar named volumes para datos persistentes
+-> Imagen debe contener todo lo necesario
+-> Volúmenes para datos, no para código
+
+## Imágenes Multi-Stage Build
+
+### Concepto
+-> Construir imagen en múltiples etapas
+-> Primera etapa: entorno de desarrollo completo
+-> Segunda etapa: imagen mínima para producción
+-> Reduce tamaño final de imagen
+
+### Ejemplo
+```dockerfile
+# Build stage
+FROM node:14 AS builder
+WORKDIR /app
+COPY . .
+RUN npm install
+RUN npm run build
+
+# Production stage
+FROM node:14-alpine
+WORKDIR /app
+COPY --from=builder /app/dist ./dist
+COPY package*.json ./
+RUN npm install --production
+CMD ["node", "dist/server.js"]
+```
+
+### Ventajas
+-> Imagen de producción mucho más pequeña
+-> No incluye herramientas de desarrollo
+-> Solo compilado necesario
+-> Reduce tamaño y superficie de ataque
+
+## Redes en Docker
+
+### Tipos de Redes
+
+#### Bridge (por defecto)
+-> Red interna de Docker
+-> Contenedores pueden comunicarse entre sí
+-> No accesible desde fuera por defecto
+-> Requiere binding de puertos para acceso externo
+
+#### Host
+-> Contenedor usa red del host directamente
+-> Comparte interfaces de red con host
+-> Sin aislamiento de red
+-> Menos seguro
+
+#### None
+-> Sin conectividad de red
+-> Completamente aislado
+-> Solo proceso local
+
+## Optimización de Imágenes
+
+### Tamaño de Imágenes
+Factores que aumentan tamaño:
+-> Copiar archivos innecesarios (node_modules, .git)
+-> Incluir herramientas de desarrollo
+-> No usar multi-stage builds
+-> No limpiar caché después de instalaciones
+
+### Buena Práctica
+-> Usar .dockerignore para excluir archivos
+-> Limpiar cache después de RUN (apt-get clean)
+-> Usar imágenes base más pequeñas (alpine)
+-> Multi-stage builds para producción
+
+## Docker Compose
+
+### ¿Qué es?
+-> Herramienta para definir y ejecutar aplicaciones multi-contenedor
+-> Archivo YAML con configuración
+-> Simplifica manejo de múltiples contenedores
+-> Orquestación de servicios
+
+### Estructura Básica
+```yaml
+version: '3.8'
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+  redis:
+    image: redis:alpine
+```
+
+### Comandos Comunes
+-> `docker-compose up`: levanta servicios
+-> `docker-compose down`: detiene servicios
+-> `docker-compose logs`: muestra logs
+-> `docker-compose ps`: lista servicios
+
+### Ventajas
+-> Un solo comando para levantar todo
+-> Configuración como código
+-> Manejo de redes automático
+-> Manejo de volúmenes simplificado
+
+## Arquitectura de Contenedores
+
+### Principio Fundamental
+Cada contenedor debe:
+-> Ejecutar un solo proceso
+-> Ser una única responsabilidad
+-> Poderse escalar independientemente
+-> Seguir principio de separación de responsabilidades
+
+### Anti-patrón
+NO hacer:
+-> Múltiples procesos en un contenedor
+-> Base de datos y aplicación en mismo contenedor
+-> Dificulta escalado independiente
+-> Viola principio de concurrencia
+
+### Arquitectura Correcta
+Ejemplo: aplicación web con base de datos
+-> Contenedor 1: Node.js API
+-> Contenedor 2: Base de datos PostgreSQL
+-> Contenedor 3: Redis (cache)
+-> Cada uno escalable independientemente
+
+## Beneficios de Contenedores
+
+### Portabilidad
+-> Misma imagen funciona en cualquier lugar
+-> Desarrollo, staging, producción idénticos
+-> No depende de hardware específico
+
+### Paridad de Ambientes
+-> Mismo ambiente en desarrollo y producción
+-> Evita problemas de "funciona en mi máquina"
+-> Configuración viaja con la aplicación
+
+### Escalabilidad Horizontal
+-> Reproducir contenedores según demanda
+-> Cada contenedor es proceso independiente
+-> Load balancer distribuye carga
+-> Escalado granular por servicio
+
+### Separación de Responsabilidades
+-> Cada contenedor una responsabilidad
+-> Escalado independiente
+-> Mantenimiento simplificado
+-> Fácil localización de problemas
+
+## 12-Factor App y Contenedores
+
+### Relación
+-> Contenedores facilitan implementar principios 12-factor
+-> Dependencias explícitas en imagen
+-> Configuración separada (variables de entorno)
+-> Puertos declarados
+-> Procesos stateless
+-> Paridad de ambientes
+
+### Ejemplo: Configuración
+NO poner en imagen:
+-> Credenciales hardcodeadas
+-> IPs fijas
+-> Configuración de ambiente específico
+
+SÍ usar:
+-> Variables de entorno
+-> Secrets management
+-> Configuración externa
+
+## AWS Academy
+
+### Introducción
+-> Plataforma educativa de AWS
+-> Cuentas con créditos limitados
+-> $50 por persona
+-> Servicios disponibles para aprendizaje
+
+### Gestión de Créditos
+-> Importante administrar recursos
+-> Apagar servicios cuando no se usen
+-> Algunos servicios consumen créditos aunque apagados
+-> Equipos de 3 personas con créditos individuales
+
+### Trabajo en Equipo
+-> Un solo repositorio por equipo
+-> Artifacts compartidos (imágenes Docker)
+-> Despliegue puede hacer cualquiera del equipo
+-> Simula trabajo real en empresas
+
+## Introducción al Obligatorio
+
+### Sistema CRM Multi-Tenant
+Características:
+-> Sistema CRM (Customer Relationship Management)
+-> Multi-tenant: múltiples empresas usan la misma aplicación
+-> Registro de empresas clientes
+-> Gestión de contactos, ventas, oportunidades
+-> Autenticación por empresa
+-> APIs para conexión externa
+
+### Arquitectura
+Componentes:
+-> Frontend (tecnología a elección)
+-> Backend API
+-> Base de datos
+-> Sistema de autenticación multi-tenant
+
+### Requisitos Funcionales
+-> Registro de empresas
+-> Autenticación de usuarios por empresa
+-> Gestión de contactos
+-> Seguimiento de ventas
+-> Ofertas a clientes
+-> APIs documentadas
+
+### Requisitos No Funcionales
+Performance:
+-> Endpoints deben responder en menos de 2 segundos
+-> Carga especificada en reglamento
+
+Disponibilidad:
+-> Health check endpoint
+-> Monitoreo de sistema
+
+Seguridad:
+-> Autenticación multi-tenant
+-> Separación de datos por empresa
+
+Observabilidad:
+-> Logs con formato estándar
+-> Instrumentación para monitoreo
+
+### Entrega
+Formato:
+-> Video de máximo 20 minutos
+-> Mostrar funcionalidades implementadas
+-> Marcar minuto donde está cada funcionalidad
+-> Desplegado en la nube (no local)
+-> Aplicación monolítica (primera parte)
+
+Plazo:
+-> Una semana después de fecha puede enviar correcciones
+-> Si no está en video, no está implementado
+
+### Criterios de Evaluación
+Calificación basada en:
+-> Despliegue en cloud (no local)
+-> Funcionalidad trabajando
+-> Calidad de código
+-> Arquitectura apropiada
+-> No se evalúa diseño de UI
+
+### Segunda Parte (Obligatorio 2)
+-> Microservicios
+-> Separar monolito en servicios
+-> Comunicación entre servicios
+-> Arquitectura distribuida
+-> Servicios stateless
+
+## Elección de Tecnologías
+
+### Libertad de Elección
+-> Frontend: cualquier tecnología
+-> Backend: cualquier lenguaje/framework
+-> Base de datos: elegir según necesidades
+-> No hay restricciones tecnológicas
+
+### Tecnologías Populares
+-> Node.js / Express
+-> .NET
+-> Java / Spring
+-> Python / Django/Flask
+-> Ruby on Rails
+
+### Recomendaciones
+-> Elegir según conocimiento del equipo
+-> Usar lo que el equipo domina
+-> Considerar recursos disponibles
+-> No elegir tecnologías completamente nuevas
+
+## Best Practices
+
+### Desarrollo
+-> Código modular desde el inicio
+-> Preparar separación de módulos
+-> Facilitar transición a microservicios después
+-> Monolito modular
+
+### Docker
+-> Imágenes pequeñas
+-> Multi-stage builds
+-> Un proceso por contenedor
+-> Variables de entorno para configuración
+-> No hardcodear credenciales
+
+### Cloud
+-> Apagar recursos cuando no se usen
+-> Monitorear uso de créditos
+-> Usar servicios managed cuando sea posible
+-> Infraestructura como código
+
+## Resumen
+
+### Conceptos Clave
+-> Contenedores más ligeros que VMs
+-> Imágenes como plantillas inmutables
+-> Un proceso por contenedor
+-> Paridad de ambientes
+-> Escalabilidad horizontal
+-> Separación de responsabilidades
+
+### Próximos Pasos
+-> Práctica con Docker en local
+-> AWS Academy para despliegue
+-> Desarrollo del obligatorio
+-> Configuración de CI/CD
+-> Implementación de arquitectura cloud-native
+

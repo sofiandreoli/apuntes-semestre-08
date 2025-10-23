@@ -1,0 +1,709 @@
+# Arquitectura de Software: Lectura del Obligatorio 2 y Microservicios
+
+## Introducción
+
+    -> Lectura del obligatorio 2 (segunda entrega)
+    -> Continuación de seguridad desde clase anterior
+    -> Inicio del tema de microservicios (tema principal de la segunda parte del curso)
+
+## Lectura del Obligatorio 2
+
+### Puntaje Mínimo
+
+    -> Obligatorio tiene puntaje mínimo de 6 puntos
+    -> Esto obliga a entregar algo funcional
+
+### Objetivo del Obligatorio
+
+    -> Poner en práctica conceptos de computación en la nube y diseño de sistemas orientado a microservicios
+    -> Trabajar sobre un sistema ya en desarrollo
+    -> Contexto: la aplicación ha crecido, tiene nuevos fondos para expandir el equipo
+    -> Desafíos de calidad y necesidad de pasar a arquitectura basada en microservicios
+    -> Mantener características de aplicación cloud native
+
+### Requerimientos Funcionales Nuevos
+
+#### RF10: Equipos de la Empresa Cliente
+
+    -> Administrador puede definir equipos para cada empresa
+    -> Cada equipo tiene nombre y descripción
+    -> Al invitar usuarios, se puede indicar el equipo al que pertenece en la empresa
+    -> Las oportunidades pueden tener equipo asociado (dato no mandatorio)
+    -> Es un subgrupo que se agrega a los usuarios
+    -> Puede cambiar las relaciones
+
+#### RF11: Notificaciones Automáticas de Ventas
+
+    -> Sistema envía automáticamente notificación por correo electrónico
+    -> Se envía cuando una oportunidad pasa a estado final (venta o pérdida)
+    -> Se envía a todos los usuarios de la empresa cliente que pertenecen al equipo asociado a la oportunidad (si existe)
+    -> Si no existe equipo asociado, no se envía notificación
+    -> Las notificaciones deben incluir todos los datos de la oportunidad: estado, fecha, acción realizada
+    -> Los usuarios pueden suscribirse/darse de baja de estas notificaciones
+    -> Por defecto todos los usuarios están suscritos
+    -> El envío de notificaciones debe realizarse de forma asíncrona para no afectar el rendimiento
+    -> No deben hacerlo con una request HTTP, sino con algún trabajo o algo que envíe esto en background
+    -> Las notificaciones son por mail (no sistema interno de notificaciones)
+
+#### RF12: Auditoría Axiológica Administrativa
+
+    -> Sistema registra todas las acciones críticas realizadas por administradores y usuarios
+    -> Incluye: creación de empresas, registro de usuarios, asignación de roles, cambios de configuración del sistema
+    -> Debe incluir fecha, usuario que realizó la acción y detalles de la acción
+    -> La auditoría debe almacenarse en un servicio separado para garantizar integridad y disponibilidad
+    -> Tiene "olor" a que debe ponerse en un microservicio solo
+    -> Los registros de auditoría deben ser inmutables y protegidos contra modificaciones no autorizadas
+    -> Debe existir interfaz para que administradores consulten registros filtrando por: rangos de fecha, usuario o tipo de acción
+    -> Los datos a guardar son no anidados (sin relaciones)
+    -> Puede usar MongoDB o base de datos relacional
+    -> Requiere base de datos que permita búsqueda eficiente
+
+#### RF13: Búsqueda Avanzada de Oportunidades
+
+    -> Los usuarios pueden buscar oportunidades dentro de sus cuentas de manera eficiente
+    -> Los usuarios pueden buscar oportunidades por estado, equipo y filtrar por fecha
+    -> Filtrar por cuenta
+    -> Combinar múltiples criterios de búsqueda/filtrado
+    -> Mejora la usabilidad del sistema
+    -> Facilita gestión y localización de oportunidades en empresas grandes
+    -> Especificaciones:
+        -> Interfaz debe proporcionar campo de búsqueda
+        -> Opciones de filtrado fácilmente accesibles
+        -> Resultados deben actualizarse dinámicamente según criterios ingresados
+        -> Manejar adecuadamente casos donde no se encuentren resultados
+        -> La búsqueda/filtrado debe realizarse en forma eficiente con tiempos de respuesta rápidos
+
+### Requerimientos No Funcionales
+
+#### RNF4: Observabilidad para Facilitar Diagnóstico
+
+    -> Pueden monitorear métricas de todos los servicios del sistema en un solo lugar
+    -> Métricas a chequear:
+        -> Peticiones por minuto
+        -> Tiempo de respuesta en distintos endpoints
+        -> Tasa de error en distintos servicios
+    -> Pueden hacerlo con CloudWatch pero se vuelve complicado
+    -> Pueden usar New Relic o similar
+    -> Deben poder instalar en todos los microservicios
+    -> Pueden intentar configurar algo y justificarlo con CloudWatch
+
+#### RNF5: Integración Continua
+
+    -> Para al menos dos de los microservicios se debe contar con pruebas unitarias
+    -> Pruebas para requerimientos funcionales de su elección
+    -> Son pruebas unitarias (no pruebas de integración)
+    -> Idealmente hacer pruebas por capas
+    -> Opción de probar controlador, lógica o todo junto (mocking)
+    -> Lo ideal es hacerlo por capas
+    -> Deben correr automáticamente cada vez que nuevo commit se integra a la rama principal
+    -> Es GitHub Actions
+    -> Implementar una action que cada vez que hacen un commit a la rama principal se corra eso
+    -> Son dos microservicios que deben tener tests
+    -> Pueden elegir los más fáciles
+
+#### RNF6: Identificación de Fallas
+
+    -> Centralizar y retener los logs emitidos por todos los microservicios en producción
+    -> Período máximo 48 horas
+    -> Se puede filtrar los logs por fecha, texto de mensaje
+    -> Lo pueden hacer con CloudWatch solo configurando
+    -> Pueden hacerlo con CloudWatch y ya está
+    -> Lo ideal sería tener algún mecanismo para centralizar todo de toda la aplicación
+    -> Si no les da el tiempo, vayan por CloudWatch y vean cómo pueden centralizar de la mejor manera
+    -> Lo ideal es poder tenerlos en un solo lugar
+    -> Es lo mismo que la parte de fallas
+    -> Pueden mezclar todo en uno donde vean los logs y las métricas
+
+### Estilo de Arquitectura
+
+    -> Basado en microservicios especificando fronteras bien definidas entre microservicios
+    -> Especificar interfaces mediante las cuales se comunican entre microservicios
+    -> Debe haber desplegado como aplicaciones diferentes
+    -> Comunicándose exclusivamente mediante cola de mensajes o HTTP en tiempo de ejecución
+    -> Única comunicación entre servicios debe ser por estos dos mecanismos
+    -> Utilizar al menos una comunicación mediante cola de mensajes (requerimiento)
+    -> Entre servicios (gateway cuenta como servicio)
+    -> La cola puede estar en el proveedor de mensajería (AWS SQS)
+
+### Lenguaje de Programación
+
+    -> Al menos uno de los microservicios debe estar en un lenguaje de programación diferente a los demás
+    -> No cuenta TypeScript en JavaScript (mismo motor)
+    -> Debe ser lenguajes distintos (Python, Go, Ruby, etc.)
+    -> Recomendación: agarrar el lenguaje más sencillo y dominado, agarrar un servicio sencillo y fácil
+    -> Ejemplo mencionado: servicio de emails puede ser en otro lenguaje
+    -> Único que hace es recibir y enviar mails, leer esa cola y enviar mails
+
+### Repositorios
+
+    -> Lo ideal es que cada microservicio esté en un solo repositorio
+    -> Pueden hacerlo en un solo repo tipo todo en todos los microservicios en carpetas, pero no van a cumplir con Twelve-Factor
+    -> No es recomendado usar un solo repositorio
+    -> Recomendación: crear un repositorio por microservicio
+    -> Si el frontend y el backend lo tenían todo junto: separar frontend en repositorio nuevo
+    -> Lo más correcto: tener N microservicios en N repositorios, más un repositorio para el frontend
+    -> GitHub permite crear templates (boilerplate):
+        -> Crear repositorio base con todo lo básico que necesita un microservicio
+        -> Estructura básica: controladores, servicios, lógica, acceso a datos, repositorios
+        -> Conexión a SQS, Docker con PostgreSQL
+        -> Endpoint de health check
+        -> Librerías y dependencias básicas
+        -> Después solo implementan las funcionalidades que necesitan
+
+### Deploy Independiente
+
+    -> Cada microservicio debe poder emplear una nueva versión sin afectar despliegue de los otros
+    -> No ocasionar downtime en ningún microservicio
+    -> Si sacan nueva versión de un microservicio, no debería afectar a los otros
+    -> Aunque el flujo no vaya a andar bien si uno se cae
+    -> Lo ideal es configurar/explicar mecanismo con health check para que primero no se caiga esa disponibilidad
+    -> Si otro microservicio nos está usando, sería ideal que no por hacer un deploy se cierre el microservicio
+    -> Siga corriendo mientras se despliega
+    -> Estrategia en particular: health check para permitir esto
+    -> Si un microservicio se cae, el otro microservicio v tiene que seguir funcionando con todo lo que puede funcionar sin la parte de comunicación
+    -> No es que si se cae el microservicio A, el microservicio B también se cae
+    -> Tiene que seguir respondiendo
+    -> Puede ser que en el paso que llega para contactarse con el servicio A ahí no, pero tiene que seguir respondiendo
+
+### Levantamiento con Docker Compose
+
+    -> Cada repositorio debe incluir README con instrucciones claras
+    -> Usando Docker Compose con PostgreSQL
+    -> La letra los incita a tener un repositorio por microservicio y que todos tengan Docker Compose
+    -> Pueden crear boilerplate desde su monolito
+    -> Un template
+    -> Más o menos cada microservicio va a tener casi lo mismo
+    -> Pueden usar base de datos relacional para las búsquedas (no tienen por qué reinventar la rueda)
+
+### Endpoint de Plataforma vs Endpoint de Cliente
+
+    -> Se espera que la empresa tenga crecimiento importante
+    -> Desea poder incorporar nuevos endpoints de uso exclusivo para administradores del software as a service sin impacto a los administradores de las empresas cliente
+    -> La solución debe contemplar este requerimiento indicando claramente en la documentación por qué cree que esto se logra
+    -> Garantizar escalabilidad independiente de la plataforma y los clientes
+    -> Tienen que poder justificar cómo este requerimiento se cumple con la arquitectura
+
+### Documentación
+
+    -> Descripción de la arquitectura: mostrar partes y componentes del sistema a través de vistas de módulos, componentes, productores y despliegue
+    -> Asegurarse de mostrar distribución de todo el sistema de componentes físicos
+    -> Flujo de información a través de la estructura en tiempo de ejecución
+    -> Es más o menos lo que tenían en el obligatorio pasado más el flujo entre microservicios
+    -> Tienen que demostrar cómo es el flujo entre microservicios
+    -> La comunicación que tienen entre ellos
+    -> Justificaciones de diseño, Twelve-Factor
+    -> Documentación de cumplimiento de cada uno de los requerimientos no funcionales de forma explícita
+    -> Si no se hace, no se considera requerimiento no funcional como satisfecho
+    -> Documentación es clave
+
+### Análisis de Costos
+
+    -> Debe haber una sección diciendo los costos
+    -> Más o menos cada microservicio lo deploya igual
+    -> No hay mucha complejidad en esto
+    -> Tienen que explicar qué pasa cuando escalan los servicios y cómo impacta esto en los costos
+
+### Proceso de Deployment
+
+    -> Describir y justificar la plataforma utilizada para despliegue
+    -> Toda la configuración en forma de tutorial
+    -> Proceso interno: pueden tener que correr una migración, alguna cosita más
+
+### Entrega
+
+    -> URI con acceso web público a distancia de producción del sistema
+    -> Es el mismo link que van a mostrar
+    -> Puede estar desactualizado para la demo (no pasa nada)
+    -> Tienen que poner un link del frontend
+    -> En lo ideal debería quedar quieto y no deberían crear otro link
+    -> Como lo normal es no dejar todo desplegado porque les va a costar mucho, pueden dejar comentado que levantaron todo esto para la demo
+    -> Pueden cambiar el link pero seguir indicando que es su sistema
+    -> Script de pruebas de carga
+    -> Link o adjunto de la documentación requerida para el obligatorio
+    -> Colección de Postman para los endpoints REST o endpoints públicos
+    -> Cualquier conjunto de credenciales adicionales necesarias para el uso del sistema más allá de los pasos básicos
+    -> Datos de prueba: está bueno que pongan en una migración script que los crea automáticamente cuando levantan con Docker Compose
+
+### Defensa
+
+    -> Se realiza un video que cada equipo tiene que enviar a los docentes mostrando funcionamiento de la aplicación
+    -> El video debe mostrar todos los requerimientos funcionales implementados
+    -> Mencionar en caso que haya aquellos que no se hayan podido implementar
+    -> Recomendación: revisar la rúbrica para validar lo que se haya pedido
+    -> En el video se está brindando una demostración a un supuesto cliente técnico
+    -> Tienen que demostrar qué cumplieron y qué no hicieron
+    -> Si hay algo que falla, se nota que va a bajar puntos porque va a bajar puntos de la demo y va a bajar puntos de la funcionalidad
+    -> Si ya saben que hay algo que no hicieron, van y dicen que no lo hicieron
+    -> Está bueno que demuestren que está todo desplegado igual al obligatorio uno, que está todo corriendo
+    -> Mostrar el link, mostrar las bases de datos (pueden demostrarlas todas por arriba)
+    -> Idea es que pueda durar máximo 20 minutos
+    -> Hay una especie de tolerancia pero es mínimo
+    -> El equipo docente podrá decir tomar defensas presenciales para aquellos casos que lo ameriten
+    -> La no presentación en esta instancia implica la pérdida total de puntos del obligatorio
+    -> Si hay algo que llama la atención, se notifica tanto por mail como por Teams
+    -> Si hay uno en el equipo que no participó mucho, puede ameritar defensa presencial
+
+### Interfaz de Auditoría
+
+    -> Como algún usuario que sea administrador o que tenga acceso
+    -> Todos tienen que ver todos los logs
+    -> Requerimiento: el administrador tiene que poder tener acceso a UI
+    -> Cualquier administrador debe poder hacer los filtros que quiera
+
+### Fechas Importantes
+
+    -> Micro tarea 2 se entrega hasta jueves a las 9pm
+    -> Actividad 2: se pasa para el lunes próximo (anteriormente era miércoles pero no se permiten evaluaciones)
+    -> La actividad se va a tratar de performance y observabilidad
+    -> Probablemente haya algún ejemplo de New Relic o similar
+    -> También llevándolos a que vean centralización de logs y métricas en un solo lugar
+    -> Modalidad: misma que siempre (se lee la actividad en el área de clase, tienen dos horas para consultas, tienen hasta las 2 o 3 de la mañana para entregarlo)
+
+## Continuación: Seguridad
+
+### Tácticas de Seguridad Fundamentales
+
+    -> Almacenar claves en el ambiente
+    -> Hacer validaciones en el backend (no confiar en el frontend)
+    -> No almacenar tarjeta de crédito o datos sensibles en la base de datos
+    -> Proteger información personal sensible
+    -> Autenticación por cookie o por JWT con tokens
+    -> Usar protocolo HTTPS porque tenemos SSL certificado que dice quién está
+    -> Expirar las sesiones: los tokens no pueden ser infinitos
+    -> No guardar tokens/passwords en los logs
+    -> Información personal sensible: información que puede ser usada en contra de nosotros
+    -> Ejemplo: cédula, fotos, cursos, etc.
+
+### Contraseñas y Hashing
+
+    -> Contraseñas: one-way hashing
+    -> Cuando todos tenemos una contraseña, la idea es hacer un hash usando un algoritmo de hash para que no sea revertible
+    -> La realidad es que no es completamente revertible
+    -> Los algoritmos de hash más comunes hoy en día son los que se utilizan
+    -> Con fuerza bruta se pueden revertir
+    -> Vulnerabilidad: si todos usan el mismo algoritmo de hash, yo puedo buscar las contraseñas más comunes, calcular el hash y comparar con la base de datos
+    -> Ataque a fuerza bruta, diccionarios
+    -> Solución: meter un random salt
+    -> Por más que en la base de datos guarden el resultado del hash y el random salt
+    -> Por usuario guarden su propio random salt
+    -> Por usuario se tienen que tener estos salts
+    -> Si aplican muchas iteraciones (estándar: 10 iteraciones), tienen que guardar todos los random salts
+    -> La próxima vez que ven a ingresar, la contraseña la busca
+    -> Lo que hace es que naturalmente si me roban la base de datos es mucho tiempo deseado para poder detectar esa contraseña
+    -> Porque más allá que tienen el salt, tienen que invocar la función
+    -> Es una función particular después de todos los salts, aplicarle el hash
+    -> Ya es muy difícil de descifrar y de probar
+    -> El hash que se guarda en los usuarios es distinto aunque haya puesto la misma contraseña
+
+### Dependencias Actualizadas
+
+    -> Existen herramientas para mantener las dependencias actualizadas
+    -> Pueden agregar GitHub Actions que se corran automáticamente
+    -> Pueden desarrollar una GitHub Action que haga npm audit y les dé el resultado
+    -> Les diga qué librería tiene una vulnerabilidad y les bloquee el pull request
+    -> GitHub provee herramientas de seguridad que automáticamente detectan vulnerabilidades con dependencias y generan un PR para corregirlas
+
+### Warnings de Seguridad
+
+    -> Si nos estamos olvidando de llamar a algún filtrado por tenant
+    -> En el código podemos tener alguna especie de advertencia o configurar algo
+    -> Importante porque con definición lógica por tenant es importante que esa división lógica la puedan atajar
+    -> Si permiten que un usuario de un tenant pueda acceder a otro, tienen problema
+
+### Herramientas de Seguridad
+
+    -> Herramientas para detectar vulnerabilidades:
+        -> Inyección SQL
+        -> Negación de servicio
+        -> Cross-site scripting
+    -> Con estas herramientas pueden darle "bomba" a su servicio para que detecte vulnerabilidades
+    -> Inyección SQL: usando Sequelize que es un ORM ya previene muchas de estas inyecciones
+    -> Buena estrategia: tener modelos de entrada y modelos de salida
+    -> Cross-site scripting: pueden guardar en la base de datos un script de JavaScript que cuando se ejecuta muestra alguna acción
+    -> Ejemplo común: pop-up que dice "vuelve a crear tu contraseña, tu sesión acabó" y envía esa contraseña a un lugar malicioso
+
+### Funcionalidades Visibles para el Usuario
+
+    -> Multifactor authentication o MFA
+    -> En el caso de dos factores: pone una contraseña y además tiene que poner un código para poder ingresar
+    -> Tres factores:
+        -> Primero la parte de posesión (persona tiene que tener dispositivo)
+        -> Algo que tiene que saber (contraseña)
+        -> Algo que compruebe que es él (huella digital)
+    -> Google tiene tema de posesión: tienen que poseer dispositivo para darle click
+    -> Van a recibir un mensaje físico a su dispositivo de confianza
+    -> Es una segunda autenticación que siempre los obliga a hacer una interacción física
+    -> Esto le da mucha seguridad al usuario
+    -> Ver sesiones de auditoría de inicio de sesión
+    -> WhatsApp les permite ver todas las sesiones iniciadas y desloguearlas
+    -> Forzar actualizaciones: aplicación desactualizada te obliga a actualizar
+    -> Tener auditoría de los cambios
+    -> Configurar backups automáticos de la base de datos
+    -> RDS permite configurar estos backups: tener tres backups, cuatro backups
+    -> Si detectan una vulnerabilidad, pueden descargar backups y volver a levantar toda su base
+
+### Seguridad Web Top
+
+    -> Pueden chequear hasta si tienen bloqueo de DDoS
+    -> Hay páginas que muestran el DDoS y quiénes la bloquearon
+    -> Para que directamente bloqueen IPs que intentan hacer ataques de negación de servicio
+    -> Es normal ver que una cantidad de usuarios random intentan acceder
+
+### Seguridad en AWS
+
+    -> VPN (Virtual Private Network)
+    -> Pueden configurar AWS VPN para que con una VPN puedan acceder de su computadora a AWS
+    -> Supongan que tienen una base de datos en producción
+    -> Hay muchas veces que uno tiene que ir a la base de datos para modificar algo porque algo no salió lindo
+    -> Tienen que ir a resetear
+    -> Imaginense un flujo que tiene que volver a procesarse o que ustedes lo determinaron en estado fallido
+    -> Quieren resetear y ahí recién enviar el evento, encolarlo de nuevo
+    -> También puede ser práctico cambiar el correo electrónico del usuario directamente en la base de datos mientras desarrollan la funcionalidad
+    -> La VPN les garantiza seguridad
+    -> Tienen una VPN que es privada que trabaja todo en conjunto dentro del ambiente de AWS
+    -> También es mucho más rápido
+    -> Cuando deployan, si es más rápido la base de datos
+    -> Cuando prueban todo local, la conexión de redes es lenta y más si van por una VPN
+    -> Sin embargo, cuando deployan, esas consultas en la base de datos son mucho más rápidas porque está todo desplegado en el mismo ambiente de AWS
+
+### ACLs (Access Control Lists)
+
+    -> Son control lists
+    -> Capa de seguridad adicional en VPN que actúa como firewall para diferentes subnets de la VPC
+    -> Actúa antes de llegar a la VPC
+    -> Security Groups:
+        -> Son grupos de seguridad
+        -> Actúan a nivel de instancia, no de subnet
+        -> Al igual que ACL, como se levanta una instancia de una VPC, se lo puede asignar hasta cinco security groups
+        -> Actúa a nivel de instancia
+        -> ACL es como más bloqueo de subnet en cuanto a puertos
+    -> Comparativa Security Group vs ACL:
+        -> Security Group: funciona con reglas Allow, tiene estado (tráfico de retorno es permitido automáticamente)
+        -> ACL: no tiene estado (tráfico de retorno tiene que ser permitido por reglas)
+        -> Security Group: se evalúan todas las reglas antes de permitir el tráfico
+        -> ACL: se procesa las reglas de a una en orden antes de permitir el tráfico
+        -> Security Group: aplica a una instancia (si está asociado automáticamente aplica toda la instancia)
+        -> ACL: automáticamente aplica toda la instancia de la subnet a la que está asociada
+    -> Para hacer un resumen: Security Group es normalmente un grupo de seguridad que quieren tener para que cierta instancia pueda acceder a ese grupo
+    -> ACL es más a nivel de todo lo que es la subnet
+    -> Este tipo de cosas junto con la VPN les va a permitir cerrar la entrada a su base de datos
+    -> Hoy en día se conectaban a la base de datos por terminal
+    -> Si quieren tener acceso a la base de datos o a la instancia local, necesitan agregar una capa más de seguridad y poner una VPN
+    -> Esto permite que directamente ya no expongamos una base de datos como pública y cualquiera pueda acceder
+
+### S3: URLs Pre-firmadas
+
+    -> Con AWS S3 pueden manejar URLs pre-firmadas
+    -> Para chequear: la URL pre-firmada lo único que hace es generar/solicitar a S3
+    -> Una vez que el usuario arrastra el archivo y lo va a subir, ya estamos seguros de que lo va a subir a nivel de S3
+    -> Podemos pedirle a nuestro backend generar un link seguro para subir ese documento, archivo, video, imagen
+    -> Como nosotros el usuario ya arrastró y seleccionó el archivo a subir, sabemos del archivo: nombre, tipo y tamaño
+    -> Con eso podemos pedirle URL pre-firmada para generar un link para subir el archivo que va a tener X largo y va a ser PDF o JPG
+    -> Ese link dura 10 minutos para subirlo (o 5 minutos)
+    -> Ventajas:
+        -> No estamos teniendo acceso a todo nuestro bucket, sino está accediendo únicamente a esa carpeta
+        -> Solo puede subir ese archivo
+        -> Lo va a poder subir una sola vez (una vez que se suba completamente se terminó)
+        -> Es super seguro porque están permitiendo un link para subir al bucket en ese bucket y ese link seguro solo permite subir a ese archivo en esa dirección en particular
+    -> Qué tiene de malo la URL pre-firmada:
+        -> Es una URL
+        -> Puede mostrar cómo son sus rutas dentro de S3
+        -> Pero si tienen S3 privado y no lo permiten acceder, pueden configurar
+        -> Hay dos configuraciones: privado y público
+        -> Si lo tienen privado, la única manera de acceder es mediante URL pre-firmada
+    -> Para descargar documentos privados: crear un link temporal
+    -> Link temporal: cada vez que quieren descargar un documento, le piden link temporal que da una firma y esa firma permite acceder a ese documento por X cantidad de tiempo
+    -> Problema del link temporal: cualquiera la puede ver cualquiera por un determinado tiempo
+    -> Tiempo: demora un poco más en creación
+    -> Imaginense que quieren exponer en su frontend imágenes que guardan en S3
+    -> Cada vez que van a cargar, tienen que pedir que genere un link temporal
+    -> Se complica un poco
+
+### CloudFront
+
+    -> Mecanismo alternativo
+    -> Si tienen un bucket de S3 privado y quieren dejar ciertos archivos públicos porque quieren que acceda la gente
+    -> Pueden usar CloudFront
+    -> Supongan que tienen un cliente que sube documentos y ustedes esos documentos después se los tienen que pasar a otra plataforma para que sean visibles
+    -> Su frontend tiene que mostrar imágenes
+    -> Con link temporal demora cargar porque hace un link temporal
+    -> La manera de hacerlo es con CloudFront
+    -> Supongan que tienen el logo: es genial cargarlo en S3 porque necesitan que todo el mundo lo vea
+    -> Pero no pueden agarrar y esperar que el backend genere un link temporal para que pueda renderizar el logo en el frontend
+    -> Lo que se suele utilizar: se utiliza CloudFront y se dice que esta carpeta o este archivo (normalmente vas en folder) es público
+    -> Nadie va a poder subir porque CloudFront solo permite método GET
+    -> Van a poder acceder públicamente a todo ese repositorio
+    -> CloudFront maneja el cache
+    -> Accedes mediante el link de CloudFront, no el link de S3 ni el link temporario de S3
+    -> CloudFront bloquea cualquier acción que no sea un GET
+    -> Si el usuario intenta subir o intenta hacer un POST, va a fallar
+    -> Además pueden agregarle un header para que cheque el header de la request en CloudFront
+    -> Determinar los orígenes: poner su plataforma y decir que solo se haga en plataforma
+    -> Cuando hacen click derecho y lo abren en otra pestaña, no se carga
+    -> Esto es una solución para evitar tener que generar un link temporal
+    -> Link temporal es clave cuando tienen documentos privados del usuario que quieren ver
+    -> Pero si quieren guardar imágenes como logos o portadas (puede ser que cada tenant quiera tener una portada distinta)
+    -> Si lo quieren hacer dinámico, la manera de hacerlo es con CloudFront
+    -> Una de las maneras de hacerlo
+    -> No pierden seguridad: no tienen que poner el bucket público
+    -> Para lo que es este obligatorio, lo más sano es poner el bucket público o crear un bucket público donde guarden esas imágenes
+
+## Inicio del Tema: Microservicios
+
+### Contexto del Curso
+
+    -> Microservicios es el tema principal de la segunda parte del curso
+    -> Hasta ahora venimos hablando de muchas cosas de la nube
+    -> Mucha configuración, muchos principios
+    -> Los 12 factores que están practicando
+    -> Clase de AWS SQS: cómo manejar la cola
+    -> Vimos varios patrones de comunicación asíncrona buenos para resolver problemas y comunicar a los usuarios
+    -> Ahora nos orientamos en microservicios
+
+### ¿Qué es Arquitectura de Microservicios?
+
+    -> Estilo arquitectónico para desarrollar una aplicación con una serie de pequeños servicios
+    -> Cada uno ejecutándose de forma autónoma y comunicándose entre sí
+
+### ¿Cuándo Surge el Problema de Microservicios?
+
+    -> Es muy complejo con un grupo de tres personas o equipo de pocas personas implementar un ambiente de microservicios con 10 servicios
+    -> No es viable con un grupo de tres
+    -> Es complicado porque cada microservicio va a ser un mundo
+    -> Lo que vamos a simular: qué pasaría si cómo se administra un equipo grande
+    -> Qué pasaría con equipo grande como MercadoLibre, PedidosYa
+    -> Aplicación grande que se enfrenta a este problema de escalar
+    -> Normalmente no necesitan llegar a microservicios dividiendo en servicios como en arquitectura orientada a servicios
+    -> Por eso es difícil decir "llegamos a microservicios porque pensé en arquitectura"
+    -> No, ustedes empezaron a decir "tengo este servicio que necesito que haga una cosita y no quiero tenerlo en el mismo lugar"
+    -> Tengo esta base de datos que separo estas cosas para la búsqueda
+    -> Entonces pusieron algunas pequeñas cosas y hasta ahí lo dejaron
+    -> Ahora van a ver que llevan una cantidad de cosas
+    -> La idea es que entiendan cómo funciona eso
+    -> También se lleven experiencia de cómo funciona un equipo grande
+
+### ¿Por Qué Surge la Necesidad de Microservicios?
+
+    -> La arquitectura en microservicios: ustedes ahora van a hacer múltiples microservicios
+    -> Pero lo normal o lo estándar es que un equipo se encargue de uno o dos microservicios
+    -> Otro equipo se encargue de otro
+    -> Si surgió la necesidad de separar tanto y no podemos tener todo en una sola aplicación, es porque somos muy grandes
+    -> No da para que un solo equipo se encargue de todos los microservicios
+    -> Ustedes lo van a hacer aquí y van a simular: tienen que pensar "somos una aplicación re grande y tuvimos que escalar"
+
+### Características Principales
+
+    -> Cada microservicio va a tener una única base de datos
+    -> La comunicación entre servicios para necesitar información va a ser:
+        -> Solicitándose esa información o procesarla después por cola de mensaje
+        -> Si necesitamos la información right now: utilizar protocolo HTTP
+    -> Vean que cambia esto
+    -> Cada microservicio tiene una base de datos, una única base de datos
+    -> Ejemplo de Netflix: tienen una cantidad de microservicios en una cantidad de instancias
+    -> Fíjense la cantidad de horas de streaming, la cantidad de métricas para que se encargue un equipo chico de ese microservicio en particular
+    -> Pueden encargarse de varios
+    -> Puede ser que un equipo se encargue de dos o tres microservicios relacionados
+    -> Estamos hablando de una necesidad grande
+    -> Plataforma que tiene muchas funcionalidades que tiene la necesidad de ir escalando
+    -> Tenemos que ir trabajando de a mucho
+    -> Tenemos mucho flujo de datos de requests de consultas
+    -> Tenemos que tener personas especializadas en cada uno de los problemas que tenemos
+    -> Ejemplo Netflix:
+        -> Puede existir un microservicio únicamente que se encarga del streaming
+        -> Otro microservicio que se encarga únicamente de las búsquedas
+        -> Otro microservicio que se encarga únicamente de las recomendaciones
+    -> Por qué tuvimos que hacer eso: porque ya no basta, no podemos escalar todo juntos
+    -> Cuando un servicio empieza a tener que escalar, no podemos tener que agarrar y escalar los otros 10
+    -> En el monolito, cuando tienen ese monolito y tenían un problema, lo que hacían era duplicar la instancia
+    -> Cual es el problema: duplico una cantidad de cosas que no necesito
+    -> Una de las principales motivos de pasar a microservicios es que ya cada sección empieza a tener distintas necesidades de recursos y escalabilidad
+    -> Puede ser que obviamente que streaming requiera ciertos recursos, cierta escalabilidad, cierta cantidad de servicios trabajando en paralelo
+    -> Y puede ser que yo tenga solo una instancia, un servicio para lo que es mi lista de favoritos
+    -> Ya no tengo que tener flor de escalabilidad
+    -> No tengo que tener máquinas de 64 gigs de RAM, 10 computadoras para solo eso
+    -> Pero capaz que para la parte de streaming sí lo necesito
+    -> Entonces yo no puedo escalar toda la vez junto
+
+### Ejemplo Visual: Netflix
+
+    -> Estas son las conexiones que tenía Netflix en un momento de microservicios
+    -> Piensa que cada puntito era microservicio o una instancia
+    -> Fíjense que todas las conexiones: cómo se conectan y consultan entre todos los microservicios
+    -> Una plataforma tan grande que necesita tener tanto servicio que necesita tener tanta comunicación
+    -> Ya no podemos darnos el lujo de no cumplir con estándares que nos garanticen calidad y nivel de servicio
+
+### Características de los Microservicios
+
+    -> Pocos acoplados con interfaces bien definidas
+    -> De nuevo, piensa que cada microservicio es un equipo
+    -> Puede ser directamente que apenas se conozcan
+    -> Entonces no tienen que estar acoplados
+    -> La idea del microservicio es acoplarnos lo menos posible a otros microservicios
+    -> Como vieron acá, no es posible porque se van a comunicar entre sí
+    -> Pero la idea es que sean poco acoplados con interfaces bien definidas
+    -> Que tengan interfaces bien definidas que nos permitan comunicarnos entre microservicios
+    -> Deploy independientes: vamos a tener que manejar mucho versionado en los microservicios
+    -> Un servicio nos está contactando y utilizando
+    -> No podemos agarrar y obligar a que todos se actualicen
+    -> Tenemos que manejar tiempos: no sea algo de seguridad y tenemos que hacerlo ya
+    -> Nosotros no podemos
+    -> Piensa que cada microservicio puede tener su propio deploy y que el otro microservicio lo consuma cuando pueda
+    -> Cuántas veces han visto en plataformas que de repente se actualizan en alguna sección algo y en alguna otra no
+    -> Ejemplo: YouTube cuando sacó los "no me gusta"
+    -> Todavía lo seguías viendo en algunas versiones
+    -> Algunas aplicaciones lo pueden hacer porque son una de las tantas requests que hacen
+    -> Entonces no lo deprecaron
+    -> Lo actualizaron algunas secciones y algunas aplicaciones no
+    -> YouTube busca mantener el servicio con ciertas aplicaciones hasta cierto momento del tiempo
+    -> En algún momento la deprecará
+    -> Es importante que podamos manejar versiones y tenerlos independientes
+    -> Acá es donde Twelve-Factor empieza a tomar mucho sentido
+    -> Más que nada la parte de integración continua
+    -> Producto, no proyecto:
+        -> De nuevo, no es un proyecto particular
+        -> El proyecto en un momento puede tener fin
+        -> Cada microservicio debería ser un producto en particular de nuestra aplicación
+        -> Supongamos un ejemplo: mantener la auditoría puede ser un producto que nosotros gestionamos
+        -> El proyecto tiene principio y fin
+        -> Un producto va a estar a lo largo del tiempo
+        -> Ejemplos de productos en microservicios del obligatorio:
+            -> La parte de auditoría
+            -> Las notificaciones
+            -> Las empresas: todo lo relacionado a empresas es un producto en particular
+        -> Ejemplo MercadoLibre: pueden tener un microservicio únicamente de calificaciones
+        -> Ejemplo PedidosYa: pueden tener un producto de calificaciones, pueden tener un microservicio exclusivo que va a tener los endpoints de ayuda (endpoints de soporte)
+        -> Puede ser que farmacia sea un producto y lo separan en un microservicio particular
+    -> Diseñados para la falla y para ser reemplazados:
+        -> Lo ideal sería que si un microservicio falla y tenemos base de datos separada
+        -> Pero si el microservicio falla, debería poder desplegar otro y seguir trabajando sin problemas
+        -> No debería mantener estado
+        -> Además debería poder escalarlos
+        -> Tienen que ser diseñados para la falla no solo por fallas de ellos, sino por fallas de los microservicios que consumen
+        -> Ejemplo: si tengo el proceso de compra y en algún momento necesito ir a chequear el usuario
+        -> Si el microservicio usuario no me responde porque se cayó, yo no debería responderle que la compra no se puede hacer
+        -> Hay varias estrategias
+        -> Puedo hacer la compra igual sin el usuario
+        -> Una de las razones es responderle al cliente: no tengo el usuario o sucedió algún problema
+        -> Pero no es que se apagó ese microservicio, funcionaste donde tenía que funcionar
+        -> Hasta donde se le permitía funcionar, pero no se cayó
+        -> No es que nos está devolviendo un quinientos, sino que estamos manejando ese error y estamos manejando la falla del otro microservicio
+        -> Es importante: no es que porque un microservicio se caiga, el otro servicio se cae
+        -> Si un microservicio se cae, el otro microservicio sigue respondiendo con la información que él tiene
+        -> Vamos a ver distintas estrategias de eso
+        -> Si hacemos una composición y preguntamos, necesitamos consultar a varios microservicios para obtener información
+        -> Empresa, usuarios, calificaciones: podemos consultar a varios que tienen base de datos
+        -> Podemos hacer una composición de esa información
+        -> Una de las cosas recomendadas cuando se hace una composición: qué pasa si algún microservicio no me responde
+        -> Podemos intentar por intento: podemos hacer mecanismo re-intento
+        -> Pero también directamente puede ser que nunca responda
+        -> Entonces capaz que nosotros podemos con la otra información darla y brindar una experiencia
+        -> Decir "esta es la información que tenemos, el resto está cargando, intente de nuevo"
+        -> A lo que voy es al desacoplarnos en microservicios
+        -> Ya no es que falla uno falla todo
+        -> Su monolito ya está: no anda su obligación
+        -> Falló microservicio, pero todo el resto tiene que seguir funcionando con lo que pueda funcionar que no dependa de ese servicio
+    -> Organizados alrededor de capacidades de negocio
+    -> Equipos multidisciplinarios y autónomos:
+        -> Antes en los monolitos cuando crecían mucho, tenían especialistas en frontend, backend y administradores de base de datos
+        -> Si tuvieron un monolito muy grande, la base de datos la teníamos que separar en esas tres capas que tenían
+        -> No pueden separar en equipos especialistas como se separaba
+        -> Pronto va querer administrador de base de datos
+        -> Podían tener devops, tester
+        -> Sin embargo, cuando pasamos al ambiente de microservicios
+        -> Microservicio ofrece una funcionalidad en particular, un producto en particular
+        -> Para cada producto necesitamos tener un equipo multidisciplinario
+        -> Necesitamos tener gente que sepa manejar la parte de backend, que sepa manejar las base de datos, que sepa manejar el frontend y devops
+
+### SOA vs Microservicios
+
+    -> Opinión 1: microservicios son una forma de SOA con más especificaciones
+    -> SOA y microservicios son diferentes estilos arquitectónicos
+    -> SOA:
+        -> Permite que tenés no solo estable
+        -> Podés tener bases de datos separadas, pero podés usar la misma
+        -> Tenías la API, tenías una especie de API Gateway que es el Enterprise Service Bus
+        -> Después tenías cada servicio por separado, pero que se podían conectar con la misma base de datos
+        -> SOA es más algo parecido a lo que vieron en arquitectura
+    -> Microservicios:
+        -> Separa mucho cada servicio
+        -> Cada producto está desacoplado
+        -> La comunicación es horizontal
+    -> Para mi gusto, ahora se podría decir que es como SOA con más restricciones
+    -> Para mí no es algo totalmente distinto
+    -> A mí me lleva a decir es algo totalmente distinto porque realmente establece un mecanismo distinto
+    -> Si ustedes simplemente están microservicios, para mí no están implementando SOA porque no tienen por qué tener Enterprise Service Bus
+    -> Las conexiones a microservicios no tienen por qué tener una API Gateway
+    -> Normalmente ustedes la mayoría van a ir por hacer una API Gateway o por estilo, pero no tienen por qué
+    -> Sí lo establece más o menos algo parecido pero de nuevo está hablando de un servicio basado en arquitectura basada en servicio
+    -> No está estableciendo SOA
+    -> Puede decir que esta arquitectura está basada en servicio porque está basada en servicio
+    -> Está avanzando en microservicios
+    -> Es más abstracto que lo que establece microservicios con todas las restricciones que tienen los microservicios
+
+### Beneficios de Microservicios
+
+    -> Escalabilidad:
+        -> Una de las principales razones es que necesitamos escalado independiente en cada producto
+        -> Necesita escalar de forma independiente a otro y a distinto ritmo que otro
+    -> Mantenibilidad:
+        -> Cuál sería el pro/contras de la mantenibilidad
+        -> Que tiene distintos repos para cosas distintas
+        -> Es más complicado de mantener
+        -> Pero también a la vez es más fácil de mantener porque tenemos todo bien separado
+        -> Si manejamos un buen control de versiones
+    -> Despliegue:
+        -> Vamos a lograr una independencia donde antes teníamos 100 funcionalidades estaban 100 por ciento acopladas
+        -> Teníamos que tener un equipo que estaba trabajando una cosa y tiene que trabajar en la misma
+        -> Tienen que salir a producción y algunos no
+        -> Ya el mismo trabajar en ambientes es complicado
+        -> Cuando tienen mucha feature y tienen un solo ambiente capaz que algún equipo tiene que ir probando cosas y mandando el ambiente
+        -> Pero algún equipo ya probó esas cosas y tiene que salir
+        -> El codebase es el mismo
+        -> Cuando van a pasar esa rama de desarrollo a master, hay cosas que todavía no están para salir
+        -> Hay estrategias como las feature flags pero tiene un límite
+        -> No podemos llenarnos de if cada vez que vamos a desarrollar y probar
+    -> Seguridad:
+        -> Tenemos un beneficio de que vamos a poder tener todo bastante en un ambiente seguro
+        -> Vamos a ver distintas estrategias para poder atacar esa seguridad también
+        -> Al tener muchos servicios pasan a ser muchos más puntos de entrada
+        -> Sea cual sea la entrada que podemos tener
+    -> Resiliencia ante fallos:
+        -> Está bueno
+        -> Pero tenemos que saber manejarlo
+        -> Nosotros ahora ante un fallo de microservicio vamos a poder estar mejor
+        -> Pero lo que va a suceder frente a ese fallo tenemos que saber manejarlo
+        -> Sino al final pasa a ser un problema
+        -> Nosotros antes se nos caía nuestro monolito y ya teníamos todas las funcionalidades caídas
+        -> Antes se nos caía el monolito y no podíamos hacer recomendaciones
+        -> Ahora se nos cae el módulo de compras y las recomendaciones siguen funcionando
+    -> Observabilidad:
+        -> Pasa a ser un problema, pero también es algo que se puede solucionar
+        -> No vamos a hablar del concepto
+        -> Pero cuando se crean los microservicios está bueno que tengan alguna especie de opcional definición
+        -> Entonces ya todas las configuraciones básicas que tienen que hacer de seguridad o de observabilidad las hacen
+    -> Disponibilidad:
+        -> Si se maneja bien, esto no tiene contras
+        -> Si lo manejan bien con integración continua, deploy continuo, desacoplan los servicios y lo logran manejar
+        -> Esto no tiene contras porque en realidad lo que van a hacer es desacoplar y van a hacer que su interfaz pueda consultar ciertas cosas cuando otros servicios estén caídos o no están respondiendo
+    -> Testing:
+        -> La habilidad se vuelve un poco más complejo
+        -> Piensa en el nivel de lo que es testing
+        -> Cuando trabajaron con Express, imagínense que cada una de esas cosas el frontend ustedes prueban esas cosas está bien
+        -> Pero puede ser que la API tenga opciones
+        -> Entonces el frontend va a ser más o menos lo mismo, lo puede seguir testeando
+        -> Pero a nivel de backend es como que cada equipo va a tener que probarse independiente
+        -> El otro equipo yo voy a tener que configurar, no confiar en lo que me venga a nivel de API
+        -> Voy a confiar en su interfaz bien definida o en la cola de mensaje
+        -> Tengo que confiar en lo que me va a decir
+    -> Performance y Costo de Infraestructura:
+        -> Sin lugar a duda que estamos haciendo esto para escalar y para aumentar las performances además de para prevenir errores
+        -> Naturalmente el costo se va a elevar
+        -> Cuando solo levantamos más infra vamos creciendo todo esto, nuestro costo de trabajo de operar crece
+
+### Consideraciones Adicionales
+
+    -> Recuerden que tienen hasta jueves para subir el video
+    -> Recuerden que la actividad es el lunes que viene (lunes próximo)
+    -> Si quieren venir a clase genial, si quieren ser remoto no hay problema
+    -> Cualquier duda consulta, escriban
+

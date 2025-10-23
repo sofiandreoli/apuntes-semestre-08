@@ -1,0 +1,339 @@
+# Arquitectura de Software: Multi-Tenancy y Seguridad
+
+## Introducción
+
+    -> Consultas sobre el obligatorio antes de empezar clase
+    -> Próxima clase será solo de dudas y consultas
+    -> Tema de hoy: multi-tenancy y después seguridad
+    -> Esto como previo antes de arrancar con microservicios formalmente
+
+## Contexto: Problema de SaaS
+
+### Situación: Queremos Crear un SaaS para Gestión Empresarial
+
+    -> Muy parecido a lo que están haciendo en el obligatorio
+    -> Problema de SaaS (Software as a Service): gestión empresarial donde múltiples clientes usan la misma aplicación
+
+### Dificultades que Pueden Presentarse
+
+    -> Paralelo de errores
+    -> Manejo de roles
+    -> Qué pasa si crece mucho los usuarios o crece mucho las funcionalidades
+    -> Problema cuando viene un cliente específico y quiere una funcionalidad solo para él
+    -> Ejemplo hipotético: Universidad de Montevideo quiere tener chat grupales especiales entre empleados que solo puedan crear los administrativos
+    -> Solo para Universidad de Montevideo, no el resto de clientes
+    -> Cómo lo manejarían en su código hoy en día
+
+### Soluciones Posibles y Sus Problemas
+
+#### Opción 1: Implementar para Todos
+
+    -> Implementan el chat para todos
+    -> Solución rápida: aprovechan que sale para uno, sale para todos
+    -> Pero si fuera algo muy específico (chat con colores específicos de Universidad de Montevideo)
+    -> Qué pasa si otro cliente viene con otra funcionalidad super personalizada
+    -> Empiezan a llenar de código por todos lados
+    -> Se vuelve horrible, se vuelve difícil de mantener
+
+#### Opción 2: Un Frontend por Cliente
+
+    -> Desplegar un frontend por cada cliente específico
+    -> Problema: Ya no vale la pena tener la misma unidad de código para todos los clientes
+    -> Empiezan a diversificar
+    -> Ahora tienen un repositorio para cada cliente
+    -> Empiezan a tener funcionalidades muy justas
+    -> Empiezan a desplegar el frontend y también la base de datos
+    -> Tienen lógica, base de datos, archivos por separado para cada cliente
+    -> Problema: cuando viene otro cliente que quiere algo específico, hay que desplegar recursos solo para el que lo pidió
+    -> Ya no es la misma base de código, sino que hay que tener un código para cada cliente
+    -> Más allá que tienen una sus softwares a service
+
+#### Problema Escalabilidad con Personalización
+
+    -> Si llega el día que no pueden salir del monolito, qué pasa
+    -> Opciones:
+        -> Brindar para todo el mundo aunque no lo pidieron todos
+        -> En su código poner 500 ifs (si es el cliente, si es el id)
+    -> Si empiezan a personalizar mucho para un cliente, su código no se vuelve escalable
+    -> Van a tener que siempre preguntar si es este si el otro
+
+## Concepto de Tenant (Multi-Tenancy)
+
+### Definición
+
+    -> Modelo Software as a Service: cada cliente alquila nuestro software convirtiéndose en un inquilino (tenant)
+    -> Cada compañía que entra a su software a administrar compañías es un tenant
+    -> Hasta ahora suena todo muy lindo: su obligatorio va a hacer esto también
+    -> Todos los clientes tienen las mismas funcionalidades
+    -> Los clientes no tienen requerimientos distintos en cuanto a performance distintos
+
+### Requerimientos Específicos de Clientes
+
+    -> Ejemplo: cliente que paga el estado quiere tener su propia base de datos
+    -> Quiere que si están usando por otro lado, a él no le afecte
+    -> Podemos tener estos tenants que a cambio de una renta, cada tenant recibe acceso a esta aplicación software service y a sus datos almacenados en ella
+
+### Multi-Tenancy
+
+    -> Se refiere a una arquitectura donde el software puede servir múltiples clientes
+    -> Cada cliente tiene su set propio de datos y está aislado
+    -> Ya sea lógicamente o físicamente
+    -> Para el obligatorio actual y el que viene: no van a tener software exclusivo ni van a tener que desplegar software exclusivo para varios tenants
+    -> Van a ser todo multi-tenancy pero con la misma división de código
+    -> Van a dividir lógicamente, no físicamente
+    -> Se llama "tenant" porque cada inquilino es un tenant
+    -> Para este obligatorio y el que viene: van a tener división lógica
+    -> Con que lo están manejando hoy en día tienen un id de la empresa
+    -> Lo esparcen por todo el lado en la tabla
+    -> Cuando consultan y traen los usuarios, pero que sean de esta compañía
+    -> La división lógica va a trasladarse para microservicios
+    -> No van a tener que desplegar su software para un cliente diferente
+    -> Pero tienen que tener en cuenta que suele suceder eso a veces
+
+## Modelos de Tenancy en Base de Datos
+
+### Single Tenancy
+
+    -> Cada base de datos guarda datos de un solo tenant
+    -> Normalmente puede estar de dos formas:
+
+#### Single Tenancy: Comparte Aplicación o No
+
+    -> Opción 1: Comparte la aplicación
+        -> Para cada tenant tenemos su repositorio o su propia instancia
+        -> Todos los servicios los tenemos por separados y eso consume su base de datos
+        -> Puede ser que sea el mismo código o puede ser que no
+        -> Se abre la posibilidad que no: puede ser que el usuario uno quiera tener cierto código
+        -> Personalizamos las funcionalidades, los colores
+    -> Opción 2: Imagen que muestra todos separados en la aplicación y la base de datos
+        -> Tenemos a todos los servicios por separados y eso consume su base de datos
+
+#### Ventajas de Single Tenancy
+
+    -> Alto aislamiento de datos: datos físicamente separados
+    -> Alto rendimiento: no hay problema de contención de recursos
+    -> Alto grado de personalización: cada cliente puede tener funcionalidades distintas
+    -> Seguridad fuerte por el aislamiento
+
+#### Desventajas de Single Tenancy
+
+    -> Mayor costo de mantenimiento por cliente
+    -> Mayor complejidad operativa
+    -> Mayor uso de recursos
+    -> Complejidad para implementar el signup (registro de nuevos clientes)
+
+#### Caso Común de Single Tenancy
+
+    -> A veces pueden desarrollar una aplicación, pueden desarrollar MVP
+    -> Se dan cuenta que eso se lo pueden vender porque de repente una compañía quiere exclusividad
+    -> Cuando quieren venderlo se transforman en una especie de software as a service pero sin tema
+    -> Desarrollan la lógica y desarrollan un producto
+    -> Viene alguien y dice: quiero tenerlo para mí, te pago una suscripción
+    -> No desarrollaste tu código con multi-tenancy, entonces viene por ese lado pasando la vida
+    -> Lo que sucede a veces: de repente tenés un cliente que es un producto acá en Uruguay
+    -> Pasa mucho porque tenés que la mayoría son para SaaS
+    -> Muchas veces hay clientes que levantan una ronda de inversión y vienen acá a contratar desarrolladores para levantar su producto entonces particular
+    -> Ejemplo real: tuvieron un cliente que vino y dijo "además de todo esto que tienen desarrollado para el manejo de X, lo quiero tener para mí, quiero tener el software para mí solo"
+    -> Ahí te tienes que poner a habilitar todo para él
+    -> Le copias y le pegas todo
+    -> Como no tenés la lógica, después de que pasó eso, empezaron a desarrollar la lógica para que no tuvieran que pasar todo ese tema de infraestructura
+    -> Cuando vino otro cliente así pasaba que pedía cosas muy justas
+    -> Terminan poniendo if por todos lados en el código y se vuelve horrible, se vuelve difícil de mantener
+    -> Pero bueno, es un poco la anécdota pero pasa bastante
+    -> Cuando arrancás con MVP, de repente cuando viene tu primer cliente y lo asegura, capaz que siempre se escucha que viene de repente un cliente fuerte que tiene que hacerlo los gustos
+    -> Empezás a poner if y es una cachada
+    -> A veces es más sencillo levantar una instancia para él solo
+
+### Multi-Tenancy: Base de Datos por Tenant
+
+    -> Capacidad base de datos por tenant
+    -> Si pensamos en un monolito, no puede ser algo tan complejo
+    -> Si tienen su aplicación que tiene su parte de pago y los connection strings tienen que estar fijos con variable de entorno
+    -> Tienen en su base de datos en una base de datos por separado
+    -> Capaz que lo que pueden hacer es programar un código que cuando viene un cliente nuevo, levantan todo eso en RDS
+    -> Si es un monolito capaz que no es tan difícil
+    -> Ahora, si ya tienen muchas bases de datos, se complica quizá poco
+
+#### Implementación
+
+    -> En la aplicación van a tener que tener la división lógica
+    -> Pero cuando van a buscar la información, la base de datos no tiene división
+    -> Si es solo de ese tenant
+    -> En cuanto a la implementación: vas a tener que recibir o chequear obviamente cuando te logueas
+    -> Capaz que si tenés que tener algún registro en común para saber quiénes son esos clientes
+    -> Porque tienes que tener una división lógica en la aplicación
+    -> Pero después la mayor parte de la información está aislada en una base de datos única
+    -> Tiene que tener una base de datos donde tengas todos los clientes
+    -> Una vez que haces ese login, chequeo ahí
+    -> Lo que haces es cambiar el acceso: vas a cambiar la base de datos
+    -> Los connection strings ya no están en una variable de entorno, sino están en una base de datos por separado que tiene toda la información
+    -> Es un poquito más sencillo de implementar que el modelo anterior, pero apenas un poquito más sencillo
+    -> Si pensamos un monolito capaz que de repente solo tener que desplegar la instancia RDS no es complicado
+    -> Ahora, si ya empezamos a decir bueno, tal pero cuando hablamos de base de datos, hablamos de servicio
+    -> Entonces no solo puede ser base de datos de datos, sino que puede ser de archivos también
+    -> Si se empiezan a tener bastante cosas, se puede complicar de nuevo
+
+#### Desventajas
+
+    -> El costo es en mantener estos back services por cliente, pero la aplicación sería la misma para todo
+    -> De nuevo, volvemos a tener algún problema
+    -> Es posible mal utilización de los recursos de la base de datos
+    -> Puede ser que estemos mal utilizando el recurso porque como tenemos la lógica de que cada tenant tiene su propia base de datos
+    -> Cuando viene de repente hay dos clientes que perfectamente podrían compartir una instancia de base de datos y no tenemos que gastar recursos innecesariamente
+
+### Multi-Tenancy: Base de Datos Compartida (Lo que Ustedes Van a Desarrollar)
+
+    -> Esto lo van a hacer tanto para el obligatorio uno como para el dos
+    -> Esto no tiene nada que hablar con microservicios
+    -> Estamos hablando de la aplicación como el conjunto de cosas que tiene y de base de datos
+    -> Estamos hablando de todo lo que tienen como service donde todo va a hacer sus datos, archivos, todo lo que tengan ahí
+    -> Es simple desarrollar: implica que toda consulta filtre por tenant
+    -> Cuando reciben un cliente, dicen bueno, como que te logueaste como la empresa perfecto
+    -> Cuando vamos a tener los usuarios, las empresas, los productos: siempre tienen que mandar bien, pero esto de la empresa, todo de la empresa
+    -> Tienen que tener siempre un campo de la empresa en todas las tablas que representan datos de negocio
+    -> Cuando buscan datos de un negocio específico, tienen que filtrar por empresa siempre
+    -> El principal problema: si se olvidan de filtrar por tenant en una consulta, pueden devolver información de otros clientes
+    -> Validaciones en el backend: deben tener cuidado cuando hacen las consultas
+    -> No deben confiar en el frontend
+    -> Siempre deben filtrar por tenant en el backend
+    -> Ejemplo práctico: cuando hacen login, reciben el token
+    -> No sería correcto o no es del todo seguro asumir que ya con el token puedes hacer cualquier acción
+    -> Sino directamente preguntar este token a qué empresa, a qué cliente, a qué tenant está asociado
+    -> No es que confío ciegamente lo que viene en el token
+    -> No solo la información, sino fijarte este usuario qué permisos tiene
+    -> Algo que pasa muchas veces: tienen usuarios que tienen permiso sobre algunas cosas o son dueños de algunas cosas
+    -> Empiezan a hacer, por ejemplo, la consulta dice bueno, yo me logueo como usuario
+    -> Entonces, como usuario, después puedo modificar mis películas
+    -> Pero cuando modifican las películas, no verifican que el usuario sea el dueño de esas películas
+    -> Entonces dejan modificar cualquier película que no sea suya
+    -> Porque confían que es un usuario
+    -> Entonces no tiene que ser un usuario y que esas películas son de tu propiedad
+    -> Esas validaciones tienen que estar en el backend
+    -> Recordemos que el backend es algo robusto que no es fácil de cambiar
+    -> En cambio, el frontend ustedes pueden no mañana poner un Postman (manera muy fácil de saquearlos entre comillas)
+    -> Cómo se puede prevenir también eso: validando el dominio
+    -> No deberían permitir requests de cualquier lugar
+    -> Deberían chequear que el origen sea su dominio
+    -> Y eso igual se puede emular
+    -> Es una de las ventajas: no decir bueno, mi dominio X, que la request venga de ese dominio
+
+## Multi-Tenancy y Personalización Visual
+
+### Personalización por Dominio
+
+    -> Para esta parte de multi-tenancy, cuando hablamos de los colores y de la lógica
+    -> Podrían levantar un dominio y asociar el tema de la aplicación (logos y todo) a un dominio
+    -> Ejemplo: perritos.com y después gatito.com
+    -> Cuando en la base de datos tenían perrito.com, tenía todo un tema
+    -> Cuando el backend le llegaba una request, automáticamente se daba cuenta que era de ese dominio
+    -> Te devolvía todo el tema de la aplicación en un JSON y todos los logos
+    -> Entonces ya el frontend te cargaba todo de ese tema
+    -> Pueden hacer una customización genérica y brindar una experiencia que parezca muy personalizada con toda una parte de lógica
+    -> Decir bueno, el dominio que viene de este lado, yo te cargo todo el tema, te cargo todos los logos
+    -> Más allá que las funcionalidades son casi la misma para todo
+    -> Están brindando con una aplicación súper personalizada
+    -> Todos los colores de tu empresa, todos los logos
+    -> En realidad por detrás se están dando cuenta que el dominio viene de ese lado
+    -> Y si no es un dominio válido directamente, no lo permiten
+
+## Seguridad: Buenas Prácticas
+
+### No Almacenar Tarjetas de Crédito en Base de Datos
+
+    -> Hoy en día directamente con todos los proveedores que hay sería un problemón
+    -> Encargarnos esa responsabilidad es más complejo
+    -> Recomendación: intenten usar algún proveedor de identidad
+    -> Ejemplo: Cognito que directamente nos soluciona todo el tema de integración
+    -> Login, logout, nos desligamos de eso, lo hace todo
+    -> Es un problema básico que hasta les brinda interfaz
+    -> Google lo tiene, AWS tiene algo similar
+    -> Es algo que están muy demás
+    -> Cualquier proyecto que tengan van a tener un login, van a tener que hacer un registro
+    -> Van a tener que hacer el clásico recuperar contraseña
+    -> Van a querer a veces tener la autenticación con Google
+    -> Cognito no solo te lo maneja, sino que se encarga de toda esa parte de seguridad
+    -> Si no les queda otra que guardar la contraseña, bueno, vamos a ver recomendaciones para encriptar los datos en la base de datos
+
+### Autenticación
+
+    -> Usar protocolo basado en cookies en lugar de recibir la contraseña del usuario en cada request
+    -> Cuál es la ventaja de las cookies y la desventaja que tienen las cookies
+    -> La ventaja de las cookies es que viajan en la request y no son accesibles mediante JavaScript
+    -> Entonces no se puede automatizar script en el frontend para que te roben los tokens
+    -> Tienen que entrar a un navegador específico
+    -> Tenés que entrar la sesión y vas
+    -> Una vez que te logueas, las cookies viajan automáticamente
+    -> La desventaja de las cookies: las cookies están asociadas a un dominio específico
+    -> Si tienen múltiples aplicaciones frontend, tienen que configurar para que compartan esas cookies
+    -> Ya de por sí las cookies están asociadas a un dominio
+    -> Entonces si tienen múltiples aplicaciones frontend, tienen que configurar para que compartan esas cookies
+
+### JWT Tokens
+
+    -> Hoy en día se usa mucho JWT
+    -> Más allá que las cookies tienen ventajas, JWT tiene ventajas
+    -> Con JWT no tenés que guardar nada en la base de datos
+    -> El token lleva toda la información
+    -> Son ventajas que tienen JWT sobre las cookies
+    -> Pero también tienen desventajas: si querés invalidar un token, cómo hacés
+    -> Las cookies: guardás algo en la base de datos o en memoria
+    -> Cuando querés invalidar, lo borrás y ya está
+    -> Con JWT si querés invalidar, qué hacés
+    -> Tienen que tener una lista negra (blacklist) de tokens
+    -> Cada vez que llega un request, tienen que chequear si ese token está en la blacklist
+    -> Eso agrega complejidad
+    -> Eso es una de las desventajas de JWT
+
+### Validaciones en el Backend
+
+    -> No confiar en el frontend
+    -> Ejemplo de caso donde podría ser problemático: desarrollaron un flujo donde tenían muchos pasos
+    -> Usuario tenía que completar 60 campos y cada tanto se actualizaba o cambiaba alguno
+    -> Decidieron: no vamos a hacer todas esas validaciones y tener un esquema fijo rígido
+    -> Sino que vamos a guardar todo como viene el frontend y que el frontend haga todas las validaciones
+    -> Si mañana querían agregar un nuevo campo, iban al frontend, modificaban un JSON que tenían en el frontend
+    -> Automáticamente en ese JSON ponían el tipo de campo y el frontend automáticamente desplegaba ese campo
+    -> Ese campo se guardaba en el bucket sin tener que tocar el backend
+    -> Eso está bueno para campos dinámicos
+    -> Pero el problema que puede presentar: si habría que validar, pueden guardar cualquier cosa
+    -> Eso está genial para campo dinámico
+
+### Seguridad de Variables de Entorno
+
+    -> Recuerden que su código de mañana puede ver ir cualquier desarrollador y clonarlo
+    -> No pueden tener ahí los accesos a producción mismo porque a veces pasan
+    -> Un equipo que ciertos accesos no lo pueden tener público
+    -> Más hoy, el día que GitHub: las cosas que están haciendo es que los repositorios se están usando para alimentar también la inteligencia artificial
+    -> Entonces no pueden dejar configurada esa variable
+
+### Validaciones de Dominio
+
+    -> Pueden prevenir requests no autorizadas validando el dominio
+    -> Deberían chequear que el origen sea su dominio
+    -> Eso igual se puede emular
+    -> Es una de las ventajas: no decir bueno, mi dominio X, que la request venga de ese dominio
+
+## Datos de Prueba para el Obligatorio
+
+    -> Requerimiento de letra: pide pagar públicos, pide datos de prueba
+    -> Datos que pide la letra: una empresa y dos clientes (dos usuarios) y además de la posición de cola
+    -> Tienen que levantar un script para cargar esos datos
+    -> Pueden hacerlo con un script
+    -> Pueden hacerlo con una especie de inicialización con SQL
+    -> Pueden hacerlo con una migración que levanta a datos
+    -> Donde se crean datos de ejemplo
+    -> Pueden poner un .env.test y poner las variables pass
+    -> Ejemplo: 10 compañías, cada una tenga 10-20 oportunidades
+    -> No nada loco, muy parecido a lo que hicieran en arquitectura
+    -> Tienen que subir una base de datos o sea
+    -> Pueden hacerlo con un script, pueden hacerlo con una especie de inicialización con SQL que registra a todos
+    -> Lo que estaría bueno es que de repente pueden tener o una inicialización con SQL o también pueden tener un script
+    -> Base de datos, una migración que levanta a datos
+    -> Sí, donde se crean datos de ejemplo
+
+## Próximos Temas
+
+    -> Microservicios formalmente después de esto
+    -> Clase próxima: solo de dudas y consultas
+    -> Luego seguir con microservicios
+
