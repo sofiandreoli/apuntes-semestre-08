@@ -1,0 +1,535 @@
+# Productos de Base Tecnológica - Primera Clase
+
+## Introducción: ¿Qué es un Producto de Base Tecnológica?
+
+### Definición Informal
+    -> Ejemplo visto: Uber
+    -> Es un producto basado en tecnología
+    -> Se llama así a la materia que está basado en la tecnología
+    -> Si quitas esa tecnología en general no es posible
+    -> Se habla del producto más genérico
+    -> No solamente la parte del software o la tecnología
+    -> Sino de todo lo que hay alrededor del producto
+    -> Los servicios, el negocio
+
+### Ejemplo Uber
+    -> Aplicación del conductor
+    -> Aplicación del pasajero
+    -> Equipo de soporte atrás
+    -> Equipo administrativo
+    -> Gente de marketing
+    -> Todo eso forma parte del producto
+
+### Definición Formal (Libro de Spencer)
+    -> Un producto de base tecnológica se habla de un producto holístico (integral)
+    -> Contiene estos puntos:
+        -> Toda la funcionalidad que ofrece el producto
+        -> Están impulsados por la tecnología
+        -> Eso hace posible que exista
+        -> Tiene muy buen diseño y una muy buena experiencia
+        -> Cuando hablamos de experiencia usuaria podemos ver dos cosas:
+            -> La experiencia de la tecnología asociada (si tiene una app asociada)
+            -> Pero casi habla también de la experiencia completa total
+        -> Ejemplo Pedidos Ya:
+            -> Es importante la experiencia usuario del app
+            -> Pero si tienen algún problema con el pedido que no llega
+            -> Es importante la experiencia con el soporte
+            -> La experiencia que le devuelvan rápidamente
+            -> Que le den un cupón por si tuvo algún primer pedido
+            -> Todo eso forma parte de la experiencia
+        -> Tiene un modelo de negocio atrás
+            -> Lo que le da viabilidad de negocio
+    -> El valor en realidad no está en la tecnología en sí
+    -> Nosotros como ingenieros a veces nos encontramos mucho en la tecnología y en el desarrollo del app
+    -> Sino que es el valor que damos con eso a las personas y empresas
+
+## Dos Fases del Desarrollo de Software
+
+### Discovery (Descubrimiento)
+    -> Objetivo: definir qué es lo que hay que construir
+    -> Analizar el problema con usuarios y validar la solución
+    -> Definir qué funcionalidades vamos a construir
+    -> Construir lo que es definir lo que hay que hacer de valor usuario que sea deseable
+    -> Esta es la fase en la que nos enfocamos en esta materia
+
+### Delivery (Entrega)
+    -> Lo que han estudiado más en esta carrera
+    -> Proceso de gestión del desarrollo
+    -> Ejemplo ISA 1: arrancaron con necesidad ya definida por alguien
+        -> Product owner que arranca de un requerimiento
+        -> Lo carga en forma de user story
+        -> Después todo el desarrollo con SCRUM
+        -> Story pointing
+        -> Ceremonias: sprint planning, daily standup, retrospectiva
+    -> Ejemplo ISA 2: vieron esto implementado con tecnologías
+        -> Integración continua
+        -> Entrega continua
+        -> Automatización del pipeline
+
+### Cuando Trabajamos en Proyectos vs Productos
+
+#### En Proyectos
+    -> Nos preguntan al usuario cómo quiere modificar su carrito de compras
+    -> Cambian el requerimiento
+    -> Pero arrancan por un requerimiento específico
+
+#### En Productos
+    -> No parten de un usuario que les dice lo que quiere
+    -> Parten de un problema
+    -> Problema que alguien quiere resolver o que vale la pena resolver
+    -> O que ustedes deciden que vale la pena resolver
+    -> Los emprendimientos surgen detectando un problema
+    -> No van directo a desarrollar
+    -> Tienen que hacer el proceso de Discovery primero
+    -> Hay que hablar con los usuarios primero
+    -> Identificar todos los usuarios involucrados
+    -> Ejemplo Uber:
+        -> Hablar con gente que tiene temas de locomoción
+        -> Hablar con gente que quiere manejar un taxi
+        -> Hablar con la gente de la intendencia, organizaciones públicas
+        -> Saber la viabilidad
+    -> Vamos a prototipar porque normalmente lo primero que construimos no es lo que realmente soluciona el problema
+    -> El foco de la materia es el Discovery
+    -> Después cuando ya sabemos lo que tenemos que construir pasamos al proceso de Delivery
+
+## Las Cuatro Dimensiones de un Producto
+
+### Primera Dimensión: Deseable
+    -> Que alguien lo quiera
+    -> Que resuelva un problema que es pertinente a resolver
+    -> Que además esté dispuesto a pagar por esa solución
+
+### Segunda Dimensión: Viable
+    -> Que alguien quiera pagar por esa solución
+    -> Que eso que va a pagar sea viable para poder mantener este negocio atrás del producto de base tecnológica
+
+### Tercera Dimensión: Usable
+    -> La experiencia usuario es fundamental para cualquier producto de software o producto de base tecnológica
+
+### Cuarta Dimensión: Feasible (Factible)
+    -> Pueden tener muchas ideas espectaculares con tecnología bárbara
+    -> Pero a veces no son viables porque la tecnología no está madura
+    -> La tecnología que quieren usar no existe
+    -> Si le existe, no se les va a ocurrir
+    -> Pero este acaba que no la conozcan
+
+## El Equipo de Producto
+
+### Roles Principales
+
+#### Product Manager
+    -> Persona que tiene tres patas
+    -> Tiene una pata conectando al mercado
+    -> Con los usuarios: entender el problema y las necesidades
+    -> Con el negocio: lo que necesitan los usuarios puede haber un negocio atrás
+    -> Trabaja con el equipo de construcción del software
+    -> El product manager decide qué vale la pena construir
+    -> Porque él solo tiene mucha necesidad
+    -> Define junto al equipo qué vale la pena construir
+    -> Ejemplo: un problema empiezan a desmenuzar, empiezan a hacer discovery
+    -> Dicen podría solucionar esto, esto, esto, esto, esto
+    -> Pero no todo se puede solucionar
+    -> Entonces el product manager define qué vale la pena construir
+
+#### Product Designer
+    -> La experiencia usuario es fundamental
+    -> Alguien que nos apoya a diseñar la solución y la experiencia usuario
+    -> La experiencia no solo del producto tecnológico
+    -> Sino también de todo lo que hay alrededor
+
+#### Ingenieros/Desarrolladores
+    -> Factibilidad técnica
+    -> Equipo de ingenieros desarrolladores
+    -> Nosotros estamos más que nada acá
+    -> Aunque nuestra carrera puede evolucionar a otros roles
+
+### Trabajo del Equipo
+    -> Trabajan juntos
+    -> Cuando hay que definir algo, se juntan y trabajan bastante juntos
+    -> Antes no era tan así
+    -> Antes teníamos la tecnología por un lado
+    -> Tenías a product manager pero ni siquiera capaz se había probado un manager con ese nombre
+    -> Product Designer era un diseñador gráfico
+    -> Nosotros desarrolladores hacíamos algo y le pedíamos que haga la parte gráfica
+    -> Ahora estos tres empezaron a trabajar juntos
+
+### Otros Roles (Empresas Más Grandes)
+    -> User researchers: gente especializada en el discovery y con los usuarios
+    -> Analistas de datos: cuando se hace research para entender las necesidades o evaluar prototipos
+        -> Se pueden recolectar muchos datos
+        -> Esta gente analiza esos datos para generar insights
+        -> Medir el impacto
+        -> Ver qué ayuda al product manager a tomar decisiones del producto
+    -> Muchos de los datos que se generan a veces se generan automáticamente
+    -> Ejemplo Netflix: cuántos usuarios son, que ven que no ven, cuánto tiempo pasan
+        -> Empieza una película son todos métricas que se recogen automáticamente
+    -> Equipo de marketing que están como gerencia a eso
+
+### Valoración del Product Manager con Base Tecnológica
+    -> En los productos de base tecnológica se valora mucho que el product manager tenga una base tecnológica
+    -> A veces los product managers en otros negocios incluso que tienen base tecnológica del software no vienen del desarrollo
+    -> Y no está mal
+    -> Pero las empresas que tienen una base de tecnología fuerte se valora mucho eso
+    -> Hay bastante mercado para gente de base tecnológica para ahí
+    -> Tiene que gustar obviamente
+
+### Caminos hacia Product Manager
+    -> Dos formas que se conocen
+    -> Una: empezar como desarrollador
+        -> Ejemplo del profesor: empezó como desarrollador perdón un producto
+        -> Ese producto se fue cambiando
+        -> Pasó a hacer product manager igual
+        -> En Uruguay en esa época era product manager y seguía desarrollando dos días
+        -> Después hubo una spin-off
+        -> Ahí hizo product manager de un nuevo producto
+        -> Después otra chica entró al trabajo conmigo
+        -> Quedó más como líder de equipo de desarrollo e investigación
+    -> Otra: puede haber llamado para product owner
+        -> Capacidad que más enfocado al cliente
+        -> Ejemplo: en ISA 1 vieron el producto owner
+        -> Product owner está dedicado a un módulo o a un producto muy específico
+        -> Trabaja con un equipo de desarrollo
+        -> Tiene contacto tanto con los clientes o los usuarios y con el equipo de desarrollo
+        -> En una empresa puede haber un solo producto owner
+        -> Entonces tenemos product manager acá
+        -> El product manager está más orientado al negocio
+        -> Está más preocupado orientado al negocio al mercado
+        -> También contacta con los usuarios porque acá cuando empieza el product owner ya tiene un conjunto de clientes usuarios
+        -> Y ya el product owner se le da se atiende a esos clientes y usuarios
+        -> Pero el product manager mira más el negocio, el mercado para ampliar el conjunto de clientes
+        -> Trabaja también con los product owners
+        -> Si hay product owners el product manager a veces no hay los dos es el mismo persona
+        -> A veces pasa una empresa que tiene más de un producto
+        -> Entonces este product manager también está trabajando con otro producto que tiene todo esto mismo
+        -> Capacidad que son productos relacionados pero no son el mismo
+    -> También hay algunas empresas que piden producto owner junior
+        -> Capacidad que tenés un poco de experiencia no más en desarrollo
+        -> Puedes entrar como producto owner junior
+        -> Las empresas tienen un product owner que lo quieren pasar acá porque no tienen esto
+        -> Empiezan a trabajar como product owner junior
+        -> Trabajan un tiempo así
+        -> Después te lo sacan de acá y lo suben
+
+## Misioneros vs Mercenarios
+
+### Misioneros
+    -> Están motivados por el propósito y la visión del producto
+    -> Quieren resolver problemas reales y generar impacto
+    -> Ven el trabajo como una contribución a algo más grande
+    -> En general son autónomos y comprometidos
+
+### Mercenarios
+    -> Están ahí solo para cumplir lo que se les pide
+    -> No se involucran en el para qué
+    -> No está mal
+    -> No se conectan con la visión del producto ni con el valor para el usuario
+    -> Se limitan a ejecutar sin entender mucho el impacto
+    -> Cuando trabajan en la parte que trabajan siempre entender para qué estoy haciendo esto es bueno
+    -> Pero a veces en estos equipos en esta parte sobre todo en delivery ya tenemos el descubrimiento hecho
+    -> En particular cuando empiezan a trabajar o los primeros años tienen un producto owner que ya hizo el análisis que ustedes van a hacer con la tecnología
+    -> Tratar de resolver lo que les dice el product owner lo mejor posible
+    -> Igual está bueno saber para qué
+    -> Porque si pueden sugerir mejoras esperamos un buen product owner el decir que tienen
+    -> A veces va directamente acá debería bien el para qué lo desarrollado
+
+## Características del Equipo de Producto
+
+### Multifuncional
+    -> Ya dijimos que mezcla negocios, diseño y tecnología
+
+### Duradero
+    -> La idea es que el equipo de producto se mantengan el tiempo del producto
+    -> Perdón a diferencia cuando hace proyecto que vos empezar un proyecto
+    -> Si hace un equipo empezó otro proyecto terminar empezó todo el proyecto
+    -> Y capaz que sin su tal la idea es que a menos que ustedes si están trabajando en un equipo de producto y se vayan en otra empresa
+    -> La idea es mantenerlos en el mismo equipo porque es un juego infinito
+    -> Se acuerdan lo de juego finitos vs infinitos
+    -> Cuál es infinito: esto está bueno
+    -> Cuanto más para el du hacer el equipo mejor
+
+### Equipos de Productos vs Equipos de Funcionalidades
+
+#### Equipos de Productos
+    -> Sirven problemas que deben resolver
+    -> Tienen autonomía para descubrir el problema y la solución
+    -> Trabajan más en discovery
+
+#### Equipos de Funcionalidades
+    -> Son los que trabajan más en delivery
+    -> Tapan de acá para acá
+    -> Más bien reciben requerimientos
+    -> Generalmente es en forma de roadmap
+    -> Se van por roadmap para hacer eso
+
+## El Discovery: Building the Right Thing
+
+### Qué es el Discovery
+    -> Proceso que se resume en una frase en inglés: building the right thing
+    -> En español: lo correcto, lo que sirve
+    -> En el discovery se asegura que estemos construyendo lo correcto
+
+### La Frase de Henry Ford
+    -> Ejemplo de automóviles cuando la gente se movilizaba en caballos
+    -> Frase: "Si hubiera preguntado a mis clientes qué querían, me habrían pedido caballos más rápidos"
+    -> Problema: la gente le pedía caballos más rápidos
+    -> No se les ocurría que podría haber algo nuevo
+    -> Ellos partían de lo que conocían
+    -> Conocían solo caballos y querían más rápido
+    -> No se entiende para que no nos haya movido mi cliente
+    -> Traduciendo el problema de ese pedido está perfecto
+    -> Lo que dijeron dicho en otras palabras los usuarios le estaban pidiendo una solución
+    -> No le estaban diciendo su problema
+    -> Estaban diciendo una solución
+
+### Qué Hacer Cuando los Usuarios Piden Soluciones
+    -> Si tenían que tener en cuenta que los clientes muchas veces no saben lo que es posible
+    -> Dicen caballos más rápidos porque es lo que se les ocurre
+    -> Sin embargo nosotros que participamos en discovery y conocemos la tecnología
+    -> Nos capacita para encontrar soluciones mejores a los que se le puede ocurrir cliente
+    -> El cliente puede tener su expertise en otro lado en otra área pero no en esta
+    -> Tenemos nosotros en ustedes
+    -> El usuario siempre nos va a dar soluciones
+    -> El 99% de las veces no va a decir yo quiero tal cosa
+    -> Cuando usted se tal cosa dicen pa me está pidiendo una solución
+    -> Lo que nosotros tenemos que hacer es a partir de lo que nos pide el usuario
+    -> No lo tenemos que decir no me des una solución
+    -> Lo que tenemos que pedirle a los usuarios es lo que tenemos que lograr
+    -> Tener la capacidad para que a partir de lo que me pidió el usuario descubrir cuál es el problema
+    -> País que el caso de los caballos más rápido será fácil
+    -> Pero vamos a ver que hay otros casos que no es tan fácil
+
+### Nuestro Error y Nuestro Valor
+    -> Error no es preguntar qué quieren
+    -> No es preguntar sus requerimientos
+    -> Hay forma de preguntar sí
+    -> Pero porque en general esa pregunta respondía con soluciones
+    -> Nuestro valor está justamente en descubrir la necesidad profunda
+    -> Hay una imagen de un iceberg
+    -> Lo que usuario les va a pedir es esto (arriba del agua)
+    -> Que ustedes tienen que llegar acá abajo (debajo del agua)
+    -> Entender cosas que hay acá que son la necesidad más profunda o necesidades
+    -> Las necesidades el contexto en que tienen ese problema
+    -> Quiénes son las que tienen ese problema por qué lo tienen
+    -> Si tiene una solución por qué
+    -> Por qué van a decir la solución es otro que vamos a dar
+
+## Video: La Incubadora para Bebés Prematuros
+
+### El Problema Inicial
+    -> En India en pueblos rurales morían o quedaban con secuelas permanentes los bebés
+    -> Morían sobre todo los prematuros
+    -> Ella fue a India y encontró este problema y puesto hay que solucionar
+    -> Pero lo único que sabía era esto
+    -> Ahí empezó el proceso de discovery
+
+### Lo que Descubrió en el Discovery del Problema
+    -> Empezó por hipotermia
+    -> Los prematuros necesitaban calor
+    -> La solución que existía eran incubadoras
+    -> Pero eran muy caras
+    -> No tenían dinero
+    -> No tenían la opción de traslado porque se demoraba mucho
+    -> Los chiquitos solamente podían enfocarse en crecer el cuerpo
+    -> Pero cuando tenían ese frío los órganos no se desarrollaban
+    -> No se desarrollaban porque tenían que pelear contra el frío más que concentrar
+    -> Necesitaban calor para que los primeros meses los órganos se desarrollen
+    -> No tenían acceso a incubadoras porque:
+        -> Lo tenían que trasladar y no tenían opción de trasladarlas
+        -> También porque eran muy caras
+        -> Eran muy caras
+    -> No tenían formación: había que manejarlas y mantenerlas y repararlas
+    -> No tenían formación como para poder manejar o mantener una incubadora formación
+
+### Características que Tendría la Solución
+    -> Por todo esto por alguna de estas necesitaban una solución local
+    -> Ya empezó a descubrir algunas características que tendría de tener la solución
+    -> No tiene electricidad tiene que ser algo que no tiene electricidad
+    -> Tiene que ser algo muy simple
+    -> No se pueden trasladar
+    -> Tiene que ser una solución local
+
+### El Proceso que Siguió
+    -> Cuando partió de acá después lo que hizo para hacer el discovery fue
+    -> Fue a los lugares habló con la gente
+    -> No lo hizo desde un escritorio suyo con una computadora
+    -> Sino que fue al lugar entendió el contexto
+    -> Entendió a las personas entendió sus motivación y sus problemas
+    -> Acá es donde empezamos a descubrir la parte del iceberg que está abajo
+    -> Acá es el problema de los bebés que se mueren
+    -> Acá está todo lo que escribimos arriba es contexto las motivaciones sus características haciendo contexto
+
+## El Proceso de Design Thinking: Doble Diamante
+
+### Estructura General
+    -> Primero: análisis del problema (divergente)
+    -> Después: definición del problema (convergente)
+    -> Después: ideación de soluciones (divergente)
+    -> Después: definición de la solución (convergente)
+
+### Divergente vs Convergente
+    -> Divergente: primero yo analizo observo trato de recoger datos todos
+    -> Después empiezo a hacer a quedarme con lo que realmente me parece que sirve que representa bien el problema
+    -> Convergente: después empiezo a hacer a a quedarme con lo que realmente me parece que sirve
+
+### Primer Diamante del Problema
+
+#### Empatizar
+    -> Técnica para empatizar
+    -> No es decir ta empate cenaban esto y listo
+    -> Hay técnicas que los ayudan a hacer esto de mejor manera
+    -> En empatizar ella hizo todo esto (investigación de campo)
+
+#### Definir
+    -> Acabamos a definir el problema a resolver
+    -> No definir la solución seguir por ver si se confunde
+    -> Estructura de POV (Point of View) para definir el problema:
+        -> Las personas que tienen problema
+        -> Qué necesitan
+        -> El insight: por qué necesitan esto o por qué o qué es lo que yo descubrí de mi proceso de empatía
+        -> Por qué necesitan eso
+
+#### Característica de la POV
+    -> No puede tener solución siempre
+    -> A veces cuando hacen una POV uno tiende a decir no en este caso
+    -> Pero en otros casos es fulanito de tal necesita una app para poder hacer reservas médicas sin trasladarse
+    -> No eso no es una POV ese no es el problema que tiene
+    -> Eso es una solución a un problema que tiene probablemente
+    -> Pero si ustedes ya arrancan de la solución se pierden
+    -> No pasan al idea de acá se pierden una cantidad de oportunidades de soluciones mejor
+
+### Segundo Diamante de la Solución
+
+#### Idear
+    -> Casi vamos a empezar a pensar en la solución
+    -> Vamos a idear soluciones
+    -> Es un diamante divergente porque empecé a generar ideas
+    -> Son varias
+    -> Después es que tenés un conjunto importante de ideas donde importa más la cantidad de ideas que la calidad
+    -> Se va refinando y se va definiendo qué idea vamos a prototipear y vamos a testear
+    -> Hasta llegar a una solución
+
+#### Prototipar y Testear
+    -> Después que definió el problema idearon prototiparon
+    -> Vean que primero llega un prototipo de baja calidad dibujos
+    -> Después se hicieron algo más rudimentario
+    -> Lo probaron en el campo o sea no en del escritorio o tuvieron feedback
+    -> Y así hicieron varias iteraciones de esto a llegar a la solución
+
+### El Producto Final
+    -> La incubadora final que se vio en el video
+    -> Ejemplo muy rápido del proceso
+
+## Ejemplo: Cirugías a Distancia
+
+### El Problema
+    -> Pocos médicos especializados en ciertas cirugías en el mundo
+    -> Hay muchos pacientes que la necesitan y no se pueden movilizar
+
+### La Solución
+    -> Cirugías de forma virtual
+    -> Esta es una solución tecnológica que la hace posible
+    -> Qué tecnología hizo esta solución posible: Internet pero qué internet
+    -> 5G alcanza
+    -> Porque a veces cuando no viendo de 5G por lo menos yo conseguí 5G
+    -> Si para ti quiero 5G y me alcanza y me sobra
+    -> No está pensado para este tipo de cosas
+    -> Sí sin cogió más este porque acá sí un dele y en vez de contarle una arteria le contar la otra
+    -> Y bueno después el robot
+
+## Ejercicio en Grupo: Problema de la Cantina
+
+### El Problema Identificado
+    -> En los recreos si quieres ir a la cantina tenías que hacer tremenda fila
+    -> A veces no compras cosas por ver la fila
+    -> O más no te da tiempo
+    -> El tiempo es crítico porque el recreo son cinco o 10 minutos
+    -> O en la pausa de trabajo tenés cierto tiempo hacen 30 o 40 cinco minutos para comer
+    -> Ese tiempo que perdés solo venir a hacer la fila a pedir las cosas que lleguen
+    -> La ruina más y si le que si no tuviera minutos tuviera otro equipo de mundo que son seis persona pero minutos hasta nadie venda la fila
+    -> Siempre que voy a comprar trabajo no ya se ya aparte dentro las son filas
+    -> Y no crea que una con adelante es un café que demora y lo han
+    -> A veces tipo de sí está no compro o sea ya está y no
+    -> Más justo nosotros en ese semestre que nos pusieron todas las clases en el cuarto piso
+    -> Y antes había una cantina acá la sacaron acá arriba en el quinto
+    -> Capaz este de hambre hambre y si bueno voy a bajar y si están abajo cuatro pisos en un recreo como que no te da mucho el tiempo
+
+### Afectados
+    -> Estudiantes
+    -> Profesores
+    -> Trabajadores
+    -> Gente que está en la misma que última ya no estar en el segundo que tienen que subir el cuarto
+
+### Posibles Beneficios
+    -> También lo haría más fácil a los de la cantina decir bueno toda esta hora tengo tales pedidos
+    -> También la aumentan las ventas porque de ti está si yo no voy capaz que si tengo esa facilidad digo bueno ta pido
+    -> Profesores que trabajan en más de una facultad por ejemplo en la hor mañana en la BM de tarde
+    -> Y vas a almorzar allá algo de integral que también como que ya a saber que vas al almorzar ahí
+    -> Entonces como que ya te la capacidad tenés un tiempo a cortado y decir bueno está no sé capaz que entre que hacer la fila esperas todo te da el tiempo no llegas
+
+### Situaciones Especiales
+    -> Eventos o algo que este sobre todas unas carteras las que se que y eso que se pide en la subo o algo vemos en la continu que subo el de lleva
+    -> Pensamos que que haya cuando siempre se 10 10 y 10 y 10 que te llega el el pedidos cuando digo y lo antes más un tema de tu poner o de promoción
+
+### Personas con el Problema
+    -> Algunos alumnos se como que se propongan para bueno tal yo es tal tal día en tal horario puedo bajar y subir a tales pisos
+    -> Y con no sé llevo cinco pedidos
+    -> Me regalé una mega luna algo así como una especie de canje
+    -> Trabajadores pero creo que es un poco más costoso para para la cantina porque tienen que tener más empleados la idea no sacar empleado de la cantina que están ahora
+    -> Porque además saca tiempo de producción y claro como decían ahí que a veces habían seminarios por ejemplo a veces bess a los de la cantina yendo un ascensor subiendo y a veces se quedan sin nadie con una persona que tan no abasto
+
+### Alternativas Actuales
+    -> Cómo lo resuelve esas personas que tienen este problema hoy:
+        -> Bajando o no comiendo
+        -> No hay mucha gente que incluso cruzando frente y la cantina se pierde eso
+        -> Pero también ahí ponele acá te puedes comer una ensalada en ese quiqui no no hay ensalada ponerle toda la comida de eso
+        -> Frita o empacada
+        -> En un lugar en la esquina de los sándwiches que ponían con che y los saludaron todos iban para allá era más rápido
+
+### Soluciones Propuestas
+    -> Una aplicación que vos puedas como a jear ponerle para el próximo recreo lo que vas a comer o para el almuerzo lo que quieres
+    -> Variantes:
+        -> Algunos alumnos se como que se propongan para bueno tal yo es tal tal día en tal horario puedo bajar y subir a tales pisos
+        -> Y con no sé llevo cinco pedidos bueno me regalé una mega luna algo así como una especie de canje
+        -> Tener trabajadores pero creo que es un poco más costoso para para la cantina
+    -> Alumnos que se ofrecen a bajar por ejemplo te estoy en tal piso bueno está subo a tal piso tales días
+    -> O sea yo como alumno sino también lo de tipo pica o sea a tal hora pasa por ahí comida
+    -> Eso es ya facilitado creo que no igual porque tal en este caso capaz que estamos en el tipo más alta hay que bajar todo
+    -> Pero si estás vivo cerca que capaz ese vas ves una fila enorme si está no ya se me acaba el recreo
+    -> Pero si está ahí preparado tu pedido noita
+
+### Impacto
+    -> Por qué vale a pena solucionarlo: nosotros gusto este semestre por ejemplo con nadie es es un problema que lo tenemos que decimos tengo tremenda hambre pero más claro ahora de la mañana una foto muerto de hambre
+    -> Sería mucho más fácil para nosotros y también para la cantina que le res recibiría a las ventas bastante más del mercado que va a ver a phili se va solo por más hacer la fila porque tiene poco tiempo en el claro
+    -> Si ya puede emprender antes minutos para hacer las phili sí también la fila piso sí baja
+    -> Y además la la cantina ya saber que tiene que hacer 25 media lunas para tal horario las se organiza mucho mejor
+    -> También hay tiempo ya nada claro también
+
+### Alternativas que Empezaron a Pensar
+    -> Máquinas expendedoras que no hay acá
+    -> Las máquinas expendedoras de comida
+    -> Una por piso hermética que tenía entonces podía contener pr y co City College o persona granizada estaba bien
+    -> La podían la bien a a reponerla a tanto poner la reponían la aquí de la mañana que regres y medio en realidad en que a un clase cosa de que que no quite tiempo a estudiantes
+    -> Incluso serías el baño podía así llevaba la plata y lo toaba y no perdiera a la cantina que también pasaba lo mismo abastecía la latina
+    -> Era variado para obviamente mis coche no habías de nada no pero por ejemplo bra las cosas que eran más consumidas brown y colet agua cosas en sí estaban y lo que tenías bien en buen no que se te rompía pues te caía no estaba bien
+
+### Observaciones del Proceso
+    -> Si yo me acuerdo que me hablar en la cantina de rato que te volviendo ahí ese problema en un memento
+    -> Pues lo sacaron este iban con carlito esa con de oficinas con comida disponible media estándar
+    -> Tenían en la adaptar las emp pasadita sí entonces cuando tenía que ir a la can sino que iba a la cocina iban a la oficina que está a tierra cocinita y vas a ir a aquí
+    -> Sí y si no la otra tal la cantina acá arriba que no creo que la tocaron por ver la ah parece también tenía que venir de subir en el ascensor para para la mercadería claro no un problema para ello
+
+## Conclusiones
+
+### Lo que Sirvió del Ejercicio
+    -> Empezar en experimentar que les dieron un problema
+    -> Cómo se empieza a profundizar este
+    -> Después vamos a ver unas técnicas para hacer más formales
+    -> Que igual muchas se las imaginan
+    -> Lo único que hacen las técnicas es formalizar esto para ahí
+    -> Que no sepa Dios sabe tener una día de cómo pensar
+
+### Próximos Pasos
+    -> Ver técnicas más formales para el proceso de discovery
+    -> Continuar trabajando con ejemplos como el de la cantina
+    -> Profundizar en el proceso de empatizar definir idear prototipar y testear
+

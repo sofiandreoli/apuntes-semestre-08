@@ -1,0 +1,956 @@
+# Aspectos Legales del Desarrollo - Charla con Olivier
+
+## Presentación del Disertante
+
+### Sobre Olivier Schul
+    -> Abogado especializado en compañías de tecnología
+    -> Trabaja con compañías de tecnología hace muchos años
+    -> Todos los años lo invitan a contar a los estudiantes lo que se van a encontrar
+    -> Charla dinámica con interrupciones y preguntas
+    -> Habla en términos generales, no es una clase de posgrado
+    -> Puede dar por sentadas cosas que no todos saben
+
+## Problema Común: Abrir una Unipersonal
+
+### El Escenario Típico
+    -> Tres personas juntan una plataforma de inteligencia artificial
+    -> Un día se la muestran a alguien que dice "me gusta, lo quiero contratar"
+    -> No tienen un contrato, pero quieren facturar
+    -> Un amigo bien intencionado dice: "lo más barato es una unipersonal"
+    -> Van y hacen una unipersonal
+    -> Solo uno de los tres es el titular
+    -> Todos los meses sale al cliente, va juntando plata
+    -> Uno decide repartir utilidades acumuladas
+    -> El que organizó la unipersonal dice "no vamos a repartir nada"
+    -> Los otros dos no pueden obligarlo porque una unipersonal es de una sola persona
+    -> Los otros dos no tienen nada legalmente
+
+### Problemas que Surgen
+
+#### Si la Sociedad Tiene Deudas
+    -> Si la sociedad no liquida bien impuestos o tiene deuda
+    -> Los otros dos no pueden reclamar que ayuden a pagar
+    -> No tienen responsabilidad legal
+
+#### Cuando Viene un Inversor
+    -> Un inversor quiere poner plata y llevarse el 30% de la sociedad
+    -> No puede comprar porcentajes ni acciones en una unipersonal
+    -> Las unipersonales no dividen capital ni acciones
+
+#### Cuando Quieren Vender el Negocio
+    -> Si quieren vender por $10,000,000
+    -> No pueden transferir una unipersonal así nomás
+    -> Hay que hacer una transferencia de establecimiento comercial
+    -> Un escribano puede cobrar una fortuna
+    -> Arruina todo el haber empezado sin asesoramiento
+
+### El Mensaje Principal
+    -> Los consejos de amigos bien intencionados no siempre son los mejores
+    -> La marcha atrás termina siendo mucho más cara que lo que ahorraron
+    -> Capacidad que ahora están haciendo proyectos y necesitan facturar
+    -> Todo eso debe hacerse sin asesorarse primero
+    -> Después deshacer lo hecho cuesta mucho
+
+## ¿Por Qué Poner una Sociedad?
+
+### Ejemplo del Restaurante Galiana
+    -> El restaurante cierra
+    -> Mozos haciendo piquete en la puerta
+    -> Pero Andrés (el dueño) está en su apartamento tranquilo
+    -> ¿Por qué pasa eso?
+    -> Porque Galiana abrió el restaurante
+    -> Es la sociedad la que asume el riesgo de todo
+    -> Si va bien, es fenomenal para él
+    -> Si va mal, la responsabilidad con todo (mozos, impuestos, deudas) es de la sociedad
+    -> La persona detrás y su patrimonio personal no se ven alcanzados por los problemas de la sociedad
+
+### La Sociedad y la Limitación de Responsabilidad
+    -> Los proyectos siempre deben tener una sociedad en el medio
+    -> Una sociedad con limitación de responsabilidad
+    -> Lo contrario: están poniendo el riesgo su propio patrimonio
+    -> Si hacen el proyecto a nombre propio y va mal, quedan endeudados, los embargarán, matarán el auto, el apartamento, la casa
+    -> Con una sociedad anónima o SAS, la responsabilidad va contra la sociedad
+    -> Si va mal el negocio, van contra la sociedad
+    -> Van a ver el negocio, les venden la sociedad al comprador
+
+## Principales Tipos Societarios
+
+### Sociedad Anónima (SA)
+    -> Vehículo tradicional de hacer negocios en Uruguay
+    -> Muy bien establecida
+    -> Tiene limitación de responsabilidad
+    -> La sociedad solo responde hasta el capital que tiene
+    -> Ejemplo restaurante: cobran las mesas, sillas, cocinas (el patrimonio de la sociedad)
+    -> No hay responsabilidad personal
+    -> No va a los dueños
+    -> El capital se divide en acciones
+    -> Cada socio tiene acciones (ejemplo: uno tiene 40%, otro 40%, otro 20%)
+    -> Permite transferir, integrar nuevos socios, vender acciones
+    -> El capital se representa en acciones negociables
+
+#### Problema con la Sociedad Anónima
+    -> Es un transatlántico muy grande
+    -> Tiene mucha regulación
+    -> Hay un ente regulador (la auditoría interna de la nación)
+    -> Hay que hacer reformas del estatuto cuando cambias el objeto social
+    -> Ejemplo problema: fabrican tornillos, quieren hacer tuercas
+    -> El BRO dice "el objeto social es hacer tornillos, no tuercas"
+    -> No le dan el préstamo hasta que reformen el estatuto
+    -> La reforma tiene que aprobarla la auditoría interna de la nación
+    -> Puede llevar seis meses
+    -> Con proyecto de negocios, seis meses mata cualquier startup
+    -> Solución en Uruguay: objeto social omnibus
+    -> El estatuto tiene 5 páginas con todas las actividades comerciales conocidas
+    -> Así puedes hacer cualquier cosa sin reformar el estatuto
+    -> Absurdo pero evita el problema
+
+#### Características
+    -> Buen vehículo societario
+    -> Diferencias: cuando tienes que cambiar algo, tiene mucha regulación
+    -> Tiene un montón de controles de organismos (auditoría interna, nación, parte de impuestos)
+    -> Vale la pena entrar cuando funciona bien
+
+### Sociedad de Responsabilidad Limitada (SRL)
+    -> Invento que mezcló sociedad personal (responsabilidad ilimitada) con sociedad anónima
+    -> No quedó bien
+    -> La responsabilidad es limitada como la SA
+    -> Pero tiene algunos casos donde es ilimitada (patrimonio personal)
+    -> Tiene cosas de la sociedad anónima pero no tiene facilidad para comprar y vender acciones
+    -> Son títulos más personales
+    -> Tienes que meter un escribano cada vez que quieres hacer algo
+    -> Aunque se usa mucho, él no la recomienda
+
+### Sociedad por Acciones Simplificada (SAS)
+    -> Creada hace como 10 años para emprendedores
+    -> Fue una buena idea
+    -> Los emprendedores decían: "arranqué el proyecto en la clase de facultad"
+    -> Escucharon que desde el principio tienen que ver qué tipo de sociedad poner
+    -> No voy a poner una unipersonal hoy
+    -> Pero las opciones: sociedad anónima sale $5-6 mil (no tengo esa plata)
+    -> La SRL es más barata pero tengo que meter escribano para todo
+    -> Se creó entonces la SAS para emprendedores
+
+#### Características de la SAS
+    -> Como una sociedad anónima pero en chiquitito
+    -> Tiene capital, acciones, limitación de responsabilidad
+    -> Tiene todas las cosas buenas
+    -> Le mejoraron las malas
+    -> Ejemplo objeto social: en la SA pones "fabricar tornillos" como objeto principal
+    -> Tiene objeto residual: "toda actividad legítima"
+    -> Con eso te ahorras el objeto omnibus
+    -> Tienes objeto principal: "fabricar software"
+    -> Objeto residual: "toda actividad legítima"
+    -> Si mañana consigues hardware barato y vale la pena traerlo, puedes hacerlo con tu SAS
+    -> Entra dentro del objeto residual
+
+#### Funcionamiento
+    -> Parte muy similar a la sociedad anónima
+    -> Funciona como tal hasta cierto umbral de facturación
+    -> Cuando llegas a ese umbral, se transforma en sociedad anónima
+    -> Pasa a tener los controles de una SA
+    -> Por eso tiene lógica
+    -> La idea: darle al emprendedor un vehículo barato al principio
+    -> Una SAS te sale un tercio de lo que sale una SA
+    -> Sale muy poca plata incorporarla
+    -> Se hace en unos 10 días
+    -> Te queda una SAS pronta
+
+#### Fiscalidad
+    -> Hay un tema con el BPS que no arreglaron bien
+    -> Vas a pagar mínimamente BPS por mes en una SAS
+    -> En algunos proyectos eso es bastante plata
+    -> Algunos prefieren gastarse dólares en una SA pero no tener ese costo mensual
+    -> Pero esos son detalles más finos
+
+#### Recomendación
+    -> Si tienes que elegir entre unipersonal y otra cosa: usa SAS
+    -> Con $1000 y pico de dólares puedes hacer una SAS
+    -> Empiezan a funcionar desde ahí
+    -> Tiene la enorme ventaja de poder optar entre pagar impuestos solo sobre lo real que facturan o sobre un ficto
+    -> Si tu sociedad que están incorporando ya tiene clientes, puedes pagar por el ficto (habitualmente menor)
+    -> Vas pagando sobre el ficto cuando en realidad tus ingresos son mayores
+    -> Si estás empezando y no tienes ni un cliente, pagas por el real
+    -> Los meses que no factures no pagas nada
+    -> Esa ventaja las demás sociedades no la tienen
+
+## Estructuras Societarias
+
+### ¿Qué es una Estructura?
+    -> También conocida como estructura societaria
+    -> Cuando tenés tus plataformas uruguayas, pendientes facturar, va muy bien
+    -> Viene un fondo institucional americano
+    -> Dice: "vamos a invertir en su compañía, pero quiero una estructura"
+    -> No tiene idea de qué es
+
+### ¿Qué Pasa con los Fondos de Inversión?
+    -> Un fondo americano no va a estudiar derecho uruguayo para entender las SAS
+    -> Es un libro que no lo tiene
+    -> Qué hace: le pide a los fundadores que pongan una sociedad arriba
+    -> Por ejemplo: Cayman Islands, BVI, Bermuda, Bahamas
+    -> Todas sociedades offshore
+    -> Sociedades con régimen fiscal muy beneficioso
+    -> Esa pasa a ser la dueña de las SAS uruguayas
+    -> La inversión la hacen en esa sociedad que queda arriba
+    -> Esa sociedad es la dueña de abajo (operativa uruguaya)
+
+### Ejemplo de Estructura
+    -> Tienes negocios en Brasil, Argentina, Colombia
+    -> Sociedades en esos países
+    -> Ponen arriba una holding company
+    -> La holding company es la compañía dueña
+    -> Es dueña de las acciones de todas las que están abajo
+    -> En esa holding company es donde el inversor pone su plata
+    -> Todos tienen las acciones de la holding
+    -> Esa holding es dueña de todo
+
+### Cuando Aparecen los Inversores
+    -> Muchas veces los inversores aparecen en fase relativamente temprana
+    -> Cuando los locos ya tienen un MVP
+    -> Están vendiendo
+    -> La mayoría de proyectos tecnológicos tienen números rojos
+    -> No venden nada
+    -> La idea es buenísima, el potencial es buenísimo, la escalabilidad es buenísima
+    -> Se venden en fortuna
+    -> Pero no son empresas que estén facturando y generando mucha plata
+    -> No van a venir a invertir el día que tengas un negocio súper rentable
+    -> Capaz que si tienes una buena idea, un buen producto, invierten en seguida
+
+### Problema con Estructuras Offshore
+    -> Cuando viene un inversor y dice: "quiero una estructura"
+    -> Significa esto: haber un abogado que les dé un modelo fiscalmente eficiente
+    -> Para que a parte de impuestos funcione bien
+    -> Todas estas sociedades (Cayman, BVI, Panamá, Bahamas, Bermuda)
+    -> Por qué siempre acá se fijan entre calle de Estados Unidos: manejan ascensores del Caribe
+    -> Pero en España hay sociedades de ese estilo
+    -> En Reino Unido también: hechas para ser holding companies de compañías que están debajo
+    -> Este modelo de holding lo tienen todos
+    -> Google o Alphabet tiene un holding central en Irlanda
+    -> Pasan el dinero de Estados Unidos (no pagaba casi ni un dólar de impuestos)
+    -> Tenía todo estructurado para que fuera en Irlanda con una PLC (tipo de sociedad que no paga impuestos)
+    -> Facturaban fortunas en el mundo entero y no pagaban nadie impuestos
+    -> Ahí se armó un montón de lío
+
+### La Realidad de las Estructuras
+    -> Cuando hablamos de estructura es que ustedes tienen sus SAS o quizás dentro de no tanto tiempo van a tener que empezar a mirar estas otras realidades
+    -> Tener una BVI, tener una Cayman que debajo va a tener las sociedades operativas
+    -> Ahí es donde entra el dinero
+    -> El inversor pone en la que está arriba de todo
+    -> En la BVI
+    -> Van a empezar a ver contratos en inglés, acciones en inglés, certificados de compañías extranjeras
+    -> Es un universo complejo
+    -> Especialmente si no vienen de derecho
+    -> Busquen un abogado que sepa de esto
+
+### Problemas con Estructuras Mal Hechas
+    -> Ha visto muchas cosas mal hechas
+    -> Ejemplo: por estructurar mal, cuando se vendió la compañía y se pagó $1,000,000 por la compañía
+    -> El 30% le quedó retención de impuestos
+    -> Para dejar 300 lucas en impuestos en una venta es un montón
+    -> Todo porque su abogado no lo hizo bien
+    -> O porque fueron con un abogado que es el primo, el tío, un amigo que le había hecho el divorcio
+    -> Son muy pocos que hacen esto
+
+## Formas de Inversión
+
+### La Realidad del Inversor
+    -> Vos tenés tres amigos, tienen una SAS
+    -> Hicieron un programa que hace algo
+    -> Vino un inversor y dice: "me encanta esto, quiero invertir acá"
+    -> Tengo una SAS, le puedo dar parte de las acciones
+    -> El señor pone plata, eligieron una evaluación de que la empresa vale $1,000,000
+    -> Si buscas el 30%, poné $300,000
+    -> Y ahora vos les ceden el 30% de las acciones
+
+### El Problema del Tiempo
+    -> Es un proceso complejo
+    -> Hay que hacer actas, hay que hacer de todo
+    -> Existe el inversor está dispuesto a invertir
+    -> Va a venir a poner plata
+    -> Cómo hacemos?
+    -> Con qué urgencia necesita esos $300?
+    -> Ahora tengo como espacio un salvador, necesito equipo, cito, contratar gente que haga data entry y sitio de contacto
+    -> Todo listo ya mismo, esa plata
+    -> Y mira: emitir las acciones en la BVI te va a llevar capaz un mes y medio
+    -> No puedo esperar ese tiempo
+    -> Entonces se empezó a inventar mecanismos que permiten que el inversor dé la plata y las acciones se emiten después
+
+### Safe (Simple Agreement for Equity)
+
+#### ¿Qué es?
+    -> White Combinator (incubadora/aceleradora famosa) se encontró ese problema
+    -> Si tengo al tipo que quiere poner la plata y la plata está ahí, la sociedad la necesita ya mismo
+    -> Pero todo el proceso de emisión de acciones es muy demorado
+    -> Una abogada de White Combinator inventó un documento llamado Safe
+    -> Simple Agreement for Equity (Acuerdo Simple para Capital)
+    -> Documento de dos hojas
+    -> Casi un estándar, lo usa toda la industria
+
+#### ¿Cómo Funciona?
+    -> Lo firman los dos (inversor y socios)
+    -> Dicen: "yo te pongo esta cantidad de plata que equivale a tantas acciones"
+    -> Vos la plata te la hacés ya mismo
+    -> Cuando sea lo que se llama el primer financing event (primer evento de financiación)
+    -> Puede ser: juntaste muchos inversores, la sociedad sale a bolsa, la sociedad se vende, lo que sea
+    -> En ese momento me metés las acciones
+    -> El tipo ya tiene garantizado que puso $300,000 y tiene 30% de la compañía
+    -> Eso va a aparecer en el capital
+    -> Es una obligación de la compañía emitir esas acciones
+
+#### Ventajas para la Compañía
+    -> Ese tipo tiene derecho a las acciones pero no lo tiene hoy
+    -> En las asambleas de accionistas no está decidiendo, opinando ni nada
+    -> Tenés la compañía sigue como siempre con esa inyección de capital
+    -> Un tipo tiene derecho a ser accionista en un momento futuro pero no lo tenés desde el día uno jodiéndote
+    -> Eso es el Safe
+
+### Convertible Note (Nota Convertible)
+
+#### ¿Qué es?
+    -> Sistema bastante más perverso que todavía se usa
+    -> Era también una especie de Safe
+    -> Remedio para evitarse toda esta discusión
+    -> Yo te pongo la plata cuando me des las acciones, esto me lleva un mes y medio
+    -> Todo se demora
+    -> El Convert Note era un documento de dos páginas
+    -> Básicamente decía: "yo te pongo esta plata hoy"
+    -> Pongo una fecha de vencimiento
+    -> Poné el 31 de diciembre
+    -> Yo el 31 de diciembre decido: si esta plata que puse me la das en acciones o si me la devolvés con una tasa de interés
+
+#### Por Qué es Perverso
+    -> Sistema súper perverso porque las compañías estaban desesperadas por plata
+    -> El inversor dice: "te doy la plata pero vos me decís cuánto vale"
+    -> Vos me vendiste que el proyecto vale todo esto porque va a pasar esto en el mercado
+    -> Sabés qué, yo quiero ver si es así
+    -> Te estoy firmando esto en junio
+    -> Me tomo seis meses hasta el final de año para ver si todo tu pronóstico es real
+    -> Y tu compañía elo o si pasa algo de acá a fin de año
+    -> Quedó claro que este proyecto tuyo no valía nada
+    -> El Founder está en un lugar espantoso porque recibe esa plata, le empieza a usar
+    -> Pero siempre con esa espada de amenaza
+    -> Si llegó al final el tipo me dice "no me la conviertas en capital porque no me interesa"
+    -> Vi otro que me gusta más, devolvémela
+    -> Y pongamos una tasa de mercado 5% anual
+    -> Vos te encontraste que esa plata que gastaste hacer ese producto ahora tenés que esperar de dónde sacás esa misma cantidad para devolverle
+
+#### Recomendación Actual
+    -> Habitualmente va a firmar un Safe
+    -> Como que la balanza de poder entre el proyecto y el inversor se acomodó un poco
+    -> Antes cuando era muy descalabrada el inversor tenía todo el poder
+    -> Firmaban Convert Notes
+    -> Hoy le diría que ni firmen Convert Notes
+    -> Tenés que estar muy desesperado por la plata o tener un proyecto que es muy difícil de vender
+
+### Otros Tipos de Inversión
+    -> Algunos inversores te dicen: "no quiero esperar"
+    -> Quiero mis acciones ahora porque quiero empezar a participar
+    -> Acuerdo de inversión que ya se hace la emisión de acciones enseguida
+    -> Depende del inversor
+
+### Tipos de Inversores
+
+#### Inversor Financiero
+    -> Dice: "este negocio va a andar, va a crecer"
+    -> Le pongo plata ahora cuando vale poco
+    -> Cuando vale mucho ese porcentaje mío que hoy me costó $300, cuando esto vale una fortuna vale mucho más
+    -> Quiere retornos en finanzas
+    -> Quiere que crezca, crezca, crezca y yo salga a bolsa o se venda
+    -> Esos inversores son habitualmente bancos, fondos de inversión
+    -> Retornos financieros pura
+
+#### Smart Money
+    -> De repente viene un competidor o una empresa que hace algo vinculado
+    -> Dice: "lo que ustedes hacen complementa perfectamente mi compañía"
+    -> Yo quiero unificar, quiero meter capital ahí para poder usar
+    -> Ejemplo: plataforma que calculaba casi en tiempo real el valor real de traer un container de un lugar del mundo a otro
+    -> Cotizaba en tiempo real
+    -> Era espectacular el algoritmo
+    -> Las navieras se arrancaban los pedazos para agarrarlo primero porque lo querían controlar
+    -> Porque vos mañana tenías una empresa de logística
+    -> Che, quiero traer un container de China
+    -> Ah, te sale $100
+    -> Para, pero yo entré a la plataforma esta y me dice que sale $70
+    -> Porque vos me cobrás $100
+    -> Nadie sabía los costos reales de las cosas
+    -> Ahora vos podías ver lo que salía un empaque
+    -> Terminó siendo único
+    -> Fue uno de los pocos de acá que se vendieron en muchísima plata
+    -> Pues las navieras se peleaban mordiéndose con eso
+
+#### Inversión Estratégica
+    -> Varios de ecommerce que ves crecer están apostando que va a venir MercadoLibre y va a decir: "yo te voy a servir para desarrollar todo a mi plataforma y comercio para América Latina"
+    -> O compro a este loco que ya tiene ingresado en los mercados
+    -> Eso es inversión estratégica
+    -> Cuando vos generás sinergias entre el inversor y la compañía
+    -> Invertir en ese caso muchas veces te piden: "no quiero Safe, no quiero Convert Note"
+    -> Quiero poner la plata y quiero las acciones ahora
+    -> Pues yo quiero un asiento en el board de directores
+    -> Quiero incidencia en las decisiones
+    -> Ahí va variando el tipo de documento
+
+## Evaluación de Compañías
+
+### El Problema de la Evaluación
+    -> Cómo hacemos cuando alguien le dice: "este tipo me va a invertir"
+    -> Que casar cómo se envía cómo es el loco
+    -> Me gira la plata mañana, no hay que firmar papeles
+    -> Y yo le tengo que dar las acciones
+    -> Todo eso va a funcionar así
+
+### Para el Inversor
+    -> Le pongo $X dólares, cuántas acciones me vas a dar?
+    -> Vos vas a querer siempre el mínimo, la menor cantidad posible de acciones para no perder control de la compañía
+    -> Él va a querer siempre recibir la mayor cantidad de acciones por su dinero
+    -> Dónde se define eso: en la evaluación de la compañía
+    -> Cuánto vale la compañía?
+
+### La Negociación
+    -> Vale $1,000,000 entonces $1,000 son 1%
+    -> Pero si vale $500,000 yo me lo compro más barato
+    -> Va jugando con ese tema
+    -> La opción en la cual el inversor busca bajarle el valor
+    -> El dueño de la compañía busca defender que su compañía vale más
+    -> Encontrar esos dos puntos de vista que se unan es bastante complicado
+
+### Por Qué es Difícil
+    -> Los Founders nunca tienen una dimensión real
+    -> Si me están convencidos que su producto es el mejor del mundo
+    -> El inversor siempre dice: "hasta tiene 9,000 agujeros que son un problema"
+    -> Hay muchos otros haciendo lo mismo
+    -> Entonces yo estoy dispuesto a invertir hasta X plata
+    -> Pero siempre y cuando me dé tal tal porcentaje
+
+### Diferencia con Otros Tipos de Compañías
+    -> Anteriormente en otros tipos de compañías es muy fácil decir
+    -> Mirá, voy a vender un supermercado
+    -> Cuántos locales tenés, cuántos empleados tenés, cuántos camiones hay
+    -> En qué zonas está, cuánta competencia tiene, cuánto factura por año
+    -> Eso son todos índices de facturación por año que te dicen cuánto vale tu compañía
+    -> Cuando es un proyecto nuevo y especialmente de tecnología que no está testeado
+    -> Que no sabés si el público lo adoptará
+    -> Ejemplo WhatsApp: no fue el primer servicio de mensajería
+    -> Probablemente no sea el mejor
+    -> Pero llegó primero por algún montón de razones
+    -> La gente de Telegram capaz que está diciendo: "yo salía tres meses antes"
+    -> Hoy WhatsApp era una mensajería conocida
+    -> El tipo que apostó y dijo: "tengo estos dos, qué pongo en WhatsApp o en Telegram"
+    -> Hizo una decisión muy diferente
+
+### Las Consultoras de Evaluación
+    -> Todas las grandes (Price Waterhouse, Deloitte, Angel, etcétera)
+    -> Tienen gente especializada en valuar compañías
+    -> Cuando empezó a crecer el universo tecnológico, quedaron
+    -> Si sacan humo de verdad es que todo humo
+    -> Vienen y te inventan, dicen cosas
+    -> La realidad que luego: yo le digo siempre cuánto vale tu compañía
+    -> Tu compañía vale lo que alguien está dispuesto a pagar por eso
+    -> Vos podrás defender en papel que vale lo que sea
+    -> La realidad es el tipo de se te firma un Safe de $300,000 por el 30%
+    -> Tu compañía vale $1,000,000
+    -> No hay discusión porque al final del día
+    -> Como si no, pero mi auto vos tenés un auto de colección
+    -> Vos decís que vale lo que vale
+    -> Te enterás de lo que vale el día que lo ponés en MercadoLibre
+    -> Ves cuánta gente te llamó hasta ese día
+    -> Es todo conjetura con las sociedades tecnológicas
+    -> La evaluación es complicada
+
+## Impuestos en Uruguay
+
+### Principales Impuestos para Empresas
+
+#### IRAE (Impuesto a las Rentas de las Actividades Económicas)
+    -> Empresas pagan IRAE que es renta
+    -> Es el impuesto que pagás sobre el producido de la empresa
+    -> Empresa que vende cosas: la ganancia que les queda después de pagar todo
+    -> Sobre esa ganancia les aplican el IRAE
+    -> Tiene una tasa del 25%
+    -> Todo lo que ustedes hagan viene del 25 le vive
+    -> Están en un país donde con esos impuestos se paga una excelente salud pública, educación pública, seguridad pública
+    -> Suecia cobra 25% también, todo esto funciona fantásticamente bien
+    -> Acá pagás 25%, la cuarta parte de la plata que ustedes generan se va en pagar impuestos
+    -> Pero ustedes traten de educar a un niño en la educación pública
+    -> Traten de atenderse en un hospital de salud pública
+    -> O siéntanse seguros en las calles con toda la seguridad pública que hay
+
+#### IVA (Impuesto al Valor Agregado)
+    -> Tasa del 22%
+    -> Graba la circulación de bienes y servicios
+    -> Cada vez que se compra o se vende algo lleva la tasa
+    -> Es del 22% (hay para algunos productos, especialmente canasta familiar, tasa reducida del 10%)
+    -> Pero quédense con el 22%
+
+#### Impuesto al Patrimonio
+    -> Aplica muy poco
+    -> Ojalá si el de mañana que se le impuesto al patrimonio
+    -> Es el activo fijo de la empresa de ustedes
+    -> Pagas el 1.5% anual de ese activo fijo
+    -> Para ustedes no es relevante porque en general el software no hay activo fijo
+    -> Hay equipos que muchas veces ni siquiera son de la compañía
+    -> Espacio de servidor tampoco es un activo
+    -> Piensen las fábricas, los supermercados, las empresas que tienen máquinas
+    -> Ahí tenés un patrimonio de la empresa en muchos millones de dólares
+    -> Pagan impuesto al patrimonio
+
+### IVA para Empresas de Software
+
+#### Cómo Funciona el IVA
+    -> No pagás 22% en todo
+    -> Pagás 22% en todo lo que vendés, lo facturás con IVA también
+    -> Al final el único que pagás es la diferencia entre IVA compras y IVA venta
+    -> Todo el IVA que pagaron cuando compraron lo descontás
+    -> Del IVA que cobran cuando venden
+    -> Y lo único que le pagan es la diferencia entre uno y otro
+    -> En realidad IVA de alguna forma es transparente salvo...
+
+#### Problema para Exportadores
+    -> Lo que pasa mucho empresa de software
+    -> Compran insumos acá, todo lo que compran acá le meten un 22%
+    -> Se tiene un costo adicional del 22%
+    -> Pero venden su software al exterior
+    -> Las ventas al exterior: vos les vendés sin IVA porque el IVA graba la circulación de bienes y servicios dentro del territorio nacional
+    -> Esto se va al exterior
+    -> Qué pasa: vos tenés ese dilema
+    -> Si pagué esto lo compré a $100 que con IVA me quedó siendo $122
+    -> Yo le agrego algo, lo vendo a $110 pero me terminé pagando $122
+    -> Le puse mi mano de obra y el precio de mi mano de obra
+    -> Ya yo estoy perdiendo plata
+    -> El IVA para las compañías que exportan mucho es muy anti económico
+    -> Tiene un impacto importante
+
+## Beneficios para la Industria del Software
+
+### Exoneración del IRAE
+    -> La industria del software está exonerada del impuesto a la renta
+    -> Trabajás en software, tenés una software factory
+    -> Tu mejor amigo del colegio tiene un taller mecánico
+    -> Los dos trabajan todo el día
+    -> Diferencia: de cada $100 que les viene a entrar a vos
+    -> Ustedes llegan los $100, pero conmigo el taller mecánico le llegan $75
+    -> Porque el pagan IRAE el 25 se lo llevó el estado
+    -> La ventaja competitiva que tiene la industria del software por respecto de cualquier industria en Uruguay es demencial
+    -> Vos tenés un 25% más de ganancia que cualquier otra industria
+    -> Todo demás industria el 25 se va ir mientras que el software no paga MXN $1 de IRAE
+    -> Todo lo que vos facturás es todo para vos
+    -> Es un beneficio que le da el estado como política de estado para desarrollar la industria del software
+    -> Beneficio brutal
+
+### Contractors y Aportes al BPS
+    -> Adicionalmente, como si fuera poco
+    -> Los aportes de seguridad social (lo que se paga el BPS en Uruguay) son altísimos
+    -> Por eso en Uruguay no tenemos industrias, no tener fábricas ni nada
+    -> Porque poner mano de obra, tener empleados en Uruguay es un huevo
+    -> En Uruguay cada por cada $100 que vos recibís en tu cuenta bancaria a la empresa le cuestan alrededor de $170
+    -> Más o menos el otro
+    -> Si quieren ganar cinco lucas, a la empresa le significan casi ocho
+    -> La diferencia es monstruosa
+
+#### La Realidad de los Contractors
+    -> El sector del software es la única industria en que permiten que prácticamente todas las personas que trabajan estén caracterizados sean los que llamamos contractors
+    -> Tipos que no están en plantilla como empleados
+    -> Principalmente no se pagan aportes
+    -> Salvo el CEO de la compañía capaz y la secretaria o la recepcionista
+    -> Todo el resto de la gente (programadores, desarrolladores, el contador, todo el mundo)
+    -> Le factura, le dice cuánto gana por mes, todos los meses te mando una factura de masiva
+    -> La empresa lo paga, ese es el coste que tiene
+    -> LIVA que que pagó después lo lo lo compensa con con ellos
+    -> Beneficio brutal porque no tiene aportes
+    -> ¿Es esto legal? No, esto no es legal
+    -> Lamento decir que no es legal
+    -> El ministerio de trabajo y la inspección general de trabajo hacen la vista gorda
+    -> Ahora la miran para otro lado
+
+### Relación Laboral Encubierta
+    -> Existe una llamada relación laboral encubierta
+    -> Qué es lo que dice: si yo te digo "facturarme todo el cuanto, arreglamos tus ingresos"
+    -> Cuánto querés ganar por mes, factura los meses
+    -> Si vos trabajás solo para mí
+    -> Yo soy el que te dice qué hacer (poder de dirección)
+    -> Trabajás solo para mí
+    -> Si se dan toda una serie de pautas que marca el derecho laboral
+    -> Ahí hay lo que se conoce como una relación laboral encubierta
+    -> Que quiere decir que es un empleado pero lo disfrazan de contrato
+    -> No soy un tercero que vende servicios
+
+#### En Uruguay
+    -> Si yo trato de hacer eso tipo del taller mecánico dice no
+    -> Todos mis mecánicos son contractors
+    -> Se abrieron su unipersonal y me manufacturan desde la unipersonal
+    -> Les pago pero no son empleados
+    -> Yo no tengo que pagar ni licencia ni aguinaldo y nada
+    -> No tengo que hacer aportes
+    -> Al otro día hasta el ministerio de trabajo partiendo el medio
+    -> Viene el BPS atrás a decir me debéis los aportes de toda esta gente
+    -> Estas son relaciones laborales encubiertas
+    -> Vos debés aportes de todos ellos desde que empezaron hasta hoy
+    -> Les tenés que pagar la indemnización por de todos
+
+#### En el Software
+    -> Hay cientos de compañías en Uruguay que tienen a todos los que de verdad son empleados
+    -> Porque son tipos que trabajan solo para la compañía
+    -> Que cumplen con todas estas premisas que les digo de la relación laboral encubierta
+    -> Es así clarísima una relación laboral encubierta
+    -> Sin embargo, nadie, nadie cita, nada quedan por esa
+    -> Todos tienen contrato de arrendamiento de servicios o de prestación de servicios profesionales
+    -> Facturan todos los meses, empresa paga
+    -> No mete MXN $1 aporte
+
+### Resumen de Ventajas
+    -> Industria en Uruguay no crece así con una exoneración de IRAE
+    -> Todo lo demás pagan 25% de impuesto, ustedes no pagan nada
+    -> Y además no tenés que pagar aportes que es lo que en general te hunde
+    -> La mayoría de las empresas son los aportes sobre el suelo
+    -> Si yo te doy esas dos ventajas, yo creo con una fábrica de cemento también es floreciente en este país
+    -> Porque no hay forma de no crecer
+    -> Si vos no pagás impuesto a la renta y no pagás BPS que son los dos mayores costos
+
+## Due Diligence y Contingencias
+
+### ¿Qué es Due Diligence?
+    -> Viene el inversor americano y dice: "me voy a comprar esta empresa"
+    -> Me encanta, está buenísima
+    -> Entonces me encontraron en San Olivier
+    -> Quiero que el video diligence
+    -> Due diligence es un análisis que se hace de la compañía
+    -> Habitualmente encargado por un inversor o por un vendedor
+    -> Para revisar que la compañía tiene las cosas bien hechas
+    -> Que no tiene lo que se conoce como contingencia
+
+### ¿Qué es una Contingencia?
+    -> Vos, por ejemplo, calculaste mal un impuesto
+    -> Tenés una contingencia fiscal
+    -> Cómo se calcula la contingencia fiscal: lo que tendrías que haber pagado más las multas y recargos hasta hoy
+    -> Vos tenías un empleado que nunca lo pusiste en caja
+    -> Cuál es tu contingencia por el empleado: todo el BPS que debés más
+    -> Yo me agarro la empresa le empiezo yo a desusar a ver si tiene bien calculado los impuestos
+    -> Si pagó todos los aportes
+    -> Si los empleados tanto todos en plantilla
+    -> Así están todos los sueldos pagados, las liquidaciones de vacacional
+    -> Le hace como una especie de tomografía a la empresa para ver que esté cumpliendo con todo
+    -> Porque el tipo que va a invertir o que va a comprar quiere asegurarse que la compañía que está comprando es una compañía sana
+    -> Pues se arrastra una contingencia de $1,000,000 de dólares con la DJI
+    -> Para que que debo comprarte el 30% de una compañía que tiene una deuda así
+
+### El Problema de los Contractors en Due Diligence
+    -> Cuando hace el video yo, cuando vez que a un video de ellas me quedo enfrentado esta disyuntiva
+    -> Si yo le digo al inversor che, mira que esta compañía tiene 20 tipos programadores desarrolladores
+    -> Nivel lo más todo que los tienen como arrendamiento de servicios
+    -> Los llamás contractors y en verdad son todos empleados encubiertos
+    -> Hay una contingencia con el BPS y con ellos mismos de de de de aguinaldo y todo eso
+    -> Que son fortuna por el BPS te manda con los la punta
+    -> Si yo le digo eso, el inversor no compra una sola compañía en Uruguay
+    -> Entonces qué pasa yo: de alguna forma levantar el punto
+    -> Decirle mira, está esta situación en Uruguay
+    -> Es una situación que está mansamente aceptada por todo el mundo
+    -> Nunca los contratos, los propios tipos
+    -> Cuando mañana se che mira, terminó el proyecto no labures más
+    -> No le hacen juicio y le reclaman una indemnización por despido
+    -> Pues saben que no lo puede contratar nadie
+    -> O sea, aceptan estas reglas de juego
+    -> El ministerio de trabajo no inspecciona ninguna compañía de software porque sabe que si va a inspeccionar se va a encontrar con relaciones laborales encubiertas
+    -> Ahora con el trabajo en remoto es muy complicado
+    -> Cuando haces un video diligence es bastante complicado el tema de levantar el punto
+    -> Pero vos tampoco querés decirle al comprador si sería muy malo
+    -> Si yo en ningún momento le digo que existe esta situación
+    -> Pues si mañana cambia todo esto, si cara pero quiero volver atrás
+
+### Ejemplo Real
+    -> Tuvo un cliente, una compañía de software acá la compró una compañía canadiense
+    -> Se pusieron el tema de les digo mira, es lo que hacen todas, todas están llenas de contractors
+    -> Ninguna está pagando aportes por nadie
+    -> Ponte a los empleados en plantilla y los canadienses dicen está bien hasta mal está mal pero no tan mal
+    -> Yo le mandaba ver el me canadiense si no lo entendía porque en verdad está mal pero como lo hace todo el mundo
+    -> Al final del día que esas cosas que decir está mal
+    -> Traer cosas es mal es un delito de contrabando para todo el mundo
+    -> Se trae un perfume, un par de botellas de far por pasa más
+    -> Espera entonces vas a eso que hicieron los canadienses
+    -> Compraron una compañía y al otro día este le dieron una orden en SEO local de que ponga a todos los que estaban en la relación laboral encubierta en plantilla en tres meses
+    -> Obviamente pagando aportes
+    -> Los ingresos que una empresa completamente rentable los aportes
+    -> A veces se convierte toda la tabla
+
+## Consecuencias para el Empleado
+
+### Del Lado del Empleado
+    -> Cuando le factura hay algunas cosas que considerar también
+    -> No estás aportando BPS
+    -> No te pagan aguinaldo
+    -> No tenés ningún beneficio del lado del entrecomillas empleado
+    -> Muchas veces lo que hacen es abrir la antipersonal que hablábamos
+    -> Está lleno de di nivel
+    -> Yo, como ya te digo, soy para para el para la compañía yo vos es un prestador de servicios
+    -> Eso es una empresa que me vende servicios que me vendés programación en tal código en tal idioma
+    -> Podría darme, soy como yo, yo soy el abogado
+    -> Le presto servicios legales
+    -> Le vendo negociación de contrato, una serie de servicios
+    -> El trabajo conmigo ahora, el día que dice che me voy con otro estudio jurídico
+    -> A mí no me tiene que pagar ningún tipo de indemnización porque yo no soy un empleado
+    -> Ahora si yo soy el abogado de la empresa, estoy en plantilla de la empresa y trabajo ahí
+    -> Tengo todos los beneficios del BPS
+
+### El Contrato del Contractor
+    -> Te dice mira, si yo fuera empleado tuyo ganara X plata por mes
+    -> Anualmente me ingresaría 12 salarios más licencia más aguinaldo y más vacacional
+    -> Que es un mes de entonces se calcula que era 13 con siete sueldos o una cosa así
+    -> Vos lo analizás, lo dividís entre 12
+    -> Y eso es lo que te factura mensualmente
+    -> La mayoría de las veces es como te dicen todos tus beneficios aguinaldo licencia ya están incluidos en lo que me facturas
+    -> Lo negocian mayormente así
+
+### Resumen de Ventajas para Empresas de Software
+    -> Van a poder trabajar en una industria que no paga impuesto a la renta
+    -> Que tiene un 25% de beneficios respecto de cualquier otra empresa
+    -> Eso es impagable
+    -> Por otra parte pueden tener una cantidad de gente trabajando para ustedes para sorpresa como contratos sin tener que pagar BPS
+    -> Y hasta ahora todo eso se ha permitido
+    -> Entonces disfrúcenlo y aprovechenlo
+    -> Yo calculo de lo van a mamar porque que pasa ese tipo de cosas
+    -> Permite que hay una cantidad de gente trabajando que si hubiera que pagar aportes no estaría o por lo menos no con los sueldos que tienen por la industria del software
+    -> Es una industria que realmente está con un salario importante
+    -> Yo me lo cuento todo el tiempo porque qué pasa
+    -> Vienen dueños de empresa me dicen sí, me están pidiendo fortunas
+    -> Y alguien se lo está pagando
+    -> Por ahí una empresa de software uruguaya no lo puede pagar pero MercadoLibre sí
+    -> Entonces se lleva ese programador que es buenísimo se va para Meli que paga mucho más de lo que paga Uruguay
+    -> Entonces me piden estos co Plans y beneficios de acciones, etcétera para quedarse con esos empleados
+    -> Que sino se ha escale de salarios en software que no lo tiene ninguna otra en el Uruguay
+    -> Porque por estas cosas son empresas que al no pagar aportes pueden poner sueldos artísticos
+
+## Protección de Propiedad Intelectual y Marcas
+
+### ¿Por Qué es Importante?
+    -> Cuando yo voy a invertir a una compañía normalmente lo que me interesa es lo que hacen es su producto
+    -> Yo quiero saber, quiero tener la seguridad de que yo estoy poniendo la plata
+    -> Esta empresa que esta empresa es la dueña de esa plataforma, inteligencia artificial de ese software
+    -> Quiero saber que estoy poniendo en la plata en la compañía que es la dueña de eso
+    -> Cómo me lo prueba: decirme sí, mira yo tengo hecho todos los desarrollos de software están hechos a nombre de la SAS o de la BVI o la compañía general que sea la principal de su
+    -> Esto quiere decir que cuando ustedes agarran uno de estos contractors
+    -> Estos que dijimos tercero que le vende servicios que no son empleados
+    -> Tiene que asegurarse que el contrato que firmes el ojo deje bien en claro que todo lo que él hace para la compañía queda a nombre de la compañía
+    -> Se conoce como una cesión de derechos
+
+### El Terror del Inversor
+    -> Cuál es el terror del inversor
+    -> Invertí acá o compré esta compañía la arreglé la hice y la voy a sacar a bolsa
+    -> Y el día que crecí por sacar a bolsa me aparece Bautista apoy ya se dice yo desarrollé toda la parte de de video de esta plataforma
+    -> La hice yo acá hasta en los mails que lo pr yo en ningún lugar firmé una cesión de derecho
+    -> Así que hay un porcentaje de esta empresa que es mío
+    -> El paso se quiere pegar un tiro una rodilla porque la idea era que esto no pasara
+
+### Solución: Cesión de Derechos
+    -> Muchas veces cuando van a invertir les van a decir che necesitamos una estructura
+    -> Esta van a decir bueno, muéstrame que las están protegidas
+    -> Que la propiedad intelectual la creación intelectual que ustedes hicieron con sus programas y todo eso
+    -> Esta toda metida entre la compañía
+    -> Normalmente son tres founders que que que codifican los que programan
+    -> Ahí no tenés mucha duda
+    -> El problema es cuando uno le dijo al primo que era buenísimo en en en hacer tal parte que se la haga
+    -> Se le encargó el loco la hizo
+    -> Hay emails que muestra ni más armarme esto para me echarlo acá
+    -> Hay cruces de mails explicando que sí que no que cambiara le faco
+    -> No hay nada firmado en ningún lugar
+    -> Hay una cesión de derechos
+    -> Ese primo es una contingencia mortal
+    -> Es una brutal porque él es entre comida dueño de parte de ese proyecto
+    -> Pero ningún lugar firmó que le cedería los derechos genero
+
+### Qué Hacer
+    -> El inversor te va a preguntar 20 veces estás seguro de no participó nadie más que ustedes
+    -> Llevo a biblioteca nacional el código fue después me meto en esa parte pero solo no es
+    -> Te aparece después un fulano que tiene los mails para probar que él participó el proyecto
+    -> Ahí se meten en un lío descomunal
+    -> Asegúrense de que cualquiera que les dé una mano le firme cesión de derechos
+    -> Le piden algún abogado a mí o me llaman se consiguen
+    -> Son dos párrafos en los cuales el tipo dice yo estoy haciendo algo para la empresa tal
+    -> Por la presente de claro que toda creación intelectual desarrollada queda a nombre de todos los derechos son de la empresa
+    -> El inversor con ese documento me quedó tranquilo
+    -> Mañana dice che yo trabajé y yo quiero parte de no señor usted se vio los derechos porque usted no puedo hacer nada
+    -> Cuando tengan un proyecto le pidan algún amigo le hace la cesión de derecho busquen ser GPT
+    -> Pidan un abogado pero hagan loco que si no corre este riesgo
+    -> Cuando yo venga a ver si realmente tienen todo hecho pasa que el tipo se te fue a vivir a otro país o que no está
+    -> Yo 1000 veces he tenido salida para seguir gente para que me firmen la cesión de derechos
+    -> Pero se fue a vivir a la India pues se hizo fue acá yo que se hay ustedes no no es tan sencillo
+    -> Háganlo en el momento
+
+## Friends and Family (Inversión de Familiares)
+
+### El Problema
+    -> Ustedes tienen un proyecto están arrancando y dicen che necesitamos a comprar registrar la marca o tenemos que comprar espacio un servidor necesitamos $1,000
+    -> También el abuelo de uno y dice ta yo estoy para apoyar este desarrollo
+    -> Les doy 10 lucas en la el abuelo le manda la plata a la cuenta compran todo esto
+    -> Mi abuelo se muere y las cosas hacemos eso agarramos mors
+    -> Cuando se muere vienen todos sus primos y dicen che cómo van el proyecto
+    -> Cómo van nuestro plata en forma
+    -> Está bien la vamos a andar a inversor un sin para para ti
+    -> Qué estás a 10 lucas del abuelo la herencia eso que te dio no es tu eso es nuestro eso es de todos nosotros
+    -> Esa plata y va a ser parte de la sucesión
+    -> O sea que ahora esos $10,000 del abuelo que son el de la compañía es de toda la familia
+    -> De todo lo que somos sucesores
+
+### La Solución
+    -> Cuando les va a poner plata también firme en en un papelito
+    -> Esa plata que puso el abuelo era un préstamo el día que la compañía de bien lo devuelven
+    -> Era una donación que le hace a ese nieto
+    -> Pero asegúrense que cuando están con friends en family obteniendo inversión para sus proyectos
+    -> Si es una locura cómo le viene a decir a mi tío a mi padrino me puso decirle la voz me dijo le haga pues si no
+    -> El día de mañana alguien cuando vos te morí si usted la sucesión va a venir impugna a qué título dieron ese dinero
+    -> Va una tontería pero los hechos sucede
+    -> Si por ejemplo es una donación yo le dono a mi sobrina a mi dejada lo que sea la suma de tanto
+    -> Vos el en el proyecto te lo regalo podría haberte comprar un auto lo que sea es lo posible
+    -> Es una donación entonces ahí no la no ya ya no es de todos es tuya pero no a vos
+    -> Es un regalo es este es un préstamo pero capaz el día mañana se lo tenes que devolver a los demás sucesores
+    -> Pero digo darle una categoría no dejarlo sin sin identificar como qué es por correr ese riesgo que te diga no mira es parte de los derechos sucesorios entre ahora somos todos tus primos in fumables
+    -> Son todos tus socios en tu proyecto y opinamos y y es sin cosas central
+
+## Registro de Marcas
+
+### La Recomendación
+    -> Muchas veces esto me acordé por por el otro día había una situación similar
+    -> Ustedes tienen un proyecto están arrancando y dicen che necesitamos a comprar registrar la marca
+    -> O tenemos que comprar espacio un servidor necesitamos $1,000
+    -> También el abuelo de uno y dice ta yo estoy para apoyar este desarrollo
+    -> Les doy 10 lucas en la el abuelo le manda la plata a la cuenta compran todo esto
+
+### Problema Común
+    -> Me encontré con proyecto que ya tiene un MVP y en un pitch precioso todo eso
+    -> Nunca se les ocurrió buscar a ver si el nombre que usan ya está en uso por otra compañía de un rubro similar o no
+    -> Y esto es importante porque se puede no solamente porque les va a anular el el el logo y la marca creativa que hicieron
+    -> Si como se pueden meter un lío la otra compañía que ya lo tiene los puede demandar por estar compitiendo usando su propia marca sin saber
+    -> Por incluso pueden llegar a no cuesta mucho
+    -> Por ejemplo en estados unidos el us PPO que es el United states patent trade office tiene un buscador
+    -> Entonces vos elegís un nombre para tu compañía busca buscarlo ahí a ver si registrado
+
+### Cómo Funcionan las Marcas
+    -> Las marcas funcionan por categoría
+    -> Vos vení voy a registrar esta marca este nombre con este logo en estas letras con este dibujo
+    -> La categoría tal caral que son desarrollo software tecnología y las categorías que les interesan
+    -> Por qué porque capaz que hay alguien con un logo parecido con la marca el nombres igual que cambia una letra en el rubro gastronomía
+    -> Entonces ahí no ten un conflict
+    -> Entonces es algo que sea una marca muy grande está claro que no te estoy hablando de este poli la marca de tecnología no del restaurant lo de poli haga la vuelta así
+    -> Ahí no hay un conflicto después de las marcas grandes pues yo que sé coca cola coca cola la registra en todas las categorías
+    -> Por qué vos vos mañana sacas un auto y le pones el modelo coca cola y lo tipo no tienen registradas en la categoría automotriz
+    -> La marca vos podrías y bac no quiere que nadie se beneficia de de lo conocida que es la marca
+    -> Entonces las marcas grandes en general registran en todas las categorías
+    -> Las compañías chicas registren las que son este su ru
+    -> Pero tómense la molestia hacer una búsqueda porque me he encontrado no pocos que ya tenían el nombre beach todo preparado
+    -> Y hay otra compañía que más en argentina usando el mismo nombre desde antes
+    -> Por qué porque en el tema marcas de vuelta por las ramas fue estás más entretenido
+
+### Ejemplo: Marcas de Canales de TV
+    -> Antes de que llegar el cable Uruguay hace muchos años cuando no había visto la gente miraba de televisión por cable
+    -> Le llegaban los 70 canales internacionales antes eran cuatro 10 12 cinco
+    -> Cuando llegan los canales internacionales eh mucha gente se avivó y que hizo fue registro por ejemplo y fo este film arts nombres de canales
+    -> Van y las registran en Uruguay
+    -> Cuando llegue el cable van y les iglesia no señor usted no puede poner esta señal pues yo tengo registrado el nombre esp dice como si mira acá tengo el papelito
+    -> Dice que yo registré y en Uruguay que no fue en en Uruguay
+    -> Si no me lo compran a mí eso era una estafa
+    -> Entonces ahí se cambió el modelo
+
+### First Use (Primer Uso)
+    -> Si vos podés probar vos podés acreditar vos podés generar prueba que demuestre que vos venías usando esa marca o ese lo lo que sea desde antes que el tipo en la registró
+    -> Le bajan el registro y te lo dan a vos
+    -> El tema es básicamente acreditar entonces es lo que llama el modelo de first use
+    -> O sea que no todos los países lo adoptaron
+    -> Ejemplo problema cliente muy conocido en china le están copiando el producto
+    -> Hicimos una cantidad de juicios y cosas que es complicadísimo china para llevar las cosas a la corte
+    -> Y no pudimos porque china no tiene entonces por más que le acreditamos que este producto que hace mi cliente está en estados unidos y en un montón de marcados desde antes
+    -> China dice acá el primero que vino que jefe la marca fue este señor
+    -> Así que la Marc de y le quiere cobr dólares a mi cliente para transferirle la marca
+    -> Mi cliente y dice oh yo no voy a pagar esa guia por lo que mío
+    -> Cuál es el problema grande que mi cliente fabrica en china entonces el tipo lo que está empezando como amenazarlo con decir mira que yo puedo presentar una denuncia
+    -> Y decir que vos estás fabricando tu producto con ese nombre en china y el nombre ese lo tengo registrado yo
+    -> Con lo cual le podría suspender el bar que le podría complicar la vida
+    -> Mi cliente lamentablemente está teniendo que empezar a evaluar si no le termina pagando las 70 Lucas por la marca que en verdad es es una absoluta estafa pero son cosas que pasa
+    -> Les digo que se aseguran de revisar la que la marca lo lo que van a querer usar no ya en uso en otro lado
+
+## Acuerdo de Accionistas (Shareholder Agreement)
+
+### El Problema que Resuelve
+    -> Ustedes tres tienen una sociedad empiezan a arla les va bien tienen un as sas tienen 33% cada uno y les se está yendo no estable
+    -> Y un día tienen una disputa por un tema completamente trivial porque este fútbol ah o no dijo el peña no era mejor el otro se ofendió espantosamente antes esa mentira
+    -> Y decidió que iba a regalar sus acciones al primero que pase por la puerta que justo era el principal competidor
+    -> Los otros dos dicen vos no puedes hacer eso no puedes regalar las acciones mías a mi competidor que además si tiene las acciones
+    -> Si esa accionista va a poder ver toda mi información de precios de clientes de contratos de todo eso toda una cantidad de cosas igual no que es que pasa
+    -> Pero no podrías impedirlo tranquilamente cada uno no hoy en su 33 si lo quiere prender fuego regalarlo donarlo o hacer lo que sea no lo podés impedir
+    -> Cómo se to las decisiones se toman por mayoría lo que pasa cuando son los Founders y tienen 50 cada uno
+    -> Yo me he encontrado con compañías que vienen y viene los tres chicos che bueno nosotros hacemos Ciro otro y ayudame y no se que yta y ustedes como están distribuido tienen en suss iguales
+    -> Y vos ve que uno está diciendo siso claro y otro estáis está como pensando y dice no sé bueno ya esto lo empecé yo con él y a vos te llamamos después
+    -> Entonces capaz que no viste a veces ni siquiera lo piensan están trabajando en un proyecto y nunca se ponen a pensar che me aportas igual al del otro
+    -> O sea somos iguales en esto o no pues no siempre es este capaz es uno porque es buenísimo haciendo una parte de tecnología
+
+### Los Tres Capítulos Principales
+
+#### 1. Gobierno Corporativo
+    -> Lo que hablamos como se toma las decisiones qué mayorías tiene
+    -> Yo tengo un directorio de de cuatro o tener una situación de bloqueo que dos vo una cosa y dos o otra uno dicen se vamos con una oficina en salto porque allá hay un desarrollo brutal
+    -> Y otro dicen ni loco habría una oficina en saltos tiene esa discusión dos y dos dos y dos no se ponen de acuerdo
+    -> Normalmente son los acuerdos de accionistas en la parte de gobierno corporativo preven mecanismos de desbloqueo
+    -> Por ejemplo dicen tal gt seleccionado como presidente tiene doble voto entonces en caso de bloqueo es el presidente el que termina decidiendo que decisión se toma
+    -> Todo ese tipo de cosas viene el inversor dice les ve por un plat así que ahora yo quiero un asiento en el bord quiero que el acuerdo accionistas reconozca que yo esta plata y que yo voy a tanar para siempre un asiento en el directorio
+    -> Todo ese tipo de los temas relativos al gobierno y la compañía cómo se toman decisiones
+    -> Acuerdo accionistas o si no es un de pelote o sea los escudo uno la representación quién representa la compañía
+    -> Si son tres fondos cualquiera de ustedes individualmente entonces vas vos y pedí un préstamo en el banco para la compañía para agarrar la plata y de compras un auto y los otros dos capaz ni se enteraron
+    -> Pero como lo estatuto dice que la representación será ejercida en distinto mente por los tres entonces en un sharehold agreement que la parte de gobierno corporativo pones que la compañía será representada por dos de los tres directores en cada caso
+    -> Esa requerir a Alan viene uno un inversor invierte y dice tal yo pongo plata cosa ahora cualquier lesión del directorio un directorio de cinco donde toma la decisión tres directores el puede poner una cláusula que diga que uno de los tres siempre tiene que hacer su director
+    -> De esa forma el se garantiza que tiene una especie de derecho de veto pues hay una decisión que va a tomar el directorio la toman los tres sin incluirlo a él esa decision es celular todas esas cosas se se regula en el gobierno corporativo de la corre de accionistas
+
+#### 2. Transferencia de Acciones
+    -> Lo que les has contado recién este tiene que haber como reglas verdad entonces supongamos que tenés tres socios tienen cada uno tiene sus acciones y de repente uno se pudrir y se quiere ir vamos un vol en al carajo
+    -> Y voy a regalar las acciones a mi hermano entonces vos tenéis un negocio llama el right of first software el derecho de primera oferta antes de irte tenéis la obligación de ofrecerles a los otros socios las acciones para que las pon en ellos antes de dárselas
+    -> Un tercero es una forma de mantener lo viene de un de una teoría muy vieja de que entre los socios existe una cosa se llama afecto societatis pues siempre algún latinajo que tenemos que meter de estas el afecto societatis es esa esencia que hace que los tres Founders estén juntos
+    -> Es el critero asociativo es esa afecto viene de afecto socit o sea es la intención de estar asociado para algo para no perder ese espíritu trayendo un tercero que capaz que no tiene nada que ver tienen esta obligación de antes de venderla para afuera las acciones se las ofrecen a los eso está siempre nos acuerdo accion que se yo a usar el primero en tener derecho a comprarlas
+
+##### Right of Force
+    -> Cuando uno de los socios se quiere ir según punto similar que es el right of force viene un fulano 17 compra tus acciones y vos se las ques vendar pero está esta otra obligación de of expresarlas entonces qué pasa si tetelo como ofrece tremendo precio y nosotros lo lo iguala
+    -> El dice que vos si tenés una oferta de afuera por tus acciones le das el derecho a los otros socios a igualar ese precio a decir si él paga lo mismo que te están ofreciendo afuera te las compran tus socios ta
+    -> Es como un derecho de igualar me te afuera te ofrece 100 bueno si ellos llegan a 100 se las quedan ellos aunque el otro te haya ofrecido primero
+
+##### Tag Along y Drag Along
+    -> Después tenés una cosa se llama el taga long que el drag along que también son muy tradicionales qué es el taga along su mente tiene una sociedad que de tres tienen 45 45 10
+    -> Ah vino un comprador y les va a pagar una fortuna por la compañía va un precio nunca más van a recuperar pero vos lo di por algún motivo que cuando semos si no nos se si yo mi dice y que loco con se lo vend y en cuanto en mi vida y nosotros dos desesperado veces con este precio no lo vemos nunca más en la vida
+    -> Con un taga along perdón con un drag along las es una cláusula que preve que si será ciertas mayorías los del 90 pueden obligar al del 10 a vendar aunque él no quiere porque de esa forma pensé en compañías muy polarizadas de repente tenéis un tipo que tiene el cero como más que una venta de una compañía grande se que completo
+    -> Depende de que haya un loquito que capaz que ni siquieras que no quiere vender capaz que no lo encontrás el tipo con él era un desarrollador con un top shop plan estuvo unos años trabajando llegó el cero como a cinco lo tiene emitido tiene el cero como cinco de la compañía pues el loco es el que les decía que se fue de faqui a la olimpia
+    -> Bueno le encontr pa tipo firme entonces dice no yo no sé si se puede te puedo vender el por percent pues este cero como cinco no tengo su consentimiento bueno con un ragga long puedes arrastrar a que venda a la minoría
+
+##### El Tag Along desde el Otro Lado
+    -> Y el taga long es parecido pero desde el otro lado viene este señor que quiere invertir y va a pagar un disparate de plata por el 10 por percent y como entró como amigo de el como lo llamo a el escuché de cobro por de pago otra fortuna y ustedes dos que tienen en el otro 90 es el para pero yo también quiero log ese valor por acción que le están pagando es una locura
+    -> Entonces con el taga along lo que hacen es como que se trepan a esa venta y el que se vende se compone ese percent vende cuatro y medio que tiene 45 cuatro y medio tiene 45 y el uno el que sea proporcional la cantidad que se vende para que todos aprovechen empresa
+    -> O sea que esos cuatro institutos ta y along en todos los contratos de acuerdo accionistas porque para asegurarse de proteger a los accionistas tienen que tenerlo porque esa forma se evitan como te digo que un loquito que tiene un porcentaje mínimo te frustrata una bruta venta que le des regalen las acciones a cualquiera y todo eso sea toda esa parte de transferencia de acciones es fundamental
+
+#### 3. Asuntos Relevantes
+    -> Otra cosa que se regula en los acuerdos especialmente en los de los Founders qué pasa si te vas temprano yo soy un inverso vengo ad les ven invertir plata pero que pasa pongo como exigencia que los tres Founders que son los que están sacando adelante la compañía haciéndo funcionar tienen que estar tres años dedicados solo a esto
+    -> Y si se van antes tienen que dejar sus acciones a un precio zurdo de mi ah porque que pasa bueno si yo me mito un montón de plata acá y los tres fulanos que estaban se me fueron a trabajar a Google mercado libre donde sea y yo invertí porque estos ofrecen a la que venía sacando el proyecto delante y me quedo sin proyecto
+    -> Entonces pones ese tipo de cláusulas para prever eso o poner los Founders empezaron y uno después decide que se va qué pasa percent se lo lleva tenés una compañía que tenés dos tipos laborando y tenés uno que ahora trabaja de programador para para marcado libre y es dueño el tercio de tu compañía y no trabaja para tu compañía tiene todos los derechos pero prácticamente ninguna obligación no en esos casos tenés un pacto de re compra
+    -> Si este Founder se va antes de que pase x tiempo tiene que mandar las acciones a a dos presos o sea esos son dos de los grandes temas de acuerdo accionistas gobierno corporativo transferencia acciones y el último ya vamos asuntos relevantes
+    -> Muchas veces con si che pero a mí me pasa como abogado yo se cantidad de proyectos no me dice mira no tenemos plata para pagarte por eso es carísimo entonces lo que te ofrecemos es porcentaje de mi compañía y ponerle que yo el proyecto lo digo que está bueno que puede funcionar le digo que sí pero claro me dan un percent las sociedades como ya saben funcionan por mayorías
+    -> Ah entonces qué pasa viene la mayoría vos con el de cuando jamás no vas a tomar una decisión y veje la compañía se empieza a ir por lugares que vos no estás de acuerdo y no podés hacer entonces en el acuerdo de accionistas ponéis una lista lo llama asuntos relevantes y esos asuntos relevantes requieren mayorías especiales entonces yo te digo mira sí yo acepto que los honorarios míos me los pagues con acciones yo me quedo con el 15 de la compañía ahora en el acuerdo accionista yo pongo tú una serie de asuntos relevantes requieren el voto afirmativo del no percent de los accionistas de esa forma yo con mi 15 seguro van a necesitar que yo esté dentro de los que a probado qué qué decisiones son endeudar la compañía nombrar c luis de cambio co o el CFO este abro nuevo mercado tenemos que abrir en México no para mí es Colombia pa pa pa toda esa discusión la decisión todas esas grandes decisiones son asuntos relevantes pone mayorías especiales para salvaguardar a los minoristas pues si no no tienes sentido invertir una compañía en a cual no tenés ninguna incidencia en los te la compañía entonces con esto lo que logras es tener la capacidad entre forma de entre comidas a un derecho de veto de decir no mira tiene que estar mi porcentaje sino la decisión no se todo eso también es parte relevante de esos estar al capítulo acuerdo accionistas de las tres cosas que se gustan cómo se regula el gobierno corporativo cómo se transfieren las acciones y la parte toma de decisiones relevantes las mayorías especiales que requieren estos son cosas que tienen que tener sí o sí
+
+### Cuándo Hacer el Acuerdo de Accionistas
+    -> Yo no acuerdo che entonces mira bueno muy bien cuando venga de fal aleja que venga algún fondo de inversión gigante invertir eh yo te llamo y vemos lo del acuerdo no h hagan el acuerdo de accionistas ahora háganlo en seguida que empiecen su compañía o un Founder a porque porque ustedes no quieren tener todas estas discusiones cuando eh viene un inversor dicen que hacemos hacemos sex esto hacemos aquello si ya está predeterminado como va a funcionar o lo que les digo del enojo de la pelea o de que uno diga a che yo yura a otro lado no para maestro gus es un lo que dice bot hay que estar presa años acá y si te vas debajo lo me las acciones para yo me busca el el link clase no las acciones son mía yo me voy a log otro lado y además me la llevo la forma de prevenir esos problemas que hoy parecen que no están pero mañana van a estar mañana van a estar porque se no se se van a a casar se van a ver en pareja necesitan bancar una casa y pa eso necesitan mucho más plata de la que les da este proyecto y les ofrecen un buen aburro y dicen lo dejo me voy con el laburo bueno los otros dos no van a estar contentos entonces todas estas cosas papelitos el acuerdo de accionistas no es algo fantasma que está allá en el horizonte es algo que tiene que tener represente pues es lo que regula es lo que dice que porcentaje tiene cada uno es uno de ustedes está en un proyecto con dos más y eso pero nunca se sincera des mira el otro día me pasó con un no empecé de inteligencia oficial que ya está bastante evolucionada digo que están en plaza que le vende a clientes grandes como estos que tiene contrato en tanto sonan los finlandeses los de los de upm eran contrato siniestros o sea con la empresa que está bastante desarrollada y me pidieron recién ahora para ser el fondo sagri entonces yo lo voy haciendo no y acá claramente tenés uno que tiene poner el el 60 otro 25 el otro entonces con estoy viendo las cláusulas decir qué pasa si se van antes yo voy poniendo y el loco me dice no para para mí no me incluyo en el yo si me voy a antes pero es un acuerdo accionista se aplica a todo tap pues yo soy el dueño esto pa lo que tiene 25 y 15 a mi no me vas a venir a decir que sí claro que sí poco o sea son tus socios esto me explico todo ese tipo de discusiones pues ya te digo el lo cotidiano el el el que la fundó el que después tra joé que trajo al otro se para como en un lugar de haceme venía abogado haceme el acuerdo para regular todo esto ta pero a mi no me aplica yo no estoy desobligado esto yo si quiero tener un proyecto paralelo no no podés el non-comp que tiene este contrato te aplica vos también el locking de trabajar solo para esto te explicaba vos ah no yo no quiero bueno Pablo hablarlo con nosotros ellos quieren que saber que están entrando una empresa en la cual ellos tienen todas ciertas obligaciones pero vos como so que era fundo inicialmente no está regulado por ninguna entonces son temas que hay que que hay que atender
+
+## Resumen y Recomendaciones Finales
+
+### Lo Que Se Vio en la Charla
+    -> Vimos societarios tipos de sociedades
+    -> Vimos impuestos
+    -> Vimos las estructuras
+    -> Vimos todos los enormes beneficios que tienen la industria del software
+    -> Aprovechen los como le digo
+    -> Vimos temas de protección de propiedad intelectual
+    -> Vimos temas de marcas muy por arriba
+
+### Mensaje Final
+    -> 34 un éxito este no los mareo con más cosas pero la idea es que el día de mañana cuando escuchen cualquier estas cosas que hablamos le suenen alguna vez le escucharon que no les digan mañana seis que no les digan ser no tenga idea a John de la clase de martes con arm armez sorprendió que ya me escribieron dos o tres uno que tiene un proyecto con no sé qué para saber si le sirve a hacerlo los hijos o vas a decir no son cosas tan lejanas todo este panorama el tema impuesto todo eso está bueno lo tengan presentes porque no sé si hay en esta carrera pero en un memento les tiene que explicar cómo hacer un business plan a la hora hacer un business plan ustedes calculen cosas decirme a esto va a funcionar porque como me va a entrara cuanta entra cuantas sale y bueno si ustedes están en una industria donde puedan ser todos contractors y no pagan aportes ese es un modelo de de este negocio si yo tengo una empresa donde cada empleado que tome tengo que calcular los aportes es otro me vin plan si ustedes no pagan ideas ahora la exoneración dirá y vuelvo muy brevemente a esto no es que se la dan porque dicen soy empresa de software tienes que cumplir con ciertas características que están asociadas a utilizar empleo uruguayo tomar sus insumos de acá porque la idea no es que yo me pongo en una empresa de software en una software factor y contrato todos programadores en argentina que total lo pueden hacer en remoto desde allá y menciono de ir a ter dan y vos contrata gente acá la idea que es un beneficio que te da el estado que vos genera en entonces a la hora de planificar todo eso la idea es que tengan una idea general no pretendo que salgan costado ni abogado simplemente que todo esto no los tomé sorpresa usted capaz que están con la cabeza admitida en tecnología y en aspectos absolutamente técnicos y la idea es que también te quiero decir vos a la calle y hoy con la empresa y la deje ahí el bps cada cachetazo o sea el día uno entonces está bueno que sepan que todo esto existe hay mecanismos que le pueden hacer mucho más eficiente de su compañía y en lo de siempre asesora en sedes de día uno porque van hacer algo que personal todo esto y no terminar no en alguna parte de acá primeramente deberían estar si tienen cualquier consulto o lo que sea me inscriben ahí ah y este y yo con tiempo pero en algún memento respondo y este y se sacan cualquier duda
+
+### Sobre las Ventajas de la Industria
+    -> O sea que vimos societarios tipos de sociedades vimos impuestos vimos las estructuras vimos todos los enormes beneficios que tienen la industria del software aprovechen los como le digo vimos temas de protección de propiedad intelectual vimos temas de marcas muy por arriba y ahora me voy al último tema APLA sus pies en forma se contento pues ya vamos a terminar y es lo que conoce como el acuerdo accionistas que también es el Holder o el Founders
+
+### Próxima Dinámica
+    -> Probablemente la clase que viene va a ser la segunda dinámica
+    -> Ah igual que la dinámica uno no hay que preparar nada es una dinámica en equipo
+    -> Da a ver que hacer un trabajo en particular acá en clase
+    -> No sé si iba a venir yo o va a venir Hernán que es el otro docente de esta materia
+    -> Ah es lo mismo porque en el caso de mal está también acostumbrado a trabajar con esta una dinámica
+    -> Ah y acuérdense que la dinámica dos junto con la uno componen ese 15 percent de actitud en pla de qué tanto no está percent definida pero muy probablemente tenga que ver con definir un plan de negocios
+    -> Ah similar mirar lo que hicimos en la primera que había que trabajar una idea después de presentarla acá sí acá es me estamos un poquito más a fondo en una idea de una idea también ta en un proyecto y defender el proyecto alto el director ah ya no no es tengo 30 segundos sino que ahí sí voy contar un poquito este a a mostrar algo más de plan ah algo más de qué es lo que voy a hacer cuánto pienso ganar cuánto cuánto pienso que lo está y habilidad económica ah buenos dudas lo que están remoto algo a comentar si no ya interesante que no muy interes de la charla uno nunca y se imagina cuando van a emprender todo esto el cual el cual y además en su mundo no él en una hora y media capaz que resumió este bueno con Oliver fue tal cual con Oliver con tenemos la idea de eh crear una materia digamos opcional que tenga hablar con todos estos temas no profundizar en cada uno de estos temas hay que mencionó un el ACTIV tipo un electivo o un elect estilo sí bueno dejamos por acá entonces nos vemos
+

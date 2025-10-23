@@ -1,0 +1,438 @@
+# Introducción a la Materia: Desarrollo de Productos de Base Tecnológica
+
+## Presentación del Curso
+
+### Características de la Materia
+    -> No es una ciencia exacta, no hay verdades absolutas
+    -> Requiere participación e interacción en clase
+    -> Trabajo en equipo con reflexión conjunta
+    -> Clases prácticas con ejercicios sobre casos particulares
+    -> Posibilidad de trabajar en grupos durante las primeras semanas
+
+### Concepto de Desarrollo de Productos de Base Tecnológica
+    -> "Desarrollo" podría llamarse "creación" para evitar confusión con codificación
+    -> No se trata únicamente de desarrollo de software
+    -> Se enfoca en el proceso de discovery (descubrimiento)
+    -> El discovery consiste en descubrir qué desarrollar, qué problemas resolver
+    -> Es una de las partes más complejas del proceso, especialmente para desarrolladores
+
+## ¿Qué es un Producto de Base Tecnológica?
+
+### Definición
+    -> Es una solución a un problema que tiene impacto y sirve para algo específico
+    -> Tiene beneficios para quienes lo usan
+    -> Es de base tecnológica porque su valor principal es viable por la tecnología
+    -> No solo usa tecnología, sino que se construye y evoluciona a partir de ella
+    -> Puede tener objetos físicos, servicios y modelos de negocio asociados
+    -> Su valor no es la tecnología en sí, sino resolver un problema que no se podría resolver sin tecnología
+
+### Características Clave
+    -> Es escalable y tiene alcance global
+    -> Puede transformar industrias y crear nuevos modelos de negocios
+    -> Debe innovar y evolucionar constantemente
+    -> Requiere conocimiento tecnológico para su creación y evolución
+
+### Tecnologías que Viabilizan Productos de Base Tecnológica
+    -> Internet y acceso a datos
+    -> Computadoras móviles
+    -> Tecnologías específicas que permiten la solución
+
+## Análisis de Ejemplos
+
+### Caso: Uber
+#### Problema que Resuelve
+    -> Conectar usuarios con conductores en forma directa
+    -> Brindar transporte rápido y cómodo bajo demanda
+
+#### Componentes de la Solución
+    -> Aplicación para usuarios (clientes)
+    -> Aplicación para conductores
+    -> Servicios de geolocalización
+    -> Validación de conductores (licencias, seguros, controles)
+    -> Sistema de pagos digitales
+    -> Servicio de soporte
+    -> Consola de administración
+    -> Análisis de datos y telemetría
+    -> Tarifa dinámica según demanda
+    -> Equipo humano que maneja toda la operación
+
+#### Tecnologías que Viabilizan Uber
+    -> Internet con acceso a datos
+    -> Dispositivos móviles (celulares)
+    -> Sin estas tecnologías, Uber no podría existir como existe actualmente
+
+### Caso: Netflix
+#### Problema que Resuelve
+    -> Entretenimiento de forma cómoda y accesible
+    -> Entretenimiento a buen precio
+
+#### Por qué es Producto de Base Tecnológica
+    -> Utiliza tecnología de streaming
+    -> Aplicaciones para diferentes plataformas
+    -> Permite descarga de contenido
+    -> Requiere internet para funcionar
+    -> Sin tecnología, la solución actual no podría existir
+    -> Tiene servicios asociados y un equipo detrás
+
+### Distinción: Productos de Base Tecnológica vs Productos que Solo Usan Tecnología
+
+#### Ejemplos que NO son Productos de Base Tecnológica
+    -> Smart TV: es solo un objeto tecnológico, no tiene servicios alrededor
+    -> Auto con GPS: si no existiera GPS, el auto seguiría funcionando igual
+    -> Aplicación de reservas de hotel: la tecnología es un canal complementario, no la base del producto
+    -> La tecnología es un complemento, no el corazón de la solución
+
+#### Ejemplos que SÍ son Productos de Base Tecnológica
+    -> Kindle: tiene detrás todo un negocio de venta de libros digitales
+    -> Termomix: requiere suscripción para acceder a recetas
+    -> Cajas de autoservicio en supermercados: tienen producto digital, físico y servicio
+
+### Preguntas Clave para Identificar un Producto de Base Tecnológica
+    -> Si eliminamos la tecnología, ¿el negocio sigue existiendo?
+    -> ¿La tecnología es un canal o es la base del producto?
+    -> ¿El valor del producto proviene de la innovación tecnológica o es solo un complemento?
+
+## Proyectos vs Productos
+
+### Concepto de Juegos Finitos e Infinitos
+
+#### Ajedrez (Juego Finito)
+    -> Objetivo: dar jaque mate
+    -> Tiene un fin determinado
+    -> Un jugador gana, el otro pierde
+
+#### Tetris (Juego Infinito)
+    -> Objetivo: seguir jugando indefinidamente
+    -> No tiene fin predeterminado
+    -> La duración puede ser infinita (hasta que recientemente alguien lo completó)
+
+### Proyectos (Juego Finito)
+    -> Tienen alcance definido desde el inicio
+    -> Tienen presupuesto acordado
+    -> Tienen tiempo límite (compromiso de entrega)
+    -> Variables: alcance, costo, tiempo (triángulo de hierro)
+    -> Solo se pueden asegurar dos de las tres variables
+    -> Se entrega el software al finalizar
+    -> Puede tener mantenimiento posterior, pero si requiere cambios mayores, se inicia otro proyecto
+    -> Éxito: entregar a tiempo, con el alcance definido y dentro del presupuesto
+    -> Orientados a un cliente particular o una organización específica
+
+### Productos (Juego Infinito)
+    -> Tienen alcance global
+    -> Van a vivir en el tiempo
+    -> Evolucionan con la tecnología
+    -> Evolución constante según mercado y usuarios
+    -> Éxito: se mide por el impacto que genera
+    -> Ejemplos de impacto: Uber en movilidad, Netflix en forma de ver series
+    -> Experimentan constantemente
+    -> Solucionan problemas de múltiples clientes
+
+### Diferencias en el Mindset
+
+#### Mindset de Proyecto
+    -> Requisitos fijos
+    -> Se comienza con el output (qué se va a construir)
+    -> Éxito medido por tiempo, alcance y presupuesto
+    -> Orientado a un cliente específico
+
+#### Mindset de Producto
+    -> Proceso más complejo:
+        -> Identificar un problema que valga la pena resolver
+        -> Definir el impacto deseado
+        -> Definir el outcome (qué beneficios se darán)
+        -> Por último, definir el output (la solución)
+    -> Output genera outcome, outcome genera impacto
+    -> Discovery permite partir de un problema para llegar a una solución adecuada
+
+### Modelos de Negocio
+
+#### Modelo de Proyecto
+    -> Cliente específico
+    -> Entregas acordadas con el cliente
+    -> Cobro por hora, por entrega o por alcance
+    -> Triángulo de hierro como guía
+    -> Ventaja: ingreso asegurado por contrato
+    -> Desventaja: depende de conseguir nuevos proyectos para sostener el negocio
+
+#### Modelo de Producto
+    -> Ventaja: ingresos recurrentes por licencias o suscripciones mensuales
+    -> Ingresos recurrentes: estabilizan mejor el negocio
+    -> Desventaja: costos más altos al inicio
+    -> Mucho más complejo de desarrollar porque:
+        -> Proceso de discovery más largo
+        -> Necesita capacidades de descubrimiento y evaluación
+        -> Debe solucionar problemas para diferentes clientes
+        -> Requiere modelos más genéricos y configurable
+        -> Debe adaptarse a distintas realidades
+        -> Alta configurabilidad
+        -> Posibilidad de extensiones con código
+    -> Modelos mixtos: productos con proyectos de personalización
+
+### Ejemplo: Complejidad de Productos Globales
+
+#### Sistema de Ventas (ejemplo: Shopify)
+    -> Problema: calcular impuestos en distintos países
+    -> Para Uruguay: tipos de IVA (exento, mínimo, normal)
+    -> Para Argentina: diferentes por provincia
+    -> Para Estados Unidos: diferentes por estado
+    -> Complejidades adicionales:
+        -> Impuestos pueden depender de origen y destino
+        -> Impuestos pueden depender de rangos de precios
+        -> Impuestos pueden depender de tipo de producto
+    -> Solución necesita:
+        -> Modelos más complejos que contemplen múltiples variables
+        -> Capa de configuración adaptativa
+        -> Posibilidad de extensiones para casos especiales
+    -> Implicaciones:
+        -> Alta configurabilidad
+        -> Modelos adaptativos
+        -> Posibilidad de extensión
+
+## Claves para un Producto Exitoso
+
+### Cuatro Dimensiones
+
+#### Deseable
+    -> Hay un conjunto de clientes para los cuales tiene valor
+    -> Resuelve un problema que existe realmente
+    -> El problema lo tiene la cantidad suficiente de personas o mercados
+    -> Genera valor a un conjunto suficiente de personas
+
+#### Usable
+    -> Muy buena experiencia de usuario
+    -> Producto orientado a mercado global
+    -> Experiencia valorada por las personas
+    -> Entendible sin capacitación en muchas ocasiones
+    -> Intuitivo, eficiente
+    -> Experiencia usuario crítica para alcance global
+
+#### Factible
+    -> Técnicamente viable
+    -> Se puede construir con los recursos disponibles
+    -> Tecnología disponible y madura
+    -> Consideración: tecnologías emergentes pueden no estar listas para ciertos usos
+
+#### Viable
+    -> Vendible y sostenible en el tiempo
+    -> Rentable
+    -> Debe generar ingresos suficientes para mantenerse
+
+## Ejemplo Evolutivo: Blockbuster vs Netflix
+
+### Blockbuster (Década de 1990)
+
+#### Características
+    -> Éxito masivo en Estados Unidos
+    -> Miles de tiendas físicas
+    -> Enorme catálogo de películas
+    -> Tiendas organizadas por género
+    -> Estética uniforme de locales
+
+#### Problemas (vistos desde la perspectiva actual)
+    -> Stock limitado por tienda
+    -> Tiempo limitado de devolución
+    -> Multas por devolución tardía
+    -> Deterioro de las cintas físicas
+    -> Tenías que ir a buscar y devolver
+    -> Filas cuando salían películas nuevas
+    -> Experiencia de búsqueda limitada (buscar en pasillos)
+    -> Disponibilidad no permanente
+    -> Dependencia de ubicación física
+
+### Primera Solución de Netflix
+
+#### Contexto Tecnológico
+    -> Aprovechó tecnología emergente: Internet
+    -> Coincidió con salida de DVDs
+
+#### Solución Implementada
+    -> Plataforma web para elegir y pagar
+    -> Envío por correo físico (no digital)
+    -> Etiqueta prepaga para devolución
+    -> Usuario no pagaba la devolución
+
+#### Problemas que Solucionó
+    -> Ya no tenías que ir a buscar
+    -> Ya no tenías que hacer fila
+    -> Ya no había multas por devolución
+    -> Mejoró experiencia de búsqueda (web vs pasillos)
+    -> Eliminó tiempo limitado de devolución
+
+#### Problemas que Persistieron
+    -> Stock limitado todavía existía
+    -> Tiempo de demora por correo físico
+    -> Deterioro de DVDs
+    -> Seguía siendo necesario devolver
+
+### Innovación de Modelo de Negocio: Suscripción
+
+#### Nueva Propuesta
+    -> Cambio de cobro por película a suscripción mensual
+    -> Podías tener hasta 3 DVDs en casa simultáneamente
+    -> Sin límite de tiempo para devolver
+    -> Sin multas por devolución tardía
+
+#### Impacto en la Competencia
+    -> Las multas de devolución eran una fuente importante de ingresos para Blockbuster
+    -> Blockbuster perdió una ventaja competitiva significativa
+
+### Evolución Continua: Algoritmos de Recomendación
+
+#### Nueva Tecnología Incorporada
+    -> Inteligencia artificial y aprendizaje automático
+    -> Algoritmos de recomendación personalizados
+
+#### Mejora Lograda
+    -> Mejoró significativamente la experiencia de búsqueda
+
+### Evolución Final: Streaming
+
+#### Tecnología de Streaming
+    -> Solucionó completamente:
+        -> Stock limitado (almacenamiento infinito en la nube)
+        -> Tiempo de demora (acceso instantáneo)
+        -> Deterioro (no hay producto físico)
+        -> Devolución (ya no aplica)
+        -> Variedad y disponibilidad permanente
+    -> Transformó completamente el modelo de negocio
+
+### Lecciones del Caso
+
+#### Características Clave
+    -> Los fundadores conocían tecnología emergente
+    -> Detectaron problemas y crearon oportunidad
+    -> No se quedaron en una solución, aprovecharon nuevas tecnologías
+    -> Innovaron tanto en tecnología como en modelo de negocio
+    -> Se adaptaron constantemente al mercado
+    -> Evolución continua como juego infinito
+
+#### Resultado Final
+    -> Blockbuster nació exitoso en los 90, murió en 2010
+    -> Netflix evolucionó y transformó la industria del entretenimiento
+
+## Proceso de Ingeniería de Software
+
+### Actividades del Proceso
+
+#### Planificación
+    -> Gestión del proyecto
+    -> Ceremonias ágiles
+
+#### Requerimientos
+    -> Análisis y definición de requerimientos funcionales
+    -> User stories
+    -> Criterios de aceptación
+
+#### Desarrollo
+    -> Construcción del software
+    -> Implementación de funcionalidades
+
+#### Verificación
+    -> Testing y validación
+    -> Validación de requerimientos
+    -> Validación de prototipos
+
+#### Despliegue
+    -> Release del software
+    -> Monitoreo continuo
+
+### Discovery: El Proceso de Descubrimiento
+
+#### Ubicación en el Proceso
+    -> El discovery ocurre ANTES de la definición de requerimientos
+    -> Es el proceso de detectar problemas y determinar soluciones
+    -> A partir del discovery se definen los requerimientos
+
+#### Delivery vs Discovery
+    -> Lo que se vio hasta ahora es el proceso de delivery (requerimientos hacia adelante)
+    -> Esta materia se enfoca en el proceso de discovery
+    -> Alguien analiza el problema antes de dar requerimientos
+    -> Ese alguien define una solución para el problema
+    -> Luego pasa los requerimientos al equipo de desarrollo
+
+#### Importancia del Discovery
+    -> Útil en cualquier tipo de sistema
+    -> En productos de base tecnológica es una de las partes más importantes
+    -> Propósito: "Build the right thing" (construir lo correcto)
+    -> Propósito secundario: "Build it right" (construirlo correctamente)
+    -> Evita construir algo que no resuelve el problema adecuadamente
+    -> Con inteligencia artificial: es la parte que menos se puede sustituir actualmente
+    -> Requiere creatividad e innovación humanas
+
+### Modelo de Doble Diamante
+
+#### Espacio del Problema (Primer Diamante)
+    -> Actividades:
+        -> Empatizar con personas que tienen el problema
+        -> Entender el contexto
+        -> Identificar necesidades reales
+        -> NO definir soluciones todavía
+    -> Enfoque en las personas y psicología
+    -> Salida: problema principal identificado para generar impacto
+    -> También define qué problema NO vamos a resolver
+    -> Separar espacio del problema del espacio de la solución
+
+#### Espacio de la Solución (Segundo Diamante)
+    -> Solo después de entender bien el problema
+    -> Actividades:
+        -> Ideación y brainstorming
+        -> Construcción de prototipos
+        -> Testing con usuarios en el mundo real
+        -> Iteración hasta llegar a solución final
+    -> Salida: solución que pasa al proceso de delivery
+    -> Se transforma en user stories o especificaciones
+
+#### Key Point
+    -> Como ingenieros, tendemos a pensar en soluciones inmediatamente
+    -> Hay que posponer la solución
+    -> Realizar actividades para entender mejor el problema primero
+    -> Empalizar con las personas antes de buscar soluciones
+
+## Temas del Curso
+
+### Contenidos Principales
+    -> Proceso de discovery en detalle
+    -> Creatividad: cómo ser más creativos
+    -> Innovación
+    -> Análisis de competencia
+    -> Pasaje a delivery
+    -> Ejercicios prácticos en clase
+
+### Metodología de Trabajo
+    -> Trabajo en grupo obligatorio
+    -> Crear un producto de base tecnológica
+    -> Desde discovery hasta prototipo
+    -> Muestra de prototipos al final del curso
+    -> Proceso como defensa del obligatorio
+    -> Clases dedicadas para trabajar en obligatorio
+
+### Sistema de Evaluación
+    -> Tres cuestionarios sobre bloques de temas
+    -> Cuestionarios con material, múltiple opción
+    -> En clase presencial
+    -> Se toma nota del mejor rendimiento
+    -> Obligatorio grupal
+    -> Muestra de prototipos
+    -> Parcial y segunda instancia
+    -> Segunda instancia obligatoria: corrección del obligatorio o mejoras
+    -> Participación en clase
+    -> Aprobación con 70 puntos
+
+### Uso de Inteligencia Artificial
+    -> Se puede usar para asistencia en discovery y creación
+    -> Ayuda en design thinking
+    -> Puede incorporarse como componente del producto si tiene valor
+    -> No forzar IA solo por innovación
+    -> Uso como asistente, no para resolver todo automáticamente
+    -> Debe revisarse lo que genera la IA
+    -> Propósito: inspirar, aprender e incorporar conocimiento
+    -> No usar para no aprender nada
+
+### Temas del Obligatorio
+    -> Se dará una lista de temas a elegir
+    -> Pueden modificar, ampliar o incluso proponer temas nuevos
+    -> Idea: no todos elijan el mismo tema
+    -> Entrega intermedia: definición del problema
+    -> Feedback sobre el problema para segunda parte del obligatorio
+    -> Chequeo para asegurar que el problema esté bien definido
+

@@ -1,0 +1,853 @@
+# Modelos de Negocios en Software - Segunda Clase
+
+## Repaso de la Clase Anterior
+
+### Producto vs Servicio en Software
+
+#### Definición de Producto
+    -> Algo puntual y tangible
+    -> Más descargable
+    -> Consumo por uso no es lo más común
+    -> Está asociado al concepto de ownership (propiedad)
+    -> Lo compro y es mío
+    -> Entregado como un paquete o licencia
+    -> Antes era un CD
+    -> Si compro el producto, yo soy responsable de actualizarlo
+    -> Nadie me lo va a actualizar porque sí
+    -> Hay que contratar a alguien para que lo actualice
+
+#### Definición de Servicio
+    -> Uso del software mediante suscripción
+    -> Suscripción mensual o anual
+    -> Consumo continuo en el tiempo
+    -> Lo que estoy consumiendo permanentemente se está actualizando
+    -> Se está renovando y perfeccionando
+    -> Las actualizaciones vienen incluidas en el servicio
+
+## Software como Servicio (SaaS)
+
+### Evolución hacia SaaS
+    -> Boom de SaaS hace varios años
+    -> Todo empezó a consumirse como servicio
+    -> Las siglas SaaS ya son comunes y habituales
+
+### Modelos en la Nube
+
+#### Infraestructura como Servicio (IaaS)
+    -> Ejemplo: Amazon Web Services (AWS)
+    -> Consumes o adquieres capacidad de:
+        -> Almacenamiento
+        -> Capacidad de cómputo
+        -> Red
+        -> CPU, RAM
+    -> Arriba instalas tú el sistema operativo
+    -> Instalas lo que quieras (datos, aplicaciones)
+    -> Tú eres responsable del sistema operativo: instalarlo, actualizarlo, mantenerlo
+    -> Todo lo que pasa a nivel de hardware es transparente para ti
+    -> Con IaaS eliges qué poner y cómo ponerlo
+
+#### Plataforma como Servicio (PaaS)
+    -> Te dan un ambiente o contenedor
+    -> Te encargas solo de los datos y las aplicaciones
+    -> El sistema operativo ya está configurado
+    -> No tienes que instalar el sistema operativo
+
+#### Software como Servicio (SaaS)
+    -> En el otro extremo
+    -> Ni siquiera tienes que instalar las aplicaciones
+    -> Consumes la aplicación como si fuese un servicio
+    -> No configuras nada técnico
+    -> Todo está manejado por el proveedor
+
+### Otros Servicios en la Nube
+    -> Backup como servicio
+        -> Tradicionalmente: servidor físico, cintas, mucho almacenamiento
+        -> Alternativa: consumirlo como servicio en la nube
+        -> Configuras ciertos aspectos y características
+        -> Empiezas a respaldar hacia la nube
+        -> Puede permitir también respaldos locales
+    -> Firewall como servicio
+        -> En vez de comprar físicamente un firewall
+        -> Compras el servicio de firewall
+    -> Ya todo tiene su versión "as a service"
+    -> Diversificación de servicios disponibles
+
+## Los Dos Modelos de Negocio
+
+### Empresa de Software como Servicio (SaaS)
+    -> Cuando hablamos de "empresa de producto"
+    -> Vende un producto presentado como servicio
+    -> Lo presenta al mundo para que se consuma en forma de servicio
+    -> Ejemplo: SaaS
+
+### Empresa de Servicios de Software
+    -> Cuando hablamos de "empresa de servicio"
+    -> Software factory
+    -> Empresa de servicio de software
+    -> Ofrece servicios
+
+### ¿Qué Servicios Puede Vender una Empresa de Software?
+    -> Consultorías
+    -> Desarrollo
+    -> Soporte posterior
+    -> Staff augmentation (aumento de personal)
+        -> Tercerizas recursos de la empresa
+        -> Permites tener más flexibilidad en un proyecto grande
+        -> Das personas y la empresa las gestiona
+        -> La empresa las asigna a un proyecto u otro
+        -> Además de vender horas de desarrollo
+        -> También brindas recursos para que el cliente los gestione cómo quiera
+
+## Comparación de los Dos Modelos
+
+### Empresa de Servicios de Software
+
+#### Características
+    -> Vende proyectos únicos a una cantidad reducida de clientes
+    -> Limitante: las horas hombre disponibles
+    -> Depende de la cantidad de personas que tengo en el equipo de desarrollo
+    -> No puedo ejecutar en paralelo más horas de las que tengo
+    -> Ancho de banda limitado
+
+#### Ideal del Negocio
+    -> Desarrollo una solución específica para un cliente
+    -> La solucion funciona
+    -> Después puedo escalar: vender esa misma solución a otro cliente
+    -> Tengo un camino recorrido que me facilita el trabajo
+    -> Beneficio: puedo ganar más rápido porque hay mucho desarrollo ya hecho
+    -> Voy a ganar más porque será menos costoso para mí
+    -> Ideal: partir de un proyecto a poder replicarlo y venderlo a otros
+
+#### Modelo de Negocio
+    -> Asignación de recursos
+    -> Todos mis recursos los asigno a distintos proyectos
+    -> Modelo por hora: intentar vender mis horas lo más caro posible
+    -> Tener buen talento para poder cobrar más
+
+### Empresa de Software como Servicio
+
+#### Características
+    -> Vende un producto en forma de servicio
+    -> Más escalable
+    -> Producto genérico
+    -> Disponible en internet
+    -> Limitante para escalar: cantidad de clientes que pueden accederlo en simultáneo
+    -> Limitante real: infraestructura
+    -> Si estoy en la nube, el proveedor abre la canilla
+    -> Puedo pagar hasta que pueda pagar
+    -> Limitante: infraestructura (pero puede crecer)
+
+#### Modelo de Negocio
+    -> Modelo de suscripción
+    -> Recurrente y asegurado a largo plazo
+
+### Comparación Detallada
+
+#### ¿Cuál Modelo es Más Escalable?
+    -> El producto (SaaS)
+    -> Producto genérico más genérico que servicio a medida
+    -> Limitante en servicio: la gente (horas disponibles)
+    -> Limitante en producto: infraestructura (puede crecer)
+
+#### ¿Cuál Requiere Mayor Inversión Inicial?
+    -> El producto (SaaS)
+    -> Hasta no tener un producto operativo y funcionando, no le vendo a nadie
+    -> Necesito inversión en tiempo y costo para desarrollar el producto
+    -> Recién ahí empiezo a entender si se vende o no
+    -> Del otro lado (servicio): puedo empezar a generar clientes con un adelanto
+    -> A medida que se van dando ciertos hitos, voy cobrando
+
+#### ¿Cuál Genera Más Ingresos?
+    -> Depende de múltiples factores
+    -> Depende qué vendas, cuánto vendas
+    -> En producto: si la pegó, ingreso recurrente y asegurado
+    -> En servicio: necesitas ir cumpliendo con los hitos para cobrar
+
+#### ¿Cuál Tiene Mayor Riesgo?
+    -> El producto (SaaS)
+    -> Inversión inicial grande sin certezas de lo que va a pasar
+    -> Estás asumiendo más riesgo
+    -> Todos los huevos en una misma canasta
+    -> Puedes diversificar en servicio: tener varios clientes diferentes
+
+#### Riesgos del Modelo de Servicio
+    -> Poner todos los huevos en la misma canasta
+    -> Ejemplo: empresa con un cliente gigante que representa el 90% de facturación
+    -> Si pierdes ese cliente, pierdes casi todo
+    -> Dependencia de muchas empresas: cada una tiene su propio riesgo
+    -> Concentración por verticales: todos tus mejores clientes son de la misma industria
+        -> Si algo pasa en esa industria, pierdes todos tus clientes
+        -> Ejemplo: normativa positiva que hace que las empresas se vayan
+        -> Puedes perder el 80% de tu facturación
+    -> Es importante tener en cuenta la cartera de clientes
+
+#### ¿Cuál es Mejor?
+    -> No hay uno mejor que otro
+    -> Ambas tienen ventajas y desventajas
+    -> Ambas tienen particularidades
+    -> A lo largo del semestre verán ejemplos de ambas
+    -> Invitados de ambos modelos
+    -> Depende de múltiples factores
+    -> En Uruguay: mercado chico
+    -> Única forma de escalar es apuntando a modelos SaaS
+    -> Abrir el límite del mercado
+    -> Aunque empresas de servicio desarrollen para afuera también
+
+### Resumen de Objetivos
+
+#### Objetivo en SaaS
+    -> Escalar lo más que pueda
+    -> En la clase de inversiones: cuando empresas SaaS se capitalizan
+    -> Condiciones de quien inyecta dinero
+    -> Una de las principales condiciones: crecer
+
+#### Objetivo en Servicios
+    -> Vender muy bien mis horas
+    -> Tengo ancho de banda limitado
+    -> Si tengo más demanda que horas, intento vender a los que paguen mejor
+
+### Origen de las Ideas
+
+#### ¿De Dónde Surge la Idea en SaaS?
+    -> De los fundadores
+    -> La idea del producto surge de los fundadores
+
+#### ¿De Dónde Surge la Idea en Servicios?
+    -> Del cliente
+    -> El cliente viene y dice: quiero esto
+    -> Te plantea la necesidad o problemática
+    -> A partir de eso encuentras una solución
+    -> El cliente define el problema
+
+### Ejemplos de Empresas
+
+#### Empresas SaaS Conocidas
+    -> Spotify
+    -> Todo el grupo de Spotify
+    -> Empresas que diversifican
+
+#### Empresas de Servicios Locales
+    -> Genexus
+    -> Muchas empiezan a diversificar
+    -> Empiezan a tener también SaaS
+    -> Verán un caso de estudio de una empresa de desarrollo de servicio que intenta salir con SaaS
+
+## Conceptos Importantes para el Semestre
+
+### B2B vs B2C
+
+#### B2B (Business to Business)
+    -> Vendo a otras empresas
+    -> Consumido por empresas
+    -> Vendes a otras empresas
+
+#### B2C (Business to Consumer)
+    -> Consumidor final
+    -> Vendes a consumidores finales
+
+#### ¿Por Qué Importa esta Diferencia?
+    -> Quién es tu cliente cambia
+    -> Estrategia de marketing es diferente
+    -> Estrategia de comunicación es diferente
+    -> Cantidad de clientes puede ser diferente
+    -> Cantidad de usuarios puede ser diferente
+    -> Va a depender un montón de cuestiones
+    -> Dependiendo si le vendo a empresas o a consumidores finales, lo haré de forma distinta
+
+### Estrategias Comerciales
+
+#### Bajo Precio, Alto Volumen
+    -> Precio bajo, margen bajo
+    -> Vendo en grandes cantidades
+    -> Mucho volumen = termino ganando plata
+
+#### Alto Precio, Bajo Volumen
+    -> Precio alto
+    -> Menos volumen de ventas
+    -> Margen más alto
+    -> Se equipara en ganancia
+
+### Público vs Privado
+    -> Proceso de compra distinto entre público y privado
+    -> Importante tenerlo en cuenta
+    -> En Uruguay: público suele ser de los más grandes
+    -> Ejemplo banca: bancos estatales son los más grandes
+    -> Ejemplo educación: educación pública es muy importante
+    -> Es importante saber venderle al público
+    -> Verán más en la parte de gestión comercial
+
+### Verticales
+    -> Industrias específicas
+    -> Por qué conviene que un vendedor conozca una vertical
+    -> Si aparece un cliente nuevo de esa vertical, conviene que ese vendedor lo tome
+    -> Verán más adelante en gestión comercial
+
+### Formas de Cotizar Servicios
+
+#### Proyecto Cerrado (Precio Cerrado)
+    -> Partimos del alcance
+    -> Estimamos horas
+    -> Comercial suma las estimaciones
+    -> Tiene un estimado de costos
+    -> Le pasa precio cerrado al cliente
+    -> Ejemplo: proyecto en tanto tiempo cuesta $130,000
+    -> Qué puede pasar: que suba o que baje la estimación
+    -> Generalmente: que te quedes corto
+    -> Si me paso en costos, ya le pasé el precio fijo
+    -> Asumo cierto riesgo
+
+#### Time and Materials
+    -> Partimos del mismo alcance
+    -> Estimación inicial
+    -> Le digo al cliente: estimo 4000 horas pero te voy a cobrar las que realmente sean
+    -> Si es más, cobro más
+    -> Si es menos, cobro menos
+    -> Cobro por tiempo y material según lo que realmente lleve
+    -> Al final del camino se cobra las horas reales
+
+#### ¿Qué Prefiere el Cliente?
+    -> Generalmente: precio cerrado
+    -> Quiere certeza del costo
+    -> Quiere evaluar entre opciones
+    -> Pero para el proveedor: puede convenir más time and materials
+
+#### Soporte Posterior
+    -> Además de desarrollo, puede venir propuesta de soporte
+    -> Después te lo soporto y mantengo
+    -> Hay que dimensionar: cuántas horas por mes estimo dedicar a este cliente
+    -> También se cotiza
+
+## Proceso de Ideación
+
+### ¿Qué es la Ideación?
+    -> Proceso en el que se generan ideas y soluciones
+    -> A través de sesiones como lluvia de ideas, brainstorming, votación en equipo
+    -> Muchas otras técnicas de ideación
+
+### ¿Qué es una Idea?
+    -> Representación mental que surge a partir de relacionamiento e imaginación de una persona
+
+### ¿Qué es una Idea de Negocio?
+    -> Producto o servicio que quiero ofrecer al mercado
+    -> En forma de propuesta de valor
+    -> Generar beneficios económicos a partir de su venta
+
+### ¿Qué es el Mercado?
+    -> Mi público objetivo
+    -> El público al que voy a intentar o querer venderle
+    -> Qué deberíamos conocer del mercado:
+        -> Poder adquisitivo
+        -> Tamaño del mercado
+        -> Nicho específico
+
+### Nicho vs Mercado Masivo
+    -> Nicho: mercado específico con ciertas características
+    -> Mejor tener bien identificado el nicho que intentar vender a todo el mundo
+    -> Más efectivo será mi estrategia de marketing
+    -> Más efectiva mi estrategia de comunicación
+    -> Más directo
+    -> Más especializado
+
+### ¿Qué Importa Conocer del Mercado?
+    -> Si estoy analizando mi público objetivo
+    -> Por qué ese público objetivo tiene esa necesidad
+    -> Qué necesidad tiene ese público objetivo
+    -> Cuáles son los verdaderos dolores que hoy tiene esa gente
+    -> Cómo los afecta
+    -> Para entender cómo voy a solucionarlo
+
+### Propuesta de Valor
+
+#### ¿Qué es?
+    -> Lo que le voy a ofrecer al mercado
+    -> El alcance: esto es lo que le estoy ofreciendo
+    -> Mis funcionalidades
+    -> Pero también cómo beneficia al cliente
+
+#### Diferenciales
+    -> No solo lo que hace técnicamente
+    -> También puede ser:
+        -> Precio más barato que la competencia
+        -> Desarrollo en tres meses vs competencia en dos años
+        -> Solución en tiempo récord
+    -> Ejemplo Netflix:
+        -> No es solo "contenido disponible"
+        -> Es contenido disponible en el momento
+        -> En todos los idiomas
+        -> Con subtítulos
+        -> Sin publicidad
+        -> Desde cualquier dispositivo
+    -> Todo lo que genere valor para quien lo consume
+    -> Beneficio principal: lo que resuelve el problema o necesidades que satisface
+    -> Diferenciales: lo que hace único
+        -> Puede ser el precio
+        -> Puede ser el tiempo de entrega
+        -> Puede ser la tecnología
+
+#### Ejemplos de Propuestas de Valor
+
+##### Tesla
+    -> Autos eléctricos
+    -> Cero emisiones
+    -> Innovación
+
+##### Spotify
+    -> Música con o sin anuncios
+    -> Toda la música sin comprar discos
+    -> Poder compartir con amigos
+    -> Escuchar con otros
+    -> Jams
+    -> Sugerencias basadas en lo que escuchas
+    -> Todos los diferenciales que agregan valor
+
+### Preguntas Clave al Trabajar una Idea
+
+#### ¿Cuál es la Problemática que Existe?
+    -> ¿Cuáles son las necesidades que existen en mi público objetivo?
+
+#### ¿Quién Tiene esa Necesidad?
+    -> Entender mi público objetivo
+
+#### ¿Por Qué Tiene esa Necesidad?
+    -> Entender el contexto
+
+#### ¿Cómo Puedo Solucionar esa Necesidad?
+    -> Diseñar la solución
+
+#### ¿Por Qué Nadie Pudo Hasta Ahora Solucionarla?
+    -> Entender:
+        -> Si no se puede
+        -> Si es caro
+        -> Si es por la forma que se completó antes
+    -> Es importante para llegar a una propuesta de valor que realmente aporte valor
+
+### Tips para el Proceso de Ideación
+
+#### Tener Claro el Valor
+    -> Tener claro hacia dónde apunta mi solución
+    -> Cuál es el valor que puede brindar en la sociedad
+
+#### Descubrimiento
+    -> Conocer el problema
+    -> Investigarlo
+    -> Compartirlo con gente que tenga el problema
+    -> Conversar con potenciales clientes en esta etapa
+    -> Entender qué es lo que quieren
+    -> Entender cuáles son los verdaderos dolores que hoy tiene esa gente
+    -> Cómo los afecta para entender cómo solucionarlo
+
+#### Compartir las Ideas
+    -> Compartir ideas con gente de confianza
+    -> Seguramente pueda aportar más ideas y mayor valor
+    -> La típica de guardarse la idea es contraproducente
+    -> Compartir las ideas ayuda a ver múltiples perspectivas
+    -> Ayuda a trabajar la idea
+    -> Misma idea escrita: ayuda a armar la idea
+    -> Muchas veces la tenemos en la cabeza y creemos que todo cierra
+    -> Al escribir nos damos cuenta que hay cosas que no pensamos
+
+#### Desenchufar
+    -> Dedicar tiempo a tu cerebro para generar nuevas ideas
+    -> La típica de que las ideas surgen en la ducha
+    -> En momentos donde desenchufas y no estás tan estresado
+    -> En esos momentos surgen ideas
+    -> Resolvemos cosas internamente en nuestra cabeza
+
+### Las Ideas por Sí Solas No Valen
+
+#### Lo que Dice Cat (Profesor)
+    -> Todos somos creadores de grandes ideas
+    -> Tendemos a sobrevalorarlas
+    -> Las ideas solo toman valor durante la ejecución
+    -> La típica: vemos un negocio nuevo y decimos "ya se me había ocurrido"
+    -> Sí, pero no hiciste nada
+    -> El que lo hizo sí lo hizo
+    -> Las ideas tienen mucho más sentido cuando son validadas mediante conversaciones con clientes
+    -> Es ahí cuando aumentan las chances de ser exitosas
+
+#### Ejemplo de Validación Tardía
+    -> Paganza: aplicación uruguaya para pagar cuentas con código QR
+    -> Mucha gente dice "se me había ocurrido hace 10 años"
+    -> Pero no lo hicieron
+    -> Esta gente sí lo hizo
+
+#### La Ejecución es Clave
+    -> Las ideas por sí solas no valen nada
+    -> Lo que vale es cuando las ejecutas
+    -> En el proceso de conformación del equipo fundador verán más sobre esto
+    -> En Shark Tank: además de la idea, qué más se fijan?
+        -> La capacidad de ejecución
+        -> Qué sabés vos
+        -> Cuáles son tus habilidades
+        -> Cómo es tu actitud frente a la vida
+        -> Qué pueden llegar a hacer ese equipo de personas
+    -> Usualmente se fijan si ya tienen algún resultado objetivo para mostrar
+    -> Les interesa saber hacia adelante qué es lo que pueden llegar a hacer
+
+#### Ejemplo de Falta de Validación
+    -> Una startup había consumido cerca de $7,000 en desarrollo
+    -> Enamorados de lo que estaban desarrollando
+    -> Pero no lo habían mostrado a nadie
+    -> En la primera que muestran: "esto así no lo usaría"
+    -> Eso ya es retraso
+
+#### Para Emprendedores
+    -> La acción es fundamental
+    -> Sin hechos, sin acciones, no hay nada
+    -> Solamente ideas que se la lleva el viento
+    -> Hay que pensar hacia adentro, pero también contagiarla hacia afuera
+    -> Con familiares
+    -> Con posibles socios
+    -> Conversarlo también
+
+### Mitos sobre las Ideas
+
+#### "Si lo Pensas Mucho, no Haces el Negocio"
+    -> Hay que pensarlo mucho, pero actuar antes de pensar
+    -> Antes de hacer algo, pensémoslo
+    -> Pero si lo pensas mucho, no vas a hacer el negocio
+    -> Te pasa adelantando 20 pasos para algo que ni siquiera armaste
+    -> Si lo organizas mucho, puede desmotivarte por la cantidad de challenges
+    -> En algún momento hay que empezar a ejecutar
+    -> La idea por sí sola no vale para nada
+    -> Pensarlo mucho es entender a mi público, conversarlo con mi público
+    -> Pero hay que empezar a actuar porque si no, no vale nada
+    -> Hacer el negocio es poner el primer peso
+
+#### Tendencia en Software
+    -> En software es cada vez más barato arrancar algo inicial
+    -> Algo inicial es algo mostrable
+    -> La validación se adelantó mucho
+    -> Mucho más fácil sacar algo y probarlo con usuarios
+    -> Cuando hablamos de validación, hay distintos niveles:
+        -> Validación del producto
+        -> Validación del problema
+        -> Validación del modelo de negocio
+    -> El mismo producto puede ser exitoso bajo un modelo y no bajo otro
+
+#### "Mi Empresa es Tal Cual Como la Pensé"
+    -> Nadie puede decir esto
+    -> Siempre algo va a haber difícil
+    -> Por más que lo pienses mucho, es muy difícil abarcar todo
+    -> Tu empresa no termina siendo exactamente como lo pensaste
+    -> Todo ese recorrido: te tuviste que adaptar a 1000 situaciones
+    -> Dar cosas que habías pensado mal
+    -> Cosas que pensaste bien pero se terminaron dando vuelta
+    -> Cosas que ni siquiera habías tenido en cuenta
+    -> Nunca es como lo pensaste
+    -> Es como en la guerra: planificamos un ataque, una batalla
+    -> Pero después del primer balazo, no hay plan que valga
+    -> La gente dispara para todos lados
+    -> No vas a ver una batalla reflejada en un plan que quisiste exactamente
+    -> Pero es súper importante tener el plan
+    -> Eso te va a dar después la cintura para ir adaptándote a distintas situaciones
+    -> Lo mismo acá: por más que lo pienses desde 1000 dimensiones, no va a terminar como lo pensaste
+    -> Pero es súper importante haberlo pensado con esas acciones
+
+### Cómo Comunicar la Idea
+    -> Relacionado con la primera dinámica: el pitch
+    -> Importancia de comunicar la idea considerando:
+
+#### Identificar el Problema
+    -> Cuál es el problema que estoy resolviendo
+    -> En el fondo, qué problemática resuelve mi idea
+
+#### Definir el Público Objetivo
+    -> Quiénes tienen ese problema
+
+#### Desarrollar la Solución
+    -> Comunicación de mi propuesta de valor
+
+#### Tener Idea de Costos
+    -> Imposible seguir avanzando sin entender cuánto me va a costar
+    -> Cuánto estará dispuesto el mercado a pagar por esa solución
+
+#### Considerar el Timing
+    -> Qué entienden por timing
+    -> El momento en el que saco el negocio
+    -> Ejemplo: Zoom
+    -> Timing tiene una incidencia directa en el éxito del negocio
+    -> Más importante que el equipo que va a ejecutar la idea
+    -> Más importante que la idea misma
+    -> Más importante que el modelo de negocio
+    -> Más importante que el financiamiento
+    -> Si sales en un mal timing, tu negocio no tiene el mismo éxito
+    -> Lo mismo para el mismo público objetivo en otro momento puede triunfar
+    -> Es importante tener claro el timing
+
+## Ideación vs Innovación
+
+### ¿Es lo Mismo Idear que Innovar?
+    -> No necesariamente
+
+### ¿Qué Entienden por Innovar?
+    -> Hacer algo disruptivo que no existía antes
+    -> Disruptivo o diferente
+    -> Alguna idea puede hacer algo parecido a lo que ya existe pero reduciendo costos
+    -> Innovar es como algo que no existía
+    -> Ejemplo: algo que se hace en Europa y lo copio y traigo para acá
+    -> ¿Estoy innovando o no?
+
+### Definición de Innovación
+    -> Innovar tiene que ver con hacer algo diferente
+    -> Para que haya innovación deben aparecer estos puntos:
+
+#### Satisfacer una Necesidad
+    -> Estar satisfaciendo una necesidad
+
+#### Generar Valor
+    -> Estar generando o creando valor para alguien
+
+#### Ser Novedoso
+    -> Algo diferente a como se viene haciendo
+    -> Aparece incertidumbre asociada porque es nuevo
+    -> Cierto riesgo asociado
+
+### Tipos de Innovación
+
+#### Por Dimensión
+
+##### Innovación a Nivel de Producto
+    -> Ejemplo: iPhone
+    -> Pasamos del celular con botones a algo con pantalla táctil y todos los chiches
+
+##### Innovación a Nivel de Servicio
+    -> Ejemplo: Spotify
+    -> En vez de tener que ir a comprar la música
+
+##### Innovación a Nivel de Proceso de Producción
+    -> Máquinas de Ford
+    -> Cuando empezó a producir autos, innovó en tecnología y robots
+    -> Le permite ahorrar costo y tener autos más baratos
+
+##### Innovación a Nivel de Modelo de Negocio
+    -> Suscripción
+    -> Ejemplo: Airbnb (en vez de hoteles tradicionales)
+
+##### Innovación a Nivel de Tecnología
+    -> Internet
+    -> Impresiones 3D
+    -> Fabricación de prótesis médicas o piezas de avión
+
+##### Innovación a Nivel de Marketing
+    -> Google (búsqueda en tiempo real)
+    -> Ejemplo uruguayo: aplicación que en base a información te da ideas de campañas
+
+##### Innovación a Nivel de Organización
+    -> Trabajo remoto
+    -> Cómo nos organizamos las empresas ahora
+
+#### Por Alcance
+
+##### Innovación Incremental
+    -> Mejorar algo
+    -> Ejemplo: actualizaciones de iPhone todos los meses
+    -> Introduce innovaciones nuevas pero pequeñas
+    -> En forma incremental va mejorando o innovando el producto
+
+##### Innovación Disruptiva
+    -> Introduce un cambio significativo o radical en el mercado
+    -> Puede cambiar la forma en que consume el mercado tu producto
+    -> Ejemplo: Tesla, autos eléctricos
+
+#### Por Naturaleza
+
+##### Innovación Reactiva
+    -> Pasa algo y yo reacciono innovando
+    -> Ejemplo: sistemas de inteligencia artificial con ChatGPT
+    -> A partir de no contar con chips de NVIDIA, tuvieron que buscar formas
+    -> Tuvieron que innovar a nivel de software para llegar a una solución eficiente
+
+##### Innovación Proactiva
+    -> Proactivamente busco innovar en algo
+    -> Sin que ningún problema específico haya llegado
+    -> Las organizaciones destinan recursos, destinan personas
+    -> Estudiar, poner un grupo de personas a pensar en soluciones nuevas
+    -> Distintas de lo que existe
+
+#### ¿Qué es Más Habitual?
+    -> La reactiva
+    -> Por qué: porque no sabés a dónde vas
+    -> Tenés tu negocio andando, ya sabés lo que haces, te va bien
+    -> El foco es ese, es difícil destinar recursos o tiempo en buscar otras cosas
+    -> Hay empresas que viven de la innovación, pero para la mayoría es difícil encontrar innovaciones de forma proactiva
+
+#### Por Alcance Geográfico
+
+##### Innovación a Nivel Mundial
+    -> Nunca se había hecho en ningún lado
+
+##### Innovación Regional
+    -> Se hace en Europa, yo lo traigo por primera vez acá
+    -> Lo adapto a las circunstancias de acá
+    -> Estoy innovando a nivel regional
+
+##### Innovación Sectorial
+    -> En un sector se hace de determinada forma
+    -> Lo incorporamos en otro sector
+    -> También se entiende como innovación sectorial
+
+## Ejercicio Práctico: Dibujar un Florero Innovador
+
+### La Consigna
+    -> Dibujar un florero innovador en un minuto
+    -> Levantar las manos cuando termine el tiempo
+
+### Resultados del Ejercicio
+    -> Aparecieron cosas súper interesantes
+    -> Florero que se adapta a la altura de las flores (vasos plegables)
+    -> Florero con pantalla que te dice qué tipo de flores y la temperatura del agua
+    -> Florero con paraguas para lugares donde llueve mucho
+
+### Reflexión sobre el Ejercicio
+    -> La consigna tiene un elemento especial
+    -> Cuando se les da un minuto de esa forma, en el cerebro se activan ciertas áreas
+    -> No son las áreas que se activan cuando estamos relajados
+    -> Es difícil que en una instancia así encuentren ideas creativas
+    -> Sin embargo, aparecieron cosas súper interesantes
+
+### Lección para Innovar
+    -> A la hora de innovar, lo que podemos preguntarnos:
+        -> ¿Por qué alguien compraría un florero?
+    -> Hay que salir de los paradigmas que tenemos establecidos
+    -> Todos más o menos dibujaron físicamente lo que entendemos por un florero
+    -> Quizá la pregunta sea: ¿cómo alguien disfruta de las flores?
+    -> O ¿cómo alguien percibe las flores?
+    -> Entonces diseñemos cuál sería la mejor forma de disfrutar las flores
+    -> Capaz que llegamos a la conclusión de que no hay que dibujar ni siquiera un florero
+    -> Capaz que algo que te roce olores o algo que transforme la flor
+    -> Es fácil: esa es la idea del ejercicio
+    -> Los momentos para pensar y trabajar la idea son claves
+
+## Design Thinking
+
+### ¿Qué es Design Thinking?
+    -> Herramienta que permite validar ideas, entre otras cosas
+    -> Ayuda en el proceso de ideación
+
+### Fases del Design Thinking
+
+#### Fase 1: Empatizar
+    -> Empatizar con la necesidad del otro
+    -> Entender la necesidad de otros
+    -> Ponerme realmente en los zapatos del otro
+    -> Escuchar al otro, escuchar al mercado
+    -> Entender muy bien los dolores que percibe el usuario
+    -> El mercado no es solo el usuario final
+    -> Todos los interesados que rodean esa problemática o necesidad
+
+#### Fase 2: Definir
+    -> De todas las problemáticas, necesidades, lo que conversaste en empatizar
+    -> Definir qué es lo que realmente vamos a atacar
+    -> Una vez que eso queda bien definido, pasa a la siguiente fase
+
+#### Fase 3: Idear
+    -> Vamos a construir una solución que permita atacar esa necesidad o problemática
+
+#### Fase 4: Prototipo
+    -> ¿Qué es un prototipo?
+        -> Un boceto de la solución que estoy planteando
+        -> Algo que me permita mostrarlo
+        -> Que ese potencial cliente pueda tocar o visualizar esa solución
+
+#### Fase 5: Testing
+    -> Cuando testeamos a través de ese boceto, prototipo con el cliente
+
+### Características del Design Thinking
+    -> Metodología cíclica
+    -> A partir del testing, ya volvemos
+    -> No tiene por qué ser de nuevo a empatizar
+    -> Puedo entrar en cualquiera de las fases
+    -> Voy entrando en el loop trabajando y afianzando la idea
+
+## Video: El Caso del Carrito de Compras Innovador
+
+### Resumen del Video
+    -> Diseño en cinco días de una solución innovadora
+    -> Equipo multidisciplinario con deadline ajustado
+    -> IDEO, firma de diseño en Silicon Valley
+    -> Han diseñado desde equipos médicos hasta el primer mouse de Apple
+
+### Equipo Multidisciplinario
+    -> Perfiles diferentes
+    -> Biólogo, psicólogo, ingeniero, lingüista, experto en marketing
+    -> Cada uno con perspectiva distinta
+    -> Muchos puntos de vista
+
+### Fase de Empatizar
+    -> Salieron a hablar con expertos
+    -> Conversaron con el mercado, con posibles clientes
+    -> Con los cajeros
+    -> Con el acomodador de carritos
+    -> No solo entender el usuario final
+    -> Conversaron con todos los involucrados
+
+### Fase de Idear
+    -> Mencionaron una regla única: no criticar las ideas de los otros
+    -> Trabajaron varias líneas
+    -> Hicieron varios prototipos
+    -> Definen por dónde van a ir
+    -> Combinaron: quedarse con lo mejor de todo el mundo
+
+### Fase de Prototipo y Testing
+    -> Poco prototipo y terminan testeándolo directamente con todos los involucrados
+    -> En esos procesos: clave para organizaciones que quieren promover la innovación
+
+### Cultura de Innovación
+    -> En organizaciones que quieren promover la innovación
+    -> Lo primero que tienen que ver a nivel cultural: ver el error como algo de todos los días
+    -> Cuando aparece un error o algo no sale bien, aparece el machaque
+    -> Eso va en contra de promover la innovación
+    -> Ejemplo: "trayes el error de arrancar"
+    -> Es verdad que es necesario pensarlo bien
+
+### La Solución Final
+    -> Carrito innovador que se mueve de lado
+    -> No más levantar productos
+    -> Se compra de forma totalmente diferente
+    -> Las bolsas están ahí, no hay canasto
+
+## Business Model Canvas
+
+### ¿Qué es?
+    -> Herramienta para trabajar ideas
+    -> Ya lo tienen súper trillado
+    -> Nueve dimensiones
+
+### Las Nueve Dimensiones
+    -> Propuesta de valor
+    -> Clientes
+    -> Canales
+    -> Relaciones
+    -> Fuentes de ingresos
+    -> Recursos clave
+    -> Actividades clave
+    -> Socios clave
+    -> Estructura de costos
+
+### Para Qué Sirve
+    -> Permite tener en consideración aspectos o puntos cuando estamos trabajando una idea
+    -> Entender al cliente
+    -> Entender los canales por los que mi propuesta de valor va a llegar al cliente
+    -> Qué relación voy a tener, qué relaciones espera tener el cliente
+    -> Trabajar en la propuesta de valor
+    -> Recursos, actividades clave, socios clave
+    -> Estructura de costos y estructura de ingresos
+
+### Ejercicio Propuesto
+    -> Hacer el Business Model Canvas para Tesla
+    -> No se alcanzó a hacer por tiempo
+
+## Próxima Clase
+    -> Ver el proceso de conformación del equipo fundador
+    -> Si tienen suerte, ya tendrán el primer invitado para la segunda hora
+    -> Perfil de fundador de una SaaS o de una software factory
+    -> Difícil coordinar las charlas
+    -> Por eso no hay una hoja de ruta fija
+    -> No está definido al 100% qué se va a ver cada día
+
+## Información Administrativa
+    -> Crear el chat de Teams hoy
+    -> Ya subir la presentación de clase
+    -> Material disponible para consulta
+

@@ -36,7 +36,7 @@ Si el profesor hace comparaciones, analogías o ejemplos, incluílos (ayudan a e
 
 Formato de salida final:
 
-Guardá el resultado como si fuera un archivo llamado ASP/ASP-08-27-2025.txt.
+Guardá el resultado como si fuera un archivo llamado Desarrollo de productos de base tecnologica/DPBT-08-22-2025.txt.
 
 El contenido debe estar listo para copiar y pegar en un documento de Word o Drive sin perder formato.
 

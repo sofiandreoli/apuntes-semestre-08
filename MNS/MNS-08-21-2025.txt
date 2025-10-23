@@ -1,0 +1,549 @@
+# Modelos de Negocios en Software - Clase Introductoria
+
+## Presentación de la Materia
+
+### Docente y Coordinación
+    -> Docente: Andrés Galiana
+    -> Coordinador de desarrollo y comunicación en la Facultad de Ingeniería
+    -> Redes sociales de la facultad disponibles para información sobre convenios y actividades
+
+### Objetivo General
+    -> Recorrer los aspectos más importantes de una empresa de software
+    -> Desde su creación hasta el momento en que está operativa
+    -> Desarrollando y vendiendo
+    -> Siempre visto desde la perspectiva de dos modelos de negocio bien marcados
+
+### Los Dos Modelos Base
+    -> Empresa de servicios de software
+        -> Vende servicios (desarrollo a medida, consultorías, software)
+    -> Empresa de software como servicio (SaaS)
+        -> Producto vendido en forma de servicio con consumo por uso
+    -> No hay uno mejor que otro, son distintos
+    -> Objetivos distintos, parten de situaciones distintas
+
+## Modalidad y Dinámica de Clase
+
+### Horarios y Estructura
+    -> Todos los jueves de 10 a 12
+    -> Corte en el medio
+    -> 14 clases en total (15 semanas menos un feriado)
+    -> Modalidad: híbrida flexible
+
+### Particularidad: Invitados de la Industria
+    -> En muchas sesiones vendrán invitados de la industria
+    -> Hablarán desde su experiencia
+    -> Particularidad en la modalidad: si viene presencial, ideal estar presencial
+    -> Si viene virtual, pueden conectarse remotos
+    -> Se debe llegar a un acuerdo sobre la conveniencia para todos
+
+### Dinámica de Clase
+    -> Materia no impositiva
+    -> No hay verdades absolutas
+    -> Mucho de opinar qué haría uno, qué haría otro
+    -> Se espera intercambio y vuelta, participación dinámica
+    -> Siempre desde la opinión, sabiendo que no hay respuestas incorrectas
+    -> Cualquier opinión nutre o beneficia al resto de los compañeros
+    -> Se utiliza metodología del método del caso
+
+### Materiales y Comunicación
+    -> Todas las presentaciones subidas en Aulas
+    -> Chat en Teams para subir contenido y dudas
+    -> Consultas por Teams en cualquier horario
+    -> Materiales disponibles en Aulas
+
+## Criterios de Evaluación
+
+### Distribución de Puntos (100 puntos totales)
+    -> 15 puntos: Actuación en clase
+        -> Compuesta por dos dinámicas de clase
+        -> Cada dinámica grupal vale 7.5 puntos
+        -> Total: 15 puntos
+    -> 45 puntos: Obligatorio
+        -> En equipos de máximo 3 integrantes
+        -> Aún no está definido completamente
+        -> Opción 1: Análisis de una empresa SaaS
+        -> Opción 2: Análisis conjunto con el C (incubadora de empresas)
+        -> O consultoría de alguna startup activa en el C
+    -> 40 puntos: Parcial
+        -> Aspectos vistos en clase
+        -> Muy posiblemente una pregunta relacionada con el obligatorio
+
+### Exoneración
+    -> Mínimo de 70 puntos para exonerar
+    -> No hay examen
+    -> Si no se llega a 70 puntos, hay que recursar
+
+### Formación de Equipos
+    -> Equipos elegidos por los estudiantes
+    -> Mismo equipo para dinámicas y obligatorio o equipos diferentes
+    -> Máximo 5 integrantes según número de estudiantes
+    -> Se confirma el número máximo en la próxima clase
+
+## Método del Caso
+
+### Qué es el Método del Caso
+    -> Metodología de aprendizaje centrada en el estudiante
+    -> Se entrega unos días antes un caso real de una empresa
+    -> Se plantea una situación/problema para resolver
+    -> La resolución es paradójica: alguien tiene que decidir
+    -> Cada uno define qué haría en la posición de ese decisor
+
+### Características del Caso
+    -> Plantea información útil para la toma de decisión
+    -> También información "basura" de relleno que puede no aportar
+    -> Se llega a clase con el caso leído
+    -> Se discute entre todos
+    -> No lleva nota generalmente
+    -> Para aplicar conceptos vistos o por ver
+    -> No hay respuestas incorrectas
+    -> Los casos son reales pero se cambian nombres de personajes y empresas
+    -> Longitud: 2 a 4 carillas máximo
+
+## Unidades Temáticas del Curso
+
+### Clase 1: Introducción
+    -> Modelos de negocios en software
+    -> Diferencia entre producto y servicio
+    -> Definición de los dos modelos base
+
+### Clase 2: Proceso de Ideación
+    -> Trabajar la idea de negocio
+    -> Innovación
+    -> Mitos o recomendaciones sobre el proceso de ideación
+    -> Posible invitado de empresa de servicios y otro de SaaS
+
+### Clase 3: Conformación del Equipo Fundador
+    -> Características que debe tener el equipo
+    -> Cómo deben complementarse
+    -> Proceso habitual que deben recorrer
+    -> Posible invitado: fundador o cofundador
+
+### Clase 4: Aspectos Legales del Desarrollo
+    -> Dictada por abogado especializado (Olivier)
+    -> Tipos de sociedades (SAS, SA)
+    -> Aspectos del contrato de accionistas
+        -> Qué ocurre si nos vamos
+        -> Qué hacemos si alguien quiere vender y el otro no
+        -> Criterios para tomar decisiones futuras
+    -> Gobierno corporativo
+    -> Transferencias de acciones
+        -> Qué pasa si entra un tercero
+        -> Cómo se reconfigura la distribución
+        -> Derechos si alguien quiere comprar acciones de un socio
+    -> Asuntos relevantes para el equipo fundador y acuerdo de acciones
+
+### Clase 5: Primera Dinámica - El Pitch
+    -> Antes: ver herramienta Business Model Canvas
+    -> Trabajo en equipo
+    -> Cada equipo trabaja una idea distinta de negocio
+    -> Pulir la idea usando Business Model Canvas
+    -> Preparar un pitch
+    -> Dar el pitch en clase (duración breve)
+    -> El equipo trabaja el discurso entre todos
+    -> Uno pasa a dar el pitch
+    -> Antes de presentar se ve un video con recomendaciones
+    -> Vale 7.5 puntos (mitad de actuación en clase)
+    -> Se debe definir si todos presenciales o todos virtuales ese día
+
+### Parte 2: Empresas Operativas
+
+#### Gestión de Empresas de Servicio de Software
+    -> Roles claves en las organizaciones
+    -> Áreas que conforman las empresas
+        -> Área de marketing
+        -> Área de recursos humanos
+        -> Otras áreas
+    -> Actividades principales en cada área
+    -> Primer caso de estudio
+    -> Posible invitado de empresa de servicios
+
+#### Gestión de Empresas de Software como Servicio
+    -> No se centra tanto en roles y áreas
+    -> Se enfoca en indicadores claves (KPIs) principales
+    -> Qué hay que tener en cuenta
+    -> Qué hay que monitorear para medir el desempeño
+    -> Desempeño de comercial, soporte, desarrollo
+    -> Comparación contra objetivos definidos
+    -> Definición de objetivos por área
+    -> Qué es un objetivo bien definido y cómo medirlo
+    -> Qué acciones tomar en base a desvíos
+    -> Caso de estudio
+    -> Invitado de la industria
+
+#### Gestión Comercial
+    -> Puede durar 2 o 3 clases
+    -> Composición del área comercial
+    -> Rol de vendedores o ejecutivos comerciales
+    -> Remuneración de estos roles
+        -> Parte fija y parte variable
+        -> Por qué es importante que sea así
+    -> Objetivos comerciales
+    -> Concepto de oportunidades
+        -> Qué es una oportunidad en el mundo comercial
+        -> Cómo se gestiona
+    -> Cómo gestionar clientes
+    -> Proceso de venta
+        -> Qué es un proceso de venta
+        -> Por qué es importante tenerlo
+    -> Cotizaciones
+        -> Cómo cotizar
+        -> Cómo armar una cotización
+    -> Definición de precio
+        -> En base a costo
+        -> En base a valor que aporta al cliente
+        -> En base a competencia
+        -> En base a disposición a pagar del cliente
+    -> Contratos
+        -> Por qué hay contratos
+        -> Contrato de soporte
+            -> Niveles de servicio
+            -> Concepto de SLA (Service Level Agreement)
+            -> Confidencialidad
+            -> Tiempos de respuesta
+            -> Tiempos de resolución
+            -> Alcance (hasta dónde voy, hasta dónde no)
+            -> Responsabilidades de cada parte
+    -> Proceso de licitación pública
+        -> Diferencia entre compra privada y pública
+        -> Proceso asociado a licitaciones públicas
+        -> Qué es un pliego
+        -> Los proveedores se presentan a licitación
+        -> Presentación de propuestas
+        -> Criterios definidos en el pliego determinan quién es adjudicado
+    -> Caso de estudio
+    -> Invitado de la industria (área comercial)
+
+### Clase N: Segunda Dinámica
+    -> Aún no está definida para este semestre
+    -> Opción 1: Caso de estudio
+    -> Opción 2: Plan de negocio para la idea trabajada en dinámica 1
+        -> Ya no es solo presentar en un minuto
+        -> Es a nivel de organización
+        -> Si hay un proyecto que queremos presentar
+        -> Hay personas que deciden si tiene luz verde o no
+        -> Plan de negocio debe incluir:
+            -> Cuánto tiempo lleva desarrollarlo
+            -> Proyecciones de venta
+            -> Costos
+            -> Distintas dimensiones
+        -> Grupo trabaja en eso para presentarlo frente al resto
+    -> Vale 7.5 puntos (otra mitad de actuación en clase)
+
+### Proceso de Inversión
+    -> Dictada por Eduardo (de Can)
+    -> Rondas donde las startups levantan financiamiento
+    -> Aspectos a considerar según la etapa de desarrollo
+    -> Distintos tipos de ronda con distintos objetivos
+    -> Concepto de evaluación de la empresa
+        -> Cuánto vale mi empresa
+        -> No es trivial
+        -> Depende del rubro
+        -> Formas de evaluar:
+            -> Por facturación del año
+            -> Por lo que gano en el año
+            -> Por acciones en bolsa (cuántas acciones hay y valor de esas acciones)
+        -> Distintas formas de estimar el valor
+
+### Herramientas para Startups
+    -> Dictada por alguien del C (incubadora)
+    -> Herramientas que utilizan los emprendedores en etapas iniciales
+    -> No tanto plataformas o softwares
+    -> Metodologías, razonamientos, acuerdos
+    -> A qué aspectos del negocio prestar atención en etapas tempranas
+    -> Para dar pasitos que nos acercan al éxito
+    -> Herramientas clave para el desarrollo de una startup
+
+### Valor de los Invitados
+    -> Las encuestas dicen que el mayor valor de la materia son los invitados
+    -> Más allá de contar su experiencia:
+        -> Qué hace
+        -> Qué dificultades tuvo
+        -> Qué se propuso
+        -> Qué se levantó después
+    -> Se genera ida y vuelta con los estudiantes
+    -> Algunas charlas generan más interés que otras
+    -> Muchas veces buscan perfiles como los estudiantes
+    -> Los estudiantes pueden quedar conectados con los invitados
+
+## Trabajo Final (Obligatorio)
+
+### Opción 1: Análisis de Empresa SaaS
+    -> Elegir una empresa SaaS
+    -> Analizarla desde punto de vista de distintos conceptos vistos en clase
+    -> Análisis del equipo fundador
+        -> Quiénes fundaron
+        -> Qué hicieron antes
+        -> Qué estudiaron
+        -> Cómo se complementan
+    -> Análisis del modelo de negocio
+        -> Cómo gana plata
+    -> Herramientas vistas en clase (FOA, indicadores)
+    -> Plasmar indicadores en el informe y analizarlos
+    -> Información pública (web, etc.)
+    -> Capítulo del informe: evaluación
+        -> Cuánto vale la empresa
+        -> Lo más fácil: empresa en bolsa (información pública que aprenderán a interpretar)
+    -> Conclusiones
+
+### Recomendación para Opción 1
+    -> Elegir empresa que les sea fácil encontrar información pública
+    -> Evitar empresas de nicho donde cueste conseguir información
+    -> Información más difícil de conseguir = más trabajo
+
+### Opción 2: Consultoría de Startup en el C
+    -> Particularidad: probablemente el equipo tenga que juntarse con otros dos equipos de otros dos dictados
+    -> Entre todos coordinar reuniones con gente del C
+    -> Una empresa no va a coordinar con cada grupo por separado
+    -> Por eso aún no está definido del todo
+    -> Para el C es súper valioso tener análisis de personas como los estudiantes
+    -> Les aporta valor también
+
+## Resumen General
+    -> 14 clases
+    -> 8 posibles invitados
+    -> 2 dinámicas de clase (15 puntos de actuación en clase)
+    -> 4 casos de estudio
+
+## Pautas para Uso de Inteligencia Artificial
+    -> Uso permitido y promovido por la universidad
+    -> Usar de forma responsable
+    -> Entender las limitaciones de las herramientas
+    -> Si se usa para algún obligatorio o trabajo:
+        -> Referenciar: utilizar esto
+        -> Indicar el prompt utilizado
+        -> Describir la conversación mantenida
+
+## Expectativas del Docente
+    -> Básicas: participación, preguntar lo que haya que preguntar
+    -> Personales: a lo largo de las 14 clases habrá 5-6 conceptos claves
+    -> El docente irá comentando esos conceptos
+    -> Expectativa: que todos se vayan con esos 6 conceptos incorporados
+
+## Segunda Parte: Conceptos Claves
+
+# Modelos de Negocios
+
+## ¿Qué es un Modelo de Negocios?
+    -> No es solo vender algo
+    -> Tiene que ver con crear, entregar y capturar valor
+
+### Crear Valor
+    -> Identificar un problema o necesidad
+    -> Ofrecer una solución que ataque esa problemática
+    -> Diseñar una propuesta que resuelva cierta necesidad
+    -> Ejemplo panadería: pan fresco todas las mañanas
+    -> Ejemplo Spotify: resolver necesidad de escuchar música
+        -> Sin tener que descargar archivos
+        -> Disponible desde cualquier dispositivo
+        -> En cualquier momento
+        -> En tiempo real
+
+### Entregar Valor
+    -> Cómo llega la propuesta al usuario
+    -> Cómo hacer que el usuario entienda y consuma la propuesta
+    -> Llevar la solución de forma accesible y usable
+    -> Ejemplo panadería: local accesible, atención rápida
+    -> Ejemplo Spotify: aplicaciones sencillas e intuitivas de usar
+        -> Celular, tablet, computadora
+
+### Capturar Valor
+    -> Cómo la empresa convierte ese valor en beneficio propio
+    -> Obtener ganancia o beneficio a partir de la propuesta de valor
+    -> Ejemplo Spotify:
+        -> Cobrando suscripciones premium
+        -> Vendiendo publicidad
+    -> Ejemplo panadería: cobrando por cada pan
+
+## Modelos de Negocio en Software
+
+### Formas de Ganar Plata en Empresas de Software
+    -> Suscripciones (mensuales o anuales)
+    -> Modelo freemium
+        -> No cobro nada por un set de funcionalidades
+        -> Si querés otro set, te cobro suscripción
+    -> Publicidad
+    -> Compra perpetua
+        -> Compro la aplicación y ya la tengo
+    -> Micro compras / micro transacciones
+        -> Juegos con compras dentro del juego
+    -> Comisiones por intermediación
+    -> Datos (indirectamente, como WhatsApp)
+    -> Diversificación de líneas de negocio
+        -> Ejemplo MercadoLibre: Mercado Pago, Mercado Envío, crossline
+
+### Definición de Negocio de Software
+    -> Se basa en la creación, distribución y comercialización de soluciones digitales
+    -> Soluciones digitales: aplicaciones, plataformas, servicios tecnológicos
+    -> Aportan valor a los clientes
+    -> Productos que no son tangibles en muchos casos
+    -> El modelo de negocio define cómo se monetiza
+
+## Ejemplo Práctico: Pedidos Ya
+
+### Actividad Dinámica
+    -> Trabajo en pares
+    -> Discutir tres preguntas sobre Pedidos Ya:
+        -> ¿Quién paga?
+        -> ¿Cómo gana dinero la empresa?
+        -> ¿Qué valor le da al usuario?
+
+### ¿Quién Paga?
+    -> El usuario que pide
+    -> Envío
+    -> Suscripción por mes (si aplica)
+    -> Restaurante paga comisión por cada venta realizada a través de la plataforma
+
+### ¿Cómo Gana Dinero la Empresa?
+    -> Comisiones de restaurantes
+    -> Publicidad en la web
+    -> Posicionamiento en la web (anuncios, promociones para estar más arriba)
+    -> Suscripción mensual (te ahorras envíos, descuentos)
+    -> Bolsas
+    -> Supermercados propios (línea de negocio market)
+    -> Diversificación: distintas líneas de negocio
+        -> Doctorales, envíos, market
+        -> Unidades de negocio
+
+### ¿Qué Valor le da al Usuario?
+    -> Comodidad: puede comprar sin moverse
+    -> Ahorro de tiempo
+    -> Variedad: muchos restaurantes en una misma aplicación
+    -> Mayor alcance del mercado para restaurantes
+    -> Canal adicional para restaurantes para vender productos
+    -> Trabajo para repartidores
+    -> Facilita a quienes no podrían sobrevivir de otra forma
+
+## Mercado Objetivo en Software
+
+### Definición
+    -> Ejemplo panadería: gente del barrio (mercado local y acotado)
+    -> Mercado objetivo puede variar según el producto
+    -> En software depende de la aplicación o tecnología
+
+### Características del Mercado de Software
+    -> Software puede ser usado por millones de personas en todo el mundo
+    -> Sin necesidad de abrir nuevos locales
+    -> Solo a través de internet se puede apuntar a lo global
+    -> Hoy casi todo depende de tecnología
+        -> Comunicación, conexión, servicios, estudio, pagos
+    -> Organizaciones tienen dependencia muy marcada de la tecnología
+    -> No existe proceso a nivel de organización que no esté soportado por tecnología
+
+### Ejemplos de Necesidades Tecnológicas
+    -> Área comercial: CRM (Customer Relationship Management)
+        -> Maneja clientes, oportunidades
+        -> Guía a los vendedores en el proceso de venta
+    -> Área de recursos humanos: software específico
+        -> Gestión de colaboradores
+        -> Sueldos
+        -> Pagos
+    -> Área de compras: requiere tecnología
+    -> Todas las áreas requieren tecnología
+
+### Observación Importante
+    -> Ya no solo las organizaciones grandes y con más plata consumen tecnología
+    -> Hoy no hay una sola organización que no consuma tecnología
+    -> El mercado objetivo del mundo del software es muy amplio
+    -> Todos consumimos tecnología de una u otra forma
+
+## Garner e IDC
+
+### ¿Qué son?
+    -> Consultoras internacionales
+    -> Analizan todos los rubros de TI
+    -> Ejemplo: rubro de antivirus
+
+### El Cuadrante Mágico de Garner
+    -> Analiza todos los fabricantes conocidos de un rubro
+    -> Los posiciona según:
+        -> Visión del producto
+        -> Capacidad de ejecución
+    -> Cuanto más a la derecha y más arriba, más líderes son
+    -> Informe que dice ventajas y desventajas de cada uno
+    -> Las empresas líderes compran el informe y lo publican como publicidad
+    -> Cobran por acceder al informe
+
+### Forrester Wave
+    -> Similar a Garner
+    -> Cuanto más arriba y más a la derecha, más líder
+    -> El puntito indica porción de mercado
+    -> Cuanto más grande el puntito, más porción de mercado
+
+### Otras Referencias
+    -> Benchmarks específicos por industria
+    -> Ejemplo: LMS (Learning Management Systems)
+    -> Comparativos para integración de inteligencia artificial
+
+## Producto vs Servicio
+
+### Definición de Producto
+    -> Algo tangible
+    -> Lo vendés ya está hecho
+    -> Se puede tocar
+    -> Es tangible
+
+### Definición de Servicio
+    -> Intangible
+    -> No se puede tocar
+    -> Actividad o proceso que se realiza para el cliente
+    -> Relación continua en el tiempo
+    -> Puede variar el ancho de banda según la demanda
+
+### En el Mundo del Software
+
+#### Ejemplos Tangibles
+    -> Celular: producto
+    -> Aplicación descargada: puede ser producto
+
+#### Ejemplos de Servicio
+    -> Netflix: producto vendido como servicio
+    -> Suscripción mensual para acceder al contenido
+
+#### Evolución: El Caso del Office
+    -> Tradicionalmente: comprabas la cajita, llegaba el producto
+    -> Migración al modelo en la nube
+    -> Dispones el mismo software en la nube
+    -> Pagas por el servicio, accedes al mismo software
+    -> Tienes actualizaciones en el momento
+    -> Transición de licencia perpetua a modelo de suscripción
+
+### Diferencia Clave Producto-Servicio en Software
+    -> Servicio de desarrollo de software: servicio
+        -> Software factory
+        -> Consultoría
+    -> Soporte post venta: servicio
+    -> Mantenimiento: servicio
+    -> Customización específica: servicio
+    -> Integración específica: servicio
+    -> Producto: transacción en el momento
+        -> Me pagas y yo te doy la caja
+        -> Es tuyo, lo usas como querés
+
+### Implicaciones Financieras
+
+#### Licencia Perpetua
+    -> Se ve como inversión
+    -> Desembolso fuerte inicial
+    -> Ejemplo: $200,000 por tener la solución
+
+#### Suscripción
+    -> Se ve como costo de operar
+    -> Pago mensual
+    -> Ejemplo: $150 por mes
+    -> Permite acceso sin inversión inicial grande
+    -> Ventaja: flexibilidad para cortar si no se puede mantener
+    -> Permite acceder a productos que antes solo grandes organizaciones podían tener
+
+### Ventajas del Modelo de Suscripción
+    -> No hay que desembolsar el monto completo inicialmente
+    -> Si a mitad de camino el software no sirve, se puede cambiar
+    -> Para empresas chicas o con presupuestos chicos, es posibilidad de acceso
+    -> Para empresas nuevas, seguridad de poder cortar el servicio si no pueden mantenerlo
+    -> No te comprometes a largo plazo
+
+### Observación
+    -> Más que nada en organizaciones, el modelo de suscripción ha ganado terreno
+    -> Transición más temprana o más tarde en todos los fabricantes
+    -> En el medio había opción de ambos caminos
+    -> Hoy casi todo es por suscripción
+
