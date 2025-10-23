@@ -1,0 +1,101 @@
+Apuntes de clase – 03/10/2025
+Desarrollo de productos de base tecnológica – Definir (POV), Saturación/Clustering, Entregas y Letra del obligatorio
+
+### Encadre y objetivos de la clase
+- Revisar estado de equipos para el obligatorio.
+- Cubrir la etapa de **Definir** (post-Empatía) y, si hay tiempo, mirar competidores.
+- Entregar y comentar la **letra del obligatorio** y las fechas/criterios.
+
+### Fechas y entregas
+- Primera entrega: 30/10 (incluye hasta Definir + competidores). Prototipo: 1 semana antes de la final.
+- Segunda entrega: 01/12 (por Gestión). Defensa: obligatoria y eliminatoria (28/11 para viernes).
+- Ponderaciones (orientativas): Obligatorio 50, Parcial 30, Cuestionarios 15 (mejor de 3).
+- Uso de IA: permitido con **citación explícita** y entendimiento real (no copy/paste ciego).
+
+### Repaso: de Empatía a Definir
+- Empatía realizada con entrevistas y observación (fotos de aeropuerto). Se obtuvieron frases, emociones, tensiones y hallazgos.
+- Ahora: organizar evidencia, **remarcar el desafío** y escribir **POVs (Point of View)**.
+
+### Proceso de Definir (alto nivel)
+- Pasos:
+  1) Analizar resultados de Empatía (depurar, subrayar frases clave, emociones, tensiones).
+  2) Compartir y capturar en tablero común (físico/digital) – “saturación”.
+  3) Agrupar en **clusters temáticos** (por temas, perfiles, etapas del journey, dolores, etc.).
+  4) Remarcar el desafío y formular **POVs** por cluster/perfil.
+- No es proceso rígido; se aprende por práctica, pensamiento crítico y creatividad.
+
+### Saturación y clustering
+- Saturar = volcar TODA la evidencia en un espacio común (post-its, pizarra, Miro).
+- Clustering: buscar afinidades y formar 2–4 grupos prioritarios.
+- Divergencia (ampliar) → Convergencia (enfocar).
+
+### Perfiles/Personas (mínimos)
+- Datos relevantes al problema; objetivos; motivaciones; frustraciones; rasgos diferenciales.
+- Se pueden enriquecer durante todo el proceso (aparecen nuevos perfiles/ángulos).
+
+### Observación vs. lo que la gente dice
+- Observar revela contradicciones y oportunidades (ejemplo: lista de compras en papel → idea de foto + parsing + integración a delivery/super).
+
+### Ejercicios y hallazgos (aeropuerto)
+- Casos observados y comentados:
+  - Niños: aburrimiento en escalas; se escapan; cansancio; necesidad de cargarlos.
+  - Mochila/valija pesada: limita correr tras niños; estrés en filas.
+  - Check-in y filas: revisión por peso/dimensiones/prohibidos; incomodidad al abrir valija; gente enojada.
+  - Señalización: confusa; nervios por no saber a dónde ir.
+  - Compra/confirmación online: dudas/ansiedad al pagar; miedo a “hacer click” sin entender condiciones.
+  - Correr al gate: riesgo de perder vuelo; estrés por tiempo; cambios de puerta.
+  - Líquidos y equipaje: incertidumbre (qué se puede llevar); viaje con niños (valijas chicas) como pista contextual.
+  - Parlantes/avisos: poca audibilidad; confusión con equipaje en escalas (retirar/re-check-in).
+  - Pérdida/olvido de celular y boarding pass; vergüenza al “meterse en fila” para resolver.
+  - Caminar mucho: instalaciones/logística del aeropuerto; cansancio; falta de lugares para descansar.
+- Primer clustering propuesto:
+  - **Valija** (armado, seguridad, traslado/recupero).
+  - **Falta de información/disponibilidad** (procesos, puertas, escalas, reglas, tiempos).
+  - **Instalaciones/infraestructura** (descanso, señalización, distancias).
+  - **Seguridad** (robo/perdida en cinta, control, turnarse para dormir).
+  - (Otros: logística de medicamentos en equipaje, recetas, etc.).
+
+### POVs (Point of View): estructura y criterios
+- Estructura típica: Perfil/Persona + “necesita” (NECESIDAD PROFUNDA, no solución) + “porque” (INSIGHT/razón raíz).
+- Evitar soluciones en el enunciado (“una app”, “ver estado de vuelo”), pues condicionan el espacio creativo.
+- Buscar la necesidad raíz (ej.: “información oportuna para decidir cuándo y a qué puerta ir” → disfrutar la espera sin temor a perder el vuelo).
+
+### Ejemplo de POV refinado (caso “Lucía”)
+- Necesidad: información “oportuna” (dependiente del contexto/ubicación) sobre puerta y momento de ir.
+- Insight: quiere disfrutar su tiempo sin el temor constante a perder el vuelo/ir a la puerta incorrecta.
+- Abre espacio a soluciones creativas (notificaciones contextuales, GPS indoor, rutas, reloj/pulsera con haptic, etc.).
+
+### Subdividir cluster “Valija” y formular POVs
+- Subclusters: 1) Armado; 2) Seguridad; 3) Traslado/recupero.
+- Armado (POV ejemplo):
+  - Persona X necesita una forma de armar su valija que asegure el cumplimiento de la normativa (peso/dimensiones/prohibidos del aeropuerto/aerolínea) y que contenga lo necesario para su destino, para evitar estrés, multas o pérdidas de tiempo.
+- Seguridad (POV ejemplo):
+  - Persona X necesita tener su valija “segura” (durante carga, vuelo y cinta) para no estar pendiente/ansiosa y reducir riesgo de pérdida/robo/daño mientras espera.
+
+### Ideación (adelanto)
+- Brainstorming: “sí, y además…”, cantidad sobre calidad al inicio; usar “what if…”.
+- No descartar ideas tempranas; iterar y combinar.
+
+### Letra del obligatorio (resumen operativo)
+- Objetivo: diseñar una solución de base tecnológica que **mejore la conveniencia** para personas y los **animales** que conviven con ellas.
+- Empatía: elegir un animal (p.ej., perro/gato) y al menos **3 perfiles** (edad, estilo de vida, tecnología, composición del hogar…).
+- Considerar **usuarios secundarios**: veterinarias, vecinos/cuidadores, guarderías, paseadores, etc.
+- Posibles categorías para enfocarse (inspiración):
+  - Bienestar y vínculo humano–animal.
+  - Movilidad y actividades.
+  - Seguridad en el hogar.
+  - Pérdidas: prevención y solución.
+  - Salud (dimensiones varias).
+  - Ausencias: períodos cortos vs. largos.
+  - Convivencia (edificio vs. casa, múltiples animales, etc.).
+- Requerido:
+  - Definir y validar un **desafío enfocado** (con evidencia de Empatía).
+  - Formular **≥3 POVs**; seleccionar 1 (o 2 muy relacionados) para la segunda entrega.
+  - Documentar proceso y evidencias (transcripciones, fotos, links a Miro/tableros, etc.).
+  - Mantener ritmo sostenido (entrevistas/observación dependen de terceros).
+
+### Recomendaciones finales
+- Validar pronto el enfoque/desafío para guiar entrevistas adicionales.
+- Capturar evidencia clara; separar “lo dicho” vs. “lo observado”.
+- En POV: describir necesidad raíz y razón/insight; evitar soluciones.
+- Preparar defensa: relato del proceso + prototipo funcional para mostrar.

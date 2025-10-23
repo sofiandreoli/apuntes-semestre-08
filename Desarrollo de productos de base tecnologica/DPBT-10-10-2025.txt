@@ -1,0 +1,81 @@
+Apuntes de clase – 10/10/2025
+Desarrollo de productos de base tecnológica – Cierre Definir, Competidores e inicio de Ideación (HMW)
+
+### Objetivo de la clase
+- Retomar el trabajo de la semana anterior (Definir) y cerrarlo.
+- Introducir análisis de competidores (directos, indirectos y potenciales) y matrices comparativas.
+- Comenzar Ideación a partir de POVs: preguntas How Might We (HMW) y tablero de ideación.
+
+### Fechas/administrativo (recordatorio)
+- Primera entrega (hasta Definir + Competidores): 30/10.
+- Segunda entrega: 01/12 (por Gestión). Defensa: obligatoria/eliminatoria (viernes 28/11).
+- Ponderación orientativa: Obligatorio 50, Parcial 30, Cuestionarios 15 (mejor de 3).
+- IA: se puede usar, citando explícitamente y demostrando comprensión.
+
+### Repaso rápido: Empatía → Definir (lo ya hecho)
+- Actividades de Empatía realizadas: entrevistas (familia/joven) y observación (fotos en aeropuerto).
+- Saturación en pizarrón y clustering en 3 grupos:
+  - Valija (armado, seguridad, traslado/recupero).
+  - Falta de información/navegación en aeropuerto.
+  - Logística/instalaciones (descanso, distancias, señalización).
+- POVs redactados (ejemplos):
+  - Armado: “Necesita una forma de armar la valija que cumpla normativas (peso/dimensiones/prohibidos por país/aerolínea) para evitar sorpresas/estrés en el aeropuerto”.
+  - Contenido adecuado: “Necesita asegurar que lleva lo necesario para el destino (días, clima, actividades, medicación) para disfrutar sin compras de última hora”.
+  - Seguridad/ubicación: “Necesita garantizar que la valija esté segura y donde debe estar durante carga/vuelo/cinta para no estar pendiente/ansiosa”.
+
+### Competidores: por qué y cómo analizarlos
+- Propósito: validar si el problema ya está resuelto, detectar oportunidades/diferenciación y decidir si vale la pena competir.
+- Tipos:
+  - Directos: misma necesidad/segmento, soluciones comparables (p.ej., Coca vs. Pepsi; McDonald’s vs. Burger King; Spotify vs. Apple Music).
+  - Indirectos: misma necesidad de otra manera o compiten por el tiempo/atención (p.ej., Netflix vs. YouTube/Teatro/Deporte; McDonald’s vs. cocinar en casa/Subway).
+  - Potenciales: hoy fuera del mercado, pero con capacidades para entrar y cambiar reglas (p.ej., Uber, Amazon, Sony/PlayStation; hoteles que bajan a segmentos más bajos, etc.).
+- Clasificación adicional (posicionamiento): líderes, establecidas, nicho, agentes de cambio.
+
+### Qué comparar (ejemplos, depende del problema)
+- Producto/servicio (features clave), precio, canales, promoción.
+- Métricas de valor: comodidad/UX, tiempo de traslado (en movilidad), seguridad, disponibilidad, integraciones, etc.
+- Sugerencias de matrices:
+  - Tabla de funcionalidades: lista de features vs. competidores con rating (1–5) para identificar huecos y oportunidades.
+  - Comparativas por criterios (precio, calidad, rapidez, soporte). Evitar “sí/no”; preferir graduación (estrellas/puntajes).
+  - DAFO por competidor: fortalezas/debilidades/oportunidades/amenazas.
+- Crear “fichas de competidor”: propuesta de valor, segmentos, tamaño/mercado, funcionalidades principales, limitaciones, modelo de negocio, canales, estrategia de marca, innovaciones.
+
+### Ejemplo didáctico (movilidad)
+- Low-cost avión vs. tren (corta distancia): precio, comodidad (llegar 2h antes vs. no), tiempos/controles, equipaje, experiencia.
+- Lecciones: elegir criterios relevantes a la necesidad; ubicar oportunidades donde los actuales puntúan bajo.
+
+### Observación vs. dicho (recordatorio de Empatía)
+- Contradicciones revelan oportunidades (ej.: “siempre uso la app” vs. anotar en papel → idea de foto/parsing/integración).
+
+### Inicio de Ideación: How Might We (HMW)
+- Para cada POV, formular 5–10 preguntas HMW que profundicen el problema sin proponer soluciones.
+- Ejemplos HMW (armado/compliance):
+  - ¿Cómo podríamos informar si excede peso/dimensiones antes de ir al aeropuerto?
+  - ¿Cómo podríamos detectar elementos prohibidos (líquidos/objetos) fácilmente?
+  - ¿Cómo podríamos informar cuántas valijas están incluidas y sus límites por aerolínea?
+  - ¿Cómo podríamos personalizar reglas por país/aerolínea/escala?
+- Ejemplos HMW (contenido adecuado):
+  - ¿Cómo podríamos recomendar “qué llevar” según destino/días/clima/actividades/perfil?
+  - ¿Cómo podríamos validar cantidades óptimas (p. ej., pares de medias) y sugerir alternativas?
+- Ejemplo HMW (seguridad/ubicación):
+  - ¿Cómo podríamos avisar que la valija se aleja/abre/se demora en cinta?
+
+### Tablero de ideación (panel de trabajo)
+- En una sola vista: POV, fotos/observaciones, HMW, Tecnologías candidatas (visión por computadora, sensores, RFID/NFC, GPS indoor, BT, básculas, etiquetas electrónicas), Contexto (aeropuerto: infraestructura, cámaras, salas, cintas, Wi‑Fi; domicilio: armado previo; aerolínea: normativas API).
+- Brainstorming: “sí, y además…”, cantidad sobre calidad; luego agrupar/seleccionar.
+
+### Ideas mencionadas en clase (ejemplos)
+- Foto al contenido/valija para estimar peso, detectar líquidos/objetos prohibidos, validar cantidad/categoría.
+- App con reglas por aerolínea/país/escala y cálculo de límites (peso/medidas/valijas incluidas).
+- Balanza/bandola simple o integrada; checklist dinámica por destino/actividades/perfil; recordatorios/validación.
+- Valija “inteligente” (concepto): peso integrado, sensores de apertura/movimiento, tracking, conexión a app y normativas.
+
+### De ideas a conceptos de solución
+- Combinar ideas compatibles y declarar un “concepto de solución” (no solución final):
+  - Ej.: Valija inteligente + app conectada a normativas + checklist por destino/actividades + alertas contextuales.
+- Próximo: prototipado y test (segunda entrega), y análisis de competidores específico del concepto.
+
+### Recomendaciones
+- Para competencia: identificar directos/indirectos/potenciales, crear fichas y usar matriz de funcionalidades con rating.
+- Para ideación: mantener HMW libres de solución; usar el panel; divergir primero y luego converger.
+- Documentar evidencia (entrevistas, fotos, pizarrón), links a tableros (Miro), y decisiones de enfoque.

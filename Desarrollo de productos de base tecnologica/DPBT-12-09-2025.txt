@@ -1,0 +1,93 @@
+APUNTES DE CLASE – DPBT – Innovación (Configuración–Oferta–Experiencia), Empatía, Discovery y Ejercicio de Aeropuertos
+
+1) Enfoque integral de la innovación: configuración, oferta y experiencia
+- Problema típico: empresas diseñadas “de adentro hacia afuera”.
+  - Configuración primero (áreas internas: pagos, logística, atención), luego oferta (qué vendo), y la experiencia queda condicionada por lo anterior.
+  - Ejemplos: tienda de electrodomésticos con procesos internos que traban la experiencia (llamadas entre áreas; “el sistema no lo permite”; horarios restringidos).
+  - Seguros: áreas separadas (auto/hogar/vida) → productos fragmentados → experiencias y pagos duplicados.
+- Enfoque moderno “de afuera hacia adentro”:
+  - Primero definir la experiencia que queremos dar al cliente.
+  - Después ajustar la oferta (cómo agrupar/embalar producto/servicio) para soportar esa experiencia.
+  - Por último, configurar la organización (procesos, sistemas, áreas) para viabilizar lo anterior.
+- Clave: innovar no solo en el producto (oferta), también en procesos/cultura (configuración) y en la experiencia end-to-end del cliente.
+
+2) Caso de configuración organizacional: modelo Spotify (tribus, squads, chapters, guilds)
+- Contexto: producto con múltiples áreas funcionales (música, playlists, podcasts, recomendaciones, social, etc.).
+- Organización por componentes/capacidades con autonomía controlada:
+  - Squads: equipos multi-disciplinarios (producto, devs, UX, research) orientados a una funcionalidad/capacidad. Buscan autonomía para descubrir–construir–liberar con calidad y velocidad.
+  - Tribes: agrupación de squads afines (p. ej., “Música” vs “Recomendaciones”).
+  - Chapters: comunidad por especialidad (todos los UX, o todos los backends) para compartir estándares, librerías, prácticas.
+  - Guilds: grupos de interés espontáneos (p. ej., IA aplicada) para aprender y diseminar conocimiento.
+- Objetivo: acelerar valor manteniendo coherencia de UX/arquitectura, reuso y aprendizaje transversal.
+- Nota: topologías de equipos (Team Topologies) proveen opciones según objetivos/escala; el modelo debe apoyar la experiencia definida.
+
+3) Por qué innovar y por qué startups desafían incumbentes
+- Razones para innovar: sobrevivir en mercados cambiantes; competir; aumentar valor al usuario/cliente.
+- Ventajas de startups: menor inercia, menos “legado”, enfoque a nichos con alto valor; incumbentes priorizan demandas de clientes actuales (operación) y postergan exploración; respuesta típica del incumbente: adquisiciones.
+
+4) Empatía y contexto: caso Alemania (ventilación)
+- Hecho: inviernos largos/fríos; cultura de ventilar (abrir ventanas) en casas aisladas; energía cara.
+- Solución técnica: ventilación mecánica para evitar abrir ventanas y perder calor.
+- Resultado: la gente siguió abriendo ventanas. Por qué:
+  - Emoción/motivación: sensación de frescura/limpieza al abrir; el sistema mecánico no “se siente”.
+  - Cultura y costumbre muy arraigada: cambiar hábitos culturales es difícil.
+- Lecciones:
+  - Empatizar no es solo clima y costos; incluye motivaciones, emociones, aspiraciones y cultura.
+  - Evaluar adoptabilidad: qué tan factible es cambiar la costumbre; cuándo conviene exaptar la solución a otros contextos/edificios.
+
+5) Discovery: marcos y principios
+- Común denominador: observar y empatizar (personas/contexto/limitaciones).
+- Ser buenos observadores: ver qué hacen vs qué dicen; descubrir “fricciones silenciosas”.
+- Marcos mencionados:
+  - Dual-Track (Discovery/Delivery en paralelo): oportunidades/ideas → prototipos → pasar a delivery cuando hay evidencia.
+  - Design Sprint (Google): workshops cortos para validar funcionalidades específicas.
+  - Discovery–Design–Delivery (SAFe): flujo de descubrimiento y diseño antes/durante la ejecución.
+  - Design Thinking (doble diamante): empatizar, definir, idear, prototipar, testear.
+  - Opportunity Solution Tree (Teresa Torres): discovery continuo organizado por oportunidades-soluciones.
+- Reglas prácticas:
+  - “Salir de la oficina”: entrevistas, observación contextual, creación de personas/perfiles.
+  - En definir: focalizar en el problema (no en la solución) y priorizar por impacto/evidencia.
+  - En idear: divergir (muchas ideas, incluso locas) y luego converger (selección).
+  - En prototipar: “make it real” con prototipos rápidos; validar con usuarios; dejar que “los usuarios sean la verdad”.
+
+6) Ejercicio guiado: experiencia en aeropuertos (journey + empatía)
+- Método sugerido:
+  - Mapear el journey desde la compra del pasaje hasta llegada al destino (o un tramo): compra, armado de valija, traslado al aeropuerto, check-in, despacho, seguridad, migraciones, espera/gate, embarque, vuelo, desembarque, conexión/escala, retiro de equipaje, traslado al destino.
+  - Entrevistar con preguntas abiertas (qué fue estresante y por qué; cómo organizaste el tiempo; qué recuerdas de seguridad; cómo resolviste X; sentimientos y frases textuales).
+  - Registrar perfiles: frecuencia de viaje, viajan solos/en familia, escalas, limitaciones (idioma, movilidad), tolerancias al riesgo, manejo de tecnología.
+  - Marcar experiencias buenas/neutras/malas a lo largo del journey; identificar dolores, emociones, causas visibles y ocultas.
+- Hallazgos relatados (selección):
+  - Escalas: estrés por tiempo incierto y distancias largas (p. ej., en San Pablo); falta de información anticipada (“20–30 min de caminata”), señalización confusa, free-shop en el medio que distrae.
+  - Seguridad/migraciones: filas tipo “caracol” con demoras; personal en entrenamiento; idioma; repetición de controles/solicitudes de datos; sensación de estar “encerrado”.
+  - Movilidad reducida (silla de ruedas): controles diferenciados más exhaustivos; embarque/desembarque sin mangas; buses sin rampa; separación del grupo; asistencia informada recién en check-in.
+  - Equipaje: ansiedad por valija (pérdida/robo/rotura); procesos en papel si se pierde; confusión al retiro (valijas similares).
+  - Compra online: stress por errores irreversibles; valor de políticas “24 h cancelación” o “bloqueo de precio” por X horas/días.
+  - Traslados en destino: incertidumbre en taxis/uber/transfer; buenas prácticas: zona señalizada para Uber en Río (línea de piso dedicada).
+  - Experiencias positivas: procesos ágiles en algunas terminales; señalizaciones claras; llamadas diferidas en call centers (“te llamamos cuando seas siguiente”).
+- Interdependencias: aeropuertos involucran múltiples actores (líneas, seguridad, migraciones, handling, proveedores), por lo que soluciones requieren coordinación inter-organizacional.
+
+7) Empatía vs entender el problema
+- La fase se llama “empatizar” (ponerse en los zapatos del otro), no solo “entender”.
+- Ventaja: revela soluciones no obvias (ej., si no puedes reducir espera, mejorar visibilidad: “cuánto falta”, estimaciones realistas, notificaciones push, o “te llamamos cuando seas el siguiente”).
+
+8) Técnicas y prácticas recomendadas
+- Entrevistas: priorizar abiertas; evitar sí/no en etapas tempranas. Explorar “última vez que…”; capturar frases textuales.
+- Observación: sentarse a mirar comportamientos (ej., gente mirando pantallas por minutos) y preguntar “por qué”.
+- Personas/perfiles: combinar características personales (edad, salud, habilidades) con patrones de uso (viaje en familia/escalas/frecuencia/idioma/tecnología).
+- Priorización: de la lista de dolores, elegir por impacto, frecuencia y viabilidad de cambio (considerar actores y restricciones legales).
+
+9) Ideas de mejora que se desprenden
+- Información por intención en aeropuertos/apps: “tengo conexión a puerta X, tiempo Y” → pasos guiados, tiempos, atajos, aviso si vas justo.
+- Señalización y feedback: estimador de tiempo a puerta; paneles dinámicos con personalización (app/QR); navegación indoor.
+- Inclusión: flujos accesibles, embarque y descenso coordinado, rampas y buses adaptados, mantener al grupo unido.
+- Equipaje: tracking en tiempo real, fotos de referencia, claims digitales, alertas de cinta/demoras.
+- Compra: ventanas de “arrepentimiento” o bloqueo de tarifa; revisiones guiadas para reducir errores.
+- Call centers: “call-back” automático (no esperar en línea).
+
+10) Cierre
+- Innovación exige alinear experiencia–oferta–configuración.
+- Discovery es continuo y se apoya en empatía y observación.
+- En problemas complejos (aeropuertos), mapear actores y coordinar soluciones multi-parte.
+- Diseñar para emociones y expectativas mejora tanto como reducir tiempos “duros”.
+
+Fin de los apuntes.

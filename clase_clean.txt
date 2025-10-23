@@ -1,0 +1,1601 @@
+WEBVTT
+Buenos días.
+Buenas
+buenas para asumir.
+Bueno, nosotros nos habíamos quedado. Él.
+Bueno, primero de nada. No sé si tiene
+alguna duda de obligatorio.
+Alguna cosa de quieran charlar?
+To tengo una pregunta. Sí,
+Sí. Ah, por
+respect. Antes que nada,
+con respecto a la entrega, eh?
+Ahí hubo varias personas que me escribieron.
+Prometieron que no hubo problemas.
+Este y alguien tuvo algún inconveniente o algo, o sea,
+las personas que me escribieron después,
+yo les consulté y me dijeron no tuvieron problema para
+entregar porque se habilitó el servicio.
+Pero si alguien más tuvo algún problema,
+este un memento de comentado?
+No, eh? Sí, nosotros no, no pudimos sac a ws
+porque creo que volvió.
+Volvió. Volvió tarde o ws. Se puede ser.
+Sí, ahí matia me escribieron ustedes a no dieron o
+Eh?
+No recuerdo acá fijo.
+No sé si me comentaron eso.
+Eh? No, no, no te mandamos.
+O sea, pudimos levantar todo el API. Todo. Eh?
+Lo pasa que al momento hacer el que seis ahí fue cuando dejó
+de funcionar a la por unas a nosotros y anti por la siete de
+la tarde dejó de funcionar.
+Y tal lo documentamos que en el momento
+acerca seis, lo podamos local.
+Ah, ta, pero lo probaron local. Está perfecto.
+O sea, podemos expresarlo todo tipo mostrar con gl watch
+con new re también con adores y todo,
+pero que no podemos probar.
+Fue el cas seis
+Ta pro subieron como habíamos comentado clases
+subieron apuntando local.
+Sí, sí, sí, sí, Sí, sí, sí. A
+Cabo. Son una captura del
+locker con los locks, eh? Y ya está
+Bien. Perfecto. Tanto.
+Entonces no hay problema.
+Este dejémoslo ahí, eh? Sí que me había comentado algo.
+Eh? Yo profe, tengo una duda del obligatorio, eh?
+El requerimiento no funciona el seis.
+La integración continua dice que para menos dos de los micro
+servicios se da contar con pruebas unitarias, eh?
+Para requerimientos funcionales de la le de nuestra lección
+y que eso tienen que estar con cobertura de percent.
+Esto, eh?
+Es un requerimiento funcional que ya estaba en el
+obligatorio pasado que era con dos requerimientos
+funcionales de la entrega anterior.
+Yo acá tengo dos dudas.
+La primera es, eh,
+que tú en la clase,
+cuando leíste la la letra de la obligatorio la la semana
+pasada, eh, dijiste que era, eh,
+pruebas militars para todo el micros servicio para dos
+micros, servicios completos.
+Es decir, no dos requerimientos funcionales.
+Claro. Pero ahí me me puede,
+si puede ser que ya haya hecho eso, no?
+Si. C, te lo recuerdo, pero ahí me gana la letra.
+Sea, habla de dos requerimientos funcionales.
+Supone que ustedes van a atender
+a separar esos mi cierto micro
+servicios por funcionalidades.
+Puede ser que acoplen unas funcionalidades en
+varios micros servicios
+Ya. La otra
+persona es
+Pero lo que les diría es vayan por agarren un micro,
+una fun selección en funcionalidades.
+Ah, tienen que seleccionar funcionalidades que estén
+en dos micro servicios distintos
+y darle pruebas unitarias al de esas funcionalidades.
+No la idea. La idea es que,
+o sea lo por de no viendo lo que hice la letra
+concentremos en que se hagan prueba para los dos micro
+servicios a dos micro servicios de dos
+funcionalidades distintas.
+No hagan en no hagan dos funcionalidades en
+el mismo micro servicio.
+Sí, sea lo ideal es que,
+pues seleccionan una funcionalidad que están en micro
+servicio tanto y te funcionaría b,
+que están en el otro micro servicio y le hacen las
+pruebas este un
+Bien. Y la otra duda
+que tengo es nosotros para el oratorio uno.
+Hicimos pruebas unitarias para dos
+requerimientos funcionales.
+Es decir, ya tenemos dos requerimientos funcionales
+testi dos para así decirlo.
+Tenemos que elegir otros dos
+Pueden ser los mismos.
+Mientras que dos micro servicio y team
+Perfecto to No.
+Si no hay para tener o sea
+Que puedo mantener los mismos dos,
+las misma dos funcionalidades del del del
+obligatorio anterior siempre como están separados,
+pero testi al percent.
+Exacto. Ta, exacto. Perfecto, gracias. Sí,
+Sí. Ahí. Algo
+que se importa. Claro.
+Algo que que se busca es que ustedes sin don micro
+servicios, hagan este las y corran solo los ustedes
+que lo micro servicio.
+Qué? Como que por cómo, oye, le digo
+ayer no la semana pasada, la la no.
+Perfecto. Perfecto. La Consigue. Gracias.
+Perfecto. No, no te acuerdo. Quién bien.
+Bueno, alguna duda más?
+Y sí,
+hay ahí en la clase.
+Wow. Estaba,
+Estaba así a la clase, no?
+Sí, yo lo que voy a hacer es
+ya la clase porque hay fantasma.
+Por lo la está este.
+Yo no veo nadie en la clase.
+Bueno, igual cada tanto,
+me voy a preguntar y avisar que está
+mutado la clase por la duda.
+Pero este que la cámara no se ve nadie,
+por lo menos pa, donde está apuntando la cámara.
+Entonces este debe ser que en el pasillo está pasando
+persona y escuchar ruido.
+Bien, este ten
+tanto de muy ya.
+Bueno, eh, nosotros habíamos había bo visto toda la
+intro micro servicios.
+Habíamos hablado del rol del arquitecto y
+que deja pasa ser más un orador pasa hacer, digamos que
+un líder eh?
+Pero cada equipo pasa a ser más autónomo en cuanto a código
+muy difícil que que un arquitecto pase a hacer
+este muy difícil, no?
+O sea, es, es como que el arquitecto ya pasa a tener con el
+control de de lo que sería todo los micro servicios.
+Entonces ya no puedes centrarse tanto lo que can a nivel de
+código a nivel de de ciertas cosas de cada uno de los micro
+servicios, sino lo que tiene que centrarse es en poder
+definir todos estándares de definir las fronteras, eh?
+Como dice ahí, no meterse en la implementación, eh,
+prácticas y principios.
+Nosotros habíamos hablado de estos que, bueno, por ejemplo,
+hay empresas que dicen bueno, espectacular,
+vamos a decir cierto, boiler pleo ciertas es estructuras.
+Y vamos a definir que ustedes pueden implementar micro
+servicios, pero dentro de cierto lenguaje.
+Bien, bueno,
+acá vi un poquito de documentación.
+Este wait a lo que fuimos viendo y
+los próximos temas.
+Ah, este que vamos a ir
+bien, vamos a arrancar.
+Entonces con la pep de hoy,
+que sería principios de micro servicio.
+Bien, bueno, bueno,
+repaso arquitectura ma analítica,
+arquitectura orientada micro servicios de nuevo, ja, no,
+nosotros encontramos que necesitamos llegar a este escalado.
+Sí, necesitamos empezar a separar el servicios.
+Y nos damos cuenta que no es una separada en servicios
+como la arquitectura, sino que tenemos que
+este estar al tanto de estas de estas separaciones realmente
+está es algo mucho más complejo.
+Tenemos la capacidad en cuanto equipo de desarrolladores.
+Entonces podemos, podemos hacer estas cosas.
+Bueno, micro servicio, pequeño servicios autónomos
+que trabajan en conjuntos modelados alrededor de un dominio
+de negocio y este
+sean y escalan por separados.
+Pueden usar diferentes tecnologías.
+Se pueden tener unos pocos o ci de micro.
+La comunicación de este micro servicio como era
+más allá que hay una presentación muy linda que vamos a dar
+la clase que viene que habla de todo lo que es
+cosa de la comunicación.
+Así este de las distintos tipos y flujos ya.
+Pero la comunicación básica como es el servicio,
+nosotros definimos dos mecanismos que lo
+dicen la letra a lo obligatorio
+Crónica sincrónica.
+Sí, pero pero que utilizamos para esa comunicación.
+Está bien, está bien, sincrónica y sincrónica. Esta, eh?
+Correcto. Pero cómo hacemos una y cómo hacemos otra?
+Y a sincrónica mediante escuela es mensajería y sincrónica
+mas h TTP o este la otra, este no men sale nombre
+Perfecto, tal cual este.
+Entonces podemos a o sea, la sincrónica,
+podemos hacer lo ht que pues a lo sea va a
+buscar y la sincrónica.
+Podemos co de mensaje. Perfecto.
+Como dice Ignacio, para la arquitectura ideal,
+hay que evaluar cuando es necesario usar y cuando la
+complejidad de problema lo requiere, esto, esto,
+yo lo vengo asiendo qui a veces ah, este
+es sumamente importante.
+No sea ustedes van a ver que van a construir algo que
+con el monolito podía bastar
+o que de repente sacando desacoplando
+algunos servicios podía bastar.
+Sí. Y algo que es sumamente importante y que nosotros vimos
+la clase pasada es implican cambios organizacionales.
+Sí, nosotros ya tenemos que trabajar con
+distintos tipos de organización.
+O sea, ya no podemos trabajar con la misma organización que
+teníamos antes, sino que tenemos que separar los equipos.
+Cada equipo tiene que ser autónomo.
+Cada equipo tiene que ser autónoma, independiente
+y tener los roles necesarios.
+Bien, bueno, una arquitectura de micro servicio.
+Hay que tomar muchas decisiones y se tiene muchas opciones.
+Podemos tomar decisiones basadas en los principios ah,
+que van a definir lo que son los micros,
+qué principios son?
+Bueno, reglas y normas nos ayudan a tomar decisiones
+para alcanzar objetivos.
+Los simplemente vamos mediante prácticas.
+Ejemplo de los todo facto se pueden considerar principio,
+ah, o sea, todo el factor en realidad se basa en una
+arquitectura cloud, eh?
+Y también podemos buscar que cada micro servicio debería
+cumplir con todo el factor o podría, o sea,
+si debería cumplir con todo el factor,
+o sea que es una arquitectura cloud.
+Y si ustedes cumplían todo el factor para cada cervix para
+su monolito particular, deberían trasladarlo a Microsoft.
+Bueno, acá podemos ver varios ta
+sí de play independiente, ta ar, la automatización
+ta ocultarlos este los detalles de la i lamentación.
+Bueno, vamos sirviendo cada uno de
+ellos más.
+Pero entonces nosotros tenemos varios
+ta, eh?
+El modelado alrededor del dominio de negocio.
+Sí, la cultura, automatización.
+Esto es importante porque todo lo que nosotros pod
+automatizar en los micro servicios es clave porque mismo se
+puede trasladar a otros equipos que lo ha, eh,
+este descentralizar las cosas.
+Ah. O sea que cada equipo sea más independiente,
+la alta observ es importante esto
+porque ustedes, nosotros lo fuimos hablando,
+pero ustedes ahora que viene el práctico de new red y vieron
+la importancia de tener todo esto,
+una de las cosas que habrán visto es que
+los fallos ocurren y que nosotros tenemos micro servicios
+que se comunican nosotros vamos a tener o sea,
+ver con cloudwatch es muy complejo.
+Ah, entonces es importante poder tener observ
+y aislar lo que es el fall de alguna manera,
+lo que nosotros,
+lo que vamos a lograr con los micro servicios también es
+que, bueno, antes nosotros se caía nuestro monolito y se
+caía toda nuestra aplicación.
+Ahora, la idea es que si se cae un servicio,
+se cae por la razón que sea o no está funcionando
+todo el resto de micro servicios debería funcionar.
+Y por lo tal por lo cual nuestra aplicación debería
+funcionar con lo con arresto de micro,
+algo que me pasó el otro día com incluso estaba entrando
+este, creo que faller antes ya
+estaba entrando a mercado libre.
+Sí. Pues fue lunes,
+estaba el mercado libre y ellos también utilizan
+a ws en la región
+que estaba teniendo problemas.
+Entonces, como ellos les utilizan en la ws en la región que
+estaba iendo problemas, algo cómico, qué?
+Qué vi? Es que cuando entraba a la aplicación,
+cargaba la imagen, cargaba la información,
+pero creo que no estaba cargando las reseñas,
+no a ver si era la reseña.
+No, no estaba cargando la sección de precio.
+Y tampoco estaba cargando la sección que dice, eh,
+cuando pueden realizar el envío, sea hacia el envío,
+soy si el envío mañana,
+pero si cargaba la descripción y si cargaba las preguntas,
+este ah,
+mercado libre está basado en micro servicios.
+Trabajan con micro servicios.
+Yo decir que yo lo considera mi no,
+pero porque tengo entendido, al igual que pedidos ya.
+Entonces, algo que es cómico es la web en sí,
+está funcionando, o sea, consulta esos amigos, servicios,
+los que devuelven información, siguen funcionando.
+Los que no devuelven información pasan, pero no permita,
+o sea, como está diseñado hasta la misma web para que
+soporte determinado fallos en secciones,
+pero después los otros, las otros aspectos,
+los otras secciones que sí funcionan,
+las toman sin problema.
+Ah, entonces ahí es un poco donde
+lo tenemos, lo podemos ver.
+Y después nosotros hemos hablado el deploy independiente.
+Ya hablamos nosotros de play independiente.
+Por ejemplo, nosotros, una cosa aquí quimos es bueno,
+no solo por que cada uno tenga sus su mecanismo deloy,
+sino que pueda hacerlo en cualquier memento.
+O sea, cada micro servicio debería poder desloar en
+cualquier memento sin problemas.
+Sí. Y afectar el funcionamiento del resto.
+Ustedes, si nosotros cambiamos una prueba,
+digamos una variable, nosotros deberíamos también
+considerarlo, encontrar un código, manejar un personado
+y avisar al resto de micro servicios en un caso ideal para
+que se actual cuando correspondan o cuando ellos puedan, eh?
+Y entonces eso es un poco lo que se busca.
+Ah, yo mismo con una cola de mensajes.
+Otra cosa que es importante es bueno,
+si yo recibo información de más,
+porque microservice empieza a pasar información de más
+el micros servicio que ya sea si yo la recibo,
+el micro servicio que recibe no debería haberse afectado por
+información que venga.
+Además, sí, o sea así viene una proper ti,
+un j j o no, lo que sea que venga.
+Además, no debería haberse afectado
+si debería haberse afectado,
+si cambia el nombre de una property,
+entonces ahí creo que convendría el
+micro servicio qui hizo ese cambio.
+Genere un en point b y no fuerza a los otros a cambiar.
+Sí, nosotros tenemos que hacer un deploy independiente.
+Y también en la medida los equipos de trabajo tienen que
+lograr trabajar sin afectar al resto del micro servicio.
+Y en caso de las actualizaciones, pasen a su debido tiempo.
+Bien, alguna duda de esto hasta acá?
+Bien, bueno,
+ustedes ahora ahora, o sea, hay varios tipos de
+de modelados que usted pueden hacer en particular,
+está el modelado alrededor del dominio de negocio.
+Entonces nosotros teníamos,
+tenemos lo que es nuestro negocio.
+Entonces, qué es lo que empezamos a hacer?
+Bueno, empezamos es muy parecido a lo que esos recursos
+cada, o sea, cada micro servicio tendría que
+estar modelado o una forma de hacerlo es modelar alrededor
+del dominio del negocio.
+Sí, por qué?
+Porque recordemos que cada micro servicio es
+un producto en sí.
+Si nosotros cometemos el error que habíamos comentado la
+clase pasada de modelar los micro servicios
+como pequeños mon, o sea,
+no hacemos una arquitectura de micro servicio
+que todos los micro servicios dependen de otro o varios
+productos de nuestra aplicación.
+Cuando abro productos, por ejemplo, en su caso,
+la parte de auditoría podría ser un producto en particular,
+es algo independiente.
+Sí, en cuanto a su obligatorio.
+Entonces, si nosotros uno de los ponemos que veíamos es si
+hacemos una arquitectura de micro servicios,
+pero en realidad, cada vez que hacemos un cambio en uno,
+tenemos que cambiar todo el resto.
+Tenemos un monolito distribuido. Sí.
+Algo que es importante es que el dominio de negocios tiene
+que definir fronteras y zonas claras.
+Ah, cada equipo se tiene que apropiar.
+Dijimos que cada equipo tiene que ser individual.
+Ah, este y bueno, la idea es, o sea, en en lo posible,
+es seguir el Domaine drive Ben design o bueno,
+pueden hacerlo o no, pero es como
+también cada micro servicio,
+el lazar lo que es el domingo bueno
+de la cultura, automatización que ya habíamos charlado,
+pero manejar una gran cantidad de micro servicios sin
+herramienta, automatización y proced
+automatizado no es viable.
+Sí, se tiene que construir o definir plenamente un conjunto
+de herramienta y tener que automatización tener cultura
+automat ustedes de alguna manera lo están haciendo esto en
+el obligatorio cuando ponen la back para que
+corran los tress unitarios.
+Algo que también es clave de automatizar es el deploy
+y este el deploy continuo de las migraciones y este
+que hay alguna especie descript de seguridad.
+Y cuando habla a nivel de cultura,
+automatización también es todo lo que se todos los procesos
+que se puedan automatizar para el trabajo del micro servicio
+y también que se puedan compartir a otros equipos es clave.
+Ah, un poco que, bueno, son muchos servicios.
+Entonces, todo lo que se puede hacer automático y no requier
+la interacción humana es,
+lo me es el mejor camino arreglar, eh?
+Bueno, uso uso de cloud este
+uso de co de doer de contenedores.
+Hay varias cosas que te pueden hacer testing
+automatizado si.
+Continuos der y flujo de procesos y de
+continuos integration.
+Ah, este, supongo,
+lo que veníamos charr no meterle herramientas que permitan
+automatizar que que permita levantar cosas local.
+Sí. Poder hacer procesos
+de de la mejor forma posible y con la menor interacción
+humana mos cuando habla de docker, eh?
+Una de las cosas que es clave es bueno, el hecho de poder
+hacer un deploy, sí, y este
+y que ustedes puedan levantar cuando hacen un deploy y
+ustedes puedan tener una versión de la
+aplicación en producción.
+Pero si usted quiere levantar eso local,
+qué proceso también sea sencillo?
+Como es el com el deploy lo ven en el link que ustedes con
+doca usted alguna herramientas puedan levantar toda su
+aplicación, puedan poder correr las cosas locales.
+Entonces ahí la idea también, eso es automatizar,
+no tener que estar levantando pronto es, va que bien pa.
+Yo creo que poder automatizar todo lo lo que se puede bien.
+Y también en lo ideal, poder correr local sin problem.
+Bueno, esconder detalles de la implementación da, eh,
+este evitar acoplar micro servicios.
+Sí, este algo
+que algo que es importante es,
+nosotros no deberíamos o nosotros deberíamos hacer
+variaciones, eh, este?
+Nosotros no deberíamos confiarnos que un micro servicio
+ya hace las validaciones.
+Ah, es algo que comenta allá abajo, sino que
+también deberíamos chequear la información que nos llevan.
+Ah, no es que, bueno, porque recuerden que en un equipo real
+como que más allá de un micro servicio u otro,
+nosotros tenemos que ser independientes la mayor,
+o sea lo lo más que sea posible.
+Entonces nosotros no es que, ah, bueno, o sea,
+si el registro un usuario ya nosotros validamos que el
+usuario va, eh,
+nosotros de nuevo, cada micro servicios autor.
+Entonces no sabe la implementación puede ser con micro
+servicio que estoy consumiendo.
+Está desde mi micro servicio este
+utilizando otro lenguaje de programación tint.
+Bueno, algo es importante, ya lo hablamos.
+No compartir hace datos entre los micro servicios.
+Parece una solución fácil en un principio,
+pero no permite cambie independiente.
+Ta genera ob.
+O sea, de una manera, es el hecho de compartir o hace datos
+está bueno porque es más fácil porque pueden cumplir con
+decir, pero después genera cumplimiento.
+Entonces hace que un micro sea dependiente a otro.
+Nosotros vamos a ver distinto patrones de comunicación
+que no van a permitir, eh, como llama que no va,
+no van a permitir este
+que nosotros nos nos podamos comunicar y extraer la
+información o comunicar la información que sean
+esa en un segundo.
+Bien,
+bien, perfecto, disculpo.
+Bueno, solo poner las sapis o relacionar eventos.
+Sí, veremos patron de comunicación más adelante.
+Eso lo que decía en esas sapis eventos,
+no enviar datos en etcétera,
+que no son necesarias y que no son parte de la
+implementación, no las palabras no envian información de más
+porque sí, sí, sin enviar lo que realmente
+o o se va a necesitar.
+Ah, y un poco de eso de con los detalle de implementación.
+Ah. Y acá un poco lo que es esto no?
+O sea, ustedes acá tienen este Bond
+de este de mat follower tiene el link ahí,
+pero un poco lo que pueden ver es pean toda la
+implementación, pero en realidad hay como dos,
+este hay dos conexiones in.
+Entonces no se sabe que implementa cada uno,
+solo contactan y hacer lo que tienen que ya hacer.
+Bueno de centralización, eh, del poder este,
+dar autonomía, autonomía,
+darle a las personas la mayor libertad posible para realizar
+su trabajo tal creo que es un poco eso.
+Entonces, en otras palabras, que cada uno tenga su lenguaje
+de programación, que cada producto,
+cada los servicios es un producto para para
+su aplicación en sí.
+Este sea lo más independiente y es acoplado posible de está
+bueno que pueda auto servirse.
+Sí, que te que haya, o sea que el del producto,
+tengan todos participen este
+y no tener un medio de con de comunicación
+centralizado único para todos.
+Ah, este de alguna manera lo ahora
+es un poco lo que nosotros nos
+es un poco lo que nosotros nos basamos, eh, en soportar
+es un poco lo que nosotros buscamos con los micro servicios.
+Sí, es que cada uno sea independiente o sea,
+así que bueno, un poco eso.
+Bueno, intentaron no frustrar con herramienta ahí.
+Un problema ticket para que recursos de mejor
+tener un equipo cross.
+En otras palabras, el equipo,
+nosotros hablamos de los ma gaos.
+Cada equipo tiene que poder tener tu
+tus propios desarrolladores, tal de infraestructura
+de que toque fronte que toquen pa, qué?
+Que toque la base de datos.
+Sí, estaba o sea que cada uno del equipo, eh,
+lo ideal se llegue cada integrante del equipo pueda
+este tocar o participar del código de lo que necesito.
+Bueno, yolo independiente tiene que ser la norma de los
+micro servicios que desloen independientemente.
+Ah, este bueno tecnologías
+como doer ah,
+que hay alguna manera permite un servicio por host
+este, o sea, lo que voy es tiene que ser un delo
+independiente y bueno doer lo permite.
+Pero una cosa es no ese dos con diferentes
+servicios, la misma máquina.
+Ah, o sea, tiene que realmente ser algo independiente que no
+formen parte cada uno de sí, bien,
+este y no puede ser que si se caiga uno se caiga el
+otro poco.
+Eso está bueno.
+Acá tienen consum driver contra el consumidor,
+define el contrato de comunicación y tiene que escribirte
+que puedan este que Prue en este contrato que se corre
+automáticamente tiene con
+configurar que el equipo que hace el
+consumer haga buenos test.
+Ah, esto particularmente
+relacionado a es un contrato del consumidor del de
+bueno, eh, en point coexistente.
+Bueno, nosotros hablamos del version.
+Sí, vean que acá
+varios micro servicios pueden ofrecer la misma versión, eh?
+Pueden ofrecer dos versiones y el que los
+consume los tiene ellos.
+Bueno, documentación de post.
+Ah, este service y service
+cómo obtener estos servicios está en caso de que el micro
+servicio, por ejemplo, tenga que no se van a tener que
+preocupar porque lo balancer va
+va a ex poner un solo endpoint pero
+este como llama.
+Entonces, en encima se tienen que
+preocupar por qué a servicio?
+Por qué a servicio, eh?
+Consultan porque si el micro servicio escala, eh,
+horizontalmente no, y tienen tienen varios puertos,
+eso lo va a solucionar lo du bala hacer.
+Pero ustedes puede ser que tenga algún mecanismo en algún
+memento que no se soluciona así.
+Y fue bueno, documentación de la API
+obviamente que nosotros vamos a consumir un API y vamos a
+este utilizarla.
+Tiene que estar disponible para que el otro micro servicio
+sepa está la documentación de la pi b.
+Uno está en la documentación de la pbt.
+Bueno, aislar fashion una falla en un micro servicio
+no afecte a todo el sistema.
+Bueno, esto es lo que no veíamos hablando de mercado libre,
+construir barreras en conexiones que vayan otro otro
+servicio Taos testi ta,
+qué pasarían si se rompa algún micro servicio o casa
+o algún micro servicio o recurso?
+Era top el ejemplo de particular este de mercury es
+de mercury de Netflix.
+Es en el caso de que mercury lo que hace cada tanto
+intencionalmente y hasta en producción baja.
+Ciertas instancias de los micro servicios
+le baja rendimiento, lo que sea,
+para poder probar cómo se empiezan a comportar esos micros.
+Lo el resto de micro servicios.
+Cuando uno empieza a verse más lento o empieza allá, sí,
+de alguna manera lo que hacen es probar, por ejemplo,
+empiezan a bajar instancias,
+empiezan a bajar un micro servicio en particular
+y empiezan a ver cómo se comportan el resto de micro
+servicios para comprobar que que se esté
+manejando quién es sus casos?
+Sí. Entonces eso es algo que ustedes pueden
+que tienen que tener en cuenta.
+Si se caigo un micro servicio, como yo le decía,
+el mercado libre, la web debería poder seguir andando.
+Y en ese memento no se muestra una parte en particular
+después de ser patrón, sea breaker que ustedes este bien,
+conocen que de alguna manera, lo que lo que busca sí
+es nosotros hagamos un contacto y que de alguna manera,
+si ese contacto falla con la API con la cola de mensajes
+nosotros por demos un tiempo donde no realicemos consultas
+porque demos como un tiempo a que se recupere
+ta cortemos el circuito y ese circuito dentro de un x
+tiempo, lo volvemos a reactivar y volvemos a consultar para
+que eso para no seguir intentando
+ese time útil para no seguir forzando al otro servicio que
+es que está atrancado o que no está respondiendo por algo.
+Eso también puedes servir para la conexión a la base da
+donde si nosotros estamos siguiendo un problema, bueno,
+está si intentamos varias veces hayamos
+bloqueamos esa comunicación por de repente tres minutos.
+Entonces, entonces, lo que hacemos también ahí es darle un
+tiempo a que se recupere y no seguimos intentando sumar
+reues y consultas y consultas.
+Y además evitamos que toda la respuesta del cliente o que
+que tengamos nosotros tengan que pasar por ese proceso
+cuando sabemos que el servicio está caído ahí.
+Sí, bueno,
+acá hable un poquito de circuit breaker está próximo.
+Luego una cantidad de fallas retorna el internet,
+meter error durante un tiempo
+está luego que se vence ese periodo.
+Paso un estado medio abierto.
+Ah, es un poco lo que lo que estábamos comentando ahora.
+Y bueno,
+acá tienen el diagrama de flujo de cómo se comporta
+este breaker.
+Ah, y esto es algo que ustedes
+la mayoría va a utilizar todos los micro servicios del mismo
+lenguaje y va a hacer algo,
+pero le recomendaba algo bastante sencillo en
+otro lenguaje programa.
+Ah, eh, ahora
+que eso es la más, eso lo van a encarar.
+Entonces, el lenguaje probación que ustedes
+elijan para o que probablemente se
+para todos los micro servicios,
+ustedes podrían crear una especie de boiler plate donde
+podrían hacer que la conexión a la API a toda entre micro
+servicios y también la escuela de mensajes o acceso a base
+datos, pero particularmente el cclo ahí que la que está
+orientado a las comunicaciones entre micro servicios con el
+mensaje ottp tengan ya pre
+implementado este c breaker.
+Entonces sea copiar y pegar.
+Entonces de alguna manera usted, su servicio ya
+cada uno tengo un circuit break y automáticamente
+no tengan que volver a a desarrollarlo o implementarlo,
+sino que cada vez que ustedes van a hacer una respuesta,
+tp o ustedes como utilizan este circuit breaker, eh,
+este de alguna manera, ya saben,
+y se van a a dar cuenta que este, o sea,
+ya preven este tipo de problemas, entonces
+ya lo tienen implementado.
+Y cuando se van a comunicar, vaya, perfecto.
+Las próximas repuestas por un terminado tiempo
+te vuelven error y no hacen la consulta para evitarlo.
+Y después lo que hacen es este un hace paso, tiempo
+y amo, sí, pueden fij si viene patrón,
+si le preguntan a hacer gpt o o pueden buscarla ahí en
+Google, lo que quieran, pueden buscar implementaciones y
+breaker para el lenguaje que ustedes están
+haciendo y particular.
+Lo pueden hacer con axios o lo que sea,
+y pueden guardarlo a nivel de servicio.
+Pueden almacenar este normalmente.
+La idea es que el servidor no tenga estado,
+pero esto es un estado.
+Puede ser un estado interno de servicio, eh,
+para esto sería como una excepción normal,
+mientras que la comunicación no sea mucha,
+sino capaz que tienen que guardar un base de datos.
+Bueno, altamente observables de lo que comentábamos,
+tenemos de escena de servicios cada uno con sus propios
+locks y estadística cp network, lo que sea,
+nosotros tenemos que tener algún panel centralizado donde
+nosotros pod, este tener análisis de todas las cosas.
+Bueno, eh, agregación de datos iana Park,
+este estadística y prometo new,
+si ustedes pueden manejar esta estas herramientas como bien,
+las venimos comentando anteriormente para poder centralizar,
+tener todo lo de los micro servicios.
+Acá hay un una imagen de, eh,
+id relacionada que es de alguna manera de nosotros lo
+habíamos visto este donde nosotros con las con lo el i id de
+lo que son las ricos entre micro servicios,
+podemos llegar a armar todo lo que es el flujo decus,
+inclusive los fallos que nosotros fuimos a encontrar.
+Sí, bien,
+alguna duda hasta acá esto que venimos viendo de micro
+servicio,
+alguna consulta de estos principios,
+algo que les genere ruido,
+algo que ustedes pien que para su
+obligatorio puede ser complicado.
+Implementarlo, que no sé sea, hay tu línea.
+Bien, perfecto.
+Bueno, ahora vamos con, vamos a continuar
+este hasta lo que se recreo por la parte de descomposición
+de componiendo los micro servicios.
+Se escucha bien, vamos. Dejen la CE.
+No hay nadie, pero remoto a menos es un ti.
+Sí, sí, se escucha bien. Sí,
+Escucha bien, perfecto, perfecto, perfecto.
+Gracias. Este bueno, bien, creo que este es una de las i
+voy a tener, y mucho de ustedes se adelantaron ahí esto,
+buscar una información consultaron con personas que ya
+habían curso a la materia y dijeron bueno,
+nosotros vamos a separar todos los módulos o todos,
+todos los servicios ya antemano. Sin ju.
+No, profe te quería hacer una pregunta que no sé si ya te
+preguntaron y no escuché, pero el tema del gateway,
+eh, se puede hacer, eh?
+Elegir ese como para hacer en otro lenguaje o no? Vale,
+Eh? Sí, claro. Cada micro
+servicio ustedes,
+nuestro servicio que ustedes quieran.
+Sí, lo dos, o sea,
+nosotros vamos a ver un poquito lo que es el patrón en Pat
+de comunicación, lo que es el el pique fue y
+y cuando nosotros veamos eso, vamos a ver este.
+Bueno, las cosas que vamos a a a chequear es como,
+como hacer lo que, cuál es la funcionalidad?
+Cuál es todos los tipos de tipo de funcionalidad?
+Pero sí lo pueden hacer.
+Ah, o sea, es este todos los micro servicios que desloen
+aunque sean servicios que el único que sean sean pasa mano
+quien dice eh,
+pueden cuentan como micro servicios y
+pueden hacerlo de trans forma. Bien, ta
+Dale bbar muchas gracias.
+Igual en en a do, ese hay un servicio que es sa PGA.
+Pues, o sea que también me podrían
+usar si quieren ahorrar tiempo.
+Sí. Si quieren agregarle funcionalidad personalizada y se
+complicó un poquito más, pero si sí, está bien,
+o sea, no sea está o sea,
+Yo preguntaba porque el semestre pasado no, o sea,
+nosotros hicimos como un un gateway ahí,
+ta que no era un servicio separado, pero
+as tenía esa funcionalidad y como que quedó recorto o sea
+capaz cuando veamos, no sé,
+vemos que se le pueden agregar más cosas personalizadas y
+eso, pero ta por eso preguntas y como que valía como,
+como para hacer en otro lenguaje o no?
+Sí, sí, sí. O sea, es válido, pueden usar ese, o sea,
+a w pro uno,
+ustedes pueden pueden querer a hacer algo más personalizado,
+algo que haga autenticación propia por usted.
+El ws está bueno utilizarlo con las landa, por ejemplo,
+con las landa bastante útil hacerse pero
+pero si no ustedes pueden encarar pueden utilizarlo con con
+otros, o sea, tú ustedes quieren hacer a como más personas
+solo lo pueden hacer igual en cuanto a la complejidad del
+servicio que ustedes trabajen con
+con otro lenguaje de grabación.
+Yo lo que les haya recomendado es también el servicio de
+mail, la que agarra que tengan un servidor que agarre y y en
+empieza los mail este con con, digamos,
+confiando en lo que en lo que llega lo más sencillo posible.
+Entonces, una una una recomendación,
+pueden hacer lo que ustedes quiera.
+Entonces ahí es como que, bueno está eso es algo que
+es fácil desacopla este
+y nada mientras asumen que la comunicación mientras que se
+asegura el servidor de mail,
+no va ir a chequear que toda la información sea válida,
+sino que asumen que la comunicación es segura.
+Y el servicio de mail se encarga de de saber a quién
+enviarlo y envía las cosas.
+No sé, es uno que a mí se me ocurre capaz que ustedes se
+encuentran, por ejemplo, que la autoría es la auditoría.
+Este es más sencillo, es acopla este, eh?
+O sea, tiene funcionalidades más sencillas para poner en
+otro lenguaje de probación.
+Papá, que le el la Piquet duy es bastante delicado o va a
+poner otro lenguaje de probación que ustedes quieren
+agregarle cierta funcionaría como puede ser autenticación o
+bueno o alguna otra co.
+Pero eso lo ven a ustedes.
+Ah, este que les queda más práctica, eh?
+Bueno, bien de día, descomposición de micro servicios.
+Bueno, para hacer una pequeña intro, eh,
+este es un problema, como decía que varios de ustedes porque
+conocieron que ya trabajaron
+este conocen alguien del del semestre anterior o
+que que que uso conocen alguien de algún semestre curo
+arquitectura sobre la práctica?
+Escucharon, me leyeron o bueno, las recomendaron,
+lo que sea que ya empezaron a desacopla, digamos,
+no hicieron, dijeron una lógica este de módulos, sí,
+parada este cosa que después sea más sencillo de saco de
+descomponer estos micro servicio, parece,
+parece importante que ustedes te gana en cuenta si esa des
+porque ustedes se evaluen si esa descomposición
+de micro servicios que ustedes hicieron, se acopla
+esta línea a lo que este,
+a lo que vamos a ver hoy y cuál dejas eso.
+Y en particular, es un problema bastante común.
+Y lo que una vez que ustedes definen la estrategia
+de para el composición de micro servicio
+supóngase que ustedes tiene el monolito gigante, no.
+Entonces hoy en día ustedes lo tienen todo local, o sea,
+todo lo tienen local y lo lo desloar sí,
+pero imagínese que su monolito lo está confundiendo.
+Muchas personas, muchos usuarios concurrentes que consumen
+su monolito, mientras que consumen ese monolito,
+este usted quiere empezar a separarlo micro servicio.
+Entonces, el problema mayor que sucede acá es bueno,
+cómo empiezo a parar esto en producción?
+Sí, cómo empiezo a lograr esto sin dejar de brindar los
+servicios a los clientes que tengo aquí?
+Porque se supone que
+lo mayoría de estos casos y algo que que hemos comentado
+varias veces, nosotros no nos desacoplarnos de un monolito
+micro servicio así porque sí, algo local o
+sino que nosotros tenemos una estructura remota
+y la están usando clientes.
+Y nosotros queremos empezar a desacopla.
+Entonces, como nosotros queremos empezar a desacopla, no
+este,
+tenemos que mantener funcionar el monito que lo están
+consultando clientes que lo están consumiendo
+y empezar a generar estos nuevos servicios.
+Algo que es clave acá es que si ustedes un monito tiene lo
+tienen varios ambientes, ustedes pueden ir, haciéndo este,
+este pasaje en micro servicios.
+Obviamente que esto requiere costos,
+pero pueden ir haciéndote pasaje a micro servicios,
+des espacio en de probarlo en de y luego delo lo a stage o a
+testing y luego llevarlo máster.
+Hay una de las cosas de los principios de micro servicios
+que son claves, la cultura, automatización, el automatizar,
+los deploy en automatizar este, generar distancia,
+todo lo que ustedes puedan automatizar va a ser mucho más
+sencillo, eh, este?
+Todos sus procedimientos.
+Bien, entonces ahora ya la segunda hora,
+lo que vamos a encargar es estos estos tipos de composición?
+Sí, vamos a,
+vamos a echar los las formas que hay los tipos que hay
+y después, bueno, veremos, creo que
+este no vamos a adelantar con patrones de comunicación.
+Así que dejaremos un raito para por si su que hay una duda
+obligatorio que sea probablemente la semana que
+la otra se esté liberando.
+Yo le voy a avisar la micro tarea este que nos está
+faltando, nos están faltando tres.
+Entonces iremos liberando las bien, este
+cortamos y volvemos, volvemos.
+Y cinco
+buenas.
+Bueno, seguimos tan ahí.
+Adelante, estamos, vamos. Perfecto.
+Bueno, entonces, bueno,
+estamos hablando de la composición de de micro servicios.
+Bueno problema, cómo definimos los diferentes servicios?
+Tenemos, o sea, fuerzas que nosotros queremos, eh,
+que motivan a los patrones, la vamos a ir mencionar.
+Queremos una arquitectura con servicios estables positivos,
+desacoplados te fiables
+que puedan ser implementados por un equipo, eh,
+pequeño que puedan ser mantenidos por equipos autónomos,
+nada distinto de lo que nosotros venimos buscando
+este y venimos charlando de los micross ah,
+entonces acá nosotros, tenemos un poco de cómo aplicar este
+estos patrones de composición en particular.
+Vamos sirviendo algunos, pero descomponer
+en cuánto a las capacidad de negocio defini los servicios de
+manera que correspondan como ness, cap
+cap y conceptos para modelado de arquitectura de negocio es
+lo que hace una organización para generar valor.
+Nosotros dijimos que los micro servicios tienen que ser este
+producto sencilla al final de liga, no?
+O sea, tienen que poder aportar valor con el ideal,
+aportar valor a los que nosotros buscamos.
+Entonces, una manera de componerlos
+es por unidad de negocio.
+Sí. Ah.
+Entonces nosotros acá, si teníamos,
+qué es muy parecido lo que ustedes tenían,
+si tenían producto, catálogo management,
+después tenían inventor inventarios,
+después tenían este order management o delivery management,
+todo esto dentro de un mismo monolito.
+Ahora lo que se hace es lo vienen a separar en servicios tal
+micro servicios en particular.
+Sí, este bueno acá el ejemplo que comenta en particular, eh,
+para ese ejemplo que comenta en particular de una de una
+empresa, este online sí en particular ustedes,
+si ustedes ya habían desacoplado por unidad de negocio,
+podrían hacerlo de esta siguiente forma también.
+Bien, después descomposición by
+eh, tu eh,
+por subdominio su dominio defini servicio
+por medio de subdominio.
+Está un dominio, está compuesto por muchos,
+subdominio cada subdominio corresponde a una parte del
+negocio y pueden ser casi clasificados como core,
+diferenciar clave para el negocio so soporte relacionaba,
+el negocio, pero no es un diferenciar genérico,
+no está relacionado este, eh,
+a lo que sería el negocio en sí.
+Y acá, esta es la mejor manera de verlo en cuanto a em
+en verlo en cuanto de un ejemplo, no?
+Entonces, si nosotros teníamos toda la parte de orden,
+toda la parte de delivery y que tenía como varias partes,
+eh, de su o sea, no sé,
+tenemos del dominio de nuestra aplicación y después tenemos
+ciertos subdominio.
+Sí, que que van relacionados de eso ya no es una unidad de
+negocios, sino que son ciertos dominios que nosotros
+manejamos en nuestra aplicación.
+Eso se mappe a micro servicio.
+Bien, entonces de nuevo,
+tenemos tenemos dos, uno es en cuanto a negocio.
+Sí, que es muy parecido lo que ustedes van a ir haciendo
+y el otro es relacionado a subdominio.
+Sí, ustedes pueden ir orientados a cualquiera de los dos.
+Sí, es el de repente el de el de negocios, como dice bien,
+ahí es orientado a a ciertos procesos.
+Y en particular el de subdominio desorientaba a
+funcionalidad del dominio.
+Y como dice ahí puede haber su funcionaría de dominio que no
+está relacionado al negocio.
+Sí, sino que es necesario para la funcionalidad.
+Entonces, tengan en cuenta cuál de los dos ustedes van a
+aplicar para lo que es el obligatorio.
+Bien, hasta ahí me siguieron.
+Sí, Perfect.
+Bien, bueno, concepto pa de context,
+un dominio está compuesto por muchos.
+Pon context, cada uno tiene entidades ta, eh?
+Algunas de estas no hay que no necesitas ser
+comunicadas a otros contextos.
+Yo otras entidades que si tienen que ser compartidas con los
+demás contextos para diferentes contextos,
+la información que precisa la entidad, eh,
+varía para diferente contexto.
+La entidad puede tener diferentes fines o significativos.
+Sí. Entonces, de alguna manera,
+son contextos dentro de lo que es sudo domingo,
+como dice bien, ahí, eh, do design promueve dividir,
+conquistar las grandes problemas dividiéndole en fondo en
+context y siendo explícitos con su relación.
+Bueno, por qué? Para evitar tener god models
+que generan un mellón de responsabilidades
+teniendo el espagueti, esta imagen que ustedes ven acá
+pueden ver que en particular,
+tienen ciertos contextos que más allá que funciona todo como
+un sí, son contextos que están que están por separados.
+Ah, y que se conectan en particular en este caso,
+que nosotros lo habían vistos por el
+consumidor y el producto.
+Bien, identificar bien los
+los Bond con el dominio, ser explícitos eh,
+sus interfaces y plasmarlo en nuestros micro servicios
+promueve bajo acoplamiento.
+Ah, bueno, acá el ejemplo que que pone es,
+no es lo mismo lo que tiene el del super
+que lo que tiene el costum de seis, sí, o sea, son contextos
+que puede pasar en su micro servicio que ustedes necesitan
+tener de repente un subdominio o algo
+de como habla del cost, pero no es lo mismo, como dice ahí,
+lo que tiene del al lado del seis,
+que al lado que tenga el super ah,
+me tengo que preguntar qué funciona?
+Tiene este Bond de corte y qué información prest precisa el
+context acceso de de entidad para cumplir la función?
+Sí, este bueno ahí.
+La una pregunta es que se imagina que puede tener diferencia
+producto entre ambos contextos
+entre lo que es la venta y el soporto.
+Por ejemplo, dijimos que en el caso de las ventas,
+el consumidor capaz que nos interesa cierta información.
+Sí, como por ejemplo, este
+el contacto sigue la tarjeta de crédito.
+Y en el caso de soporte capaz que necesitamos,
+yo casi estoy diciendo cualquier cosa,
+pero necesitamos tener, eh, el contacto donde reside sí,
+a nivel de ventas,
+necesitamos tener cierta información y a nivel de soporte,
+otra en el caso del producto,
+puede pasar lo mismo a nivel de lo que es la venta.
+Nosotros necesitamos, eh, los precios, las promociones
+en caso de soporte capaz que también necesitas saber esa
+información, pero más orientado a
+este como brindar soporte, en qué period
+más capaz ministerial,
+en qué periodo de tiempo había cierta promoción?
+Porque queremos dar cierto soporte
+a personas que por más que la promoción se terminó,
+queremos brindad la sí.
+Y bien, bueno,
+bueno, cuando nosotros des ocuparemos por business capati,
+eh cap o por sus domain
+resultado que vamos a tener una arquitectura stane estable.
+Las business capability la su domain no suelen cambiar ah,
+nosotros se puede ser que nosotros agreguemos cosas.
+Puede ser que nuestro negocio varíe.
+Recordemos que cuando nosotros pasamos una arquitectura de
+micro servicio, no estamos busca nosotros ya
+experimentamos con la aplicación.
+Ya tenemos una aplicación más estable. Sí.
+Luego equipos autónomos y autos gestionados en poco
+a entregar valor de negocio.
+Ah, y no solo conceptos técnicos y servicios,
+conos débilmente acoplados.
+Bien, es un poco las ventajas que veníamos viendo.
+Lo que estamos reafirmando acá es que al subdividir con
+esto, nosotros vamos a poder tener, eh,
+bien, dificultades, identificar estas fines cap,
+su Domaine requiere entendimiento de negocio.
+De nuevo, usted no van a pasar de un día para el otro.
+Este a aplicar micro servicio,
+analizar propósito de la organización, estructura,
+proceso de negocios, área, etcétera.
+No poder traer un desarrollador que refiere a Ren,
+corre recién comenzó a a pasar a micro servicios.
+Tiene que haber un entendimiento de todo. Funciona a todo.
+Sí. Entonces, comenzar con la estructura de organización
+es importante que a nivel desarrolladores
+para poder vivir en micro servicios,
+tienen que tener ya un conocimiento arquitectónico de cómo
+fu un conocimiento para poder aplicar la arquitectura de
+micro servicios de la de la estructura organización
+y después de modelo de dominio de alto a nivel, sí, o sea,
+tienen que más o menos saber cuáles son los dominios,
+qué es lo que ustedes almacenan a alto nivel?
+Bien, bueno,
+servicio por equipo, o sea,
+una vez que están identificado cuál van a hacer los
+servicios que tenemos que definir, cuál es la relación?
+Servicio, equipo, recomendamos equipos pequeños,
+servicio pequeño ta.
+Lo que dice ahí es una opción.
+Es ya o una shift model donde cada equipo se encarga de
+cierta funcionalidad implementa necesario
+en todos los servicios para sal.
+Ah, entonces eh, de alguna manera,
+en vez de servicio por equipo,
+es que cada equipo se encarga de cierta funcionalidad e
+implementar necesario lo que comenta acá los comentarios es
+bueno, en vez de tener un servicio por equipo, digamos que,
+bueno, yo tengo cierta funcionalidad que tengo que
+implementar y el equipo va a hacerlo necesario para poder
+implementar dicha.
+Funcionaría bien.
+Bueno, sha o model,
+todos mantienen todo a medida que precisan hacer un cambio,
+ya le do mode es más propenso a mala calidad del codigo y a
+desarrollar más lento porque hay más código para entender,
+supera capacidad con que equipo
+y ustedes en particular un servicio por equipo,
+cada equipo dueño, un solo servicio
+y preciso un cambio en otro servicio tiene casado.
+Entonces, volviendo acá, está rojizo o model.
+Ah, es alguna manera, nosotros llegamos al equipo
+y el equipo implementa los servicios.
+Nosotros acá vamos para micro servicio.
+Por ejemplo, lo que había dicho para micro servicio,
+vamos a ir a servicio por equipo de una manera de
+lo que queremos es esto no?
+Porque lo que queremos es que nuestro equipo pueda ser, eh,
+sudo, ni un micro servicio.
+Y de esa forma lograr la autonomía de nosotros necesitamos,
+sí, este y que ustedes necesitan cambios en
+algún servicio de alguien más.
+Lo que van a hacer es solicitarlo este y eso lo van a poder
+dar, está aplicar, por ejemplo, dice idealmente,
+cada equipo mantiene un solo, eh, micro servicio.
+Ejemplo, Amazon le pago un equipo por mantener una
+pantalla ta.
+En realidad, en algunas empresas,
+a veces un equipo mantiene más de un servicio.
+Es lo que esto, nosotros lo habíamos Charo.
+Por ejemplo, eh, mercado libro, pedidos allá hay equipos que
+hay personas que rotan entre servicios o que atacan varios
+mi servicios a la vez.
+Sí. Bueno, ventajas,
+equipos autónomos.
+Volvemos a repetir muchas cosas de por qué
+cada eh, por qué nosotros necesitamos tener micro servicios
+independientes, servicios independientes, de nuevo,
+ventajas, equipos autónomos que requieren mima coordinación,
+no supera capacidad cog del equipo
+picture de un solo servicio sale más rápido,
+ya que el código se lo conocen
+en lugar a duda que ustedes y los abr,
+las personas que desarrollan lo mismo,
+cuando ustedes tocaron el obligatorio de diseño de
+programación o lo que sea que les tocó hacer una
+continuación de ese obligatorio de obligatorio dos,
+ustedes deja, sabían ciertas cosas donde
+modificarla mismo ustedes,
+cuando llevan años en un proyecto en una empresa,
+cuando viene un cambio, lo manejan más.
+Entonces, la idea es eso que el equipo agarre ownership y
+los cambios lo maneja mejor.
+Bien, bueno,
+mejorar la calidad del código de servicio en sí también,
+ya que hay un responsable claro de de monitorear todo lo
+que concierne a eso.
+Ah, entonces en particular, de nuevo, nosotros,
+micro servicios, te empezamos a separar, empezamos a tener
+todo más independiente, autónomo.
+Y cada servicio empieza a funcionar de manera independiente.
+Entonces cada equipo en sí
+tiene que ser posible levantar todo en particular con este
+ya yo me había confundido el switch,
+ustedes se par era asignarle toda la responsabilidad
+compartida del modelo.
+Y el equipo tiene que levantar lo que sea necesario.
+Ustedes en particular con micro servicios,
+obviamente can a nivel de obligatorio,
+ustedes van a tocar todos los pero esto es un poco
+como siempre digo, recuerdo
+pensando una organización grande.
+Entonces estos tipo de cosas son claros.
+Bueno, tel container, salt, problema,
+cómo debería un servicio colaborar con otro servicio cuando
+maneja una re request síncrona solución,
+definía el servicio de manera que pueda responder sí,
+claramente tiene esperar la respuesta de otro servicio.
+Sí, ta todo eso.
+Cómo debería un servicio colaborar con el otro cuando maneja
+una rico es síncrona y de y hay se definir el micro servicio
+de manera que pueda responder síncronamente sin esperar
+la respuesta del del otro micro servicio, cómo se po?
+O sea, ustedes pueden definir el micro servicio,
+no se hablando a nivel de comunicación,
+sino que ustedes ya tienen que haber definido el micro
+servicio para que en particular pueda responder la mayor
+cantidad de peticiones de manera síncrona.
+Sin problema a eso es un poco lo que se busca.
+Sí, o sea que no, no dependa tanto de otras después.
+Cinco, bien, bueno,
+bueno en particular, acá tienen,
+no se container por se percent dos servicios para que da
+orden y responder al cliente y se cae uno no funcione nada.
+Sí. O sea,
+acá lo que ustedes pueden ver es que para todo necesita
+este consumen service checking service
+que usted qué harían ustedes para poder solucionar esto?
+Qué se les ocurre?
+Qué podrían aplicar para poder solucionar este problema?
+Y no sé qué tan urgente es que el cliente reciba toda esa
+orden de una que capaz puedes decir de, mira,
+está procesando y vas a procesar por detrás a tu tiempo
+y no lo tenéis ahí colgado esperando esa
+infinidades llamadas
+Bien.
+Por ejemplo, nosotros hay variedades de service valid de
+chicken service hace muchas variaciones.
+Vas a ver si, bueno,
+una de las cosas es no vividas los los servicios de siempre
+en primer lugar, capaz que, ah,
+yo cuando lo pienso, de repente pienso pensar bueno capaz yo
+podríamos guardar cierta información.
+Sí, pero dice no divida los servicios de siempre.
+Primer lugar, o sea, si vos cada servicio necesita mucho de
+otro capaz que no hiciste la mejor división en micro
+servicio capaz que intentaste de desacopla en cuanto a
+negocios y vos, tendrías que haber aplicado más algo de
+subdominio, sí,
+capaz que la orden necesitaba tener todo un conjunto capaz
+que el micro servicio necesitaba tener más información.
+Otra cosa que es usar c qs para mantener una copia local del
+ahí o de otros servicios que para validar la riqueza.
+Bueno, obviamente que también una solución es tener co,
+eh, un subconjunto de datos de la información
+que nosotros necesitamos.
+Sí, yo usa pulling sagas para terminar el flujo,
+la riqueza sin claramente asegurando consistencia, o sea,
+las últimas dos, la vamos a ver más adelante que bueno tener
+el micros servicio tenga un subconjunto de los datos,
+por ejemplo, en este caso que pueda tener just 1000 service
+kitchen service pueda tener cierta información.
+Y el caso de pulling sagas es bueno capaz que nosotros
+podemos decirle acá, pensando en eh
+en la otra parte, lo que sería este
+en la primera parte del curso donde nosotros vimos dos
+patrones para manejar estas cosas a síncrona background show
+y a cinco transacción.
+Nosotros podríamos procesar la orden y en background
+ir comunicando los otros servicios y en algún memento te
+decimos, bueno, mira, te realizó esto cuando veamos patrones
+de comunicación, la aparte de de de este tipo de de
+problemas, vamos a ver que existen mecanismos para pasar ese
+background show a cinco transacción,
+extenderlo a lo que son los micro servicios.
+Te digo aplicarlo a lo que son micro servicios
+en particular, no sólo hasta ahora,
+lo la manera que sabemos es, bueno, no ha divide esto a si,
+en primer lugar, capaz que no es la mejor división,
+pero también si ustedes se enfrentan a aquí problemas que
+tienen micro servicio que hacen mucha rico, es síncrona
+capaz que tienen que empezar a pasar cierta parte o de
+cambiar el proceso a que sea síncrono.
+Sí, por ejemplo, la orden,
+lo que podríamos hacer es que en background se pase al
+consumidor, el consumidor en background lo pase a en
+service, así intensivamente y después nos
+avise cuando esté todo pronto.
+Entonces, eh, lo mismo que teníamos con ella.
+Sí, transacción que nosotros podemos hacer una petición y
+saber cómo está sucediendo.
+Sí, bien,
+bueno,
+bueno en particular acá nosotros tenemos lo que es la
+riqueza chtt y nosotros podemos,
+podemos tener una réplica de ser qre y nosotros lo vamos a
+ver en particular, lo vamos a comentar.
+Y después tenemos, eh, el saga pattern,
+que de alguna manera es un mecanismo
+a asíncrono muy parecido a la sí transaction donde nosotros
+vamos a ir pudiéndole intercambiar información o hacer
+procesos que antes se hacían de forma síncrona porque
+ustedes tenían toda la base de datos
+y todo punto en un monito.
+Y ahora nosotros tenemos que hacerlo de forma a cinco
+y algo que también me adelanto un poco.
+Pero vamos a ver con el saga pattan creo que no,
+no en extracción, no, no de comunicación.
+Algo que ustedes van a ver con el saga patan es que
+una de las cosas que pasa ustedes con transacciones
+a nivel de de se c,
+ustedes podían prevenir ciertos errores a nivel de inserción
+o ciertas acciones y podían hacer un este como se llama
+un rollback de lo que ahí con micro servicios es ese
+rollback que es más complejo.
+Y los errores imaginan que cosas en comunicaciones a
+síncrona doble mucho más complejo.
+Entonces acá es donde saga Pat o bueno, a implicar
+este una buena réplica de se qs,
+nos van a permitir a nosotros, bueno,
+las cosas a síncrona o la información que tenemos.
+Este que no es consistente.
+Sí, este recordemos también el teorema cap que no va a ser
+consistente, pero bueno, va a estar lo
+más actualizar posible.
+Nos van a permitir atacar este tipo de problema.
+Bien, entonces sacar un poco cómo
+podríamos cambiar lo que cambiamos.
+Ahora, lo que hice acá es que cambiamos ahora validamos lo
+mismo indispensable, una réplica interna y el resto lo
+manejamos a síncronamente, eh, en particular, eh,
+a síncronamente nosotros,
+lo que hacemos es valide con summer mesas ahí las flitas me
+pongo súper explícito que las fl quitas.
+No son las correctas de todo.
+Y por lo que hacemos es consum service cuando pueda,
+le avisa ahí lo que hacen ustedes
+se llaman a kitchen service.
+Después kiten service les avisa y van llamando nosotros
+servicios y va haciendo toda síncrono hasta que en algún
+memento no se vamos a poder volver a
+consultar a order service.
+Y vamos a poder saber el estatus de la respuesta. Ah, sí.
+Estos patrones lo estamos viendo como soluciones
+ante este tipo de problemas donde nosotros encontramos un
+servicio que está muy acoplado a otro.
+Entonces tenemos que intentar desacoplarnos porque sino al
+final lo que hicimos, pues traspasar,
+pasar de tener varias llamadas a funciones,
+a tener una cantidad de llamadas a TTP.
+Y eso no es lo ideal.
+Sí, porque recordemos que las ricos síncrona acopla y además
+van a agregar más allá que nosotros.
+Podemos explicar los micro servicios en el mismo ambiente
+y la comunicaciones tp puede ser más rápidas.
+Y nosotros lo orientamos bien de la nube.
+Puede generar algún este otro puede generar alguna este
+algún cómo llama?
+O sea, puede generar alguna latencia.
+Y eso, este va tore en topeando,
+lo que es empeorando los tiempos que tiene dar reue bueno,
+hasta ahora alguna consulta?
+Alguna duda? Algo que no les haya quedado claro.
+Bueno, bien, extracción de micro servicio.
+Ah, ustedes van a,
+vas allá que pino una estrategia ahí present en todo
+hoy en día, ustedes nos tienen su servicio funcionando.
+Pero imagínense que ustedes necesitaran tener, o sea,
+tuvieran todo esto despeado en producción s 100, 20,
+50 clientes diarios que están
+interactuados con su aplicación.
+Cómo quedarían esto?
+Bueno, hay una manera como dir desacoplando
+los micro servicios, lo que es esta transición
+nueva funcionalidades implementarlas en micro servicios.
+Sí. Bien, gradualmente con
+comenzar la extracción del monolito.
+Entonces, algo que es clave si tejas identifican que va a
+ver una nueva feature, proponerse a no hacerla en el mismo
+monito, si yo intentar hacerla
+fuera de lo que es ese servicio.
+Y pues gradualmente comenzar la extracción
+del monolito es pasito, empezar a sacarlo.
+Bueno, hacerlo un proceso interactivo.
+Servicio a servicio está no, no
+es recomendado ahí, como dice el big bang de una manera,
+eh, no parar todo, decir, dejamos de funcionar,
+usted lo pueden hacer porque está en un obligatorio local,
+o sea local de una manera están en un obligatorio que
+que lo tienen hecho ustedes.
+Entonces este
+te es, no tienen clientes que los tengo consumiendo.
+Pero ahora la idea es que ustedes se pisn a separar esas
+pequeñas funcionalidades.
+Y es más, si ya ustedes detectan una funcionaria nueva,
+creo que solo lo autoría ya la hacen como micro,
+ya pueden arrancar y hacer nuevo de autoría con micro
+servicio y sa y definir ese, ese boiler plate,
+esa estructura, ese templa
+lo que van a tener ustedes para que puedan escribir otros
+pi servicios más rápido.
+Entonces dice, bueno, migrar uno y volver si sirve o no.
+Y aprender de eso lo habla como un modelo iterativo.
+De nuevo, imaginemos nosotros que tenemos la aplicación
+funcionando en producción.
+Entonces nosotros nos podemos parar todo y hacer o ponernos
+a escribir todo el cod.
+Porque qué es lo que pasa? Tiene un proyecto normal.
+El monolito está funcionando.
+Y ese monolito en los meses que nosotros vamos
+migrando a micro servicio.
+Sí, va a tener cambios. Sí.
+Entonces imagínense que ustedes arrancan para arrancar el
+diseño, o sea o diseño uno arrancaron el desarrollar una
+feature y su obligatorio fue cambiando.
+Entonces, cuando van merara y conflicto, sí, o
+sea, pasa la mon Antonio local,
+imagínense en un monolito grande.
+Si ustedes empiezan a de a acopla micro servicio.
+Y qué pasó en ese meses?
+Todos mes empiezan a acopla todos micro servicios.
+Y qué pasó? Y la funcionalidades cambiaron?
+Se atacaron back un problema.
+Entonces, lo que dice acá es bueno, empezamos a a
+este desarmarlo en un proceso iterativo de separación,
+lo más minuciosa y mínimo posible.
+Empieza atraer separar, sacó uno, lo pongo acá, sacó dos,
+lo pongo acá, Prue, y sirvió de ese micro servicio.
+Si me hizo un cambio,
+está sigue dando funcionalidad al usuario.
+Mientras tanto, este quiere decir que el manolito va a
+seguir funcionando y de a poquito empezará decir, bueno,
+a partir de ahora, empezamos a
+consultar este micro servicio.
+Entonces ustedes van separando funcionalidades nuevas,
+pequeñas funcionalidades, y las van probando,
+las van testeando, siguen dándole,
+funcionaría de un memento para otro.
+Empiezan a usar de ese micro servicio
+para esa funcionalidad.
+Eso que se acoplaron.
+Y así ustedes van este creciendo con eso está
+es como más un proceso iterativo.
+Y en cuanto a lo que son los micro servicios,
+lo más atómicos y ir separando los más fáciles primero
+y después meterse en lo más difícil.
+Sí, es un poco.
+La idea es traer un primer
+servicio como prueba de concepto que sea bajo
+impacto, poco riesgo.
+Bueno, esto es lo que nosotros hablamos con poca dependencia
+que no dependa del monolito comunicación solo del
+monolito hacia el servicio.
+Entonces esto es importante, algo de autoría.
+Pongamos que ustedes lo tienen adentro. Ustedes.
+Es un, es algo de bajo impacto. Lo puede, eh?
+Con en teoría con pocas dependencia y ustedes podrían
+tenerlo de esta forma.
+Eh? Lo importante es que no dependa del mon comunicación
+solo del monolito hacia el servicio.
+Ah, sí.
+O sea, nosotros queremos que del monolito se
+comunique al micro servicio.
+Está bien.
+En otras palabras, necesitamos poder separar algo que est
+tenga el menor impacto y la me y y lo menor posible.
+Ah, sí.
+O sea que no, que él no agarre y consulte al monolito,
+sino que el monolito lo utiliza.
+Él, el micro servicio, eh,
+te entiende por eso poco que el lo de auditoría.
+Si usted quieren separar los emails,
+podría hacer un cambio bajo.
+Y esto también te sirve como, como dice ahí,
+proba de concepto, algo de poco impacto que no
+este cambia mucho si nosotros tendríamos ah,
+voy a sacar estos comentarios porque pueden andar.
+Pero si nosotros tendríamos esto acá,
+qué micro servicio podrían sacar cuáles traerían primero
+o cuál no extraían?
+Porque podría ser complejo notificaciones que todos de una
+notificaciones pagos tre equ de paquete.
+Sí, podemos sirviendo. Es como atacaba.
+Sí, bueno, en particular just lo qui,
+hice acá pagos es alto riesgo
+porque es algo clave para el negocio.
+Por más que no te acoplado órdenes y
+usuarios tienen problemas.
+Ventas depende hacia monito.
+Notificaciones es el candidato clave arrancar, eh?
+Yo, yo también miraría trick de paquete para acá,
+juste acá ese buen candidato.
+Pero más dependencia de tren, eh?
+Tre de paquetes depende del negocio
+porque tre de paquetes puede ser que
+también tenga algo de negocio.
+Pero si no este podrían ir a a notificación.
+Sí, cualquiera, esos dos sería los candidatos.
+Y después seguir porque tengan en cuenta que algo que
+nosotros vimos acá es bajo impacto, poco riego.
+Entonces, por más que a nivel de gráfica, pagos
+a nivel de dependencia, pagos,
+es como que clave, deme un segundito.
+Estamos bueno,
+deseamos pagos por más que tienen poca dependencias.
+Es algo clave y que puede tener mucho impacto
+definiendo que es traer después priorizar lo que mayor valor
+te detenerlo aparte.
+Sí, recordar que buscamos al pasarnos a micro servicio.
+Por ejemplo, si buscamos dlo independiente todo puedo
+priorizar es traer lo que lo que cambia más seguido antes.
+Sí. Bueno,
+algo que hice ahí tan necesario es traer algo que no cambia
+hace hace ocho años, no le prioridad
+porque no lo tocas igual.
+Ah, entonces también ustedes tienen que pensar una vez que
+va viendo esto, el costo y asimismo tienen que ver
+que es lo más importante.
+O sea que es algo que realmente el tenerlo micro servicio me
+va a empezar a aportar varios.
+Entonces, bueno, yo ya separé lo fácil.
+Empiezo a pensar perfecto,
+capaz que la parte de pagos cambia mucho.
+Es algo muy delicado que tiene cambios.
+Está se está viendo muy afectada.
+Entonces, capaz que lo puedo,
+estoy prendiendo un ejemplo capaz que me
+sirve ya desacoplado.
+Sí, es extra o escribir suele valer la pena plantearse
+si extraer este co el cortar y pegar
+o escribir de c evalu.
+Dependiendo, por ejemplo,
+cal haría de codigo posibilidad de beneficiarse una lenguaje
+costo de reescribir ah, en otras palabras, bueno, eh,
+acá lo dices yo, que fue compleja,
+probablemente es traer ciencia.
+Si yo ustedes ya tiene una logia completa, ca compleja,
+cálculos matemáticos, lo que sea que ya están hechos.
+Bueno, opide muy pegué.
+Sin embargo, si es algo que conviene reescribir,
+si es un código que está muy mal,
+podemos llegarnos a plantear obviamente, que
+normalmente el reescribir que nosotros, por más que ha ido,
+que feo, tenemos entendimiento de reescribir a veces lleva a
+tiempo y por más que puede ser lo más prohijo el tiempo
+lleva el tiempo de ustedes.
+Normalmente es dinero o tiempo que usted necesitar
+para trabajar su producto.
+Bueno, algunos pasos como para tener en cuenta identificar
+el servicio a extraer y cómo se va a comunicar
+reactualizar el monolito extrayendo las funcionalidades a un
+Mauro dentro del monolito es que usted
+ya lo hicieron porque ya lo hicieron lo más modular posible
+que parar la base de datos.
+Si utilizaron un esquema distinto, eh, por ejemplo,
+podres permite que ustedes tengan dos tipos
+de esquemas de base de datos.
+Entonces pueden empezar trabajando en un mismo esquema,
+la base de datos y después terminando estar yendo, lo
+crear en doro, crear el nuevo servicio migrando de la
+funcionalidad derar las llamadas al nuevo servicio.
+Y una vez, y esto es lo importante, una vez que, de nuevo,
+todo eso te ha pensado en un código funcionar,
+ustedes lo van a hacer, lo van a hacer todo junto a la vez.
+Pero una vez que tengo todo esto, pronto
+elimino el código de modelo.
+Sí, bueno,
+identificar a dónde queremos llegar.
+Sí, fíjense que
+acá muestra una imagen es que, bueno,
+nosotros tenemos orden de delivery management.
+Lo separamos. Fíjense que por un get way
+te podría no tenerla.
+No es obligatorio, tiene un goodway.
+Y ustedes quiere un flujo de integración entre ambos.
+Y separamos la base de datos. Esto, su este pres.
+O sea, esto se ve muy lindo.
+Y es algo que también como arquitecto,
+no ustedes podrían ir cuando van fijando las etapas para ir
+pasando, pensando cómo van a ir haciendo todo esto?
+Ustedes podrían ya hacer un flujo,
+podría hacer un diagrama y les podría ser muy útil de cómo
+quieren plasmar todos esos micro servicios y en particular
+en ese diagrama,
+poner las comunicaciones que van a tener esos micro
+servicios y qué problemas pueden
+tener con esas comunicaciones.
+Por ejemplo, qué problemas pueden tener si se pierde antes,
+antes hacía un flujo y se controlaba todo en un solo hilo
+este con la base de datos en el monito.
+Qué pasa si, por ejemplo,
+la orden en el ejemplo que estábamos viendo este
+deja de deja de estar habilitada?
+Sí. Bien, así que un poco de eso.
+Bueno, entonces acá este, esto que queremos llegar,
+muestra los pasos para hacer primero separamos el código.
+Sí, lo separamos en módulos.
+Varios de ustedes ya lo hicieron yo lo que decía es no
+tienen que hacerlo, ya no tienen que hacerlo.
+Ahora, pues puede comple quitarles algo.
+Si lo hicieron, está bien, pero puede comple quitarles un
+código que ustedes después cuando vean toda esta parte
+teórica de micro servicios, digan ah,
+entonces no los separé bien.
+O para mí no está el todo bien.
+Pero una vez que ustedes lo tienen, claro,
+pueden ir separando el código.
+Una vez que separan el código,
+pueden separar la base de datos o pueden separar,
+pueden separar una base de datos que pueden separar
+el esquema después.
+Luego crean el nuevo servicio que consuma ese nuevo
+esquema o base de datos.
+Acá el va a ver un paso que ustedes van a tener que separar
+esa base de datos en que sea una instancia distinta.
+Recordemos que si ustedes tienen una sola base de datos con
+distintos esquemas, al final tenemos el mismo problema de
+micro servicio disfrazado.
+Estoy moviendo la la imagen
+y después no solo lo que hacemos es
+este redirigimos despacito el tráfico hasta en un memento
+este, o sea, empezamos a redirigir el tráfico del espacio
+es no todo esto pensando que está en producción.
+Ustedes probablemente vayan por algo mucho más agresivo.
+Pero empezamos del pasito a redirigir el tráfico.
+Algunas requests de libre mar me manejaba de solo dentro los
+monito, las empezamos hacer acá y
+empezamos a ver el resultado.
+Esto está genial. Tener ambientes de stage de prueba de de
+de texting cosas que puedan probarlo
+percent de producción y no local.
+Y posteriormente lo separamos.
+Sí, que hacemos la limpieza del código obsoleto.
+Bien, bueno
+este acá tenemos patrones útiles bra, eh?
+Branch by abstraction coexistieron dos implementaciones el
+año funcionaria de entrar una interfaz mientras sigas
+trabajando con ellos.
+Entonces ustedes pueden tener una interfaz en
+este caso de la p we.
+En cambio, la imagen en este caso,
+la PT we funciona como una interfaz en encima.
+Nosotros vamos a hablar en particular en una clase de pit we
+y nosotros después, cuando la terminemos de
+atraer, lo sacamos.
+Ah, para le run hacer ambas implementaciones,
+reacción el tráfico para monitorear el comportamiento de la
+nueva antes y dejar a la vieja.
+O sea, te pueden hacer que mientras que eso no afecte,
+pueden hacer obviamente que esto está buena solamente de
+test, pero también pueden hacer como que apagado.
+Si esto tuviera que una acción que comunica el cliente o que
+hace algo efectivo, podrían ir replicando en la en ambas
+acá, perdón, podrían ir replicando en ambas
+hasta que diga acá este,
+estamos viendo que ambas se comportan de la misma forma.
+Sí. Y bueno, ya acá tiene un poco de lecturas con esto,
+nosotros terminaríamos extracción y la clase que viene
+empezaríamos a atacar de de frente lo que
+comunicación de micro servicio.
+Alguna duda consulta de con particular?
+Sí, una voles no más. Sí, claro de
+Que en la letra del obligatorio nos dicen el tema de los
+lenguajes que un micro servicio tiene que estar al menos
+en otro en otro lenguaje.
+Programación es como,
+como mínimo dos lenguajes o como máximo también,
+si queremos ponerle el gateway y hacerlo en otro
+lenguaje para jodar
+La ah, pueden hacerlo.
+Sí, pueden hacerlo. Claro. Sí, voy
+De más, muchas Gracias.
+O sea, pero si, pero la idea es que sea mínimo uno,
+lo la, mi recomendación es,
+hagan el más sencillo en otro porque que pasa
+el resto de micro servicio?
+Estaría bueno que ustedes generen un templa y tu boler plate
+pa que sea más rápido crear micro servicio.
+Mm, por ejemplo, pueden poner ahí en ese templa un circuit
+breaker ya la comunicación con podre ya todo lo que son las
+migraciones, entienden?
+Entonces, después el único que hacen es le ponen la lógica
+al negocio específico.
+Entonces ustedes se pueden crear un temple,
+un boiler plate, eh?
+Hip hop permite que ustedes creen los
+repositorios como templa.
+Y entonces los ponen como templa.
+Y ahí lo que hacen es lo este,
+los foran o usan el repositos.
+Cuando ustedes crean un report,
+les preguntan si quieren usar un repositorio como tela.
+Y entonces lo pueden seleccionar.
+Y esta tienen toda la configuración pre, eh? Entonces, bien,
+Muchas gracias.
+Vamos arriba. Unito más.

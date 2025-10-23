@@ -1,0 +1,173 @@
+APUNTES DE CLASE – EQUIPO FUNDADOR, INNOVACIÓN, MODELOS DE NEGOCIO Y EQUITY
+
+1) Recordatorio de la clase anterior: modelos de negocio y métricas
+- Empresa de producto (SaaS):
+  - Vende software como servicio (suscripción). Objetivo: escalar y llegar a muchos clientes.
+  - Además del ingreso recurrente (MRR/ARR), suelen aparecer ingresos no recurrentes: customizaciones, integraciones, mantenimiento ampliado, servicios puntuales.
+  - Dificultad clave: gran inversión inicial (tiempo y dinero) antes de facturar de forma masiva; riesgo asociado a esa inversión.
+- Empresa de servicios (Software Factory/consultoría):
+  - Vende proyectos únicos a una cantidad reducida de clientes (limitada por “ancho de banda”/horas disponibles).
+  - El negocio es vender muy bien las horas (talento/calidad del equipo).
+  - No hay ingreso recurrente estable; cada proyecto tiene su esquema de pagos (anticipo + hitos). Gestión del avance = gestión del cobro.
+- Métricas en contextos SaaS (adelanto):
+  - Ingreso recurrente (MRR/ARR) vs ingreso total (incluye no recurrentes).
+  - La previsibilidad del flujo de caja es mayor en SaaS que en servicios.
+
+2) Innovación: definiciones y tipos
+- Para que exista innovación deben darse tres condiciones:
+  - Satisface una necesidad (genera valor real).
+  - Aporta novedad/diferenciación (hace algo de forma distinta).
+  - Conlleva incertidumbre (riesgo por hacer algo distinto).
+- Ámbitos: producto, servicio, modelo de negocio, tecnología.
+- Tipologías comentadas:
+  - Incremental vs disruptiva.
+  - Reactiva vs proactiva.
+  - Alcance: global, regional, sectorial.
+- Herramientas vistas (alto nivel): Design Thinking, Business Model Canvas, etc. Se subraya que sin ejecución la idea no vale.
+
+3) De la idea a la ejecución (y por qué la ejecución importa más)
+- Preguntas guía al trabajar ideas:
+  - ¿Cuál es la necesidad y quién la tiene? ¿Por qué sigue sin resolverse?
+  - ¿Cómo la soluciono? ¿Cuál es mi propuesta de valor y qué valor aporta?
+  - ¿Quién es mi público objetivo? ¿Cómo defino el problema con precisión?
+  - ¿Cuáles son los costos? ¿Cuál es el “timing” adecuado para salir?
+- Mensaje central: las ideas por sí solas no valen; ejecutar es lo que crea valor.
+- El tema de hoy conecta con esto: quienes ejecutan la idea son los fundadores.
+
+4) Equipo fundador: importancia y definición
+- ¿Qué es? Grupo inicial de personas que crea la empresa, define la visión, construye el primer producto (MVP) y toma las decisiones estratégicas iniciales.
+- En software, el equipo fundador suele:
+  - Diseñar el negocio y construir el MVP.
+  - Conseguir los primeros clientes incluso antes de inversión externa.
+  - Moldear la cultura, la velocidad de innovación y la capacidad de escalar.
+- Tabla de factores de éxito (idea–modelo–timing–equipo–financiamiento):
+  - Tras “timing”, el equipo/ejecución es el factor más determinante, incluso por encima de la idea o el modelo, y comparable o superior al financiamiento.
+- Clave: producto y modelo pueden cambiar (pivotar). Si el equipo no funciona, el emprendimiento muere.
+
+5) Habilidades y roles según el modelo de negocio
+- Diferencias SaaS vs Servicios:
+  - SaaS: foco en producto escalable, visión de producto y capacidad de innovación. Riesgo financiero alto por inversión inicial. Escalabilidad global.
+  - Servicios (software factory): foco en proyectos a medida, gestión de proyectos y calidad, relación con clientes. Riesgo financiero menor (ingresos desde temprano). Escalabilidad limitada por capacidad operativa.
+- Roles fundacionales típicos y complementarios:
+  - CEO (Chief Executive Officer): visión estratégica, dirección general, relación con inversores, definición del modelo de negocio, estrategia comercial/marketing. “Vende la visión” a clientes, inversores y colaboradores.
+  - CTO (Chief Technology Officer): estrategia tecnológica, arquitectura, infraestructura, desarrollo, innovación técnica. Lidera la construcción del MVP y asegura escalabilidad/calidad.
+  - CPO (Chief Product Officer): experiencia de usuario, diseño funcional, roadmap, priorización de funcionalidades, conexión con necesidades del cliente.
+  - Otros frentes críticos a cubrir (aunque no todos sean cofundadores): ventas/desarrollo de negocio (cierre de clientes/alianzas), marketing/posicionamiento de marca y comunicación, operaciones/finanzas (costos, proyecciones, control), cultura/equipo.
+- Mensaje: al inicio todos hacen de todo, pero cada área debe tener responsable claro desde el día cero. Con el crecimiento, se incorporan líderes y se delega.
+
+6) Identificación de habilidades críticas y matriz
+- Preguntas clave para detectar huecos:
+  - ¿Tenemos a alguien que pueda construir el producto?
+  - ¿Tenemos a alguien que pueda venderlo (redes de contacto, habilidad comercial)?
+  - ¿Tenemos a alguien que diseñe visión y conecte puntos (producto–mercado)?
+  - ¿Hay experiencia previa en el modelo elegido (p. ej., SaaS)? ¿La necesitamos como socio o como asesor/empleado?
+- Matriz de habilidades (ejemplo de columnas): área, rol, ¿es necesaria?, ¿quién asume? Áreas típicas: Ingeniería/CTO, Producto/CPO, Negocio/Ventas, Marketing/Marca, Operaciones/Finanzas.
+- Complementariedad: evitar tríos “homogéneos” (p. ej., tres ingenieros sin ventas). Si falta una capacidad estratégica, considerar sumarla como socio; si es táctica o reemplazable, quizá sea un empleado/contratado.
+
+7) Criterios para elegir cofundadores
+- Visión y filosofía de negocio compartidas:
+  - Mismo norte y también acuerdo en el “cómo” (valores y estilo de construcción).
+  - Ejemplos de visiones divergentes: construir el mejor producto vs crecer para vender la empresa; ambas válidas, pero exigen alinear expectativas antes de decidir.
+- Valores y confianza:
+  - Los valores de los fundadores serán los de la organización. Compartir valores simplifica decisiones difíciles.
+  - Analogía con relaciones de pareja: al comienzo todo fluye, luego aparecen decisiones complejas; los valores compartidos sostienen el vínculo.
+- Relación interpersonal y tiempo juntos:
+  - Emprender demanda mucho tiempo (24/7 al inicio). Hay que poder trabajar codo a codo, discutir y resolver desacuerdos con madurez.
+- Compromiso real (contexto personal y disponibilidad):
+  - ¿Puede dedicar tiempo de calidad? ¿Tiene otro trabajo? ¿Necesita viajar? ¿Tiene hijos/responsabilidades que condicionan su dedicación? No es “excluir” a nadie, es entender la realidad y el impacto en el proyecto.
+- Balance de capacidades y claridad de roles:
+  - Definir claramente responsabilidades. Si varios roles caen en la misma persona, verificar que sea sostenible.
+  - Si una capacidad no agrega valor diferencial como cofundador, evaluar contratarla.
+
+8) Número de fundadores: pros y contras
+- Uno (solo founder):
+  - Pros: velocidad, autonomía, alineación total de visión/valores.
+  - Contras: alta probabilidad de carecer de habilidades complementarias; riesgo de “sesgos” sin contrapeso.
+- Dos fundadores:
+  - Pros: equilibrio típico producto/tecnología vs negocio/estrategia; agilidad en decisiones.
+  - Contras: si visiones difieren, puede trabarse; atención a empates 1–1 (definir mecanismos).
+- Tres o más:
+  - Pros: diversidad de habilidades y miradas; reduce sesgos.
+  - Contras: más fricción potencial si no hay claridad de roles; decidir puede ser más lento.
+- Nota: número “ideal” no existe; importa que cada uno aporte algo único y crítico para la etapa del negocio.
+
+9) Delegación y evolución del rol fundador
+- Fase inicial: los fundadores suelen “hacer de todo”.
+- Crecimiento: se incorporan especialistas y líderes. El fundador técnico puede dejar de programar para enfocarse en ventas/inversión/estrategia; requiere aprender a delegar y soltar decisiones técnicas.
+- Inversores pedirán foco en crecer (p. ej., X% trimestral); el rol muta hacia lo que más impacto genera.
+
+10) Mindset emprendedor
+- Tolerancia a la incertidumbre y al fallo; aprender rápido; caerse y levantarse.
+- Comunicación abierta y transparente; cultura de aprendizaje continuo.
+- Enfocarse en problemas antes que en soluciones; “enamorarse del problema, no de la solución”.
+- Buscar diferenciales claros en la propuesta de valor.
+
+11) Ejemplos y anécdotas comentadas
+- Slack:
+  - Nació como herramienta interna; el producto original falló, pero identificaron que el “chat interno” era valioso y pivotaron. Caso de pivote exitoso hacia un unicornio global. Equipo con perfiles complementarios, crecimiento desde servicios hacia producto y consultoría.
+- Intraemprendimiento (UPM – anécdota):
+  - Pasar de un rol estable a liderar diseño de una nueva planta con años de incertidumbre. Ilustra riesgos, negociación interna y decisiones de carrera.
+- Negociación y compras (experiencia con Finlandia/UPM):
+  - Subastas/licitações: rondas con ofertas, transparencia en posiciones (en el caso narrado), búsqueda de “es exprimir al máximo” vs construir relación de largo plazo.
+  - Valor de la transparencia para relaciones de socios a largo plazo; ajustar precio dentro de márgenes razonables y coordinar con proveedores propios.
+  - Sector público: criterios predefinidos (peso económico/técnico/antecedentes) y necesidad de trabajo previo para influir –éticamente– en requisitos.
+
+12) Financiamiento, equity y valoración (adelanto de clase específica)
+- Pregunta guía: si necesito $1M y me ofrecen $1.5M, ¿siempre es “mejor”?:
+  - Depende de lo que piden a cambio (equity, control, condiciones) y de la valoración implícita.
+  - Más dinero puede implicar mayor dilución. Evaluar cuánto vale hoy la empresa y cómo queda el cap table.
+- Equity (participación accionaria):
+  - Reparto igualitario (simple pero puede ser injusto si aportes difieren).
+  - Reparto según contribución (tiempo, capital, experiencia, red, aporte real).
+- Vesting (adquisición gradual del equity):
+  - Mecanismo para que la participación “se gane” a lo largo del tiempo (p. ej., 4 años). Si alguien se va antes, no se lleva todo. Evita “free riders” tempranos.
+- Dilución y rondas:
+  - Inyección de capital diluye; pedir más capital por encima de lo necesario puede implicar “vender” demasiado de la empresa.
+  - Pensar en escenarios (hoy vs futuro) y mecanismos (notas convertibles, SAFE, etc. – tema para clase específica).
+
+13) Go-to-market y costos típicos (SaaS temprano)
+- Uso de redes/contactos puede reducir paid media; en B2B es frecuente vender por red y visitas (menos Instagram/ads masivas).
+- Gastos iniciales habituales:
+  - Marketing y viajes (visitar clientes/inversores).
+  - Cloud/infraestructura (coste mensual creciente con uso).
+  - Sueldos de fundadores/equipo (si se decide pagarlos).
+- En SaaS, la recurrencia permite reinvertir en crecimiento (si bien al principio se gasta más de lo que entra).
+
+14) Taller/ejercicio: FitTrack (SaaS para gimnasios)
+- Contexto:
+  - Plataforma para gimnasios y entrenadores: clientes, planes de entrenamiento/nutrición, métricas y recomendaciones automáticas (IA), integración con wearables; dashboard para dueños.
+  - Problema: gestión actual en muchos gimnasios con Excel/sistemas dispersos; difícil seguimiento personalizado y fidelización.
+- Protagonista: Lucía (32). Ex gerente de innovación en cadena regional de gimnasios.
+  - Fortalezas: conoce el negocio y necesidades; red de contactos (dueños/entrenadores).
+  - Debilidades: no sabe de software ni ha fundado startups.
+  - Rol inicial: CEO/negocio.
+- Selección de cofundadores (discusión):
+  - Rol técnico (CTO) indispensable para construir MVP y escalar.
+  - Ventas/BD: parte puede cubrirla Lucía por su red; evaluar sumar perfil comercial adicional según etapa.
+  - Finanzas/operaciones: puede ser cofundador o incorporación posterior; depende de complejidad, levantamiento de capital, etc.
+- Reparto de equity (no hay respuesta única):
+  - Considerar aporte de idea/red/tiempo/capital/ejecución técnica.
+  - Evitar “50/50” por inercia; alinear con responsabilidades y vesting.
+- Go-to-market inicial:
+  - Apalancar contactos de Lucía para primeras ventas; marketing digital puede no ser lo principal al comienzo en B2B.
+  - Presupuesto en viajes/demos; cloud y soporte postventa.
+
+15) Síntesis operativa para conformar equipo fundador
+- Pasos propuestos:
+  - Definir visión, filosofía y valores explícitos (documentarlos).
+  - Enumerar capacidades imprescindibles por etapa (matriz) y asignar responsables.
+  - Testear complementariedad real (proyecto corto, validación de trabajo conjunto).
+  - Alinear expectativas de dedicación, sueldos, objetivos y salida (exit/no exit).
+  - Redactar acuerdos de socios: equity, vesting, IP, toma de decisiones, resolución de conflictos.
+  - Plan de contratación/asesores para cubrir gaps no fundacionales.
+  - Mecanismos de gobierno (cadencia de reuniones, métricas, OKRs, tablero común).
+
+16) Ideas clave para llevarse
+- El equipo y su ejecución pesan más que la idea.
+- Complementariedad y valores compartidos reducen fricción y aceleran decisiones difíciles.
+- Definir responsabilidades desde el inicio, aunque una persona use varios “sombreros”.
+- Delegar es un hito crítico al crecer; el rol del fundador evoluciona.
+- Financiamiento no es “siempre más es mejor”: cuidar dilución, valoración y control.
+- En SaaS, entender MRR/ARR vs ingresos no recurrentes y diseñar el P&L acorde.
+
+Fin de los apuntes.

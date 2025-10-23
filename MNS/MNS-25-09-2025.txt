@@ -1,0 +1,197 @@
+Apuntes de clase – 25/09/2025
+Gestión de empresas de servicios de software + Letra del obligatorio (modelo SaaS)
+
+## Objetivo y encuadre de la clase
+- Leer en conjunto la letra del obligatorio.
+- Introducir gestión de empresas de servicios de software (áreas y roles).
+- Próxima(s) clase(s): indicadores específicos del modelo SaaS y cierre de temas.
+
+## Letra del obligatorio (trabajo final)
+### Objetivo general
+- **Analizar el modelo de negocio** de una empresa con **modelo SaaS** (elegida por el equipo).
+- Es estrictamente necesario que el análisis se centre en la línea de negocio SaaS.
+
+### Recomendaciones para elegir la empresa
+- Preferir empresas **públicas** o con **datos accesibles** (e.g., precios, KPIs, reportes, prensa, web).
+- Si la empresa tiene varias líneas, centrar el análisis en la línea SaaS elegida.
+
+### Aprobación previa y postulación
+- La empresa seleccionada debe ser **aprobada** por el docente antes de iniciar el análisis.
+- Subir la **postulación** (nombre de empresa, enfoque del trabajo, integrantes) como tarea en Aulas.
+- Si envían por Teams o correo, el docente responde igual; la subida a Aulas queda habilitada.
+- Mecanismo de control para evitar que todos elijan lo mismo y chequear disponibilidad de datos.
+
+### Fechas y calendario
+- 25/09: se entrega la letra en clase (hoy).
+- 10/10: **fecha límite para postular** la empresa y el enfoque.
+- 01/11 aprox.: **fecha límite del docente** para responder si aprueba la propuesta (en clase se menciona “de noviembre”).
+- 11/12 (21:00): **fecha límite de entrega** del informe final.
+
+### Consideraciones formales
+- Uso de material de apoyo/consulta y **IA**: se puede usar, pero **citar explícitamente** todo sistema de IA utilizado.
+- **Equipos de hasta 3** personas del mismo dictado/clase.
+- Habrá una **pregunta abierta** en el parcial vinculada al informe (p.ej., fundadores, diferenciales, KPIs). No será cerrada.
+
+### Contenido mínimo del informe final
+- **Carátula**: nombre de la empresa analizada e integrantes.
+- **Resumen ejecutivo**:
+  - No es una “introducción” ni un “qué voy a hacer”, es un resumen con hallazgos y resultados.
+  - Debe “vender” el contenido al lector ejecutivo; incluir insights (e.g., solvencia, market share, diferenciales, KPIs críticos).
+  - Se recomienda escribirlo al final, destilando secciones clave.
+- **Breve introducción**: historia y presente; a qué se dedica.
+- **Equipo fundador**: quiénes son, trayectorias, complementariedad, roles.
+- **Modelo de negocio**:
+  - Qué vende, bajo qué modalidad, mercado/segmentos, cliente objetivo, pricing, canales, posicionamiento.
+  - Business Model Canvas, competencia, diferenciales.
+- **Indicadores (KPIs) SaaS**: seleccionar y analizar indicadores relevantes (los verán en la(s) próxima(s) clase(s)).
+- **Análisis FODA/FO**: fortalezas, oportunidades, debilidades y amenazas.
+- **Valuación**: criterios y aproximación (habrá una clase específica sobre valuaciones).
+- **Conclusiones**: síntesis final, juicios sustentados por datos.
+
+## Gestión de empresas de servicios de software: marco general
+- Hasta aquí se abordó la empresa como emprendimiento (ideas, equipo fundador). Ahora se aborda como **organización estable** que opera, produce y vende.
+- En clases siguientes se aterrizará en **indicadores de negocio específicos para SaaS**.
+
+## Misión, visión y valores
+### Por qué importan
+- Son **declaraciones fundamentales** que describen propósito, objetivos y principios.
+- Guían decisiones y acciones cotidianas, alineando a colaboradores con una **dirección clara y coherente** de largo plazo.
+
+### Definiciones
+- **Misión**: declaración concisa del **propósito fundamental**; responde “¿qué hace la empresa?”. Debe ser clara, específica y orientada al cliente.
+  - Ejemplo (universidad): contribuir al desarrollo del país formando profesionales, vinculando con el sector productivo e investigando.
+- **Visión**: **imagen deseada a futuro**; responde “¿dónde quiere estar la empresa?”; debe ser ambiciosa, motivadora e inspiradora.
+  - La visión puede cambiar cuando se alcanza (p.ej., pasar de “ser líder nacional” a un nuevo horizonte).
+- **Valores**: principios que guían el **comportamiento** y decisiones; responden “¿cómo actúa la empresa?”. Deben ser coherentes con cultura e identidad.
+
+### Observaciones y ejemplos
+- De misión/visión puede inferirse si la empresa es **B2B/B2C**, ámbito geográfico, foco, etc.
+- Ejemplo discutido: misión amplia de Microsoft (“empoderar a todas las personas y organizaciones…”); muy genérica/inspiracional.
+- Muchas organizaciones publican **valores** explícitos (respeto, integridad, responsabilidad, etc.).
+
+## Políticas de la empresa
+### Concepto y finalidad
+- **Directrices o reglas** que guían comportamientos y decisiones en diversos ámbitos (RRHH, seguridad y salud, ética, conducta, privacidad de datos, finanzas, etc.).
+- Dan **expectativas claras**, contribuyen a un entorno justo/seguro/productivo y facilitan **cumplimiento normativo** (p.ej., datos personales).
+
+### Formas de documentación/comunicación
+- Manuales, anexos contractuales (código de conducta, NDAs), comunicadas periódicamente o visibles en intranet/carteleras.
+
+### Ejemplos
+- Política de trabajo remoto: requisitos técnicos, seguridad de la información.
+- Restricción de comunicación: no usar WhatsApp con clientes.
+- Regalos: no aceptar/entregar regalos (evitar conflictos de interés, sospechas, compliance, especialmente con sector público).
+- Horarios fuera de hora: p.ej., no enviar emails después de 18:00 desde mandos medios.
+
+## Objetivos organizacionales
+### Qué son y horizontes
+- **Metas** para lograr propósitos específicos; deben ser **claras, específicas y medibles**.
+- Horizontes típicos en org. establecida:
+  - **Corto plazo**: 1 año (alineado al año fiscal).
+  - **Mediano/Largo**: 5–15 años (posicionamiento/estrategia).
+
+### Cascada de objetivos
+- Se definen a nivel de **Directorio** y **permean** hacia áreas y luego a individuos.
+- Evaluación de gerentes muchas veces se ata al cumplimiento; bonos por desempeño.
+
+### Año fiscal
+- Puede coincidir con calendario (1/1–31/12) o definirse distinto (p.ej., 1/4–31/3) según estacionalidad y cierre contable.
+
+### Ejemplos de objetivos
+- Facturación: alcanzar X (p.ej., +N% vs. año anterior).
+- Costos/presupuestos: reducir N%.
+- Clientes: aumentar base en N%.
+- Satisfacción del cliente: definir **métrica** y **target** (p.ej., promedio de encuestas de 6→8); evitar formulaciones no medibles.
+- Innovación: desarrollar nuevos productos/servicios.
+- Expansión geográfica/mercados.
+- Objetivos específicos de oportunidad (p.ej., vender a UPM el primer año tras su instalación).
+
+## Estructuras organizacionales
+### Funcional
+- Organización por **funciones** (finanzas, marketing, RRHH, desarrollo/operaciones, etc.).
+- Agrupa por habilidades/experiencia; reporte a gerentes funcionales.
+- **Ventajas**: especialización, eficiencia/productividad, foco en competencias.
+- **Desafíos**: silos, coordinación/comunicación entre áreas, decisiones lentas ante urgencias cruzadas (ventas vs. operaciones).
+
+### Divisional
+- Organización por **divisiones** relativamente autónomas (por producto, región, mercado).
+- Cada división tiene sus propios recursos (marketing, RRHH, administración, etc.) y liderazgo.
+- **Ventajas**: autonomía, flexibilidad, respuesta rápida al mercado.
+- **Desafíos**: **duplicación** de recursos/esfuerzos, mayor complejidad de gestión.
+
+### Matricial
+- Empleados asignados a **proyectos/equipos transversales** cruzando áreas.
+- **Doble línea de reporte**: gerente funcional y líder de proyecto.
+- **Ventajas**: flexibilidad, reasignación según necesidades, colaboración multiárea.
+- **Desafíos**: competencia por recursos, complejidad decisoria por mandos duales.
+
+### Híbrida
+- Combinación adaptativa (funcional + divisional + matricial) para **capturar beneficios** y **mitigar desventajas**.
+
+## Pirámide de gobierno y roles
+- Independiente del tipo de estructura, el **mapa de mando** suele representarse como **pirámide**:
+  - **Directorio** (órgano de gobierno): define visión/estrategia, aprueba presupuestos/inversiones relevantes, supervisa cumplimiento.
+  - **Director**: miembro del Directorio; puede ser ejecutivo o no.
+  - **Gerente General (CEO)**: conduce el día a día, ejecuta estrategia, lidera equipo ejecutivo (ventas, administración, compras, marketing…), reporta al Directorio y representa a la empresa ante terceros.
+  - Por encima: **Asamblea representativa/accionistas** (dueños); eligen al Directorio.
+
+## Áreas funcionales típicas
+- Operaciones/Producción.
+- Ventas/Comercial.
+- Marketing.
+- Recursos Humanos.
+- Compras.
+- Administración.
+- Legales.
+- Finanzas.
+- En empresas pequeñas/medianas, varias funciones pueden **concentrarse** en un mismo equipo (p.ej., administración abarca finanzas/compras/contabilidad).
+
+## Recursos Humanos (RRHH)
+### Objetivo del área
+- **Gestionar personas** para maximizar el desempeño: atraer, seleccionar, contratar, formar, entrenar, motivar y desarrollar.
+- En industrias como **software**, el talento es crítico; el resultado depende fuertemente de las personas (baja desocupación, incluso “negativa” en ciertos roles).
+
+### Políticas y prácticas clave
+- Balance vida-trabajo; flexibilidad horaria; tratamiento de horas extra (pagas vs. compensación); jornada (4/6/8 hs); confidencialidad/salarios; planes de capacitación/carrera.
+- **Salarios**: públicos/transparentes vs. privados; bandas por rol (mínimo–máximo) como práctica intermedia.
+- **Remuneración**: criterios posibles — justicia/legal, antigüedad, cumplimiento de objetivos, referencia de mercado.
+- **Equidad vs. desempeño**: dos personas en el mismo rol no necesariamente deben cobrar igual si su **valor aportado** es distinto; alternativas como bonos.
+
+### Mercado laboral y retención
+- En TI hay **escasez** de perfiles; no alcanza con salario — se compite con **motivación**, **flexibilidad**, **ambiente** y beneficios.
+- Ejemplos de amenities (casos mencionados: oficinas con servicios, espacios integrales, etc.). Beneficios facilitan la vida y fomentan permanencia.
+
+## Marketing
+### Definición (AMA)
+- Actividad para **crear, comunicar, entregar e intercambiar ofertas** que generan valor para consumidores/clientes/socios/sociedad.
+
+### Alcance del marketing (más allá de “publicar en redes”)
+- Investigación y **análisis de mercado**.
+- **Segmentación** de clientes y definición de target.
+- **Posicionamiento** e imagen de marca.
+- Colaboración en **pricing** (disposición a pagar) y definición de **promociones/alianzas**.
+- En algunas organizaciones, marketing está integrado en el área **Comercial/Ventas**.
+
+### Aclaraciones
+- “No creer en marketing” suele confundir: si haces bien las cosas, igual necesitas **comunicar** para que el cliente lo sepa; comunicar es parte del marketing.
+
+### Las 4P (repaso breve)
+- **Producto**: lo que se ofrece (producto/servicio). En software: soluciones a medida o SaaS.
+- **Precio**: valor cobrado (precio cerrado/proyecto, suscripción mensual, etc.).
+- **Plaza**: mercado objetivo/segmento (e.g., hospitales en región X).
+- **Promoción**: estrategias para dar a conocer y maximizar ventas.
+
+## Contabilidad y finanzas (adelanto)
+- Se verán **balances** y **costos** con ejercicios en próximas clases.
+
+## Interacciones con empresas (caso Sonda)
+- Objetivo percibido: **conectar con talento** (estudiantes/egresados), más allá de las ideas presentadas.
+- Rol como **integrador** (p. ej., Microsoft/Google/seguridad), agregando valor con servicios.
+- Experiencias en Uruguay/Chile; dinámica de selección a equipos finalistas; potenciales oportunidades laborales.
+- Viajes y tiempos asociados vistos como **inversión** de entrenamiento por parte de la empresa.
+
+## Cierre y próximos pasos
+- Jueves siguiente a 25/09 es feriado; la clase subsiguiente continúa con esta presentación.
+- Vendrá un **abogado** a hablar de **contrato de accionistas**.
+- Pendiente: **Dinámica 2** (se estima alrededor del 24/10).
+- Reforzar: **postular la empresa lo antes posible** para empezar a trabajar tras aprobación.

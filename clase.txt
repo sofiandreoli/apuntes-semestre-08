@@ -1,0 +1,6401 @@
+WEBVTT
+
+1
+00:00:10.680 --> 00:00:11.300
+Buenos días.
+
+2
+00:00:11.560 --> 00:00:11.980
+Buenas
+
+3
+00:00:13.250 --> 00:00:16.600
+buenas para asumir.
+
+4
+00:00:17.130 --> 00:00:22.070
+Bueno, nosotros nos habíamos quedado. Él.
+
+5
+00:00:22.600 --> 00:00:24.590
+Bueno, primero de nada. No sé si tiene
+
+6
+00:00:24.590 --> 00:00:25.630
+alguna duda de obligatorio.
+
+7
+00:00:25.630 --> 00:00:27.030
+Alguna cosa de quieran charlar?
+
+8
+00:00:30.570 --> 00:00:31.710
+To tengo una pregunta. Sí,
+
+9
+00:00:32.930 --> 00:00:33.930
+Sí. Ah, por
+
+10
+00:00:33.930 --> 00:00:35.630
+respect. Antes que nada,
+
+11
+00:00:35.850 --> 00:00:37.430
+con respecto a la entrega, eh?
+
+12
+00:00:37.430 --> 00:00:39.350
+Ahí hubo varias personas que me escribieron.
+
+13
+00:00:39.350 --> 00:00:40.750
+Prometieron que no hubo problemas.
+
+14
+00:00:41.660 --> 00:00:46.150
+Este y alguien tuvo algún inconveniente o algo, o sea,
+
+15
+00:00:46.150 --> 00:00:47.590
+las personas que me escribieron después,
+
+16
+00:00:47.590 --> 00:00:50.510
+yo les consulté y me dijeron no tuvieron problema para
+
+17
+00:00:50.510 --> 00:00:52.270
+entregar porque se habilitó el servicio.
+
+18
+00:00:52.940 --> 00:00:55.070
+Pero si alguien más tuvo algún problema,
+
+19
+00:00:55.740 --> 00:00:57.590
+este un memento de comentado?
+
+20
+00:01:02.210 --> 00:01:07.110
+No, eh? Sí, nosotros no, no pudimos sac a ws
+
+21
+00:01:08.530 --> 00:01:10.230
+porque creo que volvió.
+
+22
+00:01:10.230 --> 00:01:12.030
+Volvió. Volvió tarde o ws. Se puede ser.
+
+23
+00:01:12.950 --> 00:01:16.970
+Sí, ahí matia me escribieron ustedes a no dieron o
+
+24
+00:01:18.610 --> 00:01:19.610
+Eh?
+
+25
+00:01:21.040 --> 00:01:23.910
+No recuerdo acá fijo.
+
+26
+00:01:25.680 --> 00:01:27.060
+No sé si me comentaron eso.
+
+27
+00:01:31.470 --> 00:01:33.330
+Eh? No, no, no te mandamos.
+
+28
+00:01:33.370 --> 00:01:36.530
+O sea, pudimos levantar todo el API. Todo. Eh?
+
+29
+00:01:36.590 --> 00:01:39.690
+Lo pasa que al momento hacer el que seis ahí fue cuando dejó
+
+30
+00:01:39.690 --> 00:01:42.490
+de funcionar a la por unas a nosotros y anti por la siete de
+
+31
+00:01:42.490 --> 00:01:43.490
+la tarde dejó de funcionar.
+
+32
+00:01:43.570 --> 00:01:45.090
+Y tal lo documentamos que en el momento
+
+33
+00:01:45.090 --> 00:01:46.250
+acerca seis, lo podamos local.
+
+34
+00:01:47.530 --> 00:01:49.830
+Ah, ta, pero lo probaron local. Está perfecto.
+
+35
+00:01:50.190 --> 00:01:52.870
+O sea, podemos expresarlo todo tipo mostrar con gl watch
+
+36
+00:01:53.650 --> 00:01:56.190
+con new re también con adores y todo,
+
+37
+00:01:56.190 --> 00:01:57.230
+pero que no podemos probar.
+
+38
+00:01:57.250 --> 00:01:58.430
+Fue el cas seis
+
+39
+00:01:59.220 --> 00:02:01.400
+Ta pro subieron como habíamos comentado clases
+
+40
+00:02:01.400 --> 00:02:02.640
+subieron apuntando local.
+
+41
+00:02:03.180 --> 00:02:05.360
+Sí, sí, sí, sí, Sí, sí, sí. A
+
+42
+00:02:05.360 --> 00:02:06.360
+Cabo. Son una captura del
+
+43
+00:02:06.360 --> 00:02:10.280
+locker con los locks, eh? Y ya está
+
+44
+00:02:11.550 --> 00:02:12.550
+Bien. Perfecto. Tanto.
+
+45
+00:02:12.550 --> 00:02:14.200
+Entonces no hay problema.
+
+46
+00:02:14.670 --> 00:02:18.120
+Este dejémoslo ahí, eh? Sí que me había comentado algo.
+
+47
+00:02:18.780 --> 00:02:22.120
+Eh? Yo profe, tengo una duda del obligatorio, eh?
+
+48
+00:02:23.300 --> 00:02:24.920
+El requerimiento no funciona el seis.
+
+49
+00:02:24.920 --> 00:02:27.920
+La integración continua dice que para menos dos de los micro
+
+50
+00:02:28.160 --> 00:02:31.590
+servicios se da contar con pruebas unitarias, eh?
+
+51
+00:02:31.590 --> 00:02:34.070
+Para requerimientos funcionales de la le de nuestra lección
+
+52
+00:02:34.390 --> 00:02:36.790
+y que eso tienen que estar con cobertura de percent.
+
+53
+00:02:38.140 --> 00:02:39.270
+Esto, eh?
+
+54
+00:02:39.930 --> 00:02:41.990
+Es un requerimiento funcional que ya estaba en el
+
+55
+00:02:41.990 --> 00:02:44.110
+obligatorio pasado que era con dos requerimientos
+
+56
+00:02:44.110 --> 00:02:45.990
+funcionales de la entrega anterior.
+
+57
+00:02:46.690 --> 00:02:48.110
+Yo acá tengo dos dudas.
+
+58
+00:02:48.410 --> 00:02:50.110
+La primera es, eh,
+
+59
+00:02:53.130 --> 00:02:54.190
+que tú en la clase,
+
+60
+00:02:54.190 --> 00:02:56.910
+cuando leíste la la letra de la obligatorio la la semana
+
+61
+00:02:57.170 --> 00:03:00.720
+pasada, eh, dijiste que era, eh,
+
+62
+00:03:00.950 --> 00:03:04.440
+pruebas militars para todo el micros servicio para dos
+
+63
+00:03:04.440 --> 00:03:05.920
+micros, servicios completos.
+
+64
+00:03:07.210 --> 00:03:09.390
+Es decir, no dos requerimientos funcionales.
+
+65
+00:03:10.170 --> 00:03:12.200
+Claro. Pero ahí me me puede,
+
+66
+00:03:12.260 --> 00:03:14.280
+si puede ser que ya haya hecho eso, no?
+
+67
+00:03:14.280 --> 00:03:16.680
+Si. C, te lo recuerdo, pero ahí me gana la letra.
+
+68
+00:03:16.820 --> 00:03:18.560
+Sea, habla de dos requerimientos funcionales.
+
+69
+00:03:18.740 --> 00:03:21.680
+Supone que ustedes van a atender
+
+70
+00:03:22.360 --> 00:03:24.200
+a separar esos mi cierto micro
+
+71
+00:03:24.440 --> 00:03:25.520
+servicios por funcionalidades.
+
+72
+00:03:25.570 --> 00:03:27.920
+Puede ser que acoplen unas funcionalidades en
+
+73
+00:03:27.920 --> 00:03:28.960
+varios micros servicios
+
+74
+00:03:29.690 --> 00:03:30.690
+Ya. La otra
+
+75
+00:03:30.690 --> 00:03:31.470
+persona es
+
+76
+00:03:31.940 --> 00:03:34.830
+Pero lo que les diría es vayan por agarren un micro,
+
+77
+00:03:35.450 --> 00:03:37.470
+una fun selección en funcionalidades.
+
+78
+00:03:38.310 --> 00:03:41.170
+Ah, tienen que seleccionar funcionalidades que estén
+
+79
+00:03:41.830 --> 00:03:43.490
+en dos micro servicios distintos
+
+80
+00:03:44.240 --> 00:03:47.640
+y darle pruebas unitarias al de esas funcionalidades.
+
+81
+00:03:48.700 --> 00:03:50.120
+No la idea. La idea es que,
+
+82
+00:03:50.280 --> 00:03:53.400
+o sea lo por de no viendo lo que hice la letra
+
+83
+00:03:55.420 --> 00:03:58.140
+concentremos en que se hagan prueba para los dos micro
+
+84
+00:03:58.460 --> 00:04:01.140
+servicios a dos micro servicios de dos
+
+85
+00:04:01.140 --> 00:04:02.180
+funcionalidades distintas.
+
+86
+00:04:02.180 --> 00:04:04.900
+No hagan en no hagan dos funcionalidades en
+
+87
+00:04:04.900 --> 00:04:05.940
+el mismo micro servicio.
+
+88
+00:04:06.370 --> 00:04:07.950
+Sí, sea lo ideal es que,
+
+89
+00:04:07.950 --> 00:04:09.870
+pues seleccionan una funcionalidad que están en micro
+
+90
+00:04:10.150 --> 00:04:11.990
+servicio tanto y te funcionaría b,
+
+91
+00:04:11.990 --> 00:04:14.350
+que están en el otro micro servicio y le hacen las
+
+92
+00:04:14.430 --> 00:04:16.030
+pruebas este un
+
+93
+00:04:16.990 --> 00:04:17.990
+Bien. Y la otra duda
+
+94
+00:04:17.990 --> 00:04:21.500
+que tengo es nosotros para el oratorio uno.
+
+95
+00:04:22.050 --> 00:04:24.780
+Hicimos pruebas unitarias para dos
+
+96
+00:04:24.780 --> 00:04:25.820
+requerimientos funcionales.
+
+97
+00:04:26.410 --> 00:04:28.390
+Es decir, ya tenemos dos requerimientos funcionales
+
+98
+00:04:28.400 --> 00:04:29.630
+testi dos para así decirlo.
+
+99
+00:04:30.070 --> 00:04:31.310
+Tenemos que elegir otros dos
+
+100
+00:04:33.250 --> 00:04:34.390
+Pueden ser los mismos.
+
+101
+00:04:34.390 --> 00:04:36.230
+Mientras que dos micro servicio y team
+
+102
+00:04:36.550 --> 00:04:37.750
+Perfecto to No.
+
+103
+00:04:37.770 --> 00:04:40.270
+Si no hay para tener o sea
+
+104
+00:04:40.270 --> 00:04:41.470
+Que puedo mantener los mismos dos,
+
+105
+00:04:41.530 --> 00:04:43.910
+las misma dos funcionalidades del del del
+
+106
+00:04:44.540 --> 00:04:47.510
+obligatorio anterior siempre como están separados,
+
+107
+00:04:47.820 --> 00:04:49.230
+pero testi al percent.
+
+108
+00:04:51.090 --> 00:04:54.510
+Exacto. Ta, exacto. Perfecto, gracias. Sí,
+
+109
+00:04:54.850 --> 00:04:55.850
+Sí. Ahí. Algo
+
+110
+00:04:55.850 --> 00:04:56.750
+que se importa. Claro.
+
+111
+00:04:56.860 --> 00:04:59.710
+Algo que que se busca es que ustedes sin don micro
+
+112
+00:05:00.030 --> 00:05:03.830
+servicios, hagan este las y corran solo los ustedes
+
+113
+00:05:04.850 --> 00:05:06.190
+que lo micro servicio.
+
+114
+00:05:06.460 --> 00:05:08.630
+Qué? Como que por cómo, oye, le digo
+
+115
+00:05:09.260 --> 00:05:12.030
+ayer no la semana pasada, la la no.
+
+116
+00:05:12.030 --> 00:05:14.550
+Perfecto. Perfecto. La Consigue. Gracias.
+
+117
+00:05:14.550 --> 00:05:16.550
+Perfecto. No, no te acuerdo. Quién bien.
+
+118
+00:05:17.920 --> 00:05:19.510
+Bueno, alguna duda más?
+
+119
+00:05:22.280 --> 00:05:25.030
+Y sí,
+
+120
+00:05:35.410 --> 00:05:36.310
+hay ahí en la clase.
+
+121
+00:05:40.340 --> 00:05:41.340
+Wow. Estaba,
+
+122
+00:05:43.070 --> 00:05:44.690
+Estaba así a la clase, no?
+
+123
+00:05:46.070 --> 00:05:47.690
+Sí, yo lo que voy a hacer es
+
+124
+00:05:49.160 --> 00:05:51.900
+ya la clase porque hay fantasma.
+
+125
+00:05:52.040 --> 00:05:56.940
+Por lo la está este.
+
+126
+00:05:58.500 --> 00:05:59.680
+Yo no veo nadie en la clase.
+
+127
+00:06:02.460 --> 00:06:04.570
+Bueno, igual cada tanto,
+
+128
+00:06:04.950 --> 00:06:06.890
+me voy a preguntar y avisar que está
+
+129
+00:06:06.950 --> 00:06:08.690
+mutado la clase por la duda.
+
+130
+00:06:09.120 --> 00:06:12.750
+Pero este que la cámara no se ve nadie,
+
+131
+00:06:13.250 --> 00:06:14.860
+por lo menos pa, donde está apuntando la cámara.
+
+132
+00:06:15.620 --> 00:06:17.740
+Entonces este debe ser que en el pasillo está pasando
+
+133
+00:06:17.850 --> 00:06:20.220
+persona y escuchar ruido.
+
+134
+00:06:21.340 --> 00:06:25.650
+Bien, este ten
+
+135
+00:06:27.340 --> 00:06:29.170
+tanto de muy ya.
+
+136
+00:06:29.620 --> 00:06:33.010
+Bueno, eh, nosotros habíamos había bo visto toda la
+
+137
+00:06:33.010 --> 00:06:34.090
+intro micro servicios.
+
+138
+00:06:34.090 --> 00:06:37.530
+Habíamos hablado del rol del arquitecto y
+
+139
+00:06:38.230 --> 00:06:41.610
+que deja pasa ser más un orador pasa hacer, digamos que
+
+140
+00:06:42.150 --> 00:06:43.690
+un líder eh?
+
+141
+00:06:43.840 --> 00:06:46.930
+Pero cada equipo pasa a ser más autónomo en cuanto a código
+
+142
+00:06:46.930 --> 00:06:50.680
+muy difícil que que un arquitecto pase a hacer
+
+143
+00:06:50.830 --> 00:06:54.480
+este muy difícil, no?
+
+144
+00:06:54.640 --> 00:06:58.530
+O sea, es, es como que el arquitecto ya pasa a tener con el
+
+145
+00:06:58.530 --> 00:07:02.450
+control de de lo que sería todo los micro servicios.
+
+146
+00:07:03.010 --> 00:07:06.330
+Entonces ya no puedes centrarse tanto lo que can a nivel de
+
+147
+00:07:06.330 --> 00:07:09.930
+código a nivel de de ciertas cosas de cada uno de los micro
+
+148
+00:07:10.210 --> 00:07:12.770
+servicios, sino lo que tiene que centrarse es en poder
+
+149
+00:07:13.000 --> 00:07:17.860
+definir todos estándares de definir las fronteras, eh?
+
+150
+00:07:17.970 --> 00:07:20.700
+Como dice ahí, no meterse en la implementación, eh,
+
+151
+00:07:20.950 --> 00:07:22.140
+prácticas y principios.
+
+152
+00:07:22.300 --> 00:07:25.510
+Nosotros habíamos hablado de estos que, bueno, por ejemplo,
+
+153
+00:07:25.510 --> 00:07:27.390
+hay empresas que dicen bueno, espectacular,
+
+154
+00:07:27.390 --> 00:07:30.430
+vamos a decir cierto, boiler pleo ciertas es estructuras.
+
+155
+00:07:30.950 --> 00:07:33.390
+Y vamos a definir que ustedes pueden implementar micro
+
+156
+00:07:33.630 --> 00:07:35.230
+servicios, pero dentro de cierto lenguaje.
+
+157
+00:07:36.220 --> 00:07:38.360
+Bien, bueno,
+
+158
+00:07:38.360 --> 00:07:41.300
+acá vi un poquito de documentación.
+
+159
+00:07:42.930 --> 00:07:47.820
+Este wait a lo que fuimos viendo y
+
+160
+00:07:47.840 --> 00:07:48.980
+los próximos temas.
+
+161
+00:07:49.480 --> 00:07:53.910
+Ah, este que vamos a ir
+
+162
+00:07:53.910 --> 00:07:55.690
+bien, vamos a arrancar.
+
+163
+00:07:55.850 --> 00:07:57.330
+Entonces con la pep de hoy,
+
+164
+00:07:57.390 --> 00:07:59.370
+que sería principios de micro servicio.
+
+165
+00:08:00.330 --> 00:08:04.950
+Bien, bueno, bueno,
+
+166
+00:08:05.210 --> 00:08:06.950
+repaso arquitectura ma analítica,
+
+167
+00:08:06.950 --> 00:08:10.910
+arquitectura orientada micro servicios de nuevo, ja, no,
+
+168
+00:08:12.030 --> 00:08:15.470
+nosotros encontramos que necesitamos llegar a este escalado.
+
+169
+00:08:15.930 --> 00:08:18.710
+Sí, necesitamos empezar a separar el servicios.
+
+170
+00:08:19.560 --> 00:08:22.200
+Y nos damos cuenta que no es una separada en servicios
+
+171
+00:08:23.170 --> 00:08:25.460
+como la arquitectura, sino que tenemos que
+
+172
+00:08:26.370 --> 00:08:29.740
+este estar al tanto de estas de estas separaciones realmente
+
+173
+00:08:29.740 --> 00:08:31.380
+está es algo mucho más complejo.
+
+174
+00:08:31.940 --> 00:08:34.220
+Tenemos la capacidad en cuanto equipo de desarrolladores.
+
+175
+00:08:34.500 --> 00:08:36.820
+Entonces podemos, podemos hacer estas cosas.
+
+176
+00:08:37.440 --> 00:08:40.230
+Bueno, micro servicio, pequeño servicios autónomos
+
+177
+00:08:41.350 --> 00:08:44.170
+que trabajan en conjuntos modelados alrededor de un dominio
+
+178
+00:08:44.170 --> 00:08:47.180
+de negocio y este
+
+179
+00:08:49.530 --> 00:08:51.380
+sean y escalan por separados.
+
+180
+00:08:51.600 --> 00:08:53.860
+Pueden usar diferentes tecnologías.
+
+181
+00:08:53.860 --> 00:08:56.720
+Se pueden tener unos pocos o ci de micro.
+
+182
+00:08:58.740 --> 00:09:00.680
+La comunicación de este micro servicio como era
+
+183
+00:09:06.600 --> 00:09:09.090
+más allá que hay una presentación muy linda que vamos a dar
+
+184
+00:09:09.310 --> 00:09:11.730
+la clase que viene que habla de todo lo que es
+
+185
+00:09:12.500 --> 00:09:13.670
+cosa de la comunicación.
+
+186
+00:09:13.740 --> 00:09:18.370
+Así este de las distintos tipos y flujos ya.
+
+187
+00:09:18.720 --> 00:09:22.470
+Pero la comunicación básica como es el servicio,
+
+188
+00:09:22.670 --> 00:09:24.150
+nosotros definimos dos mecanismos que lo
+
+189
+00:09:24.150 --> 00:09:25.230
+dicen la letra a lo obligatorio
+
+190
+00:09:31.690 --> 00:09:32.850
+Crónica sincrónica.
+
+191
+00:09:34.320 --> 00:09:36.500
+Sí, pero pero que utilizamos para esa comunicación.
+
+192
+00:09:36.500 --> 00:09:40.980
+Está bien, está bien, sincrónica y sincrónica. Esta, eh?
+
+193
+00:09:41.580 --> 00:09:44.820
+Correcto. Pero cómo hacemos una y cómo hacemos otra?
+
+194
+00:09:48.860 --> 00:09:52.020
+Y a sincrónica mediante escuela es mensajería y sincrónica
+
+195
+00:09:52.520 --> 00:09:56.100
+mas h TTP o este la otra, este no men sale nombre
+
+196
+00:09:57.550 --> 00:09:59.550
+Perfecto, tal cual este.
+
+197
+00:10:00.470 --> 00:10:02.590
+Entonces podemos a o sea, la sincrónica,
+
+198
+00:10:02.590 --> 00:10:05.430
+podemos hacer lo ht que pues a lo sea va a
+
+199
+00:10:05.430 --> 00:10:07.400
+buscar y la sincrónica.
+
+200
+00:10:07.480 --> 00:10:09.440
+Podemos co de mensaje. Perfecto.
+
+201
+00:10:11.040 --> 00:10:13.010
+Como dice Ignacio, para la arquitectura ideal,
+
+202
+00:10:13.270 --> 00:10:15.890
+hay que evaluar cuando es necesario usar y cuando la
+
+203
+00:10:15.890 --> 00:10:19.250
+complejidad de problema lo requiere, esto, esto,
+
+204
+00:10:19.250 --> 00:10:24.110
+yo lo vengo asiendo qui a veces ah, este
+
+205
+00:10:25.230 --> 00:10:26.410
+es sumamente importante.
+
+206
+00:10:26.410 --> 00:10:29.010
+No sea ustedes van a ver que van a construir algo que
+
+207
+00:10:30.380 --> 00:10:32.000
+con el monolito podía bastar
+
+208
+00:10:33.010 --> 00:10:34.890
+o que de repente sacando desacoplando
+
+209
+00:10:34.890 --> 00:10:36.250
+algunos servicios podía bastar.
+
+210
+00:10:36.470 --> 00:10:40.100
+Sí. Y algo que es sumamente importante y que nosotros vimos
+
+211
+00:10:40.100 --> 00:10:43.780
+la clase pasada es implican cambios organizacionales.
+
+212
+00:10:44.360 --> 00:10:46.300
+Sí, nosotros ya tenemos que trabajar con
+
+213
+00:10:46.500 --> 00:10:47.700
+distintos tipos de organización.
+
+214
+00:10:47.740 --> 00:10:50.580
+O sea, ya no podemos trabajar con la misma organización que
+
+215
+00:10:50.580 --> 00:10:53.580
+teníamos antes, sino que tenemos que separar los equipos.
+
+216
+00:10:53.580 --> 00:10:55.220
+Cada equipo tiene que ser autónomo.
+
+217
+00:10:55.220 --> 00:10:58.260
+Cada equipo tiene que ser autónoma, independiente
+
+218
+00:10:58.940 --> 00:11:00.460
+y tener los roles necesarios.
+
+219
+00:11:02.520 --> 00:11:06.300
+Bien, bueno, una arquitectura de micro servicio.
+
+220
+00:11:06.300 --> 00:11:08.980
+Hay que tomar muchas decisiones y se tiene muchas opciones.
+
+221
+00:11:08.980 --> 00:11:13.180
+Podemos tomar decisiones basadas en los principios ah,
+
+222
+00:11:13.240 --> 00:11:15.260
+que van a definir lo que son los micros,
+
+223
+00:11:18.200 --> 00:11:19.250
+qué principios son?
+
+224
+00:11:19.250 --> 00:11:22.090
+Bueno, reglas y normas nos ayudan a tomar decisiones
+
+225
+00:11:22.090 --> 00:11:23.130
+para alcanzar objetivos.
+
+226
+00:11:23.270 --> 00:11:25.330
+Los simplemente vamos mediante prácticas.
+
+227
+00:11:25.440 --> 00:11:28.610
+Ejemplo de los todo facto se pueden considerar principio,
+
+228
+00:11:29.150 --> 00:11:32.690
+ah, o sea, todo el factor en realidad se basa en una
+
+229
+00:11:32.690 --> 00:11:34.330
+arquitectura cloud, eh?
+
+230
+00:11:34.970 --> 00:11:39.650
+Y también podemos buscar que cada micro servicio debería
+
+231
+00:11:39.650 --> 00:11:43.160
+cumplir con todo el factor o podría, o sea,
+
+232
+00:11:43.340 --> 00:11:44.920
+si debería cumplir con todo el factor,
+
+233
+00:11:45.040 --> 00:11:46.240
+o sea que es una arquitectura cloud.
+
+234
+00:11:46.680 --> 00:11:49.920
+Y si ustedes cumplían todo el factor para cada cervix para
+
+235
+00:11:49.980 --> 00:11:52.760
+su monolito particular, deberían trasladarlo a Microsoft.
+
+236
+00:11:54.870 --> 00:11:58.840
+Bueno, acá podemos ver varios ta
+
+237
+00:11:59.940 --> 00:12:04.620
+sí de play independiente, ta ar, la automatización
+
+238
+00:12:05.440 --> 00:12:10.180
+ta ocultarlos este los detalles de la i lamentación.
+
+239
+00:12:10.270 --> 00:12:11.820
+Bueno, vamos sirviendo cada uno de
+
+240
+00:12:11.820 --> 00:12:15.330
+ellos más.
+
+241
+00:12:15.330 --> 00:12:18.850
+Pero entonces nosotros tenemos varios
+
+242
+00:12:19.430 --> 00:12:21.890
+ta, eh?
+
+243
+00:12:22.390 --> 00:12:25.690
+El modelado alrededor del dominio de negocio.
+
+244
+00:12:26.270 --> 00:12:28.090
+Sí, la cultura, automatización.
+
+245
+00:12:28.640 --> 00:12:30.850
+Esto es importante porque todo lo que nosotros pod
+
+246
+00:12:31.360 --> 00:12:35.700
+automatizar en los micro servicios es clave porque mismo se
+
+247
+00:12:35.700 --> 00:12:39.090
+puede trasladar a otros equipos que lo ha, eh,
+
+248
+00:12:40.370 --> 00:12:42.380
+este descentralizar las cosas.
+
+249
+00:12:43.240 --> 00:12:45.700
+Ah. O sea que cada equipo sea más independiente,
+
+250
+00:12:46.240 --> 00:12:50.180
+la alta observ es importante esto
+
+251
+00:12:50.920 --> 00:12:53.540
+porque ustedes, nosotros lo fuimos hablando,
+
+252
+00:12:53.540 --> 00:12:56.500
+pero ustedes ahora que viene el práctico de new red y vieron
+
+253
+00:12:56.560 --> 00:12:58.180
+la importancia de tener todo esto,
+
+254
+00:12:59.620 --> 00:13:02.320
+una de las cosas que habrán visto es que
+
+255
+00:13:04.000 --> 00:13:07.340
+los fallos ocurren y que nosotros tenemos micro servicios
+
+256
+00:13:07.340 --> 00:13:10.060
+que se comunican nosotros vamos a tener o sea,
+
+257
+00:13:10.240 --> 00:13:12.180
+ver con cloudwatch es muy complejo.
+
+258
+00:13:12.740 --> 00:13:15.640
+Ah, entonces es importante poder tener observ
+
+259
+00:13:17.610 --> 00:13:21.920
+y aislar lo que es el fall de alguna manera,
+
+260
+00:13:21.940 --> 00:13:22.960
+lo que nosotros,
+
+261
+00:13:22.960 --> 00:13:25.400
+lo que vamos a lograr con los micro servicios también es
+
+262
+00:13:25.400 --> 00:13:27.560
+que, bueno, antes nosotros se caía nuestro monolito y se
+
+263
+00:13:27.560 --> 00:13:28.680
+caía toda nuestra aplicación.
+
+264
+00:13:29.050 --> 00:13:31.120
+Ahora, la idea es que si se cae un servicio,
+
+265
+00:13:32.550 --> 00:13:35.050
+se cae por la razón que sea o no está funcionando
+
+266
+00:13:36.370 --> 00:13:38.620
+todo el resto de micro servicios debería funcionar.
+
+267
+00:13:38.660 --> 00:13:41.100
+Y por lo tal por lo cual nuestra aplicación debería
+
+268
+00:13:41.100 --> 00:13:43.340
+funcionar con lo con arresto de micro,
+
+269
+00:13:44.130 --> 00:13:46.980
+algo que me pasó el otro día com incluso estaba entrando
+
+270
+00:13:47.330 --> 00:13:49.820
+este, creo que faller antes ya
+
+271
+00:13:49.920 --> 00:13:51.300
+estaba entrando a mercado libre.
+
+272
+00:13:51.680 --> 00:13:53.180
+Sí. Pues fue lunes,
+
+273
+00:13:53.280 --> 00:13:56.020
+estaba el mercado libre y ellos también utilizan
+
+274
+00:13:56.820 --> 00:13:58.340
+a ws en la región
+
+275
+00:14:01.980 --> 00:14:03.360
+que estaba teniendo problemas.
+
+276
+00:14:04.160 --> 00:14:06.840
+Entonces, como ellos les utilizan en la ws en la región que
+
+277
+00:14:06.840 --> 00:14:08.920
+estaba iendo problemas, algo cómico, qué?
+
+278
+00:14:08.920 --> 00:14:12.920
+Qué vi? Es que cuando entraba a la aplicación,
+
+279
+00:14:13.070 --> 00:14:15.120
+cargaba la imagen, cargaba la información,
+
+280
+00:14:15.270 --> 00:14:17.480
+pero creo que no estaba cargando las reseñas,
+
+281
+00:14:17.980 --> 00:14:19.280
+no a ver si era la reseña.
+
+282
+00:14:19.300 --> 00:14:22.000
+No, no estaba cargando la sección de precio.
+
+283
+00:14:22.120 --> 00:14:26.010
+Y tampoco estaba cargando la sección que dice, eh,
+
+284
+00:14:26.510 --> 00:14:29.130
+cuando pueden realizar el envío, sea hacia el envío,
+
+285
+00:14:29.150 --> 00:14:30.210
+soy si el envío mañana,
+
+286
+00:14:30.440 --> 00:14:33.570
+pero si cargaba la descripción y si cargaba las preguntas,
+
+287
+00:14:34.990 --> 00:14:36.750
+este ah,
+
+288
+00:14:37.620 --> 00:14:40.510
+mercado libre está basado en micro servicios.
+
+289
+00:14:40.510 --> 00:14:41.990
+Trabajan con micro servicios.
+
+290
+00:14:43.330 --> 00:14:45.390
+Yo decir que yo lo considera mi no,
+
+291
+00:14:45.390 --> 00:14:49.170
+pero porque tengo entendido, al igual que pedidos ya.
+
+292
+00:14:50.010 --> 00:14:54.440
+Entonces, algo que es cómico es la web en sí,
+
+293
+00:14:54.650 --> 00:14:57.640
+está funcionando, o sea, consulta esos amigos, servicios,
+
+294
+00:14:57.900 --> 00:15:00.520
+los que devuelven información, siguen funcionando.
+
+295
+00:15:01.590 --> 00:15:05.290
+Los que no devuelven información pasan, pero no permita,
+
+296
+00:15:05.370 --> 00:15:08.530
+o sea, como está diseñado hasta la misma web para que
+
+297
+00:15:08.600 --> 00:15:10.850
+soporte determinado fallos en secciones,
+
+298
+00:15:11.930 --> 00:15:14.420
+pero después los otros, las otros aspectos,
+
+299
+00:15:14.420 --> 00:15:16.300
+los otras secciones que sí funcionan,
+
+300
+00:15:16.800 --> 00:15:18.060
+las toman sin problema.
+
+301
+00:15:18.630 --> 00:15:20.730
+Ah, entonces ahí es un poco donde
+
+302
+00:15:20.730 --> 00:15:22.050
+lo tenemos, lo podemos ver.
+
+303
+00:15:23.310 --> 00:15:25.870
+Y después nosotros hemos hablado el deploy independiente.
+
+304
+00:15:26.370 --> 00:15:28.550
+Ya hablamos nosotros de play independiente.
+
+305
+00:15:36.390 --> 00:15:38.730
+Por ejemplo, nosotros, una cosa aquí quimos es bueno,
+
+306
+00:15:39.150 --> 00:15:41.970
+no solo por que cada uno tenga sus su mecanismo deloy,
+
+307
+00:15:41.970 --> 00:15:43.850
+sino que pueda hacerlo en cualquier memento.
+
+308
+00:15:44.290 --> 00:15:47.200
+O sea, cada micro servicio debería poder desloar en
+
+309
+00:15:47.200 --> 00:15:48.800
+cualquier memento sin problemas.
+
+310
+00:15:49.690 --> 00:15:52.430
+Sí. Y afectar el funcionamiento del resto.
+
+311
+00:15:55.290 --> 00:15:57.780
+Ustedes, si nosotros cambiamos una prueba,
+
+312
+00:15:57.810 --> 00:16:00.060
+digamos una variable, nosotros deberíamos también
+
+313
+00:16:00.420 --> 00:16:02.620
+considerarlo, encontrar un código, manejar un personado
+
+314
+00:16:04.120 --> 00:16:07.040
+y avisar al resto de micro servicios en un caso ideal para
+
+315
+00:16:07.040 --> 00:16:10.120
+que se actual cuando correspondan o cuando ellos puedan, eh?
+
+316
+00:16:12.690 --> 00:16:15.700
+Y entonces eso es un poco lo que se busca.
+
+317
+00:16:16.320 --> 00:16:19.060
+Ah, yo mismo con una cola de mensajes.
+
+318
+00:16:21.180 --> 00:16:23.310
+Otra cosa que es importante es bueno,
+
+319
+00:16:24.610 --> 00:16:26.470
+si yo recibo información de más,
+
+320
+00:16:26.530 --> 00:16:28.990
+porque microservice empieza a pasar información de más
+
+321
+00:16:29.530 --> 00:16:33.210
+el micros servicio que ya sea si yo la recibo,
+
+322
+00:16:33.210 --> 00:16:36.450
+el micro servicio que recibe no debería haberse afectado por
+
+323
+00:16:36.450 --> 00:16:37.490
+información que venga.
+
+324
+00:16:37.490 --> 00:16:40.970
+Además, sí, o sea así viene una proper ti,
+
+325
+00:16:41.390 --> 00:16:42.970
+un j j o no, lo que sea que venga.
+
+326
+00:16:42.970 --> 00:16:45.330
+Además, no debería haberse afectado
+
+327
+00:16:46.430 --> 00:16:47.610
+si debería haberse afectado,
+
+328
+00:16:47.610 --> 00:16:48.890
+si cambia el nombre de una property,
+
+329
+00:16:49.130 --> 00:16:51.530
+entonces ahí creo que convendría el
+
+330
+00:16:51.530 --> 00:16:52.850
+micro servicio qui hizo ese cambio.
+
+331
+00:16:53.390 --> 00:16:57.460
+Genere un en point b y no fuerza a los otros a cambiar.
+
+332
+00:16:58.170 --> 00:17:01.830
+Sí, nosotros tenemos que hacer un deploy independiente.
+
+333
+00:17:01.950 --> 00:17:05.390
+Y también en la medida los equipos de trabajo tienen que
+
+334
+00:17:05.650 --> 00:17:10.400
+lograr trabajar sin afectar al resto del micro servicio.
+
+335
+00:17:11.140 --> 00:17:13.860
+Y en caso de las actualizaciones, pasen a su debido tiempo.
+
+336
+00:17:14.170 --> 00:17:17.970
+Bien, alguna duda de esto hasta acá?
+
+337
+00:17:20.210 --> 00:17:24.770
+Bien, bueno,
+
+338
+00:17:28.150 --> 00:17:31.560
+ustedes ahora ahora, o sea, hay varios tipos de
+
+339
+00:17:32.230 --> 00:17:34.810
+de modelados que usted pueden hacer en particular,
+
+340
+00:17:34.860 --> 00:17:36.930
+está el modelado alrededor del dominio de negocio.
+
+341
+00:17:38.030 --> 00:17:39.550
+Entonces nosotros teníamos,
+
+342
+00:17:40.310 --> 00:17:41.870
+tenemos lo que es nuestro negocio.
+
+343
+00:17:43.030 --> 00:17:44.350
+Entonces, qué es lo que empezamos a hacer?
+
+344
+00:17:44.350 --> 00:17:46.830
+Bueno, empezamos es muy parecido a lo que esos recursos
+
+345
+00:17:48.740 --> 00:17:51.620
+cada, o sea, cada micro servicio tendría que
+
+346
+00:17:52.270 --> 00:17:55.740
+estar modelado o una forma de hacerlo es modelar alrededor
+
+347
+00:17:55.740 --> 00:17:56.740
+del dominio del negocio.
+
+348
+00:17:57.900 --> 00:18:00.690
+Sí, por qué?
+
+349
+00:18:00.690 --> 00:18:03.410
+Porque recordemos que cada micro servicio es
+
+350
+00:18:03.410 --> 00:18:04.490
+un producto en sí.
+
+351
+00:18:06.320 --> 00:18:09.940
+Si nosotros cometemos el error que habíamos comentado la
+
+352
+00:18:09.940 --> 00:18:12.820
+clase pasada de modelar los micro servicios
+
+353
+00:18:13.420 --> 00:18:15.460
+como pequeños mon, o sea,
+
+354
+00:18:15.880 --> 00:18:17.740
+no hacemos una arquitectura de micro servicio
+
+355
+00:18:18.280 --> 00:18:21.580
+que todos los micro servicios dependen de otro o varios
+
+356
+00:18:21.730 --> 00:18:23.540
+productos de nuestra aplicación.
+
+357
+00:18:23.540 --> 00:18:26.260
+Cuando abro productos, por ejemplo, en su caso,
+
+358
+00:18:26.480 --> 00:18:29.340
+la parte de auditoría podría ser un producto en particular,
+
+359
+00:18:29.520 --> 00:18:30.620
+es algo independiente.
+
+360
+00:18:31.910 --> 00:18:33.090
+Sí, en cuanto a su obligatorio.
+
+361
+00:18:35.040 --> 00:18:37.040
+Entonces, si nosotros uno de los ponemos que veíamos es si
+
+362
+00:18:37.040 --> 00:18:38.640
+hacemos una arquitectura de micro servicios,
+
+363
+00:18:38.640 --> 00:18:40.520
+pero en realidad, cada vez que hacemos un cambio en uno,
+
+364
+00:18:40.680 --> 00:18:41.880
+tenemos que cambiar todo el resto.
+
+365
+00:18:42.080 --> 00:18:44.740
+Tenemos un monolito distribuido. Sí.
+
+366
+00:18:48.690 --> 00:18:51.300
+Algo que es importante es que el dominio de negocios tiene
+
+367
+00:18:51.300 --> 00:18:53.300
+que definir fronteras y zonas claras.
+
+368
+00:18:53.680 --> 00:18:56.420
+Ah, cada equipo se tiene que apropiar.
+
+369
+00:18:56.420 --> 00:18:58.020
+Dijimos que cada equipo tiene que ser individual.
+
+370
+00:18:58.680 --> 00:19:03.560
+Ah, este y bueno, la idea es, o sea, en en lo posible,
+
+371
+00:19:04.220 --> 00:19:08.000
+es seguir el Domaine drive Ben design o bueno,
+
+372
+00:19:08.060 --> 00:19:10.680
+pueden hacerlo o no, pero es como
+
+373
+00:19:11.280 --> 00:19:13.280
+también cada micro servicio,
+
+374
+00:19:14.550 --> 00:19:18.350
+el lazar lo que es el domingo bueno
+
+375
+00:19:19.570 --> 00:19:22.030
+de la cultura, automatización que ya habíamos charlado,
+
+376
+00:19:22.340 --> 00:19:25.030
+pero manejar una gran cantidad de micro servicios sin
+
+377
+00:19:25.030 --> 00:19:26.550
+herramienta, automatización y proced
+
+378
+00:19:26.550 --> 00:19:28.030
+automatizado no es viable.
+
+379
+00:19:28.740 --> 00:19:32.360
+Sí, se tiene que construir o definir plenamente un conjunto
+
+380
+00:19:32.380 --> 00:19:35.360
+de herramienta y tener que automatización tener cultura
+
+381
+00:19:35.430 --> 00:19:39.360
+automat ustedes de alguna manera lo están haciendo esto en
+
+382
+00:19:39.360 --> 00:19:41.600
+el obligatorio cuando ponen la back para que
+
+383
+00:19:41.600 --> 00:19:42.720
+corran los tress unitarios.
+
+384
+00:19:43.310 --> 00:19:46.800
+Algo que también es clave de automatizar es el deploy
+
+385
+00:19:48.080 --> 00:19:52.980
+y este el deploy continuo de las migraciones y este
+
+386
+00:19:54.870 --> 00:19:57.250
+que hay alguna especie descript de seguridad.
+
+387
+00:19:58.150 --> 00:19:59.430
+Y cuando habla a nivel de cultura,
+
+388
+00:19:59.430 --> 00:20:02.350
+automatización también es todo lo que se todos los procesos
+
+389
+00:20:02.350 --> 00:20:05.350
+que se puedan automatizar para el trabajo del micro servicio
+
+390
+00:20:05.350 --> 00:20:08.350
+y también que se puedan compartir a otros equipos es clave.
+
+391
+00:20:09.160 --> 00:20:13.020
+Ah, un poco que, bueno, son muchos servicios.
+
+392
+00:20:13.660 --> 00:20:16.500
+Entonces, todo lo que se puede hacer automático y no requier
+
+393
+00:20:16.500 --> 00:20:17.700
+la interacción humana es,
+
+394
+00:20:17.700 --> 00:20:21.080
+lo me es el mejor camino arreglar, eh?
+
+395
+00:20:23.230 --> 00:20:27.420
+Bueno, uso uso de cloud este
+
+396
+00:20:28.080 --> 00:20:30.620
+uso de co de doer de contenedores.
+
+397
+00:20:31.000 --> 00:20:33.180
+Hay varias cosas que te pueden hacer testing
+
+398
+00:20:33.380 --> 00:20:34.860
+automatizado si.
+
+399
+00:20:35.410 --> 00:20:38.340
+Continuos der y flujo de procesos y de
+
+400
+00:20:38.650 --> 00:20:39.980
+continuos integration.
+
+401
+00:20:40.680 --> 00:20:42.380
+Ah, este, supongo,
+
+402
+00:20:42.380 --> 00:20:45.340
+lo que veníamos charr no meterle herramientas que permitan
+
+403
+00:20:45.410 --> 00:20:49.090
+automatizar que que permita levantar cosas local.
+
+404
+00:20:49.790 --> 00:20:52.230
+Sí. Poder hacer procesos
+
+405
+00:20:52.770 --> 00:20:55.670
+de de la mejor forma posible y con la menor interacción
+
+406
+00:20:55.670 --> 00:20:58.630
+humana mos cuando habla de docker, eh?
+
+407
+00:20:58.690 --> 00:21:01.670
+Una de las cosas que es clave es bueno, el hecho de poder
+
+408
+00:21:02.620 --> 00:21:06.090
+hacer un deploy, sí, y este
+
+409
+00:21:07.050 --> 00:21:09.570
+y que ustedes puedan levantar cuando hacen un deploy y
+
+410
+00:21:09.570 --> 00:21:11.410
+ustedes puedan tener una versión de la
+
+411
+00:21:11.410 --> 00:21:12.450
+aplicación en producción.
+
+412
+00:21:12.640 --> 00:21:14.490
+Pero si usted quiere levantar eso local,
+
+413
+00:21:14.800 --> 00:21:16.570
+qué proceso también sea sencillo?
+
+414
+00:21:16.720 --> 00:21:20.530
+Como es el com el deploy lo ven en el link que ustedes con
+
+415
+00:21:20.600 --> 00:21:24.450
+doca usted alguna herramientas puedan levantar toda su
+
+416
+00:21:24.450 --> 00:21:26.850
+aplicación, puedan poder correr las cosas locales.
+
+417
+00:21:27.610 --> 00:21:29.850
+Entonces ahí la idea también, eso es automatizar,
+
+418
+00:21:29.850 --> 00:21:32.210
+no tener que estar levantando pronto es, va que bien pa.
+
+419
+00:21:32.470 --> 00:21:36.540
+Yo creo que poder automatizar todo lo lo que se puede bien.
+
+420
+00:21:36.780 --> 00:21:40.830
+Y también en lo ideal, poder correr local sin problem.
+
+421
+00:21:42.770 --> 00:21:46.320
+Bueno, esconder detalles de la implementación da, eh,
+
+422
+00:21:46.860 --> 00:21:49.950
+este evitar acoplar micro servicios.
+
+423
+00:21:51.050 --> 00:21:56.000
+Sí, este algo
+
+424
+00:21:56.000 --> 00:21:57.480
+que algo que es importante es,
+
+425
+00:21:58.780 --> 00:22:01.620
+nosotros no deberíamos o nosotros deberíamos hacer
+
+426
+00:22:01.620 --> 00:22:04.910
+variaciones, eh, este?
+
+427
+00:22:07.590 --> 00:22:10.030
+Nosotros no deberíamos confiarnos que un micro servicio
+
+428
+00:22:10.030 --> 00:22:11.070
+ya hace las validaciones.
+
+429
+00:22:11.490 --> 00:22:14.230
+Ah, es algo que comenta allá abajo, sino que
+
+430
+00:22:14.960 --> 00:22:19.630
+también deberíamos chequear la información que nos llevan.
+
+431
+00:22:19.650 --> 00:22:23.350
+Ah, no es que, bueno, porque recuerden que en un equipo real
+
+432
+00:22:23.580 --> 00:22:26.710
+como que más allá de un micro servicio u otro,
+
+433
+00:22:26.950 --> 00:22:28.990
+nosotros tenemos que ser independientes la mayor,
+
+434
+00:22:29.470 --> 00:22:30.710
+o sea lo lo más que sea posible.
+
+435
+00:22:31.070 --> 00:22:33.110
+Entonces nosotros no es que, ah, bueno, o sea,
+
+436
+00:22:33.210 --> 00:22:35.470
+si el registro un usuario ya nosotros validamos que el
+
+437
+00:22:35.470 --> 00:22:37.650
+usuario va, eh,
+
+438
+00:22:39.900 --> 00:22:42.100
+nosotros de nuevo, cada micro servicios autor.
+
+439
+00:22:42.260 --> 00:22:44.220
+Entonces no sabe la implementación puede ser con micro
+
+440
+00:22:44.500 --> 00:22:45.740
+servicio que estoy consumiendo.
+
+441
+00:22:46.390 --> 00:22:48.540
+Está desde mi micro servicio este
+
+442
+00:22:49.200 --> 00:22:51.550
+utilizando otro lenguaje de programación tint.
+
+443
+00:22:52.690 --> 00:22:54.840
+Bueno, algo es importante, ya lo hablamos.
+
+444
+00:22:54.840 --> 00:22:57.160
+No compartir hace datos entre los micro servicios.
+
+445
+00:22:57.160 --> 00:22:58.840
+Parece una solución fácil en un principio,
+
+446
+00:22:58.840 --> 00:23:00.440
+pero no permite cambie independiente.
+
+447
+00:23:01.370 --> 00:23:02.870
+Ta genera ob.
+
+448
+00:23:03.710 --> 00:23:06.630
+O sea, de una manera, es el hecho de compartir o hace datos
+
+449
+00:23:06.630 --> 00:23:10.450
+está bueno porque es más fácil porque pueden cumplir con
+
+450
+00:23:10.460 --> 00:23:14.580
+decir, pero después genera cumplimiento.
+
+451
+00:23:15.750 --> 00:23:18.190
+Entonces hace que un micro sea dependiente a otro.
+
+452
+00:23:18.390 --> 00:23:20.550
+Nosotros vamos a ver distinto patrones de comunicación
+
+453
+00:23:21.130 --> 00:23:25.850
+que no van a permitir, eh, como llama que no va,
+
+454
+00:23:27.480 --> 00:23:29.780
+no van a permitir este
+
+455
+00:23:31.590 --> 00:23:35.810
+que nosotros nos nos podamos comunicar y extraer la
+
+456
+00:23:35.810 --> 00:23:37.730
+información o comunicar la información que sean
+
+457
+00:23:37.790 --> 00:23:38.850
+esa en un segundo.
+
+458
+00:24:12.360 --> 00:24:12.650
+Bien,
+
+459
+00:24:27.440 --> 00:24:28.930
+bien, perfecto, disculpo.
+
+460
+00:24:29.460 --> 00:24:32.290
+Bueno, solo poner las sapis o relacionar eventos.
+
+461
+00:24:32.790 --> 00:24:35.010
+Sí, veremos patron de comunicación más adelante.
+
+462
+00:24:35.010 --> 00:24:38.430
+Eso lo que decía en esas sapis eventos,
+
+463
+00:24:38.430 --> 00:24:40.030
+no enviar datos en etcétera,
+
+464
+00:24:40.030 --> 00:24:42.390
+que no son necesarias y que no son parte de la
+
+465
+00:24:42.390 --> 00:24:46.290
+implementación, no las palabras no envian información de más
+
+466
+00:24:46.290 --> 00:24:49.970
+porque sí, sí, sin enviar lo que realmente
+
+467
+00:24:50.970 --> 00:24:52.090
+o o se va a necesitar.
+
+468
+00:24:53.130 --> 00:24:57.980
+Ah, y un poco de eso de con los detalle de implementación.
+
+469
+00:24:59.200 --> 00:25:03.410
+Ah. Y acá un poco lo que es esto no?
+
+470
+00:25:03.810 --> 00:25:08.090
+O sea, ustedes acá tienen este Bond
+
+471
+00:25:08.990 --> 00:25:12.730
+de este de mat follower tiene el link ahí,
+
+472
+00:25:12.960 --> 00:25:15.370
+pero un poco lo que pueden ver es pean toda la
+
+473
+00:25:15.370 --> 00:25:17.290
+implementación, pero en realidad hay como dos,
+
+474
+00:25:17.880 --> 00:25:20.010
+este hay dos conexiones in.
+
+475
+00:25:21.760 --> 00:25:24.000
+Entonces no se sabe que implementa cada uno,
+
+476
+00:25:24.000 --> 00:25:27.610
+solo contactan y hacer lo que tienen que ya hacer.
+
+477
+00:25:28.300 --> 00:25:32.880
+Bueno de centralización, eh, del poder este,
+
+478
+00:25:33.180 --> 00:25:34.920
+dar autonomía, autonomía,
+
+479
+00:25:34.920 --> 00:25:37.720
+darle a las personas la mayor libertad posible para realizar
+
+480
+00:25:37.720 --> 00:25:40.080
+su trabajo tal creo que es un poco eso.
+
+481
+00:25:40.440 --> 00:25:42.560
+Entonces, en otras palabras, que cada uno tenga su lenguaje
+
+482
+00:25:42.560 --> 00:25:44.240
+de programación, que cada producto,
+
+483
+00:25:44.470 --> 00:25:46.880
+cada los servicios es un producto para para
+
+484
+00:25:46.900 --> 00:25:48.000
+su aplicación en sí.
+
+485
+00:25:49.760 --> 00:25:54.720
+Este sea lo más independiente y es acoplado posible de está
+
+486
+00:25:55.530 --> 00:25:58.160
+bueno que pueda auto servirse.
+
+487
+00:25:59.350 --> 00:26:03.930
+Sí, que te que haya, o sea que el del producto,
+
+488
+00:26:03.950 --> 00:26:07.360
+tengan todos participen este
+
+489
+00:26:09.110 --> 00:26:11.190
+y no tener un medio de con de comunicación
+
+490
+00:26:11.270 --> 00:26:13.110
+centralizado único para todos.
+
+491
+00:26:13.530 --> 00:26:17.640
+Ah, este de alguna manera lo ahora
+
+492
+00:26:18.630 --> 00:26:20.610
+es un poco lo que nosotros nos
+
+493
+00:26:22.060 --> 00:26:26.700
+es un poco lo que nosotros nos basamos, eh, en soportar
+
+494
+00:26:27.320 --> 00:26:30.300
+es un poco lo que nosotros buscamos con los micro servicios.
+
+495
+00:26:30.560 --> 00:26:34.940
+Sí, es que cada uno sea independiente o sea,
+
+496
+00:26:35.970 --> 00:26:37.220
+así que bueno, un poco eso.
+
+497
+00:26:37.830 --> 00:26:40.780
+Bueno, intentaron no frustrar con herramienta ahí.
+
+498
+00:26:40.780 --> 00:26:43.440
+Un problema ticket para que recursos de mejor
+
+499
+00:26:43.440 --> 00:26:44.840
+tener un equipo cross.
+
+500
+00:26:45.420 --> 00:26:47.920
+En otras palabras, el equipo,
+
+501
+00:26:48.400 --> 00:26:49.800
+nosotros hablamos de los ma gaos.
+
+502
+00:26:49.870 --> 00:26:52.480
+Cada equipo tiene que poder tener tu
+
+503
+00:26:53.610 --> 00:26:57.070
+tus propios desarrolladores, tal de infraestructura
+
+504
+00:26:57.850 --> 00:27:00.710
+de que toque fronte que toquen pa, qué?
+
+505
+00:27:01.090 --> 00:27:02.670
+Que toque la base de datos.
+
+506
+00:27:02.730 --> 00:27:06.230
+Sí, estaba o sea que cada uno del equipo, eh,
+
+507
+00:27:06.230 --> 00:27:08.510
+lo ideal se llegue cada integrante del equipo pueda
+
+508
+00:27:09.060 --> 00:27:12.270
+este tocar o participar del código de lo que necesito.
+
+509
+00:27:13.930 --> 00:27:17.790
+Bueno, yolo independiente tiene que ser la norma de los
+
+510
+00:27:17.790 --> 00:27:21.100
+micro servicios que desloen independientemente.
+
+511
+00:27:21.800 --> 00:27:26.380
+Ah, este bueno tecnologías
+
+512
+00:27:26.610 --> 00:27:28.260
+como doer ah,
+
+513
+00:27:29.340 --> 00:27:32.280
+que hay alguna manera permite un servicio por host
+
+514
+00:27:35.620 --> 00:27:38.590
+este, o sea, lo que voy es tiene que ser un delo
+
+515
+00:27:38.750 --> 00:27:41.630
+independiente y bueno doer lo permite.
+
+516
+00:27:41.630 --> 00:27:44.230
+Pero una cosa es no ese dos con diferentes
+
+517
+00:27:44.430 --> 00:27:45.870
+servicios, la misma máquina.
+
+518
+00:27:46.680 --> 00:27:49.820
+Ah, o sea, tiene que realmente ser algo independiente que no
+
+519
+00:27:49.840 --> 00:27:52.830
+formen parte cada uno de sí, bien,
+
+520
+00:27:54.630 --> 00:27:57.080
+este y no puede ser que si se caiga uno se caiga el
+
+521
+00:27:57.080 --> 00:27:58.850
+otro poco.
+
+522
+00:27:59.030 --> 00:28:02.150
+Eso está bueno.
+
+523
+00:28:02.660 --> 00:28:05.710
+Acá tienen consum driver contra el consumidor,
+
+524
+00:28:05.710 --> 00:28:08.790
+define el contrato de comunicación y tiene que escribirte
+
+525
+00:28:09.010 --> 00:28:13.430
+que puedan este que Prue en este contrato que se corre
+
+526
+00:28:13.430 --> 00:28:14.670
+automáticamente tiene con
+
+527
+00:28:15.310 --> 00:28:16.870
+configurar que el equipo que hace el
+
+528
+00:28:17.030 --> 00:28:18.270
+consumer haga buenos test.
+
+529
+00:28:18.850 --> 00:28:21.510
+Ah, esto particularmente
+
+530
+00:28:22.230 --> 00:28:25.910
+relacionado a es un contrato del consumidor del de
+
+531
+00:28:27.580 --> 00:28:31.350
+bueno, eh, en point coexistente.
+
+532
+00:28:31.350 --> 00:28:32.950
+Bueno, nosotros hablamos del version.
+
+533
+00:28:33.530 --> 00:28:35.110
+Sí, vean que acá
+
+534
+00:28:35.730 --> 00:28:39.760
+varios micro servicios pueden ofrecer la misma versión, eh?
+
+535
+00:28:39.760 --> 00:28:41.720
+Pueden ofrecer dos versiones y el que los
+
+536
+00:28:41.750 --> 00:28:43.560
+consume los tiene ellos.
+
+537
+00:28:45.020 --> 00:28:48.250
+Bueno, documentación de post.
+
+538
+00:28:49.270 --> 00:28:52.410
+Ah, este service y service
+
+539
+00:28:53.500 --> 00:28:57.050
+cómo obtener estos servicios está en caso de que el micro
+
+540
+00:28:57.370 --> 00:29:01.130
+servicio, por ejemplo, tenga que no se van a tener que
+
+541
+00:29:01.130 --> 00:29:03.450
+preocupar porque lo balancer va
+
+542
+00:29:04.930 --> 00:29:07.650
+va a ex poner un solo endpoint pero
+
+543
+00:29:08.040 --> 00:29:10.850
+este como llama.
+
+544
+00:29:13.140 --> 00:29:14.380
+Entonces, en encima se tienen que
+
+545
+00:29:14.380 --> 00:29:15.780
+preocupar por qué a servicio?
+
+546
+00:29:16.080 --> 00:29:17.420
+Por qué a servicio, eh?
+
+547
+00:29:17.730 --> 00:29:20.660
+Consultan porque si el micro servicio escala, eh,
+
+548
+00:29:20.660 --> 00:29:24.400
+horizontalmente no, y tienen tienen varios puertos,
+
+549
+00:29:24.540 --> 00:29:26.320
+eso lo va a solucionar lo du bala hacer.
+
+550
+00:29:26.710 --> 00:29:29.680
+Pero ustedes puede ser que tenga algún mecanismo en algún
+
+551
+00:29:29.680 --> 00:29:31.080
+memento que no se soluciona así.
+
+552
+00:29:31.520 --> 00:29:33.320
+Y fue bueno, documentación de la API
+
+553
+00:29:33.840 --> 00:29:36.630
+obviamente que nosotros vamos a consumir un API y vamos a
+
+554
+00:29:37.020 --> 00:29:38.470
+este utilizarla.
+
+555
+00:29:40.300 --> 00:29:43.730
+Tiene que estar disponible para que el otro micro servicio
+
+556
+00:29:43.800 --> 00:29:45.690
+sepa está la documentación de la pi b.
+
+557
+00:29:45.690 --> 00:29:47.850
+Uno está en la documentación de la pbt.
+
+558
+00:29:49.560 --> 00:29:52.430
+Bueno, aislar fashion una falla en un micro servicio
+
+559
+00:29:52.430 --> 00:29:53.470
+no afecte a todo el sistema.
+
+560
+00:29:53.470 --> 00:29:55.430
+Bueno, esto es lo que no veíamos hablando de mercado libre,
+
+561
+00:29:56.340 --> 00:29:58.990
+construir barreras en conexiones que vayan otro otro
+
+562
+00:29:59.190 --> 00:30:02.060
+servicio Taos testi ta,
+
+563
+00:30:02.650 --> 00:30:05.180
+qué pasarían si se rompa algún micro servicio o casa
+
+564
+00:30:06.540 --> 00:30:08.340
+o algún micro servicio o recurso?
+
+565
+00:30:08.400 --> 00:30:12.460
+Era top el ejemplo de particular este de mercury es
+
+566
+00:30:13.320 --> 00:30:15.550
+de mercury de Netflix.
+
+567
+00:30:16.450 --> 00:30:19.830
+Es en el caso de que mercury lo que hace cada tanto
+
+568
+00:30:20.370 --> 00:30:23.310
+intencionalmente y hasta en producción baja.
+
+569
+00:30:23.580 --> 00:30:25.830
+Ciertas instancias de los micro servicios
+
+570
+00:30:26.370 --> 00:30:27.910
+le baja rendimiento, lo que sea,
+
+571
+00:30:27.980 --> 00:30:31.430
+para poder probar cómo se empiezan a comportar esos micros.
+
+572
+00:30:31.690 --> 00:30:33.070
+Lo el resto de micro servicios.
+
+573
+00:30:33.070 --> 00:30:37.270
+Cuando uno empieza a verse más lento o empieza allá, sí,
+
+574
+00:30:38.750 --> 00:30:42.140
+de alguna manera lo que hacen es probar, por ejemplo,
+
+575
+00:30:42.380 --> 00:30:43.980
+empiezan a bajar instancias,
+
+576
+00:30:44.060 --> 00:30:46.500
+empiezan a bajar un micro servicio en particular
+
+577
+00:30:47.300 --> 00:30:49.860
+y empiezan a ver cómo se comportan el resto de micro
+
+578
+00:30:50.100 --> 00:30:52.420
+servicios para comprobar que que se esté
+
+579
+00:30:52.420 --> 00:30:53.860
+manejando quién es sus casos?
+
+580
+00:30:54.500 --> 00:30:56.800
+Sí. Entonces eso es algo que ustedes pueden
+
+581
+00:30:56.820 --> 00:30:57.840
+que tienen que tener en cuenta.
+
+582
+00:30:57.940 --> 00:30:59.800
+Si se caigo un micro servicio, como yo le decía,
+
+583
+00:30:59.800 --> 00:31:02.520
+el mercado libre, la web debería poder seguir andando.
+
+584
+00:31:02.520 --> 00:31:05.000
+Y en ese memento no se muestra una parte en particular
+
+585
+00:31:05.800 --> 00:31:10.060
+después de ser patrón, sea breaker que ustedes este bien,
+
+586
+00:31:10.130 --> 00:31:14.420
+conocen que de alguna manera, lo que lo que busca sí
+
+587
+00:31:15.390 --> 00:31:20.030
+es nosotros hagamos un contacto y que de alguna manera,
+
+588
+00:31:21.110 --> 00:31:25.050
+si ese contacto falla con la API con la cola de mensajes
+
+589
+00:31:25.210 --> 00:31:29.900
+nosotros por demos un tiempo donde no realicemos consultas
+
+590
+00:31:29.900 --> 00:31:31.860
+porque demos como un tiempo a que se recupere
+
+591
+00:31:33.130 --> 00:31:36.270
+ta cortemos el circuito y ese circuito dentro de un x
+
+592
+00:31:36.270 --> 00:31:39.030
+tiempo, lo volvemos a reactivar y volvemos a consultar para
+
+593
+00:31:39.030 --> 00:31:41.310
+que eso para no seguir intentando
+
+594
+00:31:41.850 --> 00:31:45.230
+ese time útil para no seguir forzando al otro servicio que
+
+595
+00:31:45.230 --> 00:31:47.790
+es que está atrancado o que no está respondiendo por algo.
+
+596
+00:31:47.930 --> 00:31:50.830
+Eso también puedes servir para la conexión a la base da
+
+597
+00:31:51.370 --> 00:31:53.520
+donde si nosotros estamos siguiendo un problema, bueno,
+
+598
+00:31:53.520 --> 00:31:56.080
+está si intentamos varias veces hayamos
+
+599
+00:31:56.720 --> 00:31:59.800
+bloqueamos esa comunicación por de repente tres minutos.
+
+600
+00:32:00.360 --> 00:32:02.320
+Entonces, entonces, lo que hacemos también ahí es darle un
+
+601
+00:32:02.320 --> 00:32:05.360
+tiempo a que se recupere y no seguimos intentando sumar
+
+602
+00:32:05.490 --> 00:32:07.080
+reues y consultas y consultas.
+
+603
+00:32:07.480 --> 00:32:12.320
+Y además evitamos que toda la respuesta del cliente o que
+
+604
+00:32:12.380 --> 00:32:14.440
+que tengamos nosotros tengan que pasar por ese proceso
+
+605
+00:32:14.440 --> 00:32:17.090
+cuando sabemos que el servicio está caído ahí.
+
+606
+00:32:17.600 --> 00:32:19.760
+Sí, bueno,
+
+607
+00:32:20.030 --> 00:32:22.880
+acá hable un poquito de circuit breaker está próximo.
+
+608
+00:32:22.890 --> 00:32:24.800
+Luego una cantidad de fallas retorna el internet,
+
+609
+00:32:24.800 --> 00:32:26.080
+meter error durante un tiempo
+
+610
+00:32:26.690 --> 00:32:28.720
+está luego que se vence ese periodo.
+
+611
+00:32:28.720 --> 00:32:30.200
+Paso un estado medio abierto.
+
+612
+00:32:31.110 --> 00:32:35.120
+Ah, es un poco lo que lo que estábamos comentando ahora.
+
+613
+00:32:36.130 --> 00:32:39.060
+Y bueno,
+
+614
+00:32:39.250 --> 00:32:41.650
+acá tienen el diagrama de flujo de cómo se comporta
+
+615
+00:32:41.650 --> 00:32:42.780
+este breaker.
+
+616
+00:32:43.710 --> 00:32:45.290
+Ah, y esto es algo que ustedes
+
+617
+00:32:47.060 --> 00:32:49.640
+la mayoría va a utilizar todos los micro servicios del mismo
+
+618
+00:32:49.840 --> 00:32:50.880
+lenguaje y va a hacer algo,
+
+619
+00:32:51.730 --> 00:32:53.780
+pero le recomendaba algo bastante sencillo en
+
+620
+00:32:53.780 --> 00:32:54.980
+otro lenguaje programa.
+
+621
+00:32:55.840 --> 00:32:58.940
+Ah, eh, ahora
+
+622
+00:33:00.700 --> 00:33:02.440
+que eso es la más, eso lo van a encarar.
+
+623
+00:33:03.220 --> 00:33:04.900
+Entonces, el lenguaje probación que ustedes
+
+624
+00:33:05.520 --> 00:33:07.820
+elijan para o que probablemente se
+
+625
+00:33:08.330 --> 00:33:09.900
+para todos los micro servicios,
+
+626
+00:33:10.210 --> 00:33:12.940
+ustedes podrían crear una especie de boiler plate donde
+
+627
+00:33:13.620 --> 00:33:17.180
+podrían hacer que la conexión a la API a toda entre micro
+
+628
+00:33:17.500 --> 00:33:20.420
+servicios y también la escuela de mensajes o acceso a base
+
+629
+00:33:20.510 --> 00:33:23.380
+datos, pero particularmente el cclo ahí que la que está
+
+630
+00:33:23.380 --> 00:33:26.740
+orientado a las comunicaciones entre micro servicios con el
+
+631
+00:33:26.740 --> 00:33:30.720
+mensaje ottp tengan ya pre
+
+632
+00:33:30.720 --> 00:33:32.360
+implementado este c breaker.
+
+633
+00:33:32.520 --> 00:33:33.760
+Entonces sea copiar y pegar.
+
+634
+00:33:34.440 --> 00:33:37.080
+Entonces de alguna manera usted, su servicio ya
+
+635
+00:33:37.670 --> 00:33:41.710
+cada uno tengo un circuit break y automáticamente
+
+636
+00:33:43.130 --> 00:33:46.430
+no tengan que volver a a desarrollarlo o implementarlo,
+
+637
+00:33:46.780 --> 00:33:48.750
+sino que cada vez que ustedes van a hacer una respuesta,
+
+638
+00:33:49.170 --> 00:33:52.830
+tp o ustedes como utilizan este circuit breaker, eh,
+
+639
+00:33:54.750 --> 00:33:58.710
+este de alguna manera, ya saben,
+
+640
+00:33:58.830 --> 00:34:02.770
+y se van a a dar cuenta que este, o sea,
+
+641
+00:34:02.790 --> 00:34:05.330
+ya preven este tipo de problemas, entonces
+
+642
+00:34:06.030 --> 00:34:07.170
+ya lo tienen implementado.
+
+643
+00:34:07.210 --> 00:34:10.490
+Y cuando se van a comunicar, vaya, perfecto.
+
+644
+00:34:11.340 --> 00:34:13.240
+Las próximas repuestas por un terminado tiempo
+
+645
+00:34:14.380 --> 00:34:17.760
+te vuelven error y no hacen la consulta para evitarlo.
+
+646
+00:34:18.490 --> 00:34:23.190
+Y después lo que hacen es este un hace paso, tiempo
+
+647
+00:34:23.990 --> 00:34:28.220
+y amo, sí, pueden fij si viene patrón,
+
+648
+00:34:28.240 --> 00:34:31.620
+si le preguntan a hacer gpt o o pueden buscarla ahí en
+
+649
+00:34:31.620 --> 00:34:34.100
+Google, lo que quieran, pueden buscar implementaciones y
+
+650
+00:34:34.210 --> 00:34:36.060
+breaker para el lenguaje que ustedes están
+
+651
+00:34:36.260 --> 00:34:37.820
+haciendo y particular.
+
+652
+00:34:37.920 --> 00:34:39.580
+Lo pueden hacer con axios o lo que sea,
+
+653
+00:34:41.700 --> 00:34:44.100
+y pueden guardarlo a nivel de servicio.
+
+654
+00:34:44.120 --> 00:34:47.600
+Pueden almacenar este normalmente.
+
+655
+00:34:47.600 --> 00:34:49.280
+La idea es que el servidor no tenga estado,
+
+656
+00:34:49.310 --> 00:34:50.320
+pero esto es un estado.
+
+657
+00:34:50.320 --> 00:34:52.920
+Puede ser un estado interno de servicio, eh,
+
+658
+00:34:53.230 --> 00:34:55.560
+para esto sería como una excepción normal,
+
+659
+00:34:57.070 --> 00:34:58.990
+mientras que la comunicación no sea mucha,
+
+660
+00:34:58.990 --> 00:35:01.110
+sino capaz que tienen que guardar un base de datos.
+
+661
+00:35:02.850 --> 00:35:05.840
+Bueno, altamente observables de lo que comentábamos,
+
+662
+00:35:06.120 --> 00:35:08.440
+tenemos de escena de servicios cada uno con sus propios
+
+663
+00:35:08.440 --> 00:35:10.720
+locks y estadística cp network, lo que sea,
+
+664
+00:35:11.240 --> 00:35:13.760
+nosotros tenemos que tener algún panel centralizado donde
+
+665
+00:35:13.960 --> 00:35:17.540
+nosotros pod, este tener análisis de todas las cosas.
+
+666
+00:35:18.720 --> 00:35:23.180
+Bueno, eh, agregación de datos iana Park,
+
+667
+00:35:23.890 --> 00:35:26.940
+este estadística y prometo new,
+
+668
+00:35:27.920 --> 00:35:31.540
+si ustedes pueden manejar esta estas herramientas como bien,
+
+669
+00:35:31.540 --> 00:35:35.020
+las venimos comentando anteriormente para poder centralizar,
+
+670
+00:35:35.270 --> 00:35:37.360
+tener todo lo de los micro servicios.
+
+671
+00:35:37.390 --> 00:35:41.280
+Acá hay un una imagen de, eh,
+
+672
+00:35:41.380 --> 00:35:44.440
+id relacionada que es de alguna manera de nosotros lo
+
+673
+00:35:44.440 --> 00:35:49.070
+habíamos visto este donde nosotros con las con lo el i id de
+
+674
+00:35:49.070 --> 00:35:51.190
+lo que son las ricos entre micro servicios,
+
+675
+00:35:51.220 --> 00:35:54.790
+podemos llegar a armar todo lo que es el flujo decus,
+
+676
+00:35:54.790 --> 00:35:57.350
+inclusive los fallos que nosotros fuimos a encontrar.
+
+677
+00:35:57.940 --> 00:35:59.630
+Sí, bien,
+
+678
+00:36:01.980 --> 00:36:04.600
+alguna duda hasta acá esto que venimos viendo de micro
+
+679
+00:36:04.880 --> 00:36:05.160
+servicio,
+
+680
+00:36:10.690 --> 00:36:12.350
+alguna consulta de estos principios,
+
+681
+00:36:12.380 --> 00:36:13.510
+algo que les genere ruido,
+
+682
+00:36:14.440 --> 00:36:16.570
+algo que ustedes pien que para su
+
+683
+00:36:16.570 --> 00:36:17.850
+obligatorio puede ser complicado.
+
+684
+00:36:17.850 --> 00:36:20.810
+Implementarlo, que no sé sea, hay tu línea.
+
+685
+00:36:31.110 --> 00:36:32.320
+Bien, perfecto.
+
+686
+00:36:36.560 --> 00:36:41.300
+Bueno, ahora vamos con, vamos a continuar
+
+687
+00:36:42.350 --> 00:36:46.440
+este hasta lo que se recreo por la parte de descomposición
+
+688
+00:36:46.660 --> 00:36:48.400
+de componiendo los micro servicios.
+
+689
+00:36:49.520 --> 00:36:53.290
+Se escucha bien, vamos. Dejen la CE.
+
+690
+00:36:53.290 --> 00:36:56.550
+No hay nadie, pero remoto a menos es un ti.
+
+691
+00:36:56.970 --> 00:36:58.310
+Sí, sí, se escucha bien. Sí,
+
+692
+00:36:58.700 --> 00:37:01.070
+Escucha bien, perfecto, perfecto, perfecto.
+
+693
+00:37:01.140 --> 00:37:06.020
+Gracias. Este bueno, bien, creo que este es una de las i
+
+694
+00:37:06.600 --> 00:37:09.820
+voy a tener, y mucho de ustedes se adelantaron ahí esto,
+
+695
+00:37:09.820 --> 00:37:12.660
+buscar una información consultaron con personas que ya
+
+696
+00:37:12.660 --> 00:37:14.340
+habían curso a la materia y dijeron bueno,
+
+697
+00:37:15.100 --> 00:37:18.570
+nosotros vamos a separar todos los módulos o todos,
+
+698
+00:37:20.560 --> 00:37:22.830
+todos los servicios ya antemano. Sin ju.
+
+699
+00:37:23.800 --> 00:37:26.540
+No, profe te quería hacer una pregunta que no sé si ya te
+
+700
+00:37:26.540 --> 00:37:31.340
+preguntaron y no escuché, pero el tema del gateway,
+
+701
+00:37:32.930 --> 00:37:34.790
+eh, se puede hacer, eh?
+
+702
+00:37:34.930 --> 00:37:38.390
+Elegir ese como para hacer en otro lenguaje o no? Vale,
+
+703
+00:37:40.130 --> 00:37:41.130
+Eh? Sí, claro. Cada micro
+
+704
+00:37:41.130 --> 00:37:42.190
+servicio ustedes,
+
+705
+00:37:42.190 --> 00:37:43.430
+nuestro servicio que ustedes quieran.
+
+706
+00:37:43.430 --> 00:37:45.270
+Sí, lo dos, o sea,
+
+707
+00:37:46.340 --> 00:37:48.660
+nosotros vamos a ver un poquito lo que es el patrón en Pat
+
+708
+00:37:48.800 --> 00:37:51.570
+de comunicación, lo que es el el pique fue y
+
+709
+00:37:52.210 --> 00:37:55.330
+y cuando nosotros veamos eso, vamos a ver este.
+
+710
+00:37:56.590 --> 00:37:59.420
+Bueno, las cosas que vamos a a a chequear es como,
+
+711
+00:37:59.420 --> 00:38:01.460
+como hacer lo que, cuál es la funcionalidad?
+
+712
+00:38:01.460 --> 00:38:03.420
+Cuál es todos los tipos de tipo de funcionalidad?
+
+713
+00:38:03.970 --> 00:38:05.260
+Pero sí lo pueden hacer.
+
+714
+00:38:05.640 --> 00:38:09.340
+Ah, o sea, es este todos los micro servicios que desloen
+
+715
+00:38:09.340 --> 00:38:12.100
+aunque sean servicios que el único que sean sean pasa mano
+
+716
+00:38:12.430 --> 00:38:14.100
+quien dice eh,
+
+717
+00:38:14.360 --> 00:38:16.660
+pueden cuentan como micro servicios y
+
+718
+00:38:16.660 --> 00:38:18.940
+pueden hacerlo de trans forma. Bien, ta
+
+719
+00:38:19.450 --> 00:38:20.820
+Dale bbar muchas gracias.
+
+720
+00:38:21.350 --> 00:38:24.620
+Igual en en a do, ese hay un servicio que es sa PGA.
+
+721
+00:38:24.620 --> 00:38:26.900
+Pues, o sea que también me podrían
+
+722
+00:38:26.900 --> 00:38:27.940
+usar si quieren ahorrar tiempo.
+
+723
+00:38:30.200 --> 00:38:33.180
+Sí. Si quieren agregarle funcionalidad personalizada y se
+
+724
+00:38:33.180 --> 00:38:35.320
+complicó un poquito más, pero si sí, está bien,
+
+725
+00:38:36.220 --> 00:38:37.980
+o sea, no sea está o sea,
+
+726
+00:38:38.000 --> 00:38:41.420
+Yo preguntaba porque el semestre pasado no, o sea,
+
+727
+00:38:41.660 --> 00:38:44.180
+nosotros hicimos como un un gateway ahí,
+
+728
+00:38:44.180 --> 00:38:45.700
+ta que no era un servicio separado, pero
+
+729
+00:38:45.960 --> 00:38:49.860
+as tenía esa funcionalidad y como que quedó recorto o sea
+
+730
+00:38:49.860 --> 00:38:51.100
+capaz cuando veamos, no sé,
+
+731
+00:38:51.260 --> 00:38:53.420
+vemos que se le pueden agregar más cosas personalizadas y
+
+732
+00:38:53.460 --> 00:38:57.220
+eso, pero ta por eso preguntas y como que valía como,
+
+733
+00:38:57.450 --> 00:38:59.660
+como para hacer en otro lenguaje o no?
+
+734
+00:39:01.370 --> 00:39:04.630
+Sí, sí, sí. O sea, es válido, pueden usar ese, o sea,
+
+735
+00:39:06.380 --> 00:39:07.660
+a w pro uno,
+
+736
+00:39:07.810 --> 00:39:11.380
+ustedes pueden pueden querer a hacer algo más personalizado,
+
+737
+00:39:11.530 --> 00:39:13.780
+algo que haga autenticación propia por usted.
+
+738
+00:39:14.240 --> 00:39:19.230
+El ws está bueno utilizarlo con las landa, por ejemplo,
+
+739
+00:39:20.190 --> 00:39:24.560
+con las landa bastante útil hacerse pero
+
+740
+00:39:26.750 --> 00:39:31.320
+pero si no ustedes pueden encarar pueden utilizarlo con con
+
+741
+00:39:31.320 --> 00:39:34.310
+otros, o sea, tú ustedes quieren hacer a como más personas
+
+742
+00:39:34.310 --> 00:39:37.590
+solo lo pueden hacer igual en cuanto a la complejidad del
+
+743
+00:39:37.830 --> 00:39:40.590
+servicio que ustedes trabajen con
+
+744
+00:39:41.370 --> 00:39:42.790
+con otro lenguaje de grabación.
+
+745
+00:39:42.790 --> 00:39:45.870
+Yo lo que les haya recomendado es también el servicio de
+
+746
+00:39:45.870 --> 00:39:49.950
+mail, la que agarra que tengan un servidor que agarre y y en
+
+747
+00:39:49.950 --> 00:39:54.740
+empieza los mail este con con, digamos,
+
+748
+00:39:54.770 --> 00:39:58.420
+confiando en lo que en lo que llega lo más sencillo posible.
+
+749
+00:39:59.100 --> 00:40:01.260
+Entonces, una una una recomendación,
+
+750
+00:40:01.520 --> 00:40:02.860
+pueden hacer lo que ustedes quiera.
+
+751
+00:40:03.540 --> 00:40:05.620
+Entonces ahí es como que, bueno está eso es algo que
+
+752
+00:40:06.450 --> 00:40:09.700
+es fácil desacopla este
+
+753
+00:40:10.940 --> 00:40:13.580
+y nada mientras asumen que la comunicación mientras que se
+
+754
+00:40:13.610 --> 00:40:15.420
+asegura el servidor de mail,
+
+755
+00:40:15.420 --> 00:40:17.860
+no va ir a chequear que toda la información sea válida,
+
+756
+00:40:17.860 --> 00:40:20.140
+sino que asumen que la comunicación es segura.
+
+757
+00:40:20.380 --> 00:40:23.420
+Y el servicio de mail se encarga de de saber a quién
+
+758
+00:40:23.420 --> 00:40:24.580
+enviarlo y envía las cosas.
+
+759
+00:40:25.330 --> 00:40:27.470
+No sé, es uno que a mí se me ocurre capaz que ustedes se
+
+760
+00:40:27.470 --> 00:40:30.430
+encuentran, por ejemplo, que la autoría es la auditoría.
+
+761
+00:40:30.700 --> 00:40:35.080
+Este es más sencillo, es acopla este, eh?
+
+762
+00:40:35.120 --> 00:40:37.080
+O sea, tiene funcionalidades más sencillas para poner en
+
+763
+00:40:37.080 --> 00:40:38.240
+otro lenguaje de probación.
+
+764
+00:40:39.650 --> 00:40:42.800
+Papá, que le el la Piquet duy es bastante delicado o va a
+
+765
+00:40:42.800 --> 00:40:45.520
+poner otro lenguaje de probación que ustedes quieren
+
+766
+00:40:45.520 --> 00:40:48.560
+agregarle cierta funcionaría como puede ser autenticación o
+
+767
+00:40:49.100 --> 00:40:50.370
+bueno o alguna otra co.
+
+768
+00:40:51.280 --> 00:40:52.370
+Pero eso lo ven a ustedes.
+
+769
+00:40:52.790 --> 00:40:55.730
+Ah, este que les queda más práctica, eh?
+
+770
+00:40:56.610 --> 00:41:01.130
+Bueno, bien de día, descomposición de micro servicios.
+
+771
+00:41:01.970 --> 00:41:06.110
+Bueno, para hacer una pequeña intro, eh,
+
+772
+00:41:06.500 --> 00:41:09.150
+este es un problema, como decía que varios de ustedes porque
+
+773
+00:41:09.150 --> 00:41:11.110
+conocieron que ya trabajaron
+
+774
+00:41:11.900 --> 00:41:15.750
+este conocen alguien del del semestre anterior o
+
+775
+00:41:18.210 --> 00:41:21.270
+que que que uso conocen alguien de algún semestre curo
+
+776
+00:41:21.270 --> 00:41:23.070
+arquitectura sobre la práctica?
+
+777
+00:41:23.200 --> 00:41:26.150
+Escucharon, me leyeron o bueno, las recomendaron,
+
+778
+00:41:26.150 --> 00:41:28.910
+lo que sea que ya empezaron a desacopla, digamos,
+
+779
+00:41:28.910 --> 00:41:33.160
+no hicieron, dijeron una lógica este de módulos, sí,
+
+780
+00:41:34.140 --> 00:41:38.640
+parada este cosa que después sea más sencillo de saco de
+
+781
+00:41:38.640 --> 00:41:41.270
+descomponer estos micro servicio, parece,
+
+782
+00:41:41.270 --> 00:41:43.630
+parece importante que ustedes te gana en cuenta si esa des
+
+783
+00:41:47.250 --> 00:41:50.390
+porque ustedes se evaluen si esa descomposición
+
+784
+00:41:51.050 --> 00:41:53.830
+de micro servicios que ustedes hicieron, se acopla
+
+785
+00:41:54.380 --> 00:41:58.140
+esta línea a lo que este,
+
+786
+00:41:58.700 --> 00:42:01.860
+a lo que vamos a ver hoy y cuál dejas eso.
+
+787
+00:42:02.390 --> 00:42:06.740
+Y en particular, es un problema bastante común.
+
+788
+00:42:07.950 --> 00:42:10.710
+Y lo que una vez que ustedes definen la estrategia
+
+789
+00:42:11.370 --> 00:42:13.310
+de para el composición de micro servicio
+
+790
+00:42:14.290 --> 00:42:16.760
+supóngase que ustedes tiene el monolito gigante, no.
+
+791
+00:42:17.200 --> 00:42:20.640
+Entonces hoy en día ustedes lo tienen todo local, o sea,
+
+792
+00:42:20.640 --> 00:42:24.080
+todo lo tienen local y lo lo desloar sí,
+
+793
+00:42:26.290 --> 00:42:28.820
+pero imagínese que su monolito lo está confundiendo.
+
+794
+00:42:28.820 --> 00:42:32.790
+Muchas personas, muchos usuarios concurrentes que consumen
+
+795
+00:42:32.790 --> 00:42:36.890
+su monolito, mientras que consumen ese monolito,
+
+796
+00:42:38.160 --> 00:42:42.880
+este usted quiere empezar a separarlo micro servicio.
+
+797
+00:42:45.030 --> 00:42:49.680
+Entonces, el problema mayor que sucede acá es bueno,
+
+798
+00:42:49.680 --> 00:42:54.040
+cómo empiezo a parar esto en producción?
+
+799
+00:42:54.830 --> 00:42:58.890
+Sí, cómo empiezo a lograr esto sin dejar de brindar los
+
+800
+00:42:59.010 --> 00:43:00.490
+servicios a los clientes que tengo aquí?
+
+801
+00:43:01.480 --> 00:43:02.860
+Porque se supone que
+
+802
+00:43:03.530 --> 00:43:05.870
+lo mayoría de estos casos y algo que que hemos comentado
+
+803
+00:43:05.870 --> 00:43:09.630
+varias veces, nosotros no nos desacoplarnos de un monolito
+
+804
+00:43:09.630 --> 00:43:12.350
+micro servicio así porque sí, algo local o
+
+805
+00:43:12.860 --> 00:43:15.450
+sino que nosotros tenemos una estructura remota
+
+806
+00:43:16.090 --> 00:43:17.540
+y la están usando clientes.
+
+807
+00:43:17.700 --> 00:43:19.580
+Y nosotros queremos empezar a desacopla.
+
+808
+00:43:20.640 --> 00:43:22.760
+Entonces, como nosotros queremos empezar a desacopla, no
+
+809
+00:43:24.150 --> 00:43:24.440
+este,
+
+810
+00:43:29.080 --> 00:43:31.600
+tenemos que mantener funcionar el monito que lo están
+
+811
+00:43:31.600 --> 00:43:33.480
+consultando clientes que lo están consumiendo
+
+812
+00:43:34.160 --> 00:43:36.480
+y empezar a generar estos nuevos servicios.
+
+813
+00:43:37.300 --> 00:43:41.200
+Algo que es clave acá es que si ustedes un monito tiene lo
+
+814
+00:43:41.280 --> 00:43:44.000
+tienen varios ambientes, ustedes pueden ir, haciéndo este,
+
+815
+00:43:44.430 --> 00:43:46.040
+este pasaje en micro servicios.
+
+816
+00:43:46.040 --> 00:43:47.720
+Obviamente que esto requiere costos,
+
+817
+00:43:48.150 --> 00:43:50.400
+pero pueden ir haciéndote pasaje a micro servicios,
+
+818
+00:43:50.400 --> 00:43:55.220
+des espacio en de probarlo en de y luego delo lo a stage o a
+
+819
+00:43:55.220 --> 00:43:57.100
+testing y luego llevarlo máster.
+
+820
+00:43:59.500 --> 00:44:02.440
+Hay una de las cosas de los principios de micro servicios
+
+821
+00:44:02.440 --> 00:44:06.000
+que son claves, la cultura, automatización, el automatizar,
+
+822
+00:44:06.000 --> 00:44:09.320
+los deploy en automatizar este, generar distancia,
+
+823
+00:44:09.390 --> 00:44:12.520
+todo lo que ustedes puedan automatizar va a ser mucho más
+
+824
+00:44:12.720 --> 00:44:14.850
+sencillo, eh, este?
+
+825
+00:44:14.850 --> 00:44:15.970
+Todos sus procedimientos.
+
+826
+00:44:16.160 --> 00:44:20.490
+Bien, entonces ahora ya la segunda hora,
+
+827
+00:44:20.510 --> 00:44:24.130
+lo que vamos a encargar es estos estos tipos de composición?
+
+828
+00:44:24.630 --> 00:44:25.650
+Sí, vamos a,
+
+829
+00:44:25.650 --> 00:44:28.690
+vamos a echar los las formas que hay los tipos que hay
+
+830
+00:44:29.290 --> 00:44:30.810
+y después, bueno, veremos, creo que
+
+831
+00:44:31.390 --> 00:44:33.960
+este no vamos a adelantar con patrones de comunicación.
+
+832
+00:44:33.960 --> 00:44:37.000
+Así que dejaremos un raito para por si su que hay una duda
+
+833
+00:44:37.000 --> 00:44:39.560
+obligatorio que sea probablemente la semana que
+
+834
+00:44:39.580 --> 00:44:40.760
+la otra se esté liberando.
+
+835
+00:44:40.760 --> 00:44:43.800
+Yo le voy a avisar la micro tarea este que nos está
+
+836
+00:44:43.800 --> 00:44:45.360
+faltando, nos están faltando tres.
+
+837
+00:44:45.960 --> 00:44:49.900
+Entonces iremos liberando las bien, este
+
+838
+00:44:50.500 --> 00:44:52.970
+cortamos y volvemos, volvemos.
+
+839
+00:44:53.650 --> 00:44:53.970
+Y cinco
+
+840
+01:05:58.960 --> 01:05:59.380
+buenas.
+
+841
+01:06:01.360 --> 01:06:05.260
+Bueno, seguimos tan ahí.
+
+842
+01:06:05.780 --> 01:06:10.140
+Adelante, estamos, vamos. Perfecto.
+
+843
+01:06:12.150 --> 01:06:13.780
+Bueno, entonces, bueno,
+
+844
+01:06:13.780 --> 01:06:17.230
+estamos hablando de la composición de de micro servicios.
+
+845
+01:06:18.050 --> 01:06:21.320
+Bueno problema, cómo definimos los diferentes servicios?
+
+846
+01:06:23.760 --> 01:06:27.150
+Tenemos, o sea, fuerzas que nosotros queremos, eh,
+
+847
+01:06:27.170 --> 01:06:29.350
+que motivan a los patrones, la vamos a ir mencionar.
+
+848
+01:06:29.810 --> 01:06:32.850
+Queremos una arquitectura con servicios estables positivos,
+
+849
+01:06:33.210 --> 01:06:34.850
+desacoplados te fiables
+
+850
+01:06:35.430 --> 01:06:37.690
+que puedan ser implementados por un equipo, eh,
+
+851
+01:06:37.690 --> 01:06:40.890
+pequeño que puedan ser mantenidos por equipos autónomos,
+
+852
+01:06:40.920 --> 01:06:42.850
+nada distinto de lo que nosotros venimos buscando
+
+853
+01:06:44.180 --> 01:06:47.410
+este y venimos charlando de los micross ah,
+
+854
+01:06:48.090 --> 01:06:52.900
+entonces acá nosotros, tenemos un poco de cómo aplicar este
+
+855
+01:06:53.430 --> 01:06:57.380
+estos patrones de composición en particular.
+
+856
+01:06:57.550 --> 01:07:00.540
+Vamos sirviendo algunos, pero descomponer
+
+857
+01:07:01.080 --> 01:07:04.220
+en cuánto a las capacidad de negocio defini los servicios de
+
+858
+01:07:04.260 --> 01:07:06.980
+manera que correspondan como ness, cap
+
+859
+01:07:07.880 --> 01:07:12.020
+cap y conceptos para modelado de arquitectura de negocio es
+
+860
+01:07:12.020 --> 01:07:13.900
+lo que hace una organización para generar valor.
+
+861
+01:07:15.220 --> 01:07:18.220
+Nosotros dijimos que los micro servicios tienen que ser este
+
+862
+01:07:19.690 --> 01:07:21.850
+producto sencilla al final de liga, no?
+
+863
+01:07:22.410 --> 01:07:24.930
+O sea, tienen que poder aportar valor con el ideal,
+
+864
+01:07:25.080 --> 01:07:27.010
+aportar valor a los que nosotros buscamos.
+
+865
+01:07:27.410 --> 01:07:29.010
+Entonces, una manera de componerlos
+
+866
+01:07:29.270 --> 01:07:30.890
+es por unidad de negocio.
+
+867
+01:07:31.350 --> 01:07:33.470
+Sí. Ah.
+
+868
+01:07:33.790 --> 01:07:35.910
+Entonces nosotros acá, si teníamos,
+
+869
+01:07:36.380 --> 01:07:38.150
+qué es muy parecido lo que ustedes tenían,
+
+870
+01:07:38.610 --> 01:07:40.950
+si tenían producto, catálogo management,
+
+871
+01:07:40.950 --> 01:07:43.270
+después tenían inventor inventarios,
+
+872
+01:07:43.470 --> 01:07:47.590
+después tenían este order management o delivery management,
+
+873
+01:07:47.590 --> 01:07:49.910
+todo esto dentro de un mismo monolito.
+
+874
+01:07:50.530 --> 01:07:54.840
+Ahora lo que se hace es lo vienen a separar en servicios tal
+
+875
+01:07:54.840 --> 01:07:56.360
+micro servicios en particular.
+
+876
+01:07:57.020 --> 01:08:01.670
+Sí, este bueno acá el ejemplo que comenta en particular, eh,
+
+877
+01:08:02.480 --> 01:08:05.410
+para ese ejemplo que comenta en particular de una de una
+
+878
+01:08:05.410 --> 01:08:09.610
+empresa, este online sí en particular ustedes,
+
+879
+01:08:09.670 --> 01:08:12.330
+si ustedes ya habían desacoplado por unidad de negocio,
+
+880
+01:08:13.250 --> 01:08:16.200
+podrían hacerlo de esta siguiente forma también.
+
+881
+01:08:17.130 --> 01:08:21.880
+Bien, después descomposición by
+
+882
+01:08:22.460 --> 01:08:23.920
+eh, tu eh,
+
+883
+01:08:24.340 --> 01:08:26.560
+por subdominio su dominio defini servicio
+
+884
+01:08:26.560 --> 01:08:27.760
+por medio de subdominio.
+
+885
+01:08:28.250 --> 01:08:30.600
+Está un dominio, está compuesto por muchos,
+
+886
+01:08:30.690 --> 01:08:33.560
+subdominio cada subdominio corresponde a una parte del
+
+887
+01:08:33.560 --> 01:08:37.360
+negocio y pueden ser casi clasificados como core,
+
+888
+01:08:37.590 --> 01:08:41.400
+diferenciar clave para el negocio so soporte relacionaba,
+
+889
+01:08:41.400 --> 01:08:43.880
+el negocio, pero no es un diferenciar genérico,
+
+890
+01:08:43.980 --> 01:08:48.140
+no está relacionado este, eh,
+
+891
+01:08:48.300 --> 01:08:51.610
+a lo que sería el negocio en sí.
+
+892
+01:08:51.930 --> 01:08:56.270
+Y acá, esta es la mejor manera de verlo en cuanto a em
+
+893
+01:08:57.350 --> 01:08:58.970
+en verlo en cuanto de un ejemplo, no?
+
+894
+01:08:59.330 --> 01:09:01.330
+Entonces, si nosotros teníamos toda la parte de orden,
+
+895
+01:09:01.330 --> 01:09:04.810
+toda la parte de delivery y que tenía como varias partes,
+
+896
+01:09:05.390 --> 01:09:06.770
+eh, de su o sea, no sé,
+
+897
+01:09:06.970 --> 01:09:09.690
+tenemos del dominio de nuestra aplicación y después tenemos
+
+898
+01:09:09.690 --> 01:09:10.770
+ciertos subdominio.
+
+899
+01:09:12.190 --> 01:09:15.650
+Sí, que que van relacionados de eso ya no es una unidad de
+
+900
+01:09:15.650 --> 01:09:17.890
+negocios, sino que son ciertos dominios que nosotros
+
+901
+01:09:17.890 --> 01:09:19.050
+manejamos en nuestra aplicación.
+
+902
+01:09:19.670 --> 01:09:21.690
+Eso se mappe a micro servicio.
+
+903
+01:09:22.940 --> 01:09:26.900
+Bien, entonces de nuevo,
+
+904
+01:09:27.340 --> 01:09:31.510
+tenemos tenemos dos, uno es en cuanto a negocio.
+
+905
+01:09:32.090 --> 01:09:34.430
+Sí, que es muy parecido lo que ustedes van a ir haciendo
+
+906
+01:09:35.030 --> 01:09:38.610
+y el otro es relacionado a subdominio.
+
+907
+01:09:38.990 --> 01:09:42.450
+Sí, ustedes pueden ir orientados a cualquiera de los dos.
+
+908
+01:09:44.190 --> 01:09:48.970
+Sí, es el de repente el de el de negocios, como dice bien,
+
+909
+01:09:48.970 --> 01:09:52.610
+ahí es orientado a a ciertos procesos.
+
+910
+01:09:53.350 --> 01:09:57.260
+Y en particular el de subdominio desorientaba a
+
+911
+01:09:57.260 --> 01:09:58.380
+funcionalidad del dominio.
+
+912
+01:09:58.420 --> 01:10:01.300
+Y como dice ahí puede haber su funcionaría de dominio que no
+
+913
+01:10:01.300 --> 01:10:02.420
+está relacionado al negocio.
+
+914
+01:10:02.600 --> 01:10:05.220
+Sí, sino que es necesario para la funcionalidad.
+
+915
+01:10:05.900 --> 01:10:08.460
+Entonces, tengan en cuenta cuál de los dos ustedes van a
+
+916
+01:10:08.460 --> 01:10:10.220
+aplicar para lo que es el obligatorio.
+
+917
+01:10:10.810 --> 01:10:14.130
+Bien, hasta ahí me siguieron.
+
+918
+01:10:20.870 --> 01:10:22.610
+Sí, Perfect.
+
+919
+01:10:23.520 --> 01:10:27.230
+Bien, bueno, concepto pa de context,
+
+920
+01:10:27.690 --> 01:10:29.670
+un dominio está compuesto por muchos.
+
+921
+01:10:29.850 --> 01:10:34.200
+Pon context, cada uno tiene entidades ta, eh?
+
+922
+01:10:34.200 --> 01:10:36.160
+Algunas de estas no hay que no necesitas ser
+
+923
+01:10:36.160 --> 01:10:37.840
+comunicadas a otros contextos.
+
+924
+01:10:38.060 --> 01:10:40.800
+Yo otras entidades que si tienen que ser compartidas con los
+
+925
+01:10:40.800 --> 01:10:43.250
+demás contextos para diferentes contextos,
+
+926
+01:10:43.250 --> 01:10:45.890
+la información que precisa la entidad, eh,
+
+927
+01:10:45.950 --> 01:10:47.690
+varía para diferente contexto.
+
+928
+01:10:47.690 --> 01:10:51.450
+La entidad puede tener diferentes fines o significativos.
+
+929
+01:10:51.910 --> 01:10:56.330
+Sí. Entonces, de alguna manera,
+
+930
+01:10:56.510 --> 01:10:59.170
+son contextos dentro de lo que es sudo domingo,
+
+931
+01:10:59.170 --> 01:11:03.290
+como dice bien, ahí, eh, do design promueve dividir,
+
+932
+01:11:03.290 --> 01:11:05.930
+conquistar las grandes problemas dividiéndole en fondo en
+
+933
+01:11:05.930 --> 01:11:08.450
+context y siendo explícitos con su relación.
+
+934
+01:11:09.350 --> 01:11:12.660
+Bueno, por qué? Para evitar tener god models
+
+935
+01:11:13.200 --> 01:11:15.120
+que generan un mellón de responsabilidades
+
+936
+01:11:16.080 --> 01:11:18.890
+teniendo el espagueti, esta imagen que ustedes ven acá
+
+937
+01:11:19.150 --> 01:11:20.370
+pueden ver que en particular,
+
+938
+01:11:20.890 --> 01:11:23.810
+tienen ciertos contextos que más allá que funciona todo como
+
+939
+01:11:23.810 --> 01:11:27.290
+un sí, son contextos que están que están por separados.
+
+940
+01:11:27.910 --> 01:11:30.370
+Ah, y que se conectan en particular en este caso,
+
+941
+01:11:30.390 --> 01:11:32.210
+que nosotros lo habían vistos por el
+
+942
+01:11:32.210 --> 01:11:33.730
+consumidor y el producto.
+
+943
+01:11:35.160 --> 01:11:38.510
+Bien, identificar bien los
+
+944
+01:11:39.050 --> 01:11:41.910
+los Bond con el dominio, ser explícitos eh,
+
+945
+01:11:41.930 --> 01:11:44.670
+sus interfaces y plasmarlo en nuestros micro servicios
+
+946
+01:11:44.670 --> 01:11:46.110
+promueve bajo acoplamiento.
+
+947
+01:11:46.960 --> 01:11:49.940
+Ah, bueno, acá el ejemplo que que pone es,
+
+948
+01:11:50.000 --> 01:11:52.420
+no es lo mismo lo que tiene el del super
+
+949
+01:11:53.000 --> 01:11:57.840
+que lo que tiene el costum de seis, sí, o sea, son contextos
+
+950
+01:11:59.000 --> 01:12:02.020
+que puede pasar en su micro servicio que ustedes necesitan
+
+951
+01:12:02.020 --> 01:12:04.260
+tener de repente un subdominio o algo
+
+952
+01:12:04.950 --> 01:12:08.690
+de como habla del cost, pero no es lo mismo, como dice ahí,
+
+953
+01:12:08.690 --> 01:12:10.810
+lo que tiene del al lado del seis,
+
+954
+01:12:10.990 --> 01:12:13.600
+que al lado que tenga el super ah,
+
+955
+01:12:13.940 --> 01:12:15.600
+me tengo que preguntar qué funciona?
+
+956
+01:12:15.600 --> 01:12:18.000
+Tiene este Bond de corte y qué información prest precisa el
+
+957
+01:12:18.000 --> 01:12:21.960
+context acceso de de entidad para cumplir la función?
+
+958
+01:12:22.500 --> 01:12:25.430
+Sí, este bueno ahí.
+
+959
+01:12:25.490 --> 01:12:27.990
+La una pregunta es que se imagina que puede tener diferencia
+
+960
+01:12:28.070 --> 01:12:30.070
+producto entre ambos contextos
+
+961
+01:12:31.090 --> 01:12:33.360
+entre lo que es la venta y el soporto.
+
+962
+01:12:43.680 --> 01:12:47.460
+Por ejemplo, dijimos que en el caso de las ventas,
+
+963
+01:12:47.800 --> 01:12:50.700
+el consumidor capaz que nos interesa cierta información.
+
+964
+01:12:51.610 --> 01:12:53.790
+Sí, como por ejemplo, este
+
+965
+01:12:55.430 --> 01:12:58.250
+el contacto sigue la tarjeta de crédito.
+
+966
+01:12:58.890 --> 01:13:01.330
+Y en el caso de soporte capaz que necesitamos,
+
+967
+01:13:01.590 --> 01:13:03.290
+yo casi estoy diciendo cualquier cosa,
+
+968
+01:13:03.290 --> 01:13:07.690
+pero necesitamos tener, eh, el contacto donde reside sí,
+
+969
+01:13:08.090 --> 01:13:09.090
+a nivel de ventas,
+
+970
+01:13:09.680 --> 01:13:12.570
+necesitamos tener cierta información y a nivel de soporte,
+
+971
+01:13:12.880 --> 01:13:14.690
+otra en el caso del producto,
+
+972
+01:13:14.690 --> 01:13:17.450
+puede pasar lo mismo a nivel de lo que es la venta.
+
+973
+01:13:17.970 --> 01:13:21.930
+Nosotros necesitamos, eh, los precios, las promociones
+
+974
+01:13:22.670 --> 01:13:25.170
+en caso de soporte capaz que también necesitas saber esa
+
+975
+01:13:25.170 --> 01:13:28.150
+información, pero más orientado a
+
+976
+01:13:29.060 --> 01:13:31.110
+este como brindar soporte, en qué period
+
+977
+01:13:31.660 --> 01:13:32.830
+más capaz ministerial,
+
+978
+01:13:33.050 --> 01:13:35.670
+en qué periodo de tiempo había cierta promoción?
+
+979
+01:13:35.670 --> 01:13:37.310
+Porque queremos dar cierto soporte
+
+980
+01:13:37.910 --> 01:13:39.950
+a personas que por más que la promoción se terminó,
+
+981
+01:13:39.950 --> 01:13:41.350
+queremos brindad la sí.
+
+982
+01:13:43.070 --> 01:13:46.440
+Y bien, bueno,
+
+983
+01:13:49.650 --> 01:13:52.400
+bueno, cuando nosotros des ocuparemos por business capati,
+
+984
+01:13:52.620 --> 01:13:54.560
+eh cap o por sus domain
+
+985
+01:13:55.570 --> 01:13:58.660
+resultado que vamos a tener una arquitectura stane estable.
+
+986
+01:13:58.720 --> 01:14:02.060
+Las business capability la su domain no suelen cambiar ah,
+
+987
+01:14:02.300 --> 01:14:05.340
+nosotros se puede ser que nosotros agreguemos cosas.
+
+988
+01:14:05.430 --> 01:14:07.420
+Puede ser que nuestro negocio varíe.
+
+989
+01:14:07.900 --> 01:14:10.290
+Recordemos que cuando nosotros pasamos una arquitectura de
+
+990
+01:14:10.290 --> 01:14:12.520
+micro servicio, no estamos busca nosotros ya
+
+991
+01:14:12.700 --> 01:14:14.400
+experimentamos con la aplicación.
+
+992
+01:14:14.900 --> 01:14:17.240
+Ya tenemos una aplicación más estable. Sí.
+
+993
+01:14:18.280 --> 01:14:21.270
+Luego equipos autónomos y autos gestionados en poco
+
+994
+01:14:21.390 --> 01:14:22.430
+a entregar valor de negocio.
+
+995
+01:14:22.970 --> 01:14:27.790
+Ah, y no solo conceptos técnicos y servicios,
+
+996
+01:14:27.920 --> 01:14:30.150
+conos débilmente acoplados.
+
+997
+01:14:30.500 --> 01:14:35.490
+Bien, es un poco las ventajas que veníamos viendo.
+
+998
+01:14:35.510 --> 01:14:38.490
+Lo que estamos reafirmando acá es que al subdividir con
+
+999
+01:14:38.490 --> 01:14:42.580
+esto, nosotros vamos a poder tener, eh,
+
+1000
+01:14:43.410 --> 01:14:47.270
+bien, dificultades, identificar estas fines cap,
+
+1001
+01:14:47.650 --> 01:14:49.710
+su Domaine requiere entendimiento de negocio.
+
+1002
+01:14:49.770 --> 01:14:52.190
+De nuevo, usted no van a pasar de un día para el otro.
+
+1003
+01:14:53.020 --> 01:14:56.550
+Este a aplicar micro servicio,
+
+1004
+01:14:57.210 --> 01:14:59.570
+analizar propósito de la organización, estructura,
+
+1005
+01:14:59.640 --> 01:15:01.730
+proceso de negocios, área, etcétera.
+
+1006
+01:15:01.730 --> 01:15:04.610
+No poder traer un desarrollador que refiere a Ren,
+
+1007
+01:15:04.610 --> 01:15:07.810
+corre recién comenzó a a pasar a micro servicios.
+
+1008
+01:15:07.810 --> 01:15:10.010
+Tiene que haber un entendimiento de todo. Funciona a todo.
+
+1009
+01:15:10.270 --> 01:15:14.300
+Sí. Entonces, comenzar con la estructura de organización
+
+1010
+01:15:15.080 --> 01:15:17.180
+es importante que a nivel desarrolladores
+
+1011
+01:15:17.690 --> 01:15:19.380
+para poder vivir en micro servicios,
+
+1012
+01:15:20.180 --> 01:15:23.100
+tienen que tener ya un conocimiento arquitectónico de cómo
+
+1013
+01:15:23.200 --> 01:15:27.300
+fu un conocimiento para poder aplicar la arquitectura de
+
+1014
+01:15:27.300 --> 01:15:30.020
+micro servicios de la de la estructura organización
+
+1015
+01:15:30.620 --> 01:15:33.900
+y después de modelo de dominio de alto a nivel, sí, o sea,
+
+1016
+01:15:34.300 --> 01:15:38.050
+tienen que más o menos saber cuáles son los dominios,
+
+1017
+01:15:38.050 --> 01:15:40.650
+qué es lo que ustedes almacenan a alto nivel?
+
+1018
+01:15:41.260 --> 01:15:45.210
+Bien, bueno,
+
+1019
+01:15:45.930 --> 01:15:47.730
+servicio por equipo, o sea,
+
+1020
+01:15:48.470 --> 01:15:50.330
+una vez que están identificado cuál van a hacer los
+
+1021
+01:15:50.450 --> 01:15:53.210
+servicios que tenemos que definir, cuál es la relación?
+
+1022
+01:15:53.450 --> 01:15:56.130
+Servicio, equipo, recomendamos equipos pequeños,
+
+1023
+01:15:56.490 --> 01:15:58.190
+servicio pequeño ta.
+
+1024
+01:15:59.170 --> 01:16:00.590
+Lo que dice ahí es una opción.
+
+1025
+01:16:00.590 --> 01:16:04.350
+Es ya o una shift model donde cada equipo se encarga de
+
+1026
+01:16:04.350 --> 01:16:06.630
+cierta funcionalidad implementa necesario
+
+1027
+01:16:07.310 --> 01:16:08.730
+en todos los servicios para sal.
+
+1028
+01:16:09.310 --> 01:16:14.170
+Ah, entonces eh, de alguna manera,
+
+1029
+01:16:15.010 --> 01:16:16.350
+en vez de servicio por equipo,
+
+1030
+01:16:16.930 --> 01:16:19.590
+es que cada equipo se encarga de cierta funcionalidad e
+
+1031
+01:16:19.590 --> 01:16:22.510
+implementar necesario lo que comenta acá los comentarios es
+
+1032
+01:16:22.600 --> 01:16:25.390
+bueno, en vez de tener un servicio por equipo, digamos que,
+
+1033
+01:16:25.390 --> 01:16:28.830
+bueno, yo tengo cierta funcionalidad que tengo que
+
+1034
+01:16:28.830 --> 01:16:31.910
+implementar y el equipo va a hacerlo necesario para poder
+
+1035
+01:16:31.940 --> 01:16:33.110
+implementar dicha.
+
+1036
+01:16:33.110 --> 01:16:34.850
+Funcionaría bien.
+
+1037
+01:16:37.330 --> 01:16:39.200
+Bueno, sha o model,
+
+1038
+01:16:39.370 --> 01:16:42.400
+todos mantienen todo a medida que precisan hacer un cambio,
+
+1039
+01:16:42.860 --> 01:16:47.320
+ya le do mode es más propenso a mala calidad del codigo y a
+
+1040
+01:16:47.320 --> 01:16:49.400
+desarrollar más lento porque hay más código para entender,
+
+1041
+01:16:49.580 --> 01:16:51.080
+supera capacidad con que equipo
+
+1042
+01:16:52.050 --> 01:16:54.810
+y ustedes en particular un servicio por equipo,
+
+1043
+01:16:55.400 --> 01:16:57.210
+cada equipo dueño, un solo servicio
+
+1044
+01:16:57.810 --> 01:17:00.290
+y preciso un cambio en otro servicio tiene casado.
+
+1045
+01:17:00.850 --> 01:17:04.700
+Entonces, volviendo acá, está rojizo o model.
+
+1046
+01:17:05.360 --> 01:17:07.660
+Ah, es alguna manera, nosotros llegamos al equipo
+
+1047
+01:17:08.180 --> 01:17:09.880
+y el equipo implementa los servicios.
+
+1048
+01:17:11.550 --> 01:17:14.270
+Nosotros acá vamos para micro servicio.
+
+1049
+01:17:14.270 --> 01:17:15.830
+Por ejemplo, lo que había dicho para micro servicio,
+
+1050
+01:17:15.830 --> 01:17:18.790
+vamos a ir a servicio por equipo de una manera de
+
+1051
+01:17:18.790 --> 01:17:19.870
+lo que queremos es esto no?
+
+1052
+01:17:20.640 --> 01:17:25.500
+Porque lo que queremos es que nuestro equipo pueda ser, eh,
+
+1053
+01:17:26.050 --> 01:17:27.420
+sudo, ni un micro servicio.
+
+1054
+01:17:27.660 --> 01:17:30.860
+Y de esa forma lograr la autonomía de nosotros necesitamos,
+
+1055
+01:17:31.080 --> 01:17:35.000
+sí, este y que ustedes necesitan cambios en
+
+1056
+01:17:35.000 --> 01:17:36.160
+algún servicio de alguien más.
+
+1057
+01:17:36.220 --> 01:17:39.840
+Lo que van a hacer es solicitarlo este y eso lo van a poder
+
+1058
+01:17:39.900 --> 01:17:42.360
+dar, está aplicar, por ejemplo, dice idealmente,
+
+1059
+01:17:42.360 --> 01:17:44.760
+cada equipo mantiene un solo, eh, micro servicio.
+
+1060
+01:17:44.760 --> 01:17:47.560
+Ejemplo, Amazon le pago un equipo por mantener una
+
+1061
+01:17:47.560 --> 01:17:48.800
+pantalla ta.
+
+1062
+01:17:48.940 --> 01:17:50.360
+En realidad, en algunas empresas,
+
+1063
+01:17:50.440 --> 01:17:52.560
+a veces un equipo mantiene más de un servicio.
+
+1064
+01:17:52.780 --> 01:17:54.640
+Es lo que esto, nosotros lo habíamos Charo.
+
+1065
+01:17:54.980 --> 01:17:58.640
+Por ejemplo, eh, mercado libro, pedidos allá hay equipos que
+
+1066
+01:17:59.300 --> 01:18:01.920
+hay personas que rotan entre servicios o que atacan varios
+
+1067
+01:18:01.940 --> 01:18:03.000
+mi servicios a la vez.
+
+1068
+01:18:03.890 --> 01:18:08.090
+Sí. Bueno, ventajas,
+
+1069
+01:18:08.170 --> 01:18:09.370
+equipos autónomos.
+
+1070
+01:18:09.610 --> 01:18:14.300
+Volvemos a repetir muchas cosas de por qué
+
+1071
+01:18:15.170 --> 01:18:19.060
+cada eh, por qué nosotros necesitamos tener micro servicios
+
+1072
+01:18:19.180 --> 01:18:21.700
+independientes, servicios independientes, de nuevo,
+
+1073
+01:18:21.940 --> 01:18:24.700
+ventajas, equipos autónomos que requieren mima coordinación,
+
+1074
+01:18:24.760 --> 01:18:26.580
+no supera capacidad cog del equipo
+
+1075
+01:18:27.090 --> 01:18:29.300
+picture de un solo servicio sale más rápido,
+
+1076
+01:18:29.440 --> 01:18:30.980
+ya que el código se lo conocen
+
+1077
+01:18:32.070 --> 01:18:34.210
+en lugar a duda que ustedes y los abr,
+
+1078
+01:18:34.210 --> 01:18:35.610
+las personas que desarrollan lo mismo,
+
+1079
+01:18:35.610 --> 01:18:38.170
+cuando ustedes tocaron el obligatorio de diseño de
+
+1080
+01:18:38.170 --> 01:18:40.530
+programación o lo que sea que les tocó hacer una
+
+1081
+01:18:40.530 --> 01:18:42.570
+continuación de ese obligatorio de obligatorio dos,
+
+1082
+01:18:42.680 --> 01:18:44.810
+ustedes deja, sabían ciertas cosas donde
+
+1083
+01:18:45.520 --> 01:18:47.890
+modificarla mismo ustedes,
+
+1084
+01:18:47.890 --> 01:18:50.090
+cuando llevan años en un proyecto en una empresa,
+
+1085
+01:18:50.110 --> 01:18:52.010
+cuando viene un cambio, lo manejan más.
+
+1086
+01:18:52.410 --> 01:18:54.810
+Entonces, la idea es eso que el equipo agarre ownership y
+
+1087
+01:18:54.810 --> 01:18:55.890
+los cambios lo maneja mejor.
+
+1088
+01:18:57.030 --> 01:18:58.490
+Bien, bueno,
+
+1089
+01:18:58.490 --> 01:19:00.970
+mejorar la calidad del código de servicio en sí también,
+
+1090
+01:19:01.070 --> 01:19:04.450
+ya que hay un responsable claro de de monitorear todo lo
+
+1091
+01:19:04.450 --> 01:19:05.490
+que concierne a eso.
+
+1092
+01:19:06.270 --> 01:19:09.090
+Ah, entonces en particular, de nuevo, nosotros,
+
+1093
+01:19:09.090 --> 01:19:11.770
+micro servicios, te empezamos a separar, empezamos a tener
+
+1094
+01:19:12.810 --> 01:19:14.740
+todo más independiente, autónomo.
+
+1095
+01:19:14.820 --> 01:19:19.230
+Y cada servicio empieza a funcionar de manera independiente.
+
+1096
+01:19:19.390 --> 01:19:21.070
+Entonces cada equipo en sí
+
+1097
+01:19:21.610 --> 01:19:25.360
+tiene que ser posible levantar todo en particular con este
+
+1098
+01:19:25.360 --> 01:19:28.960
+ya yo me había confundido el switch,
+
+1099
+01:19:29.390 --> 01:19:33.730
+ustedes se par era asignarle toda la responsabilidad
+
+1100
+01:19:34.020 --> 01:19:35.330
+compartida del modelo.
+
+1101
+01:19:35.490 --> 01:19:38.610
+Y el equipo tiene que levantar lo que sea necesario.
+
+1102
+01:19:39.160 --> 01:19:41.730
+Ustedes en particular con micro servicios,
+
+1103
+01:19:42.270 --> 01:19:43.900
+obviamente can a nivel de obligatorio,
+
+1104
+01:19:43.940 --> 01:19:47.080
+ustedes van a tocar todos los pero esto es un poco
+
+1105
+01:19:48.080 --> 01:19:49.410
+como siempre digo, recuerdo
+
+1106
+01:19:49.970 --> 01:19:51.210
+pensando una organización grande.
+
+1107
+01:19:53.000 --> 01:19:55.520
+Entonces estos tipo de cosas son claros.
+
+1108
+01:19:55.990 --> 01:19:58.900
+Bueno, tel container, salt, problema,
+
+1109
+01:19:58.900 --> 01:20:01.460
+cómo debería un servicio colaborar con otro servicio cuando
+
+1110
+01:20:01.460 --> 01:20:03.890
+maneja una re request síncrona solución,
+
+1111
+01:20:04.010 --> 01:20:06.610
+definía el servicio de manera que pueda responder sí,
+
+1112
+01:20:06.800 --> 01:20:10.240
+claramente tiene esperar la respuesta de otro servicio.
+
+1113
+01:20:11.240 --> 01:20:13.890
+Sí, ta todo eso.
+
+1114
+01:20:17.850 --> 01:20:21.880
+Cómo debería un servicio colaborar con el otro cuando maneja
+
+1115
+01:20:21.880 --> 01:20:26.560
+una rico es síncrona y de y hay se definir el micro servicio
+
+1116
+01:20:26.560 --> 01:20:29.760
+de manera que pueda responder síncronamente sin esperar
+
+1117
+01:20:30.380 --> 01:20:34.520
+la respuesta del del otro micro servicio, cómo se po?
+
+1118
+01:20:34.600 --> 01:20:37.850
+O sea, ustedes pueden definir el micro servicio,
+
+1119
+01:20:37.990 --> 01:20:39.410
+no se hablando a nivel de comunicación,
+
+1120
+01:20:39.410 --> 01:20:42.130
+sino que ustedes ya tienen que haber definido el micro
+
+1121
+01:20:42.370 --> 01:20:45.010
+servicio para que en particular pueda responder la mayor
+
+1122
+01:20:45.250 --> 01:20:47.610
+cantidad de peticiones de manera síncrona.
+
+1123
+01:20:47.630 --> 01:20:50.650
+Sin problema a eso es un poco lo que se busca.
+
+1124
+01:20:51.030 --> 01:20:54.250
+Sí, o sea que no, no dependa tanto de otras después.
+
+1125
+01:20:54.250 --> 01:20:58.270
+Cinco, bien, bueno,
+
+1126
+01:21:02.320 --> 01:21:03.910
+bueno en particular, acá tienen,
+
+1127
+01:21:04.090 --> 01:21:08.670
+no se container por se percent dos servicios para que da
+
+1128
+01:21:08.670 --> 01:21:11.070
+orden y responder al cliente y se cae uno no funcione nada.
+
+1129
+01:21:11.570 --> 01:21:14.290
+Sí. O sea,
+
+1130
+01:21:14.290 --> 01:21:17.210
+acá lo que ustedes pueden ver es que para todo necesita
+
+1131
+01:21:18.120 --> 01:21:19.970
+este consumen service checking service
+
+1132
+01:21:20.590 --> 01:21:22.890
+que usted qué harían ustedes para poder solucionar esto?
+
+1133
+01:21:23.000 --> 01:21:24.010
+Qué se les ocurre?
+
+1134
+01:21:35.840 --> 01:21:39.920
+Qué podrían aplicar para poder solucionar este problema?
+
+1135
+01:21:52.370 --> 01:21:55.810
+Y no sé qué tan urgente es que el cliente reciba toda esa
+
+1136
+01:21:55.810 --> 01:21:57.370
+orden de una que capaz puedes decir de, mira,
+
+1137
+01:21:57.380 --> 01:21:59.850
+está procesando y vas a procesar por detrás a tu tiempo
+
+1138
+01:22:00.730 --> 01:22:02.540
+y no lo tenéis ahí colgado esperando esa
+
+1139
+01:22:02.690 --> 01:22:03.860
+infinidades llamadas
+
+1140
+01:22:06.190 --> 01:22:07.190
+Bien.
+
+1141
+01:22:11.230 --> 01:22:15.700
+Por ejemplo, nosotros hay variedades de service valid de
+
+1142
+01:22:15.700 --> 01:22:17.900
+chicken service hace muchas variaciones.
+
+1143
+01:22:18.360 --> 01:22:22.100
+Vas a ver si, bueno,
+
+1144
+01:22:22.480 --> 01:22:25.740
+una de las cosas es no vividas los los servicios de siempre
+
+1145
+01:22:25.740 --> 01:22:30.600
+en primer lugar, capaz que, ah,
+
+1146
+01:22:30.700 --> 01:22:33.360
+yo cuando lo pienso, de repente pienso pensar bueno capaz yo
+
+1147
+01:22:33.360 --> 01:22:35.200
+podríamos guardar cierta información.
+
+1148
+01:22:36.030 --> 01:22:39.810
+Sí, pero dice no divida los servicios de siempre.
+
+1149
+01:22:39.810 --> 01:22:43.610
+Primer lugar, o sea, si vos cada servicio necesita mucho de
+
+1150
+01:22:43.610 --> 01:22:46.450
+otro capaz que no hiciste la mejor división en micro
+
+1151
+01:22:46.730 --> 01:22:50.340
+servicio capaz que intentaste de desacopla en cuanto a
+
+1152
+01:22:50.340 --> 01:22:52.780
+negocios y vos, tendrías que haber aplicado más algo de
+
+1153
+01:22:52.790 --> 01:22:54.730
+subdominio, sí,
+
+1154
+01:22:55.020 --> 01:22:58.410
+capaz que la orden necesitaba tener todo un conjunto capaz
+
+1155
+01:22:58.410 --> 01:23:00.650
+que el micro servicio necesitaba tener más información.
+
+1156
+01:23:02.020 --> 01:23:05.580
+Otra cosa que es usar c qs para mantener una copia local del
+
+1157
+01:23:05.580 --> 01:23:08.240
+ahí o de otros servicios que para validar la riqueza.
+
+1158
+01:23:08.450 --> 01:23:13.420
+Bueno, obviamente que también una solución es tener co,
+
+1159
+01:23:13.640 --> 01:23:16.980
+eh, un subconjunto de datos de la información
+
+1160
+01:23:16.980 --> 01:23:18.140
+que nosotros necesitamos.
+
+1161
+01:23:18.280 --> 01:23:22.340
+Sí, yo usa pulling sagas para terminar el flujo,
+
+1162
+01:23:22.340 --> 01:23:25.020
+la riqueza sin claramente asegurando consistencia, o sea,
+
+1163
+01:23:25.930 --> 01:23:29.950
+las últimas dos, la vamos a ver más adelante que bueno tener
+
+1164
+01:23:30.880 --> 01:23:34.420
+el micros servicio tenga un subconjunto de los datos,
+
+1165
+01:23:34.800 --> 01:23:37.660
+por ejemplo, en este caso que pueda tener just 1000 service
+
+1166
+01:23:37.660 --> 01:23:40.520
+kitchen service pueda tener cierta información.
+
+1167
+01:23:41.610 --> 01:23:44.410
+Y el caso de pulling sagas es bueno capaz que nosotros
+
+1168
+01:23:44.410 --> 01:23:47.810
+podemos decirle acá, pensando en eh
+
+1169
+01:23:48.710 --> 01:23:50.970
+en la otra parte, lo que sería este
+
+1170
+01:23:52.090 --> 01:23:54.270
+en la primera parte del curso donde nosotros vimos dos
+
+1171
+01:23:54.270 --> 01:23:57.190
+patrones para manejar estas cosas a síncrona background show
+
+1172
+01:23:57.430 --> 01:23:58.510
+y a cinco transacción.
+
+1173
+01:23:59.190 --> 01:24:01.910
+Nosotros podríamos procesar la orden y en background
+
+1174
+01:24:02.710 --> 01:24:05.930
+ir comunicando los otros servicios y en algún memento te
+
+1175
+01:24:05.930 --> 01:24:09.910
+decimos, bueno, mira, te realizó esto cuando veamos patrones
+
+1176
+01:24:09.910 --> 01:24:13.710
+de comunicación, la aparte de de de este tipo de de
+
+1177
+01:24:13.710 --> 01:24:18.150
+problemas, vamos a ver que existen mecanismos para pasar ese
+
+1178
+01:24:18.150 --> 01:24:19.950
+background show a cinco transacción,
+
+1179
+01:24:20.680 --> 01:24:23.230
+extenderlo a lo que son los micro servicios.
+
+1180
+01:24:23.530 --> 01:24:26.470
+Te digo aplicarlo a lo que son micro servicios
+
+1181
+01:24:27.330 --> 01:24:28.750
+en particular, no sólo hasta ahora,
+
+1182
+01:24:28.750 --> 01:24:31.910
+lo la manera que sabemos es, bueno, no ha divide esto a si,
+
+1183
+01:24:31.910 --> 01:24:34.470
+en primer lugar, capaz que no es la mejor división,
+
+1184
+01:24:35.400 --> 01:24:37.810
+pero también si ustedes se enfrentan a aquí problemas que
+
+1185
+01:24:37.890 --> 01:24:40.290
+tienen micro servicio que hacen mucha rico, es síncrona
+
+1186
+01:24:41.100 --> 01:24:43.930
+capaz que tienen que empezar a pasar cierta parte o de
+
+1187
+01:24:44.440 --> 01:24:47.130
+cambiar el proceso a que sea síncrono.
+
+1188
+01:24:47.780 --> 01:24:49.520
+Sí, por ejemplo, la orden,
+
+1189
+01:24:49.520 --> 01:24:52.320
+lo que podríamos hacer es que en background se pase al
+
+1190
+01:24:52.370 --> 01:24:56.640
+consumidor, el consumidor en background lo pase a en
+
+1191
+01:24:56.640 --> 01:24:58.440
+service, así intensivamente y después nos
+
+1192
+01:24:58.490 --> 01:24:59.640
+avise cuando esté todo pronto.
+
+1193
+01:25:00.900 --> 01:25:03.100
+Entonces, eh, lo mismo que teníamos con ella.
+
+1194
+01:25:03.100 --> 01:25:06.060
+Sí, transacción que nosotros podemos hacer una petición y
+
+1195
+01:25:06.060 --> 01:25:08.220
+saber cómo está sucediendo.
+
+1196
+01:25:08.480 --> 01:25:10.720
+Sí, bien,
+
+1197
+01:25:13.430 --> 01:25:13.780
+bueno,
+
+1198
+01:25:18.940 --> 01:25:21.770
+bueno en particular acá nosotros tenemos lo que es la
+
+1199
+01:25:21.770 --> 01:25:23.970
+riqueza chtt y nosotros podemos,
+
+1200
+01:25:24.930 --> 01:25:28.140
+podemos tener una réplica de ser qre y nosotros lo vamos a
+
+1201
+01:25:28.140 --> 01:25:29.620
+ver en particular, lo vamos a comentar.
+
+1202
+01:25:30.060 --> 01:25:33.020
+Y después tenemos, eh, el saga pattern,
+
+1203
+01:25:33.800 --> 01:25:36.060
+que de alguna manera es un mecanismo
+
+1204
+01:25:36.860 --> 01:25:40.100
+a asíncrono muy parecido a la sí transaction donde nosotros
+
+1205
+01:25:40.100 --> 01:25:43.860
+vamos a ir pudiéndole intercambiar información o hacer
+
+1206
+01:25:43.980 --> 01:25:47.100
+procesos que antes se hacían de forma síncrona porque
+
+1207
+01:25:47.100 --> 01:25:48.300
+ustedes tenían toda la base de datos
+
+1208
+01:25:48.300 --> 01:25:49.420
+y todo punto en un monito.
+
+1209
+01:25:49.620 --> 01:25:51.980
+Y ahora nosotros tenemos que hacerlo de forma a cinco
+
+1210
+01:25:52.780 --> 01:25:54.980
+y algo que también me adelanto un poco.
+
+1211
+01:25:54.980 --> 01:25:58.060
+Pero vamos a ver con el saga pattan creo que no,
+
+1212
+01:25:58.120 --> 01:25:59.860
+no en extracción, no, no de comunicación.
+
+1213
+01:26:00.330 --> 01:26:02.620
+Algo que ustedes van a ver con el saga patan es que
+
+1214
+01:26:04.720 --> 01:26:08.360
+una de las cosas que pasa ustedes con transacciones
+
+1215
+01:26:08.880 --> 01:26:10.640
+a nivel de de se c,
+
+1216
+01:26:10.670 --> 01:26:13.880
+ustedes podían prevenir ciertos errores a nivel de inserción
+
+1217
+01:26:15.040 --> 01:26:19.290
+o ciertas acciones y podían hacer un este como se llama
+
+1218
+01:26:19.870 --> 01:26:22.930
+un rollback de lo que ahí con micro servicios es ese
+
+1219
+01:26:22.930 --> 01:26:24.250
+rollback que es más complejo.
+
+1220
+01:26:24.370 --> 01:26:27.570
+Y los errores imaginan que cosas en comunicaciones a
+
+1221
+01:26:27.570 --> 01:26:29.770
+síncrona doble mucho más complejo.
+
+1222
+01:26:30.130 --> 01:26:33.290
+Entonces acá es donde saga Pat o bueno, a implicar
+
+1223
+01:26:34.200 --> 01:26:36.570
+este una buena réplica de se qs,
+
+1224
+01:26:36.950 --> 01:26:39.090
+nos van a permitir a nosotros, bueno,
+
+1225
+01:26:39.430 --> 01:26:42.010
+las cosas a síncrona o la información que tenemos.
+
+1226
+01:26:43.230 --> 01:26:45.540
+Este que no es consistente.
+
+1227
+01:26:46.200 --> 01:26:50.460
+Sí, este recordemos también el teorema cap que no va a ser
+
+1228
+01:26:50.460 --> 01:26:52.300
+consistente, pero bueno, va a estar lo
+
+1229
+01:26:52.300 --> 01:26:53.700
+más actualizar posible.
+
+1230
+01:26:53.840 --> 01:26:56.060
+Nos van a permitir atacar este tipo de problema.
+
+1231
+01:26:57.120 --> 01:27:01.610
+Bien, entonces sacar un poco cómo
+
+1232
+01:27:01.610 --> 01:27:04.180
+podríamos cambiar lo que cambiamos.
+
+1233
+01:27:04.180 --> 01:27:06.540
+Ahora, lo que hice acá es que cambiamos ahora validamos lo
+
+1234
+01:27:06.540 --> 01:27:09.220
+mismo indispensable, una réplica interna y el resto lo
+
+1235
+01:27:09.220 --> 01:27:13.210
+manejamos a síncronamente, eh, en particular, eh,
+
+1236
+01:27:13.450 --> 01:27:15.330
+a síncronamente nosotros,
+
+1237
+01:27:15.630 --> 01:27:19.330
+lo que hacemos es valide con summer mesas ahí las flitas me
+
+1238
+01:27:19.450 --> 01:27:21.650
+pongo súper explícito que las fl quitas.
+
+1239
+01:27:21.650 --> 01:27:23.010
+No son las correctas de todo.
+
+1240
+01:27:23.690 --> 01:27:26.210
+Y por lo que hacemos es consum service cuando pueda,
+
+1241
+01:27:26.350 --> 01:27:28.610
+le avisa ahí lo que hacen ustedes
+
+1242
+01:27:28.610 --> 01:27:29.810
+se llaman a kitchen service.
+
+1243
+01:27:30.330 --> 01:27:32.930
+Después kiten service les avisa y van llamando nosotros
+
+1244
+01:27:33.090 --> 01:27:35.410
+servicios y va haciendo toda síncrono hasta que en algún
+
+1245
+01:27:35.410 --> 01:27:37.450
+memento no se vamos a poder volver a
+
+1246
+01:27:37.560 --> 01:27:39.010
+consultar a order service.
+
+1247
+01:27:39.490 --> 01:27:44.460
+Y vamos a poder saber el estatus de la respuesta. Ah, sí.
+
+1248
+01:27:46.410 --> 01:27:48.800
+Estos patrones lo estamos viendo como soluciones
+
+1249
+01:27:49.390 --> 01:27:51.840
+ante este tipo de problemas donde nosotros encontramos un
+
+1250
+01:27:51.960 --> 01:27:54.080
+servicio que está muy acoplado a otro.
+
+1251
+01:27:54.720 --> 01:27:57.240
+Entonces tenemos que intentar desacoplarnos porque sino al
+
+1252
+01:27:57.240 --> 01:28:00.400
+final lo que hicimos, pues traspasar,
+
+1253
+01:28:00.400 --> 01:28:02.840
+pasar de tener varias llamadas a funciones,
+
+1254
+01:28:03.200 --> 01:28:05.280
+a tener una cantidad de llamadas a TTP.
+
+1255
+01:28:05.680 --> 01:28:06.800
+Y eso no es lo ideal.
+
+1256
+01:28:07.180 --> 01:28:11.040
+Sí, porque recordemos que las ricos síncrona acopla y además
+
+1257
+01:28:11.180 --> 01:28:13.000
+van a agregar más allá que nosotros.
+
+1258
+01:28:13.000 --> 01:28:15.400
+Podemos explicar los micro servicios en el mismo ambiente
+
+1259
+01:28:16.040 --> 01:28:18.800
+y la comunicaciones tp puede ser más rápidas.
+
+1260
+01:28:18.840 --> 01:28:20.360
+Y nosotros lo orientamos bien de la nube.
+
+1261
+01:28:20.730 --> 01:28:25.480
+Puede generar algún este otro puede generar alguna este
+
+1262
+01:28:25.940 --> 01:28:27.640
+algún cómo llama?
+
+1263
+01:28:28.440 --> 01:28:30.120
+O sea, puede generar alguna latencia.
+
+1264
+01:28:30.200 --> 01:28:32.840
+Y eso, este va tore en topeando,
+
+1265
+01:28:32.840 --> 01:28:36.840
+lo que es empeorando los tiempos que tiene dar reue bueno,
+
+1266
+01:28:36.850 --> 01:28:38.440
+hasta ahora alguna consulta?
+
+1267
+01:28:38.440 --> 01:28:40.240
+Alguna duda? Algo que no les haya quedado claro.
+
+1268
+01:28:46.710 --> 01:28:50.020
+Bueno, bien, extracción de micro servicio.
+
+1269
+01:28:50.610 --> 01:28:53.540
+Ah, ustedes van a,
+
+1270
+01:28:53.840 --> 01:28:56.460
+vas allá que pino una estrategia ahí present en todo
+
+1271
+01:28:57.750 --> 01:29:00.050
+hoy en día, ustedes nos tienen su servicio funcionando.
+
+1272
+01:29:00.050 --> 01:29:03.880
+Pero imagínense que ustedes necesitaran tener, o sea,
+
+1273
+01:29:03.880 --> 01:29:07.160
+tuvieran todo esto despeado en producción s 100, 20,
+
+1274
+01:29:07.160 --> 01:29:08.720
+50 clientes diarios que están
+
+1275
+01:29:08.720 --> 01:29:09.920
+interactuados con su aplicación.
+
+1276
+01:29:10.650 --> 01:29:12.120
+Cómo quedarían esto?
+
+1277
+01:29:12.370 --> 01:29:15.520
+Bueno, hay una manera como dir desacoplando
+
+1278
+01:29:16.450 --> 01:29:20.120
+los micro servicios, lo que es esta transición
+
+1279
+01:29:20.650 --> 01:29:23.760
+nueva funcionalidades implementarlas en micro servicios.
+
+1280
+01:29:24.100 --> 01:29:26.890
+Sí. Bien, gradualmente con
+
+1281
+01:29:27.450 --> 01:29:29.130
+comenzar la extracción del monolito.
+
+1282
+01:29:29.410 --> 01:29:33.740
+Entonces, algo que es clave si tejas identifican que va a
+
+1283
+01:29:33.740 --> 01:29:37.620
+ver una nueva feature, proponerse a no hacerla en el mismo
+
+1284
+01:29:37.640 --> 01:29:40.140
+monito, si yo intentar hacerla
+
+1285
+01:29:40.710 --> 01:29:43.060
+fuera de lo que es ese servicio.
+
+1286
+01:29:43.460 --> 01:29:45.940
+Y pues gradualmente comenzar la extracción
+
+1287
+01:29:46.480 --> 01:29:50.020
+del monolito es pasito, empezar a sacarlo.
+
+1288
+01:29:51.830 --> 01:29:54.480
+Bueno, hacerlo un proceso interactivo.
+
+1289
+01:29:54.880 --> 01:29:58.340
+Servicio a servicio está no, no
+
+1290
+01:29:59.000 --> 01:30:03.460
+es recomendado ahí, como dice el big bang de una manera,
+
+1291
+01:30:04.080 --> 01:30:08.320
+eh, no parar todo, decir, dejamos de funcionar,
+
+1292
+01:30:08.320 --> 01:30:10.960
+usted lo pueden hacer porque está en un obligatorio local,
+
+1293
+01:30:11.200 --> 01:30:14.600
+o sea local de una manera están en un obligatorio que
+
+1294
+01:30:14.980 --> 01:30:16.160
+que lo tienen hecho ustedes.
+
+1295
+01:30:16.600 --> 01:30:18.890
+Entonces este
+
+1296
+01:30:21.700 --> 01:30:24.320
+te es, no tienen clientes que los tengo consumiendo.
+
+1297
+01:30:24.990 --> 01:30:27.840
+Pero ahora la idea es que ustedes se pisn a separar esas
+
+1298
+01:30:27.840 --> 01:30:28.960
+pequeñas funcionalidades.
+
+1299
+01:30:29.800 --> 01:30:32.160
+Y es más, si ya ustedes detectan una funcionaria nueva,
+
+1300
+01:30:32.190 --> 01:30:34.960
+creo que solo lo autoría ya la hacen como micro,
+
+1301
+01:30:35.860 --> 01:30:38.280
+ya pueden arrancar y hacer nuevo de autoría con micro
+
+1302
+01:30:38.520 --> 01:30:42.100
+servicio y sa y definir ese, ese boiler plate,
+
+1303
+01:30:42.280 --> 01:30:43.740
+esa estructura, ese templa
+
+1304
+01:30:45.000 --> 01:30:48.060
+lo que van a tener ustedes para que puedan escribir otros
+
+1305
+01:30:48.060 --> 01:30:49.140
+pi servicios más rápido.
+
+1306
+01:30:49.770 --> 01:30:52.770
+Entonces dice, bueno, migrar uno y volver si sirve o no.
+
+1307
+01:30:52.970 --> 01:30:55.930
+Y aprender de eso lo habla como un modelo iterativo.
+
+1308
+01:30:56.110 --> 01:30:59.530
+De nuevo, imaginemos nosotros que tenemos la aplicación
+
+1309
+01:30:59.880 --> 01:31:01.130
+funcionando en producción.
+
+1310
+01:31:01.490 --> 01:31:04.290
+Entonces nosotros nos podemos parar todo y hacer o ponernos
+
+1311
+01:31:04.290 --> 01:31:05.610
+a escribir todo el cod.
+
+1312
+01:31:05.910 --> 01:31:08.490
+Porque qué es lo que pasa? Tiene un proyecto normal.
+
+1313
+01:31:08.990 --> 01:31:10.610
+El monolito está funcionando.
+
+1314
+01:31:10.690 --> 01:31:13.210
+Y ese monolito en los meses que nosotros vamos
+
+1315
+01:31:13.210 --> 01:31:14.290
+migrando a micro servicio.
+
+1316
+01:31:15.330 --> 01:31:18.450
+Sí, va a tener cambios. Sí.
+
+1317
+01:31:18.610 --> 01:31:20.930
+Entonces imagínense que ustedes arrancan para arrancar el
+
+1318
+01:31:20.930 --> 01:31:24.330
+diseño, o sea o diseño uno arrancaron el desarrollar una
+
+1319
+01:31:24.330 --> 01:31:27.650
+feature y su obligatorio fue cambiando.
+
+1320
+01:31:27.770 --> 01:31:31.600
+Entonces, cuando van merara y conflicto, sí, o
+
+1321
+01:31:32.780 --> 01:31:34.660
+sea, pasa la mon Antonio local,
+
+1322
+01:31:35.010 --> 01:31:36.780
+imagínense en un monolito grande.
+
+1323
+01:31:37.440 --> 01:31:40.140
+Si ustedes empiezan a de a acopla micro servicio.
+
+1324
+01:31:40.220 --> 01:31:41.340
+Y qué pasó en ese meses?
+
+1325
+01:31:41.340 --> 01:31:43.340
+Todos mes empiezan a acopla todos micro servicios.
+
+1326
+01:31:43.340 --> 01:31:45.220
+Y qué pasó? Y la funcionalidades cambiaron?
+
+1327
+01:31:45.220 --> 01:31:47.060
+Se atacaron back un problema.
+
+1328
+01:31:47.730 --> 01:31:50.210
+Entonces, lo que dice acá es bueno, empezamos a a
+
+1329
+01:31:51.490 --> 01:31:54.660
+este desarmarlo en un proceso iterativo de separación,
+
+1330
+01:31:54.660 --> 01:31:56.260
+lo más minuciosa y mínimo posible.
+
+1331
+01:31:56.770 --> 01:32:00.760
+Empieza atraer separar, sacó uno, lo pongo acá, sacó dos,
+
+1332
+01:32:01.020 --> 01:32:05.500
+lo pongo acá, Prue, y sirvió de ese micro servicio.
+
+1333
+01:32:06.770 --> 01:32:07.830
+Si me hizo un cambio,
+
+1334
+01:32:08.820 --> 01:32:11.450
+está sigue dando funcionalidad al usuario.
+
+1335
+01:32:11.450 --> 01:32:15.570
+Mientras tanto, este quiere decir que el manolito va a
+
+1336
+01:32:15.570 --> 01:32:18.090
+seguir funcionando y de a poquito empezará decir, bueno,
+
+1337
+01:32:18.170 --> 01:32:19.370
+a partir de ahora, empezamos a
+
+1338
+01:32:19.370 --> 01:32:20.450
+consultar este micro servicio.
+
+1339
+01:32:21.170 --> 01:32:25.520
+Entonces ustedes van separando funcionalidades nuevas,
+
+1340
+01:32:25.520 --> 01:32:28.160
+pequeñas funcionalidades, y las van probando,
+
+1341
+01:32:28.160 --> 01:32:30.080
+las van testeando, siguen dándole,
+
+1342
+01:32:30.080 --> 01:32:31.680
+funcionaría de un memento para otro.
+
+1343
+01:32:31.680 --> 01:32:33.920
+Empiezan a usar de ese micro servicio
+
+1344
+01:32:33.920 --> 01:32:35.080
+para esa funcionalidad.
+
+1345
+01:32:35.460 --> 01:32:36.480
+Eso que se acoplaron.
+
+1346
+01:32:36.880 --> 01:32:40.120
+Y así ustedes van este creciendo con eso está
+
+1347
+01:32:41.740 --> 01:32:43.360
+es como más un proceso iterativo.
+
+1348
+01:32:43.760 --> 01:32:45.560
+Y en cuanto a lo que son los micro servicios,
+
+1349
+01:32:45.560 --> 01:32:48.160
+lo más atómicos y ir separando los más fáciles primero
+
+1350
+01:32:48.680 --> 01:32:50.280
+y después meterse en lo más difícil.
+
+1351
+01:32:50.950 --> 01:32:52.850
+Sí, es un poco.
+
+1352
+01:32:52.870 --> 01:32:57.440
+La idea es traer un primer
+
+1353
+01:32:57.720 --> 01:32:59.880
+servicio como prueba de concepto que sea bajo
+
+1354
+01:32:59.950 --> 01:33:01.040
+impacto, poco riesgo.
+
+1355
+01:33:01.040 --> 01:33:04.040
+Bueno, esto es lo que nosotros hablamos con poca dependencia
+
+1356
+01:33:04.040 --> 01:33:06.640
+que no dependa del monolito comunicación solo del
+
+1357
+01:33:06.640 --> 01:33:07.840
+monolito hacia el servicio.
+
+1358
+01:33:10.640 --> 01:33:14.560
+Entonces esto es importante, algo de autoría.
+
+1359
+01:33:14.560 --> 01:33:19.010
+Pongamos que ustedes lo tienen adentro. Ustedes.
+
+1360
+01:33:19.030 --> 01:33:23.260
+Es un, es algo de bajo impacto. Lo puede, eh?
+
+1361
+01:33:23.440 --> 01:33:26.100
+Con en teoría con pocas dependencia y ustedes podrían
+
+1362
+01:33:26.100 --> 01:33:27.220
+tenerlo de esta forma.
+
+1363
+01:33:28.100 --> 01:33:31.320
+Eh? Lo importante es que no dependa del mon comunicación
+
+1364
+01:33:31.320 --> 01:33:33.080
+solo del monolito hacia el servicio.
+
+1365
+01:33:34.120 --> 01:33:35.770
+Ah, sí.
+
+1366
+01:33:36.130 --> 01:33:39.090
+O sea, nosotros queremos que del monolito se
+
+1367
+01:33:39.090 --> 01:33:40.610
+comunique al micro servicio.
+
+1368
+01:33:41.160 --> 01:33:43.710
+Está bien.
+
+1369
+01:33:45.740 --> 01:33:48.720
+En otras palabras, necesitamos poder separar algo que est
+
+1370
+01:33:48.720 --> 01:33:51.920
+tenga el menor impacto y la me y y lo menor posible.
+
+1371
+01:33:52.700 --> 01:33:54.610
+Ah, sí.
+
+1372
+01:33:55.370 --> 01:33:59.720
+O sea que no, que él no agarre y consulte al monolito,
+
+1373
+01:33:59.720 --> 01:34:01.520
+sino que el monolito lo utiliza.
+
+1374
+01:34:01.580 --> 01:34:03.520
+Él, el micro servicio, eh,
+
+1375
+01:34:06.260 --> 01:34:08.680
+te entiende por eso poco que el lo de auditoría.
+
+1376
+01:34:08.940 --> 01:34:10.600
+Si usted quieren separar los emails,
+
+1377
+01:34:10.600 --> 01:34:11.840
+podría hacer un cambio bajo.
+
+1378
+01:34:12.200 --> 01:34:15.100
+Y esto también te sirve como, como dice ahí,
+
+1379
+01:34:15.100 --> 01:34:17.540
+proba de concepto, algo de poco impacto que no
+
+1380
+01:34:18.090 --> 01:34:22.960
+este cambia mucho si nosotros tendríamos ah,
+
+1381
+01:34:22.980 --> 01:34:25.560
+voy a sacar estos comentarios porque pueden andar.
+
+1382
+01:34:25.560 --> 01:34:28.770
+Pero si nosotros tendríamos esto acá,
+
+1383
+01:34:31.670 --> 01:34:35.320
+qué micro servicio podrían sacar cuáles traerían primero
+
+1384
+01:34:37.730 --> 01:34:39.010
+o cuál no extraían?
+
+1385
+01:34:39.010 --> 01:34:42.790
+Porque podría ser complejo notificaciones que todos de una
+
+1386
+01:34:43.930 --> 01:34:48.490
+notificaciones pagos tre equ de paquete.
+
+1387
+01:34:48.870 --> 01:34:50.650
+Sí, podemos sirviendo. Es como atacaba.
+
+1388
+01:34:51.510 --> 01:34:54.800
+Sí, bueno, en particular just lo qui,
+
+1389
+01:34:54.800 --> 01:34:56.560
+hice acá pagos es alto riesgo
+
+1390
+01:34:57.070 --> 01:34:58.810
+porque es algo clave para el negocio.
+
+1391
+01:35:00.350 --> 01:35:02.770
+Por más que no te acoplado órdenes y
+
+1392
+01:35:02.770 --> 01:35:04.570
+usuarios tienen problemas.
+
+1393
+01:35:05.270 --> 01:35:06.970
+Ventas depende hacia monito.
+
+1394
+01:35:06.990 --> 01:35:11.100
+Notificaciones es el candidato clave arrancar, eh?
+
+1395
+01:35:15.930 --> 01:35:18.470
+Yo, yo también miraría trick de paquete para acá,
+
+1396
+01:35:18.470 --> 01:35:19.710
+juste acá ese buen candidato.
+
+1397
+01:35:19.750 --> 01:35:22.330
+Pero más dependencia de tren, eh?
+
+1398
+01:35:22.750 --> 01:35:24.490
+Tre de paquetes depende del negocio
+
+1399
+01:35:25.070 --> 01:35:27.050
+porque tre de paquetes puede ser que
+
+1400
+01:35:27.050 --> 01:35:28.330
+también tenga algo de negocio.
+
+1401
+01:35:29.140 --> 01:35:33.860
+Pero si no este podrían ir a a notificación.
+
+1402
+01:35:34.480 --> 01:35:37.110
+Sí, cualquiera, esos dos sería los candidatos.
+
+1403
+01:35:37.110 --> 01:35:39.470
+Y después seguir porque tengan en cuenta que algo que
+
+1404
+01:35:39.590 --> 01:35:42.390
+nosotros vimos acá es bajo impacto, poco riego.
+
+1405
+01:35:42.590 --> 01:35:45.680
+Entonces, por más que a nivel de gráfica, pagos
+
+1406
+01:35:46.200 --> 01:35:47.560
+a nivel de dependencia, pagos,
+
+1407
+01:35:47.560 --> 01:35:49.880
+es como que clave, deme un segundito.
+
+1408
+01:36:19.450 --> 01:36:20.780
+Estamos bueno,
+
+1409
+01:36:20.780 --> 01:36:23.460
+deseamos pagos por más que tienen poca dependencias.
+
+1410
+01:36:23.460 --> 01:36:25.740
+Es algo clave y que puede tener mucho impacto
+
+1411
+01:36:28.080 --> 01:36:31.550
+definiendo que es traer después priorizar lo que mayor valor
+
+1412
+01:36:31.690 --> 01:36:32.870
+te detenerlo aparte.
+
+1413
+01:36:33.170 --> 01:36:36.550
+Sí, recordar que buscamos al pasarnos a micro servicio.
+
+1414
+01:36:36.690 --> 01:36:39.510
+Por ejemplo, si buscamos dlo independiente todo puedo
+
+1415
+01:36:39.510 --> 01:36:43.430
+priorizar es traer lo que lo que cambia más seguido antes.
+
+1416
+01:36:43.730 --> 01:36:44.790
+Sí. Bueno,
+
+1417
+01:36:44.790 --> 01:36:48.150
+algo que hice ahí tan necesario es traer algo que no cambia
+
+1418
+01:36:48.150 --> 01:36:50.070
+hace hace ocho años, no le prioridad
+
+1419
+01:36:50.070 --> 01:36:51.110
+porque no lo tocas igual.
+
+1420
+01:36:51.790 --> 01:36:56.570
+Ah, entonces también ustedes tienen que pensar una vez que
+
+1421
+01:36:56.570 --> 01:37:00.210
+va viendo esto, el costo y asimismo tienen que ver
+
+1422
+01:37:00.790 --> 01:37:02.370
+que es lo más importante.
+
+1423
+01:37:02.970 --> 01:37:05.930
+O sea que es algo que realmente el tenerlo micro servicio me
+
+1424
+01:37:05.930 --> 01:37:07.170
+va a empezar a aportar varios.
+
+1425
+01:37:07.450 --> 01:37:08.850
+Entonces, bueno, yo ya separé lo fácil.
+
+1426
+01:37:09.520 --> 01:37:11.050
+Empiezo a pensar perfecto,
+
+1427
+01:37:11.060 --> 01:37:13.250
+capaz que la parte de pagos cambia mucho.
+
+1428
+01:37:13.250 --> 01:37:15.930
+Es algo muy delicado que tiene cambios.
+
+1429
+01:37:16.340 --> 01:37:18.450
+Está se está viendo muy afectada.
+
+1430
+01:37:18.690 --> 01:37:20.580
+Entonces, capaz que lo puedo,
+
+1431
+01:37:20.830 --> 01:37:22.300
+estoy prendiendo un ejemplo capaz que me
+
+1432
+01:37:22.300 --> 01:37:23.460
+sirve ya desacoplado.
+
+1433
+01:37:23.760 --> 01:37:28.730
+Sí, es extra o escribir suele valer la pena plantearse
+
+1434
+01:37:28.730 --> 01:37:32.450
+si extraer este co el cortar y pegar
+
+1435
+01:37:33.010 --> 01:37:35.510
+o escribir de c evalu.
+
+1436
+01:37:35.510 --> 01:37:36.510
+Dependiendo, por ejemplo,
+
+1437
+01:37:36.650 --> 01:37:39.630
+cal haría de codigo posibilidad de beneficiarse una lenguaje
+
+1438
+01:37:39.800 --> 01:37:44.400
+costo de reescribir ah, en otras palabras, bueno, eh,
+
+1439
+01:37:48.170 --> 01:37:49.740
+acá lo dices yo, que fue compleja,
+
+1440
+01:37:49.900 --> 01:37:51.740
+probablemente es traer ciencia.
+
+1441
+01:37:51.880 --> 01:37:54.820
+Si yo ustedes ya tiene una logia completa, ca compleja,
+
+1442
+01:37:54.840 --> 01:37:56.880
+cálculos matemáticos, lo que sea que ya están hechos.
+
+1443
+01:37:56.930 --> 01:37:58.280
+Bueno, opide muy pegué.
+
+1444
+01:37:58.870 --> 01:38:00.890
+Sin embargo, si es algo que conviene reescribir,
+
+1445
+01:38:00.990 --> 01:38:02.370
+si es un código que está muy mal,
+
+1446
+01:38:02.370 --> 01:38:04.450
+podemos llegarnos a plantear obviamente, que
+
+1447
+01:38:05.040 --> 01:38:08.410
+normalmente el reescribir que nosotros, por más que ha ido,
+
+1448
+01:38:08.410 --> 01:38:11.730
+que feo, tenemos entendimiento de reescribir a veces lleva a
+
+1449
+01:38:11.730 --> 01:38:15.300
+tiempo y por más que puede ser lo más prohijo el tiempo
+
+1450
+01:38:15.430 --> 01:38:16.900
+lleva el tiempo de ustedes.
+
+1451
+01:38:16.970 --> 01:38:19.860
+Normalmente es dinero o tiempo que usted necesitar
+
+1452
+01:38:20.170 --> 01:38:21.500
+para trabajar su producto.
+
+1453
+01:38:23.270 --> 01:38:26.220
+Bueno, algunos pasos como para tener en cuenta identificar
+
+1454
+01:38:26.220 --> 01:38:28.380
+el servicio a extraer y cómo se va a comunicar
+
+1455
+01:38:29.230 --> 01:38:32.430
+reactualizar el monolito extrayendo las funcionalidades a un
+
+1456
+01:38:32.520 --> 01:38:34.470
+Mauro dentro del monolito es que usted
+
+1457
+01:38:35.010 --> 01:38:37.230
+ya lo hicieron porque ya lo hicieron lo más modular posible
+
+1458
+01:38:38.200 --> 01:38:39.300
+que parar la base de datos.
+
+1459
+01:38:39.300 --> 01:38:42.630
+Si utilizaron un esquema distinto, eh, por ejemplo,
+
+1460
+01:38:43.530 --> 01:38:45.870
+podres permite que ustedes tengan dos tipos
+
+1461
+01:38:45.870 --> 01:38:47.030
+de esquemas de base de datos.
+
+1462
+01:38:47.230 --> 01:38:49.230
+Entonces pueden empezar trabajando en un mismo esquema,
+
+1463
+01:38:49.230 --> 01:38:52.270
+la base de datos y después terminando estar yendo, lo
+
+1464
+01:38:53.320 --> 01:38:55.510
+crear en doro, crear el nuevo servicio migrando de la
+
+1465
+01:38:55.510 --> 01:38:59.560
+funcionalidad derar las llamadas al nuevo servicio.
+
+1466
+01:39:00.120 --> 01:39:02.880
+Y una vez, y esto es lo importante, una vez que, de nuevo,
+
+1467
+01:39:02.910 --> 01:39:04.600
+todo eso te ha pensado en un código funcionar,
+
+1468
+01:39:04.600 --> 01:39:07.200
+ustedes lo van a hacer, lo van a hacer todo junto a la vez.
+
+1469
+01:39:07.630 --> 01:39:09.320
+Pero una vez que tengo todo esto, pronto
+
+1470
+01:39:09.830 --> 01:39:11.280
+elimino el código de modelo.
+
+1471
+01:39:12.070 --> 01:39:16.590
+Sí, bueno,
+
+1472
+01:39:18.860 --> 01:39:20.260
+identificar a dónde queremos llegar.
+
+1473
+01:39:21.010 --> 01:39:25.970
+Sí, fíjense que
+
+1474
+01:39:25.970 --> 01:39:28.530
+acá muestra una imagen es que, bueno,
+
+1475
+01:39:28.730 --> 01:39:31.050
+nosotros tenemos orden de delivery management.
+
+1476
+01:39:31.390 --> 01:39:33.810
+Lo separamos. Fíjense que por un get way
+
+1477
+01:39:34.190 --> 01:39:35.410
+te podría no tenerla.
+
+1478
+01:39:35.430 --> 01:39:36.890
+No es obligatorio, tiene un goodway.
+
+1479
+01:39:38.530 --> 01:39:42.710
+Y ustedes quiere un flujo de integración entre ambos.
+
+1480
+01:39:42.790 --> 01:39:45.620
+Y separamos la base de datos. Esto, su este pres.
+
+1481
+01:39:45.860 --> 01:39:47.780
+O sea, esto se ve muy lindo.
+
+1482
+01:39:48.020 --> 01:39:49.460
+Y es algo que también como arquitecto,
+
+1483
+01:39:49.460 --> 01:39:52.740
+no ustedes podrían ir cuando van fijando las etapas para ir
+
+1484
+01:39:52.740 --> 01:39:55.580
+pasando, pensando cómo van a ir haciendo todo esto?
+
+1485
+01:39:55.740 --> 01:39:57.630
+Ustedes podrían ya hacer un flujo,
+
+1486
+01:39:58.420 --> 01:40:01.990
+podría hacer un diagrama y les podría ser muy útil de cómo
+
+1487
+01:40:01.990 --> 01:40:05.190
+quieren plasmar todos esos micro servicios y en particular
+
+1488
+01:40:05.610 --> 01:40:06.630
+en ese diagrama,
+
+1489
+01:40:06.630 --> 01:40:08.830
+poner las comunicaciones que van a tener esos micro
+
+1490
+01:40:09.030 --> 01:40:10.790
+servicios y qué problemas pueden
+
+1491
+01:40:10.790 --> 01:40:11.950
+tener con esas comunicaciones.
+
+1492
+01:40:12.530 --> 01:40:16.150
+Por ejemplo, qué problemas pueden tener si se pierde antes,
+
+1493
+01:40:16.160 --> 01:40:19.430
+antes hacía un flujo y se controlaba todo en un solo hilo
+
+1494
+01:40:19.700 --> 01:40:22.270
+este con la base de datos en el monito.
+
+1495
+01:40:23.130 --> 01:40:24.220
+Qué pasa si, por ejemplo,
+
+1496
+01:40:24.320 --> 01:40:27.660
+la orden en el ejemplo que estábamos viendo este
+
+1497
+01:40:29.410 --> 01:40:32.020
+deja de deja de estar habilitada?
+
+1498
+01:40:32.280 --> 01:40:37.000
+Sí. Bien, así que un poco de eso.
+
+1499
+01:40:38.930 --> 01:40:42.680
+Bueno, entonces acá este, esto que queremos llegar,
+
+1500
+01:40:43.200 --> 01:40:46.650
+muestra los pasos para hacer primero separamos el código.
+
+1501
+01:40:46.950 --> 01:40:48.810
+Sí, lo separamos en módulos.
+
+1502
+01:40:48.810 --> 01:40:52.170
+Varios de ustedes ya lo hicieron yo lo que decía es no
+
+1503
+01:40:52.290 --> 01:40:54.080
+tienen que hacerlo, ya no tienen que hacerlo.
+
+1504
+01:40:54.080 --> 01:40:56.120
+Ahora, pues puede comple quitarles algo.
+
+1505
+01:40:56.660 --> 01:40:58.960
+Si lo hicieron, está bien, pero puede comple quitarles un
+
+1506
+01:40:58.960 --> 01:41:01.160
+código que ustedes después cuando vean toda esta parte
+
+1507
+01:41:01.160 --> 01:41:03.680
+teórica de micro servicios, digan ah,
+
+1508
+01:41:03.760 --> 01:41:05.000
+entonces no los separé bien.
+
+1509
+01:41:05.680 --> 01:41:07.120
+O para mí no está el todo bien.
+
+1510
+01:41:07.430 --> 01:41:08.760
+Pero una vez que ustedes lo tienen, claro,
+
+1511
+01:41:09.600 --> 01:41:11.060
+pueden ir separando el código.
+
+1512
+01:41:11.060 --> 01:41:12.340
+Una vez que separan el código,
+
+1513
+01:41:12.340 --> 01:41:15.930
+pueden separar la base de datos o pueden separar,
+
+1514
+01:41:15.930 --> 01:41:17.890
+pueden separar una base de datos que pueden separar
+
+1515
+01:41:17.890 --> 01:41:18.970
+el esquema después.
+
+1516
+01:41:18.970 --> 01:41:23.470
+Luego crean el nuevo servicio que consuma ese nuevo
+
+1517
+01:41:23.470 --> 01:41:24.630
+esquema o base de datos.
+
+1518
+01:41:25.780 --> 01:41:28.270
+Acá el va a ver un paso que ustedes van a tener que separar
+
+1519
+01:41:29.090 --> 01:41:31.270
+esa base de datos en que sea una instancia distinta.
+
+1520
+01:41:31.680 --> 01:41:34.150
+Recordemos que si ustedes tienen una sola base de datos con
+
+1521
+01:41:34.310 --> 01:41:36.950
+distintos esquemas, al final tenemos el mismo problema de
+
+1522
+01:41:36.950 --> 01:41:38.070
+micro servicio disfrazado.
+
+1523
+01:41:39.470 --> 01:41:41.180
+Estoy moviendo la la imagen
+
+1524
+01:41:43.430 --> 01:41:44.990
+y después no solo lo que hacemos es
+
+1525
+01:41:45.880 --> 01:41:49.930
+este redirigimos despacito el tráfico hasta en un memento
+
+1526
+01:41:50.760 --> 01:41:54.440
+este, o sea, empezamos a redirigir el tráfico del espacio
+
+1527
+01:41:56.200 --> 01:41:57.900
+es no todo esto pensando que está en producción.
+
+1528
+01:41:57.900 --> 01:42:00.380
+Ustedes probablemente vayan por algo mucho más agresivo.
+
+1529
+01:42:01.660 --> 01:42:04.110
+Pero empezamos del pasito a redirigir el tráfico.
+
+1530
+01:42:04.180 --> 01:42:08.070
+Algunas requests de libre mar me manejaba de solo dentro los
+
+1531
+01:42:08.090 --> 01:42:09.870
+monito, las empezamos hacer acá y
+
+1532
+01:42:09.870 --> 01:42:11.030
+empezamos a ver el resultado.
+
+1533
+01:42:11.060 --> 01:42:14.310
+Esto está genial. Tener ambientes de stage de prueba de de
+
+1534
+01:42:14.450 --> 01:42:16.110
+de texting cosas que puedan probarlo
+
+1535
+01:42:16.420 --> 01:42:17.870
+percent de producción y no local.
+
+1536
+01:42:18.630 --> 01:42:21.150
+Y posteriormente lo separamos.
+
+1537
+01:42:21.930 --> 01:42:24.830
+Sí, que hacemos la limpieza del código obsoleto.
+
+1538
+01:42:25.480 --> 01:42:28.290
+Bien, bueno
+
+1539
+01:42:31.120 --> 01:42:33.690
+este acá tenemos patrones útiles bra, eh?
+
+1540
+01:42:33.690 --> 01:42:36.610
+Branch by abstraction coexistieron dos implementaciones el
+
+1541
+01:42:36.610 --> 01:42:39.210
+año funcionaria de entrar una interfaz mientras sigas
+
+1542
+01:42:39.210 --> 01:42:40.290
+trabajando con ellos.
+
+1543
+01:42:40.450 --> 01:42:41.850
+Entonces ustedes pueden tener una interfaz en
+
+1544
+01:42:41.850 --> 01:42:42.930
+este caso de la p we.
+
+1545
+01:42:43.750 --> 01:42:45.370
+En cambio, la imagen en este caso,
+
+1546
+01:42:45.370 --> 01:42:47.730
+la PT we funciona como una interfaz en encima.
+
+1547
+01:42:47.890 --> 01:42:50.530
+Nosotros vamos a hablar en particular en una clase de pit we
+
+1548
+01:42:52.220 --> 01:42:54.100
+y nosotros después, cuando la terminemos de
+
+1549
+01:42:54.100 --> 01:42:55.460
+atraer, lo sacamos.
+
+1550
+01:42:55.840 --> 01:42:58.420
+Ah, para le run hacer ambas implementaciones,
+
+1551
+01:42:58.420 --> 01:43:01.700
+reacción el tráfico para monitorear el comportamiento de la
+
+1552
+01:43:01.700 --> 01:43:02.820
+nueva antes y dejar a la vieja.
+
+1553
+01:43:02.980 --> 01:43:06.500
+O sea, te pueden hacer que mientras que eso no afecte,
+
+1554
+01:43:06.640 --> 01:43:09.620
+pueden hacer obviamente que esto está buena solamente de
+
+1555
+01:43:09.620 --> 01:43:12.390
+test, pero también pueden hacer como que apagado.
+
+1556
+01:43:12.390 --> 01:43:14.910
+Si esto tuviera que una acción que comunica el cliente o que
+
+1557
+01:43:14.910 --> 01:43:18.270
+hace algo efectivo, podrían ir replicando en la en ambas
+
+1558
+01:43:18.340 --> 01:43:20.310
+acá, perdón, podrían ir replicando en ambas
+
+1559
+01:43:20.960 --> 01:43:23.940
+hasta que diga acá este,
+
+1560
+01:43:25.440 --> 01:43:27.930
+estamos viendo que ambas se comportan de la misma forma.
+
+1561
+01:43:28.920 --> 01:43:32.610
+Sí. Y bueno, ya acá tiene un poco de lecturas con esto,
+
+1562
+01:43:32.810 --> 01:43:35.330
+nosotros terminaríamos extracción y la clase que viene
+
+1563
+01:43:35.330 --> 01:43:38.010
+empezaríamos a atacar de de frente lo que
+
+1564
+01:43:38.010 --> 01:43:39.450
+comunicación de micro servicio.
+
+1565
+01:43:39.880 --> 01:43:41.540
+Alguna duda consulta de con particular?
+
+1566
+01:43:45.200 --> 01:43:48.420
+Sí, una voles no más. Sí, claro de
+
+1567
+01:43:48.420 --> 01:43:51.360
+Que en la letra del obligatorio nos dicen el tema de los
+
+1568
+01:43:51.520 --> 01:43:53.200
+lenguajes que un micro servicio tiene que estar al menos
+
+1569
+01:43:53.220 --> 01:43:54.400
+en otro en otro lenguaje.
+
+1570
+01:43:54.400 --> 01:43:56.740
+Programación es como,
+
+1571
+01:43:57.690 --> 01:44:00.020
+como mínimo dos lenguajes o como máximo también,
+
+1572
+01:44:00.160 --> 01:44:02.060
+si queremos ponerle el gateway y hacerlo en otro
+
+1573
+01:44:02.220 --> 01:44:03.420
+lenguaje para jodar
+
+1574
+01:44:03.420 --> 01:44:04.420
+La ah, pueden hacerlo.
+
+1575
+01:44:04.600 --> 01:44:06.580
+Sí, pueden hacerlo. Claro. Sí, voy
+
+1576
+01:44:07.280 --> 01:44:08.460
+De más, muchas Gracias.
+
+1577
+01:44:08.700 --> 01:44:11.900
+O sea, pero si, pero la idea es que sea mínimo uno,
+
+1578
+01:44:13.420 --> 01:44:15.920
+lo la, mi recomendación es,
+
+1579
+01:44:16.050 --> 01:44:19.000
+hagan el más sencillo en otro porque que pasa
+
+1580
+01:44:19.020 --> 01:44:20.160
+el resto de micro servicio?
+
+1581
+01:44:20.160 --> 01:44:22.480
+Estaría bueno que ustedes generen un templa y tu boler plate
+
+1582
+01:44:22.480 --> 01:44:25.440
+pa que sea más rápido crear micro servicio.
+
+1583
+01:44:25.820 --> 01:44:29.280
+Mm, por ejemplo, pueden poner ahí en ese templa un circuit
+
+1584
+01:44:29.430 --> 01:44:32.640
+breaker ya la comunicación con podre ya todo lo que son las
+
+1585
+01:44:32.640 --> 01:44:34.240
+migraciones, entienden?
+
+1586
+01:44:34.360 --> 01:44:37.000
+Entonces, después el único que hacen es le ponen la lógica
+
+1587
+01:44:37.020 --> 01:44:38.160
+al negocio específico.
+
+1588
+01:44:38.880 --> 01:44:40.760
+Entonces ustedes se pueden crear un temple,
+
+1589
+01:44:41.220 --> 01:44:43.200
+un boiler plate, eh?
+
+1590
+01:44:44.310 --> 01:44:45.850
+Hip hop permite que ustedes creen los
+
+1591
+01:44:45.850 --> 01:44:46.930
+repositorios como templa.
+
+1592
+01:44:46.930 --> 01:44:48.090
+Y entonces los ponen como templa.
+
+1593
+01:44:48.090 --> 01:44:51.200
+Y ahí lo que hacen es lo este,
+
+1594
+01:44:51.420 --> 01:44:53.720
+los foran o usan el repositos.
+
+1595
+01:44:53.720 --> 01:44:55.000
+Cuando ustedes crean un report,
+
+1596
+01:44:55.000 --> 01:44:56.960
+les preguntan si quieren usar un repositorio como tela.
+
+1597
+01:44:56.960 --> 01:44:58.040
+Y entonces lo pueden seleccionar.
+
+1598
+01:44:58.040 --> 01:45:02.810
+Y esta tienen toda la configuración pre, eh? Entonces, bien,
+
+1599
+01:45:02.910 --> 01:45:03.910
+Muchas gracias.
+
+1600
+01:45:04.380 --> 01:45:06.450
+Vamos arriba. Unito más.

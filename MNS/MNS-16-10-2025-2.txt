@@ -1,0 +1,229 @@
+# Lectura del obligatorio 2 y marco general de la clase
+-> Clase dedicada a leer en detalle la letra del obligatorio 2, repasar seguridad y comenzar microservicios.
+-> Se aclara que el obligatorio 2 tiene puntaje mínimo (6) y obliga a entregar y agregar funcionalidades sobre lo ya implementado.
+
+## Objetivo del obligatorio 2
+-> Poner en práctica computación en la nube y diseño orientado a microservicios sobre un sistema en desarrollo.
+-> Mantener todas las funcionalidades del obligatorio 1 y sumar nuevas (no se pierde lo anterior).
+-> Migrar hacia arquitectura basada en microservicios manteniendo características cloud-native.
+
+## Recomendaciones generales del docente
+-> Mantener funcionalidades previas y agregar nuevas; si algo del O1 no quedó completo, mostrarlo ahora en la demo de O2 (qué quedó, qué se agregó).
+-> Documentación: dedicar secciones explícitas a funcionalidades agregadas respecto al O1.
+-> En el video: mostrar todo lo implementado; si algo falló/no llegó, decirlo explícitamente (impacta menos que omitirlo).
+-> Estructura de repos recomendada: un repositorio por microservicio, y el frontend separado; el monolito previo puede quedar como referencia.
+-> Comunicación entre servicios: exclusivamente HTTP y/o colas de mensajes; al menos un flujo debe usar cola.
+-> Al menos un microservicio en un lenguaje distinto al resto (elige uno simple para migrar a otro lenguaje).
+-> Despliegue sin downtime entre servicios; versiones y deprecaciones gestionadas con cuidado (versionado de APIs).
+-> Docker Compose en cada repo para facilitar levantado local y reproducibilidad (README con instrucciones claras).
+
+# Requerimientos funcionales nuevos
+## 1) Equipos en la empresa cliente
+-> Administrador define equipos por empresa con nombre y descripción.
+-> Al invitar usuarios se indica equipo al que pertenecen.
+-> Oportunidades pueden tener equipo asociado (no obligatorio).
+-> Impacto en modelo de dominio y en los microservicios: revisar relaciones y mapeo por bounded contexts.
+
+## 2) Notificaciones automáticas por ventas/No-ventas
+-> Cuando una oportunidad pasa a estado final (venta o no-venta), enviar email automático a:
+    -> Todos los usuarios de la empresa cliente que pertenezcan al equipo asociado a la oportunidad, si existe ese equipo.
+-> Contenido de la notificación:
+    -> Todos los datos relevantes de la oportunidad.
+    -> Estado final alcanzado.
+    -> Fecha/hora de la acción.
+-> Suscripción a notificaciones:
+    -> Los usuarios pueden suscribirse/desuscribirse.
+    -> Decisión sugerida: por defecto suscrito; permitir opt-out.
+-> Envío asíncrono:
+    -> No debe afectar rendimiento del sistema principal.
+    -> Implementar job/worker/cola (ej. SQS, RabbitMQ, etc.).
+-> Aclaración: si la oportunidad no tiene equipo asociado, el docente entiende que no se notifica (verificar en foro si se quiere otra semántica).
+
+## 3) Auditoría de acciones administrativas y críticas
+-> Registrar acciones críticas de administradores y usuarios:
+    -> Creación de empresas, registro de usuarios, asignación de roles, cambios de configuración, etc.
+    -> Guardar fecha/hora, usuario que ejecutó, tipo de acción, y detalles.
+-> Servicio separado (microservicio de auditoría):
+    -> Para garantizar integridad y disponibilidad.
+    -> Registros inmutables y protegidos contra modificaciones no autorizadas.
+-> Interfaz para consulta de registros (para administradores):
+    -> Filtrar por rango de fechas, usuario y tipo de acción.
+-> Datos desnormalizados (no necesariamente relacionales):
+    -> Se sugiere base que permita búsquedas eficientes (p. ej., Elasticsearch, pero relacional también sirve si se justifica).
+
+## 4) Búsqueda y filtrado avanzados de oportunidades
+-> Búsqueda eficiente dentro de cuentas del usuario.
+-> Criterios de búsqueda/filtrado:
+    -> Estado, equipo, fecha, cuenta, combinación de múltiples criterios.
+-> UX de la interfaz de búsqueda:
+    -> Campo de búsqueda y filtros accesibles.
+    -> Resultados que se actualizan dinámicamente según criterios.
+    -> Manejo claro de casos sin resultados.
+-> Eficiencia:
+    -> Respuestas rápidas (performance) y escalabilidad.
+
+# Requerimientos no funcionales (NFRs)
+## Observabilidad y monitoreo
+-> Métricas mínimas por servicio en un único lugar:
+    -> Peticiones por minuto (RPS), latencia por endpoint, tasa de error por endpoint/servicio.
+-> Herramientas sugeridas:
+    -> CloudWatch (posible pero complejo), New Relic, similares.
+-> Centralización: objetivo es tener dashboard único; si no se llega, justificar decisiones y dejar base mínima.
+
+## Integración continua (CI) y pruebas
+-> Para al menos 2 microservicios:
+    -> Pruebas unitarias de los requerimientos funcionales seleccionados.
+    -> Tests preferiblemente por capas (servicio, lógica, controladores con mocks).
+-> CI debe correr automáticamente en push a rama principal (ej.: GitHub Actions).
+
+## Logs centralizados para identificación de fallas
+-> Retención centralizada de logs de todos los microservicios por al menos 48 horas.
+-> Filtrado por fecha y texto (y otros campos útiles si es posible).
+-> Alternativa mínima: CloudWatch centralizando logs por servicio; ideal: solución unificada de logging.
+
+## Estilo arquitectónico
+-> Arquitectura basada en microservicios, fronteras bien definidas y contratos claros.
+-> Comunicación exclusivamente vía HTTP y/o colas de mensajes (al menos un flujo con cola).
+-> Al menos un microservicio en lenguaje distinto al resto.
+-> Despliegue independiente por servicio; no debe provocar downtime en otros.
+-> Versionado de APIs para permitir adopción gradual.
+
+## Repositorios y plantillas
+-> Recomendado: 1 repo por microservicio + 1 repo para frontend.
+-> Se sugiere crear plantilla (boilerplate) base para microservicios:
+    -> Conexión a base de datos, healthchecks, observabilidad, Dockerfile, docker-compose, CI, etc.
+
+## Despliegue y disponibilidad
+-> Despliegues sin caída (evitar downtime):
+    -> Estrategias sugeridas: rolling, blue/green, circuit breakers, timeouts, retries.
+-> Si un microservicio falla, los demás deben seguir respondiendo con lo que puedan (degradación elegante).
+
+## Plataforma y endpoints de plataforma vs. cliente
+-> Se espera crecimiento y separación de endpoints:
+    -> Endpoints de plataforma (uso interno/admin SaaS) vs endpoints de clientes.
+-> Documentar cómo la arquitectura garantiza escalabilidad independiente entre plataforma y clientes.
+
+## Documentación obligatoria
+-> Descripción de arquitectura (vistas: módulos, componentes, despliegue, runtime/flujo de información).
+-> Justificaciones de diseño y relación con 12-Factor/Cloud-Native.
+-> Evidencia de cumplimiento de cada NFR, explícita por requerimiento; si no se explica, no se considera satisfecho.
+-> Análisis de costos:
+    -> Configuración, escalado y efecto sobre costos al crecer.
+-> Proceso de deployment:
+    -> Plataforma elegida y justificación, pasos automáticos/manuales necesarios.
+
+## Entrega, demo y artefactos
+-> Entorno público accesible (URL) del sistema en producción o demo (puede quedar desactivado luego; documentar capturas/links usados).
+-> Script de pruebas de carga (relación con métricas y límites).
+-> Colección Postman (endpoints públicos REST) y credenciales necesarias.
+-> Datos de prueba (idealmente generados por migraciones/scripts al levantar con Docker Compose).
+-> Video de demo (máx ~20 min, tolerancia pequeña):
+    -> Mostrar todos los requerimientos implementados y mencionar explícitamente los no implementados o fallidos.
+    -> Se puede editar/pegar nuevo contenido al final del video original.
+-> Posibilidad de defensas presenciales a criterio del equipo docente (no presentarse implica perder puntos del obligatorio).
+
+# Aclaraciones y Q&A de la clase
+-> Mostrar en el video también que el O1 sigue funcionando (breve, por arriba, pero que esté vivo).
+-> En caso de problemas con participación/equipo, el docente puede citar a defensa particular.
+-> Fechas: actividad movida al lunes (sobre performance y observabilidad); podrían pedir uso de New Relic; modalidad como en instancias previas (Classroom, consultas en clase).
+
+# Repaso y profundización de seguridad
+## Principios y tácticas generales repasadas
+-> Variables de entorno para secretos (no en código/repos).
+-> Validaciones en backend; no confiar en el frontend.
+-> No guardar tarjetas en BD; cifrar/proteger datos sensibles.
+-> HTTPS obligatorio (TLS), manejo de sesiones/expiración de tokens.
+-> No loguear contraseñas/tokens.
+
+## Contraseñas: hashing, salt e iteraciones
+-> No guardar contraseñas en texto plano.
+-> Hash unidireccional con salt por usuario y múltiples iteraciones.
+    -> Mitiga ataques de fuerza bruta, diccionario y rainbow tables.
+    -> Guardar: hash resultante y el salt asociado; respetar número estándar de iteraciones (p. ej., bcrypt cost recomendado, PBKDF2, Argon2 según elección).
+-> Riesgos si no hay salt/iteraciones:
+    -> Hashes iguales para contraseñas iguales, vulnerables a matching masivo.
+
+## Seguridad en dependencias y repos
+-> Auditorías automáticas (npm audit / equivalentes) integradas a CI; bloquear PR si hay vulnerabilidades críticas.
+-> Herramientas de seguridad en repos (GitHub security features) que abran PRs automáticos para actualizar.
+
+## Validaciones de entrada y salida
+-> Modelos DTO de entrada/salida para whitelisting de campos.
+-> Prevenir SQL Injection (ORM parametriza, evitar concatenaciones directas, sanitizar inputs).
+-> Prevenir XSS persistente/reflejado (escapar/sanitizar, no renderizar HTML no confiable, Content Security Policy cuando aplique).
+
+## Funcionalidades pro-usuario (confianza y control)
+-> MFA/2FA (contraseña + factor de posesión/biométrico).
+-> Ver sesiones activas y revocación forzada.
+-> Forzar updates de clientes desactualizados.
+-> Auditoría de cambios visibles a administradores cuando aplique.
+-> Backups automáticos de BD (configurar políticas y retención) para recuperación ante incidentes.
+-> Mitigación de ataques: rate limiting, bloqueo de IPs sospechosas, WAF/CDN cuando corresponda.
+
+# AWS y red: VPC, ACLs y Security Groups
+-> VPC privada recomendada; acceso administrativo vía VPN.
+-> Network ACLs (nivel subnet) vs Security Groups (nivel instancia):
+    -> NACL: stateless, reglas allow/deny, orden de evaluación.
+    -> SG: stateful, típicamente allow-only, aplicado a instancias, gestiona tráfico de retorno automáticamente.
+-> Cerrar acceso público directo a BD; acceso solo desde SG autorizados y/o por VPN/Bastion.
+
+# S3: pre-signed URLs y distribución de contenidos
+-> Subidas seguras con pre-signed PUT:
+    -> Backend emite URL temporal con content-type y tamaño; tiempo de expiración corto; acceso sólo a la clave especificada.
+-> Descargas seguras con pre-signed GET para documentos privados (expiración corta, link efímero).
+-> Contenidos públicos recurrentes (ej.: logos, portadas) vía CloudFront:
+    -> Distribuir sólo carpeta pública en S3.
+    -> Restringir métodos (GET), headers/cors/orígenes permitidos.
+    -> Beneficio: cache, menor latencia, no exponer rutas internas de S3.
+
+# Introducción a microservicios (inicio del módulo)
+## Definición y motivación
+-> Estilo arquitectónico que divide una app en servicios pequeños, autónomos, que se comunican entre sí.
+-> Motivado por escalabilidad independiente, equipos autónomos, despliegue desacoplado y manejo de complejidad.
+-> Con equipos pequeños por servicio (two-pizza teams como regla heurística).
+
+## Cuándo tiene sentido
+-> En equipos y plataformas grandes con necesidades de escalado diferenciado.
+-> En monolitos donde escalar una funcionalidad obliga a escalar todo.
+-> Requiere madurez en CI/CD, observabilidad, seguridad y operación.
+
+## Principios clave
+-> Cada microservicio con su propia base de datos (ownership de datos); compartir datos sólo vía APIs/eventos.
+-> Contratos estables y versionados; deprecación gradual (evitar romper consumidores).
+-> Comunicación síncrona (HTTP) y asíncrona (colas/eventos), preferir asincronía donde aplique resiliencia/desac acoplamiento.
+-> Diseñados para fallar y reemplazarse: sin estado, healthchecks, autoscaling, resiliencia (timeouts, retries, circuit breakers, bulkheads, idempotencia).
+-> Observabilidad desde el día 0: logs con correlación, métricas, trazas distribuidas.
+
+## Organización y propiedad
+-> Producto, no proyecto: cada microservicio es un producto con ciclo de vida continuo.
+-> Equipos multidisciplinarios por producto (backend, frontend, data, DevOps, QA, etc.).
+-> Repos por servicio; plantillas/boilerplates para estandarizar base técnica.
+
+## Beneficios y trade-offs
+-> Escalabilidad: independiente por dominio.
+-> Mantenibilidad: mejor por límites claros, aunque coordinar múltiples repos es más complejo.
+-> Despliegue: independencia y velocidad; necesita disciplina en versionado y backward compatibility.
+-> Seguridad: beneficios por aislamiento; más superficies de ataque (endpoints múltiples).
+-> Resiliencia: fallas localizadas si hay degradaciones controladas.
+-> Observabilidad: más compleja; requiere plataformas y estándares internos.
+-> Disponibilidad: puede aumentar con buenas prácticas de despliegue y desac acoplamiento.
+-> Testing: unitario por servicio + contratos + integración end-to-end donde necesario.
+-> Costos: aumentan por más infraestructura/operación; justificar con valor y escala.
+
+# Checklist sugerido de entrega (operativo)
+-> Repos separados por microservicio y frontend.
+-> Dockerfile + docker-compose + README con pasos de levantado por servicio.
+-> CI con tests unitarios (≥2 microservicios) en push a main.
+-> Métricas exportadas (RPS, latencias, errores) y dashboard único.
+-> Logs centralizados con retención ≥48h.
+-> Un flujo con cola de mensajes implementado.
+-> Un microservicio en lenguaje distinto.
+-> Auditoría implementada como servicio separado (inmutabilidad y consultas con filtros).
+-> Notificaciones por email asíncronas al equipo cuando oportunidad cierre (venta/no-venta) con suscripción de usuarios.
+-> Búsqueda/filtrado avanzado de oportunidades por criterios combinables.
+-> Documentación de arquitectura, NFRs explícitos, costos, y proceso de deployment.
+-> Colección Postman, datos de prueba y video de demo ≤20 min (con mención de gaps si los hay).
+
+# Cierre
+-> El módulo continuará con microservicios en profundidad.
+-> Mantener foco en cumplir letra del obligatorio y evidenciar cada requerimiento en documentación y demo.

@@ -1,0 +1,93 @@
+Apuntes de clase – 26/09/2025
+Desarrollo de productos de base tecnológica – Discovery, Empatía y Definición
+
+### Encadre de la clase
+- Repaso de Discovery y su carácter continuo en productos tecnológicos.
+- Uso de modelos (doble diamante, Design Thinking) como guías, no procesos rígidos.
+- Transición de Empatía → Definición; dinámica de trabajo en equipos.
+
+### Discovery continuo y doble diamante
+- Antes: Discovery como etapa inicial; ahora: proceso continuo por cambios del contexto/usuario.
+- Modelos varían, pero comparten: Empatía → Definir → (Idear/Prototipar/Testear en marco general).
+- Punto crítico: decisión de alcance (qué problema resolver y para quién).
+
+### De Empatía a Definir: objetivo y flujo
+- Objetivo: pasar del universo de hallazgos desordenados a un enfoque claro (problema/usuario/alcance).
+- Flujo general (4 pasos):
+  1) Analizar resultados de Empatía.
+  2) Compartir y capturar en equipo.
+  3) Agrupar/clasificar en clusters.
+  4) Formular enunciados de problema (POV/HMW) por cluster.
+
+### Paso 1: Analizar resultados de Empatía
+- Recolectar todo lo obtenido: entrevistas, observaciones, mapas de empatía, notas sueltas.
+- Depurar: eliminar duplicados, ordenar; subrayar frases clave, emociones, tensiones.
+- Identificar patrones y señales (recurrentes o intensas) en lo que expresan/experimentan los usuarios.
+
+### Paso 2: Compartir y capturar (divergencia)
+- Cada equipo pone “todo sobre la mesa” (frases, emociones, situaciones) sin guardarse nada.
+- Tablero común (físico/digital con post-its) para visibilizar y sumar perspectivas.
+- Objetivo: ampliar el espacio de opciones antes de converger.
+
+### Paso 3: Agrupar en clusters temáticos
+- Criterios posibles: temas, etapas del journey, perfiles, puntos de dolor, etc.
+- No hay “forma única”; se aprende por práctica e intuición.
+- Resultado: 2–4 clusters prioritarios con sustento en evidencia.
+
+### Paso 4: Formular enunciados de problema
+- Para cada cluster, redactar un POV/HMW o enunciado problema-usuario.
+- Requisitos: claro, accionable, centrado en usuario y necesidad (explícita o implícita).
+- Se puede iterar más adelante (al avanzar en solución, volver y refinar).
+
+### Perfiles/Personas
+- Seleccionar 1+ perfiles relevantes (no es obligatorio cubrir todos).
+- Contenido mínimo recomendado:
+  - Datos básicos (contexto y características relevantes).
+  - Objetivos del usuario.
+  - Motivaciones y frustraciones.
+- Sugerencia: 3 enunciados de problema relacionados (coherentes con una misma solución).
+
+### Talleres y dinámica de equipos
+- Trabajo por salas/equipos; el docente provee material de entrada (entrevistas y fotos).
+- Envío de entregables parciales por Teams (poner nombre de equipo/archivo para organizar).
+- Tiempo acotado por ejercicio; se continúa en próximas clases si no alcanza.
+
+### Ejercicio 1: Observación con Qué / Cómo / Por qué
+- Técnica: describir “Qué veo” (objetivo), “Cómo está sucediendo” (interpretación no causal), “Por qué sucede” (inferencia causal).
+- Material: fotografías en aeropuerto (slides) + entrevistas de referencia.
+- Consejos:
+  - Qué: hechos visibles (sin juicios). Ej.: “persona con brazos cruzados”.
+  - Cómo: señales interpretadas. Ej.: “parece apurado/enojado”.
+  - Por qué: hipótesis de causa. Ej.: “exceso de peso en equipaje”, “señalización confusa”.
+- Casos discutidos (ejemplos):
+  - Dormir abrazado a la valija: falta de lugares adecuados para descansar; viaje en solitario; sensación de inseguridad.
+  - Señalización confusa: personas buscando dirección; nervios/ansiedad; dificultades de orientación.
+  - Check-in con fila tensa: revisión de valija por exceso de peso o normas de seguridad; demoras; frustración en la cola.
+  - Compra online de pasajes: dudas al confirmar; necesidad de confianza y claridad en la UI.
+  - Corriendo al gate: riesgo de perder el vuelo; tiempos límite; estrés.
+  - Líquidos/equipaje: incertidumbre sobre qué se puede llevar; reglas poco claras; viaje con niños (valijas chicas) como pista contextual.
+  - Llamado por parlante (equipaje): avisos poco audibles; confusión con equipaje en escalas; instrucción poco clara.
+
+### Ejercicio 2: Analizar y organizar resultados de Empatía
+- Tareas del equipo:
+  - Leer y subrayar entrevistas (familia y joven en aeropuerto).
+  - Volcar observaciones del ejercicio 1.
+  - Capturar en un repositorio común: frases clave, emociones, frustraciones, confusiones, necesidades (explícitas/implícitas), momentos, dolores y hallazgos.
+  - Opcional: armar un journey map para ordenar el flujo (llegada, check-in, seguridad, embarque, etc.).
+- Salida: insumos listos para clustering y formulación de problemas.
+
+### Buenas prácticas y principios
+- Alternar divergencia/convergencia; no “enamorarse” temprano de una solución.
+- El proceso no es rígido; adaptar herramientas al contexto.
+- Volver atrás cuando haya nueva evidencia; iterar.
+- La calidad del problema definido guía la calidad de la solución.
+
+### Logística y materiales
+- Material en Teams: entrevistas “Aeropuerto joven” y “Aeropuerto familia”.
+- Fotos de observación en las slides; la clase recoge y consolida aportes.
+- Próximas clases: continuar con Definición (clustering/POV), luego ideación; se compartirá la letra del obligatorio.
+
+### Para el obligatorio (avance anunciado)
+- Harán Empatía con entrevistas y técnicas vistas; registrarán y organizarán evidencia.
+- Definirán el desafío y los enunciados de problema; seleccionarán perfiles clave.
+- Entregables deseables: personas, POV/HMW, clusters temáticos, fragmentos de evidencia, (opcional) journey map.

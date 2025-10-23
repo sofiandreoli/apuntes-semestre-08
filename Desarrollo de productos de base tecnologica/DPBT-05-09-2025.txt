@@ -1,0 +1,87 @@
+APUNTES DE CLASE – DPBT – Diseño, Innovación, UX, Niveles de adopción tecnológica y ejercicios IA
+
+1) Innovación más allá de la tecnología (caso Blockbuster → Netflix)
+- Punto de partida: existía una necesidad (alquilar/ver películas) y una solución vigente (Blockbuster).
+- Aparición de nuevas tecnologías (Internet) y cambios en procesos/modelos permitieron mejoras sucesivas:
+  - Versión 1: catálogo y selección de películas en la web (uso de Internet para mejorar la experiencia y disponibilidad).
+  - Versión 2: innovación en modelo de negocio y procesos: suscripción con múltiples títulos “en tránsito” y sin devoluciones presenciales (mejora de fricción de uso y logística).
+  - Versión 3: algoritmos de recomendación (IA clásica) para personalizar y aumentar descubrimiento/retención.
+- Enseñanza: innovar no es solo aplicar tecnología al producto; también es rediseñar procesos internos y el modelo de negocio.
+
+2) Diseño y experiencia de usuario (UX) en sentido amplio
+- Diseño ≠ solo UI/visual. Incluye la experiencia completa (entendimiento, flujo, ergonomía, accesibilidad, feedback, errores, etc.).
+- Ejemplo “control remoto”: comparación entre control con muchos botones vs control minimalista.
+  - El minimalista es “más usable” por tener lo necesario, menor costo cognitivo y mejor disposición física (se puede usar sin mirar).
+  - Demasiadas funciones poco usadas penalizan a la mayoría (quien no las usa paga el costo cognitivo/visual).
+- Tres pilares implícitos:
+  - Entender/descubrir: que el usuario comprenda rápido qué hacer para lograr su objetivo (bajo costo cognitivo).
+  - Ejecutar: que realizar la acción cueste poco (navegación clara, controles bien dispuestos y distinguibles).
+  - Feedback/ergonomía física (en objetos): separación de botones, formas y texturas que guíen el uso.
+- Affordance (pistas de uso que da el objeto/interfaz):
+  - Puertas “push/pull”: manija vs placa chata sugiere tirar vs empujar; evitar depender de carteles.
+  - Botones/sensores mal diseñados (ascensor, puertas automáticas, paradas, etc.) inducen errores por señales contradictorias.
+- Recomendación: evitar “carteles explicativos” en lugar de rediseñar; si hay que explicar, el diseño probablemente falla.
+
+3) Principios de descubrimiento (discovery) y validación
+- Ciclo build–measure–learn aplicado a prototipos: construir, evaluar con usuarios, aprender y ajustar.
+- Identificar usuarios/perfiles (personas) y para quién se diseña cada funcionalidad (no siempre es “para todos”).
+- Validar factibilidad técnica y viabilidad de negocio antes de construir en grande.
+- Riesgo a evitar: invertir tiempo/dinero en una solución técnicamente buena y con linda UX que nadie quiere o que no es viable.
+- Discovery es continuo en productos de larga vida: nuevas necesidades emergen durante delivery; retroalimentación constante.
+
+4) Innovación: definición y enfoques
+- Innovar = introducir algo nuevo que genere valor y tenga impacto real (implementación/adopción).
+- Ámbitos: producto, procesos, modelo de negocio (los tres pueden combinarse).
+- Dos caminos que se complementan:
+  - Problema → buscar tecnología/solución adecuada.
+  - Tecnología nueva → explorar qué problemas habilita resolver (o de nuevas formas) y su valor.
+
+5) “Conectar puntos” (Steve Jobs) y creatividad
+- Crear suele ser combinar conocimientos previos (puntos) adquiridos en experiencias variadas.
+- Recomendación: cultivar intereses diversos (p. ej., neurociencia, comportamiento humano) que luego se integren con UX/tecnología.
+- Los “puntos” rara vez se entienden hacia adelante; se conectan mirando hacia atrás.
+
+6) Exaptación (exaptation) vs adaptación (evolution) como metáfora en innovación
+- Adaptación (biología): rasgos seleccionados para un uso específico (jirafas/cuello largo; estrés como respuesta de supervivencia).
+- Exaptación: rasgo/tecnología creada con un fin que luego se reutiliza para otro (plumas de aves; Post-it de 3M: adhesivo débil “fallido” → notas removibles).
+- Aplicación en productos: reuso inesperado de una tech/idea para resolver otro problema (cámaras de smartphone para escaneo, drones de uso militar a agricultura, etc.).
+
+7) Tres niveles de adopción de tecnología
+- Nivel 1: mismas cosas de la misma forma, pero más eficiente (automatización, menos fricción).
+- Nivel 2: mismas cosas de nuevas formas (cambio de flujo/interacción; autoservicio, omnicanalidad).
+- Nivel 3: nuevas cosas (capacidades inexistentes antes; p. ej., “tiendas sin caja” tipo Amazon Go, o servicios proactivos).
+- Ejemplos discutidos:
+  - Cajas tradicionales → cajas de autoservicio (N1/N2, debatible: eficiencia para la tienda; para el usuario depende del contexto/colas).
+  - Amazon Go (visión por computadora, sensores): cercanía a N3 (nueva forma de comprar sin pasar por caja).
+  - Heladeras “inteligentes”: stock y pedidos automáticos según preferencias (entre N2 y N3, según alcance de automatización y servicios conectados).
+- IA generativa: habilita N2 y N3 según uso (desde acelerar tareas existentes hasta crear nuevas capacidades, p. ej., edición de imagen/video, diagnósticos asistidos, agentes).
+
+8) Ejercicios y discusiones en clase (aplicación de IA)
+- PedidosYa con IA:
+  - N2: asistente que entiende objetivos (“quiero cenar liviano con X calorías”) y recomienda platos/lugares; ETA realista con datos de clima/tráfico; traducción/descripciones; generación de fotos de platos; atención al cliente con chatbot especializado.
+  - N3: nutricionista virtual (análisis de historial/datos de salud y armado de planes/dietas); scheduling de almuerzos; optimización logística en tiempo real (entregas cooperativas entre repartidores). Requiere cambios en modelo de negocio (cómo se paga/reparte el ingreso) además de la parte técnica.
+- App de outfits con IA:
+  - Catalogar ropa del placard con fotos; sugerir combinaciones según clima, ocasión y tendencias; personalizar por tipo de cuerpo/colorimetría; listas de compras inteligentes; planificación de valija con mínima cantidad de prendas y máxima combinatoria.
+- Asistente de mentores/estudiantes (ORT):
+  - Chatbot para dudas administrativas/emocionales/burocráticas; derivación a personas/áreas; plan de estudio automático según aulas/deadlines/tiempo disponible; recordatorios y centralización de entregas.
+- Cocina/recetas con IA:
+  - Antes: base de datos rígida de recetas/ingredientes/sinónimos/sustitutos/calorías.
+  - Con IA: prompt con ingredientes (foto o texto), restricciones (dietas, calorías, alergias), preferencias y tiempo; el modelo genera recetas, maneja sinónimos/sustitutos y aprende gustos. Integración con compra automática de faltantes y, eventualmente, robots/inducción segura.
+
+9) Paradigmas de interacción: de “comandos” a “intención”
+- Paradigma 1: tarjetas perforadas/comandos (decirle a la computadora qué hacer, sin interacción directa).
+- Paradigma 2: interfaces gráficas/menús (más usables, pero el usuario sigue indicando los pasos que la app debe realizar).
+- Paradigma 3: navegación por intención (intent-based): el usuario expresa su objetivo (“una pizza Michigan mitad muzza mitad jamón”) y el sistema infiere y ejecuta los pasos (con confirmación). Ventajas:
+  - Menor carga de aprender UIs diferentes; cada app traduce la intención a sus propios flujos.
+  - Puede convivir con el paradigma 2 (explorar vs ejecutar rápido cuando el usuario ya sabe qué quiere).
+  - Requiere buenas desambiguaciones, contexto y confirmaciones.
+
+10) Conclusiones prácticas
+- Innovar es combinar tecnología, procesos y modelos de negocio según el caso.
+- Diseñar para bajar costos cognitivos y de ejecución; usar affordances claras.
+- Validar temprano con usuarios (personas/segmentos) y negocio; discovery es continuo.
+- IA habilita pasar de bases rígidas a generación/entendimiento dinámico (sinónimos, sustitutos, preferencias, restricciones), simplificando arquitectura y ampliando valor.
+- La especificación por intención es un cambio de paradigma: conviene incorporarla donde el objetivo del usuario es claro y frecuente.
+- Cultivar intereses variados enriquece la creatividad y la capacidad de “conectar puntos”.
+
+Fin de los apuntes.

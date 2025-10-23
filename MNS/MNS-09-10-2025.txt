@@ -1,0 +1,112 @@
+Apuntes de clase – 09/10/2025
+Gestión de empresas de servicios de software – Contabilidad/Finanzas, Costos, Comercial, Operaciones, Calidad y FODA
+
+### Encadre de la clase
+- Objetivo: terminar el capítulo de gestión de empresas de servicios de software.
+- Repaso de la clase pasada: misión, visión, políticas de empresa, estructuras organizativas (funcional, divisional, matricial).
+- Áreas ya vistas: RRHH y Marketing.
+
+### Contabilidad y Finanzas (introducción)
+- Propósito del área: ver la “economía de la empresa” (lo que entra/sale, caja/bancos) y apoyar la valuación de la empresa.
+- Valuación: múltiples métodos; habrá clase específica (rondas de inversión, valuación) más adelante.
+- Balance general (o de situación):
+  - Documento contable/financiero que refleja la situación económica/patrimonial en una fecha determinada.
+  - Se elabora periódicamente (p. ej., anual, semestral) para ver evolución.
+  - Relación con el año fiscal:
+    - Año calendario (01/01–31/12) o año fiscal distinto (p. ej., 01/04–31/03) según conveniencia del negocio/estacionalidad.
+    - El cierre fiscal busca agrupar ventas/costos en un periodo que “tenga sentido” para la operación.
+
+#### Conceptos clave del balance
+- Activo: recursos con valor económico que pueden generar beneficios a futuro.
+  - Tangibles: edificio, maquinaria, inventarios/stock.
+  - Intangibles: patentes, marcas, software.
+  - Distinción corriente/no corriente:
+    - Corriente: convertible en efectivo en el corto plazo (< 1 año), p. ej., caja, cuentas por cobrar.
+    - No corriente: a largo plazo, p. ej., inmuebles, inversiones a 5 años.
+  - Liquidez: efectivo en caja/bancos = capacidad de pago inmediato.
+- Pasivo: obligaciones con terceros (proveedores, préstamos, bancos, cuentas por pagar).
+- Patrimonio (patrimonio neto): diferencia entre activo y pasivo; incluye aportes de dueños y utilidades acumuladas.
+- Identidad contable: Activo = Pasivo + Patrimonio.
+- Lectura analítica (ejemplos):
+  - Aumento de efectivo: mayor liquidez (pago de deudas/sueldos, inversión, mejor cobranza, más ventas).
+  - Cuentas por cobrar altas/crecientes: riesgo de incobrabilidad; existen “incobrables” que pueden cederse a terceros (factoraje/cobranza).
+
+#### Cotización en bolsa (aclaración)
+- El precio accionario refleja expectativas del mercado sobre el futuro; el balance es uno de varios insumos para analizar solvencia/riesgo.
+
+### Costos: conceptos y clasificaciones
+- Definición: todo lo que la empresa paga para operar (sueldos, luz, alquiler, seguros, insumos, etc.).
+- Importancia: fijación de precios, análisis de rentabilidad, optimización de procesos y decisiones (qué productos/proyectos priorizar).
+
+#### Costos directos vs. indirectos
+- Directos: se asignan de forma clara a un producto/servicio específico.
+  - Ejemplos: materiales (cuero para zapatos), mano de obra directa (horas de dev/test en un proyecto).
+- Indirectos: no se asignan trivialmente a un único producto/servicio; benefician a varios.
+  - Ejemplos: alquiler de fábrica/oficina, electricidad, seguros, sueldos administrativos/gerencias.
+- Métodos de asignación de indirectos: medidores por máquina, registro de horas por proyecto, prorrateos según criterios.
+- Analogía “tarta”: ingrediente (directo) vs. electricidad/detergente/limpieza (indirectos). Ignorar indirectos “come” el margen real.
+
+#### Costos fijos vs. variables
+- Fijos: no varían con el volumen de producción/ventas (en el corto plazo).
+  - Ejemplos: alquiler, sueldos administrativos/gerencias (según política), soporte/mantenimiento de notebooks.
+- Variables: cambian con el nivel de producción/ventas.
+  - Ejemplos: materiales directos, mano de obra directa (según práctica de contratación/horas extra), comisiones de venta.
+- Nota sobre sueldos: según la política real (contratar/despedir, horas extra) pueden comportarse como fijos o variables.
+- Analogía “tarta”: alquiler del local (fijo) vs. harina/ingredientes (variables).
+
+#### Punto de equilibrio (break-even)
+- Definición: nivel de ventas/producción donde Ingresos = Costos Totales (fijos + variables); ganancia = 0.
+- Gráfica: ventas (recta creciente desde 0); costos totales (recta con pendiente menor que ventas y ordenada al origen = costos fijos).
+- Ejercicio “mochilas”:
+  - Datos: CF = 10.000; CVu = 15; Precio = 40.
+  - Cálculo: 10.000 + 15·x = 40·x ⇒ 25·x = 10.000 ⇒ x = 400 unidades (punto de equilibrio).
+  - Si x = 500: Ingresos 20.000; Costos variables 7.500; CF 10.000 ⇒ Ganancia 2.500.
+- Ejercicio “remeras” (precio de equilibrio):
+  - Datos: CF = 12.000; CVu = 18; Q = 600.
+  - Ingresos necesarios = Costos totales = 12.000 + 18·600 = 22.800 ⇒ Precio = 22.800 / 600 = 38.
+  - Objetivo de ganancia (p. ej., +3.000): (22.800 + 3.000)/600 = 43.
+
+### Área Comercial (ventas)
+- Función: estrategias comerciales; clase específica de proceso de ventas más adelante.
+- Roles típicos:
+  - Gerente comercial: lidera el área y equipo.
+  - Ejecutivos de ventas: venden; cartera de clientes (B2B: empresas asignadas).
+  - Back office comercial/soporte de ventas: prepara propuestas, precios, apoya a ejecutivos.
+  - Product Manager (en comercial): referente de producto; knowledge, soporte a vendedores, impulso comercial.
+  - Preventa técnico: puente técnico-comercial (skills técnicos + comerciales); muy demandado. Puede pertenecer a Comercial u Operaciones.
+- Marketing: a veces integrado a Comercial/Ventas; otras veces área independiente.
+
+### Precio y disposición a pagar (WTP)
+- Margen: Precio − Costos. No fijar solo por costos; considerar disposición a pagar del cliente.
+- Ejemplo: Coca-Cola en playa vs. kiosco en invierno (distinta WTP).
+- En SaaS: tiering (Basic/Plus/Enterprise) ayuda a medir WTP y capturar valor.
+- Cómo estimar WTP: encuestas, benchmarks de competencia, experimentos de precios, análisis de mercado.
+
+### Operaciones / Desarrollo
+- Alcance: producción/desarrollo de productos/servicios/proyectos; soporte preventa/posventa; atención a clientes/usuarios; I+D.
+- Organización: por proyectos, áreas específicas, tecnologías, tipo de producto, divisiones; depende del tamaño y estrategia.
+
+### Área Legal
+- Temas jurídicos/contractuales. En empresas de software suele tercerizarse (estudio/abogado de confianza); internas en grandes empresas.
+
+### Área de Compras
+- Gestión de proveedores y adquisiciones (insumos para operar/producir y, a veces, insumos generales: limpieza, papel, etc.).
+- Objetivo: mejor precio/calidad ajustado a requerimientos; aprovechar volumen para negociar.
+
+### Calidad (gestión de procesos a nivel organización)
+- No se limita a testing de software; incluye definición/gestión de procesos transversales para buscar calidad organizacional.
+- Herramientas y prácticas: uso de marcos y dinámicas de mejora continua.
+
+### Herramienta FODA (dinámica en clase: caso Uber)
+- Recomendaciones de ejecución:
+  - Equipos heterogéneos (áreas diversas, seniorities, antigüedades, géneros) para reducir sesgos; posible participación de clientes.
+  - Resultado: insumos para planes de acción (aprovechar fortalezas/oportunidades; mejorar debilidades; contingencias ante amenazas).
+- Uber (ejemplos surgidos):
+  - Fortalezas: reconocimiento global de marca; facilidad relativa para escalar oferta de conductores (con restricciones y cupos); producto valorado.
+  - Oportunidades: nuevas líneas (Uber Eats, otros); expansión a mercados; asociaciones (p. ej., partners locales).
+  - Debilidades: percepción de baja disponibilidad en picos; percepción de tarifas altas en lluvia/picos (surge pricing).
+  - Amenazas: alta competencia; cambios regulatorios/normativos por país/ciudad; restricciones legales al modelo.
+
+### Cierre y próximos pasos
+- Se completa la unidad de gestión: visión/misión/políticas; estructuras; áreas (RRHH, Marketing, Ventas, Producción/Operaciones, Administración/Contabilidad/Finanzas, Calidad, Compras, Legal) y FODA.
+- Próxima clase: abogado invitado sobre “contrato de accionistas” (preferencia por asistencia presencial).

@@ -1,0 +1,105 @@
+APUNTES DE CLASE – CASO DI BELO (EMPRENDIMIENTO), EQUIPO, PIVOT, INTRAEMPRENDIMIENTO E IMPACTO DE IA
+
+1) Invitada y contexto
+- Invitada: Paula Galotti (cofundadora y CEO de servicios en DiBelo/Develop), ex alumna de ORT e ingeniería.
+- Objetivo de la charla: recorrer el caso real desde la tesis hasta una empresa con dos áreas (producto y servicios), decisiones clave, cambios de foco, directorio, crecimiento y aprendizajes. Espacio abierto a preguntas.
+
+2) Origen: la tesis como semilla de empresa
+- En el último año, arman equipo de 4 (Paula, Joaquín Álvarez, Agustín Polione, Ignacio Fonseca).
+- Nueva iniciativa universidad–empresa: empresas traen proyectos a la universidad para que equipos trabajen y terminen como proveedores reales.
+- Decisión estratégica: perseguir esa oportunidad por la posibilidad de tener un primer cliente real (clave para cualquier emprendimiento).
+- Señal del decano (timing personal): sin anillos, sin hijos, viviendo con padres → “están en el mejor momento para emprender”.
+- La tesis incluye componente técnico + plan de negocios (novedad para la época): visión a 5 años, sustentabilidad, modelo.
+
+3) Primeros pasos: incubación y servicios (outsourcing)
+- Ingreso a la incubadora Ingenio (LATU): apoyo en marketing, ventas, RRHH, negocios.
+- Primer cliente real: InfoCorp. Modelo inicial: outsourcing/hours-based, sumando equipo a picos de demanda de terceros, principalmente stack Microsoft.
+- Rápido crecimiento de equipo (de 4 a ~20) apoyado en reclutar a los mejores compañeros de la generación.
+- Problema de sostenibilidad: mucha venta a precio bajo (tarifa-hora barata, entorno peso), dependencia de un solo cliente.
+
+4) Oportunidad producto en comunidad GeneXus y cambio de foco
+- Detección de oportunidad por experiencia previa de socios en GeneXus: crear un producto (workwithplus) que multiplica productividad/UX de GeneXus.
+- Validación en comunidad (eventos, feedback, demanda de consultoría asociada). Comunidad más chica que Microsoft pero con menos competencia y nicho desatendido.
+- Decisión fuerte: reconversión total del equipo de Microsoft → GeneXus en un año. Cortan contratos “cómodos” y apuestan al nuevo foco.
+- Evolución: de un “patrón” a suite de 5 productos (web, mobile, auditoría, BI, etc.). Se convierten en Gold Solution Partner de GeneXus.
+
+5) Estructura de negocio actual
+- Dos áreas diferenciadas:
+  - Producto (WorkWithPlus y suite): >1000 licencias/año; ~35% de facturación de producto en Japón; red de ~20 partners globales.
+  - Servicios (a medida sobre GeneXus, web/mobile/BI/automatización/UX): ~90 personas; >700 proyectos; >120 clientes; ~60 proyectos concurrentes.
+- Exportación a >30 países; presencia en Uruguay y team en Argentina (crecido en pandemia por fuerte demanda).
+- Oficinas en LATU; ecosistema tecnológico y sinergias con otras empresas.
+
+6) Inversión y gobierno corporativo
+- Ingreso de inversor (VC local, Isbel/Ingenio/“fondos”/Gabriel Colla y otros) como accionistas minoritarios: profesionalización del directorio.
+- Cambio de gestión: decisiones deben estar fundadas en números, proyecciones, KPIs, análisis; menos “intuición pura”.
+- Estructura: 4 socios fundadores con acciones y voz y voto en directorio; 2 ejecutivos (con sueldo) y 2 directores no ejecutivos (sin rol operativo). Incorporación de una accionista interna minoritaria.
+
+7) Cultura y organización
+- Crecimiento orgánico y cauto: sin préstamos, sin rojo; siempre caja positiva (trade-off: crecimiento más lento, menos sobresaltos).
+- Construcción de equipo diverso en roles: testers, devs (JR/SSR/SR), analistas funcionales, PMs, DevOps, arquitectos, people, operaciones, finanzas, ventas.
+- Delegación y especialización: founders dejan tareas técnicas/operativas a gerencias (people, tecnología, finanzas, ventas, operaciones) para escalar.
+
+8) Pandemia: shock de demanda y expansión remota
+- Temor inicial a cancelaciones; ocurrió lo contrario: aceleración de proyectos (“lo que era para el año, lo quieren ya”).
+- Contratación acelerada en Argentina para cubrir la demanda; desde entonces, equipo distribuido.
+
+9) Comercial y gestión (día a día de la CEO de servicios)
+- Fuerte componente comercial: presentaciones, propuestas, cierres, relación con clientes. Aún no delegable por conocimiento y fit.
+- Operación: revisión semanal de costos directos/indirectos por rol, gastos vs plan, forecast de facturación, tipo de cambio, decisiones de contratación por país/costo.
+- Dirección: armado y seguimiento de plan anual (crecimiento, rentabilidad, estrategia tecnológica, inversiones por iniciativa, hiring externo para capacidades faltantes).
+
+10) Aprendizajes clave del caso
+- Cliente temprano real acelera el aprendizaje y viabiliza proyectos ambiciosos; difícil lograrlo “solo” al inicio.
+- Profesionalizar gobierno mejora calidad de decisiones y disciplina financiera.
+- Cautela financiera reduce shocks, pero puede limitar la velocidad de crecimiento.
+- Reconversión tecnológica total es posible con comunicación, propósito y apoyo del equipo; puede haber bajas, pero alinear a la mayoría es crítico.
+- Número de fundadores “alto” (4) funciona si comparten etapa vital, compromiso y roles claros; no eran “amigos”, eran compatibles trabajando.
+
+11) Equity y roles en el tiempo
+- Todos con equity, voz y voto; no todos deben permanecer ejecutivos siempre. La empresa puede requerir otros liderazgos según etapa.
+- Posible sumar accionistas internos por meritocracia y rol clave.
+
+12) Interemprendimiento (intraemprendimiento)
+- Definición: emprender “desde adentro” usando recursos de una organización; crear productos/servicios/procesos nuevos sin fundar empresa aparte.
+- Ejemplo local: Óscar Washington Tabárez como intraemprendedor en la selección (rompe paradigmas, incorpora análisis de datos, tecnología; cambia políticas y equipos; apalanca soluciones externas).
+- Diferencias con emprender “tradicional”:
+  - Riesgo: lo asume el emprendedor (tiempo, capital personal) vs lo asume la organización (recursos, reputación).
+  - Autonomía: total vs parcial (alineado a objetivos/políticas de la empresa).
+  - Objetivo: independencia/crecimiento de mercado vs ventajas competitivas internas.
+- Reactivo vs proactivo:
+  - Reactivo: responde a presiones externas (clientes, competidores, regulaciones).
+  - Proactivo: surge de iniciativas internas antes de que el problema sea urgente. Más difícil de financiar; requiere apuesta previa.
+- Cultura habilitante:
+  - Tolerancia al error/fracaso (evitar castigo al “intentar y fallar”).
+  - Apoyo explícito de la dirección; recursos asignados; autonomía acotada.
+  - Puede institucionalizarse: tiempo asignado al 10–20% para innovar (modelo “20% time” como en Gmail); o equipos dedicados de innovación.
+- Beneficios para empresa y personas:
+  - Ventajas competitivas sostenibles; mejor uso de talento; motivación y desarrollo de habilidades; equipos multidisciplinarios.
+- Barreras típicas:
+  - Resistencia al cambio; falta de sponsorship; escasez de recursos; miedo al fracaso/exposición.
+- Metodologías sugeridas: Design Thinking, Lean Startup, discovery continuo, governance claro para pasar de ideas a producción (evitar “check de innovación” sin implementación real).
+- Ejemplos mencionados: Post-it (3M, adhesivo débil reutilizado), Gmail (20% en Google), PlayStation (iniciativa técnica interna en Sony), SMS (telecom, estandarización).
+
+13) IA: impacto y desafíos actuales
+- Alta ansiedad del mercado: “hay que hacer algo con IA” sin claridad de problema/valor.
+- En delivery de software:
+  - Código generado automático varía según lenguaje y corpus disponible (Angular/React/Python mejor que nichos pequeños como GeneXus).
+  - Responsabilidad sobre el código obliga a encapsular IA en piezas pequeñas, testeables y compliance-friendly.
+- Estrategia tecnológica próxima:
+  - Mantener eficiencia de GeneXus, pero integrar otras tecnologías (sobre todo front-end) para soluciones híbridas; el diferencial será entregar soluciones buenas, rápidas y eficientes, no “una sola tech”.
+
+14) Consejos prácticos para estudiantes/emprendedores
+- No esperar tener “todo pronto”: hablar con clientes temprano para validar necesidad, disposición a pagar y canal.
+- Definir mecanismos de gobierno (directorios, métricas, planes) incluso en etapas iniciales.
+- Pensar crecimiento con trade-offs: orgánico y cauto vs acelerado con deuda/capital (más riesgo/volatilidad, mayor velocidad).
+- Documentar roles y expectativas; alinear compromiso/etapa personal; estar dispuestos a delegar y a correrse si la empresa lo requiere.
+
+15) Cierre del docente: refuerzos conceptuales
+- Importancia de tener cliente temprano y por qué permitió sostener 4 fundadores.
+- Diferenciar directores ejecutivos vs no ejecutivos; dividendos vs sueldos.
+- Crecimiento implica costos (personas, estructura); no siempre “más grande = más feliz/ganancia inmediata”.
+- Discusiones sobre financiamiento: deuda/préstamo vs capital propio; compartir riesgo; costo de capital.
+- Próximas clases: acuerdo de accionistas con abogado; repaso de intraemprendimiento y modelos.
+
+Fin de los apuntes.

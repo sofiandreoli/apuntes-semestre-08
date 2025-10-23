@@ -1,0 +1,258 @@
+# Arquitectura de Software: Principios de Microservicios
+
+## Introducción a la Clase
+
+    -> Consultas sobre el obligatorio anterior relacionadas con entregas y problemas técnicos
+    -> Duda sobre requerimientos funcionales para pruebas unitarias con cobertura percent
+        -> Requerimiento: pruebas unitarias para al menos dos requerimientos funcionales de dos microservicios distintos
+        -> Cada funcionalidad debe estar en un microservicio diferente
+        -> Pueden usar los mismos dos requerimientos funcionales del obligatorio anterior si tienen cobertura percent
+    -> Aclaración sobre el gateway: se puede implementar en otro lenguaje de programación
+
+## Repaso: Arquitectura de Microservicios
+
+### Definición y Características
+
+    -> Pequeños servicios autónomos que trabajan en conjunto
+    -> Modelados alrededor de un dominio de negocio
+    -> Se escalan por separado
+    -> Pueden usar diferentes tecnologías
+    -> Se pueden tener pocos o cientos de microservicios
+
+### Comunicación entre Microservicios
+
+    -> Sincrónica mediante HTTP
+    -> Asincrónica mediante mensajería (colas de mensajes)
+    -> La arquitectura ideal requiere evaluar cuándo usar cada tipo según la complejidad del problema
+
+### Cambios Organizacionales
+
+    -> Implican cambios en la estructura organizacional
+    -> Los equipos deben trabajar de forma diferente
+    -> Cada equipo debe ser autónomo e independiente
+    -> Cada equipo debe tener los roles necesarios para funcionar
+
+## Principios de Microservicios
+
+### Modelado alrededor del Dominio de Negocio
+
+    -> Cada microservicio es un producto en sí mismo
+    -> Debemos evitar modelar microservicios como pequeños monolitos donde todos dependen de otros
+    -> El dominio de negocio define fronteras y zonas claras
+    -> Cada equipo se tiene que apropiar de su microservicio
+    -> Se recomienda seguir Domain Driven Design (DDD)
+    -> Cada microservicio debe ser modelado en torno a su dominio
+
+### Cultura y Automatización
+
+    -> Manejar muchos microservicios sin herramientas automatizadas no es viable
+    -> Se debe construir un conjunto de herramientas de automatización
+    -> La automatización permite compartir procesos entre equipos
+    -> Automatización clave: testing, CI/CD, deploy continuo
+    -> Docker permite un servicio por host, facilitando el deploy independiente
+    -> Los procesos deben poder correrse localmente con facilidad
+
+### Decentralización
+
+    -> Cada equipo debe tener la mayor libertad posible para realizar su trabajo
+    -> Cada microservicio puede usar su propio lenguaje de programación
+    -> Cada servicio debe ser independiente y desacoplado
+    -> Los equipos deben poder auto-servirse
+    -> Evitar medios de comunicación centralizados
+    -> Usar equipos cross-funcionales que puedan tocar diferentes partes del código
+
+### Ocultar Detalles de Implementación
+
+    -> Evitar acoplar microservicios compartiendo detalles internos
+    -> Cada microservicio debe validar su propia información, no confiar en otros
+    -> No compartir datos directamente entre microservicios
+        -> Parece fácil pero no permite cambios independientes
+        -> Genera acoplamiento
+    -> Usar solo las APIs o eventos necesarios
+    -> No enviar información de más ni que no sea parte de la implementación
+
+### Deploy Independiente
+
+    -> Cada microservicio debe poder desplegarse en cualquier momento sin afectar a otros
+    -> Los equipos deben trabajar sin afectar al resto de microservicios
+    -> Las actualizaciones deben pasar en su debido tiempo
+    -> Si se recibe información adicional de otro microservicio, no debería afectar el funcionamiento
+    -> Si cambia el nombre de una propiedad, el microservicio que hizo el cambio debe generar un endpoint nuevo y no forzar a otros a cambiar
+
+### Aislar Fallos
+
+    -> Una falla en un microservicio no debe afectar a todo el sistema
+    -> Ejemplo práctico: MercadoLibre
+        -> Cuando AWS tuvo problemas en una región, algunas secciones de la web seguían funcionando
+        -> Las secciones que dependían de microservicios caídos simplemente no se mostraban
+        -> Demuestra el diseño resiliente de microservicios
+    -> Construir barreras para que las fallas no se propaguen
+    -> Implementar patrones de resiliencia como circuit breaker
+
+#### Circuit Breaker
+
+    -> Patrón que evita seguir intentando conexiones cuando fallan
+    -> Después de una cantidad de fallas, retorna un error durante un tiempo
+    -> Luego pasa a un estado semi-abierto para probar si el servicio se recuperó
+    -> Útil para conexiones HTTP y también para acceso a bases de datos
+    -> Evita sobrecargar servicios que están caídos
+    -> Implementación recomendada: crear un boilerplate con circuit breaker ya implementado para reutilizar
+    -> Se puede guardar como estado interno del servicio
+
+### Altamente Observables
+
+    -> Con muchos microservicios necesitamos observabilidad centralizada
+    -> Cada microservicio tiene sus propios logs y estadísticas
+    -> Necesitamos paneles centralizados para análisis
+    -> Herramientas útiles: agregación de datos, métricas, Prometheus, logs distribuidos
+    -> Con trace IDs podemos armar el flujo completo de requests entre microservicios
+    -> Incluye poder rastrear fallos a través de los microservicios
+
+## Descomposición de Microservicios
+
+### Problema Principal
+
+    -> Cómo definir los diferentes servicios correctamente
+    -> Cómo empezar a parar esto en producción sin dejar de brindar servicios a los clientes
+    -> En proyectos reales, mientras migramos a microservicios, el monolito sigue funcionando y cambiando
+    -> Necesitamos una estrategia de transición
+
+### Tipos de Modelado para Microservicios
+
+#### Descomposición por Business Capability (Capacidad de Negocio)
+
+    -> Definir servicios de manera que correspondan a capacidades de negocio
+    -> Capacidad: lo que hace una organización para generar valor
+    -> Ejemplo: Product Management, Inventory Management, Order Management, Delivery Management
+    -> Cada microservicio aporta valor independiente
+    -> Muy parecido a separar por unidad de negocio
+
+#### Descomposición por Subdominio
+
+    -> Definir servicios por medio de subdominios
+    -> Un dominio está compuesto por muchos subdominios
+    -> Cada subdominio corresponde a una parte del negocio
+    -> Clasificación de subdominios:
+        -> Core: clave para el negocio
+        -> Supporting: relacionado con el negocio pero no diferenciador
+        -> Generic: genérico, no relacionado directamente con el negocio
+    -> Puede haber funcionalidades de dominio que no están relacionadas al negocio pero son necesarias
+
+### Conceptos y Contextos
+
+    -> Domain Driven Design promueve dividir problemas grandes en contextos
+    -> Cada contexto tiene entidades
+    -> Algunas entidades no necesitan ser comunicadas a otros contextos
+    -> Otras entidades sí deben ser compartidas con diferentes contextos
+    -> La información que precisa la entidad varía para diferentes contextos
+    -> Ejemplo: Product en ventas vs soporte
+        -> Ventas: precios, promociones
+        -> Soporte: información sobre promociones históricas para brindar ayuda
+    -> Se buscan boundaries explícitos del dominio para promover bajo acoplamiento
+
+### Ventajas de Usar Business Capability o Subdominio
+
+    -> Arquitectura estable: las business capabilities y subdominios no suelen cambiar
+    -> Equipos autónomos y auto-gestionados para entregar valor de negocio
+    -> Servicios débilmente acoplados
+    -> Requiere entendimiento del negocio: analizar propósito de la organización, estructura, procesos de negocio
+
+### Servicio por Equipo
+
+    -> Una vez identificados los servicios, definir la relación servicio-equipo
+    -> Modelo "ya-shift": cada equipo se encarga de cierta funcionalidad implementándola necesaria en todos los servicios
+    -> Modelo "pizza team": cada equipo mantiene un solo microservicio
+    -> Idealmente, cada equipo mantiene un solo microservicio (ejemplo: Amazon, un equipo por pantalla)
+    -> Ventajas del modelo pizza team:
+        -> Equipos autónomos que requieren mínima coordinación
+        -> No supera la capacidad cognitiva del equipo
+        -> Pickup de un solo servicio es más rápido ya que el equipo conoce el código
+        -> Cambios se manejan mejor cuando el equipo tiene ownership
+        -> Mejor calidad del código con un responsable claro
+
+### Self-Contained Service
+
+    -> Problema: cómo colaborar entre servicios cuando se maneja una request sincrónica
+    -> Solución: definir servicios de manera que puedan responder sincrónicamente sin esperar respuesta de otros servicios
+    -> Objetivo: que el servicio pueda responder la mayor cantidad de peticiones de manera sincrónica sin depender de otros
+
+#### Ejemplo: Servicio con Muchas Dependencias
+
+    -> Si un servicio necesita consultar múltiples servicios para responder, tiene problemas de diseño
+    -> Soluciones posibles:
+        -> No dividir los servicios siempre en primer lugar: evaluar si la división fue correcta
+        -> Usar CQRS para mantener una copia local de datos de otros servicios para validar requests
+        -> Usar polling sagas para terminar el flujo asincrónicamente asegurando consistencia
+    -> Las requests sincrónicas acoplan servicios
+    -> Las comunicaciones HTTP pueden generar latencia
+
+#### Ejemplo Aplicado: Order Service Mejorado
+
+    -> Validar con datos locales lo indispensable
+    -> Manejar el resto asincrónicamente usando colas de mensajes
+    -> Order Service valida con Consumer Service y guarda réplica interna
+    -> El resto de validaciones se hacen en background
+    -> Consumer Service avisa cuando termine
+    -> Kitchen Service recibe aviso y avisa cuando termine
+    -> Al final se consulta el status de la orden
+    -> Patrones útiles: CQRS (réplica de datos) y Saga Pattern (procesamiento asincrónico)
+
+## Extracción de Microservicios
+
+### Estrategia General
+
+    -> No implementar nuevas funcionalidades en el monolito
+    -> Implementar nuevas funcionalidades directamente en microservicios
+    -> Hacer proceso gradual e iterativo servicio a servicio
+    -> No hacer "big bang": no parar todo para migrar
+    -> Migrar uno y volver si sirve o no
+    -> Aprender de cada extracción
+
+### Selección del Primer Microservicio
+
+    -> Buscar bajo impacto y poco riesgo
+    -> Pocas dependencias
+    -> Comunicación solo del monolito hacia el servicio (no al revés)
+    -> Ejemplo mencionado: servicio de auditoría o notificaciones
+    -> Evitar extraer servicios críticos del negocio como pagos al principio
+    -> Después de lo fácil, priorizar lo que cambia más seguido
+    -> Considerar costo-beneficio: qué aporta valor tenerlo separado
+
+### Decisión: Extraer vs Reescribir
+
+    -> Si el código es complejo: probablemente es mejor extraer
+    -> Si el código está muy mal: podría convenir reescribir
+    -> Normalmente reescribir lleva tiempo y recursos
+    -> Recomendación: evaluar caso por caso
+
+### Pasos para Extraer un Microservicio
+
+    -> Identificar el servicio a extraer y cómo se va a comunicar
+    -> Refactorizar el monolito extrayendo las funcionalidades a un módulo dentro del monolito
+    -> Separar la base de datos o usar esquema distinto
+    -> Crear el nuevo servicio
+    -> Migrar la funcionalidad
+    -> Crear las llamadas al nuevo servicio
+    -> Redirigir el tráfico gradualmente
+    -> Una vez probado y funcionando: eliminar el código del monolito
+
+### Patrones Útiles para Extracción
+
+#### Branch by Abstraction
+
+    -> Coexistir dos implementaciones de la misma funcionalidad
+    -> Usar una interfaz mientras se trabaja con ambas
+    -> Ejemplo: usar gateway como interfaz encima mientras se migra
+    -> Hacer A/B testing: dirigir tráfico para monitorear comportamiento
+    -> Replicar en ambas implementaciones hasta verificar que se comportan igual
+    -> Eliminar la implementación vieja
+
+### Consideraciones Importantes
+
+    -> Tener ambientes de stage/testing para probar antes de producción
+    -> Los microservicios deben poder correrse localmente con facilidad
+    -> Crear boilerplate/template para generar microservicios más rápido
+    -> El boilerplate puede incluir: circuit breaker, migraciones, estructura básica
+    -> GitHub permite crear repositorios como template
+    -> Esto acelera la creación de nuevos microservicios
+
