@@ -1,0 +1,204 @@
+# Práctico 1: Introducción a Apache NiFi
+
+## Inicio de NiFi
+
+### Gestión del Servicio
+    -> NiFi consume muchos recursos, no se deja corriendo siempre
+    -> Comando para iniciar: `sudo systemctl start nifi`
+    -> Comando para detener: `sudo systemctl stop nifi`
+    -> Comando para verificar estado: `sudo systemctl status nifi`
+    -> En cluster real: NiFi corre en nodos separados del cluster HDFS
+
+### Acceso a la Interfaz Web
+    -> URL: http://bigdata (después de configurar archivo hosts)
+    -> Puerto por defecto: 8080
+    -> Actualizar regla HTTP en Azure antes de cada uso
+
+## Navegación en la Interfaz
+
+### Canvas (Área de Trabajo)
+    -> Área principal donde se construyen los flujos
+    -> Movimiento: Click derecho + arrastrar, o usar panel Navigate
+    -> Zoom: Rueda del mouse o controles del panel Navigate
+    -> Estadísticas globales arriba: Procesos corriendo, detenidos, warnings, errores
+
+### Paneles Laterales
+    -> **Components**: Procesos, puertos de entrada/salida, process groups, templates
+    -> **Operate**: Atajo a menús contextuales (click derecho)
+    -> **Navigate**: Controles de zoom y movimiento
+
+### Menús Contextuales
+    -> Click derecho sobre canvas o componentes
+    -> Start/Stop procesos
+    -> Configure: Propiedades del componente
+    -> View data provenance: Trazabilidad de datos
+    -> View status history: Historial de estado
+
+## Agregar Procesos
+
+### Método
+    -> Arrastrar desde panel Components al canvas
+    -> Buscar por nombre usando barra de filtro
+    -> Filtrar por tags (ej: AWS, HTTP, Database)
+
+### Procesadores Disponibles
+    -> GetFile: Leer archivos del sistema local
+    -> PutFile: Escribir archivos al sistema local
+    -> GetHTTP: Obtener datos de URLs HTTP
+    -> PutHDFS: Escribir datos a HDFS
+    -> GetMongo: Leer de MongoDB
+    -> PutMongo: Escribir a MongoDB
+    -> GetKafka: Consumir de Kafka (streaming)
+    -> ExecuteSQL: Ejecutar consultas SQL
+    -> ConvertJSONToSQL: Convertir JSON a sentencias SQL
+    -> RouteOnAttribute: Enrutar basado en atributos
+    -> UpdateAttribute: Modificar atributos de FlowFiles
+
+### Comunidad y Templates
+    -> Procesos personalizados creados por comunidad
+    -> Templates: Flujos completos exportables como XML
+    -> Compartir flujos entre instancias de NiFi
+
+## Configuración de Procesos
+
+### Propiedades Básicas
+    -> Name: Nombre descriptivo del proceso
+    -> Scheduling Strategy: Timer (cada X tiempo) o Cron (expresiones avanzadas)
+
+### Timer Scheduling
+    -> Ejecutar cada N segundos/minutos/horas
+    -> Por defecto: Cada 0 segundos (continuo)
+    -> Ejemplo: Cada 10 minutos
+
+### Cron Scheduling
+    -> Expresiones para momentos específicos
+    -> Constructor visual disponible
+    -> Ejemplos:
+        -> Cada 5 minutos de 8:00 a 9:00: `0 */5 8-9 * * ?`
+        -> Solo domingos: `0 0 8 ? * SUN`
+        -> Días 2 de cada mes: `0 0 8 2 * ?`
+
+### Execution Strategy
+    -> All nodes: Ejecutar en todos los nodos del cluster
+    -> Primary node: Solo en el nodo primario
+    -> Para procesos como GetFile: Usar Primary node para evitar duplicados
+
+### Propiedades Específicas
+    -> Varían por tipo de procesador
+    -> Hover sobre nombre de propiedad para descripción
+    -> Warnings indican configuraciones faltantes
+
+## Ejemplo: GetFile + PutHDFS
+
+### GetFile Configuration
+    -> Input Directory: Directorio origen (ej: /home/ort/data)
+    -> File Filter: Expresión regular para filtrar archivos (ej: `*.csv`)
+    -> Recurse Subdirectories: Buscar en subdirectorios (true/false)
+    -> Keep Source File: Mantener archivo origen (true) o eliminar (false)
+
+### PutHDFS Configuration
+    -> Hadoop Configuration Resources: Ruta al core-site.xml y hdfs-site.xml
+    -> Directory: Directorio destino en HDFS (ej: /data/input)
+    -> Conflict Resolution Strategy: Qué hacer si archivo existe
+
+### Conexión de Procesos
+    -> Arrastrar desde punto de conexión (verde) de un proceso
+    -> Soltar sobre proceso destino (área se pone verde)
+    -> Configurar relación: Elegir qué output conectar
+    -> Opciones avanzadas: Prioridades, load balancing
+
+## Monitoreo y Depuración
+
+### Estadísticas por Componente
+    -> FlowFiles in/out por minuto
+    -> Bytes transferidos
+    -> Tiempo de procesamiento
+    -> Errores y warnings
+
+### Refresh de Estadísticas
+    -> Click derecho > Refresh en canvas
+    -> Actualiza todas las métricas
+    -> Por defecto cada 5 minutos
+
+### Data Provenance
+    -> Trazabilidad completa de cada FlowFile
+    -> Ver transformación paso a paso
+    -> Debugging de flujos complejos
+
+### Relaciones y Terminators
+    -> Cada relación debe conectarse a otro componente o terminarse
+    -> Auto-terminate: Descarta FlowFiles sin procesar
+    -> Importante para evitar acumulación
+
+## Process Groups
+
+### Concepto
+    -> Agrupar procesos relacionados en un contenedor
+    -> Simplificar flujos complejos
+    -> Reutilizar sub-flujos
+
+### Creación
+    -> Arrastrar Process Group al canvas
+    -> Doble click para entrar al grupo
+    -> Trabajar como si fuera un canvas independiente
+
+### Puertos
+    -> Input Port: Entrada externa al grupo
+    -> Output Port: Salida externa del grupo
+    -> Conectar grupos entre sí
+
+## Templates
+
+### Creación
+    -> Seleccionar componentes > Create Template
+    -> Dar nombre y descripción
+    -> Template queda disponible en panel Components
+
+### Uso
+    -> Arrastrar template al canvas
+    -> Se instancia completo con todas las conexiones
+
+### Exportación/Importación
+    -> Exportar como XML
+    -> Compartir con otros usuarios de NiFi
+    -> Importar en otras instancias
+
+## Práctico 1: Ejercicios
+
+### Ejercicio 1: GetFile básico
+    -> Configurar GetFile para leer archivos
+    -> Conectar a LogAttribute para ver atributos
+    -> Auto-terminate la relación success
+
+### Ejercicio 2: PutHDFS
+    -> Agregar PutHDFS después de GetFile
+    -> Configurar directorio HDFS destino
+    -> Ver archivos en HDFS vía terminal
+
+### Ejercicio 3: GetHTTP
+    -> Obtener datos de una API REST
+    -> Configurar URL del endpoint
+    -> Procesar respuesta JSON
+
+### Ejercicio 4: Process Group
+    -> Crear grupo que combine GetFile + PutHDFS
+    -> Agregar puertos de entrada/salida
+    -> Reutilizar el grupo
+
+## Consejos Prácticos
+
+### Gestión de Recursos
+    -> Detener NiFi cuando no se usa
+    -> Monitorear uso de CPU/memoria
+    -> Evitar procesos corriendo innecesariamente
+
+### Debugging
+    -> Usar View data provenance para tracing
+    -> Revisar logs en NiFi UI
+    -> Auto-terminate relaciones no utilizadas
+
+### Mejores Prácticas
+    -> Nombres descriptivos para procesos
+    -> Documentar flujos complejos
+    -> Usar templates para reutilización
+    -> Probar en pequeño antes de escalar

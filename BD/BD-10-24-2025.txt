@@ -1,0 +1,232 @@
+# Apache Hive y Arquitectura de Data Lakes
+
+## Introducción a Apache Hive
+
+### ¿Qué es Apache Hive?
+    -> Software de la suite Apache Hadoop para data warehousing en Big Data
+    -> Base de datos del data lake Apache, no una base de datos tradicional
+    -> Facilita la lectura, escritura y manejo de cientos de miles de millones de registros
+    -> Permite trabajar con datos heterogéneos (estructurados, semi-estructurados, no estructurados)
+
+### Diferencias con Bases de Datos Tradicionales
+    -> No es una base de datos real: no tiene claves primarias, claves foráneas, índices, ni transacciones ACID
+    -> Alta latencia: optimizado para análisis masivo, no para consultas en tiempo real
+    -> No está pensado para responder APIs o sistemas transaccionales
+    -> Usa HDFS como sistema de archivos subyacente
+
+### Arquitectura Básica de Hive
+    -> **Hive Clients**: Interfaces para acceder (JDBC, ODBC, Thrift, CLI, Web UI)
+    -> **Hive Services**: Hive Server para recibir consultas, Hive Metastore para metadata
+    -> **Processing Engines**: MapReduce, Spark como motores de procesamiento
+    -> **Storage**: HDFS como almacenamiento físico subyacente
+
+## Hive Metastore y Metadata
+
+### Función del Metastore
+    -> Almacena toda la información lógica de las tablas (esquemas, columnas, tipos de datos)
+    -> Relaciona tablas lógicas con archivos físicos en HDFS
+    -> Gestiona particiones, índices y estadísticas
+    -> Es un repositorio centralizado de metadata
+
+### Arquitectura del Metastore
+    -> **Hive Metastore Service**: Servicio que atiende a los clientes Hive
+    -> **Metastore Database**: Base de datos (generalmente Derby o MySQL) que almacena la metadata
+    -> Separa la metadata del procesamiento de datos
+
+## Tipos de Tablas en Hive
+
+### Tablas Internas (Managed Tables)
+    -> Datos se almacenan en el warehouse directory de Hive por defecto
+    -> Al borrar la tabla, se eliminan los datos físicamente
+    -> Comando: `CREATE TABLE nombre_tabla (...)`
+    -> Riesgoso en producción: puede borrar datos accidentalmente
+
+### Tablas Externas (External Tables)
+    -> Datos se almacenan en una ubicación específica de HDFS
+    -> Al borrar la tabla, solo se elimina la definición lógica, no los datos
+    -> Comando: `CREATE EXTERNAL TABLE nombre_tabla (...) LOCATION '/path/hdfs'`
+    -> Recomendado para producción: protege los datos subyacentes
+
+### Asociación Tabla-Archivos
+    -> Las tablas son abstracciones lógicas sobre archivos
+    -> Asociación por posición, no por nombre de columna
+    -> Los archivos deben tener el mismo esquema que la tabla
+    -> Archivos pueden tener más columnas que la tabla (solo usa las primeras N)
+
+## Tipos de Datos en Hive
+
+### Tipos de Datos Primitivos
+    -> Numéricos: TINYINT, SMALLINT, INT, BIGINT, FLOAT, DOUBLE, DECIMAL
+    -> Texto: STRING, VARCHAR, CHAR
+    -> Fecha/Tiempo: DATE, TIMESTAMP, INTERVAL
+    -> Booleanos: BOOLEAN
+    -> Binarios: BINARY
+
+### Tipos de Datos Complejos
+    -> **ARRAY**: Colección de elementos del mismo tipo
+        -> Ejemplo: `ARRAY<STRING>` para lista de nombres
+        -> Acceso: `array_col[index]` (base 0)
+    -> **MAP**: Colección de pares clave-valor
+        -> Ejemplo: `MAP<STRING,INT>` para diccionarios
+        -> Acceso: `map_col['key']`
+    -> **STRUCT**: Estructuras similares a clases
+        -> Ejemplo: `STRUCT<name:STRING, age:INT>`
+        -> Acceso: `struct_col.name`, `struct_col.age`
+
+## DDL (Data Definition Language) en Hive
+
+### Creación de Bases de Datos
+    -> `CREATE DATABASE nombre_db;`
+    -> `CREATE DATABASE IF NOT EXISTS nombre_db;`
+    -> Por defecto usa esquema "default"
+    -> Puede incluir propiedades: `WITH DBPROPERTIES ('creator'='usuario', 'date'='2025-10-24');`
+
+### Eliminación de Bases de Datos
+    -> `DROP DATABASE nombre_db;` (solo si está vacía)
+    -> `DROP DATABASE nombre_db CASCADE;` (elimina tablas contenidas)
+
+### Creación de Tablas
+    -> Sintaxis similar a SQL estándar
+    -> Especificar separadores de campos: `ROW FORMAT DELIMITED FIELDS TERMINATED BY ','`
+    -> Formatos de archivo: TEXTFILE (default), ORC, PARQUET
+    -> ORC y PARQUET son formatos optimizados (compresión 50% mejor que TEXTFILE)
+
+## Particionamiento en Hive
+
+### ¿Por qué Particionar?
+    -> Hive no tiene índices: particionamiento es la única forma de optimizar consultas
+    -> Divide físicamente los datos en carpetas separadas
+    -> Permite consultas eficientes filtrando por partición
+
+### Tipos de Particionamiento
+
+#### Particionamiento Estático
+    -> Definido al crear la tabla: `PARTITIONED BY (columna tipo_dato)`
+    -> La columna de partición debe estar al final del esquema de la tabla
+    -> Hive crea carpetas físicas automáticamente: `/warehouse/table/part_col=valor/`
+    -> Recomendado: más claro y eficiente
+
+#### Particionamiento Dinámico
+    -> Tabla creada sin particiones definidas
+    -> Se particiona dinámicamente al insertar datos
+    -> Comando: `INSERT OVERWRITE TABLE tabla PARTITION (part_col) SELECT ...`
+    -> Más complejo y menos eficiente
+
+### Mejores Prácticas de Particionamiento
+    -> Elegir columnas con cardinalidad baja-media (fecha, mes, departamento)
+    -> Evitar columnas con alta cardinalidad (IDs únicos)
+    -> Siempre filtrar por columna de partición en consultas
+    -> Planificar particionamiento antes de crear tablas
+
+## Funciones en Hive
+
+### Funciones Incorporadas
+    -> Matemáticas: SUM, AVG, MIN, MAX, COUNT, ROUND
+    -> Cadenas: CONCAT, SUBSTR, UPPER, LOWER, LENGTH, REGEXP_REPLACE
+    -> Fechas: YEAR, MONTH, DAY, DATE_ADD, DATEDIFF
+    -> Condicionales: CASE WHEN, IF, COALESCE
+    -> Agregación: GROUP BY, HAVING
+
+### Funciones de Ventana (Window Functions)
+    -> Permiten cálculos entre filas relacionadas
+    -> Sintaxis: `FUNCIÓN() OVER (PARTITION BY columna ORDER BY columna)`
+    -> Ejemplos: ROW_NUMBER(), RANK(), LAG(), LEAD()
+    -> Útil para análisis secuenciales y comparaciones temporales
+
+### Funciones Definidas por Usuario (UDF)
+    -> Funciones personalizadas escritas en Java, Python, etc.
+    -> Se registran en Hive y se usan como funciones nativas
+    -> Sintaxis: `CREATE FUNCTION nombre_funcion AS 'clase.java' USING JAR 'path.jar'`
+    -> Reutilizables en múltiples consultas
+
+## Optimización y Compilación en Hive
+
+### Arquitectura del Compilador
+    -> **Parser**: Verifica sintaxis
+    -> **Semantic Analyzer**: Verifica lógica y optimiza consultas
+    -> **Logical Plan Generator**: Genera plan lógico optimizado
+    -> **Physical Plan Generator**: Convierte a operaciones MapReduce/Spark
+
+### Optimización Automática
+    -> Reordena operaciones (filtros antes que joins)
+    -> Push-down predicates
+    -> Column pruning
+    -> Partition pruning
+    -> Usa Catalyst (Spark) o Calcite para optimización avanzada
+
+## Gobierno de Datos en Hive
+
+### Organización de Datos
+    -> Seguir la misma estructura de zonas que HDFS
+    -> **Landing Zone**: Datos crudos (sin tablas)
+    -> **Refined Zone**: Datos procesados (tablas externas apuntando aquí)
+    -> **Delivery Zone**: Datos listos para consumo (tablas para reportes)
+
+### Esquemas por Propósito
+    -> `refined.facturacion`, `refined.cobranza`
+    -> `delivery.reportes`, `delivery.analitico`
+    -> Evita confusión con cientos de tablas
+
+### Seguridad y Control de Acceso
+    -> Si alguien accede a archivos HDFS, debe acceder a tablas equivalentes
+    -> Mantener coherencia entre permisos de archivos y tablas
+    -> Evitar que "se escape la tortuga" (datos sin control)
+
+## Casos de Uso y Limitaciones
+
+### Casos de Uso Adecuados
+    -> Análisis masivo de datos históricos
+    -> Data warehousing y reporting
+    -> Procesamiento batch de grandes volúmenes
+    -> Integración de datos heterogéneos
+
+### Limitaciones y Cuándo NO Usar
+    -> Consultas transaccionales (OLTP)
+    -> Respuestas en tiempo real (< 1 segundo)
+    -> Actualizaciones frecuentes de registros individuales
+    -> Sistemas con requerimientos ACID estrictos
+    -> Aplicaciones que necesiten índices tradicionales
+
+## Integración con el Ecosistema Big Data
+
+### Motores de Procesamiento
+    -> MapReduce (original)
+    -> Spark (recomendado para mejor performance)
+    -> Tez (optimizado para Hive)
+
+### Formatos de Almacenamiento
+    -> TEXTFILE: Simple pero ineficiente
+    -> ORC: Optimizado para Hive, compresión columnar
+    -> PARQUET: Multi-plataforma, excelente compresión
+
+### Integración con Herramientas
+    -> **NiFi**: Para ingesta de datos hacia Hive
+    -> **Spark**: Para procesamiento avanzado sobre tablas Hive
+    -> **Jupyter**: Para análisis interactivo vía PySpark
+    -> **Herramientas BI**: Para visualización (Tableau, Power BI conectándose a Hive)
+
+## Mejores Prácticas para Producción
+
+### Diseño de Tablas
+    -> Siempre usar tablas externas en producción
+    -> Definir particionamiento estático desde el inicio
+    -> Usar formatos ORC/PARQUET para mejor performance
+    -> Documentar esquemas y propósitos de tablas
+
+### Gestión de Datos
+    -> Implementar políticas de retención de datos
+    -> Monitorear tamaño de particiones
+    -> Planificar estrategias de backup/recovery
+    -> Validar integridad de datos regularmente
+
+### Performance
+    -> Siempre filtrar por columnas particionadas
+    -> Usar formatos comprimidos
+    -> Optimizar queries con EXPLAIN PLAN
+    -> Considerar bucketing para joins frecuentes
+
+### Seguridad
+    -> Controlar acceso a nivel de tabla y columna
+    -> Encriptar datos sensibles
+    -> Auditar consultas y accesos
+    -> Mantener separación entre ambientes (dev/test/prod)

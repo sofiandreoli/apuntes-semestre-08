@@ -1,0 +1,170 @@
+# Seguridad en Microservicios y Patrones de Datos
+
+## Seguridad en Infraestructura
+
+### Principios de Seguridad
+-> Autenticación: verificar identidad del usuario
+-> Autorización: verificar permisos para acceder recursos
+-> Integridad: asegurar datos no sean modificados
+-> Confidencialidad: proteger información sensible
+
+### Seguridad en Monolito vs Microservicios
+-> Monolito: todo centralizado, canales seguros internos
+-> Microservicios: múltiples puntos de entrada, comunicación externa
+
+### Redes y Conectividad
+#### Grupos de Seguridad y VPC
+-> Configurar redes privadas para cada ambiente
+-> Separar ambientes (desarrollo, staging, producción)
+-> Usar VPN por ambiente para evitar compartir accesos
+-> Evitar VPN compartida entre ambientes sensibles
+
+#### Bases de Datos Privadas
+-> Configurar bases de datos no públicas
+-> Usar VPN o cliente VPN de AWS para acceso
+-> Evitar exponer bases de datos directamente
+-> Instancias EC2 públicas como puente con VPN interna
+
+### Permisos y Roles
+#### Usuarios IAM
+-> Configurar límites de gastos desde el inicio
+-> Crear roles con permisos específicos, no administradores
+-> Evitar dar acceso total a desarrolladores
+-> Monitorear y auditar accesos
+
+#### Autenticación Multifactor (MFA)
+-> Obligatorio para cuentas con privilegios
+-> Previene robo de credenciales
+-> Bloquear sesiones por dispositivo específico
+
+#### Desarrollo y Producción
+-> Separar ambientes con VPNs independientes
+-> Evitar accesos directos a producción desde desarrollo
+-> Usar Docker para desarrollo local
+-> Replicar bases de datos grandes no es viable
+
+### Ataques y Vulnerabilidades
+-> Mayoría ocurren dentro de la empresa, no desde internet
+-> Malware instalado internamente roba credenciales
+-> Contenido Delivery Network (CDN) ayuda a detectar ataques
+-> Logs de requests muestran intentos de explotación
+
+## Seguridad en Microservicios
+
+### Comunicación Norte-Sur
+-> Entrada y salida de la aplicación (internet ↔ aplicación)
+-> API Gateway como punto único de entrada
+-> Maneja autenticación y autorización centralizada
+-> Protocolos seguros (HTTPS, certificados SSL/TLS)
+
+### Comunicación Este-Oeste
+-> Comunicación entre microservicios internos
+-> Múltiples puntos de entrada aumentan superficie de ataque
+-> Comunicación síncrona (HTTP) vs asíncrona (mensajes)
+
+### Estrategias de Seguridad
+
+#### Zero Trust Approach
+-> Validar cada request entre microservicios
+-> No confiar ciegamente en red privada
+-> Cada servicio valida tokens/autorización
+
+#### Tokens Opacos
+-> Tokens sin información legible (no JWT)
+-> Referencia a datos almacenados en servicio de autorización
+-> Evita exponer información sensible en headers
+
+#### JWT Distribuido
+-> Cada microservicio valida JWT con clave compartida
+-> Riesgo: robo de clave compromete todos los servicios
+-> Alternativa: claves públicas/privadas por servicio
+
+#### API Gateway como Guardián
+-> Punto único valida autenticación externa
+-> Genera tokens internos para comunicación entre servicios
+-> Microservicios confían en tokens del gateway
+
+### Problemas de Seguridad
+#### Escalabilidad vs Seguridad
+-> Más validaciones = más latencia
+-> Balance entre protección y performance
+-> CDN puede ayudar con ataques DDoS
+
+#### Desarrollo vs Producción
+-> Equipos separados para actualizar vulnerabilidades
+-> Microservicios permiten actualizaciones independientes
+-> Comunicación asíncrona reduce acoplamiento
+
+## Patrones de Datos
+
+### Base de Datos Compartida vs Base de Datos por Servicio
+
+#### Base de Datos Compartida
+-> Ventajas: transacciones ACID, consistencia simple
+-> Desventajas: acoplamiento entre servicios, escalabilidad limitada
+-> Un cambio afecta múltiples equipos
+-> Transacciones pueden bloquear servicios
+-> No permite tecnologías diferentes por servicio
+
+#### Base de Datos por Servicio
+-> Cada microservicio tiene su propia base de datos
+-> Comunicación solo por APIs/mensajes
+-> Escalabilidad independiente
+-> Tecnologías optimizadas por necesidad
+-> Deploy independiente
+
+### Persistencia Poliglota (Polyglot Persistence)
+-> Múltiples tipos de bases de datos en una aplicación
+-> Cada servicio elige tecnología óptima
+-> Ejemplos:
+    -> PostgreSQL: datos relacionales (usuarios, transacciones)
+    -> MongoDB: documentos flexibles/semi-estructurados
+    -> Redis: cache, sesiones en tiempo real
+    -> Elasticsearch: búsquedas avanzadas
+    -> Neo4j: datos de grafos (relaciones complejas)
+
+### Casos de Uso por Tecnología
+#### Base de Datos Relacional
+-> Transacciones complejas, integridad referencial
+-> Consultas con JOINs
+-> Datos estructurados y consistentes
+
+#### Base de Datos No Relacional
+-> Logs: muchas inserciones, poca consulta
+-> Datos flexibles/variables (JSON anidado)
+-> Alto volumen de escrituras
+
+#### Base de Datos de Búsqueda
+-> Consultas complejas y rápidas
+-> Indexación avanzada
+-> Recomendaciones, análisis
+
+#### Base de Datos de Grafos
+-> Relaciones complejas entre entidades
+-> Consultas recursivas/traversal
+-> Redes sociales, jerarquías
+
+### Problemas de Consistencia
+#### Transacciones Distribuidas
+-> Operaciones que afectan múltiples servicios
+-> Ejemplo: crear orden requiere validar cliente
+-> Cliente puede cambiarse durante la transacción
+-> No hay garantías ACID entre servicios
+
+#### Soluciones Temporales
+-> Limitar datos históricos (último año)
+-> Archivar datos antiguos en storage barato
+-> Usar índices/Elasticsearch para consultas rápidas
+-> Eventos asíncronos para composición de datos
+
+### Comunicación y Eventos
+#### Patrón Event Sourcing
+-> Guardar cambios como eventos secuenciales
+-> Reconstruir estado desde eventos
+-> Audit trail completo
+-> Consistencia eventual
+
+#### Sagas
+-> Manejar transacciones distribuidas complejas
+-> Compensar operaciones fallidas
+-> Próxima clase: profundizar en sagas

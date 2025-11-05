@@ -1,0 +1,71 @@
+# Introducción a Big Data
+
+## Presentación de la Materia
+    -> Objetivo: Aprender metodología y herramientas para procesar grandes volúmenes de datos
+    -> Enfoque: Datos como centro del proceso, no algoritmos o arquitecturas
+    -> Importancia: Los datos permiten tomar decisiones rápidas en empresas
+    -> Herramientas: Apache Hadoop, Spark, Python, análisis de datos
+    -> Entorno: Máquinas virtuales en Azure con data lakes completos
+    -> Evaluación: Prácticos individuales, parcial y obligatorio (proyecto de análisis de datos)
+
+## Importancia de los Datos
+    -> Activo principal de las empresas
+    -> Permiten personalización (Netflix, Uber)
+    -> Fundamentales para decisiones críticas (vacunas COVID, análisis políticos)
+    -> Ejemplos empresariales: Recuperación de datos perdidos, análisis de mercado
+
+## Roles en el Mundo de Datos
+
+### Administrador de Base de Datos (DBA)
+    -> Evolución de sistemas de archivos simples
+    -> Responsabilidades: Diseño, estructuración, optimización y seguridad de bases de datos
+    -> Importancia: Tuning de consultas, definición de esquemas, permisos
+    -> Origen: Surgió con bases de datos relacionales
+
+### Ingeniero de Datos
+    -> Evolución del DBA para entornos complejos
+    -> Tareas principales:
+        -> Diseño y construcción de pipelines de datos
+        -> Ingesta de datos de múltiples fuentes
+        -> Integración y modelado de datos
+        -> Gestión de escalabilidad
+        -> Gobernanza y seguridad de datos
+        -> Automatización y orquestación
+    -> Desafíos: Manejar 50+ fuentes de datos heterogéneas, escalabilidad horizontal/vertical
+
+### Analista de Datos
+    -> Persona con conocimiento del negocio
+    -> No necesariamente informático, pero conoce estadística básica
+    -> Tareas:
+        -> Análisis estadístico descriptivo y diagnóstico
+        -> Creación de indicadores (KPIs)
+        -> Visualización de datos
+        -> Generación de reportes e informes
+        -> Identificación de patrones ocultos (como el iceberg del Titanic)
+    -> Trabaja en conjunto con ingenieros de datos
+
+### Científico de Datos
+    -> Profesional con fuerte background matemático/estadístico
+    -> Enfocado en análisis predictivo y prescriptivo
+    -> Aplicaciones: Predicción de ventas, clasificación de clientes, análisis de sentimientos
+    -> Diferencia con ingeniero ML: Conocimiento matemático profundo vs. aplicación práctica
+
+### Consumidor Final (Tomador de Decisiones)
+    -> Gerente o ejecutivo sin conocimientos técnicos
+    -> Utiliza informes, gráficos y KPIs para tomar decisiones
+    -> Parte fundamental del ciclo de vida de los datos
+
+## Definición de Big Data
+    -> No es un volumen específico numérico
+    -> Cualquier conjunto de datos que excede capacidades tradicionales de procesamiento
+    -> Características principales:
+        -> Volumen: Cantidad masiva de datos
+        -> Velocidad: Datos generados/consumidos rápidamente
+        -> Variedad: Múltiples formatos y fuentes
+        -> Veracidad: Calidad y confiabilidad de los datos
+
+## Limitaciones de Bases de Datos Relacionales
+    -> Lentitud en inserciones masivas (controles de integridad)
+    -> Escalabilidad vertical limitada (costosa)
+    -> Esquema rígido (dificulta manejar datos no estructurados)
+    -> Problemas con datos heterogéneos (JSON, texto libre, sensores IoT)

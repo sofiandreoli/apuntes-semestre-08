@@ -1,0 +1,165 @@
+# Patrones de Datos en Microservicios
+
+## Repaso: Base de Datos por Servicio
+
+### Principios Básicos
+-> Cada microservicio tiene su propia base de datos
+-> Comunicación solo por APIs/mensajes, no acceso directo
+-> Mantener servicios desacoplados
+-> Deploy y escalado independiente
+
+### Ventajas
+-> Tecnologías optimizadas por necesidad de cada servicio
+-> Cambios en esquema no afectan otros servicios
+-> Escalabilidad independiente
+-> Deploy independiente
+
+### Desventajas
+-> Transacciones distribuidas complejas
+-> Consultas que involucran múltiples servicios
+-> Mantenimiento de muchas bases de datos
+-> No garantías ACID entre servicios
+
+## Teorema CAP y Consistencia
+
+### Teorema CAP
+-> En sistemas distribuidos: Consistencia, Disponibilidad, Tolerancia a particiones
+-> Solo se pueden garantizar 2 de las 3 propiedades
+
+#### Consistencia
+-> Todos los nodos ven los mismos datos al mismo tiempo
+-> Transacciones ACID tradicionales
+
+#### Disponibilidad
+-> Sistema responde siempre, incluso con fallos
+-> Acepta operaciones aunque haya particiones
+
+#### Tolerancia a Partición
+-> Sistema funciona aunque haya fallos de red
+-> Continúa operando cuando se pierden conexiones
+
+### Aplicación en Microservicios
+-> Partición ocurre cuando servicios no se comunican
+-> Elegir consistencia: cancelar operaciones si falla comunicación
+-> Elegir disponibilidad: continuar aunque datos puedan estar inconsistentes
+
+## Problemas de Transacciones Distribuidas
+
+### Ejemplo: Creación de Orden
+-> Crear orden requiere: validar cliente, procesar pago, actualizar stock, eliminar carrito
+-> Si falla un paso: rollback de todos los cambios previos
+-> En monolito: transacción ACID simple
+-> En microservicios: coordinación compleja entre servicios
+
+### Problemas con Enfoque Síncrono
+-> Dependencia de disponibilidad de todos los servicios
+-> Latencia acumulada por múltiples llamadas HTTP
+-> Bloqueo si un servicio está lento o caído
+-> Rollback manual complejo entre servicios
+
+### Solución: Comunicación Asíncrona
+-> Usar colas de mensajes para desacoplar operaciones
+-> Servicios publican eventos cuando completan tareas
+-> Otros servicios reaccionan a eventos
+-> Procesamiento en background mejora experiencia usuario
+
+## Patrón Saga
+
+### Concepto
+-> Secuencia de transacciones locales que pueden compensarse
+-> Cada transacción modifica datos de su servicio
+-> Publica evento que ejecuta siguiente transacción
+-> Si falla, ejecuta transacciones compensatorias (rollback)
+
+### Tipos de Sagas
+
+#### Orquestación (Orchestration)
+-> Orquestador central coordina todas las transacciones
+-> Sabe el flujo completo y estado de cada saga
+-> Maneja compensaciones cuando falla
+-> Ejemplo: componente dentro del servicio de órdenes
+    -> Recibe orden, reserva crédito, procesa pago, etc.
+    -> Si falla pago: compensa reserva de crédito
+
+#### Coreografía (Choreography)
+-> Cada servicio sabe qué hacer basado en eventos
+-> Servicios publican eventos, otros reaccionan
+-> No hay coordinador central
+-> Más desacoplado pero más complejo de seguir
+
+### Ventajas
+-> Transacciones distribuidas manejables
+-> Mejor experiencia de usuario (procesamiento asíncrono)
+-> Servicios pueden escalar independientemente
+-> Recuperación automática de fallos
+
+### Desventajas
+-> Mayor complejidad de desarrollo
+-> Dificultad para rastrear estado de saga
+-> Eventos de compensación deben diseñarse cuidadosamente
+-> Consistencia eventual, no inmediata
+
+## Implementación Práctica
+
+### Ejemplo de Flujo de Orden
+-> Usuario crea orden (síncrono: respuesta inmediata)
+-> Orquestador inicia saga asíncrona
+-> Reserva crédito → Procesa pago → Actualiza stock → Elimina carrito
+-> Cada paso: transacción local + evento
+-> Si falla: eventos de compensación en orden inverso
+
+### Colas de Mensajes
+-> Separar colas por tipo de evento
+-> Cola para operaciones normales
+-> Cola para compensaciones/rollbacks
+-> Múltiples consumidores para escalabilidad
+
+### Manejo de Errores
+-> Timeouts para evitar esperas infinitas
+-> Reintentos automáticos
+-> Workflows de recuperación para sagas incompletas
+-> Monitoreo de sagas en estado pendiente
+
+## Consultas Distribuidas
+
+### Patrón API Composition
+-> API Gateway consulta múltiples servicios
+-> Hace JOINs en memoria
+-> Útil para vistas que combinan datos de varios servicios
+-> Limitado por memoria y joins complejos
+
+### Patrón CQRS
+-> Command Query Responsibility Segregation
+-> Separar operaciones de escritura (commands) y lectura (queries)
+-> Base de datos optimizada para cada tipo de operación
+-> Servicio de queries puede tener datos denormalizados
+
+### GraphQL como Alternativa
+-> Cliente especifica exactamente qué datos necesita
+-> API Gateway resuelve consultas a múltiples servicios
+-> Reduce over-fetching de datos
+-> Cliente decide estructura de respuesta
+
+## Consideraciones Finales
+
+### Consistencia Eventual
+-> Datos eventualmente consistentes entre servicios
+-> Aceptable para la mayoría de casos de negocio
+-> Mejor que consistencia inmediata con baja disponibilidad
+
+### Complejidad Operacional
+-> Monitoreo de sagas y eventos
+-> Manejo de colas de mensajes
+-> Recuperación de fallos
+-> Requiere equipos especializados
+
+### Casos de Uso
+-> Procesos de negocio largos (compras, reservas)
+-> Operaciones que pueden fallar parcialmente
+-> Sistemas con alta concurrencia
+-> Cuando consistencia inmediata no es crítica
+
+### Alternativas
+-> Mantener monolito si transacciones son simples
+-> Usar base de datos compartida para servicios relacionados
+-> Evaluar complejidad vs beneficios antes de implementar sagas

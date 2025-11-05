@@ -1,0 +1,128 @@
+# Configuración de Entorno Azure para Big Data
+
+## Información Administrativa
+
+### Prácticos Obligatorios
+    -> 4 prácticos obligatorios en todo el curso
+    -> Trabajo en grupos de 1 a 3 estudiantes
+    -> Entregas individuales (cada integrante debe subir su entrega)
+    -> Plazo: 2 semanas desde publicación
+    -> Extensión posible con aviso previo
+    -> Sin entrega = punto menos en evaluación final
+
+### Créditos Azure
+    -> 100 créditos gratuitos por estudiante
+    -> Máquinas virtuales consumen créditos cuando están encendidas
+    -> Apagar siempre cuando no se usa
+    -> Grupos comparten créditos para respaldo
+    -> Control automático posible (reglas de apagado por gasto)
+
+## Configuración de Máquina Virtual Azure
+
+### Creación de VM
+    -> Nombre: taller-bigdata-[iniciales][número] (ej: taller-bigdata-ab1)
+    -> Región: Probar varias si hay problemas (este de EE.UU., centro de Canadá, etc.)
+    -> Zona de disponibilidad: Sin redundancia de infraestructura
+    -> Tipo de seguridad: Estándar
+    -> Imagen: Ubuntu Server 22.04 LTS (buscar "22.04" en marketplace)
+    -> Tamaño: Standard_B2s (2 vCPU, 4 GB RAM)
+    -> Autenticación: Contraseña
+        -> Usuario: ort
+        -> Contraseña: tallerOrt1!
+
+### Disco del Sistema
+    -> Tipo: SSD estándar
+    -> Configuración por defecto
+
+### Redes y Seguridad
+    -> Configuración de red por defecto
+    -> Grupo de seguridad: Crear regla HTTP
+        -> Origen: Mi IP (actualizar diariamente)
+        -> Servicio: HTTP
+        -> Acción: Permitir
+
+### Validación Final
+    -> Verificar configuración antes de crear
+    -> Deployment toma unos minutos
+    -> Máquina se enciende automáticamente
+
+## Gestión de la VM
+
+### Encendido/Apagado
+    -> Iniciar siempre antes de trabajar
+    -> Detener siempre al terminar
+    -> Reinicio automático tras instalación de herramientas
+
+### Actualización Diaria de Reglas
+    -> IP pública cambia cada 12 horas
+    -> Actualizar regla HTTP diariamente antes de trabajar
+    -> En Azure Portal: Redes > Configuración IP > Regla HTTP > Origen > Mi IP > Guardar
+
+## Conexión SSH a la VM
+
+### Desde Portal Azure
+    -> Máquinas virtuales > Conectar > SSH
+    -> Copiar comando completo: ssh ort@[IP_PUBLICA]
+
+### Desde Terminal Local
+    -> Windows: PowerShell o Command Prompt
+    -> macOS/Linux: Terminal
+    -> Comando: ssh ort@[IP_PUBLICA]
+    -> Contraseña: tallerOrt1!
+
+### Solución de Problemas
+    -> Verificar IP pública en Azure Portal
+    -> Actualizar regla HTTP si hay problemas de conexión
+    -> Usar PuTTY en Windows si es necesario
+
+## Instalación de Herramientas Big Data
+
+### Guía de Instalación (Práctico 0)
+    -> 9 pasos secuenciales
+    -> Descarga e instalación automática
+    -> Tiempo estimado: 20-30 minutos
+
+### Pasos Principales
+    -> Paso 1: Conectar por SSH
+    -> Paso 2-3: Descargar archivos de instalación
+    -> Paso 4-5: Instalar Java y herramientas (comando único, quitar saltos de línea)
+    -> Paso 6-7: Descomprimir archivos
+    -> Paso 8: Configurar permisos y ejecutar script
+    -> Paso 9: Reiniciar VM
+
+### Comandos Importantes
+    -> ls: Listar archivos
+    -> pwd: Directorio actual
+    -> cd: Cambiar directorio
+    -> wget: Descargar archivos
+    -> tar: Descomprimir archivos
+    -> chmod +x: Dar permisos de ejecución
+    -> sudo: Ejecutar como administrador
+
+## Configuración de Acceso Web Local
+
+### Archivo Hosts (Windows)
+    -> Ejecutar Bloc de notas como administrador
+    -> Archivo > Abrir > C:\Windows\System32\drivers\etc\hosts
+    -> "Todos los archivos" en tipo de archivo
+    -> Agregar al final: [IP_VM] bigdata
+    -> Guardar archivo
+
+### Verificación
+    -> Después de reinicio de VM
+    -> Abrir navegador: http://bigdata
+    -> Verificar que carga la interfaz web de Hadoop
+    -> Si no funciona: Verificar http:// en lugar de https://
+
+## Herramientas Instaladas
+    -> Apache Hadoop (HDFS, MapReduce)
+    -> Apache Spark
+    -> Jupyter Notebook
+    -> Python con librerías de ciencia de datos
+    -> Interfaces web para monitoreo
+
+## Primer Práctico (Práctico 1)
+    -> Análisis básico de datos
+    -> Uso de comandos básicos
+    -> Introducción a procesamiento distribuido
+    -> Entrega en grupos de 1-3 estudiantes

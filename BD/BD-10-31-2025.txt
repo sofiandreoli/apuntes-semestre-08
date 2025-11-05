@@ -1,0 +1,250 @@
+# Práctico 5: Apache Hive en la Práctica
+
+## Introducción al Práctico
+
+### Objetivos de la Clase
+    -> Presentar el último práctico obligatorio del curso
+    -> Mostrar funcionamiento práctico de Apache Hive
+    -> Demostrar integración entre Hive y Spark
+    -> Explicar conceptos de particionamiento
+
+### Duración y Estructura
+    -> Primera hora: Explicación teórica y demostraciones prácticas
+    -> Segunda hora: Trabajo práctico de los estudiantes
+    -> Práctico obligatorio con entrega final
+
+## Interfaces de Trabajo con Hive
+
+### Hive desde Línea de Comando
+    -> Comando: `hive` para acceder a la interfaz de comandos
+    -> Ventaja: Mayor velocidad y control para el usuario avanzado
+    -> Desventaja: Interfaz en blanco y negro, menos visual
+    -> Recomendado para usuarios experimentados
+
+### Hive desde Interfaz Web (Hue)
+    -> Acceso: http://bigdata:8888 (después de configuración)
+    -> Ventajas: Interfaz visual, guardado de historial, autocompletado
+    -> Desventajas: Latencia adicional, depende de conectividad
+    -> Recomendado para principiantes y análisis visual
+
+### Comparación de Interfaces
+    -> Ambas interfaces ejecutan las mismas consultas
+    -> Diferencia solo en presentación de resultados
+    -> Comando `play` ejecuta consultas en ambas interfaces
+
+## Gestión de Bases de Datos
+
+### Creación de Bases de Datos
+    -> Comando: `CREATE DATABASE bigdata;`
+    -> Comando con validación: `CREATE DATABASE IF NOT EXISTS bigdata;`
+    -> Esquemas disponibles: default (por defecto) y bigdata
+
+### Uso de Esquemas
+    -> Comando: `USE bigdata;` para cambiar al esquema deseado
+    -> Alternativa: Especificar esquema en cada consulta
+        -> Ejemplo: `SELECT * FROM bigdata.tabla;`
+    -> Error común: Consultas sin especificar esquema buscan en default
+
+### Eliminación de Bases de Datos
+    -> Comando: `DROP DATABASE esquema;` (solo si está vacío)
+    -> Comando con cascada: `DROP DATABASE esquema CASCADE;` (elimina tablas)
+
+## Tipos de Tablas en Hive
+
+### Tablas Internas (Managed Tables)
+    -> Creación: `CREATE TABLE nombre (...)`
+    -> Almacenamiento: En warehouse directory de Hive por defecto
+    -> Eliminación: `DROP TABLE` elimina datos y definición
+    -> Riesgo: Pérdida accidental de datos en producción
+
+### Tablas Externas (External Tables)
+    -> Creación: `CREATE EXTERNAL TABLE nombre (...) LOCATION '/path/hdfs'`
+    -> Almacenamiento: En directorio HDFS específico
+    -> Eliminación: `DROP TABLE` solo elimina definición, datos persisten
+    -> Recomendado: Para producción y protección de datos
+
+### Asociación Tabla-Archivos
+    -> Asociación por posición de columnas, no por nombre
+    -> Archivos pueden tener más columnas que la tabla (usa primeras N)
+    -> Separadores: Especificar en `ROW FORMAT DELIMITED FIELDS TERMINATED BY ','`
+    -> Formatos: TEXTFILE (default), ORC, PARQUET
+
+### Identificación de Tipo de Tabla
+    -> Comando: `DESCRIBE FORMATTED tabla;`
+    -> Campo `Table Type`: MANAGED_TABLE o EXTERNAL_TABLE
+    -> Campo `Location`: Directorio donde se almacenan los datos
+
+## Carga de Datos en Tablas
+
+### Método 1: Desde HDFS
+    -> Comando: `LOAD DATA INPATH '/path/archivo' INTO TABLE tabla;`
+    -> Mueve archivo desde HDFS al warehouse de Hive
+    -> Archivo desaparece del location original
+
+### Método 2: Desde Sistema Local
+    -> Comando: `LOAD DATA LOCAL INPATH '/path/local/archivo' INTO TABLE tabla;`
+    -> Copia archivo desde máquina local al warehouse de Hive
+    -> Archivo permanece en ubicación original
+
+### Método 3: Mediante Consultas INSERT
+    -> Sintaxis: `INSERT INTO TABLE destino SELECT ... FROM origen;`
+    -> Permite transformación de datos durante la carga
+    -> Soporta joins y filtros en la consulta SELECT
+
+## Integración Hive con Spark
+
+### Configuración de Spark para Hive
+    -> Propiedad: `spark.sql.catalogImplementation = hive`
+    -> Permite a Spark leer y escribir en tablas Hive
+    -> Comando: `spark = SparkSession.builder.config("spark.sql.catalogImplementation", "hive").getOrCreate()`
+
+### Lectura de Datos desde Hive
+    -> Comando: `df = spark.sql("SELECT * FROM tabla_hive")`
+    -> Alternativa: `df = spark.table("esquema.tabla")`
+    -> Spark puede procesar datos de tablas Hive
+
+### Escritura de Datos en Hive
+    -> Comando: `df.write.mode("overwrite").saveAsTable("esquema.tabla")`
+    -> Comando alternativo: `df.write.mode("overwrite").option("path", "/location").saveAsTable("esquema.tabla")`
+    -> Para tablas externas: Especificar path en la definición
+
+### Diferencias en Escritura
+    -> `df.write.saveAsTable()`: Escribe en location definido en Hive
+    -> Escritura directa con path: Más flexible pero requiere coordinación
+    -> Recomendación: Usar definición de tabla Hive para centralizar metadata
+
+## Particionamiento en Hive
+
+### ¿Por qué Particionar?
+    -> Hive no tiene índices tradicionales
+    -> Particionamiento es la única forma de optimizar consultas
+    -> Divide datos físicamente en directorios separados
+    -> Reduce significativamente tiempo de consulta
+
+### Conceptos Básicos
+    -> Particiones = Subdirectorios físicos
+    -> Cada partición contiene datos filtrados por valor
+    -> Consultas que usan columna particionada son mucho más rápidas
+    -> Ejemplo: Partición por fecha divide datos en carpetas por día/mes/año
+
+### Particionamiento Estático
+    -> Definición: `PARTITIONED BY (columna tipo)`
+    -> Carga: `INSERT INTO TABLE tabla PARTITION (part='valor') SELECT ...`
+    -> Ventaja: Control total sobre dónde van los datos
+    -> Desventaja: Debe especificar partición en cada carga
+
+### Particionamiento Dinámico
+    -> Configuración: `SET hive.exec.dynamic.partition=true;`
+    -> Configuración: `SET hive.exec.dynamic.partition.mode=nonstrict;`
+    -> Carga: `INSERT INTO TABLE tabla PARTITION (part) SELECT ..., columna_part FROM ...`
+    -> Ventaja: Crea particiones automáticamente
+    -> Desventaja: Riesgo de crear muchas particiones no deseadas
+
+### Mejores Prácticas
+    -> Elegir columnas con baja cardinalidad (fecha, categoría, región)
+    -> Evitar columnas únicas (IDs, timestamps precisos)
+    -> Siempre filtrar por columna particionada en consultas
+    -> Planificar particionamiento antes de crear tablas
+
+### Campos de Partición
+    -> Los campos particionados se convierten en directorios físicos
+    -> No se almacenan en archivos de datos (se infieren del path)
+    -> Aparecen como columnas normales en consultas
+    -> Optimizan espacio y performance
+
+## Ejercicios Prácticos
+
+### Ejercicio 1: Creación de Tablas Externas
+    -> Descargar archivo customers
+    -> Subir a HDFS en carpeta `/landing/customers`
+    -> Crear tabla externa con campos: id, name, city
+    -> Verificar carga automática de datos
+
+### Ejercicio 2: Consultas Básicas
+    -> Realizar consultas SELECT sobre tabla customers
+    -> Practicar filtros, ordenamiento, funciones agregadas
+    -> Exportar resultados usando comandos de shell
+
+### Ejercicio 3: Integración con Spark
+    -> Crear tabla externa orders en Hive
+    -> Usar Spark para procesar datos de customers y orders
+    -> Crear tabla order_city con join entre ambas tablas
+    -> Guardar resultados en formato Parquet
+
+### Ejercicio 4: Particionamiento
+    -> Crear tabla particionada por categoría
+    -> Cargar datos usando particionamiento dinámico
+    -> Verificar estructura de directorios en HDFS
+    -> Realizar consultas optimizadas por partición
+
+## Exportación de Datos
+
+### Método 1: Comando INSERT OVERWRITE DIRECTORY
+    -> Sintaxis: `INSERT OVERWRITE DIRECTORY '/path' SELECT ...`
+    -> Exporta resultados de consulta a directorio HDFS
+    -> Formato: Archivos de texto plano
+
+### Método 2: Usando Pipes de Sistema
+    -> Comando: `hive -e "SELECT ..." > archivo.csv`
+    -> Exporta directamente a archivo local
+    -> Requiere configuración de separadores
+
+### Método 3: Con Formato CSV
+    -> Comando: `INSERT OVERWRITE DIRECTORY '/path' ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' SELECT ...`
+    -> Genera archivos CSV con headers opcionales
+    -> Comando adicional: `sed '1i columna1,columna2' archivo.csv`
+
+## Vistas en Hive
+
+### Creación de Vistas
+    -> Comando: `CREATE VIEW nombre AS SELECT ...`
+    -> Similar a vistas en bases de datos relacionales
+    -> No almacenan datos físicamente
+    -> Consultas se ejecutan en tiempo real
+
+### Ejercicio Práctico de Vistas
+    -> Crear vista que combine datos de customers y orders
+    -> Filtrar pedidos superiores a cierto monto
+    -> Usar vista para consultas analíticas
+
+## Parte 2 del Práctico (Entrega)
+
+### Requisitos Generales
+    -> Crear todas las tablas como externas (LOCATION específico)
+    -> Usar particionamiento donde corresponda
+    -> Integrar Spark para procesamiento de datos
+
+### Tabla Orders_Item (Ejercicio 4)
+    -> Campos: order_id, item_id, product_id, quantity, price, order_date, customer_id
+    -> Particionada por: año_mes (string concatenado)
+    -> Tipo: Tabla externa
+
+### Carga de Datos
+    -> Usar joins entre tablas existentes
+    -> Implementar particionamiento dinámico
+    -> Verificar estructura de directorios creada
+
+### Vista Analítica
+    -> Crear vista con datos de clientes y sus pedidos
+    -> Filtrar pedidos superiores a $100
+    -> Campos: customer_name, order_id, order_date, total_amount
+
+## Consideraciones Finales
+
+### Mejores Prácticas
+    -> Siempre usar tablas externas en producción
+    -> Definir particionamiento antes de cargar datos
+    -> Usar formatos comprimidos (ORC/Parquet) para mejor performance
+    -> Centralizar metadata en Hive para análisis
+
+### Errores Comunes
+    -> Olvidar especificar esquema en consultas
+    -> Crear tablas internas en ambientes de producción
+    -> No filtrar por columnas particionadas
+    -> Usar particionamiento dinámico sin validar datos
+
+### Integración en el Data Lake
+    -> Hive como capa de metadata y consultas SQL
+    -> Spark como motor de procesamiento
+    -> HDFS como almacenamiento físico
+    -> Coordinación entre herramientas para flujo completo de datos

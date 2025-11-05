@@ -1,0 +1,233 @@
+# Práctico 2: Introducción a Apache Spark y PySpark
+
+## Configuración del Entorno
+
+### Jupyter Lab (Chu)
+    -> Herramienta web para desarrollo interactivo
+    -> Instalado en la máquina virtual
+    -> Acceso: http://bigdata:8888
+    -> Usuario/Contraseña: ort / tallerOrt1!
+
+### Gestión de Notebooks
+    -> Crear carpetas para organizar proyectos
+    -> Crear nuevos notebooks (.ipynb)
+    -> Pestaña "Running" para monitorear notebooks activos
+    -> Terminal integrada disponible
+    -> Apagar notebooks no utilizados para ahorrar recursos
+
+### Importación de Archivos
+    -> Descargar notebooks desde Aulas
+    -> Subir a Jupyter via "Upload Files"
+    -> Organizar en carpetas apropiadas
+
+## Configuración de PySpark
+
+### Versión de Python
+    -> Verificar versión: `python3 --version`
+    -> Si es 3.6+, ejecutar parche de compatibilidad:
+        -> Comando: `pip install --upgrade pip setuptools`
+        -> Luego: `pip install pyspark==3.1.2`
+    -> Asegurar compatibilidad con Spark instalado
+
+### Sesión de Spark
+    -> Código estándar para inicializar PySpark:
+```python
+from pyspark.sql import SparkSession
+from pyspark.sql.types import *
+
+spark = SparkSession.builder \
+    .appName("MiAplicacion") \
+    .getOrCreate()
+```
+
+### Configuración de la Sesión
+    -> `appName`: Nombre identificador en el cluster manager
+    -> Metadata visible en interfaces de monitoreo
+    -> Útil para debugging y administración
+
+## Lectura de Datos desde HDFS
+
+### Formatos Soportados
+    -> CSV: `spark.read.csv()`
+    -> JSON: `spark.read.json()`
+    -> Parquet: `spark.read.parquet()`
+    -> ORC: `spark.read.orc()`
+    -> Text: `spark.read.text()`
+
+### Lectura de CSV con Opciones
+```python
+df = spark.read.csv(
+    path="hdfs://path/to/file.csv",
+    header=True,        # Primera fila = nombres de columnas
+    sep="|",           # Separador (pipe, comma, etc.)
+    inferSchema=True   # Inferir tipos de datos automáticamente
+)
+```
+
+### Esquemas de Datos
+
+#### Opción 1: Tipos por Defecto (String)
+    -> Todas las columnas como string
+    -> Fácil pero ineficiente
+    -> Requiere conversión posterior
+
+#### Opción 2: Esquema Explícito
+```python
+from pyspark.sql.types import StructType, StructField, IntegerType, DoubleType, StringType
+
+schema = StructType([
+    StructField("product_id", IntegerType(), True),
+    StructField("quantity", IntegerType(), True),
+    StructField("revenue", DoubleType(), True),
+    StructField("category", StringType(), True)
+])
+
+df = spark.read.csv(path, header=True, sep="|", schema=schema)
+```
+
+#### Opción 3: Inferir Esquema
+    -> `inferSchema=True`
+    -> Spark analiza muestra de datos
+    -> Automático pero costoso (lee todo el archivo)
+    -> Riesgo de errores con datos inconsistentes
+    -> Recomendado solo para prototipos/exploración
+
+## Trabajo con DataFrames
+
+### Visualización Básica
+```python
+# Mostrar primeras filas
+df.show()
+
+# Mostrar esquema
+df.printSchema()
+
+# Contar filas
+df.count()
+
+# Obtener columnas
+df.columns
+```
+
+### Operaciones Básicas
+```python
+# Seleccionar columnas
+df.select("columna1", "columna2")
+
+# Filtrar datos
+df.filter(df.columna > 100)
+
+# Agregar columnas
+df.withColumn("nueva_col", df.col1 + df.col2)
+
+# Renombrar columnas
+df.withColumnRenamed("vieja_col", "nueva_col")
+
+# Ordenar
+df.orderBy("columna")
+df.orderBy(df.columna.desc())
+
+# Agrupar y agregar
+df.groupBy("categoria").sum("revenue")
+df.groupBy("categoria").agg({"revenue": "sum", "quantity": "avg"})
+```
+
+### SQL sobre DataFrames
+```python
+# Registrar como tabla temporal
+df.createOrReplaceTempView("mi_tabla")
+
+# Ejecutar consultas SQL
+spark.sql("""
+    SELECT categoria, SUM(revenue) as total_revenue
+    FROM mi_tabla
+    GROUP BY categoria
+    ORDER BY total_revenue DESC
+""").show()
+```
+
+## Ciclo de Ejecución en Jupyter
+
+### Celdas de Código
+    -> Cada rectángulo es una celda ejecutable
+    -> Ejecutar: Shift + Enter o botón Run
+    -> Números indican orden de ejecución
+    -> Variables persisten entre celdas
+
+### Flujo de Trabajo Recomendado
+    -> Celda 1: Imports y configuración de Spark
+    -> Celda 2: Lectura de datos
+    -> Celdas siguientes: Transformaciones y análisis
+    -> Mantener código modular para debugging
+
+## Práctico 2: Ejercicios
+
+### Ejercicio 1: Configuración de Entorno
+    -> Verificar versión de Python
+    -> Aplicar parche si necesario
+    -> Crear sesión de Spark con nombre descriptivo
+
+### Ejercicio 2: Lectura de Datos
+    -> Leer archivo CSV desde HDFS
+    -> Configurar opciones de header y separador
+    -> Explorar datos con show() y printSchema()
+
+### Ejercicio 3: Trabajo con Esquemas
+    -> Definir esquema explícito con tipos correctos
+    -> Comparar con inferSchema=True
+    -> Analizar diferencias en tipos de datos
+
+### Ejercicio 4: Operaciones Básicas
+    -> Filtrar datos por condiciones
+    -> Crear nuevas columnas calculadas
+    -> Agrupar y agregar datos
+    -> Ordenar resultados
+
+### Ejercicio 5: SQL Queries
+    -> Registrar DataFrame como tabla temporal
+    -> Ejecutar consultas SELECT con JOIN y GROUP BY
+    -> Comparar sintaxis SQL vs DataFrame API
+
+## Mejores Prácticas
+
+### Gestión de Recursos
+    -> Cerrar notebooks no utilizados
+    -> Monitorear pestaña "Running"
+    -> Apagar sesión de Spark cuando termine
+
+### Desarrollo Iterativo
+    -> Usar celdas pequeñas para testing
+    -> Ejecutar paso a paso para debugging
+    -> Documentar código con comentarios
+
+### Optimización
+    -> Definir esquemas explícitamente en producción
+    -> Evitar inferSchema en archivos grandes
+    -> Usar particionamiento apropiado
+    -> Cache de DataFrames frecuentemente usados
+
+### Debugging
+    -> Verificar tipos de datos con printSchema()
+    -> Usar show() para inspeccionar resultados
+    -> Monitorear UI de Spark para jobs en ejecución
+    -> Revisar logs en caso de errores
+
+## Diferencias con Pandas
+
+### Pandas
+    -> DataFrames ejecutan en memoria local
+    -> Limitado por RAM de una máquina
+    -> Operaciones secuenciales
+    -> Ideal para análisis exploratorio pequeño
+
+### PySpark
+    -> DataFrames distribuidos en cluster
+    -> Escalable a petabytes de datos
+    -> Operaciones paralelas optimizadas
+    -> Optimización automática de consultas
+    -> Tolerante a fallos
+
+### Sintaxis Similar
+    -> Muchas operaciones tienen nombres idénticos
+    -> Pero comportamiento diferente (lazy evaluation)
+    -> PySpark más restrictivo pero más poderoso a escala

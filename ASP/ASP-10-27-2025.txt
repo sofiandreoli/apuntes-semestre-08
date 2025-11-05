@@ -1,0 +1,421 @@
+# Comunicación entre Microservicios
+
+## Autonomía y Escalabilidad
+
+    -> Los microservicios deben lograr autonomía, escalabilidad y resiliencia
+    -> Arquitecturas a gran escala manejan 100+ microservicios
+    -> Ejemplos: Netflix, Amazon, Twitter
+    -> Cada microservicio resuelve un problema específico del producto
+
+## Principios de Comunicación
+
+### Ocultar Detalles de Implementación
+
+    -> Los microservicios deben ocultar sus detalles internos
+    -> La comunicación debe ser limpia y clara
+
+### Smart Endpoint, Dumb Pipes
+
+    -> Los endpoints deben ser inteligentes y flexibles
+    -> No deben complicarse con validaciones excesivas
+    -> No se debe fallar si llega información extra en el body
+    -> Validar solo lo necesario (por ejemplo, tamaño del body)
+    -> No rechazar requests por parámetros adicionales
+
+### API Agnóstica al Lenguaje
+
+    -> Las APIs deben ser independientes del lenguaje de programación
+    -> No debe ser problema agregar un nuevo lenguaje al ecosistema
+    -> Permite flexibilidad en la elección de tecnologías
+
+### Consumidor Tolerante
+
+    -> El consumidor debe aceptar información adicional sin fallar
+    -> No debe romperse si el productor agrega propiedades nuevas
+    -> Ejemplo: aceptar un string en lugar de un número si puede ser tolerado
+    -> No debe rechazar por información extra recibida
+
+### Productor Liberal y Conservador
+
+    -> Ser liberal en lo que se acepta (flexible como consumidor)
+    -> Ser conservador en lo que se envía (datos válidos y estrictos)
+    -> Los datos enviados deben ser siempre válidos y correctos
+
+### Versionado
+
+    -> Las APIs deben mantener múltiples versiones cuando cambian funcionalidades
+    -> Ejemplo: Stripe mantiene todas las versiones de su API
+    -> No se deben romper consumidores existentes
+    -> Mantener versión anterior cuando se agrega nuevo feature
+    -> Los cambios breaking deben manejar versiones seguras
+
+### Consumer-Driven Contracts
+
+    -> Definir contratos para evitar breaking changes
+    -> Facilita la evolución de microservicios sin romper dependencias
+    -> Importante en arquitecturas distribuidas
+
+### Documentación
+
+    -> Proporcionar documentación clara de las APIs
+    -> Opciones: Swagger, Postman collection, OpenAPI
+    -> Facilitar el uso y comprensión de los endpoints
+
+## Patrones de Comunicación
+
+### Communication Style
+
+    -> Cómo se comunican los microservicios entre sí
+    -> Incluye diferentes protocolos y métodos
+
+### Remote Invocation (Síncrono)
+
+    -> Protocolo request-response para comunicación directa
+    -> Ejemplos: REST, gRPC, GraphQL
+    -> HTTP como protocolo base común
+
+#### Ventajas de Comunicación Síncrona
+
+    -> Respuesta inmediata (puedes saber si funcionó o no)
+    -> Fácil de usar y entender
+    -> Casos de error simples de manejar
+    -> No hay intermediarios (brokers o queues)
+    -> Posibilidad de aplicar circuit breaker
+    -> Códigos de error claros
+
+#### Desventajas de Comunicación Síncrona
+
+    -> Se debe conocer quién es el receptor y dónde está el host
+    -> Puede ser complejo en arquitecturas con muchos microservicios
+    -> Ambas partes deben estar disponibles simultáneamente
+    -> Puede reducir la disponibilidad del sistema
+    -> No permite broadcasting (enviar a varios servicios)
+    -> Solo se hace una request HTTP a un microservicio
+
+### REST (Representational State Transfer)
+
+    -> Protocolo recomendado para comunicación entre microservicios
+    -> Usa HTTP y códigos de respuesta estándar
+    -> Diseño RESTful que se viene siguiendo hasta ahora
+
+### GraphQL
+
+    -> Permite especificar queries personalizadas de información
+    -> Orientado al cliente/frontend
+    -> Puedes pedir solo los datos necesarios
+
+#### Ventajas de GraphQL
+
+    -> Endpoint único para múltiples consultas
+    -> Flexibilidad para especificar qué datos se necesitan
+    -> Facebook lo utiliza ampliamente
+    -> Configurable según necesidades del cliente
+
+#### Desventajas de GraphQL
+
+    -> Del lado del backend requiere orquestación compleja
+    -> Puede complicarse al manejar relaciones y joins
+    -> Riesgo de consultar información innecesaria en la base de datos
+    -> Puede afectar performance si no se implementa correctamente
+    -> Requiere hacer genérico para cubrir todos los casos posibles
+
+### gRPC
+
+    -> Protocolo de comunicación de red basado en RPC
+    -> Permite comunicación más rápida
+    -> Solo usarlo si realmente es necesario (versión más avanzada)
+    -> Adecuado cuando se necesita comunicación más rápida y segura
+
+### Message Queue (Asíncrono)
+
+    -> Comunicación mediante envío de mensajes a través de canales
+    -> Tipos: notification, request-reply, publish-subscribe
+    -> Usa algún tipo de cola (broker)
+
+#### Ventajas de Comunicación Asíncrona
+
+    -> El productor no necesita saber quién es el consumidor ni dónde está
+    -> Fire and forget: publica y olvida
+    -> Puede tardar en procesarse (no necesita respuesta inmediata)
+    -> Consumidor puede procesar a su propio ritmo
+    -> Los mensajes se guardan en el broker
+    -> Permite broadcast (distribuir a múltiples consumidores)
+    -> Varios consumidores pueden escuchar la misma cola
+
+#### Desventajas de Comunicación Asíncrona
+
+    -> Complicidad adicional de introducir un broker
+    -> Dependencia total de la disponibilidad del broker
+    -> No podemos asumir que la respuesta llegará en cierto tiempo
+    -> Puede agregar latencia adicional
+
+#### FIFO
+
+    -> Las colas pueden trabajar con FIFO si se necesita respetar orden
+    -> No es lo ideal pero se puede hacer si el negocio lo requiere
+    -> Las colas deben ser simples y no manejar prioridades
+
+#### Crítico para Microservicios
+
+    -> Si escalaste a microservicios y no tienes ninguna cola de mensajes, probablemente tengas un problema
+    -> Lo más probable es que sea un pseudo-microservicio o algo mal en la arquitectura
+    -> Amazon SQS es un aliado importante en microservicios
+
+### AWS SQS y SNS
+
+    -> SQS es el servicio de mensajería más sencillo
+    -> Se integra fácilmente con Amazon SQS
+    -> Permite desplegar con imágenes Docker de forma local
+    -> SNS permite tópicos (topics)
+    -> Usar SQS + SNS permite trabajar con tópicos
+
+### Kafka
+
+    -> Alternativa más avanzada a SQS
+    -> Solución administrada por AWS: Amazon Kinesis
+    -> Permite streaming de video en tiempo real
+    -> Integra análisis en tiempo real con reconocimiento
+    -> Compatible con TensorFlow y librerías de IA
+    -> Útil para análisis de video/imagen en tiempo real
+    -> Puede pasar información para análisis y extraer métricas
+    -> Input puede ser archivos, datos en tiempo real, clicks, etc.
+
+#### Ejemplo de Uso
+
+    -> Envío de información de clicks en pantalla para rastreo
+    -> Detección de puntos de calor en aplicaciones
+    -> Stream de video para análisis
+
+## Circuit Breaker
+
+### Propósito
+
+    -> Soluciona el problema de llamadas remotas fallidas
+    -> Maneja el conteo de fallos
+    -> Evita fallos en cascada
+    -> Evita desperdicio de recursos consultando servicios caídos
+
+### Funcionamiento
+
+    -> Estado Open: cuando falla mucho, se cierra el circuito
+    -> Estado Closed: estado normal funcionando
+    -> Estado Half-Open: después de cierto timeout, se reabre para probar
+    -> En este estado puede volver a cerrarse si falla o abrirse si funciona
+
+### Implementación
+
+    -> Implementación en código, como wrapper de llamadas a APIs
+    -> Mantener variable local del estado del circuito
+    -> Guardar timestamp de cuándo se cortó
+    -> No bloquear indefinidamente hasta que el servidor responda
+    -> Configurar timeout para volver a intentar
+    -> Cuando el circuito está abierto, puede usar cache o respuesta default
+
+### Persistencia
+
+    -> Puede ser local en memoria para cada instancia
+    -> Opcionalmente guardar en base de datos para compartir entre instancias
+    -> Variable estática en memoria que persiste para esa instancia
+    -> Para arquitecturas grandes, ideal tenerlo en base de datos o cache
+
+### Dashboard y Monitoreo
+
+    -> Puede tener dashboard para ver estado de circuitos
+    -> Ver qué circuitos están caídos y desde cuándo
+    -> Contar cuántas veces se reintentó
+    -> Permitir monitoreo en tiempo real
+
+### Aplicación
+
+    -> Para comunicación HTTP entre microservicios
+    -> Para colas de mensajes (si el broker falla)
+    -> Para llamadas a base de datos
+    -> Todos los puntos de comunicación interna
+
+### Local vs Compartido
+
+    -> Implementación local: cada instancia maneja su propio circuit breaker
+    -> Ventaja: sencillo de implementar, no requiere base de datos compartida
+    -> Desventaja: cada instancia debe descubrir por sí sola cuando falla
+    -> Implementación compartida: guardar estado en base de datos/cache
+    -> Ventaja: todas las instancias saben inmediatamente cuando algo falla
+    -> Desventaja: mayor complejidad de implementación
+
+### Escalabilidad Horizontal
+
+    -> Con escalamiento horizontal, varias instancias del mismo microservicio
+    -> Misma base de datos compartida entre instancias
+    -> Implementación local es suficiente si el circuit breaker solo afecta al microservicio
+    -> Si todas las instancias compartieran el mismo circuit breaker de base de datos, es otro punto de acoplamiento
+
+## Microservice Chassis (Boiler Plate)
+
+    -> Como el chasis de un auto, la parte fuerte
+    -> Template base para cada lenguaje que se maneje
+    -> Incluye: circuit breaker, inyección de dependencias, conexiones a base de datos, comunicación con colas de mensajes
+    -> Debe ser lo más genérico posible
+    -> Base para MongoDB, DynamoDB, etc.
+    -> Permite reutilizar código común entre microservicios
+
+## Discovery - Service Registry
+
+### Problema
+
+    -> Cómo sabe un microservicio dónde se encuentra otro microservicio
+    -> Las IPs de las instancias cambian constantemente
+    -> A los containers se les asignan IPs dinámicas
+    -> Auto-scaling agrega o elimina instancias según carga
+    -> Las instancias son desechables (pueden dejar de funcionar y levantarse otras)
+
+### Service Registry
+
+    -> Base de datos donde se almacenan las ubicaciones de las instancias
+    -> Mantiene registro de todos los servicios y sus instancias
+    -> Debe estar en ubicación conocida que no cambie
+    -> Debe tener alta disponibilidad
+    -> Suele venir como parte de la infraestructura
+    -> Sistemas como AWS Load Balancer tienen service registry implícito
+
+### Client-Side Discovery
+
+    -> El cliente consulta el service registry para descubrir ubicaciones
+    -> El load balancer pregunta al service registry
+    -> Con esa información hace balanceo de carga y consulta la instancia
+
+#### Ventajas
+
+    -> Evita tener que implementar lógica en cada cliente
+    -> Se acopla la lógica de balanceo y descubrimiento del cliente
+    -> Se mueve en un solo lugar
+    -> El cliente no conoce las instancias finales
+    -> Puede estar protegido por stateful load balancer
+
+#### Desventajas
+
+    -> Es otro componente a configurar y mantener
+    -> Único punto de fallo (si falla el load balancer)
+    -> Más latencia de red (el load balancer es intermediario)
+    -> Está en la misma red/instancia que las propias instancias
+
+### Server-Side Discovery
+
+    -> El cliente consulta directamente al service registry
+    -> El cliente se encarga de saber dónde está esa información
+    -> Puede distribuir las requests como quiera
+
+#### Ventajas
+
+    -> Se elimina el load balancer como intermediario
+    -> Puede ser más económico implementar un registry propio
+    -> Arquitectura más barata de implementar
+    -> Permite pegarle a cierta instancia específica si se quiere
+    -> No hay único punto de fallo si está bien implementado
+
+#### Desventajas
+
+    -> Requiere implementar lógica de balanceo en cada aplicación cliente
+    -> Necesario preguntar la lógica de descubrimiento de servicios en el cliente
+    -> Se acopla el cliente al service registry
+    -> El service registry tiene que ser público o accesible al cliente final
+    -> Los contras son bastantes como para no utilizarlo normalmente
+
+### Self-Registration
+
+    -> La instancia misma tiene la responsabilidad de registrarse
+    -> Cuando el servicio intenta levantarse, se registra
+
+#### Ventajas
+
+    -> No requiere un componente extra
+    -> Delegamos a la instancia que lo haga
+    -> El servicio conoce mejor su propio estado
+    -> Puede proveer información más correcta que simplemente "running" o "not running"
+
+#### Desventajas
+
+    -> El servicio se acopla al registry
+    -> Si cambio el service registry tengo que tocar todos los servicios
+    -> Lógica en el servicio más compleja
+    -> Tengo que implementarlo para cada servicio
+
+### Third-Party Registration
+
+    -> Un tercero registra cada servicio en el registry
+    -> Por ejemplo, con AWS Load Balancer
+
+#### Ventajas
+
+    -> Los servicios están desacoplados del service registry
+    -> Servicio con una responsabilidad menos (más sencillo)
+    -> No tienen que implementar la lógica
+    -> Una vez por lenguaje si utilizan varios
+
+#### Desventajas
+
+    -> Único punto de fallo si no se tiene alta disponibilidad
+    -> Requiere alta disponibilidad del componente de registro
+    -> Es otro componente a configurar y mantener
+    -> Conocimiento más superficial de lo que significa que una instancia esté lista
+    -> A menos que tenga health check
+
+### Health Check
+
+    -> Endpoint que devuelve 200 para indicar que el servicio está funcionando
+    -> Configurado en AWS Load Balancer
+    -> Permite al load balancer saber si una instancia está activa
+    -> Puede tener restricciones adicionales
+
+## Resumen de Discovery
+
+    -> Service Registry: base de datos de ubicaciones de servicios
+    -> Client-Side Discovery: el cliente consulta el registry (a través de load balancer)
+    -> Server-Side Discovery: el cliente consulta directamente el registry
+    -> Self-Registration: cada servicio se registra a sí mismo
+    -> Third-Party Registration: un tercero registra los servicios
+
+## Ejemplo Netflix
+
+    -> Netflix da información de cada microservicio
+    -> Panel que muestra ciclo de vida de cada servicio
+    -> Si está fallando mucho, si está aceptando muchas requests
+    -> Netflix fue pionero en este tipo de arquitecturas
+    -> Potenciaron el crecimiento de AWS
+    -> Bajaban instancias para probar que los circuit breakers funcionaran
+    -> Mataban instancias para que vuelvan a levantar y medir tiempos
+    -> Permite validar que todo esté en orden en arquitecturas grandes
+
+## Automatización y Scripts
+
+### Scripts de Levantamiento
+
+    -> Recomendación: tener script base para levantar servicios
+    -> Script que acceda a carpetas de microservicios y despliegue cada instancia
+    -> Automatizar configuración de variables de entorno
+    -> La mayoría de variables de entorno se pueden manejar con script
+    -> Puede faltar alguna configuración específica de base de datos
+
+### Microservice Chassis
+
+    -> Template base por lenguaje
+    -> Incluye: circuit breaker, inyección de dependencias, conexiones a BD, comunicación con colas
+    -> Debe ser lo más genérico posible
+    -> Base para reutilizar en todos los microservicios
+    -> Ya tiene implementado lo común para no reinventar la rueda
+
+### Cola de Error
+
+    -> Si una cola crítica falla, puede tener cola de respaldo
+    -> Para procesos críticos que tienen costo de cómputo alto
+    -> No es común que se caiga la cola, pero puede pasar
+    -> Lo más común es que el consumidor falle, no la cola misma
+
+## Próximos Temas
+
+    -> API Gateway (cómo se comunica el cliente con los microservicios)
+    -> Caching
+    -> Patrones de Saga (para manejar transacciones distribuidas)
+    -> Orquestación de procesos asíncronos
+    -> Ejemplo: registro de cliente, orden, pago
+    -> Necesidad de rollback si el pago falla
+    -> Mecanismos de comunicación para coordinar estos procesos
+

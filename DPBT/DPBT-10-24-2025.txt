@@ -1,0 +1,158 @@
+# Diseño de Productos Tecnológicos: Fase de Ideación
+
+## Repaso del Proceso de Design Thinking
+
+### Etapas Completadas
+-> Empatizar: observación, entrevistas, inmersión en el problema
+-> Definir: síntesis de insights, definición del desafío inicial
+-> Idear: generación de ideas para soluciones (etapa actual)
+
+### Espacio del Diamante
+#### Divergente (Abrir)
+-> Empatizar: explorar el problema ampliamente
+-> Definir: múltiples puntos de vista del desafío
+-> Idear: generar muchas ideas posibles
+
+#### Convergente (Cerrar)
+-> Empatizar: insights clave de la observación
+-> Definir: desafío específico y claro
+-> Idear: seleccionar mejores ideas
+-> Prototipar: conceptos concretos
+-> Testear: validación con usuarios
+
+## Puente entre Definir e Idear
+
+### Preguntas Disparadoras
+-> Formulan hipótesis de solución sin especificar tecnología
+-> Ayudan a bajar del problema abstracto a soluciones concretas
+-> Ejemplos:
+    -> ¿Cómo podríamos hacer que la valija se aleje?
+    -> ¿Cómo podríamos hacer que el usuario no se preocupe por su valija mientras duerme?
+
+### Tipos de Preguntas
+#### Genéricas
+-> Dejan muchas opciones abiertas
+-> Permiten pensar en múltiples direcciones
+-> Ejemplo: "¿Cómo podríamos que me avise?"
+
+#### Específicas
+-> Guían hacia soluciones más concretas
+-> Incluyen elementos contextuales
+-> Ejemplo: "¿Cómo podríamos hacer que suene una alarma cuando se aleja la valija?"
+
+### Agrupación de Preguntas
+-> Organizar preguntas similares en categorías
+-> Temas comunes: seguridad, movilidad, comodidad, accesibilidad
+-> Seleccionar grupos para ideación (uno o más relacionados)
+
+## Proceso de Ideación
+
+### Preparación
+#### Estación de Ideación
+-> Tablero visual con toda la información relevante
+-> Elementos a incluir:
+    -> Preguntas disparadoras seleccionadas
+    -> Perfil de usuario/Persona
+    -> Tecnologías disponibles
+    -> Información contextual (aeropuerto, infraestructura)
+    -> Fotos de observación
+    -> Frases importantes de usuarios
+
+#### Tecnologías Relevantes
+-> Sensores (movimiento, apertura, biometría)
+-> Conectividad (WiFi, Bluetooth, GPS)
+-> Inteligencia Artificial
+-> Reconocimiento (facial, huella digital)
+-> Cerraduras inteligentes
+-> Trackers GPS
+-> Cámaras de seguridad
+-> Etiquetas RFID
+
+#### Contexto del Problema
+-> Infraestructura del aeropuerto
+-> Cintas transportadoras
+-> Salas de seguridad
+-> Lockers vigilados
+-> Aplicaciones del aeropuerto
+-> Sistema de seguridad general
+
+### Técnicas de Ideación
+
+#### Brainstorming
+-> Generar ideas libremente sin juicio
+-> Cantidad sobre calidad inicialmente
+-> Combinar tecnologías con problemas
+-> Ejemplos de ideas generadas:
+    -> Valija que orbita alrededor del usuario
+    -> Valija con piloto automático
+    -> Integración con app del aeropuerto
+    -> Transporte automático de valijas
+    -> Valija con compresión automática
+
+#### Técnicas Adicionales
+-> Analogías con otras industrias
+-> What if scenarios
+-> SCAMPER (Substitute, Combine, Adapt, Modify, Put to another use, Eliminate, Reverse)
+-> Mind mapping
+-> Crazy eights (8 ideas en 8 minutos)
+
+### Agrupación y Síntesis
+#### Organizar Ideas
+-> Agrupar ideas similares
+-> Identificar patrones emergentes
+-> Eliminar duplicados
+-> Categorizar por tipo de solución
+
+#### De Ideas a Conceptos
+-> Sintetizar ideas relacionadas en conceptos coherentes
+-> Definir valor único de cada concepto
+-> Evaluar factibilidad técnica y de negocio
+
+## Resultado: Conceptos de Solución
+
+### Criterios de Evaluación
+-> Relevancia para el problema identificado
+-> Innovación tecnológica
+-> Viabilidad técnica
+-> Potencial de mercado
+-> Alineación con capacidades del equipo
+
+### Siguientes Pasos
+-> Seleccionar conceptos más prometedores
+-> Desarrollar prototipos
+-> Testear con usuarios
+-> Iterar basado en feedback
+
+### Iteración en Design Thinking
+-> Posibilidad de volver a etapas anteriores
+-> Insights nuevos pueden requerir redefinir el problema
+-> Prototipos pueden revelar necesidades no identificadas
+-> Testing puede llevar a nuevas ideas
+
+## Consideraciones Prácticas
+
+### Trabajo en Equipo
+-> Múltiples estaciones para grupos grandes
+-> Compartir ideas entre equipos
+-> Combinar conceptos relacionados
+-> Mantener energía y creatividad
+
+### Herramientas Digitales
+-> Miro, FigJam, Mural para tableros virtuales
+-> Figma para prototipado rápido
+-> Notion para documentación
+-> Slack/Microsoft Teams para colaboración
+
+### Evitar Errores Comunes
+-> No criticar ideas prematuramente
+-> Incluir perspectivas diversas
+-> No limitarse a soluciones obvias
+-> Documentar todo el proceso
+-> Mantener foco en el usuario final
+
+### Rol del Facilitador
+-> Mantener energía del grupo
+-> Asegurar participación equitativa
+-> Guiar hacia ideas factibles
+-> Gestionar tiempo efectivamente
+-> Capturar todas las ideas generadas

@@ -1,0 +1,165 @@
+# Procesos ETL y Data Ingestion en Big Data
+
+## Desafíos de la Ingesta de Datos
+
+### Problemas con Fuentes Múltiples
+    -> Conectar a 50+ fuentes diferentes (bases de datos, APIs, redes sociales, IoT)
+    -> Cada fuente con protocolos, formatos y paradigmas distintos
+    -> Scripts individuales vs. herramientas especializadas
+    -> Riesgos de seguridad al usar APIs externas (regalar datos)
+
+### Requisitos de la Ingesta
+    -> Traer datos en tiempo y forma
+    -> Procesamiento automático y confiable
+    -> Escalabilidad para grandes volúmenes
+    -> Monitoreo continuo de pipelines
+
+## ETL vs ELT
+
+### ETL Tradicional (Extract, Transform, Load)
+    -> Extrae datos de fuentes
+    -> Transforma datos en el proceso de extracción
+    -> Carga datos transformados en destino
+    -> Usado en bases de datos relacionales tradicionales
+
+### ELT en Data Lakes (Extract, Load, Transform)
+    -> Extrae datos crudos de fuentes
+    -> Carga datos crudos directamente en data lake
+    -> Transforma datos después usando motores de procesamiento
+    -> Adecuado para Big Data (volumen, velocidad, variedad)
+
+### Razones para ELT en Big Data
+    -> Transformaciones durante extracción pueden ser imposibles con volúmenes masivos
+    -> Data lakes almacenan datos crudos para análisis posteriores
+    -> Motores de procesamiento (Spark, etc.) manejan transformaciones en paralelo
+    -> Replicación multiplica espacio (datos crudos + refinados)
+
+## Proceso de Transformación en ELT
+
+### Filtrado
+    -> Eliminar filas irrelevantes (ej: conversaciones no relacionadas con la empresa)
+    -> Aplicar criterios de negocio
+    -> Reducir volumen manteniendo valor
+
+### Eliminación de Duplicados
+    -> Mantener solo valores únicos
+    -> Evitar redundancia en almacenamiento
+
+### Normalización
+    -> Estandarizar formatos inconsistentes
+    -> Unificar codificaciones (ej: países en español vs inglés)
+    -> Preparar datos para consultas consistentes
+
+### Conversión de Tipos de Datos
+    -> Unificar tipos entre fuentes heterogéneas
+    -> Convertir strings a números, fechas a formatos estándar
+    -> Fundamental para joins y análisis posteriores
+
+### Concatenación de Columnas
+    -> Unir campos separados en lenguaje natural
+    -> Ej: dirección calle + número + apartamento
+    -> Viceversa: dividir campos complejos
+
+### Enriquecimiento de Datos
+    -> Agregar valor a los datos existentes
+    -> Calcular coordenadas para mapas
+    -> Derivar nuevas columnas de existentes
+    -> Agregaciones preventivas para consultas rápidas
+
+### Mapeo de Valores
+    -> Convertir códigos a valores legibles
+    -> Ej: código 3 → "Alto Riesgo"
+
+### Agregaciones y Cálculos
+    -> Precalcular totales, promedios, varianzas
+    -> Reducir de millones de registros a cientos
+    -> Optimizar consultas posteriores
+
+## Arquitectura de Data Ingestion
+
+### Fuentes de Datos
+    -> Internas: Sistemas de la organización (facturación, cobranza, envío)
+    -> Externas: Redes sociales, APIs, sensores IoT, telecomunicaciones
+
+### Pipeline ETL/ELT
+    -> Extracción: Conectar y capturar datos
+    -> Transformación: Limpiar, normalizar, enriquecer
+    -> Carga: Almacenar en data lake (crudo + refinado)
+
+### Data Lake como Destino
+    -> No es respaldo de sistemas fuente
+    -> Solo datos necesarios para análisis
+    -> Almacena datos crudos + modelos refinados
+    -> Centraliza información heterogénea
+
+## Importancia del Modelado
+
+### Datos Crudos vs Refinados
+    -> Crudos: Audio, imágenes, texto libre, JSON, bases relacionales
+    -> Refinados: Tablas estructuradas consultables
+    -> Modelo unificado para análisis cross-fuente
+
+### Rol del Ingeniero de Datos
+    -> 60-70% del tiempo en ETL/ELT
+    -> Transformar datos heterogéneos en modelo analizable
+    -> Preparar para científicos de datos y analistas
+
+## Apache NiFi
+
+### Introducción
+    -> Herramienta líder para data ingestion
+    -> Interfaz visual drag-and-drop
+    -> Procesamiento de streams en tiempo real
+    -> Escalable y tolerante a fallos
+
+### Componentes Principales
+    -> Processors: Componentes para conectar fuentes y destinos
+    -> FlowFiles: Paquetes de datos que fluyen por el pipeline
+    -> Connections: Enlaces entre processors
+    -> Controller Services: Servicios compartidos (conexiones DB, etc.)
+
+### Capacidades
+    -> Conectar a cualquier fuente/destino
+    -> Transformaciones en flujo
+    -> Monitoreo y alertas
+    -> Versionado de flows
+    -> Clustering para alta disponibilidad
+
+### Ventajas
+    -> No requiere código (vs scripts Python)
+    -> Visual y intuitivo
+    -> Maneja complejidad de Big Data
+    -> Comunidad activa y soporte enterprise
+
+## Caso Práctico: Análisis Empresarial
+
+### Problema
+    -> Presidente pregunta: "¿Cómo está el banco?"
+    -> Áreas responden diferente:
+        -> Finanzas: Más ganancias
+        -> Marketing: Mejores campañas
+        -> Cobranza: Más clientes
+        -> IT: Mejor infraestructura
+
+### Solución con Data Lake
+    -> KPIs unificados y objetivos
+    -> Métricas consistentes across áreas
+    -> Visión holística del negocio
+    -> Decisiones basadas en datos, no opiniones
+
+## Mejores Prácticas
+
+### Nunca Analizar Datos Crudos
+    -> Datos crudos pueden dar resultados erróneos
+    -> Siempre usar datos transformados y validados
+    -> Ingeniería de datos garantiza calidad
+
+### Gobernanza y Seguridad
+    -> Políticas de acceso según negocio
+    -> Auditoría de pipelines
+    -> Protección de datos sensibles
+
+### Monitoreo Continuo
+    -> Alertas de fallos en pipelines
+    -> Métricas de performance
+    -> SLA de tiempo de llegada de datos

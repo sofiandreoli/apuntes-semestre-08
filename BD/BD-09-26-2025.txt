@@ -1,0 +1,228 @@
+# Motores de Procesamiento de Datos y Apache Spark
+
+## Revisión: ETL vs ELT en Data Lakes
+
+### ETL Tradicional
+    -> Extraer datos crudos
+    -> Transformar durante extracción
+    -> Cargar datos transformados
+    -> Limitado para big data (alta replicación aumenta espacio 6x)
+
+### ELT en Data Lakes
+    -> Extraer datos crudos
+    -> Cargar directamente en data lake
+    -> Transformar después usando motores de procesamiento
+    -> Mejor para big data: procesamiento distribuido eficiente
+
+## ¿Por qué Motores de Procesamiento?
+
+### Problemas Tradicionales
+    -> Datos heterogéneos: estructurados, semi-estructurados, no estructurados
+    -> Volúmenes masivos: miles de millones de registros
+    -> Múltiples formatos: JSON, audio, imágenes, texto, bases de datos
+    -> Procesamiento en tiempo real requerido
+    -> Análisis complejo: estadísticas, machine learning, visualización
+
+### Solución Necesaria
+    -> Herramientas unificadas para procesar cualquier tipo de dato
+    -> Optimización automática de operaciones
+    -> Procesamiento distribuido en clusters
+    -> Prevención de errores costosos (caídas del sistema)
+
+## Definición de Motores de Procesamiento
+
+### Concepto
+    -> Software especializado para manipular, transformar y analizar datos
+    -> Optimizado para volúmenes masivos (miles de millones de registros)
+    -> Soporta cualquier formato de datos
+    -> Ejecuta operaciones distribuidas en clusters
+
+### Funciones Principales
+    -> Lectura de datos crudos (cualquier formato)
+    -> Transformaciones y manipulaciones
+    -> Análisis y consultas complejas
+    -> Procesamiento en tiempo real (streaming)
+    -> Optimización automática de consultas
+
+### Diferencia con Herramientas ETL
+    -> NiFi/Kafka: Para ingesta y movimiento de datos
+    -> Motores: Para procesamiento y análisis masivo
+    -> NiFi corre en clusters pequeños; Motores en clusters grandes
+
+## Ciclo de Vida de los Datos en Data Lake
+
+### 1. Datos Crudos
+    -> Almacenados tal como llegan del origen
+    -> Formatos originales preservados
+    -> Primera copia guardada para referencia
+
+### 2. Refinamiento (Primera Transformación)
+    -> Lectura y limpieza básica
+    -> Eliminación de duplicados
+    -> Conversión de tipos de datos
+    -> Filtrado de datos irrelevantes
+    -> Normalización de formatos
+
+### 3. Modelado (Segunda Transformación)
+    -> Estructuración según necesidades de negocio
+    -> Creación de esquemas analíticos
+    -> Joins entre diferentes fuentes
+    -> Agregaciones y cálculos
+    -> Preparación para consultas específicas
+
+### 4. Análisis y Visualización
+    -> Consultas analíticas sobre datos modelados
+    -> Generación de insights y KPIs
+    -> Creación de reportes y dashboards
+    -> Alimentación de modelos de machine learning
+
+### 5. Consumo por Stakeholders
+    -> Decisiones basadas en análisis
+    -> Reportes ejecutivos
+    -> Acciones operativas
+
+## Apache Spark: El Motor Principal
+
+### Introducción
+    -> Framework de procesamiento distribuido de datos
+    -> Desarrollado por Apache Software Foundation
+    -> Base de la mayoría de plataformas big data modernas
+    -> Habilita machine learning, análisis en tiempo real, etc.
+
+### Arquitectura
+    -> **Driver Program**: Punto de entrada, coordina ejecución
+    -> **Cluster Manager**: Gestiona recursos del cluster (YARN, Kubernetes, etc.)
+    -> **Executors**: Procesan datos en nodos worker
+    -> **Tasks**: Unidades de trabajo ejecutadas en paralelo
+
+### Componentes Principales
+    -> **Spark Core**: Motor base, scheduling, I/O
+    -> **Spark SQL**: Consultas SQL sobre datos estructurados
+    -> **Spark Streaming**: Procesamiento de datos en tiempo real
+    -> **MLlib**: Machine learning distribuido
+    -> **GraphX**: Procesamiento de grafos
+
+### Conceptos Fundamentales
+
+#### RDD (Resilient Distributed Dataset)
+    -> Estructura de datos fundamental
+    -> Colección inmutable distribuida de objetos
+    -> Tolerante a fallos (resilient)
+    -> Operaciones: transformaciones y acciones
+
+#### DataFrame
+    -> API de más alto nivel que RDD
+    -> Similar a tablas SQL con esquema
+    -> Optimización automática de consultas
+    -> Soporte para múltiples formatos (JSON, CSV, Parquet, etc.)
+
+#### Dataset
+    -> Evolución de DataFrame con type safety
+    -> Combina beneficios de RDD y DataFrame
+    -> Optimización en tiempo de compilación
+
+### Operaciones en Spark
+
+#### Transformaciones
+    -> Operaciones lazy (no ejecutan inmediatamente)
+    -> Crean nuevos RDDs/DataFrames
+    -> Ejemplos: map, filter, join, groupBy
+
+#### Acciones
+    -> Ejecutan todas las transformaciones pendientes
+    -> Devuelven resultados al driver
+    -> Ejemplos: collect, count, save, show
+
+### Optimización Automática
+
+#### Catalyst Optimizer
+    -> Analiza consultas SQL y operaciones DataFrame
+    -> Reordena operaciones para eficiencia máxima
+    -> Selecciona mejores algoritmos de join
+    -> Minimiza transferencias de red (shuffle operations)
+
+#### Tungsten Engine
+    -> Optimización de memoria y CPU
+    -> Generación de código en tiempo real
+    -> Formatos de datos optimizados
+    -> Cache-aware execution
+
+### Ejecución Distribuida
+
+#### DAG (Directed Acyclic Graph)
+    -> Representación lógica de operaciones
+    -> Optimizado por Catalyst
+    -> Dividido en stages por shuffle boundaries
+
+#### Shuffle Operations
+    -> Redistribución de datos entre nodos
+    -> Operaciones costosas (join, groupBy, sort)
+    -> Minimizadas por el optimizador
+
+### Casos de Uso
+
+#### Procesamiento Batch
+    -> Análisis histórico de grandes volúmenes
+    -> ETL complejo
+    -> Modelos de machine learning
+
+#### Streaming
+    -> Procesamiento en tiempo real
+    -> Análisis de redes sociales durante eventos
+    -> Detección de fraudes
+    -> Monitoreo de sistemas IoT
+
+#### Machine Learning
+    -> Entrenamiento distribuido de modelos
+    -> Procesamiento de features a escala
+    -> Predicciones en tiempo real
+
+## Importancia en el Ecosistema Big Data
+
+### Base de la Pirámide de Datos
+    -> Habilita todo lo que viene arriba (ML, AI, analítica)
+    -> Sin motores de procesamiento, no hay big data moderno
+    -> Revolucionó el análisis de datos masivos
+
+### Integración con Otras Herramientas
+    -> Lee de HDFS, S3, Kafka, Cassandra
+    -> Escribe a múltiples destinos
+    -> Integra con herramientas de ML (TensorFlow, PyTorch)
+    -> Compatible con ecosistemas cloud
+
+### Rendimiento y Escalabilidad
+    -> Procesamiento en memoria (10-100x más rápido que disco)
+    -> Escalabilidad lineal con más nodos
+    -> Tolerancia a fallos automática
+
+## Comparación con Otras Tecnologías
+
+### vs MapReduce
+    -> MapReduce: procesamiento batch lento
+    -> Spark: procesamiento en memoria, streaming, ML integrado
+
+### vs Hadoop
+    -> Hadoop: limitado a MapReduce
+    -> Spark: múltiples paradigmas de procesamiento
+
+### vs Bases de Datos Tradicionales
+    -> RDBMS: limitadas a consultas SQL simples
+    -> Spark: procesamiento complejo, cualquier formato, escalable
+
+## Mejores Prácticas
+
+### Optimización de Rendimiento
+    -> Minimizar shuffles (usar broadcast joins cuando posible)
+    -> Cache de datos frecuentemente usados
+    -> Particionamiento adecuado de datos
+    -> Monitoreo de recursos del cluster
+
+### Gestión de Memoria
+    -> Configuración apropiada de heap size
+    -> Evitar colecciones grandes en driver
+    -> Uso eficiente de persistencia (MEMORY_ONLY vs DISK_ONLY)
+
+### Desarrollo
+    -> Usar DataFrames/Datasets en lugar de RDDs cuando posible
+    -> Aprovechar optimización automática
+    -> Probar con datos pequeños antes de producción

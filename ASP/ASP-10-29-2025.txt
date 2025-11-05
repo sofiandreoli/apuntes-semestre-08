@@ -1,0 +1,176 @@
+# Arquitectura de Microservicios: Comunicación Externa y Cache
+
+## Micro Tarea: Sistema de Facturación Automática
+
+### Escenario
+-> Desarrollo de software para organizar materiales de estudio universitarios
+-> Solución alcanza 500,000 estudiantes como clientes
+-> Suscripciones se vuelven difíciles de gestionar manualmente
+-> Se implementa sistema de facturación automático
+
+### Preguntas a Responder
+-> Identificar plano del artículo donde pertenece esta funcionalidad
+-> Explicar respuesta con referencia al artículo
+
+### Requisitos de Entrega
+-> Crear repositorio Git con README.md
+-> Contestar preguntas en el README
+-> Entrega individual con 15 días de plazo
+-> Alternativa: subir PDF si no se puede usar Git
+
+## Patrones de Comunicación Externa
+
+### Problemas de Granularidad de Datos
+-> Microservicios devuelven más información que la necesaria para algunos clientes
+-> Clientes diferentes requieren datos distintos
+-> Cliente móvil optimiza cantidad de llamadas por limitaciones de red
+-> Necesidad de separar microservicios sin afectar clientes existentes
+
+### API Gateway
+-> Punto de entrada único para todos los clientes
+-> Funciona como router reverso o proxy
+-> Convierte una solicitud en múltiples solicitudes internas
+-> Proporciona API óptima para cada cliente
+-> Reduce cantidad de llamadas del cliente
+-> Traduce protocolos diferentes entre clientes y microservicios
+-> Maneja autenticación, autorización y otros temas transversales
+-> Un único punto de entrada mejora seguridad al esconder microservicios
+
+### Backend for Frontend (BFF)
+-> Variación del API Gateway
+-> Un gateway separado para cada tipo de cliente
+-> Cliente móvil tiene su propio backend
+-> Backend maneja todas las peticiones a microservicios
+-> Reduce llamadas de red del cliente móvil
+
+### Pros y Contras
+#### Ventajas
+-> Transparente para arquitectura de microservicios
+-> Reduce latencia al agrupar llamadas
+-> Aumenta seguridad con punto único de entrada
+-> Permite escalar mejor evitando sobrecarga en microservicios
+
+#### Desventajas
+-> Aumenta complejidad al agregar software adicional
+-> Un punto único de fallo requiere alta disponibilidad
+-> Incremento en tiempo de respuesta por llamada extra
+-> Múltiples endpoints pueden generar muchos (ej: 100+ en sistemas grandes)
+
+### API Composition
+-> Patrón para queries complejas en arquitectura con base de datos por servicio
+-> Ejemplo: obtener órdenes y pagos de un usuario requiere joins entre servicios
+-> API Gateway hace joins en memoria
+-> Recomendaciones: joins simples, evitar operaciones complejas en memoria
+
+## Cache en Microservicios
+
+### Conceptos Básicos
+-> Capa de almacenamiento de datos de alta velocidad
+-> Almacena datos transitorios vs datos persistentes duraderos
+-> Intercambia capacidad por velocidad
+-> Objetivo: aumentar rendimiento evitando acceso a capas más lentas
+
+### Beneficios
+-> Mejora rendimiento reduciendo latencia de red
+-> Reduce costo de interactuar con múltiples microservicios
+-> Evita consultas costosas (ej: joins complejos)
+-> Reduce carga en microservicios y bases de datos
+-> Permite robustez: servir datos aunque origen no esté disponible
+
+### Técnicas de Carga del Cache
+
+#### Lazy Population
+-> Carga elemento en cache la primera vez que se solicita
+-> Evita cachear datos que nunca se consultan
+-> Primera consulta puede ser lenta (consulta base + cache)
+-> Posteriormente muy rápido
+
+#### Upfront Population
+-> Carga todos los elementos al inicio
+-> Consultas siempre rápidas desde el principio
+-> Riesgo de cachear datos innecesarios
+-> Aumenta tiempo de startup
+
+### Estrategias de Expiración
+
+#### Time-Based Expiration
+-> Información expira luego de tiempo X
+-> Fácil implementación
+-> Adecuado para datos que cambian poco
+-> No garantiza información actualizada
+
+#### Active Expiration
+-> Expira elemento cuando cambia en origen
+-> Requiere detectar cambios en fuente original
+-> Información siempre actualizada
+-> Más compleja implementación
+
+### Dónde Implementar Cache
+
+#### Cliente (Browser)
+-> Cache-Control headers permiten cachear respuestas HTTP
+-> Privado: solo almacena en cliente, no en intermediarios
+-> Público: puede almacenar en proxies/CDN
+-> Útil para recursos estáticos (fuentes, imágenes, JS)
+-> Primera carga lenta, posteriores rápidas
+-> Evita repetir descargas de recursos iguales
+
+#### DNS
+-> Resuelve nombres de dominio a IP
+-> Cachea resoluciones para evitar consultas repetidas
+-> Acelera navegación web
+
+#### Servidor Web
+-> Cache de sesiones web
+-> Bases de datos clave-valor para datos del lado servidor
+-> Reduce latencia de consultas a base de datos
+
+#### Base de Datos
+-> Buffer pool: cache interno de base de datos
+-> Réplicas de lectura para distribuir carga
+
+### Consideraciones
+-> Cache local vs distribuido (Redis)
+-> Monitoreo de expiración para evitar datos obsoletos
+-> En bases NoSQL: cuidado con joins en memoria
+-> Filtrados complejos pueden sobrecargar aplicación si se hacen en memoria
+
+## Content Delivery Network (CDN)
+
+### Concepto
+-> Grupo de servidores distribuidos geográficamente
+-> Trabajan juntos para entrega rápida de contenido
+-> Aceleran contenido estático principalmente
+-> Mejoran performance por cercanía al usuario
+-> Reducen carga en servidor origen
+
+### Beneficios
+-> Latencia menor por proximidad física
+-> Reduce ancho de banda del origen
+-> Maneja picos de tráfico
+-> Comprime recursos automáticamente
+-> Conexiones persistentes con origen
+
+### Uso en Contenido
+#### Estático
+-> Imágenes, CSS, JavaScript, fuentes
+-> Se cachea eficientemente
+-> Ejemplos: CloudFront, CloudFlare
+
+#### Dinámico
+-> Menos efectivo por cambios frecuentes
+-> Útil para picos de carga
+-> No vale la pena cachear contenido muy volátil
+
+### Seguridad en CDN
+-> Archivos privados requieren protección especial
+-> Links temporarios para contenido sensible
+-> Lambda@Edge (AWS) permite ejecutar código de validación
+-> Verifica tokens/autorización antes de servir contenido
+-> Ejemplo: Netflix valida usuarios para videos streaming
+
+### Estrategias de Desalojo
+-> Elimina recursos no accedidos recientemente
+-> Elimina recursos que ocupan mucho espacio
+-> Implementación interna del proveedor
+-> Desalojo de un cache no elimina de toda la red

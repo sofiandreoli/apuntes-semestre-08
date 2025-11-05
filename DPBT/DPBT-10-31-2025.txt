@@ -1,0 +1,278 @@
+# Diseño de Productos Tecnológicos: De Ideación a Prototipado
+
+## Repaso del Proceso de Design Thinking
+
+### Etapas Completadas
+-> Empatizar: investigación con usuarios
+-> Definir: síntesis de insights, definición del desafío
+-> Idear: generación de ideas, agrupación y síntesis
+
+### Espacio del Diamante
+-> Divergente: abrir posibilidades (empatizar, definir, idear)
+-> Convergente: cerrar opciones (prototipar, testear)
+
+## De Ideas a Conceptos de Solución
+
+### Creación de Conceptos
+-> Combinar ideas de diferentes grupos
+-> Crear propuestas coherentes que resuelvan el problema
+-> Un concepto es una hipótesis de solución validable
+
+### Ejemplos de Combinación
+-> Seguridad + Transporte: valija que se protege y se moviliza autónoma
+-> Asistencia + Seguridad: app que guía en aeropuerto y protege equipaje
+-> Funcionalidades transversales: conectividad Bluetooth, GPS, sensores
+
+### Conceptos vs Soluciones Completas
+#### Conceptos de Solución
+-> Resuelven problemas reales del usuario
+-> Tecnologías viables y accesibles
+-> Diferenciadores claros
+-> Alineados con capacidades del equipo
+
+#### Soluciones Incompletas
+-> Digitalizan problemas sin resolverlos
+-> Falta infraestructura o procesos complementarios
+-> No consideran contexto completo
+-> Ignoran limitaciones reales
+
+## Evaluación y Selección de Conceptos
+
+### Técnicas de Evaluación
+#### Matriz Impacto vs Esfuerzo
+-> Alto impacto, bajo esfuerzo: prioridades
+-> Alto impacto, alto esfuerzo: evaluar riesgo
+-> Bajo impacto: descartar o simplificar
+
+#### Matriz Viable, Deseable, Factible
+-> Viable: técnicamente posible
+-> Deseable: valor para usuarios
+-> Factible: económicamente sostenible
+
+#### Matriz de Comparación
+-> Comparar conceptos con criterios ponderados
+-> Puntajes 1-3 por criterio
+-> Total ponderado para ranking
+
+### Criterios de Evaluación
+-> Valor para usuario: soluciona problemas reales
+-> Innovación: diferenciación vs competencia
+-> Viabilidad técnica: factibilidad de desarrollo
+-> Costo estimado: desarrollo y mantenimiento
+-> Escalabilidad: crecimiento futuro
+-> Riesgo: incertidumbre técnica o de mercado
+
+## Introducción al Prototipado
+
+### Propósito del Prototipo
+-> Convertir conceptos abstractos en experiencias tangibles
+-> Validar hipótesis antes de invertir en desarrollo completo
+-> Aprender observando interacción real con usuarios
+-> Reducir riesgo y costo de errores
+
+### Beneficios
+-> Comunicación clara de ideas
+-> Detección temprana de problemas
+-> Iteración rápida y económica
+-> Validación de suposiciones
+-> Inspiración para mejoras
+
+### Qué Prototipar
+-> Elementos con mayor incertidumbre
+-> Funcionalidades más riesgosas
+-> Aspectos críticos para la experiencia del usuario
+-> Partes más caras o complejas de desarrollar
+
+## Tipos de Prototipos
+
+### Por Fidelidad
+#### Baja Fidelidad
+-> Rápidos y económicos
+-> Representan conceptos básicos
+-> Storyboards, wireframes simples
+-> Maquetas de cartón o papel
+-> Enfoque en funcionalidad esencial
+
+#### Alta Fidelidad
+-> Más detallados y realistas
+-> Aplicaciones funcionales con interacciones
+-> Objetos físicos prototipados
+-> Enfoque en experiencia completa
+
+### Por Dimensiones
+#### Visual
+-> Apariencia y estética
+-> Colores, formas, tipografía
+
+#### Interacción
+-> Cómo usa el producto el usuario
+-> Flujos y navegación
+-> Gestos y controles
+
+#### Funcionalidad
+-> Qué hace realmente el producto
+-> Conexiones técnicas
+-> Procesos internos
+
+### Por Componentes de Solución
+#### Producto Digital
+-> Apps, sitios web, interfaces
+-> Prototipable con herramientas como Figma, Adobe XD
+
+#### Producto Físico
+-> Objetos tangibles
+-> Maquetas, impresiones 3D, prototipos funcionales
+
+#### Servicio de Experiencia
+-> Procesos, flujos, interacciones humanas
+-> Role-playing, storyboards, diagramas
+
+#### Espacio
+-> Entornos físicos donde ocurre la experiencia
+-> Maquetas de espacios, planos, recorridos virtuales
+
+## Técnicas de Prototipado
+
+### Storyboards
+-> Secuencia visual de interacciones
+-> Muestra contexto y emociones
+-> Identifica momentos clave del viaje del usuario
+-> Fácil de crear y modificar
+
+### Wireframes y Mockups
+-> Estructura básica de interfaces
+-> Enfoque en layout y navegación
+-> Baja fidelidad visual, alta en estructura
+
+### Prototipos Interactivos
+-> Funcionalidad simulada
+-> Navegación entre pantallas
+-> Interacciones básicas
+-> Validación de flujos
+
+### Prototipos Físicos
+-> Maquetas tangibles
+-> Modelos a escala
+-> Pruebas de ergonomía y usabilidad
+
+### Herramientas Digitales
+-> Figma: prototipado de interfaces
+-> Adobe XD: diseño y prototipado
+-> InVision, Sketch, Framer
+-> Para objetos: Tinkercad, Blender
+
+## Definición de Qué Prototipar
+
+### Identificar Hipótesis Clave
+-> Aspectos con mayor incertidumbre
+-> Suposiciones críticas sobre usuarios
+-> Funcionalidades innovadoras
+-> Tecnologías no probadas
+
+### Clasificación de Hipótesis
+#### Comportamiento
+-> Cómo interactuarán los usuarios
+-> Qué encontrarán intuitivo o confuso
+
+#### Diseño Visual
+-> Qué elementos visuales funcionan
+-> Cómo se ve la identidad del producto
+
+#### Funcionalidad Técnica
+-> Si la tecnología propuesta funciona
+-> Integraciones entre componentes
+
+#### Flujos de Usuario
+-> Secuencia de pasos para completar tareas
+-> Puntos de fricción o confusión
+
+### Priorización
+-> Riesgo: qué tan crítica es la hipótesis
+-> Incertidumbre: qué tan seguros estamos
+-> Valor: cuánto aporta a la validación
+-> Costo: cuánto cuesta probar
+
+## Ejemplos de Prototipado
+
+### Aplicación Móvil
+-> Wireframes de baja fidelidad
+-> Prototipos interactivos en Figma
+-> Pruebas con usuarios reales
+
+### Producto Físico (Comedero Automático)
+-> Dibujos y esquemas iniciales
+-> Maquetas de cartón
+-> Storyboards de uso diario
+-> Pruebas con mascotas reales
+
+### Servicio (Sistema Médico)
+-> Storyboards del proceso completo
+-> Simulaciones de consultas
+-> Prototipos de interfaces médicas
+-> Pruebas con pacientes reales
+
+## Validación con Prototipos
+
+### Pruebas con Usuarios
+-> Observar interacciones reales
+-> Identificar problemas de usabilidad
+-> Validar suposiciones
+-> Recopilar feedback cualitativo
+
+### Métricas de Éxito
+-> Completitud de tareas
+-> Tiempo de ejecución
+-> Errores cometidos
+-> Satisfacción del usuario
+-> Comentarios espontáneos
+
+### Iteración
+-> Identificar problemas
+-> Generar soluciones
+-> Crear nuevas versiones
+-> Revalidar con usuarios
+
+## Consideraciones Prácticas
+
+### Recursos y Limitaciones
+-> Tiempo disponible para prototipado
+-> Habilidades técnicas del equipo
+-> Herramientas disponibles
+-> Presupuesto para materiales
+
+### Equilibrio Fidelidad vs Rapidez
+-> Suficiente fidelidad para validar hipótesis clave
+-> No invertir en detalles innecesarios
+-> Enfoque en aprender, no en perfeccionar
+
+### Comunicación del Prototipo
+-> Explicar claramente qué es y qué no es
+-> No confundir con producto final
+-> Enfocar feedback en aspectos específicos
+-> Documentar hallazgos para iterar
+
+### Ética y Seguridad
+-> Prototipos médicos requieren cuidado especial
+-> Validar con usuarios apropiados
+-> Considerar impacto emocional
+-> Respetar privacidad de datos
+
+## Próximos Pasos
+
+### De Prototipo a Producto
+-> Refinar concepto basado en feedback
+-> Desarrollar versión funcional
+-> Pruebas más amplias
+-> Lanzamiento y medición de métricas
+
+### Integración con Negocio
+-> Validar modelo económico
+-> Definir estrategia de go-to-market
+-> Preparar plan de escalabilidad
+-> Considerar aspectos regulatorios
+
+### Crecimiento y Evolución
+-> Monitoreo continuo de uso
+-> Iteración basada en datos reales
+-> Expansión de funcionalidades
+-> Adaptación a nuevos contextos

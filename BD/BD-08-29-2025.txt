@@ -1,0 +1,121 @@
+# Repaso de Roles en Datos
+
+## Repaso de Roles
+
+### Ingeniero de Datos
+    -> Encargado de pipelines de datos y extracción de fuentes
+    -> Tareas: Ingestar, procesar, refinar y modelar datos
+    -> Seguridad: Define herramientas, pero negocio decide quién accede
+    -> Automatización: Pipelines recurrentes y en tiempo real
+    -> Escalabilidad: Diseña sistemas que crecen con demanda
+
+### Analista de Datos
+    -> Conoce negocio y estadística básica
+    -> Análisis descriptivo, diagnóstico y predictivo
+    -> Crea indicadores (KPIs) y reportes
+    -> Visualización: Genera informes para tomadores de decisión
+    -> No predice futuro (eso es científico de datos)
+
+### Científico de Datos
+    -> Experto matemático/estadístico
+    -> Predicción y clasificación usando algoritmos
+    -> Trabaja con ingenieros ML (informáticos)
+    -> Ejemplos: Predicción de ventas, análisis de sentimientos
+
+### Ingeniero ML
+    -> Informático especializado en algoritmos de ML
+    -> Implementa algoritmos usando librerías (TensorFlow, PyTorch, Scikit-learn)
+    -> Colabora con científicos de datos
+
+### Consumidor Final
+    -> Gerente/ejecutivo sin conocimientos técnicos
+    -> Toma decisiones basado en informes, gráficos y KPIs
+    -> Parte fundamental del ciclo de vida de datos
+
+## Definición de Big Data: Las 5 V's
+
+### Volumen
+    -> Cantidad masiva de datos que excede capacidades tradicionales
+    -> No es número fijo: depende de infraestructura disponible
+    -> Problema cuando supera capacidad de almacenamiento/procesamiento
+
+### Velocidad
+    -> Datos generados/consumidos en tiempo real
+    -> Diferentes velocidades de generación
+    -> Procesamiento debe ser rápido (ej: auto Tesla, análisis político)
+
+### Variedad
+    -> Múltiples formatos y fuentes (estructurados, semi-estructurados, no estructurados)
+    -> Ejemplos: JSON vs tablas relacionales, sensores IoT, texto libre
+    -> Base de datos relacionales no escalan bien con variabilidad
+
+### Veracidad
+    -> Calidad y confiabilidad de los datos
+    -> Datos deben ser creíbles para generar confianza
+    -> Filtrado de datos irrelevantes o erróneos
+
+### Valor
+    -> Beneficio que proporcionan los datos a la empresa/sociedad
+    -> Mejora decisiones: movilidad urbana, vacunas, análisis deportivo
+    -> Datos como activo principal que genera retorno
+
+## Arquitectura de Data Lake
+
+### Componentes
+    -> Fuentes: Internas (sistemas propios) y externas (redes sociales, telecomunicaciones)
+    -> Ingesta: Procesos para capturar datos de múltiples fuentes
+    -> Almacenamiento: Sistema de archivos distribuidos o buckets
+    -> Procesamiento: Análisis y transformación de datos
+    -> Consumo: Visualización e informes para tomadores de decisión
+
+### Problemas que Resuelve
+    -> Almacenamiento de petabytes de datos heterogéneos
+    -> Procesamiento masivo sin límites tradicionales
+    -> Integración de datos de diferentes formatos y velocidades
+
+## Sistemas de Archivos Distribuidos
+
+### Concepto
+    -> Archivos particionados y distribuidos en múltiples nodos
+    -> Para usuario: un solo archivo; internamente: múltiples fragmentos
+    -> Divide y conquista aplicado al almacenamiento
+
+### Ventajas
+    -> Escalabilidad: Agregar máquinas aumenta capacidad
+    -> Tolerancia a fallos: Replicación automática
+    -> Paralelismo: Múltiples usuarios acceden simultáneamente
+    -> Transparencia: Complejidad oculta al usuario
+
+### Arquitectura
+    -> NameNode (activo): Coordina operaciones, asigna tareas
+    -> DataNodes: Almacenan particiones de archivos
+    -> Replicación: Mínimo factor 3 para tolerancia a fallos
+    -> Recuperación automática: Nodos secundarios preparados
+
+## Apache Hadoop
+
+### Origen
+    -> Revolucionó almacenamiento y procesamiento masivo (2006)
+    -> Base de data lakes modernos
+    -> Gratuito hasta versión 3, luego comercializado
+
+### Componentes Principales
+    -> HDFS (Hadoop Distributed File System): Sistema de archivos
+    -> MapReduce: Framework de procesamiento paralelo
+
+### MapReduce
+    -> Algoritmo divide y conquista
+    -> Map: Divide problema en tareas paralelas
+    -> Shuffle: Distribuye datos a tareas
+    -> Reduce: Combina resultados parciales
+    -> Ejemplo: Suma por claves en tabla masiva
+
+### Aplicación en HDFS
+    -> Escritura: Archivo particionado, cada parte replicada
+    -> Lectura: Particiones reunidas transparentemente
+    -> Procesamiento: Tareas ejecutadas en paralelo en cluster
+
+## Importancia
+    -> Base de tecnologías modernas (Spark, cloud storage)
+    -> Permite entrenar modelos de IA con grandes datasets
+    -> Revolucionó análisis de big data en 10+ años

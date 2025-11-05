@@ -1,0 +1,223 @@
+# Técnicas de Modelado de Datos en Data Lakes
+
+## Revisión: ETL vs ELT
+
+### ETL Tradicional
+    -> Extrae datos crudos
+    -> Transforma durante extracción
+    -> Carga datos transformados
+    -> Limitado para big data (alta replicación aumenta espacio)
+
+### ELT en Data Lakes
+    -> Extrae datos crudos
+    -> Carga datos crudos
+    -> Transforma después con motores de procesamiento
+    -> Permite modelado flexible según necesidades
+
+## Importancia del Modelado
+
+### Razones para Modelar
+    -> Estructurar datos heterogéneos (estructurados, semi-estructurados, no estructurados)
+    -> Facilitar consultas complejas
+    -> Optimizar rendimiento de análisis
+    -> Mejorar calidad de datos
+    -> Organizar información para stakeholders
+
+### Problemas sin Modelado
+    -> Datos "empantanados" (data swamp)
+    -> Dificultad para encontrar información
+    -> Consultas complejas imposibles
+    -> Baja calidad de análisis
+
+### Beneficios del Modelado
+    -> Estructura lógica familiar (tablas)
+    -> Consultas SQL estándar
+    -> Mejor rendimiento de análisis
+    -> Control de calidad de datos
+    -> Gobernanza y organización
+
+## Modelo Normalizado (Entity-Relationship)
+
+### Concepto
+    -> Modelo relacional tradicional
+    -> Basado en teoría de conjuntos
+    -> Primera, segunda, tercera forma normal
+    -> Desarrollado por Edgar F. Codd (1970)
+
+### Enfoque
+    -> Eliminar redundancia
+    -> Integridad referencial (PK, FK)
+    -> Optimizado para transacciones OLTP
+
+### En Data Warehouses Iniciales
+    -> Ralph Kimball propuso usar modelos normalizados
+    -> Crear "data marts" por departamento
+    -> Replicar estructura de sistemas fuente
+    -> Fácil adopción por usuarios conocedores
+
+### Ventajas
+    -> Familiaridad para usuarios de negocio
+    -> Baja redundancia
+    -> Integridad de datos
+    -> Curva de aprendizaje cero
+    -> Gestión independiente por equipos
+
+### Desventajas
+    -> Lentitud en consultas analíticas complejas
+    -> Múltiples joins para análisis
+    -> No optimizado para agregaciones masivas
+    -> Dificultad para análisis históricos
+
+## Modelo Dimensional
+
+### Origen
+    -> Desarrollado por Ralph Kimball
+    -> Alternativa al modelo normalizado
+    -> Optimizado para análisis OLAP
+    -> Enfoque en consultas analíticas
+
+### Componentes
+
+#### Tablas de Hechos (Fact Tables)
+    -> Contienen medidas/métricas cuantitativas
+    -> Eventos de negocio (ventas, transacciones)
+    -> Claves foráneas a dimensiones
+    -> Granularidad definida (nivel de detalle)
+
+#### Tablas de Dimensiones (Dimension Tables)
+    -> Contienen atributos descriptivos
+    -> Contexto de los hechos
+    -> Jerarquías naturales
+    -> Cambios históricos (SCD)
+
+### Esquema en Estrella (Star Schema)
+
+#### Estructura
+    -> Una tabla de hechos central
+    -> Dimensiones conectadas directamente
+    -> Mínimos joins para consultas
+    -> Optimizado para performance
+
+#### Ventajas
+    -> Consultas simples y rápidas
+    -> Fácil entendimiento
+    -> Optimizado para agregaciones
+    -> Menos joins que modelo normalizado
+
+#### Desventajas
+    -> Mayor redundancia
+    -> Actualización compleja de dimensiones
+    -> Menos normalizado
+
+### Esquema en Copo de Nieve (Snowflake Schema)
+
+#### Estructura
+    -> Tabla de hechos central
+    -> Dimensiones parcialmente normalizadas
+    -> Sub-dimensiones en jerarquía
+    -> Más joins que estrella pero menos redundancia
+
+#### Ventajas
+    -> Menos redundancia que estrella
+    -> Mejor integridad referencial
+    -> Fácil mantenimiento
+    -> Estructura más normalizada
+
+#### Desventajas
+    -> Más joins que estrella
+    -> Consultas más complejas
+    -> Mayor curva de aprendizaje
+
+## Comparación de Modelos
+
+### Modelo Normalizado
+    -> Optimizado para: Transacciones OLTP
+    -> Consultas: Complejas, transaccionales
+    -> Ventajas: Integridad, no redundancia
+    -> Desventajas: Lento para análisis, joins complejos
+
+### Esquema en Estrella
+    -> Optimizado para: Análisis OLAP
+    -> Consultas: Agregaciones, reportes
+    -> Ventajas: Rápido, simple
+    -> Desventajas: Redundancia, actualizaciones complejas
+
+### Esquema en Copo de Nieve
+    -> Optimizado para: Análisis con jerarquías complejas
+    -> Consultas: Detalladas con navegación jerárquica
+    -> Ventajas: Balance entre rendimiento e integridad
+    -> Desventajas: Compromiso entre velocidad y normalización
+
+## Elección del Modelo Adecuado
+
+### Factores a Considerar
+    -> Tipo de consultas predominantes
+    -> Volumen de datos
+    -> Complejidad de dimensiones
+    -> Frecuencia de actualizaciones
+    -> Experiencia del equipo
+    -> Requisitos de performance
+
+### Casos de Uso
+
+#### Modelo Normalizado
+    -> Sistemas transaccionales
+    -> Consultas puntuales
+    -> Alta frecuencia de escrituras
+    -> Requisitos de integridad estrictos
+
+#### Esquema en Estrella
+    -> Dashboards ejecutivos
+    -> Reportes de ventas/ventas
+    -> Análisis de tendencias
+    -> Consultas de agregación simples
+
+#### Esquema en Copo de Nieve
+    -> Análisis geográficos complejos
+    -> Jerarquías organizacionales profundas
+    -> Dimensiones con muchos atributos
+    -> Balance entre performance y mantenibilidad
+
+## Implementación en Data Lakes
+
+### Zona de Modelado
+    -> Datos crudos → Datos refinados
+    -> Transformaciones con Spark
+    -> Creación de tablas dimensionales y de hechos
+    -> Optimización para consultas analíticas
+
+### Herramientas
+    -> Spark SQL para crear tablas
+    -> DataFrames para transformaciones
+    -> Particionamiento por fecha/dimensión
+    -> Formatos optimizados (Parquet, Delta)
+
+### Mejores Prácticas
+    -> Empezar con modelo dimensional simple
+    -> Evolucionar según necesidades
+    -> Documentar decisiones de modelado
+    -> Incluir business rules en transformaciones
+    -> Validar integridad de datos
+
+## Ejemplo Práctico
+
+### Caso: Sistema de Facturación
+    -> Datos fuente: Tabla normalizada con cliente, producto, factura, detalle
+    -> Modelo dimensional:
+        -> Hecho: Ventas (monto, cantidad, fecha)
+        -> Dimensiones: Cliente, Producto, Tiempo, Sucursal
+    -> Beneficio: Consultas de ventas por cliente/producto/tiempo sin joins complejos
+
+## Conclusión
+
+### No hay Modelo Único
+    -> Depende del caso de uso
+    -> Modelo relacional ≠ Modelo dimensional
+    -> Elegir según necesidades analíticas
+    -> Data lakes permiten flexibilidad
+
+### Aprendizaje Continuo
+    -> Comprender negocio profundamente
+    -> Practicar con casos reales
+    -> Iterar y mejorar modelos
+    -> Balance entre performance y mantenibilidad

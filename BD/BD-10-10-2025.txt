@@ -1,0 +1,233 @@
+# Proyecto Final (Obligatorio) y Visualización de Datos
+
+## Requisitos del Proyecto Final
+
+### Equipos
+    -> Grupos de 1 a 3 estudiantes
+    -> Solo estudiantes del curso actual
+    -> Recomendado: grupos de 2-3 personas (menos carga de trabajo)
+
+### Conjunto de Datos
+    -> Al menos 4 archivos tabulares
+    -> Al menos 1 archivo con muchos registros (simular big data)
+    -> Datos reales, no preparados (no usar Kaggle, repositorios preparados)
+    -> Fuentes válidas:
+        -> Datos abiertos (gobiernos, organizaciones)
+        -> Datos propios de empresas (sin información confidencial)
+        -> Ejemplos: datos.gob.uy, datos.gob.mx, WHO, etc.
+    -> Validación previa por profesores
+    -> No usar datasets "preparados" como Juegos Olímpicos
+
+### Proceso de Ingesta
+    -> Usar Apache NiFi exclusivamente (no comandos manuales)
+    -> Crear pipelines que traigan datos a HDFS
+    -> Almacenar en zona de "landing" (crudos)
+    -> Crear modelos de datos según nomenclatura del curso
+
+### Análisis Exploratorio
+    -> Notebook con análisis inicial
+    -> Descripción de columnas y tipos de datos
+    -> Identificación de duplicados, valores nulos
+    -> Estadísticas básicas
+
+### Modelado de Datos
+    -> Elegir modelo según nomenclatura del curso
+    -> Crear tablas en data lake
+    -> Refinar datos crudos a datos limpios
+    -> Implementar zona de datos refinados
+
+### Preguntas de Análisis
+    -> Plantear 5 preguntas sobre los datos
+    -> Validación previa por profesores
+    -> Enfocadas en usar herramientas de visualización
+    -> 3 preguntas respondidas con notebooks de visualización
+    -> 2 preguntas respondidas con dashboards en Tableau/Superset
+
+### Entregas
+    -> Documentación completa del proceso
+    -> Notebooks con código y resultados
+    -> Dashboards exportables
+    -> Comparación con otras plataformas cloud (AWS, Azure, GCP)
+    -> Fechas límite: Primera/semana de diciembre
+
+### Evaluación
+    -> Últimas 3-4 clases: sesiones de consulta
+    -> Importante asistir para resolver dudas
+    -> No mismo resolver problemas por email vs en persona
+
+## Uso de Herramientas de IA
+    -> Obligatorio documentar prompts usados con cualquier IA
+    -> Incluir qué preguntas se hicieron y por qué
+    -> IA como herramienta de apoyo, no como reemplazo
+    -> El trabajo debe ser propio del estudiante
+
+## Arquitectura de Zonas en Data Lake
+
+### Landing Zone
+    -> Datos crudos recién llegados
+    -> Sin procesar, formato original
+    -> Primera copia de respaldo
+
+### Refined Zone
+    -> Datos limpios y transformados
+    -> Listos para análisis
+    -> Estructuras optimizadas
+
+### Curated Zone
+    -> Datos modelados para negocio específico
+    -> Preparados para reporting/dashboarding
+    -> Datos de alta calidad
+
+### Archive Zone
+    -> Datos históricos/archivados
+    -> No utilizados frecuentemente
+    -> Backup de datos procesados
+
+## Visualización de Datos
+
+### Importancia
+    -> Los humanos procesamos información visualmente primero
+    -> Resultados numéricos no comunican insights
+    -> Permite identificar patrones ocultos
+    -> Esencial para comunicar findings a stakeholders
+
+### Tipos de Visualización
+
+#### Dimensiones
+    -> Variables independientes (ejes X/Y)
+    -> Variables dependientes (tamaño, color, forma)
+    -> Relaciones causales o correlaciones
+
+#### Medidas
+    -> Métricas cuantitativas (ventas, cantidades)
+    -> KPIs y ratios calculados
+    -> Tendencias temporales
+
+### Herramientas de Python
+
+#### Pandas
+    -> Manipulación y análisis de datos tabulares
+    -> DataFrames como tablas en memoria
+    -> Operaciones de limpieza, transformación, agregación
+    -> Lectura de múltiples formatos (CSV, Excel, JSON, SQL)
+
+#### Matplotlib
+    -> Librería base para gráficos en Python
+    -> Altamente personalizable
+    -> Gráficos estáticos de alta calidad
+    -> Base para otras librerías de visualización
+
+#### Seaborn
+    -> Construida sobre Matplotlib
+    -> Gráficos estadísticos atractivos
+    -> Paletas de colores optimizadas
+    -> Funciones de alto nivel para análisis exploratorio
+
+### Tipos de Gráficos Comunes
+
+#### Histogramas
+    -> Distribución de una variable numérica
+    -> Frecuencia de valores en rangos
+    -> Identificar sesgos, normalidad
+
+#### Gráficos de Barras
+    -> Comparación de categorías
+    -> Conteos o sumas por grupo
+    -> Rankings y comparaciones
+
+#### Gráficos de Líneas
+    -> Tendencias temporales
+    -> Evolución de métricas
+    -> Series de tiempo
+
+#### Scatter Plots
+    -> Relaciones entre dos variables numéricas
+    -> Correlaciones, clusters, outliers
+    -> Identificar patrones bivariados
+
+#### Box Plots
+    -> Distribución estadística por categorías
+    -> Mediana, cuartiles, outliers
+    -> Comparación de distribuciones
+
+#### Heatmaps
+    -> Matrices de correlación
+    -> Valores en escala de colores
+    -> Patrones en datos multidimensionales
+
+#### Mapas de Calor Geográficos
+    -> Datos geoespaciales
+    -> Intensidad por ubicación
+    -> Distribución geográfica de métricas
+
+### Mejores Prácticas de Visualización
+
+#### Storytelling
+    -> Narrativa clara con los datos
+    -> Contexto y conclusiones
+    -> Evitar sobrecargar con información
+
+#### Diseño
+    -> Colores apropiados (accesibilidad)
+    -> Leyendas claras
+    -> Títulos descriptivos
+    -> Ejes bien etiquetados
+
+#### Integridad
+    -> No manipular escalas para engañar
+    -> Representar datos verídicamente
+    -> Incluir incertidumbres cuando aplique
+
+#### Interactividad
+    -> Filtros dinámicos
+    -> Drill-down capabilities
+    -> Tooltips informativos
+
+## Comparación con Otras Plataformas
+
+### AWS (Amazon Web Services)
+    -> Servicio principal: Amazon EMR (Elastic MapReduce)
+    -> Equivalente a Spark: EMR con Spark
+    -> Almacenamiento: Amazon S3
+    -> Equivalente HDFS: S3 con EMRFS
+    -> Servicios adicionales: Athena, Redshift, QuickSight
+
+### Azure (Microsoft)
+    -> Servicio principal: Azure HDInsight
+    -> Equivalente Spark: HDInsight con Spark
+    -> Almacenamiento: Azure Data Lake Storage
+    -> Equivalente HDFS: ADLS Gen2
+    -> Servicios adicionales: Synapse Analytics, Power BI
+
+### GCP (Google Cloud Platform)
+    -> Servicio principal: Dataproc
+    -> Equivalente Spark: Dataproc con Spark
+    -> Almacenamiento: Google Cloud Storage
+    -> Equivalente HDFS: GCS con Dataproc
+    -> Servicios adicionales: BigQuery, Data Studio
+
+### Migración de Arquitectura
+    -> Identificar componentes equivalentes
+    -> Mapear pipelines existentes
+    -> Considerar costos y rendimiento
+    -> Evaluar servicios específicos de cada proveedor
+    -> Plan de migración gradual
+
+## Documentación del Proyecto
+
+### Estructura
+    -> Introducción y objetivos
+    -> Descripción del conjunto de datos
+    -> Arquitectura y diseño de solución
+    -> Procesos ETL/ELT implementados
+    -> Análisis exploratorio
+    -> Preguntas y respuestas con visualizaciones
+    -> Dashboards y reportes
+    -> Comparación con otras plataformas
+    -> Conclusiones y lecciones aprendidas
+
+### Calidad
+    -> Documentación como si fuera para compañero nuevo
+    -> Detallar decisiones de diseño tomadas
+    -> Problemas encontrados y soluciones
+    -> Código bien comentado y reproducible
