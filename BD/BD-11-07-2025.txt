@@ -1,0 +1,96 @@
+# Introducción a la Visualización de Datos
+
+## Contexto de la Clase
+-> Última clase teórica del curso de Big Data
+-> Enfoque en la "última milla" del proceso de datos: mostrar resultados a quienes toman decisiones
+-> Importancia de la visualización para comunicar datos efectivamente
+-> Transición del procesamiento y modelado al dashboarding
+
+## Importancia de la Visualización
+-> Los dashboards no son solo para científicos o ingenieros de datos
+-> Las personas que toman decisiones no conocen el proceso técnico detrás
+-> La visualización comunica el valor del trabajo realizado
+-> Herramientas especializadas vs herramientas básicas (Excel)
+
+## Herramientas de Visualización Presentadas
+
+### Tableau
+-> Herramienta líder en visualización profesional
+-> Versión gratuita disponible para estudiantes
+-> Conecta a múltiples fuentes de datos (más de 400 conectores)
+-> Funciona como "drag and drop" para crear visualizaciones
+-> Estructura: Hojas (gráficos individuales) y Dashboards (conjunto de hojas)
+-> Capacidad de crear campos calculados para transformación de datos
+-> Manejo automático de jerarquías temporales (año, mes, día)
+-> Reconocimiento automático de datos geográficos
+-> Templates gratuitos disponibles para diseños profesionales
+
+### Power BI
+-> Desarrollado por Microsoft
+-> Versión gratuita completa disponible
+-> Estructura: Reportes (conjunto de gráficos) y Dashboards (conjunto de reportes)
+-> Tres vistas principales: Datos, Visualizaciones y Filtros
+-> Capacidad de transformación de datos integrada
+-> Filtros aplicables a nivel de página o reporte completo
+-> Integración nativa con ecosistema Microsoft
+
+### Looker Studio (Google Data Studio)
+-> Herramienta gratuita de Google
+-> Basada en la nube, no requiere instalación
+-> Enfoque en templates pre-diseñados
+-> Conecta a múltiples fuentes incluyendo BigQuery
+-> Estructura: Páginas (conjunto de gráficos) y Dashboards (conjunto de páginas)
+-> Menos intuitiva para mapas geográficos que las otras herramientas
+
+### Superset
+-> Herramienta open source gratuita
+-> Usada en el proyecto obligatorio del curso
+-> Menos visualmente atractiva que las comerciales
+-> Buena para entornos donde no se puede pagar licencias
+
+## Conceptos Fundamentales en Visualización
+
+### Dimensiones vs Medidas
+-> Dimensiones: Atributos por los que se filtra, agrupa o muestra (strings, categorías)
+-> Medidas: Valores numéricos sobre los que se calculan agregaciones (suma, promedio, etc.)
+-> Importancia de identificar correctamente cada tipo para evitar errores
+
+### Fuentes de Datos
+-> Las herramientas no procesan datos masivos directamente
+-> Requiere pre-procesamiento con herramientas como Pandas o Spark
+-> Generar archivos resumidos para visualización
+-> Consideraciones de performance: archivos deben cargar rápidamente
+
+### Diseño de Dashboards
+-> No empezar arrastrando gráficos sin planificación
+-> Diseñar previamente en papel qué mostrar
+-> Pensar en la historia que se quiere contar
+-> Mantener coherencia visual (colores, estilos)
+-> Templates como solución para usuarios sin conocimientos de diseño
+
+## Proyecto Obligatorio
+-> Opción de elegir entre diferentes herramientas según preferencia
+-> Superset ya está disponible en el entorno del curso
+-> Para otras herramientas: generar archivos CSV o fuentes compatibles
+-> Entregar dashboards funcionales, no solo código
+-> Evaluación basada en la calidad de la presentación de datos
+
+## Consideraciones Técnicas
+-> Versiones gratuitas tienen limitaciones (publicación, conectores)
+-> Memoria y performance: evitar archivos muy grandes
+-> Compatibilidad de formatos (decimales, fechas)
+-> Campos calculados para transformación de datos
+
+## Comparación de Herramientas
+-> Tableau y Power BI: más maduros y con mejores capacidades de diseño
+-> Looker Studio: buena opción gratuita pero menos intuitiva
+-> Todas permiten filtros dinámicos y drill-down
+-> Diferencias en estructura (hojas vs reportes vs páginas)
+-> Costos: Tableau (14 mil millones USD), Power BI (20 mil millones USD)
+
+## Aplicación Práctica
+-> Archivo de ejemplo: transacciones bancarias con clientes
+-> Creación de gráficos básicos: barras, líneas, mapas
+-> Aplicación de filtros globales
+-> Integración de múltiples visualizaciones en un dashboard
+-> Exportación y publicación según necesidades

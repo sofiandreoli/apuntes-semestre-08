@@ -1,0 +1,204 @@
+# Diseño de Producto Basado en Tecnologías: Testing y Delivery
+
+## Fases del Proceso de Diseño
+
+### Empatía
+-> Investigación inicial con usuarios
+-> Entrevistas y observación
+-> Mapa de empatía y personas
+-> Definición del problema y necesidades
+
+### Ideación
+-> Generación de ideas
+-> Técnicas creativas (brainstorming, analogías)
+-> Matriz morfológica
+-> Selección de conceptos viables
+
+### Definición
+-> Síntesis de insights
+-> Definición del desafío
+-> Matriz de afinidad
+-> Definición de criterios de éxito
+
+## Prototipado y Testing
+
+### Prototipado
+-> Creación de prototipos de baja, media y alta fidelidad
+-> Iteración basada en feedback
+-> Validación de conceptos con usuarios
+-> Refinamiento del producto
+
+### Testing: Tres Momentos
+-> Antes: Especificar qué aprender
+-> Durante: Recopilar datos de manera neutral
+-> Después: Analizar resultados y definir próximos pasos
+
+### Hipótesis
+-> Formulación de suposiciones sobre el producto
+-> Categorización: diseño visual, interacciones, comportamiento
+-> Validación cuantitativa y cualitativa
+-> Diferenciación entre conocidos vs desconocidos
+
+### Técnicas de Análisis de Resultados
+-> Matriz de hipótesis: experimento, resultados, aprendizaje, próximos pasos
+-> Captura de feedback: qué pasó, qué significa, qué haremos
+-> Priorización de feedback por relevancia del usuario
+
+### Herramientas de Organización
+-> Grillas para hipótesis validadas/inválidas
+-> Matrices de feedback e insights
+-> Documentación de aprendizajes desconocidos/desconocidos
+
+## Transición Discovery a Delivery
+
+### Dual Track Model
+-> Discovery continuo: investigación y validación
+-> Delivery continuo: construcción y lanzamiento
+-> Iteración entre ambas pistas
+-> Feedback loop constante
+
+### Discovery Track
+-> Validación de hipótesis
+-> Experimentos y prototipos
+-> Aprendizaje sobre usuarios y mercado
+-> Definición de conceptos aprobados
+
+### Delivery Track
+-> Construcción del producto
+-> Releases incrementales
+-> Medición de métricas reales
+-> Adaptación basada en feedback post-lanzamiento
+
+### Concepto Aprobado
+-> Prototipo validado con usuarios
+-> Hipótesis principales confirmadas
+-> Definición clara de funcionalidades core
+-> Base para desarrollo del MVP
+
+## User Story Mapping
+
+### Estructura Jerárquica
+-> Épicas: Grandes funcionalidades u objetivos (nivel más alto)
+-> Temáticas/Features: Grandes actividades y funcionalidades
+-> User Stories: Funcionalidades específicas desde perspectiva del usuario
+-> Tareas: Detalles de implementación técnica
+
+### Viaje del Usuario
+-> Flujo principal de uso de la aplicación
+-> Secuencias de interacciones
+-> Diferentes caminos y casos de uso
+-> Identificación de dependencias entre funcionalidades
+
+### Ejemplo: Tienda Online
+-> Épica: Compra de productos
+    -> Temática: Exploración de artículos
+        -> Buscar por categorías
+        -> Buscar por texto
+        -> Recomendaciones personalizadas
+    -> Temática: Manejo del carrito
+        -> Agregar productos
+        -> Modificar cantidades
+        -> Eliminar productos
+        -> Calcular totales e impuestos
+    -> Temática: Checkout y pago
+        -> Seleccionar método de pago
+        -> Ingresar datos de envío
+        -> Confirmar compra
+    -> Temática: Post-compra
+        -> Seguimiento de envío
+        -> Confirmación de entrega
+
+### Identificación de Dependencias
+-> Funcionalidades que requieren otras para funcionar
+-> Relaciones entre user stories
+-> Priorización basada en valor y complejidad
+-> Definición del alcance mínimo viable
+
+## Definición del MVP (Minimum Viable Product)
+
+### Características del MVP
+-> Producto funcional que resuelve el problema principal
+-> Versión más simple posible que funciona
+-> Capaz de generar aprendizaje validado
+-> Base para iteraciones futuras
+
+### Criterios de Selección
+-> Funcionalidades imprescindibles para el flujo core
+-> Bajo costo de desarrollo relativo
+-> Alto valor percibido por usuarios
+-> Factibilidad técnica
+
+### Ejemplo de Priorización
+-> Exploración básica de productos: Sí (imprescindible)
+-> Recomendaciones avanzadas: No (complejo, puede esperar)
+-> Sistema completo de reviews: No (requiere masa crítica)
+-> Carrito básico con agregar/eliminar: Sí
+-> Múltiples métodos de pago: Sí (mínimo uno)
+-> Sistema de envío complejo: No (versión simplificada)
+
+### Limitaciones Conscientes
+-> Funcionalidades reducidas intencionalmente
+-> Calidad suficiente, no perfecta
+-> Enfoque en validación, no en completitud
+-> Preparación para expansión futura
+
+## Aspectos Culturales en Desarrollo de Software
+
+### Complejidad de los Problemas
+-> Creación de soluciones para problemas inexistentes
+-> Trabajo en dos entornos simultáneos:
+    -> Entorno técnico (equipo, herramientas)
+    -> Entorno de negocio (mercado, usuarios, stakeholders)
+-> Tecnologías y mercados en constante evolución
+-> Requerimientos humanos: comunicación, empatía, trabajo en equipo
+
+### Habilidades Requeridas
+-> Técnicas: programación, arquitectura, testing
+-> Humanas: comunicación, liderazgo, resolución de conflictos
+-> De negocio: entendimiento de dominios, análisis de mercado
+-> Adaptativas: aprendizaje continuo, flexibilidad
+
+### Cultura Organizacional
+-> Más difícil de cambiar que procesos técnicos
+-> Influencia de líderes y contagio cultural
+-> Impacto en la capacidad de innovación
+-> Balance entre estabilidad y experimentación
+
+### Pre-mortem Analysis
+-> Análisis preventivo de fallos
+-> Identificación de riesgos antes de que ocurran
+-> Clasificación por impacto y probabilidad
+-> Desarrollo de estrategias de mitigación
+
+### Post-mortem Analysis
+-> Aprendizaje de incidentes sin castigo
+-> Identificación de causas raíz
+-> Mejora continua de procesos
+-> Documentación y prevención futura
+
+## Consideraciones para el Obligatorio
+
+### Evidencia Requerida
+-> Ideación: Panel con ideas agrupadas y priorizadas
+-> Prototipado: Prototipo interactivo + pruebas con usuarios
+-> Testing: Validación de hipótesis, análisis de resultados
+-> Delivery: User story map, definición de MVP
+
+### Criterios de Evaluación
+-> Fidelidad al proceso de design thinking
+-> Profundidad de investigación y validación
+-> Calidad del prototipo y testing
+-> Justificación de decisiones tomadas
+
+### Recomendaciones
+-> Documentar todas las fases del proceso
+-> Incluir evidencia visual (fotos, videos, grabaciones)
+-> Justificar elecciones técnicas y de diseño
+-> Demostrar aprendizaje iterativo
+
+### Entregables Finales
+-> Informe completo del proceso
+-> Prototipo funcional
+-> Video de pruebas con usuarios
+-> Análisis de resultados y próximos pasos
+-> Reflexión sobre el aprendizaje obtenido

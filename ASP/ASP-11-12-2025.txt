@@ -1,0 +1,218 @@
+# Patrones de Observabilidad e Infraestructura en Microservicios
+
+## Patrones de Observabilidad
+
+### Agregación de Logs
+-> Centralización de logs distribuidos en múltiples servicios e instancias
+-> Herramientas como ELK Stack (Elasticsearch, Logstash, Kibana)
+-> Filtrado y análisis de logs en tiempo real
+-> Solución al problema de logs distribuidos en sistemas complejos
+
+### Distributed Tracing (Rastreo Distribuido)
+-> Seguimiento de requests a través de múltiples microservicios
+-> Asignación de trace ID único a cada petición inicial
+-> Propagación del ID a través de llamadas entre servicios
+-> Reconstrucción del flujo completo de una operación
+-> Utilización de librerías específicas para implementar
+
+### Health Checks
+-> Endpoints para verificar estado de servicios (/health)
+-> Verificación de conectividad y dependencias
+-> Integración con load balancers para routing inteligente
+-> Alertas automáticas ante servicios no saludables
+-> Diferenciación entre health checks livianos vs completos
+
+### Métricas y Monitoreo
+-> Centralización de métricas de aplicación
+-> Dashboards consolidados para visibilidad global
+-> Alertas basadas en métricas (CloudWatch, etc.)
+-> Métricas por servicio vs métricas agregadas
+
+### Auditoría de Acciones de Usuario
+-> Registro de acciones relevantes del usuario
+-> Paneles no técnicos para administradores
+-> Categorización por microservicio, recurso, acción y prioridad
+-> Justificación de registro de operaciones exitosas vs fallidas
+
+## Excepción Tracking y Manejo de Errores
+
+### Centralización de Excepciones
+-> Agregación de errores de múltiples servicios
+-> Filtrado de duplicados y priorización de corrección
+-> Alertas en tiempo real (Slack, email, etc.)
+-> Análisis de patrones de error
+
+### Pre-mortem Analysis
+-> Análisis preventivo de fallos antes de que ocurran
+-> Identificación de riesgos específicos del sistema
+-> Evaluación de impacto de fallos en flujos críticos
+-> Clasificación de riesgos (alto/medio/bajo)
+-> Desarrollo de estrategias de mitigación
+
+### Post-mortem Analysis
+-> Análisis posterior a incidentes
+-> Enfoque en aprendizaje, no en castigo
+-> Identificación de causas raíz
+-> Documentación y mejora de procesos
+-> Ejemplos: fallos en mantenimiento, configuración, etc.
+
+## Patrones de Infraestructura
+
+### Microservice Chassis
+-> Estructura base reutilizable para microservicios
+-> Inclusión de patrones comunes implementados
+-> Aceleración del desarrollo de nuevos servicios
+-> Estándares consistentes en la organización
+-> Ejemplos: boilerplates con Docker, tests, logging, métricas
+
+### Sidecar Pattern
+-> Proceso auxiliar que corre junto al microservicio principal
+-> Comunicación a través de localhost (latencia mínima)
+-> Funcionalidades sin modificar el código principal
+-> Ejemplos: logging adicional, métricas, proxy, seguridad
+-> Aislamiento de responsabilidades adicionales
+
+### External Configuration
+-> Configuración externa al código del microservicio
+-> Variables de entorno para diferentes entornos
+-> Inyección de configuración en tiempo de despliegue
+-> Separación entre desarrollo, testing, producción
+-> Mayor seguridad (no secrets en código)
+
+## Estrategias de Despliegue
+
+### Service por Host vs Múltiples Servicios por Host
+-> Service por host: aislamiento total, escalado preciso, costo mayor
+-> Múltiples servicios por host: aprovechamiento de recursos, menor costo, mayor riesgo
+-> Conflicto de dependencias y versiones en múltiples servicios
+
+### Service por VM vs Service por Container
+-> Service por VM: escalado lento, sobrecarga de recursos del SO
+-> Service por container: arranque rápido, aislamiento ligero, escalado eficiente
+-> Kubernetes como orquestador de containers
+
+### Zero Downtime Deployment
+-> Despliegues sin interrupción del servicio
+-> Estrategias: blue-green, canary, rolling updates
+-> Infraestructura como código para automatización
+-> Versionado de releases para tracking de cambios
+
+## Function as a Service (FaaS) y Serverless
+
+### Conceptos Básicos
+-> Ejecución de código sin gestión de servidores
+-> Pago por ejecución, no por tiempo de actividad
+-> Escalado automático basado en demanda
+-> Ejemplos: AWS Lambda, Google Cloud Functions, Azure Functions
+
+### Casos de Uso
+-> Procesamiento de eventos (S3 uploads, database changes)
+-> APIs ligeras (API Gateway + Lambda)
+-> Procesamiento de streams (Kinesis + Lambda)
+-> Tareas programadas y batch processing
+
+### Ventajas
+-> No gestión de infraestructura
+-> Costos bajos para uso esporádico
+-> Escalado automático
+-> Despliegue rápido (solo código)
+
+### Desventajas
+-> Tiempo de inicialización (cold starts)
+-> Limitaciones de tiempo de ejecución y memoria
+-> Dependencia de proveedores cloud
+-> Debugging más complejo
+
+## Domain-Driven Design (DDD)
+
+### Diseño Estratégico
+
+#### Dominio y Subdominios
+-> Dominio: área de actividad de la organización
+-> Subdominios: divisiones del dominio principal
+-> Clasificación por importancia:
+    -> Core: diferenciador competitivo de la empresa
+    -> Supporting: necesario para core, no diferenciador
+    -> Generic: común a todas las empresas, externalizable
+
+#### Bounded Context
+-> Frontera semántica alrededor de uno o más subdominios
+-> Lenguaje ubicuo dentro del contexto
+-> Equipo dedicado por bounded context
+-> Relaciones entre contexts: anticorruption layer, open host service
+
+#### Context Mapping
+-> Mapa de relaciones entre bounded contexts
+-> Patrones de integración: partnership, customer-supplier, conformist
+-> Equipos dueños de cada context
+-> Manejo de comunicación e integración
+
+### Diseño Táctico
+
+#### Value Objects
+-> Objetos identificados por sus valores, no por ID
+-> Inmutables, representan conceptos del dominio
+-> Ejemplos: direcciones, fechas, números de teléfono
+
+#### Entities
+-> Objetos con identidad propia (ID)
+-> Ciclo de vida persistente
+-> Estado mutable a través del tiempo
+
+#### Aggregates
+-> Grupo de entities y value objects tratados como unidad
+-> Aggregate root: punto de entrada único
+-> Consistencia interna fuerte
+-> Transacciones atómicas dentro del aggregate
+-> Ejemplos: Order (con OrderItems), Company (con Employees)
+
+#### Domain Services
+-> Lógica de negocio que no pertenece a entities o value objects
+-> Operaciones que involucran múltiples aggregates
+-> Stateless, puramente funcionales
+
+### Arquitectura de Microservicios y DDD
+
+#### Extracción de Microservicios
+-> Subdominios core como candidatos principales
+-> Bounded contexts como fronteras naturales
+-> Aggregates como elementos indivisibles
+-> Iterativo: comenzar con servicios más grandes y dividir gradualmente
+
+#### Cohesión y Acoplamiento
+-> Alta cohesión dentro de servicios
+-> Bajo acoplamiento entre servicios
+-> Responsabilidades claras por servicio
+-> Comunicación asíncrona preferible
+
+#### Patrones de Comunicación
+-> Event-driven entre bounded contexts
+-> APIs síncronas para casos necesarios
+-> CQRS para separación de responsabilidades
+-> Event sourcing para auditoría completa
+
+## Consideraciones para Microservicios
+
+### Atributos de Calidad
+-> Escalabilidad horizontal
+-> Disponibilidad y resiliencia
+-> Mantenibilidad y testabilidad
+-> Observabilidad y monitoreo
+
+### Equipos y Organización
+-> Equipos pequeños dedicados a bounded contexts
+-> Autonomía en decisiones técnicas
+-> Alineación con objetivos organizacionales
+-> Evolución gradual, no transformación radical
+
+### Transición de Monolito a Microservicios
+-> Identificación de bounded contexts en código existente
+-> Extracción incremental por funcionalidades
+-> Mantenimiento de consistencia durante transición
+-> Pruebas exhaustivas en cada paso
+
+### Trade-offs y Decisiones
+-> Nunca existe solución óptima absoluta
+-> Balance entre complejidad técnica y beneficios
+-> Justificación de decisiones tomadas
+-> Evolución basada en aprendizaje continuo

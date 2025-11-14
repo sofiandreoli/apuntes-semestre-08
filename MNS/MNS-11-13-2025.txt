@@ -1,0 +1,229 @@
+# Gestión Comercial en Organizaciones
+
+## Contexto de la Clase
+-> Continuación del análisis de áreas organizacionales
+-> Enfoque en el área comercial/ventas
+-> Importancia vital en la gestión empresarial
+-> Diferencias entre empresas B2B y B2C
+-> Aplicación tanto a emprendimientos como empresas consolidadas
+
+## Definición de Gestión Comercial
+-> Conjunto de estrategias y acciones para alcanzar objetivos comerciales
+-> Estrategias: planificación, diseño, ejecución y monitoreo
+-> Acciones: actividades relacionadas con estrategia comercial
+-> Enfoque diferente según tipo de empresa (B2B vs B2C)
+
+## Importancia de la Gestión Comercial
+-> Define rumbo y estrategia comercial
+-> Permite enfocarse en nichos específicos vs vender "lo que sea a quien sea"
+-> Facilita identificación de oportunidades
+-> Conocimiento profundo de clientes y mercado
+-> Monitoreo y análisis de resultados
+-> Planificación estratégica vs operativa
+
+## Actividades Principales del Área Comercial
+
+### Análisis de Mercado
+-> Entender tamaño del mercado (millones de dólares/año)
+-> Analizar tendencias (crecimiento/disminución)
+-> Identificar necesidades y demandas de clientes
+-> Conocer procesos de compra de clientes
+-> Analizar competencia y su estrategia de precios
+-> Identificar barreras de entrada y salida
+-> Evaluar atractivo del mercado
+
+### Desarrollo de Estrategias
+-> Definir planes coherentes con productos/servicios
+-> Establecer precios acordes al valor percibido
+-> Diseñar comunicaciones efectivas
+-> Gestionar alianzas y partnerships
+-> Coordinar con otras áreas (marketing, operaciones)
+
+### Gestión de Partners
+-> Identificar fabricantes estratégicos (Microsoft, IBM, etc.)
+-> Cumplir requisitos de programas de partnership
+-> Obtener mejores condiciones comerciales
+-> Mantener niveles de certificación
+-> Generar beneficios mutuos
+
+### Gestión de Clientes y Oportunidades
+-> Seguimiento continuo de oportunidades de venta
+-> Coordinación con otras áreas organizacionales
+
+### Monitoreo de Indicadores
+-> Medir cumplimiento de objetivos planificados
+-> Comparar real vs planeado
+-> Tomar acciones correctivas según desvíos
+
+## Estructura del Área Comercial
+
+### Gerente Comercial
+-> Líder del área comercial
+-> Define estrategias comerciales
+-> Coordina equipo de ventas
+-> Desarrolla relaciones comerciales
+-> Propone estrategias innovadoras
+-> Coordina con marketing
+-> Sueldo variable según resultados
+-> Bono anual por performance
+
+### Ejecutivos de Ventas/Vendedores
+-> Ejecutan ventas directas
+-> Gestionan cartera propia de clientes
+-> Visitan y contactan clientes potenciales
+-> Confeccionan propuestas comerciales
+-> Velan por satisfacción del cliente
+-> Establecen vínculos a largo plazo
+
+### Roles de Backoffice
+-> Apoyo administrativo a vendedores
+-> Investigación de precios y productos
+-> Búsqueda de soluciones alternativas
+-> Participación en propuestas menores
+
+### Preventa/Pre-venta Técnica
+-> Perfil mixto: comercial + técnico
+-> Apoyo técnico a vendedores
+-> Confirmación de integración técnica
+-> Comunicación de conceptos técnicos en lenguaje no técnico
+-> Perfil demandado y bien remunerado
+
+## Análisis de Mercado y Competencia
+
+### Tamaño y Tendencias del Mercado
+-> Medición en términos monetarios
+-> Evolución histórica y proyecciones
+-> Crecimiento vs decrecimiento
+
+### Necesidades y Demandas
+-> Aspectos técnicos vs procesos de compra
+-> Velocidad de respuesta requerida
+-> Nivel de personalización demandado
+
+### Análisis de Competencia
+-> Identificación de competidores directos
+-> Análisis de estrategias de pricing
+-> Evaluación de fortalezas y debilidades
+-> Histórico de propuestas en licitaciones públicas
+
+### Barreras de Entrada/Salida
+-> Barreras de entrada: inversiones requeridas, permisos, patentes
+-> Barreras de salida: contratos a largo plazo, compromisos asumidos
+
+### Herramienta FODA
+-> Fortalezas y debilidades (aspectos internos)
+-> Oportunidades y amenazas (aspectos externos)
+-> Identificación de oportunidades en el mercado
+-> Detección de amenazas competitivas
+-> Definición de planes de acción
+
+## Segmentación y Definición de Target
+
+### Concepto de Segmentación
+-> División del mercado en grupos más pequeños
+-> Grupos con características y necesidades similares
+-> Permite enfoque específico y personalizado
+
+### Buyer Persona
+-> Representación ficticia del cliente ideal
+-> Basada en comportamiento, características y personalidad
+-> Incluye datos demográficos, metas, dolores, preferencias
+-> Ayuda a empatizar y diseñar ofertas específicas
+
+### Proceso de Definición de Target
+-> Identificación de variables de segmentación
+-> Selección de segmentos viables
+-> Desarrollo de ofertas adaptadas
+-> Comunicación consistente
+
+## Diseño y Ejecución de Estrategias
+
+### Definición de Objetivos Comerciales
+-> Metas específicas y medibles
+-> Ejemplos: facturación, cantidad de clientes, margen de ventas
+-> Características SMART: específicos, medibles, alcanzables, relevantes, con tiempo definido
+
+### Consideraciones en la Definición
+-> Claridad y especificidad
+-> Alineación con mercado y competencia
+-> Integración con objetivos organizacionales
+-> Definición de plazos y responsabilidades
+-> Medibilidad y alcanzabilidad
+
+### Ejemplos de Objetivos
+-> Facturación: $12,000,000 en 12 meses
+-> Clientes nuevos: 50 en 15 meses
+-> Margen de ventas: mínimo 20%
+-> Propuestas innovadoras: 2 en 2 años
+
+### Asignación de Objetivos Individuales
+-> Distribución por ejecutivo comercial
+-> Consideración de experiencia y territorio
+-> Suma de objetivos individuales > objetivo total del área
+-> Motivación mediante comisiones y bonos escalonados
+
+## Estrategias de Marketing y Ventas
+
+### Elementos Clave
+-> Conocimiento profundo de mercado y competencia
+-> Identificación de necesidades y preferencias
+-> Definición clara del target
+-> Mensaje diferenciado y atractivo
+-> Selección de canales apropiados
+-> Medición y seguimiento continuo
+
+### Canales de Marketing y Venta
+-> Publicidad online, email marketing, eventos
+-> Canales de distribución y venta directa
+-> Alineación con perfil del cliente objetivo
+
+## Gestión de Clientes
+
+### Importancia Estratégica
+-> Los clientes son razón de ser del negocio
+-> Dependencia de su elección y lealtad
+-> Valor agregado como diferenciador
+
+### Actividades Principales
+-> Identificación de potenciales clientes
+-> Contacto y establecimiento de relaciones
+-> Generación de confianza y preferencia
+-> Trabajo en diferenciales competitivos
+-> Soluciones personalizadas
+-> Soporte post-venta
+-> Monitoreo de satisfacción
+
+### Indicadores de Satisfacción
+-> Net Promoter Score (NPS)
+-> Customer Satisfaction Score (CSAT)
+-> Churn rate (tasa de abandono)
+-> Encuestas periódicas
+
+## Ejercicio Práctico: Cotización
+
+### Componentes del Costo
+-> Costos directos de componentes
+-> Costos de importación (12%)
+-> Costos de mano de obra técnica ($200/hora)
+-> Costos de gestión ($350/hora)
+-> Aplicación de markup (margen)
+
+### Proceso de Cotización
+-> Investigación por backoffice
+-> Estimación técnica por preventa
+-> Cálculo de costos totales
+-> Aplicación de margen
+-> Presentación de propuesta económica
+
+### Ejemplo Numérico
+-> Componente A: $1,000 + 12% importación = $1,120
+-> Componente B: $15,000 + 12% importación = $16,800
+-> Mano de obra técnica: 12 horas × $200 = $2,400
+-> Mano de obra gestión: 3 horas × $350 = $1,050
+-> Costo total: $21,370
+-> Precio final con 20% markup: $25,644
+
+## Próxima Clase
+-> Métricas comerciales
+-> Caso práctico
+-> Espacio para consultas y dudas

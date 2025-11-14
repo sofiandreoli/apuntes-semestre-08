@@ -1,0 +1,116 @@
+# Introducción a Apache Superset
+
+## Contexto de la Clase
+-> Breve demostración de Superset como herramienta de visualización
+-> Parte final del curso de Big Data
+-> Enfoque en dashboards y presentaciones de datos
+-> Complemento a las herramientas vistas anteriormente (Power BI, Tableau, Looker Studio)
+-> Herramienta gratuita y open source
+
+## Características de Superset
+-> Soporta múltiples bases de datos y tipos de datos
+-> Conexiones nativas a diversas fuentes de datos
+-> No limitada exclusivamente a Big Data
+-> Útil para visualizaciones rápidas de datos personales
+-> Incluye tipos de gráficos predefinidos
+-> Posibilidad de crear dashboards elaborados con investigación adicional
+
+## Instalación de Superset
+-> Herramienta no viene preinstalada en el entorno del curso
+-> Requiere instalación manual
+-> Pasos de instalación:
+    -> Conectar por SSH al entorno
+    -> Ejecutar comando para descargar instalador
+    -> Descomprimir archivo descargado
+    -> Dar permisos de ejecución al instalador
+    -> Ejecutar instalación
+-> Configuración de red ya realizada previamente
+-> Una vez instalado, acceder vía navegador web
+-> Autenticación con usuario existente o nuevo
+
+## Conexión a Bases de Datos
+-> Conexión directa a Hive para el proyecto del curso
+-> Creación de una conexión a la base de datos
+-> Esquema predeterminado (pirates) creado en clases anteriores
+-> Superset muestra automáticamente todas las tablas disponibles
+
+## Creación de Datasets
+-> Dataset en Superset replica una tabla de Hive
+-> Proceso de creación:
+    -> Seleccionar base de datos (Hive)
+    -> Elegir esquema
+    -> Seleccionar tabla específica
+    -> Vista previa de datos para verificar conexión
+-> Datasets sirven como base para crear visualizaciones
+
+## Tipos de Gráficos Disponibles
+-> Amplia variedad de gráficos predefinidos
+-> Incluye mapas y gráficos básicos
+-> Posibilidad de explorar diferentes tipos según necesidades
+-> Gráficos se crean seleccionando dataset y tipo de visualización
+
+## Creación de Visualizaciones Básicas
+
+### Tabla de Datos Crudos
+-> Tipo de gráfico: Table
+-> Muestra datos sin procesamiento visual
+-> Configuración:
+    -> Especificar columnas a mostrar
+    -> Opción "Show Cell Bars" para barras en celdas
+-> Útil para:
+    -> Verificación de datos
+    -> Descarga de datos en formato CSV
+    -> Análisis preliminar de datasets
+
+### Gráfico de Torta (Pie Chart)
+-> Visualización de distribuciones por categorías
+-> Configuración:
+    -> Dimensión: campo categórico (ej: status de órdenes)
+    -> Métrica: conteo o suma de registros
+-> Muestra automáticamente porcentajes y valores
+-> Genera consultas SQL automáticamente en background
+
+## Creación de Dashboards
+-> Dashboard agrupa múltiples visualizaciones
+-> Proceso:
+    -> Crear dashboard vacío
+    -> Agregar charts existentes
+    -> Organizar y redimensionar visualizaciones
+    -> Posibilidad de agregar números destacados (big numbers)
+-> Funcionalidades:
+    -> Reordenar elementos
+    -> Ajustar tamaños
+    -> Edición en tiempo real
+
+## Consideraciones de Performance
+-> Consultas sobre tablas grandes pueden demorar
+-> Recomendación: trabajar con tablas agregadas
+-> En el proyecto del curso:
+    -> Procesar datos con Spark
+    -> Guardar resultados en Hive Analytics
+    -> Crear tablas externas sobre resultados agregados
+    -> Conectar Superset a estas tablas optimizadas
+-> Resultados agregados son más pequeños y rápidos de visualizar
+
+## Integración con el Proyecto Obligatorio
+-> Superset como opción para visualizaciones del proyecto
+-> Complementa las visualizaciones en notebooks
+-> Cinco consultas principales a resolver con Spark
+-> Visualizaciones divididas en:
+    -> Nivel notebook (parte del procesamiento)
+    -> Nivel dashboard (presentación final)
+-> Posibilidad de combinar con otras herramientas de visualización
+
+## Funcionalidades Adicionales
+-> Descarga de datos desde visualizaciones
+-> Exportación de charts como imágenes
+-> Vista de SQL generado automáticamente
+-> Edición de propiedades visuales
+-> Filtros y controles interactivos
+
+## Importancia en el Ecosistema Big Data
+-> La visualización es la "última milla" del proceso de datos
+-> Importante para comunicar resultados a stakeholders
+-> Superset como herramienta accesible sin conocimientos avanzados
+-> Complementa el trabajo técnico realizado anteriormente
+-> Útil para proyectos personales y profesionales futuros

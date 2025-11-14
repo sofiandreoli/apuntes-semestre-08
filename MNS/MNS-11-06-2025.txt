@@ -1,0 +1,248 @@
+# Modelo de Negocio SaaS (Software as a Service)
+
+## Definición y Conceptos Básicos
+
+### Modelo SaaS
+-> Empresas que desarrollan productos y los comercializan como servicios
+-> Software alojado en servidores propios de la empresa
+-> Acceso a través de internet desde cualquier lugar/dispositivo
+-> Centralización de actualizaciones y mantenimiento
+-> Reducción de carga de trabajo para soporte técnico
+
+### Modelo de Negocio
+-> Basado en esquemas de suscripción (mensual/anual)
+-> Pago recurrente por acceso al software y soporte
+-> Incluye actualizaciones automáticas y soporte técnico
+-> No se vende el software, se alquila el acceso
+
+### Ejemplos de Empresas SaaS
+-> Salesforce (CRM y ventas)
+-> Dropbox (almacenamiento en nube)
+-> Zoom (videoconferencias)
+-> Slack (comunicación empresarial)
+-> HubSpot (marketing y ventas)
+
+## Ventajas del Modelo SaaS
+
+### Ingresos Recurrentes
+-> Ingreso mensual/anual predecible
+-> Permite planificación financiera a largo plazo
+-> Facilita inversiones en crecimiento y desarrollo
+
+### Accesibilidad
+-> Acceso desde cualquier lugar con conexión internet
+-> Mercado potencial global
+-> Sin necesidad de infraestructura local del cliente
+
+### Escalabilidad
+-> Fácil escalado de recursos en la nube
+-> Expansión masiva sin límites técnicos
+-> Adaptación automática a demanda de usuarios
+
+### Control y Seguridad
+-> Control centralizado del software
+-> Actualizaciones centralizadas
+-> Mejor soporte técnico unificado
+-> Seguridad más robusta (datos en un solo lugar)
+
+## Desventajas del Modelo SaaS
+
+### Dependencia de Conectividad
+-> Requiere conexión a internet permanente
+-> Problemas en áreas con baja conectividad
+-> Mercados menos accesibles por limitaciones técnicas
+
+### Percepción de Costo Elevado
+-> Costos recurrentes vs compra única tradicional
+-> Dificultad de justificar ROI en organizaciones tradicionales
+-> Uso de CapEx vs OpEx para facilitar aprobación presupuestaria
+
+### Falta de Control Local
+-> Datos alojados en servidores externos
+-> Preocupaciones de seguridad y confidencialidad
+-> Regulaciones que requieren datos en territorio nacional
+
+### Actualizaciones Automáticas
+-> Posible impacto en integraciones con otros sistemas
+-> Necesidad de comunicar cambios con anticipación
+-> Algunos usuarios prefieren control manual de actualizaciones
+
+## Indicadores de Performance (KPIs)
+
+### Propósito de los KPIs
+-> Medición del rendimiento empresarial
+-> Monitoreo de salud organizacional
+-> Comparación con objetivos definidos
+-> Toma de decisiones basada en datos
+-> Valoración de empresas (factores en precio de venta)
+
+### Indicadores Financieros
+
+#### Ingresos Totales
+-> Suma de todos los ingresos generados en período determinado
+-> Incluye suscripciones, ventas puntuales, servicios adicionales
+-> Medición básica de facturación total
+-> No considera rentabilidad (comparar con costos)
+
+#### EBIT (Earnings Before Interest and Taxes)
+-> Ganancia operativa antes de intereses e impuestos
+-> Mide rentabilidad de operaciones puras
+-> Excluye factores financieros y fiscales
+-> Útil para comparar eficiencia operativa
+
+#### EBITDA (Earnings Before Interest, Taxes, Depreciation and Amortization)
+-> EBIT más depreciación y amortización
+-> Mide flujo de caja operativo real
+-> Excluye gastos no monetarios
+-> Útil para valoración y comparación de empresas
+
+#### CAC (Customer Acquisition Cost)
+-> Costo promedio de adquirir un nuevo cliente
+-> Incluye marketing, ventas, soporte de prueba gratuita
+-> Debe ser menor que valor generado por cliente
+-> Segmentable por tipo de cliente, canal, período
+
+#### MRR (Monthly Recurring Revenue)
+-> Ingresos recurrentes mensuales esperados
+-> Suma de suscripciones activas mensuales
+-> Permite predicción de ingresos futuros
+-> Base para planificación financiera
+
+#### CLV (Customer Lifetime Value)
+-> Valor total generado por cliente durante relación completa
+-> Debe superar CAC para rentabilidad
+-> Benchmark: relación 3:1 (ideal), 1:1 (punto equilibrio)
+-> Mayor relación indica empresa más valiosa
+
+#### ROI (Return on Investment)
+-> Medida del retorno de inversiones específicas
+-> Cálculo: Beneficio/Costo de inversión
+-> Aplicado a campañas, productos nuevos, canales
+
+#### Payback Period
+-> Tiempo para recuperar inversión inicial
+-> Cálculo: CAC ÷ Ingresos promedio cliente
+-> Indica velocidad de recuperación de inversiones
+
+### Indicadores de Uso
+
+#### User Activation Rate
+-> Porcentaje de usuarios que completan acciones específicas
+-> Definido por empresa (registro, tutorial, primera funcionalidad)
+-> Mide engagement real vs suscripciones activas
+-> Base para identificar usuarios inactivos
+
+#### Conversion Rate (Prueba Gratuita)
+-> Porcentaje que convierte de prueba gratuita a pago
+-> Mide efectividad de estrategia de captación
+-> Indica calidad del producto y propuesta de valor
+
+#### Churn Rate
+-> Porcentaje de clientes que cancelan suscripción
+-> Cálculo: Clientes perdidos ÷ Clientes iniciales × 100
+-> Mide capacidad de retención
+-> Objetivo: minimizar para mantener base de clientes
+
+#### Time Usage
+-> Tiempo promedio que usuarios pasan en plataforma
+-> Indica valor percibido y compromiso
+-> Reducción puede indicar pérdida de interés
+-> Base para mejoras en experiencia de usuario
+
+### Indicadores de Satisfacción del Cliente
+
+#### NPS (Net Promoter Score)
+-> Mide lealtad del cliente mediante recomendación
+-> Escala 0-10, clasificación:
+    -> Promotores (9-10): Leales y recomiendan
+    -> Pasivos (7-8): Satisfechos pero no entusiastas
+    -> Detractores (0-6): Insatisfechos
+-> Cálculo: % Promotores - % Detractores
+
+#### CSAT (Customer Satisfaction Score)
+-> Mide satisfacción general con producto/servicio
+-> Escala 1-5 o 1-10 según empresa
+-> Cálculo: Respuestas positivas ÷ Total respuestas
+-> Medición directa de percepción del cliente
+
+#### CES (Customer Effort Score)
+-> Mide facilidad de uso del producto
+-> Evalúa esfuerzo requerido para completar tareas
+-> Escala según percepción de facilidad
+-> Objetivo: reducir esfuerzo para aumentar lealtad
+
+## Estrategias para Éxito en SaaS
+
+### Mejora de Experiencia de Usuario
+-> Diseño de interfaz intuitiva
+-> Facilidad de navegación
+-> Personalización según necesidades
+-> Soporte integrado y ayuda contextual
+-> Simplificación de procesos de registro
+
+### Desarrollo de Nuevas Funcionalidades
+-> Innovación continua para mantenerse relevante
+-> Adaptación a cambios en comportamiento de usuarios
+-> Desarrollo de productos complementarios
+-> Respuesta a competencia y tendencias del mercado
+
+### Aumento de Tasas de Conversión y Retención
+-> Optimización de proceso de registro
+-> Programas de fidelización
+-> Mejora continua de experiencia de usuario
+-> Comunicación efectiva con clientes existentes
+
+### Reducción del CAC
+-> Eficiencias en marketing y ventas
+-> Mejor targeting de anuncios
+-> Programas de referidos
+-> Aprovechamiento de canales existentes
+-> Optimización de procesos de venta
+
+### Expansión a Nuevos Mercados
+-> Adaptación de producto a necesidades locales
+-> Estrategias de marketing culturalmente apropiadas
+-> Expansión geográfica progresiva
+-> Segmentación de mercados específicos
+
+## Aspectos Financieros del Modelo SaaS
+
+### CapEx vs OpEx
+-> CapEx: Gastos de capital (compras de activos fijos)
+-> OpEx: Gastos operativos (costos recurrentes)
+-> SaaS facilita transición a OpEx
+-> Facilita aprobación presupuestaria en organizaciones tradicionales
+
+### Costo de Oportunidad
+-> Uso de recursos propios vs financiamiento externo
+-> Evaluación de retornos alternativos
+-> Decisión entre recursos propios vs préstamos
+
+### Financiamiento y Endeudamiento
+-> Posibilidad de crecimiento más rápido con deuda
+-> Riesgos asociados al endeudamiento
+-> Evaluación de rentabilidad vs costo financiero
+
+## Aplicaciones Prácticas
+
+### Benchmarking por Industria
+-> Indicadores varían según sector
+-> Ejemplos: CRM vs música en streaming
+-> Referencias específicas por tipo de SaaS
+
+### Seguimiento y Monitoreo
+-> KPIs alineados con objetivos estratégicos
+-> Frecuencia de medición según indicador
+-> Acciones correctivas basadas en desvíos
+
+### Valoración de Empresas
+-> KPIs influyen en precio de venta
+-> Empresas saludables tienen mejores valuaciones
+-> Uso de métricas para preparación de venta
+
+## Próximas Clases
+-> Gestión comercial (estructura, procesos de venta)
+-> Repaso para parcial
+-> Métricas comerciales adicionales
+-> Proceso de licitación pública
+-> Inversión y valoración de empresas

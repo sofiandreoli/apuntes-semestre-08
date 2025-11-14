@@ -1,0 +1,262 @@
+# Modelo SaaS y Patrones en Microservicios
+
+## Modelo de Negocio SaaS
+
+### Definición y Características
+-> Software as a Service: desarrollo de productos comercializados como servicios
+-> Software alojado en servidores del proveedor
+-> Acceso a través de internet desde cualquier dispositivo
+-> Modelo de negocio basado en suscripciones mensuales/anuales
+-> Pago recurrente por acceso y soporte técnico
+
+### Ventajas del Modelo SaaS
+
+#### Ingresos Recurrentes
+-> Ingreso mensual/anual predecible
+-> Permite planificación financiera a largo plazo
+-> Facilita inversiones en crecimiento y desarrollo
+
+#### Accesibilidad
+-> Acceso desde cualquier lugar con conexión internet
+-> Mercado potencial global
+-> Sin necesidad de infraestructura local del cliente
+
+#### Escalabilidad
+-> Fácil escalado de recursos en la nube
+-> Expansión masiva sin límites técnicos
+-> Adaptación automática a demanda de usuarios
+
+#### Control y Seguridad
+-> Control centralizado del software
+-> Actualizaciones centralizadas
+-> Mejor soporte técnico unificado
+-> Seguridad más robusta (datos en un solo lugar)
+
+### Desventajas del Modelo SaaS
+
+#### Dependencia de Conectividad
+-> Requiere conexión a internet permanente
+-> Mercados menos accesibles por limitaciones técnicas
+-> Áreas con baja conectividad representan problemas
+
+#### Percepción de Costo Elevado
+-> Costos recurrentes vs compra única tradicional
+-> Dificultad de justificar ROI en organizaciones tradicionales
+-> Uso de OpEx vs CapEx para facilitar aprobación presupuestaria
+
+#### Falta de Control Local
+-> Datos alojados en servidores externos
+-> Preocupaciones de seguridad y confidencialidad
+-> Regulaciones que requieren datos en territorio nacional
+
+#### Actualizaciones Automáticas
+-> Posible impacto en integraciones con otros sistemas
+-> Necesidad de comunicar cambios con anticipación
+-> Algunos usuarios prefieren control manual de actualizaciones
+
+## Indicadores de Performance (KPIs)
+
+### Propósito de los KPIs
+-> Medición del rendimiento empresarial
+-> Monitoreo de salud organizacional
+-> Comparación con objetivos definidos
+-> Toma de decisiones basada en datos
+-> Valoración de empresas (factores en precio de venta)
+
+### Indicadores Financieros
+
+#### Ingresos Totales
+-> Suma de todos los ingresos generados en período determinado
+-> Incluye suscripciones, ventas puntuales, servicios adicionales
+-> Medición básica de facturación total
+-> No considera rentabilidad (comparar con costos)
+
+#### EBIT (Earnings Before Interest and Taxes)
+-> Ganancia operativa antes de intereses e impuestos
+-> Mide rentabilidad de operaciones puras
+-> Excluye factores financieros y fiscales
+-> Útil para evaluar eficiencia operativa
+
+#### EBITDA (Earnings Before Interest, Taxes, Depreciation and Amortization)
+-> EBIT más depreciación y amortización
+-> Mide flujo de caja operativo real
+-> Excluye gastos no monetarios
+-> Útil para valoración y comparación de empresas
+
+#### CAC (Customer Acquisition Cost)
+-> Costo promedio de adquirir un nuevo cliente
+-> Incluye marketing, ventas, soporte de prueba gratuita
+-> Debe ser menor que valor generado por cliente
+-> Segmentable por tipo de cliente, canal, período
+
+#### MRR (Monthly Recurring Revenue)
+-> Ingresos recurrentes mensuales esperados
+-> Suma de suscripciones activas mensuales
+-> Permite predicción de ingresos futuros
+-> Base para planificación financiera
+
+#### CLV (Customer Lifetime Value)
+-> Valor total generado por cliente durante relación completa
+-> Debe superar CAC para rentabilidad
+-> Benchmark: relación 3:1 (ideal), 1:1 (punto equilibrio)
+-> Mayor relación indica empresa más valiosa
+
+#### ROI (Return on Investment)
+-> Medida del retorno de inversiones específicas
+-> Cálculo: Beneficio/Costo de inversión
+-> Aplicado a campañas, productos nuevos, canales
+
+#### Payback Period
+-> Tiempo para recuperar inversión inicial
+-> Cálculo: CAC ÷ Ingresos promedio cliente
+-> Indica velocidad de recuperación de inversiones
+
+### Indicadores de Uso
+
+#### User Activation Rate
+-> Porcentaje de usuarios que completan acciones específicas
+-> Definido por empresa (registro, tutorial, primera funcionalidad)
+-> Mide engagement real vs suscripciones activas
+-> Base para identificar usuarios inactivos
+
+#### Conversion Rate (Prueba Gratuita)
+-> Porcentaje que convierte de prueba gratuita a pago
+-> Mide efectividad de estrategia de captación
+-> Indica calidad del producto y propuesta de valor
+
+#### Churn Rate
+-> Porcentaje de clientes que cancelan suscripción
+-> Cálculo: Clientes perdidos ÷ Clientes iniciales × 100
+-> Mide capacidad de retención
+-> Objetivo: minimizar para mantener base de clientes
+
+#### Time Usage
+-> Tiempo promedio que usuarios pasan en plataforma
+-> Indica valor percibido y compromiso
+-> Reducción puede indicar pérdida de interés
+-> Base para mejoras en experiencia de usuario
+
+### Indicadores de Satisfacción del Cliente
+
+#### NPS (Net Promoter Score)
+-> Mide lealtad del cliente mediante recomendación
+-> Escala 0-10, clasificación:
+    -> Promotores (9-10): Leales y recomiendan
+    -> Pasivos (7-8): Satisfechos pero no entusiastas
+    -> Detractores (0-6): Insatisfechos
+-> Cálculo: % Promotores - % Detractores
+
+#### CSAT (Customer Satisfaction Score)
+-> Mide satisfacción general con producto/servicio
+-> Escala 1-5 o 1-10 según empresa
+-> Cálculo: Respuestas positivas ÷ Total respuestas
+-> Medición directa de percepción del cliente
+
+#### CES (Customer Effort Score)
+-> Mide facilidad de uso del producto
+-> Evalúa esfuerzo requerido para completar tareas
+-> Escala según percepción de facilidad
+-> Objetivo: reducir esfuerzo para aumentar lealtad
+
+## Patrones Orientados a Eventos
+
+### Event Notification
+-> Envío de eventos simples de notificación
+-> Contiene identificador y tipo de evento
+-> No incluye datos completos del cambio
+-> Receptor debe consultar datos adicionales
+-> Pros: separación de responsabilidades, bajo acoplamiento
+-> Contras: múltiples llamadas adicionales, sobrecarga de servicios origen
+
+### Event Carrier State Transfer
+-> Envío de datos completos en el evento
+-> Incluye toda la información necesaria para el receptor
+-> No requiere consultas adicionales
+-> Pros: reducción de latencia, menor tráfico
+-> Contras: datos pueden estar desactualizados, mayor tamaño de mensajes
+
+### Event Sourcing
+-> Almacenamiento de entidades como secuencia de eventos
+-> Cada cambio genera un nuevo evento con timestamp
+-> Recreación del estado actual mediante replay de eventos
+-> Pros: atomicidad, auditoría completa, consistencia eventual
+-> Contras: complejidad alta, curva de aprendizaje pronunciada
+
+## Arquitectura Orientada a Eventos
+
+### Comunicación Event-Driven
+-> Servicios publican eventos sobre cambios en su dominio
+-> Otros servicios se suscriben y reaccionan a eventos
+-> Desacoplamiento entre servicios emisores y receptores
+-> Comunicación asíncrona
+
+### Coreografía vs Orquestación
+-> Coreografía: cada servicio conoce su rol en la secuencia
+-> Orquestación: coordinador central dirige la secuencia
+-> Coreografía ofrece mayor desacoplamiento
+-> Orquestación proporciona mayor control
+
+## Patrones de Observabilidad
+
+### Agregación de Logs
+-> Centralización de logs de múltiples servicios
+-> Herramientas como ELK stack o CloudWatch
+-> Permite análisis transversal de la aplicación
+
+### Distributed Tracing
+-> Seguimiento de requests a través de múltiples servicios
+-> Identificadores únicos (trace ID) para rastrear flujos
+-> Reconstrucción de operaciones complejas
+
+### Health Checks
+-> Endpoints para verificar estado de servicios
+-> Verificación de conectividad y dependencias
+-> Integración con load balancers y circuit breakers
+
+### Métricas y Monitoreo
+-> Métricas por servicio vs métricas centralizadas
+-> Dashboards unificados para visibilidad global
+-> Alertas automáticas ante anomalías
+
+## Boilerplates y Chassis
+
+### Propósito
+-> Estructuras base reutilizables para microservicios
+-> Aceleración del desarrollo de nuevos servicios
+-> Estándares consistentes en la organización
+-> Inclusión de patrones comunes (logging, health checks, etc.)
+
+### Ejemplos
+-> Boilerplates con Docker, tests, documentación
+-> Chassis con autenticación, manejo de errores, métricas
+-> Adaptación a lenguajes específicos (Node.js, Python, etc.)
+
+### Ventajas y Desventajas
+-> Ventajas: rapidez, consistencia, mejores prácticas incluidas
+-> Desventajas: posible acoplamiento a lenguajes específicos
+-> Recomendación: usar como base y adaptar según necesidades
+
+## Aspectos del Obligatorio
+
+### Separación de Repositorios
+-> Cada microservicio en repositorio separado
+-> CI/CD independiente por servicio
+-> Simulación de arquitectura distribuida real
+-> No usar monorepo para mantener principios de microservicios
+
+### Documentación y Justificación
+-> Fundamentar elecciones técnicas (event patterns, etc.)
+-> Explicar trade-offs y decisiones tomadas
+-> Documentar arquitectura y patrones utilizados
+
+### Auditoría y Logging
+-> Implementación de logs estructurados
+-> Niveles: microservicio, recurso, acción, prioridad
+-> Almacenamiento de operaciones exitosas y fallidas
+-> Justificación de qué y cómo se audita
+
+### Próximas Clases
+-> Consultas del obligatorio
+-> Preparación para parcial
+-> Gestión comercial
+-> Inversión y valoración de empresas

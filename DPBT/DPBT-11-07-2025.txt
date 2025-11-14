@@ -1,0 +1,208 @@
+# Fase de Prototipado y Testing
+
+## Información Administrativa
+
+### Cuestionario y Actividades
+-> Segundo cuestionario disponible en Aulas
+    -> Nombre: "segundo cuestionario" (todo en minúscula)
+    -> Tiempo estimado: 20-25 minutos
+    -> Requiere práctica previa con prototipos
+
+### Defensa del Proyecto
+-> Fecha: 28 de noviembre
+    -> Duración: 15 minutos por grupo
+    -> Formato: Presentación de hitos principales + muestra de prototipo
+    -> Horarios disponibles: viernes por la tarde (consultar disponibilidad)
+    -> Grupos grandes tienen rangos de tiempo más amplios
+-> Contenido para defensa:
+    -> Desafío inicial seleccionado
+    -> Personas/Perfiles definidos
+    -> Conceptos ideados y seleccionado para prototipar
+    -> Prototipo desarrollado
+-> Entrega del obligatorio: después de la defensa
+    -> Permite completar partes no incluidas en defensa (testing, conclusiones, documentación)
+
+### Próximas Clases
+-> Próxima clase: Pase a Delivery (21 de noviembre)
+    -> Incluye cuestionario
+    -> Posibilidad de trabajar en obligatorio durante la clase
+-> Clase siguiente: Contenido completo del curso
+
+## Revisión del Proceso Anterior
+
+### Fases Completadas
+-> Empatizar: Entrevistas, mapas de empatía, observaciones
+-> Definir: Grupos de usuarios, hallazgos organizados
+-> Idear: Matriz morfológica, conceptos agrupados y seleccionados
+-> Prototipar: Concepto definido, prototipo creado con hipótesis
+
+### Insumos por Fase
+-> Definir: Resultados completos de empatía
+-> Idear: Grupos definidos + hallazgos organizados
+-> Prototipar: Concepto seleccionado + hipótesis asumidas
+
+## Introducción al Testing de Prototipos
+
+### Definición de Prototipo
+-> Objeto físico, maqueta o simulación interactiva
+    -> Debe ser lo suficientemente real para interacción
+    -> Incluye objetos conectados a aplicaciones
+    -> Puede ser storyboard, wireframe funcional o video explicativo
+
+### Objetivos del Testing
+-> Aprender del usuario en contexto real
+-> Validar o refutar hipótesis
+-> Reducir incertidumbre antes de invertir más
+-> Verificar funcionalidad básica del prototipo
+
+### Diferencia con Testing de Producto Final
+-> Testing de prototipo: Aprender y validar hipótesis
+-> Testing de delivery: Validar aceptación del producto construido
+
+## Analogía: Expedición Submarina
+
+### Comparación con Proceso de Investigación
+-> Exploración submarina Uruguaya (200-3000 metros)
+    -> Equipo: Científicos, técnico de robot, piloto de barco
+    -> Objetivo: Aprender sobre fauna, formaciones geológicas, ecosistemas
+-> Paralelo con testing de prototipos:
+    -> Exploración del comportamiento del usuario
+    -> Descubrimiento de patrones no previstos
+    -> Aprendizaje más allá de hipótesis planteadas
+
+### Etapas Similares
+-> Antes: Planificación de qué aprender y cómo medir
+-> Durante: Exploración y registro de hallazgos
+-> Después: Análisis de resultados y próximos pasos
+
+## Hipótesis y Asunciones en Prototipado
+
+### Definición de Hipótesis
+-> Asunciones tomadas durante creación del prototipo
+    -> Dudas sobre diseño, proceso o comportamiento del usuario
+    -> Supuestos de riesgo que necesitan validación
+-> Clasificación sugerida (no obligatoria):
+    -> Diseño visual
+    -> Proceso de flujo
+    -> Comportamiento del usuario
+    -> Técnicas (para prototipos avanzados)
+
+### Ejemplos de Hipótesis
+-> Diseño visual: "Diseño oscuro con acento de color transmite modernidad y confianza"
+-> Proceso de flujo: "Flujo para lista personalizada es claro y no requiere asistencia"
+-> Comportamiento: "Usuarios preferirán deslizar para cambiar canción vs botones"
+    -> "Usuarios recordarán y volverán a usar listas basadas en recuerdos personales"
+
+### Importancia de las Hipótesis
+-> Sirven para validar supuestos específicos
+-> Complementan aprendizaje general del prototipo
+-> Permiten identificar qué funciona y qué no
+
+## Tipos de Usuarios para Testing
+
+### Clasificación por Relación con Producto
+-> Usuarios finales
+-> Usuarios internos (si aplica)
+-> Stakeholders externos:
+    -> Financiadores/promotores
+    -> Managers, marketing, UX externos
+
+### Clasificación por Conocimiento Tecnológico
+-> Según experiencia con tecnología similar
+-> Según rol de uso dentro de organización
+    -> Diferentes objetivos e intereses por departamento
+
+### Recomendaciones de Selección
+-> Cubrir roles de uso más representativos
+-> Variar según motivación, edad, características personales
+-> Evitar variar prototipo por cada perfil (siempre que sea posible)
+
+## Etapas del Proceso de Testing
+
+### Antes de la Prueba
+-> Definir qué aprender (hipótesis + aprendizajes generales)
+-> Seleccionar cómo medir (cuantitativo/cualitativo)
+-> Elegir usuarios apropiados
+-> Preparar prototipo y materiales de registro
+-> Planificar sesión: objetivos específicos + genéricos
+
+### Durante la Prueba
+-> Bienvenida y explicación:
+    -> Presentar equipo sin revelar rol de diseñadores
+    -> Explicar propósito de la prueba
+    -> Aclarar que se evalúa prototipo, no persona
+    -> Dar objetivo específico pero no genérico
+-> Observación neutral:
+    -> Registrar comportamientos, gestos, expresiones
+    -> No intervenir (salvo bloqueo total)
+    -> Permitir que usuario hable en voz alta
+-> Registro continuo:
+    -> Video, notas, capturas de pantalla
+    -> Observar: dónde empiezan, dónde se detienen, gestos de confusión/frustración
+
+### Después de la Prueba
+-> Preguntas de reflexión:
+    -> "¿Lograste tus objetivos?"
+    -> "¿Qué partes fueron claras/fáciles vs confusas/molestas?"
+    -> "¿Usarías esta aplicación nuevamente? Por qué sí/no, qué cambiarías?"
+    -> Preguntas específicas según observaciones realizadas
+-> Análisis de resultados:
+    -> Hipótesis validadas/refutadas
+    -> Aprendizajes inesperados
+    -> Priorización de ajustes necesarios
+    -> Decisiones para próximos pasos
+
+## Técnicas para Organizar Resultados
+
+### Matriz de Validación de Hipótesis
+-> Columnas: Hipótesis, Experimento, Resultados, Aprendizajes, Próximos pasos
+-> Permite seguimiento sistemático de cada hipótesis
+-> Actualizable durante y después de pruebas
+
+### Grilla de Captura de Feedback
+-> Categorías: Lo que gustó, Lo que costó, Preguntas pendientes, Ideas surgidas
+-> Captura insights cualitativos durante observación
+
+### Matriz de Ponderación
+-> Asignar pesos según relevancia por usuario/funcionalidad
+-> Ayuda a priorizar ajustes más importantes
+-> Considera perfil del usuario (edad, frecuencia de uso, rol)
+
+### Telemetría Automática
+-> Registro automático de clicks, flujos, abandonos
+-> Complementario a observación directa
+-> Útil para prototipos más avanzados o testing remoto
+
+## Ejemplos Prácticos con Spotify
+
+### Problemas de Usabilidad Identificados
+-> Reproducción aleatoria: Dificultad para activar/desactivar
+    -> Múltiples clicks necesarios
+    -> Indicador poco claro (tres modos diferentes)
+    -> Muchos usuarios no descubren la funcionalidad
+-> Creación de playlists: Sugerencias automáticas poco utilizadas
+    -> Usuarios prefieren buscar manualmente
+    -> Funcionalidad útil pero no descubrible
+-> Barra inferior: Demasiadas opciones, confusión sobre funciones
+-> Playlist por contexto: Excelente funcionalidad pero oculta
+    -> Usuarios no la encuentran
+    -> Requiere búsqueda específica
+
+### Lecciones Aprendidas
+-> Importancia de claridad en indicadores
+-> Problemas de descubrimiento afectan uso real
+-> Necesidad de simplificar interfaces complejas
+-> Funcionalidades avanzadas requieren mejor posicionamiento
+
+## Consideraciones Generales
+
+### Actitud Durante Testing
+-> Errores del usuario = oportunidades de aprendizaje
+-> No intervenir para corregir
+-> Ver críticas como regalos para mejorar
+-> Prototipo imperfecto = parte natural del proceso
+
+### Mensaje Clave
+-> "Si no estás preparado para errores, nunca innovarás"
+-> Testing no confirma que funciona, sino que descubre qué no funciona
+-> Valor del testing: Entender, aprender y decidir próximos pasos
