@@ -1,0 +1,140 @@
+# ASP-11-26-2025: Serverless y Kubernetes
+
+## Agenda de la Clase
+-> Temas principales: serverless (primera hora, con ejemplo práctico) y Kubernetes (segunda hora).
+-> Al final, espacio para feedback sobre la materia (dificultad, temas valorados).
+-> Consulta sobre dudas previas: no hay dudas reportadas.
+
+## Serverless Computing
+-> Serverless no equivale a functions as a service (FaaS); es un paradigma más amplio que incluye FaaS como subconjunto.
+-> En serverless, los desarrolladores no gestionan servidores, escalado o recursos; la nube lo maneja automáticamente.
+-> No implica ausencia de servidores, sino abstracción para enfocarse en código.
+-> Lanzado en AWS con Lambda en 2014, pero el paradigma es anterior.
+
+### Diferencias entre Serverless y FaaS
+-> FaaS (ej. Lambda): implementar solo código, sin gestionar servidores, CPU o memoria.
+-> Serverless abarca más: bases de datos (DynamoDB), colas (SQS), notificaciones (SNS), storage (S3), todos sin gestión de servidores.
+
+### Servicios Serverless en AWS
+-> SQS: colas de mensajes.
+-> SNS: notificaciones.
+-> DynamoDB: base de datos no relacional.
+-> S3: almacenamiento de archivos (imágenes, PDFs) con URLs abstractas.
+-> Route 53: gestión de dominios y certificados.
+-> Amplify: hosting de fronts.
+-> Cognito: autenticación similar a Firebase.
+-> API Gateway: expone endpoints conectados a Lambdas.
+
+### Ventajas de Serverless
+-> Autoescalado horizontal/vertical sin intervención (ej. picos de tráfico como Black Friday).
+-> Pago por uso real (ej. segundos de ejecución en Lambda, no por servidor activo).
+-> Alta disponibilidad: deploy en múltiples availability zones.
+-> Reducción de costos en infraestructura (menos tiempo en mantenimiento).
+-> Rápido paso de PoC a producción (deploy en horas).
+-> Facilita desarrollo: solo codificar, integrable con otros servicios AWS.
+
+### Desventajas y Consideraciones
+-> No ideal para APIs consultadas constantemente (costo alto por segundos de ejecución).
+-> Mejor para procesos programados (ej. actualizaciones nocturnas) o endpoints poco frecuentes.
+-> Cold starts: tiempo inicial para descargar código, instalar dependencias y levantar entorno (reutilizable si Lambda se usa frecuentemente).
+-> Timeouts por defecto (15-20 segundos) para evitar bucles infinitos.
+-> Límites en escalado a gran escala, pero raros en uso normal.
+
+### Evolución hacia Serverless
+-> Analogía con evolución del software: machine code (data centers locales) -> assembly (VMs locales) -> application code (cloud computing) -> serverless (abstracción total).
+-> Comparación con arquitectura tradicional: cliente -> servidor -> base de datos vs. serverless: autenticación (Cognito) -> API Gateway -> Lambda -> DynamoDB -> SNS.
+
+### Optimizaciones en Lambda
+-> Cachear respuestas fuera del handler (ej. desencriptar keys con KMS) para ahorrar tiempo y costos (diferencia de hasta $19,000/año en estimaciones).
+-> Manejar paralelismo: usar idempotencia para evitar procesar transacciones duplicadas (ej. transaction ID en DynamoDB).
+-> Evitar cold starts en picos: delays aleatorios o queues (SQS) para procesar secuencialmente.
+
+### Casos de Uso de Lambda
+-> Procesos asíncronos (ej. sistema de notificaciones leyendo de SQS).
+-> Triggers: cronjobs en CloudWatch, API Gateway para endpoints.
+-> Layers: hasta 5 por función, para código reusable (ej. envío de métricas a CloudWatch).
+-> Paradigma event-driven: eventos disparan ejecución, no APIs tradicionales.
+
+## Ejemplo Práctico: Microservicio de Notificaciones con Lambda
+-> Objetivo: API que recibe calificaciones de estudiantes, almacena en base de datos, encola en SQS, procesa con Lambda y notifica via SNS por email.
+-> Tecnologías: ECS Fargate (API en Node.js), DynamoDB, SQS, Lambda, SNS, CloudWatch.
+-> Diagrama de flujo: Usuario envía nota -> API (Fargate) almacena en DynamoDB (estado: pending) y encola en SQS -> Lambda consume SQS, verifica suscripción en SNS, envía notificación, actualiza estado a processed en DynamoDB, postea métricas en CloudWatch.
+
+### Código de Lambda (Node.js)
+-> Recibe parámetros: región, tabla DynamoDB, ARN de SNS topic.
+-> Verifica suscripción del email en SNS.
+-> Si confirmado, construye mensaje: subject "Tu nota en [materia]", body "Hola [nombre], tu nota es [nota] para [materia]".
+-> Publica en SNS para envío de email.
+-> Postea métricas en CloudWatch usando AWS SDK.
+
+### Código de API (Node.js, Server-Side Rendering)
+-> Renderiza formulario simple: nombre estudiante, email, materia, nota (1-100).
+-> En submit: almacena en DynamoDB, encola en SQS.
+
+### Configuración en AWS
+-> Crear SQS Queue (grades_queue).
+-> Crear SNS Topic (gradesNotification).
+-> Crear Lambda: runtime Node.js, role LabRole, copiar código, deploy.
+-> Agregar trigger: SQS Queue.
+-> Variables de entorno: REGION, TABLE_NAME (grades), METRICS_NAMESPACE (up/grades), SNS_TOPIC_ARN.
+-> Prueba: enviar nota desde formulario -> llega email de confirmación (primera vez) o notificación directa.
+
+### Observaciones del Ejemplo
+-> Primera suscripción: SNS envía confirmación para evitar spam; usuario debe confirmar.
+-> Múltiples suscriptores: si mismo email con variaciones (ej. +1), llega múltiples veces.
+-> Monitoreo: logs en CloudWatch, ejecuciones en Lambda monitoring (demora ~5 min).
+-> Todo serverless: sin gestión de servidores.
+
+## Kubernetes
+-> Orquestador open source para gestionar contenedores a escala (desarrollado por Google en 2014, luego open source).
+-> Automatiza despliegues, escalado, networking y autoreparación en microservicios.
+-> No suficiente con solo Docker para cientos de contenedores; resuelve escalado, conflictos de puertos, fallos.
+-> Basado en estado declarativo (YAML files): define estado deseado, Kubernetes lo mantiene.
+-> Versiones en clouds: EKS (AWS), AKS (Azure), GKE (Google).
+
+### Usos de Kubernetes
+-> Aplicaciones cloud-native, independiente del lenguaje.
+-> Soporte para inmutabilidad de infraestructura.
+-> Provee: pods, escalabilidad horizontal/vertical, networking, autoremediación, load balancing, service discovery, storage, rollouts/rollbacks, secrets/configuración.
+
+### Arquitectura de Kubernetes
+-> Cluster: conjunto de máquinas (nodos) con un nodo master (orquesta) y workers (ejecutan pods).
+-> Control Plane: administra nodos y pods (API server, scheduler, etcd para datos, controllers).
+-> Nodos: ejecutan pods (kubelet sigue instrucciones, kube-proxy gestiona red).
+-> Pods: unidad básica con uno o más contenedores (ej. API + sidecar) en misma red/VM.
+-> Entorno: integra con DevOps, CI/CD, identity providers, registries de imágenes, volúmenes, redes.
+
+### Objetos en Kubernetes
+-> Pod: ejecuta contenedores, con IP, volúmenes persistentes; ciclos de vida (init, running, crashed); restart policy (always).
+-> Deployment: gestiona pods, replicas, actualizaciones sin downtime (rolling updates, blue-green), rollbacks.
+-> ReplicaSet: asegura cantidad deseada de pods (ej. si falla uno de 3, crea nuevo).
+-> DaemonSet: un pod por nodo.
+-> StatefulSet: para apps con estado (ej. bases de datos).
+-> HPA/VPA: autoescalado horizontal/vertical.
+-> Secrets: información sensible (keys, contraseñas).
+-> ConfigMaps: configuraciones no sensibles (variables de entorno).
+-> Namespace: divide cluster (default, kube-system, kube-public); aísla recursos (staging vs. production); asigna cuotas/límites de CPU/memoria.
+-> PersistentVolume/Claims: almacenamiento disponible y pedidos por apps.
+-> Custom Resources: extiende Kubernetes (usado en EKS).
+
+### Networking en Kubernetes
+-> Service: accede a grupo de pods, actúa como load balancer interno; tipos (NodePort).
+-> Ingress: punto de entrada externo, maneja HTTPS/HTTP, rutas, dominios, certificados; redirecciona a services.
+-> NetworkPolicy: define comunicación entre pods para seguridad/tráfico.
+
+### Ejemplos de Configuración YAML
+-> Service: metadata, puerto 80 -> target 8080, tipo NodePort, selector ecoServer.
+-> Ingress: metadata, host ecoServer.example.com, path / -> service puerto 80.
+-> Deployment: replicas 1, selector ecoServer, imagen ecoServer, puerto 8080.
+-> Pod: imagen nginx, recursos (memoria mínima), DNS policy ClusterFirst, restart always.
+
+### Consideraciones Finales de Kubernetes
+-> Curva de aprendizaje: configura objetos via YAML, CLI (kubectl) o UI.
+-> No serverless: control total por usuario.
+-> Chequea salud de pods y reemplaza fallos.
+-> Namespaces por defecto: default, kube-system (sistema), kube-public (acceso público).
+
+## Cierre de la Clase
+-> Resumen: serverless (Lambda, ventajas, ejemplo), Kubernetes (arquitectura, objetos, YAML).
+-> Feedback: opcional, anónimo o directo; micro-tarea con preguntas sobre el curso (tecnologías mejores/peores, 20-30 min).
+-> Agradecimiento por asistencia al final del semestre.

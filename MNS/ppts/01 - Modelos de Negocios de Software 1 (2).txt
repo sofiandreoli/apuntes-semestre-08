@@ -1,0 +1,129 @@
+﻿Modelos de  negocios de  Software 
+Ing. Andrés Galiana 
+Trabajo integrador 
+Agosto 2025
+Agenda 
+• Conceptos clave • Modelos de negocios • Servicios de software • Software como servicio
+Modelo de negocio 
+• Objetivo: entender que un modelo de negocio no es solo  “vender algo”, sino la forma en que una organización crea,  entrega y captura valor.
+  
+  
+  
+
+Modelo de negocio 
+• ¿Qué entienden por Negocio de Software o Empresa de  Software? 
+• ¿Qué modelos de negocio conocen para las empresas de  software? 
+• ¿Cuál es el mercado objetivo para estas empresas?
+Dinámica 
+• Analizar el modelo de negocios de Pedidos Ya. 
+• ¿Quién paga? 
+¿El usuario que pide, el restaurante, ambos? 
+• ¿Cómo gana dinero la empresa?   
+¿Cuál es la fuente principal de ingresos? 
+• ¿Qué valor le da al usuario? 
+¿Qué necesidad resuelve? 
+¿Qué problema facilita?
+Modelo de negocio 
+• ¿Cuál es el mercado objetivo para estas  empresas?
+Consultoras internacionales
+  
+  
+  
+
+Cuadrante mágico de Gartner  
+Forrester Wave & IDC
+  
+  
+
+LLM Benchmark 
+  
+https://artificialanalysis.ai/
+Producto vs Servicio 
+• Diferencia entre producto y servicio. • ¿y en Software? 
+• Evolución … de producto a servicio.  
+Producto vs Servicio (software)
+Característica 
+Qué es 
+	Producto de software 
+Software entregado como un  paquete o licencia.
+	Servicio de software 
+Uso del software como  
+suscripción o plataforma en la  nube.
+	Propiedad 
+	El cliente “compra” la licencia,  lo instala y lo usa.
+	El cliente paga por acceso, no  por propiedad.
+	Actualizaciones 
+	Dependen de nuevas versiones  que se lanzan.
+	Continuas y automáticas,  
+siempre actualizado.
+	Ejemplo tradicional 
+	Microsoft Office 2010 en  
+CD/DVD. 
+	Microsoft 365 en la nube.
+	Otros ejemplos 
+	Photoshop “en caja”,  
+videojuegos en DVD. 
+	Netflix, Spotify, Uber, AWS.
+	Modelo de ingresos 
+	Pago único (licencia perpetua). 
+	Suscripción mensual/anual,  comisiones o publicidad.
+	
+
+
+
+Boom de las “as a Service”
+  
+
+Boom de las “as a Service”
+
+Modelos de negocios de software
+EMPRESA DE PRODUCTO 
+Empresa de Software as a Service (SaaS). 
+	EMPRESA DE SERVICIO 
+Empresa de Servicio de Software.
+	Vende un producto (en forma de servicio). 
+	Vende un servicio.
+	Negocio: vender un producto tal como es a  la mayor cantidad de clientes.
+	Negocio: vender proyectos únicos a una  cantidad reducida de clientes.
+	Ideal: vender el SW genérico a gran escala  en modalidad de suscripción.
+	Ideal: Productivizar un proyecto en una  solución a medida.
+	Realidad: Se ofrecen customizaciones,  mantenimientos, nuevas versiones, etc.
+	Realidad: Se ofrecen desarrollos a medida,  consultorías, soporte y mantenimiento, etc.
+	Dificultades: Inversión inicial, marketing,  canales de distribución, recurrencia de  ingresos, economía de escala.
+	Dificultades: Ejecución de los proyectos,  cobro de los proyectos, flujo de caja, gestión  de personas.
+	
+
+
+
+Modelos de negocios de software • ¿Qué modelo creen que es más escalable? • ¿Qué modelo requiere mayor inversión inicial? • ¿Qué modelo creen que genera más ingresos? • ¿Qué modelo tiene mayor riesgo? 
+• ¿Cuál de los dos modelos creen que es mejor tener?
+Modelos de negocios de software 
+EMPRESA DE SOFTWARE COMO  
+SERVICIO EMPRESA DE SERVICIO DE SOFTWARE Consumo un producto como si fuera  
+un servicio. Servicio a medida. 
+Objetivo: escalar. Objetivo: vender muy bien las horas. Modelo de suscripción. Modelo de asignación de recursos. 
+Suscripción. Proyecto cerrado vs Time & Materials,  Staff Aumentation 
+Idea: surge de los fundadores. Idea: surge del cliente. ¿Ejemplos? ¿Ejemplos?
+Algunos conceptos importantes • B2B vs B2C 
+• Estrategias: 
+• Low price high volume 
+• High price low volume 
+• Público vs Privado 
+• Concepto de verticales 
+• Proyecto cerrado vs T&M 
+• Staff Aumentation
+Verticales 
+• Subconjunto del mercado. 
+• Puede ser el mercado objetivo. • Mismas necesidades, mismo negocio. • Acumulación de experiencia. 
+• Ejemplos: 
+• BANCA 
+• SALUD 
+• GOBIERNO 
+• INDUSTRIA 
+• CONSTRUCCIÓN 
+• PAPELERAS
+Resumen 
+• Importancia de la tecnología en los negocios • Modelos de Negocios de Software: 
+• Empresa de Servicios de Software. • Empresa SaaS. 
+• Conceptos clave
+Modelos de negocios de software Muchas gracias

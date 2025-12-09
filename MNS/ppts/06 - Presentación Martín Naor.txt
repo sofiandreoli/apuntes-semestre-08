@@ -1,0 +1,86 @@
+﻿SOFTWARE AS A SERVICE Martin Naor
+AGENDA 
+What is SaaS? 
+Key Differences with other  
+Software Models 
+SaaS P&L and Key Ratios/Metrics 
+Unit Economics in SaaS 
+2
+WHAT IS SAAS? 
+Definition: Software as a Service (SaaS) is a cloud-based  
+software distribution model where software applications  
+are hosted by a third-party provider and made available to  
+customers over the internet. 
+Key Characteristics: 
+• Subscription-based 
+• Accessibility from anywhere 
+• Regular updates and maintenance 
+3
+SAAS BUSINESS MODEL 
+Revenue Generation: 
+• Recurring subscription fees 
+• Upselling and cross-selling 
+• Add-ons and premium features 
+4
+KEY DIFFERENCES WITH    
+OTHER SOFTWARE MODELS 
+Ownership vs. Access 
+Capital Expenditure vs. Operating Expenditure 
+Deployment and Maintenance 
+5
+SAAS P&L OVERVIEW 
+Revenue 
+Cost of Goods Sold (COGS) 
+Gross Margin 
+Operating Expenses 
+Net Profit/Loss 
+6
+KEY RATIOS AND METRICS 
+SaaS-specific Financial Metrics: 
+• Monthly Recurring Revenue (MRR) 
+• Customer Acquisition Cost (CAC) 
+• Customer Lifetime Value (CLTV) 
+• Churn Rate 
+7
+MONTHLY RECURRING  
+REVENUE (MRR) 
+Definition and Importance   
+Formula: MRR = (Total Monthly Subscription Revenue) 
+MRR Growth as a Key Indicator 
+8
+CUSTOMER ACQUISITION  
+COST (CAC) 
+Definition and Calculation 
+Strategies to Reduce CAC 
+9
+CUSTOMER LIFETIME VALUE  
+(CLTV) 
+Definition and Calculation   
+Relationship with Churn Rate 
+Maximizing CLTV through Customer Retention 
+Importance of CAC to CLTV Ratio 
+10
+CHURN RATE 
+Definition and Calculation 
+Impact on Revenue and Growth 
+Strategies to Reduce Churn 
+11
+UNIT ECONOMICS IN SAAS 
+Definition: The economics associated with acquiring and  
+maintaining a single customer 
+Importance of Positive Unit Economics 
+Components: CAC, CLTV, and Contribution Margin 
+12
+MEASURING UNIT  
+ECONOMICS 
+Examples of CAC and CLTV Calculation 
+Ensuring Positive Unit Economics 
+13
+Y A TODO ESTO…  QUE HACEMOS CON AI?
+PREGUNTAS, DUDAS,  
+QUEJAS 
+15
+THANK YOU 
+Martin Naor 
+martin@bankingly.com 
+16

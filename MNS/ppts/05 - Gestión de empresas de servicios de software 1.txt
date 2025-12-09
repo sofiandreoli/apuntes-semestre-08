@@ -1,0 +1,200 @@
+﻿Gestión de empresas  de servicios de  
+software 
+Ing. Andrés Galiana 
+Trabajo integrador 
+Agosto 2025
+Agenda 
+• Misión y visión 
+• Políticas y objetivos empresariales • Estructura organizativa 
+• Áreas que conforman la empresa • Roles y actividades claves
+Misión, visión y valores 
+• Declaraciones fundamentales que describen el propósito y  ayudan a guiar las decisiones y acciones de la empresa. 
+• Misión: Propósito, motivo por el cual existe. 
+• Visión: Imagen deseada del futuro de la empresa. 
+• Valores: Principios fundamentales que guían el  comportamiento y las decisiones.
+Misión, visión y valores
+  
+  
+
+Misión, visión y valores
+  
+
+Misión, visión y valores
+  
+  
+  
+
+Política de la empresa 
+• Directrices y reglas establecidas por la organización que  ayudan a guiar el comportamiento, las decisiones y las  acciones de los empleados. 
+• Suelen cubrir temas como la gestión de RRHH, seguridad y  salud laboral, conducta empresarial, privacidad de los datos,  etc.
+Objetivos 
+• Los objetivos de una empresa son las metas que se establecen  para lograr un propósito específico. 
+• Claros y específicos. 
+• Alcanzables y medibles. 
+• Definición de plazos y responsables. 
+• Ejemplos: 
+• Objetivo en facturación.   
+• Objetivo en cantidad de clientes. 
+• Objetivo en costos y presupuestos. 
+• Objetivos en cantidad de empleados. 
+• Objetivo en cuanto a satisfacción de clientes.
+Objetivos
+  
+  
+  
+
+  
+
+  
+
+Estructura organizativa 
+• División del trabajo y mecanismos de coordinación. 
+• Estructuras básicas: 
+• Funcional 
+• Divisional 
+• Matricial 
+• Híbrida  
+Estructura funcional 
+• Se dividen las tareas y responsabilidades en diferentes áreas  funcionales. 
+• Cada área funcional es responsable de llevar a cabo sus  propias actividades y trabajar en conjunto con las demás  áreas para lograr los objetivos de la organización.
+
+Estructura divisional 
+• Se dividen las tareas y responsabilidades en diferentes  divisiones, cada una de las cuales opera como una unidad de  negocio separada dentro de la organización. 
+• Cada división tiene sus propios recursos y personal, y es  responsable de llevar a cabo sus propias actividades y de  alcanzar sus propios objetivos.
+
+Estructura matricial 
+• Los empleados son asignados a proyectos o equipos de  trabajo transversales que cruzan los límites tradicionales de la  organización.  
+• En este tipo de estructura, los empleados tienen dos o más  supervisores que les proporcionan orientación y dirección para  el proyecto o equipo en el que trabajan.
+
+Estructura híbrida 
+• Combinación de diferentes tipos de estructuras organizativas,  tales como la estructura funcional, divisional o matricial.  
+• Esta estructura se crea con el objetivo de aprovechar los  beneficios de cada una de ellas, mientras se minimizan las  desventajas.
+
+Estructura de la organización
+
+Áreas que conforman las empresas 
+• Operación / Producción 
+• Ventas 
+• Marketing 
+• Recursos Humanos 
+• Compras 
+• Finanzas 
+• Legal 
+• Administración
+Recursos humanos 
+• Gestión de los RECURSOS HUMANOS. 
+• Formar, entrenar, motivar y preparar a las personas. • Hay industrias en donde la gestión de los RRHH es clave. 
+• Algunas funciones se pueden tercerizar. 
+• Proceso de selección de talento.
+Recursos humanos 
+• Política de RRHH: 
+• Relación profesional / personal. 
+• Flexibilidad (horarios, marca, fuera de hora, etc.). • Jornada laboral (8 horas, 6 horas, 4 horas, etc.). • ¿Salarios secretos o de público conocimiento? 
+• Inducción, fomentar capacitación, fomentar el crecimiento  profesional.
+Recursos humanos 
+• Criterios en la remuneración 
+• Justicia (leyes, cumplimiento de pactos, dar lo que se  merece …). 
+• Méritos (antigüedad, cumplimiento de objetivos, etc.). • Mercado (lo que el mercado paga). 
+• Necesidad …
+Recursos humanos 
+• PROBLEMA DE LA ROTACIÓN EN LA INDUSTRIA.  • Desempleo en el sector del Software en Uruguay = 0. • Gestión de la motivación.
+
+Recursos humanos 
+• Oficinas de Globant Uy en WTC.
+Marketing 
+• "El marketing es la actividad que tiene como fin crear,  comunicar, entregar, e intercambiar ofertas que tienen valor  para los consumidores, clientes, socios y la sociedad en  general“. 
+American Marketing Association de Estados Unidos.
+
+Marketing 
+• Muchas veces Ventas y Marketing son la misma área. 
+• ¿Cuál es el alcance del marketing? 
+• Investigación de mercado 
+• Impulsar el posicionamiento 
+• Fijación de precios 
+• Análisis y definición de promociones
+Marketing 
+• Mix de Marketing – Las 4P.
+
+Contabilidad y finanzas 
+• Donde se ve la economía de la empresa. 
+• Números, dinero en caja, créditos bancarios, inversiones, valoración  de la empresa, etc. 
+• Administración del negocio, lo que entra y lo que sale. • Activo, Pasivo, y Patrimonio Neto. 
+• Gestión de costos. 
+• Costo directo vs costo indirecto. 
+• Costo fijo vs costo variable.
+Balance de una empresa
+
+Balance de una empresa
+
+Contabilidad y finanzas 
+• Ejemplos de costos. 
+• Alquiler del local. 
+• Factura de luz. 
+• Comisión por ventas. 
+• Notebooks utilizados. 
+• Mano de obra de desarrolladores. 
+• Mano de obra de jefes de área (mandos medios). • Sueldo del gerente general.
+Contabilidad y finanzas 
+• Punto de equilibrio. 
+• Cuando los ingresos de la empresa cubren los costos fijos y  variables. 
+• No ganas ni perdes, empatas.
+Ejercicio en clase 
+• Una empresa fabrica y vende mochilas. Para simplificar el  análisis, consideraremos: 
+• Costos fijos (alquiler, sueldos, seguros): USD 10.000 mensuales. • Costo variable por unidad (materiales y mano de obra): USD 15 por  mochila. 
+• Precio de venta por unidad: USD 40 por mochila. 
+• La empresa quiere saber: 
+• ¿Cuántas mochilas debe vender para cubrir todos sus costos  (punto de equilibrio)?. 
+• ¿Qué sucede si vende 50 mochilas?
+Ejercicio en clase 
+• Una empresa fabrica remeras personalizadas. Para el  próximo mes se estiman: 
+• Costos fijos: USD 12.000. 
+• Costo variable por unidad: USD 18. 
+• Cantidad estimada a vender: 600 unidades. 
+• La empresa quiere determinar el precio de venta por unidad  necesario para no tener pérdidas ni ganancias, es decir,  para alcanzar el punto de equilibrio. 
+• ¿Y si quiere ganar usd 3.000?
+Ventas 
+• Gestión comercial. 
+• Donde se desarrollan las estrategias comerciales de la  empresa. 
+• Estructura comercial: 
+• Gerente comercial. 
+• Ejecutivos de venta o Ejecutivos comerciales. 
+• BackOffice Comercial. 
+• Product Manager. 
+• Preventa técnica. 
+• Marketing.
+Ventas 
+• Margen de ganancia.
+
+Operaciones 
+• En donde se producen y se desarrollan los productos y los  servicios que luego se comercializan. 
+• La forma en que se organiza depende entre otras cosas del  tamaño de la organización. 
+• Por proyectos. 
+• Por divisiones/áreas. 
+• Alcance de operaciones: 
+• Desarrollo, Testing, I+D, gestión de proyectos, soporte post venta,  atención al cliente, etc.
+Legales 
+• Temas jurídicos, legales. 
+• Muchas veces relacionado a contratos (clientes,  proveedores, etc.). 
+• Por lo general se terceriza.
+Compras 
+• Encargado de realizar las compras. • Objetivo: encontrar los mejores proveedores. • Se busca precio y calidad. 
+• Alcance total o parcial.
+Área de calidad 
+• Muchas veces es necesario contar con un área de Calidad  en donde se definan y gestionen los procesos a lo largo de  la organización. 
+• Se encarga de asegurar el cumplimiento de las políticas de  la empresa.  
+• Muy común en multinacionales.
+Análisis FODA 
+• Fortalezas 
+• Oportunidades • Debilidades • Amenazas
+Análisis FODA
+
+Ejercicio en clase 
+• Realizar el análisis FODA de UBER (con lo mucho o con lo  poco que sabemos).
+
+Resumen 
+• Misión, visión y políticas de empresa. 
+• Estructuras organizativas. 
+• Áreas que conforman las empresas. 
+• Ventas, Producción, RRHH, Marketing, Compras, Legales,  Administración, Contabilidad, Finanzas, Calidad, etc. 
+• Herramienta FODA.
+Gestión de empresas de servicios de software Muchas gracias

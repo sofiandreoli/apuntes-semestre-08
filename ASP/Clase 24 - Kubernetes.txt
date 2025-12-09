@@ -1,0 +1,253 @@
+﻿Intro Kubernetes (k8s) 
+Arquitectura de Software en la Práctica
+Agenda 
+● Orquestadores ● Kubernetes ● Objetos de k8s ● EKS
+¿Es suficiente con tener un  container Engine?
+Tal vez...si tenemos 1, 2, 10  containers...
+  
+
+Y si tenemos cientos o miles?                            
+Hay que preguntarse: 
+- ¿Cómo escalamos? 
+- ¿Cómo evitamos conflictos de puertos? - ¿Cómo los distribuimos en distintos servidores? - ¿Qué pasa si un host se rompe? 
+- ¿Cómo mantenemos los containers en ejecución? - ¿Cómo gestionamos las actualizaciones? - ¿Cómo encuentro mis containers? 
+- Etc, etc, etc…
+
+Orquestadores
+
+Orquestadores ... 
+A medida escalan las aplicaciones, se hacen necesarias  herramientas que ayuden a automatizar el mantenimiento:  reemplazar contenedores con fallas, manejar rollouts,  cambios de configuraciones, etc. 
+Los orquestadores permiten administrar, escalar y mantener  aplicaciones en contenedores. 
+Ejemplos: Docker Swarm y Kubernetes
+Kubernetes
+
+Warning: Kubernetes es sencillo ... luego de  
+que pasamos la curva de aprendizaje... 
+?!@#
+Kubernetes (k8s) 
+¿Qué es?
+
+k8s 
+¿Por qué lo necesitamos? 
+En ambientes de producción necesitamos administrar los  contenedores que ejecutan las aplicaciones y asegurar que  no haya tiempos sin servicio. 
+K8s provee un framework para ejecutar aplicaciones  distribuidas en forma resiliente.
+Distribuciones 
+● Cloud Providers: 
+○ EKS 
+○ AKS 
+○ GKS 
+○ DigitalOcean 
+● Vendors: 
+○ WeaveWorks 
+○ Rancher 
+○ Platform9 
+○ Mirantis 
+○ Vmware Tanzu 
+○ RedHat Openshift
+k8s 
+Principios de diseño 
+- Distribuído: el mejor fit para aplicaciones cloud nativas. - Desacoplado: Se abstrae del hardware donde se ejecuta  y provee de interfaces (APIs) para el acceso a los  recursos 
+- Declarativo: Fuertemente apoyado en la idea de  declarar el estado deseado de la plataforma y de los  objetos que en ella se ejecuta.  
+- Soporte para la inmutabilidad de la infraestructura
+k8s 
+¿Que provee? 
+● Placement de containers (PODs) ● Maneja la escalabilidad horizontal y vertical ● Gestión de networking hipergranular ● Auto-remediación
+k8s 
+¿Que provee? 
+● Service discovery + load balancing ● Gestión de storage 
+● Rollouts y Rollbacks automáticos (deploys!) ● Gestión de cluster 
+● Manejo de secretos y configuración
+Arquitectura
+
+Conceptos básicos 
+Al configurar k8s obtenemos un cluster 
+El cluster consiste de un conjunto de máquinas de trabajo  llamadas nodos o workers. Todo cluster tiene al menos un  nodo. 
+Los nodos actúan como hosts de Pods. Un pod representa un  conjunto de containers. 
+Control Plane administra los nodos y pods.
+
+
+k8s 
+Componentes de Control Plane 
+● kube-apiserver: expone el api de kubernetes ● etcd: toda la información del cluster 
+● kube-scheduler: asigna pods nuevos a nodos ● kube-controller-manager: controla la ejecución y  monitoreo 
+● cloud-controller-manager: lógica específica para correr  k8s en proveedores cloud
+k8s 
+Componentes en los nodos 
+● kubelet: agente que corre en cada nodo y asegura que  los contenedores corran dentro de un pod. 
+● kube-proxy: proxy de red que corre en cada nodo e  implementa el concepto de Servicio de Kubernetes (dns  + discovery). 
+● runtime: software responsable de ejecutar los  contenedores, por ejemplo Docker.
+k8s 
+Addons 
+● DNS 
+● WEB UI (Dashboard) 
+● Container Resource Monitoring ● Cluster Level Logging 
+● Developers Tools
+kubectl 
+● Herramienta de línea de comando para controlar  clusters de K8s 
+https://kubernetes.io/docs/reference/kubectl/overview/
+Objetos de Kubernetes
+Objetos de Kubernetes 
+● Aplicaciones: 
+○ PODs 
+○ Deployments 
+○ ReplicaSet / ReplicationController ○ Daemonset  
+○ StatefulSets 
+○ HPA / VPA 
+● Configuraciones 
+○ Secrets 
+○ Configmaps
+Objetos de Kubernetes 
+● Networking: 
+○ Service 
+○ Ingress 
+○ NetworkPolicies 
+● Otros 
+○ Namespaces 
+○ Quotas 
+○ Limites 
+○ CustomResource 
+○ PersistentVolumes / PersistentVolumesClaim
+POD 
+● Es la unidad mínima de trabajo 
+● Cada pod tiene al menos 1 container declarado ● Cada container dentro de un pod comparte los mismos  recursos: Red, volumen (storage), etc 
+Los pods son los que darán forma a nuestra aplicación.  Cuando escalamos, lo hacemos en PODs
+POD 
+● Tienen un ciclo de vida 
+● Uno o más contenedores: 
+○ app 
+○ init 
+○ sidecar 
+https://kubernetes.io/docs/concepts/workloads/pods/
+POD
+
+ReplicaSet 
+La idea principal de los es la de  
+asegurarse de que un número específico  de réplicas de un POD están corriendo. 
+Los RS hacen que el POD sea escalable y provee mecanismos de auto-remediación
+Deployment 
+Los deployments son objetos que se usan para dar “forma” y  “vida” a un POD. 
+Manejan RS para gestionar las réplicas. 
+Además, un deployment agrega a un POD una estrategia de  update
+Deployment
+
+HPA 
+Horizontal Pod Autoscaler: automáticamente actualiza una carga  de trabajo (ej. un Deployment) para que concuerde con la  demanda. 
+https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/
+Namespaces 
+Son una partición lógica que sirve para segmentar y agrupar  objetos y el acceso a los recursos. 
+Por ejemplo, los PODs de un namespace X, están separados de  los PODs del namespace Y. Incluso pueden estar aislados.
+Namespaces 
+Todo cluster de k8s viene con tres namespaces por omisión: 
+- default: namespace por omisión para recursos de usuario - kube-system: objetos del sistema de k8s. No usar para apps  de usuario. 
+- kube-public: namespace especial de acceso público 
+Dependiendo del vendor, cloud o distribución de k8s, es posible que se  agreguen otros namespaces.
+Networking 
+El networking en kubernetes merece un capítulo aparte. Existen  varios objetos que actúan en la capa de red para proveer  distintas funcionalidades. Los más comunes son: 
+- Services 
+- Ingress  
+- NetworkPolicies
+Networking: Services 
+- Es la definición de cómo acceder a un grupo de PODs - El service actúa cómo un LoadBalancer (pero no lo es) - Expone el servicio que ofrece el POD 
+- Este servicio es consumible dentro del cluster (pero no desde  afuera)
+Networking: Services
+
+Networking: Services
+
+Networking: Services
+
+Networking: Services
+
+Networking: Ingress 
+El ingress brinda la posibilidad de  
+consumir un recurso desde fuera del  
+cluster. Es la forma de publicar la  
+aplicación hacia usuarios finales. 
+Puede manejar certificados,  
+subdominios, paths, etc.
+Yamls: Conf declarativa
+Yamls: Conf declarativa
+
+Yamls: Conf declarativa
+
+Demo! 
+(minikube)
+Ecosistema de K8S
+Self-healing PODs (Probes)
+Probes 
+Kubernetes realiza pruebas para identificar: 
+- Cuando el POD está listo para recibir tráfico - Cuando el POD está saludable
+Probes 
+- startupProbe - readinessProbe - livenessProbe
+Probes: startupProbe 
+Es una prueba para indicar que el container está listo. A  priori es muy similar al readinessProbe, con la salvedad de  que se ejecuta una vez cuando el container inicia. 
+Se usa en ocasiones cuando se necesita obtener datos de  una base o consultar servicios externos.
+Probes: readinessProbe 
+Es una prueba que determina cuando el POD está listo  para recibir tráfico. Si la prueba falla, el POD no se muere,  pero tampoco recibe tráfico. 
+Se ejecuta en todo el ciclo de vida del POD, a diferencia del  startupProbe.
+Probes: livenessProbe 
+Es una prueba que determina el estado de “salud” de la  aplicación. Si esta prueba falla, K8S va a detener el POD y  crear uno nuevo.
+Tipos de chequeos 
+- exec: Ejecuta un comando, si es correcto, la prueba da  “OK” 
+- httpGet: ejecuta un request http 
+- tcpSocket: realiza un “telnet” a la ip del pod y puerto  especificado.
+Chequeo: exec
+Chequeo: httpGet
+Chequeo: tcpSocket
+Parámetros de chequeos
+
+Extendiendo  configuraciones
+Configuraciones 
+A veces es necesario agregar configuraciones o información  sensible en los PODs / Deployments. Existen tres mecanismos  para hacer esto: 
+● Variables de entorno 
+● Configmaps 
+● Secrets 
+Depende el caso de uso, usamos uno u otro.
+Variables de Entorno 
+La mayoría de los lenguajes / aplicaciones pueden leer datos  de una variable de entorno. En un POD / Deployment la forma  de configurar una “ENV” es la siguiente:
+
+Configmaps 
+Es una forma de desacoplar las configuraciones o archivos de  configuración que pueden ser variables. De esta forma no  tenemos que generar una nueva imagen con la modificación  del archivo / configuración. 
+Por un lado se debe crear el configmap (Objeto de k8s) y por  otro se debe presentar dicho cm al POD / Deployment. 
+El Configmap se puede presentar cómo una variable de  entorno o un punto de montaje en el container.
+Configmaps
+
+Secrets 
+Análogos a los ConfigMaps pero para información sensible. La gran diferencia  con los configmaps es que estan hasheados en base64. Algunos casos de  información sensible puede ser: 
+- API keys 
+- Tokens 
+- Passwords 
+- Certificados 
+- Etc. 
+Por un lado se debe crear el Secret (Objeto de k8s) y por otro se debe presentar  dicho secret al POD / Deployment. 
+El Secret se puede presentar cómo una variable de entorno o un punto de montaje en el container.
+ENVs vs MountPoint 
+kubectl create configmap my-config  
+--from-literal=LANGUAGE=ingles 
+kubectl create secret generic my-secret  --from-literal=API-KEY=1234455667
+vs 
+kubectl create configmap my-config  --from-file=./mi-config.conf 
+kubectl create secret generic my-secret  --from-file=./my-secret-file.txt 
+
+Tips de Administración
+
+Aliases 
+- alias k='kubectl' 
+- alias kg='kubectl get' 
+- alias kgp='kubectl get pods' 
+- alias kd=’kubectl describe’ 
+- Etc 
+https://github.com/ahmetb/kubectl-aliases/blob/master/.kubectl_aliases
+
+Herramientas 
+- Lens / OpenLens 
+- K9s 
+- Kubens / kubectx - Kubernetes Dashboard - Weave Scope
+Herramientas 
+Lens
+Herramientas 
+K9s
+Herramientas 
+K8s Dashboard
+
+Herramientas 
+Weave Scope

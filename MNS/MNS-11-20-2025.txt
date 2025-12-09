@@ -1,0 +1,982 @@
+# Proceso de inversión en empresas de tecnología
+
+## Contexto de la clase y del docente
+
+    -> La materia venía trabajando temas de emprendedurismo:
+        -> Proceso de ideación.
+        -> Conformación del equipo fundador.
+    -> En esta clase se pasa a mirar organizaciones que ya:
+        -> Están produciendo.
+        -> Están vendiendo.
+    -> El foco está en el “medio del camino”:
+        -> Entre estar emprendiendo.
+        -> Y ser una organización establecida.
+        -> En ese tramo aparece la necesidad de capitalizarse y conseguir fondos.
+    -> Docente invitado: Eduardo Magarelli.
+        -> Decano de la Facultad de Ingeniería.
+        -> Ingeniero en Sistemas, egresado de ORT (primera generación).
+        -> 17 años de trabajo en Microsoft.
+        -> Hace unos 15 años hizo su primera inversión en una empresa tecnológica (Triolabs), enfocada en inteligencia artificial (modelos determinísticos y predictivos).
+        -> Fundó su primera empresa en primer año de facultad, con su compañero de obligatorio de Programación 1.
+        -> Aprendió sobre creación de empresa “sobre la marcha”, con aciertos y golpes.
+    -> La clase se basa en:
+        -> Su experiencia como emprendedor.
+        -> Su experiencia como inversor.
+        -> Un esquema ordenado para explicar el proceso de inversión en empresas de tecnología.
+    -> La dinámica de la clase:
+        -> Busca ser interactiva.
+        -> Se invita a hacer preguntas y comentarios para profundizar en los temas.
+
+## Inicio típico de una empresa de tecnología
+
+### Arranque con un primer cliente conocido
+
+    -> Escenario frecuente:
+        -> 2 o 3 personas que se conocen de obligatorios y talleres.
+        -> Saben que trabajan bien juntas.
+        -> Una de ellas trae una oportunidad: un familiar (por ejemplo, un tío) necesita una aplicación.
+        -> Se proponen desarrollarla y, a partir de ahí, nace la empresa.
+    -> Este patrón se repite en decenas de empresas uruguayas:
+        -> Grupo de personas que ya trabajó junto.
+        -> Primer cliente concreto.
+
+### Barreras de entrada bajas
+
+    -> El costo de empezar de esta forma es muy bajo:
+        -> Ya se cuenta con un cliente inicial.
+        -> No hay mucho que perder más allá del tiempo propio.
+        -> Con una computadora y tiempo de dedicación se puede arrancar.
+        -> Los costos de licencias de software suelen ser marginales al comienzo.
+    -> No es necesario:
+        -> Alquilar oficina.
+        -> Hacer grandes inversiones en infraestructura.
+    -> Resultado:
+        -> Las barreras de entrada para arrancar son muy bajas.
+
+## Formalización de la empresa y acciones
+
+### Falta de formalidades al inicio
+
+    -> En la práctica, muchas empresas arrancan sin:
+        -> Definir su forma legal.
+        -> Redactar contratos formales entre socios.
+    -> No se constituye de entrada:
+        -> Una sociedad anónima (SA).
+        -> O una sociedad anónima simplificada (SAS).
+    -> Algunas empiezan incluso a cobrar:
+        -> Sin tener aún RUT.
+        -> Sin emitir facturas formales.
+
+### Hito de constitución de la sociedad
+
+    -> El primer gran hito formal suele ser:
+        -> La necesidad de emitir la primera factura.
+        -> Para facturar, hay que tener una empresa constituida.
+    -> En ese momento se crea legalmente:
+        -> La sociedad (SA, SAS, etc.).
+        -> Las acciones de la empresa.
+
+### Concepto de acciones (equity, stocks, shares)
+
+    -> Términos equivalentes:
+        -> Acciones.
+        -> Equity.
+        -> Stocks.
+        -> Shares.
+    -> Conceptualmente:
+        -> Son “papelitos” que representan la propiedad de la empresa.
+        -> Es una construcción ficticia pero con efectos legales.
+    -> Al crear la sociedad anónima:
+        -> Se define un número arbitrario de acciones (por ejemplo, 10.000).
+        -> Ese número es una unidad de medida ficticia y totalmente arbitraria.
+        -> Podría ser 10.000, 3 o cualquier otro valor.
+    -> Se suele usar un número grande:
+        -> Para que sea fácilmente fraccionable.
+        -> Por eso es común ver algo del orden de 10.000 acciones.
+
+### Reparto inicial de las acciones entre fundadores
+
+    -> Ejemplo:
+        -> 4 fundadores.
+        -> 10.000 acciones totales.
+        -> Reparto simple: 2.500 acciones para cada uno (25 % cada uno).
+    -> Es una representación:
+        -> Ficticia pero clara.
+        -> De cómo se distribuye la propiedad de la empresa.
+    -> El reparto no siempre es igualitario:
+        -> Puede haber diferencias según la contribución de cada socio.
+        -> Ejemplo:
+            -> Un socio trae al primer cliente.
+            -> Se decide reconocer esa contribución con un mayor porcentaje.
+
+### Importancia de definir la propiedad temprano
+
+    -> Cuanto antes se definan los porcentajes de propiedad, mejor:
+        -> Se evitan discusiones futuras cuando la empresa ya genera ingresos.
+    -> Problema típico:
+        -> Se arranca sin definir nada.
+        -> Pasa el tiempo, la empresa empieza a ir bien.
+        -> Un socio reclama más porcentaje porque “trajo el primer cliente”.
+        -> Eso casi siempre genera conflictos (“es siempre para lío”).
+    -> Recomendación implícita:
+        -> Acordar desde temprano:
+            -> Quién tiene cuánto.
+            -> Por qué.
+            -> Con qué criterios se decidió.
+
+## Qué vende la empresa: servicios vs producto
+
+### Qué se vende en el arranque descrito
+
+    -> En el escenario del primer cliente:
+        -> A ese cliente se le vende un producto o servicio.
+        -> En la práctica, se venden horas de trabajo.
+    -> Se cobra por:
+        -> Tiempo dedicado.
+        -> Desarrollo realizado.
+
+### Empresas de servicios
+
+    -> Definición:
+        -> Empresas que venden servicios profesionales.
+        -> Lo que facturan se materializa en horas (desarrollo, consultoría, etc.).
+    -> Ventajas:
+        -> Se puede empezar a facturar rápidamente.
+        -> La barrera de entrada es baja (como se describió al inicio).
+    -> Enfoque:
+        -> Más cercano a la rentabilidad inmediata.
+        -> Menor necesidad inicial de inversión externa.
+
+### Empresas de producto
+
+    -> Definición:
+        -> Empresas que se enfocan en desarrollar un producto propio.
+        -> Ejemplo genérico: un software que “hace X” y que se venderá a muchos clientes.
+    -> Características clave:
+        -> Antes de tener ingresos, hay que invertir tiempo y trabajo en el desarrollo del producto.
+        -> Puede ser necesario:
+            -> 1 año.
+            -> 2 años.
+            -> O un período similar sin ingresos suficientes derivados del producto.
+        -> Durante ese tiempo:
+            -> El equipo necesita financiarse de alguna forma.
+    -> Meta inicial:
+        -> Llegar al MVP (Minimum Viable Product / Minimum Valuable Product).
+        -> Tener una “cajita terminada” que:
+            -> Aporte valor a alguien.
+            -> Y que ese alguien esté dispuesto a pagar por ella.
+
+### Fenómeno servicios → producto en Uruguay y la región
+
+    -> Patrón frecuente:
+        -> Muchas empresas comienzan como empresas de servicios.
+        -> A medida que les va bien, destinan parte de las ganancias:
+            -> A liberar horas del equipo.
+            -> Para desarrollar productos propios.
+    -> Problema del tiempo:
+        -> Una idea que hoy es “buenísima” probablemente no lo sea tanto dentro de 24 meses.
+        -> Si se posterga el desarrollo del producto para “cuando haya tiempo y plata”:
+            -> Se corre el riesgo de llegar tarde al mercado.
+
+## Growth vs Profit: enfoque de crecimiento vs rentabilidad
+
+### Dos grandes enfoques simplificados
+
+    -> Growth (crecimiento):
+        -> Asociado a empresas de producto.
+        -> Se reinvierte mucho para crecer rápido.
+    -> Profit / Value (rentabilidad / valor):
+        -> Asociado a empresas más estables.
+        -> Buscan crecimiento moderado y sostenible.
+
+### Ejemplo de empresa value / profit
+
+    -> Johnson & Johnson:
+        -> Fabricante de productos de higiene y limpieza, entre otros.
+        -> Es una “maquinita” constante:
+            -> Vende productos que siempre se compran.
+            -> La variación anual de facturación es baja.
+        -> Crecimientos típicos:
+            -> 2 %.
+            -> 3 % al año.
+        -> No genera explosiones de crecimiento por un producto nuevo puntual.
+
+### Ejemplo de empresa growth
+
+    -> Salesforce:
+        -> Plataforma CRM ampliamente usada.
+        -> Crece alrededor de un 20 % anual en facturación.
+        -> Es una empresa enfocada en crecimiento.
+
+### Conexión con necesidad de inversión
+
+    -> Construir una empresa enfocada en rentabilidad:
+        -> Es más simple si se vende servicio desde el día uno.
+        -> Se empieza a trabajar y se empieza a vender.
+    -> Construir una empresa de producto y crecimiento:
+        -> Requiere inversión:
+            -> Para financiar el período sin ingresos.
+            -> Para sostener al equipo mientras se desarrolla el producto.
+
+## Cap table, valuación y dilución
+
+### Cap table: tabla de propiedad
+
+    -> Definición:
+        -> Cap table (capitalization table): tabla que muestra:
+            -> Quiénes son los accionistas.
+            -> Qué porcentaje de la empresa tiene cada uno.
+    -> Ejemplo simple:
+        -> Dos fundadores, A y B.
+        -> Cada uno tiene 50 %.
+        -> Si hay 10.000 acciones:
+            -> A tiene 5.000.
+            -> B tiene 5.000.
+
+### Valuación pre-money y post-money
+
+    -> Supongamos:
+        -> Los fundadores acuerdan que su empresa vale 1.000.000 USD (valor ficticio).
+        -> Necesitan levantar 200.000 USD de inversión.
+    -> Con esa lógica:
+        -> Si alguien invierte 200.000 sobre una valuación de 1.000.000:
+            -> Se queda con el 20 % de la empresa.
+    -> Dos conceptos:
+        -> Valuación pre-money:
+            -> Valor de la empresa antes de que entre la inversión.
+            -> En el ejemplo: 1.000.000.
+        -> Valuación post-money:
+            -> Valor después de que entra la inversión.
+            -> En el ejemplo: 1.200.000 (1.000.000 + 200.000).
+
+### Efecto sobre los fundadores: dilución
+
+    -> Antes de la inversión:
+        -> A: 50 %.
+        -> B: 50 %.
+    -> Después de que un inversor toma 20 %:
+        -> A: 40 %.
+        -> B: 40 %.
+        -> Inversor: 20 %.
+    -> Nombre del fenómeno:
+        -> Dilución.
+        -> Los socios existentes se “diluyen” cuando entra un nuevo socio con capital.
+
+### Rondas sucesivas y acumulación de dilución
+
+    -> Supongamos:
+        -> La inversión inicial permite construir el MVP.
+        -> Pasa un año y medio.
+        -> Se valida el producto con algunos clientes, pero no alcanza para sostener la empresa.
+        -> Se necesita más inversión para seguir operando y captar clientes.
+    -> Cuando se hace una nueva ronda:
+        -> La empresa debería valer más (ya tiene MVP y algo de tracción).
+        -> Entra un nuevo inversor con un porcentaje acordado.
+        -> Se produce nueva dilución para todos los accionistas previos (fundadores e inversores anteriores).
+    -> Cada ronda de inversión:
+        -> Es un “hito” denominado ronda (Serie A, B, etc.).
+        -> Genera un efecto de dilución sobre los socios que ya estaban.
+
+## Cuándo y cuánto invertir: tentaciones y riesgos
+
+### Tentación de aceptar “demasiada” inversión temprano
+
+    -> Pregunta reflexiva:
+        -> Si al comienzo, en lugar de ofrecernos 200.000, nos ofrecen 500.000:
+            -> ¿Es siempre una buena opción?
+    -> Riesgos:
+        -> Se puede perder la mayoría de la compañía demasiado temprano.
+        -> Se entregan muchas acciones a un valor muy bajo comparado con lo que podrían valer más adelante.
+
+### Importancia de la cantidad justa de inversión
+
+    -> Objetivo:
+        -> Levantar la inversión justa.
+        -> Ni menos ni más.
+    -> Si es menos:
+        -> Se corre riesgo de no llegar al MVP.
+        -> O de no alcanzar el siguiente hito (por ejemplo, llegar a break-even).
+    -> Si es más:
+        -> Se están entregando acciones por adelantado y a un valor “barato”.
+        -> Se cede participación que podría venderse más cara en el futuro si la empresa va bien.
+
+### Hitos asociados a cada ronda
+
+    -> Cada ronda debe tener un objetivo claro hacia adelante:
+        -> Por ejemplo:
+            -> Primera ronda: desarrollar el MVP.
+            -> Siguiente ronda: llegar a break-even (no perder plata cada mes).
+            -> Rondas posteriores: expansión de mercado, internacionalización, etc.
+    -> Cuando alguien invierte:
+        -> Se espera que el equipo emprendedor:
+            -> Use el dinero para alcanzar esos hitos.
+            -> Se comprometa explícitamente con esos objetivos.
+
+## Tipos de rondas de inversión
+
+### Esquema general de fases
+
+    -> A lo largo del tiempo, en un escenario donde a la empresa le va razonablemente bien, se pueden distinguir:
+        -> Ronda pre-seed (presemilla).
+        -> Ronda seed (semilla).
+        -> Serie A.
+        -> Serie B, C, D, E, F, etc. (según necesidad y tamaño).
+
+### Ronda pre-seed (presemilla)
+
+    -> Etapa:
+        -> Muy temprana.
+        -> Se está buscando problem–solution fit:
+            -> Encontrar bien el problema.
+            -> Proponer una solución inicial.
+    -> En Uruguay:
+        -> Existe un instrumento de ANI (Agencia Nacional de Investigación e Innovación) para prototipos innovadores.
+        -> Brinda montos cercanos a 50.000 USD.
+        -> Permite:
+            -> Que un grupo de emprendedores construya algo chiquito pero funcional.
+            -> Tener una base para luego ir a buscar inversión privada.
+
+### Ronda seed (semilla)
+
+    -> Características:
+        -> Primera ronda más “formal”.
+        -> En Uruguay, montos típicos entre 200.000 y 400.000 USD.
+    -> Dos conceptos clave:
+        -> Go to market:
+            -> Cómo se va a vender el producto.
+            -> Cómo se va a llegar al cliente ideal.
+        -> Product–market fit:
+            -> Qué tanto el producto resuelve un dolor real del cliente.
+            -> Qué tanto le mejora eficiencia, productividad o calidad del servicio al cliente final.
+    -> Advertencia para perfiles técnicos:
+        -> Es común que ingenieros y profesionales de tecnología se enamoren del producto.
+        -> Pero es igual de importante:
+            -> Saber venderlo.
+            -> Tener clara la estrategia comercial.
+
+### Serie A
+
+    -> Condiciones de llegada:
+        -> Ya se alcanzó un product–market fit razonable.
+        -> El producto funciona y tiene clientes dispuestos a pagar.
+        -> Existe un modelo de go to market definido.
+    -> Objetivo principal:
+        -> Escalar el negocio.
+        -> Expandir la base de clientes.
+        -> Invertir fuerte en comercialización y crecimiento.
+    -> Montos típicos (ejemplo real):
+        -> Caso Strike:
+            -> Empresa de ciberseguridad y pen-testing.
+            -> Fundada por un ingeniero egresado de la facultad.
+            -> Su Serie A fue de 5 millones de USD (dato público).
+        -> Serie A razonables pueden estar en el rango:
+            -> 5 a 10 millones de USD (a modo orientativo).
+
+### Series posteriores (B, C, D, E, F)
+
+    -> A medida que la empresa crece:
+        -> Puede necesitar nuevas rondas para:
+            -> Entrar en nuevos mercados.
+            -> Ampliar el equipo.
+            -> Adquirir otras empresas.
+    -> Cuando se llega a Serie E o F:
+        -> Típicamente la empresa está en tamaño:
+            -> Donde la salida natural es el mercado público (bolsa).
+        -> Ya casi no hay VCs capaces de cubrir montos tan grandes.
+        -> La empresa busca financiamiento en un mercado de capitales abierto.
+
+### Frecuencia deseable entre rondas
+
+    -> Cada ronda:
+        -> Requiere un trabajo intenso (contacto con VCs, due diligence, negociación).
+        -> Puede tomar alrededor de 6 meses o más.
+    -> No es ideal:
+        -> Estar levantando rondas en plazos demasiado cortos (por ejemplo, menos de 2 años).
+    -> Intervalo preferible:
+        -> Entre 2 y 3 años entre rondas.
+        -> Permite:
+            -> Usar el capital.
+            -> Ejecutar la estrategia.
+            -> Mostrar resultados antes de la siguiente ronda.
+
+## Tipos de inversores: ángeles y venture capital
+
+### Inversores ángeles
+
+    -> Definición:
+        -> Personas que invierten en startups sin que eso sea su actividad profesional principal.
+        -> Suelen ver la inversión en startups como:
+            -> Alternativa a invertir en inmuebles u otros activos.
+    -> Concepto “fools, friends and family”:
+        -> Expresión norteamericana que resume:
+            -> Fools (locos que confían).
+            -> Friends (amigos).
+            -> Family (familia).
+        -> Son las primeras personas que suelen apostar por un emprendimiento.
+    -> Características:
+        -> Esperan plazos largos para recuperar la inversión:
+            -> Pueden pasar 20 años sin liquidez.
+        -> Saben que:
+            -> Varias de las startups en las que inviertan pueden no ir bien.
+            -> Se compensa si una va muy bien.
+        -> La relación se basa en:
+            -> Alta confianza.
+            -> Entusiasmo por el equipo y la idea.
+
+### Dónde encontrar ángeles en Uruguay
+
+    -> CIE (Centro de Innovación y Emprendimientos):
+        -> Tiene una red de inversores ángeles.
+        -> Emprendimientos que pasan por el CIE acceden a:
+            -> 25–30 personas que invierten con frecuencia.
+    -> Urucap (Urucah):
+        -> Asociación que nuclea inversores uruguayos de distinto tipo.
+        -> Dispone de un catálogo de inversores:
+            -> Con listado de inversores ángeles.
+            -> Clasificados según sectores de interés:
+                -> Tecnología para finanzas (fintech).
+                -> Tecnología para biotecnología.
+                -> Tecnología para e-commerce, etc.
+
+### Venture capital (VC)
+
+    -> Definición:
+        -> Empresa cuyo negocio principal es invertir en startups.
+        -> Tiene su propio cap table, socios y estructura.
+    -> Diferencias con un ángel:
+        -> Mayor formalidad y profesionalización.
+        -> Procesos claros para:
+            -> Evaluar emprendimientos.
+            -> Pedir información.
+            -> Hacer due diligence.
+    -> Ejemplo local:
+        -> IC Ventures:
+            -> Fondo de venture capital pequeño (“escala Uruguay”).
+            -> 5 socios.
+            -> Uno de ellos es el docente.
+
+### Participación de ángeles y VCs según la ronda
+
+    -> Pre-seed:
+        -> Principalmente ángeles.
+        -> Organismos públicos (como ANI).
+    -> Seed:
+        -> Mezcla de:
+            -> Inversores ángeles.
+            -> VCs pequeños.
+    -> Serie A y posteriores:
+        -> La inversión proviene casi totalmente de VCs profesionales.
+        -> Los ángeles pueden participar:
+            -> Como co-inversores bajo las mismas condiciones.
+
+## Proceso de due diligence
+
+### Qué es el due diligence
+
+    -> Due diligence:
+        -> Proceso de revisión profunda de la empresa antes de invertir.
+        -> Lo lidera el VC (especialmente el lead investor).
+    -> Incluye:
+        -> Revisión financiera:
+            -> Ingresos.
+            -> Gastos.
+            -> Proyecciones.
+        -> Revisión comercial:
+            -> Lista de clientes.
+            -> Se piden contactos de algunos clientes clave.
+            -> El VC habla directamente con ellos para pedir referencias.
+        -> Revisión legal y societaria:
+            -> Cap table.
+            -> Contratos vigentes.
+            -> Compromisos asumidos (por ejemplo, SAFEs).
+
+### Diferencia en el peso de la confianza
+
+    -> Con inversores ángeles:
+        -> Un gran porcentaje de la relación se basa en la confianza (ejemplo mencionado del 80 %).
+    -> Con VCs:
+        -> La confianza sigue siendo necesaria.
+        -> Pero se combina con:
+            -> Procedimientos formales.
+            -> Verificación sistemática de la información.
+
+## Cómo funciona un VC por dentro
+
+### Limited Partners (LPs) y objetivo de retorno
+
+    -> Ejemplos de VCs globales:
+        -> Sequoia.
+        -> Andreessen Horowitz.
+        -> Son fondos que han invertido en empresas como:
+            -> Google.
+            -> Facebook.
+            -> OpenAI.
+    -> Estructura de un fondo:
+        -> El VC crea un fondo (por ejemplo, “Fondo 2026”).
+        -> Define:
+            -> Tamaño del fondo (por ejemplo, 20.000 millones de USD).
+            -> Retorno esperado (por ejemplo, 10 %).
+            -> Plazo (por ejemplo, 10 años).
+    -> Limited Partners (LPs):
+        -> Son quienes ponen el dinero en el fondo.
+        -> Pueden ser:
+            -> Individuos de alto patrimonio.
+            -> Otros fondos institucionales.
+        -> Confían en el VC porque:
+            -> Tiene reputación de elegir bien dónde invertir.
+            -> Devolverá capital más retorno.
+
+### Deployment (despliegue del capital)
+
+    -> Deployment:
+        -> Ritmo al que el VC invierte el dinero del fondo.
+        -> Los LPs no quieren que el dinero quede inmovilizado.
+    -> Compromisos típicos:
+        -> Invertir el capital en un plazo de, por ejemplo, 2 años.
+    -> Caso 2022 en Estados Unidos:
+        -> Tasas de interés cercanas a 0.
+        -> Mucho capital disponible (“plata barata”).
+        -> Los fondos recibieron grandes montos de LPs.
+        -> Tuvieron presión para hacer deployment rápido.
+        -> Resultado:
+            -> Invirtieron en empresas de mayor riesgo.
+            -> Con menos filtros que lo habitual.
+            -> Se produjo un boom de inversión seguido por una corrección fuerte.
+
+### Implicancias para emprendedores
+
+    -> Es importante entender:
+        -> Que el VC administra dinero de terceros.
+        -> Que tiene compromisos de retorno y plazos.
+    -> Para el emprendedor:
+        -> Saber de qué fondo viene la inversión:
+            -> Permite entender la urgencia por generar resultados.
+            -> Ayuda a anticipar el tipo de presión que puede aparecer (por ejemplo, necesidad de una salida en cierto año).
+
+## Formas de valuación de una empresa
+
+### Cuatro criterios objetivos de valuación
+
+    -> En base a facturación:
+        -> Se miran los ingresos anuales de la empresa.
+    -> En base a rentabilidad:
+        -> Se usa, por ejemplo, el EBITDA:
+            -> Beneficio antes de intereses, impuestos, depreciaciones y amortizaciones.
+    -> En base a expectativas de futuro:
+        -> Se observan las tasas de crecimiento pasadas.
+        -> Ejemplo:
+            -> Dos empresas venden 100.000 USD al año.
+            -> Ambas tienen rentabilidad del 20 %.
+            -> Una crece 3 % anual.
+            -> La otra crece 25 % anual.
+            -> La que crece más rápido tendrá una valuación mayor.
+    -> Por benchmark (comparación con pares):
+        -> Se comparan las valuaciones de empresas similares:
+            -> Del mismo sector.
+            -> En etapas similares.
+
+### Aplicación en fases avanzadas
+
+    -> A partir de Serie A:
+        -> Ya suele haber:
+            -> Facturación.
+            -> Datos de rentabilidad.
+            -> Historial de crecimiento.
+        -> Es posible:
+            -> Aplicar estos criterios.
+            -> Hacer comparaciones razonables con otras empresas.
+    -> Los VCs:
+        -> Usan criterios bastante estandarizados.
+        -> No es común que dos VCs serios lleguen a valuaciones totalmente dispares.
+
+### Valuación en fases tempranas (pre-seed / seed)
+
+    -> Problema:
+        -> No hay facturación.
+        -> No hay rentabilidad.
+        -> No hay historial de crecimiento.
+        -> El producto puede no estar terminado.
+    -> Resultado:
+        -> No hay criterio objetivo fuerte para fijar el valor.
+        -> La valuación depende casi 100 % de:
+            -> La confianza que inspire el equipo.
+            -> El entusiasmo que genere la idea.
+    -> Referencia para Uruguay:
+        -> Una startup con:
+            -> Idea o producto razonable.
+            -> Equipo con capacidad de ejecución.
+        -> Puede tomar como referencia una valuación cercana a 1.000.000 USD.
+        -> Un acuerdo típico:
+            -> Valuación de 1.000.000.
+            -> Inversión de 200.000.
+            -> Entrega de 20 % de la empresa.
+
+### Cuidado con inversores que buscan “quedarse con demasiado”
+
+    -> Existen inversores que:
+        -> En etapas tempranas intentan sacar la mayor porción posible de la empresa.
+    -> Eso es problemático porque:
+        -> Desincentiva a los emprendedores (quedan con poco de su empresa).
+        -> Puede hacer que la empresa sea “ininvertible” en rondas futuras.
+    -> La relación ideal:
+        -> Es de socios.
+        -> Ambas partes deben querer que le vaya bien al otro.
+        -> Es una relación que puede durar 10–20 años.
+
+## SAFE (Simple Agreement for Future Equity)
+
+### Problema que intenta resolver el SAFE
+
+    -> En fases tempranas:
+        -> Definir una valuación exacta es muy arbitrario.
+        -> Discutir si vale 950.000 o 1.050.000 no agrega valor.
+    -> Se necesita un instrumento que:
+        -> Permita invertir sin fijar la cantidad de acciones de inmediato.
+        -> Deje la definición de valuación para un momento con más información.
+
+### Definición y origen del SAFE
+
+    -> SAFE:
+        -> Simple Agreement for Future Equity.
+        -> Acuerdo simple para recibir equity (acciones) en el futuro.
+    -> Creado por:
+        -> Y Combinator.
+        -> La aceleradora de startups más prestigiosa a nivel global.
+        -> Donde trabajó Sam Altman antes de enfocarse en OpenAI.
+
+### Cómo funciona un SAFE
+
+    -> Escenario:
+        -> Andrés pone 200.000 USD hoy.
+        -> A cambio, la empresa:
+            -> No le da acciones en ese momento.
+            -> Le firma un SAFE.
+    -> El SAFE establece que:
+        -> Cuando haya una ronda de inversión con un inversor profesional:
+            -> Con una valuación más “objetiva”.
+            -> Hecha por un VC.
+        -> Esos 200.000 se convertirán en acciones.
+        -> El cálculo de cuántas acciones se hace en función de:
+            -> La valuación de esa ronda.
+            -> Las condiciones del SAFE (descuento, cap).
+
+### Tasa de descuento en el SAFE
+
+    -> Motivo:
+        -> Reconocer que quien entra temprano asume más riesgo.
+        -> Y que su dinero queda “atado” durante más tiempo.
+    -> Se establece un descuento sobre la valuación futura:
+        -> Ejemplo:
+            -> Descuento de 20 %.
+            -> Si en la ronda futura la empresa se valora en 2.000.000:
+                -> Para Andrés se considera 1.600.000 (2.000.000 × 0,8).
+            -> Sus 200.000 se convierten en un porcentaje mayor que el de alguien que entra sin descuento.
+    -> El 20 % de descuento:
+        -> Es un número razonable mencionado en la clase.
+
+### Cap o tope de valuación
+
+    -> Motivo:
+        -> Proteger al inversor si la empresa “explota” y la valuación sube muchísimo.
+    -> Cap:
+        -> Tope de valuación para el cálculo del SAFE.
+        -> Ejemplo:
+            -> Cap en 4.000.000.
+            -> Si al momento de la ronda la empresa se valora en 20.000.000:
+                -> Para el inversor SAFE se toma 4.000.000.
+            -> Sus 200.000 equivalen entonces al 5 %.
+    -> Combinación de descuento y cap:
+        -> Ambas condiciones benefician al inversor que entra temprano:
+            -> Se le reconoce mayor participación.
+            -> Se limita cuánto se puede diluir su posición si la empresa se valoriza mucho.
+
+### Riesgos de uso irresponsable del SAFE
+
+    -> Es muy fácil:
+        -> Firmar muchos SAFEs con distintos inversores.
+        -> Con distintos descuentos y caps.
+    -> Si no se lleva un registro prolijo:
+        -> Se pueden acumular compromisos futuros muy grandes.
+        -> El cap table real puede estar muy distorsionado.
+    -> Casos reales:
+        -> Fundadores que creían tener, por ejemplo, 40 %.
+        -> Pero al sumar todos los compromisos de SAFEs:
+            -> Su porcentaje efectivo era mucho menor.
+
+### Uso de herramientas como Carta
+
+    -> Carta (carta.com):
+        -> Plataforma líder para gestión de cap tables.
+        -> Muchas startups y VCs la usan para:
+            -> Registrar acciones.
+            -> Registrar SAFEs (montos, descuentos, caps).
+            -> Calcular diluciones y compromisos.
+        -> Los datos se:
+            -> Anonimizan.
+            -> Se usan para generar estadísticas sobre:
+                -> Porcentajes vendidos en cada ronda.
+                -> Montos típicos por etapa, etc.
+    -> Ejemplo de dato estadístico mencionado:
+        -> En promedio:
+            -> En pre-seed se vende alrededor de 20 %.
+            -> En Serie A alrededor de 20 %.
+            -> En Serie B alrededor de 17 %.
+            -> Y así sucesivamente.
+    -> Además, Carta:
+        -> Permite que inversores tengan sus registros de inversión digitales.
+        -> Sin necesidad de papeles físicos.
+
+### SAFE como instrumento poderoso pero delicado
+
+    -> Ventaja:
+        -> Simplifica la inversión temprana.
+        -> Evita discusiones de valuación cuando no hay información suficiente.
+    -> Riesgo:
+        -> Si se usa sin control:
+            -> Puede generar muchas “deudas ocultas”.
+            -> Puede hacer caer una inversión en el due diligence.
+    -> Recomendación:
+        -> Usarlo con responsabilidad.
+        -> Llevar un registro claro de todos los SAFEs firmados.
+
+## Directorio, term sheet y contrato de accionistas
+
+### Directorio
+
+    -> El directorio es:
+        -> El órgano de gobierno formal de la empresa.
+        -> Toma decisiones relevantes definidas en los acuerdos.
+    -> El term sheet suele especificar:
+        -> Cuántos miembros tiene el directorio.
+        -> Cómo se reparten entre:
+            -> Fundadores.
+            -> Inversores.
+        -> Qué decisiones puede tomar el directorio sin consultar a todos los accionistas.
+    -> Ejemplo:
+        -> Directorio de 5 miembros:
+            -> 2 fundadores.
+            -> 3 representantes de los inversores.
+        -> El term sheet define:
+            -> Cómo se vota.
+            -> Qué decisiones requiere aprobación más amplia.
+
+### Consejo asesor
+
+    -> Diferencia con el directorio:
+        -> El consejo asesor no tiene poder formal de voto.
+        -> Sus miembros aportan:
+            -> Experiencia.
+            -> Consejos.
+        -> Ayudan a los fundadores a tomar mejores decisiones.
+    -> Práctica recomendada:
+        -> Emprendedores en etapa temprana pueden sumar a alguien con experiencia como asesor.
+        -> Esto es visto como algo muy positivo por inversores.
+
+### Term sheet
+
+    -> Definición:
+        -> Documento que fija las condiciones de una ronda de inversión.
+        -> Lo redacta el lead investor.
+    -> Contenido típico:
+        -> Valuación:
+            -> Contra la cual se invierte.
+            -> De allí se deduce qué porcentaje se está vendiendo.
+        -> Estructura del directorio:
+            -> Cantidad de asientos para fundadores y para inversores.
+        -> Poderes del directorio:
+            -> Qué decisiones puede tomar sin ir a asamblea.
+            -> Ejemplo:
+                -> Aprobación de futuras rondas sin consultar a todos los accionistas.
+        -> Compromisos de permanencia de los fundadores:
+            -> Tiempo mínimo que se espera que permanezcan en la empresa.
+            -> Qué pasa con sus acciones si se van antes (por ejemplo, deben ceder una parte).
+    -> Estandarización:
+        -> Existen muchos templates de term sheets.
+        -> Hay plantillas bastante estándar según etapa.
+        -> No se inventan condiciones completamente nuevas en cada ronda.
+
+### Lead investor y followers en una ronda
+
+    -> Lead investor:
+        -> Inversor que lidera la ronda.
+        -> Suele ser quien:
+            -> Aporta el monto más grande.
+            -> Se compromete a hacer el trabajo de due diligence.
+            -> Redacta el term sheet.
+    -> Followers:
+        -> Otros inversores que participan en la ronda.
+        -> Aceptan las condiciones definidas por el lead.
+        -> Aportan montos adicionales.
+    -> Sin lead investor:
+        -> Aunque haya varios comprometidos con montos parciales:
+            -> La ronda no se cierra.
+    -> Todos los que entran en una misma ronda:
+        -> Entran bajo las mismas condiciones del term sheet.
+        -> No se deberían generar privilegios injustificados para un inversor sobre otro.
+
+### Contrato de accionistas
+
+    -> Definición:
+        -> Acuerdo entre los socios sobre:
+            -> Sus derechos.
+            -> Sus obligaciones.
+        -> Existe desde que se crea la sociedad.
+    -> Situación habitual:
+        -> El contrato puede ser muy básico si no se trabaja en él.
+    -> Recomendación:
+        -> Dedicarle tiempo al contrato de accionistas desde el principio.
+        -> Incluir cláusulas que contemplen:
+            -> Situaciones humanas previsibles.
+            -> Conflictos potenciales.
+
+### Ejemplo: venta de acciones de un socio
+
+    -> Escenario:
+        -> Tres socios.
+        -> Uno (Andrés) decide vender sus acciones.
+    -> Si el contrato de accionistas no dice nada:
+        -> Andrés puede vender sus acciones a un tercero libremente.
+        -> Los otros dos pueden encontrarse de repente con un extraño como socio.
+    -> Cláusulas que suelen incluirse:
+        -> Aviso obligatorio:
+            -> Andrés debe informar que quiere vender.
+        -> Derecho de venta a prorrata (tag-along):
+            -> Si Andrés tiene una oferta para su 33 % a cierto precio:
+                -> Los otros socios tienen derecho a vender también un porcentaje de sus acciones en la misma operación.
+                -> Todos venden al mismo valor por acción.
+        -> Derecho de adquisición preferente:
+            -> Los otros socios pueden decidir comprar las acciones de Andrés:
+                -> Al mismo precio que ofreció el tercero.
+            -> Andrés está obligado a venderles a ellos si ejercen ese derecho.
+
+### Importancia de acordar antes de que haya problemas
+
+    -> Las situaciones humanas que pueden llevar a la venta de acciones:
+        -> Falta de interés en seguir en el proyecto.
+        -> Necesidades económicas personales o familiares.
+        -> Cambios de carrera.
+    -> Es más fácil:
+        -> Ponerse de acuerdo sobre qué hacer en esas situaciones:
+            -> Cuando todavía no han ocurrido.
+            -> Cuando no hay conflicto presente.
+    -> Si se espera a tener el problema sobre la mesa:
+        -> Es mucho más difícil discutir en forma objetiva.
+
+## Riesgos de sobre-dilución y empresas “ininvertibles”
+
+### Caso de fundadores muy diluidos
+
+    -> Escenario:
+        -> Tres fundadores.
+        -> A lo largo de las rondas (seed, Serie A, etc.):
+            -> Cada uno queda con alrededor de 20 %.
+        -> Dos fundadores deciden dejar la empresa.
+        -> Solo uno sigue activo, con 20 %.
+    -> Problema:
+        -> De cara a una nueva ronda (Serie B, por ejemplo):
+            -> El único founder activo tiene una participación baja.
+            -> Los inversores ven un riesgo alto de que ese founder se vaya.
+        -> El cap table:
+            -> No incentiva al founder a quedarse a largo plazo.
+
+### Empresa “ininvertible”
+
+    -> Se llama así a una empresa cuya estructura de propiedad:
+        -> Desalienta nuevas inversiones.
+    -> Ejemplos de situaciones que contribuyen a esto:
+        -> Fundadores que se fueron y conservan grandes porcentajes.
+        -> Founder activo con porcentaje demasiado bajo.
+    -> Consecuencia:
+        -> Aunque la empresa tenga:
+            -> Clientes.
+            -> Buen producto.
+        -> Los inversores pueden decidir no invertir por el riesgo estructural.
+
+### Ajustes forzados de participación
+
+    -> En algunos casos reales:
+        -> Los fundadores que se van:
+            -> Se ven presionados a ceder (regalar) parte de sus acciones al que se queda.
+        -> Razón:
+            -> Si no ceden, la empresa no consigue inversión.
+            -> Y todos terminan perdiendo valor (incluidos ellos).
+    -> Es un trade-off:
+        -> Ceder parte del porcentaje.
+        -> O dejar que la empresa no pueda seguir creciendo por falta de capital.
+
+## Consejos prácticos para emprendedores
+
+### Elegir bien a los inversores
+
+    -> No se trata solo de que el inversor nos elija:
+        -> También nosotros debemos evaluar al inversor.
+    -> Recomendaciones:
+        -> Hablar con otros emprendedores a quienes ese inversor ya haya invertido.
+        -> Preguntar:
+            -> Cómo se comportó en momentos difíciles.
+            -> Si apoyó o complicó.
+        -> Evaluar al inversor más allá de lo económico.
+    -> Relación de largo plazo:
+        -> Puede durar 10–20 años.
+        -> Conviene asegurarse de que:
+            -> Hay alineación de valores.
+            -> Es alguien con quien se podría compartir tiempo y confiar.
+    -> Regla mencionada por el docente:
+        -> Solo invierten en emprendedores con quienes estarían dispuestos a compartir una cena y disfrutarla.
+
+### Importancia de la confianza
+
+    -> Los documentos legales (term sheets, contratos):
+        -> Son muy importantes.
+    -> Pero:
+        -> La confianza es aún más importante.
+        -> No existe term sheet que sea infalible ante la falta de confianza.
+        -> Si la confianza se rompe, ningún papel alcanza.
+
+### Cuidar el cap table y la documentación
+
+    -> Llevar el cap table en orden:
+        -> Registrar con precisión:
+            -> Acciones.
+            -> SAFEs.
+            -> Compromisos futuros.
+    -> Usar herramientas adecuadas (como Carta) ayuda a:
+        -> Evitar sorpresas.
+        -> Pasar el due diligence sin problemas estructurales.
+    -> Evitar:
+        -> Sobre-diluirse en etapas tempranas.
+        -> Firmar compromisos que no se entienden bien.
+        -> Acuerdos informales sin respaldo escrito.
+
+### Entender la lógica del inversor
+
+    -> Comprender cómo funciona un VC:
+        -> Que tiene LPs.
+        -> Que tiene metas de retorno.
+        -> Que tiene plazos.
+    -> Ayuda a:
+        -> Negociar mejor.
+        -> Poner hitos realistas.
+        -> Entender por qué el inversor:
+            -> Pide ciertas condiciones.
+            -> Tiene cierto nivel de urgencia.
+
+### Cierre de la clase
+
+    -> La clase buscó:
+        -> Dar una mirada rápida pero exhaustiva del proceso de inversión.
+        -> Desde la perspectiva de los emprendedores.
+        -> Y también entendiendo la lógica de los inversores.
+    -> Idea central:
+        -> Para emprender en tecnología a escala:
+            -> Es clave comprender cómo funcionan:
+                -> Las rondas de inversión.
+                -> Los distintos tipos de inversores.
+                -> Los instrumentos como SAFE.
+                -> Los mecanismos de gobierno (directorio, contrato de accionistas).
+        -> Entender estos temas ayuda a:
+            -> Tomar mejores decisiones.
+            -> Evitar errores graves en el armado de la empresa.
+            -> Mantener al emprendimiento en una condición atractiva para futuras inversiones.
+
+

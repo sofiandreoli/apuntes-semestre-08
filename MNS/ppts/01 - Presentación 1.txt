@@ -1,0 +1,119 @@
+﻿Modelos de  negocios de  Software 
+Ing. Andrés Galiana 
+Trabajo integrador 
+Agosto 2025
+Agenda 
+• Objetivos del curso 
+• Horarios y dinámicas de clase • Unidades temáticas 
+• Modalidad de trabajo • Criterios de evaluación • Método del caso
+Presentación 
+• Andrés Galiana 
+• Coordinador de Desarrollo y Comunicación • galiana@ort.edu.uy / andgaliana@gmail.com
+FI en redes sociales 
+• s.mtrbio.com/ingenieria 
+  
+  
+  
+
+Objetivos 
+• Durante el transcurso de la materia, se recorrerán los aspectos  más importantes de la creación y desarrollo de una empresa  de tecnología, haciendo énfasis en dos modelos particulares: 
+• empresas de Servicios de Software 
+• empresas de Software As a Service
+Horarios 
+• Todos los jueves de 10:00 a 12:00 con un corte en el medio. 
+• El semestre cuenta con 15 semanas y tendremos un feriado (2  de octubre), es decir, 14 clases. 
+• Salón 433 (modalidad HyFlex).
+Dinámica de clase 
+• Intercambio de conocimiento (ida y vuelta). 
+• Invitados de la industria que vendrás a compartir y exponer sus  experiencias personales. 
+• Debemos definir: presencialidad o virtualidad.
+Modalidad de trabajo 
+• Entorno HyFlex. 
+• Clases expositivas y participación de invitados. • Las presentaciones quedan subidas en Aulas. • Chat en Teams (fi365.ort.edu.uy).
+Criterios de evaluación 
+• Actuación en clase: 15 puntos. 
+• Obligatorio: 45 puntos. 
+• Parcial: 40 puntos. 
+• La actuación en clase es la suma de las dos dinámicas  grupales. 
+• El obligatorio es en equipos con un máximo de 3 integrantes. • La materia se exonera con un mínimo de 70 puntos. • No hay examen.
+Método del caso 
+• Metodología de aprendizaje centrada en el participante. 
+• Se entrega un caso “real” de una empresa en donde se  plantea una situación. 
+• Un problema para resolver. 
+• Un decisor. 
+• Información útil y “basura” para la toma de decisión. • Discusión en clase. 
+• “No hay respuestas incorrectas”. 
+• Ideal: venir a clase con el caso leído.
+Unidades temáticas 
+• Introducción 
+• Modelos de negocios de software. • Producto vs Servicio. 
+• Empresa de servicios de software. 
+• Empresa de Software como servicio (SaaS).
+Unidades temáticas 
+• Proceso de ideación y conformación del equipo fundador 
+• Etapas en la ideación. 
+• Innovación. 
+• Mitos y recomendaciones. 
+• Invitado de una empresa de Servicios de Software. • Invitado de una empresa de Software as a Service.
+Unidades temáticas 
+• Aspectos legales del desarrollo del negocio 
+• Tipos de sociedades. 
+• Aspectos más importantes en un contrato de accionistas. • Gobierno corporativo. 
+• Transferencia de acciones. 
+• Asuntos relevantes para el equipo fundador. 
+• Acuerdo de accionistas.
+Unidades temáticas • Dinámica de clase I 
+• Idea de Negocio. 
+• Público objetivo. 
+• Identificación del problema. • Desarrollo de solución. 
+• Dinámica: Elevator Pitch. • Business Model Canvas.
+Unidades temáticas 
+• Gestión de empresas de servicios de software 
+• Roles y actividades claves.  
+• Áreas que conforman la empresa. 
+• Caso de estudio. 
+• Invitado de una empresa de servicios de software.
+Unidades temáticas 
+• Gestión de empresas de software como servicio 
+• Modelo de Negocio. 
+• Indicadores clave (KPI). 
+• Caso de estudio. 
+• Invitado de una empresa de software como servicio.
+Unidades temáticas 
+• Gestión Comercial 
+• Gestión de oportunidades. 
+• Gestion de clientes. 
+• Cotizaciones y proceso de venta. • Contratos. 
+• Procesos de licitación pública. 
+• Caso de estudio. 
+• Invitado de la industria, con rol comercial.
+Unidades temáticas • Dinámica de clase II • Caso de estudio.
+Unidades temáticas 
+• Proceso de inversión 
+• Rondas de inversiones. 
+• Aspectos a considerar según la etapa de desarrollo de la  empresa. 
+• Valuación de la empresa.
+Unidades temáticas 
+• Herramientas para Startups 
+• Diferentes herramientas claves para el desarrollo de una  startup. 
+• Involucramiento del CIE.
+Unidades temáticas 
+• Trabajo final 
+• (en proceso de definición) 
+• Análisis de una empresa SaaS utilizando los conceptos y  herramientas aprendidas en clase. 
+• Consultoría a una startup incubada en el CIE.
+Resumiendo 
+• En resumen, tenemos … 
+• 14 clases 
+• 8 posibles invitados • 2 dinámicas de clase • 4 casos de estudio
+Pautas para uso adecuado de IA 
+• El uso de la IA está permitido y es promovido: Dada la relevancia de la IA tanto en lo  académico como en lo profesional, se anima a los estudiantes a utilizar estas  herramientas, teniendo conocimiento de las mismas y con responsabilidad. 
+• Seguir las pautas de los docentes: Se deben seguir las instrucciones específicas de los  docentes sobre cómo utilizar la IA en cada curso. 
+• Citar correctamente las fuentes y usos de IA: Siempre que se utilice una herramienta de  IA para generar contenido, se debe citar adecuadamente la fuente y la forma en que  se utilizó. 
+• Verificar el contenido generado por la IA: No todo el contenido generado por la IA es  correcto o preciso. Es esencial que los estudiantes verifiquen la información antes de  usarla. 
+• Ser responsables con el uso de la IA: Conocer los riesgos y desafíos, como la creación  de “alucinaciones”, los peligros para la privacidad, las cuestiones de propiedad  intelectual, los sesgos inherentes y la producción de contenido falso.
+Expectativas 
+• Expectativas básicas (del curso) • Expectativas personales
+Acerca de ustedes 
+• ¿Quiénes son? 
+• ¿Trabajan? ¿Dónde? • Expectativas de la materia • Habilidad oculta

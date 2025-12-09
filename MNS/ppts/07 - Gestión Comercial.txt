@@ -1,0 +1,321 @@
+﻿Gestión  
+Comercial 
+Ing. Andrés Galiana 
+Trabajo integrador 
+Agosto 2025
+Agenda 
+• Gestión comercial 
+• Estructura departamental • Objetivos comerciales • Incentivos comerciales • Proceso de venta 
+• Propuesta comercial • Licitación pública
+Gestión Comercial 
+• La gestión comercial es el conjunto de estrategias y acciones  que se llevan a cabo para alcanzar los objetivos comerciales  de una empresa.  
+• Incluye la planificación, el diseño, la ejecución y el monitoreo  de todas las actividades relacionadas con la estrategia  comercial.
+Importancia de la Gestión Comercial 
+• La gestión comercial es crucial en empresas de software  debido a la naturaleza competitiva y dinámica de la industria. 
+• Nos permite: 
+• Definir una Estrategia Comercial (un rumbo). 
+• Identificar oportunidades. 
+• Gestionar Clientes y sus oportunidades. 
+• Medir y analizar los resultados.
+Principales actividades 
+• Análisis de Mercado 
+• Desarrollo de Estrategias 
+• Gestión de Clientes 
+• Gestión de Oportunidades 
+• Gestión de partners (alianzas) • Medición y análisis de resultados • Coordinación con otros Departamentos
+Estructura comercial 
+• Área comercial en una Organización. 
+• Gerente Comercial 
+• Ejecutivos de Cuenta 
+• BackOffice 
+• Preventa Técnica 
+• Subgerencias: 
+• Marketing 
+• Ventas 
+• Mercado A / Mercado B / etc.
+Análisis de mercado y competencia 
+• El análisis de mercado y competencia permite identificar  oportunidades de crecimiento y diseñar estrategias  comerciales efectivas.  
+• Tamaño y tendencias del mercado. 
+• Necesidades y demandas de los clientes. 
+• Competidores y su posición en el mercado. • Barreras de entrada/salida. 
+• Tendencias tecnológicas.
+Identificación de Oportunidades y Amenazas 
+• La identificación de oportunidades y amenazas es un aspecto  fundamental dentro del análisis de mercado y competencia  en la gestión comercial.
+  
+
+Segmentación de Mercado y definición de  Target 
+• Proceso mediante el cual se divide el mercado en grupos más  pequeños y homogéneos de consumidores con necesidades y  características similares. 
+• La finalidad de la segmentación de mercado es permitir a las  empresas enfocar sus esfuerzos de marketing en los segmentos  más relevantes y rentables, y adaptar su oferta a las  necesidades específicas de cada segmento. 
+• Identificación de variables de segmentación. 
+• Selección de los segmentos de mercado. 
+• Definición del target. 
+• Desarrollo de una oferta adaptada a las necesidades del target.
+Buyer persona 
+• Representación ficticia del cliente objetivo (cliente ideal). 
+• Basado en comportamiento, características, personalidad,  etc.
+Buyer persona
+  
+
+Buyer persona 
+• Crear el Buyer Persona para un producto que estamos  desarrollando para la gestión de proyectos de software. 
+• Considerar la edad, género, ingresos, intereses, necesidades y  comportamientos de compra del cliente ideal.
+Diseño y ejecución de Estrategias  
+Comerciales 
+• El diseño y la ejecución de estrategias comerciales es una de  las actividades más importantes en la gestión comercial de  una empresa de software. 
+• Definición de objetivos comerciales. 
+• Selección de la estrategia comercial. 
+• Definición de acciones y tácticas. 
+• Ejecución de las acciones. 
+• Medición y seguimiento.
+Diseño y ejecución de Estrategias  Comerciales 
+Definición de  
+objetivos  
+comerciales 
+Análisis de  
+mercado y  
+competencia
+Medición y  
+seguimiento 
+Selección de  
+estrategia  
+comercial 
+Definición de  
+acciones y  
+tácticas 
+Definición de Objetivos Comerciales 
+• La definición de objetivos comerciales es el primer paso en el  diseño de una estrategia comercial efectiva para una  empresa de software. 
+• Estos objetivos son metas específicas que se establecen para  alcanzar los resultados deseados en términos de ventas,  participación de mercado, rentabilidad y otros indicadores  relevantes para el éxito de la empresa. 
+• Facturación, MRR, CAC, etc.
+Definición de Objetivos Comerciales 
+• Aspectos importantes para considerar al definir los objetivos  comerciales: 
+• Definición clara y específica. 
+• Consideración del mercado y la competencia. • Integración con la estrategia de la empresa. • Definición de plazos y responsabilidades. 
+• Alcanzables y medibles.
+Ejercicio: Objetivos Comerciales 
+• Redefinir los siguientes objetivos: 
+• Mejorar las ventas con respecto al año pasado. • Ganar dinero. 
+• Ser innovadores. 
+• Contar con un área comercial más independiente de  desarrollo. 
+• Tener más presencia en redes sociales.
+Objetivos Comerciales
+  
+
+Ejercicio: Objetivos de venta 
+• El directorio define un objetivo de venta de USD15.000.000  para el siguiente año fiscal.  
+• Área comercial integrada por 10 EC y 2 BackOffice. • El Gerente Comercial propone lo siguiente ...
+
+
+Ejecutivo EC 1 
+	Objetivo 
+USD 4.000.000
+	EC 2 
+	USD 2.500.000
+	EC 3 
+	USD 2.000.000
+	EC 4 
+	USD 1.000.000
+	EC 5 
+	USD 1.000.000
+	EC 6 
+	USD 1.000.000
+	
+
+
+
+Ejecutivo EC 7 
+	Objetivo 
+USD 1.000.000
+	EC 8 
+	USD 500.000
+	EC 9 
+	USD 500.000
+	EC 10 
+	USD 500.000
+	BO 1 
+	USD 900.000
+	BO 2 
+	USD 100.000
+	
+
+
+
+Diseño de estrategias de marketing y ventas 
+• Estas estrategias son esenciales para alcanzar los objetivos  comerciales establecidos. 
+• Conocimiento del mercado y la competencia. • Identificación del target. 
+• Desarrollo del mensaje. 
+• Selección de canales de marketing y ventas. • Medición y seguimiento.
+Implementación y seguimiento de las 
+estrategias 
+• Monitoreo de resultados: Es esencial monitorear regularmente los resultados  de las estrategias de marketing y ventas implementadas para asegurar que estén  alcanzando los objetivos comerciales establecidos. Esto implica hacer un seguimiento  de las métricas clave, como el número de nuevos clientes, el aumento en las ventas y el  retorno de la inversión. 
+• Ajustes y mejoras: Es importante estar dispuesto a ajustar y mejorar las estrategias  de marketing y ventas según sea necesario. Esto puede implicar hacer cambios en los  mensajes publicitarios, ajustar los canales de marketing utilizados, o incluso hacer  cambios en los productos y servicios ofrecidos por la empresa.
+  
+
+Actividades de generación de demanda 
+• Marketing de contenidos • Publicidad digital 
+• Marketing de correo electrónico • Marketing de medios sociales • Eventos sociales 
+• Eventos de presentación • Participación en ferias
+Gestión de clientes 
+• ¿Qué es la gestión de clientes?
+Gestión de clientes 
+• Los clientes son la razón de ser de cualquier negocio y su  satisfacción es fundamental para el éxito a largo plazo. 
+• Identificación de clientes potenciales. 
+• Establecimiento de relaciones. 
+• Ofrecer soluciones personalizadas. 
+• Proporcionar soporte postventa. 
+• Monitorear la satisfacción del cliente. 
+• Fomentar la lealtad del cliente.
+Ejercicio de cotización 
+• El cliente requiere una solución que implica comprar los componentes A  y B. 
+• Costo componente A = USD 10.000 (en Miami). 
+• Costo componente B = USD 15.000 (en Miami). 
+• Costo de importación 12%. 
+• Operaciones estima 12 horas de perfil técnico y 3 horas de perfil gestión  para ensamblar la solución. 
+• Hora técnico = USD 200. 
+• Hora gestión = USD 350. 
+• El markup es del 20%.
+Ejercicio de cotización 
+BackOffice     
+Preventa  
+Ejecutivo   
+Ejercicio de cotización 
+• La gestión comercial de una empresa debe estar basada en  métricas y análisis de resultados para tomar decisiones  coherentes y mejorar continuamente los resultados  comerciales.  
+• Existen numerosos KPIs y métricas relevantes para empresas de  software, que se pueden agrupar en diferentes áreas de  negocio (Marketing, Ventas, Servicio al cliente, Finanzas, etc.).
+KPIs en marketing 
+• Costo de adquisición de clientes (CAC). 
+• Tasa de conversión de leads a clientes. 
+• Tasa de clics (CTR) y tasa de apertura de correos electrónicos. • Número de visitas al sitio web y tasa de rebote. • Tiempo promedio en el sitio web.
+KPIs en ventas 
+• Tasa de conversión de oportunidades a ventas. • Tamaño medio de la venta. 
+• Tiempo promedio de venta y ciclo de ventas. • Tasa de cancelación de ventas. 
+• Valor de venta por cliente.
+KPIs en satisfacción del cliente 
+• Tiempo promedio de respuesta a tickets. 
+• Tiempo promedio de solución de tickets. 
+• Tasa de satisfacción del cliente (CSAT) y Net Promoter Score  (NPS). 
+• Tasa de retención de clientes y tasa de churn.
+KPIs en finanzas 
+• Ingresos y ganancias mensuales y anuales. 
+• Gastos de marketing y ventas. 
+• Margen bruto y margen neto. 
+• Costo promedio de producción de un producto o servicio. • Valor de vida del cliente (CLV).
+Análisis de resultado y toma de decisiones • Recopilación y análisis de datos. 
+• Identificación de tendencias y patrones. • Evaluación de alternativas. 
+• Selección de la mejor opción. 
+• Implementación de la estrategia. 
+• Ajuste y mejora continua.
+Incentivos Comerciales 
+• Retribución = Retribución fija + Retribución variable  
+Incentivos Comerciales 
+• Comisión por venta directa. 
+• Premio por alcanzar objetivos individuales. • Premio por alcanzar objetivos grupales.
+Incentivos Comerciales 
+• ¿Comisión sobre el ingreso o sobre la ganancia? • ¿Mismo % de comisión para todos los productos o servicios? • ¿Mismo esquema de comisiones para todos los Ejecutivos  Comerciales? 
+• ¿Cuándo se configura la comisión? Cuando se confirma la  venta, con la orden de compra, con la factura, con el pago …
+Incentivos Comerciales 
+• Ejemplos de política de comisión 
+• 8% sobre la ganancia en ventas de servicios. 
+• 3% sobre la facturación en ventas de servicios. 
+• 50% sobre la primera facturación en un servicio recurrente. • 12% adicional anual si el Ejecutivo Comercial factura por arriba  de USD 12.000.000. 
+• 4% adicional anual si el equipo de ventas factura por arriba de  USD 45.000.000.
+Asignación de cuentas 
+• ¿Criterios? 
+• Por conocimiento de la cuenta. 
+• Por conocimiento de la contraparte. • Por conocimiento en verticales. 
+• Por volumen de facturación. 
+• Por volumen de comisión generada. • Por tamaño, mercado, tipo de producto, etc. • Por conveniencia de la empresa.
+Customer Relationship Management 
+• Gestión del conjunto de prácticas y estrategias comerciales  enfocadas en la relación con clientes.  
+• Salesforce 
+• Microsoft Dynamics 
+• Pipedrive 
+• Zoho
+Customer Relationship Management 
+• Gestión de Cuentas: ¿Qué información interesa administrar? 
+• Nombre y razón social 
+• Información de contacto 
+• Historial de compras, de facturación 
+• Política de pagos 
+• Tipo (grande, mediana, chica) 
+• Sector (banca, financiera, industria, salud, educación, etc.) • Categoría (VIP, Estándar, Referida, Hit, etc.) 
+• Ejecutivo Comercial
+Customer Relationship Management 
+• Gestión de Oportunidades: ¿Qué información interesa  administrar? 
+• Cuenta 
+• Necesidad detectada 
+• Contraparte 
+• Sponsor 
+• Power Sponsor 
+• Facturación y ganancia estimada 
+• Probabilidad de éxito 
+• Fecha requerida y fecha prometida de presupuestación
+Customer Relationship Management 
+• Gestión de Oportunidades: ¿Qué información interesa  administrar? 
+• Tipo 
+• Estándar, Licitación, Negocio estratégico, Exprés 
+• Estado 
+• Abierta, Cerrada (Ganada / Perdida / Motivo ganada / Motivo perdida), Pausada 
+• Fase (grado de avance) 
+• Detectada, Necesidad relevada, Presupuestada, Cierre
+Proceso de venta   
+Identificación
+Desarrollo 
+Presupuestació 
+n 
+Negociación 
+Cierre 
+Proceso de venta 
+Venta = $ . # . %   
+ t 
+$ = Promedio de Ingreso de las  
+oportunidades 
+# = Cantidad de oportunidades 
+% = Ratio de conversión 
+t = Tiempo de ciclo
+Proceso de venta 
+Venta = $ . # . %  t 
+Leads  Contactos   
+Propuestas 
+Ventas
+Visitas 
+Forecast 
+• El Forecasting consiste en la estimación y el análisis de la  demanda futura. 
+• Proyección respecto a las ventas. 
+• Puede ser mensual, semestral, anual.
+Forecast
+
+Forecast
+
+Propuesta Comercial 
+• ¿Qué debemos considerar en una propuesta comercial? 
+• Introducción 
+• Presentación institucional, antecedentes, referencias, etc. • Propuesta técnica 
+• Sistemas, componentes, funcionalidades, beneficios, diferenciales,  requerimientos, manuales de uso, manuales de integración, etc. • Propuesta comercial 
+• Precio, moneda, impuestos, etc. 
+• Condiciones comerciales, mantenimiento de la oferta, condiciones de  pago, mora, garantía, etc.
+Licitación Pública 
+• Contrataciones del Estado. 
+• Las contrataciones del Estado se realizan mediante licitación  pública u otro procedimiento competitivo expresamente  previsto. 
+• https://www.comprasestatales.gub.uy/ 
+• Pliego de condiciones
+Licitación Pública 
+• Pliego de condiciones. 
+• Objetivo y alcance. 
+• Especificaciones técnicas. • Requerimientos del oferente. • Garantía, soporte y mantenimiento. • Documentación a presentar. • Cotización. 
+• Plazos y formas de pago. 
+• Multas y penalizaciones. 
+• Anexos.
+Licitación Pública 
+• Comparativo de ofertas y adjudicación. 
+• Ponderación técnica. 
+• Ponderación económica. 
+• Ejemplo: 60% económica, 30% técnica. 10% antecedentes.
+Licitación Pública
+
+Licitación Pública
+
+Resumen … 
+• Roles principales del Departamento Comercial. • Principales actividades. 
+• Proceso de venta. 
+• Propuesta comercial y presupuestación. • Incentivos comerciales (comisiones). • Licitaciones públicas.
+Gestión comercial 
+Muchas gracias

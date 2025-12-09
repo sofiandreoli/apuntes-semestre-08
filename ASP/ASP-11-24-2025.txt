@@ -1,0 +1,35 @@
+# ASP-11-24-2025: Clase de Consultas
+
+## Agenda de la Clase
+-> Clase dedicada a consultas generales y específicas sobre la entrega.
+-> Se abren breakout rooms para consultas concretas.
+-> No se da tema nuevo debido a la proximidad de la entrega.
+
+## Anuncios Iniciales
+-> Problemas con AWS se resolvieron; fueron un issue global de AWS.
+-> Comunicación sobre el tema la manejó Gastón directamente para mayor eficiencia.
+-> Próxima clase (miércoles): suplencia de Bruno para cubrir AWS Lambda, Kubernetes y ejemplo de parcial.
+-> Última microtarea se publicará pronto (martes o miércoles), con plazo de 2 semanas.
+-> Microtarea anterior extendida una semana debido a que AWS Lambda se da recién el miércoles.
+
+## Consultas Generales
+-> No hay consultas generales reportadas al inicio.
+
+## Consultas Específicas sobre Documentación y Diagramas
+### Distribución Interna de Microservicios
+-> Si los microservicios tienen distribuciones similares, documentar uno completo como ejemplo y mencionar que es análogo para los demás.
+-> Describir diferencias en la documentación o anexo.
+-> Incluir diagramas de los otros microservicios en el anexo si es necesario.
+
+### Diagramas de Secuencia
+-> Recomendable mínimo 2 o 3 diagramas para cubrir flujos importantes en microservicios.
+-> Elegir flujos que muestren interacciones como consultas entre microservicios y colas de mensajería.
+-> Uno solo puede ser insuficiente dada la complejidad.
+
+### Diagrama de Despliegue
+-> Si mostrar todos los microservicios sobrecarga el diagrama, representar con 2-3 como ejemplo y explicar que los demás son similares.
+-> Asegurarse de que las diferencias estén bien descritas en el texto o anexo.
+
+## Cierre de la Clase
+-> Se abren breakout rooms para el resto de la clase dedicada a consultas y dudas.
+-> Se detiene la grabación.

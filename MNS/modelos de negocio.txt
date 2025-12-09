@@ -1,0 +1,428 @@
+﻿Universidad ORT Uruguay               Modelos de Negocio de Software              Obligatorio 1
+________________
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Facultad de Ingeniería
+
+
+Modelos de Negocio de Software
+
+
+Obligatorio
+
+
+Prof: Andres Galiana
+
+
+Camila Borthagaray - 266851
+
+
+Sofía Andreoli - 255573
+
+
+Agustin Repetto - 281755
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Índice
+
+
+Resumen ejecutivo        3
+Introducción a la empresa        3
+Equipo fundador        4
+Modelo de negocio        4
+¿Qué vende?        4
+Modalidad: SaaS        4
+Mercado objetivo y cliente tipo        5
+Esquema de precios        5
+Business Model Canvas        7
+Análisis de indicadores KPI        8
+KPIs principales vistos en clase        9
+MRR (Monthly Recurring Revenue)        9
+ARR (Annual Recurring Revenue)        9
+Ingresos recurrentes vs ingresos totales        10
+Margen bruto        10
+KPIs adicionales relevantes (no vistos en clase pero estándar en análisis SaaS)        11
+ARPU (Average Revenue Per User)        11
+Churn rate        11
+CAC (Customer Acquisition Cost)        12
+LTV (Lifetime Value) y LTV/CAC        12
+Net Revenue Retention (NRR)        12
+Payback period        13
+Análisis FODA        13
+Fortalezas        13
+Oportunidades        14
+Debilidades        15
+Amenazas        15
+Valuación de la empresa        16
+Método 1: Múltiplos de mercado (EV/Revenue, P/S)        17
+Método 2: Flujo de caja descontado (DCF simplificado)        18
+Reconciliación entre métodos        21
+Conclusiones finales        21
+Bibliografía y fuentes consultadas        23
+________________
+Resumen ejecutivo
+Este informe analiza el modelo de negocio de Shopify, plataforma líder de comercio electrónico basada en el modelo Software as a Service. El foco del análisis está en su componente de suscripción , que incluye los planes Basic, Grow, Advanced y Shopify Plus, diferenciándolo de su negocio transaccional para evaluar los principales indicadores del modelo SaaS.
+
+
+Shopify opera un modelo híbrido, donde las suscripciones aportan el 26,5% de los ingresos y las soluciones para comerciantes el 73,5% restante. El componente SaaS destaca por su escalabilidad, ingresos recurrentes predecibles y bajo tiempo de implementación, factores que favorecen la retención y expansión de clientes. Los planes de precios van desde 19 USD/mes hasta 2.300 USD/mes, lo que permite capturar distintos segmentos de mercado, desde pequeños emprendedores hasta grandes empresas.
+
+
+En 2024, Shopify generó 8.880 millones de dólares en ingresos totales, con un crecimiento interanual del 25,8%. Su ingreso mensual recurrente (MRR) alcanzó 151 millones de dólares en el primer trimestre, creciendo un 32% respecto al año anterior. 
+
+
+Entre sus fortalezas, destacan el potente efecto de red de más de cinco millones de comerciantes, una marca consolidada en el segmento SMB, y su ecosistema de aplicaciones y pagos integrados. Las principales oportunidades se vinculan con la expansión internacional, la integración omnicanal y el uso de inteligencia artificial para mejorar la retención y los márgenes. Las debilidades se centran en la dependencia del ecosistema de terceros y la sensibilidad de márgenes, mientras que las amenazas incluyen la competencia y el contexto macroeconómico.
+
+
+Introducción a la empresa
+Shopify es una plataforma de comercio electrónico fundada en 2006 en Ottawa, Canadá, que opera bajo un modelo Software as a Service. Su propuesta de valor central consiste en permitir que cualquier usuario, desde emprendedores hasta grandes empresas, puedan crear y gestionar una tienda online de forma sencilla, sin necesidad de conocimientos técnicos avanzados. La plataforma se destaca por su implementación rápida, su escalabilidad y un ecosistema robusto de aplicaciones y partners que amplían sus funcionalidades.
+La misión de la empresa, “Make commerce better for everyone”, orienta su evolución hacia herramientas que simplifican el comercio digital y permiten a los usuarios escalar sus negocios, alineándose con su presencia en múltiples segmentos del mercado.
+Equipo fundador
+Shopify fue creada por Tobias Lütke, Daniel Weinand y Scott Lake, quienes aportaron perfiles complementarios en tecnología, diseño y operaciones. Lütke, desarrollador de software, impulsó la visión técnica de la plataforma y continúa como CEO. Weinand contribuyó al diseño de la experiencia de usuario en las etapas iniciales, mientras que Lake tuvo un rol clave en los primeros aspectos comerciales antes de su salida. Sus aportes permitieron construir una plataforma que combina solidez tecnológica, simplicidad de uso y orientación al comerciante.
+
+
+Modelo de negocio 
+¿Qué vende?
+Shopify ofrece una plataforma SaaS integral que proporciona a los comerciantes todas las herramientas necesarias para operar una tienda online completa. Incluye funcionalidades para diseño del storefront, gestión de productos e inventario, procesamiento de pagos a través de integraciones, administración de ventas y análisis de métricas, además de capacidades multicanal y punto de venta físico.
+Su propuesta de valor se basa en eliminar barreras técnicas y centralizar en un solo servicio todas las funciones clave del comercio digital, lo que facilita la adopción tanto por pequeños negocios como por empresas de mayor escala.
+Modalidad: SaaS
+Shopify opera bajo un modelo de Software como Servicio (SaaS) basado en el cobro recurrente de suscripciones mensuales o anuales. A estos ingresos se suman servicios complementarios, como temas premium, aplicaciones desarrolladas por terceros y funcionalidades avanzadas que los usuarios pueden integrar desde el marketplace oficial. Este enfoque permite que la plataforma capture ingresos adicionales por expansión del uso, una característica típica de los modelos SaaS bien escalados.
+Además, Shopify obtiene ingresos transaccionales cuando los comerciantes utilizan Shopify Payments u otros servicios asociados, aunque estos no constituyen el foco principal del análisis. En el nivel Shopify Plus, orientado a empresas de mayor escala, la empresa adopta contratos personalizados con un pricing diferenciado y soporte dedicado, reflejando una estrategia adaptada a las necesidades de clientes con mayor complejidad operativa.
+Mercado objetivo y cliente tipo
+El mercado objetivo de Shopify abarca desde emprendedores individuales hasta grandes empresas enterprise, lo que refleja la capacidad de escalabilidad propia del modelo SaaS.
+
+
+El segmento de autoservicio está dirigido a emprendedores y pequeñas empresas que buscan lanzar rápidamente su tienda online sin conocimientos técnicos avanzados. Un buyer persona típico en este segmento podría ser un fundador de marca directa al consumidor (DTC) con un catálogo de 5 a 20 productos, generando ingresos mensuales entre 20.000 y 80.000 dólares, que valora la rapidez de implementación y el ecosistema de aplicaciones disponibles.
+
+
+El segmento mid-market y enterprise accede principalmente a través de Shopify Plus, donde la propuesta de valor se enfoca en escalabilidad, personalización avanzada y soporte dedicado. Esta diversificación de segmentos permite a Shopify capturar diferentes niveles de disposición a pagar (WTP), donde el tiering es una estrategia efectiva para medir y capturar valor según las necesidades del cliente.
+
+
+Esquema de precios
+Shopify estructura su pricing en cuatro planes principales diseñados para diferentes etapas de crecimiento del negocio. El plan Basic, dirigido a emprendedores individuales, inicia con una promoción de 1 dólar por mes durante los primeros tres meses y luego se factura a partir de 25 dólares mensuales cuando se paga mensualmente. El plan Grow, orientado a pequeños equipos, también ofrece la promoción de 1 dólar mensual los primeros tres meses y luego cuesta 65 dólares mensuales. El plan Advanced, para negocios en crecimiento, mantiene la misma promoción inicial de 1 dólar mensual y luego se factura a 399 dólares mensuales. Finalmente, Shopify Plus, dirigido a empresas complejas, tiene un precio de inicio de 2.300 dólares mensuales y está disponible en términos de uno o tres años.
+
+
+Esta estrategia de pricing incorpora varios elementos clave. La promoción de bajo costo durante los primeros tres meses funciona como un mecanismo de prueba que reduce la barrera de entrada y permite a los potenciales clientes experimentar el valor del producto antes de comprometerse con el precio completo. 
+La diferenciación entre facturación mensual y anual (con un ahorro del 25% en esta última modalidad) incentiva el compromiso a largo plazo y mejora la previsibilidad de ingresos para Shopify. La estructura de precios, refleja diferentes niveles de disposición a pagar según el segmento. El mix de planes, junto con los upgrades hacia Shopify Plus y la adopción de add-ons, genera efectos positivos en el ARPU y en la expansión de ingresos, componentes clave del Net Revenue Retention (NRR). La estrategia de pricing no debe basarse únicamente en costos, sino también en el valor que percibe el cliente, lo cual Shopify logra mediante la diferenciación de funcionalidades, niveles de soporte y características específicas entre planes.
+  
+
+  
+
+* https://www.shopify.com/pricing
+
+
+Business Model Canvas
+El Business Model Canvas, herramienta metodológica para trabajar ideas de negocio, permite estructurar de forma sistemática los nueve componentes clave del modelo de Shopify. La propuesta de valor central consiste en permitir a los comerciantes lanzar y operar un e-commerce completo con un tiempo de implementación reducido (time-to-value bajo), escalabilidad inherente y capacidad de extensión mediante aplicaciones y partners. El checkout integrado de alta conversión es otro diferencial técnico que genera valor tangible para el cliente.
+
+
+Los segmentos de clientes abarcan desde emprendedores individuales hasta pequeñas y medianas empresas, marcas directas al consumidor, retailers omnicanal y grandes empresas enterprise a través de Shopify Plus. Los canales de distribución incluyen el sitio web de Shopify para autoservicio, una red de partners y agencias certificadas, el App Store para descubrimiento de aplicaciones, un equipo de ventas dedicado para clientes Plus, y múltiples integraciones con redes sociales y marketplaces.
+
+
+Las relaciones con clientes se construyen mediante soporte técnico 24/7, un centro de ayuda y documentación, comunidades activas de usuarios y desarrolladores, y programas de partners. Para clientes enterprise en Shopify Plus, se asignan Customer Success Managers (CSM) y solutions engineers dedicados, reflejando el mayor nivel de inversión y la necesidad de acompañamiento personalizado en segmentos de alto valor.
+
+
+Las fuentes de ingresos se dividen en ingresos recurrentes del modelo SaaS (suscripciones), ingresos por add-ons y aplicaciones del marketplace, contratos enterprise de Shopify Plus, y aunque fuera del análisis principal de este trabajo, los ingresos transaccionales de Merchant Solutions (procesamiento de pagos, envíos y capital de trabajo). Los recursos clave incluyen la plataforma tecnológica misma, la marca reconocida y la capacidad de atraer desarrolladores, los datos agregados de comercio que permiten insights y mejoras, la infraestructura cloud escalable y la red extensa de partners que amplía el ecosistema.
+
+
+Las actividades clave se centran en el desarrollo continuo del producto y la infraestructura, garantizar seguridad y fiabilidad operativa, construir y mantener el ecosistema de aplicaciones y partners, marketing y ventas con especial énfasis en el segmento enterprise y soporte al cliente. Los socios clave incluyen desarrolladores de aplicaciones y temas, proveedores de servicios de pago (PSPs), empresas de logística y envío, agencias de marketing e integradores de sistemas (ISVs) y canales de distribución. La estructura de costos se compone principalmente de investigación y desarrollo (I+D), servicios cloud e infraestructura, operaciones de soporte al cliente, inversión en marketing y ventas (especialmente para el segmento enterprise donde el proceso comercial es más complejo), y programas de incentivos y soporte para partners.
+
+
+  
+
+
+
+Análisis de indicadores KPI
+En empresas SaaS las métricas clave se centran en los ingresos recurrentes (MRR/ARR), diferenciándolos de los ingresos totales que pueden incluir componentes no recurrentes como customizaciones o servicios puntuales. La previsibilidad del flujo de caja es mayor en SaaS que en servicios debido a la naturaleza recurrente de los ingresos. A continuación se presentan los KPIs relevantes para Shopify, utilizando datos reales publicados.
+
+
+KPIs principales vistos en clase
+MRR (Monthly Recurring Revenue)
+El MRR mide los ingresos recurrentes mensuales provenientes de suscripciones, proporcionando una visión de la estabilidad y previsibilidad de los ingresos en el modelo SaaS. Según el reporte de resultados del primer trimestre de 2024, Shopify reportó un MRR de fin de período de 151 millones de dólares, representando un crecimiento interanual del 32%. Este dato se obtiene directamente de los reportes financieros oficiales de la empresa.
+
+
+Dato real: 151 M USD (Q1 2024, fin de período)  
+Fuente:  Investing.com, transcripción de resultados Q1 2024, consultado 04/11/2025: https://es.investing.com/news/stock-market-news/informe-de-resultados-shopify-registra-un-fuerte-crecimiento-en-el-primer-trimestre-y-se-centra-en-el-exito-de-los-comerciantes-93CH-2674588
+  
+
+
+
+ARR (Annual Recurring Revenue)
+El ARR representa los ingresos recurrentes anuales, calculado típicamente como MRR × 12. Sin embargo, Shopify no reporta ARR explícitamente pero podemos aproximarlo usando los ingresos de Subscription Solutions reportados en el año fiscal 2024, que alcanzaron 2.350 millones de dólares. Esta aproximación considera que los ingresos de Subscription Solutions son principalmente recurrentes, aunque pueden incluir componentes no estrictamente mensuales.
+
+
+Cálculo: ARR proxy FY2024 ≈ Subscription Solutions FY2024 = 2.35 Bn USD  
+Fuente: Europa Press, "Shopify dispara su beneficio en 2024 a 1.957 millones", consultado 04/11/2025: https://www.europapress.es/economia/noticia-shopify-dispara-beneficio-2024-1957-millones-20250211172509.html
+
+
+Nota metodológica: Si calculamos ARR a partir del MRR reportado (151 M USD × 12 = 1.812 Bn USD), observamos una diferencia con el valor de Subscription Solutions anual. Esto puede deberse a que MRR es un snapshot de fin de período, mientras que Subscription Solutions anual incluye variaciones estacionales y componentes adicionales.
+
+
+Ingresos recurrentes vs ingresos totales
+En el año fiscal 2024, Shopify reportó ingresos totales de 8.880 millones de dólares, de los cuales 2.350 millones corresponden a Subscription Solutions y 6.530 millones a Merchant Solutions. 
+
+
+Cálculo del mix: Subscription/Total = 2.35/8.88 = 26,5% | Merchant/Total = 6.53/8.88 = 73,5%  
+Fuente: Europa Press, "Shopify dispara su beneficio en 2024 a 1.957 millones", consultado 04/11/2025: https://www.europapress.es/economia/noticia-shopify-dispara-beneficio-2024-1957-millones-20250211172509.html
+
+
+  
+
+
+
+Margen bruto
+El margen bruto indica el porcentaje de ingresos que queda después de restar el costo de bienes vendidos (COGS), reflejando la eficiencia operativa. En el primer trimestre de 2024, Shopify reportó un beneficio bruto de 957 millones de dólares sobre ingresos totales de 1.900 millones, lo que representa un margen bruto aproximado del 50,4%. Este margen es menor que el típico de empresas SaaS puras (70-90%) debido al mix de ingresos que incluye Merchant Solutions, cuyo componente transaccional tiene menores márgenes.
+
+
+Dato real: 50,4% (Q1 2024)  
+Fuente: Investing.com, transcripción de resultados Q1 2024, consultado 04/11/2025: https://es.investing.com/news/stock-market-news/informe-de-resultados-shopify-registra-un-fuerte-crecimiento-en-el-primer-trimestre-y-se-centra-en-el-exito-de-los-comerciantes-93CH-2674588
+
+
+KPIs adicionales relevantes (no vistos en clase pero estándar en análisis SaaS)
+A continuación se presentan KPIs adicionales que son estándar en el análisis de empresas SaaS y proporcionan insights valiosos sobre la salud del negocio.
+
+
+ARPU (Average Revenue Per User)
+El ARPU mide el ingreso promedio por usuario mensual, calculado como MRR dividido por el número de clientes activos. Shopify no reporta públicamente el número exacto de comerciantes activos con pago, por lo que este indicador requiere estimación. Sin embargo, según datos públicos, la empresa cuenta con más de 5 millones de clientes. Utilizando el MRR reportado de 151 millones de dólares, podemos estimar un ARPU aproximado.
+
+
+Fórmula: ARPU = MRR / Número de comerciantes activos  
+Limitación: Requiere datos internos del número exacto de comerciantes con suscripción activa al momento del cálculo del MRR.  
+Fuente MRR: Investing.com, Q1 2024  
+Fuente clientes: Wikipedia, consultado 04/11/2025: https://en.wikipedia.org/wiki/Shopify
+
+
+Churn rate
+El churn rate mide el porcentaje de clientes que cancelan su suscripción en un período determinado. Este indicador es crítico para evaluar la retención de clientes y la sostenibilidad del modelo de negocio, pero Shopify no lo reporta públicamente. Para calcularlo se requiere acceso a datos internos de CRM o sistemas de billing que registren las bajas de clientes mes a mes.
+
+
+Fórmula: Churn mensual = (Clientes perdidos en el mes / Clientes al inicio del mes) × 100  
+Limitación: Requiere datos internos de CRM o sistemas de billing.
+
+
+CAC (Customer Acquisition Cost)
+El CAC representa el costo promedio de adquirir un nuevo cliente, calculado como el gasto total en ventas y marketing dividido por el número de nuevos clientes adquiridos en el período. Este indicador permite evaluar la eficiencia de las inversiones en adquisición de clientes, pero requiere acceso a datos financieros internos sobre gastos de marketing y ventas, así como el conteo de nuevos clientes por período.
+
+
+Fórmula: CAC = (Gastos de ventas y marketing del período) / (Número de nuevos clientes adquiridos)  
+Limitación: Requiere datos internos de finanzas y CRM.
+
+
+LTV (Lifetime Value) y LTV/CAC
+El LTV representa el valor económico total esperado de un cliente durante su relación con la empresa. Se calcula típicamente como ARPU dividido por el churn rate mensual, o incorporando el margen bruto para obtener el LTV neto. La relación LTV/CAC es un indicador clave de eficiencia: valores superiores a 3:1 generalmente indican un modelo sostenible. Sin embargo, este cálculo requiere tanto ARPU como churn rate, ambos no disponibles públicamente para Shopify.
+
+
+Fórmula: LTV = (ARPU × Margen bruto) / Churn mensual  
+Fórmula relación: LTV/CAC = LTV / CAC  
+Limitación: Requiere ARPU y churn rate, ambos no públicos.
+
+
+Net Revenue Retention (NRR)
+El NRR mide la retención neta de ingresos de clientes existentes, incluyendo expansiones (upgrades, add-ons), contracciones (downgrades) y churn. Un NRR superior al 100% indica que la empresa está creciendo incluso sin nuevos clientes, lo cual es una señal muy positiva de salud del modelo SaaS. Este indicador requiere análisis por cohorte de clientes y no está disponible públicamente para Shopify.
+
+
+Fórmula: NRR = ((Ingresos al final del período de clientes existentes + Expansiones - Contracciones - Churn) / Ingresos al inicio del período de clientes existentes) × 100  
+Limitación: Requiere datos internos de facturación por cohorte de clientes.
+
+
+Payback period
+El payback period indica el tiempo necesario para recuperar el costo de adquisición de un cliente, medido en meses. Un payback period corto (menos de 12 meses) es generalmente deseable en SaaS. Se calcula dividiendo el CAC entre el ingreso mensual neto por cliente (ARPU × margen bruto).
+
+
+Fórmula: Payback period (meses) = CAC / (ARPU × Margen bruto)  
+Limitación: Requiere CAC y ARPU, ambos no disponibles públicamente.
+
+
+Análisis FODA
+Fortalezas
+Shopify presenta fortalezas estructurales que reflejan las ventajas del modelo SaaS. En primer lugar, la plataforma ofrece una solución integral y extensible mediante aplicaciones y partners, con un time to value bajo que permite a los comerciantes lanzar sus tiendas online rápidamente. Esta característica responde a la necesidad identificada por los fundadores de eliminar barreras técnicas, convirtiendo un proceso tradicionalmente complejo en una experiencia accesible. La escalabilidad inherente del modelo SaaS, donde la limitante principal es la infraestructura cloud y no las horas hombre disponibles, permite a Shopify atender desde micro merchants hasta grandes empresas enterprise. Esta escalabilidad es una ventaja competitiva clave del modelo SaaS frente a empresas de servicios de software.
+
+
+El efecto de red generado por el ecosistema de desarrolladores y partners constituye otra fortaleza significativa. La presencia de más de 5 millones de comerciantes y una extensa red de aplicaciones terceras crea barreras de entrada para competidores y aumenta el valor percibido de la plataforma. La marca reconocida en segmentos SMB y mid-market facilita la adquisición de nuevos clientes y reduce el costo de adquisición (CAC) relativo. Además, el checkout integrado y Shopify Payments, que elevan la tasa de conversión, representan diferenciales técnicos que generan valor tangible para el cliente y contribuyen a la retención. El modelo de ingresos recurrentes proporciona previsibilidad del flujo de caja superior a empresas de servicios, donde se diferenció la naturaleza recurrente de SaaS frente a proyectos únicos con esquemas de pago por hitos.
+
+
+Oportunidades
+Shopify cuenta con varias oportunidades de crecimiento que se apoyan tanto en la solidez de su modelo SaaS como en su posición dentro del mercado digital. Una de ellas es la expansión internacional, especialmente hacia mercados emergentes donde el comercio electrónico todavía está en etapas tempranas. También existen oportunidades en el desarrollo de verticales específicas, como el comercio B2B, el retail físico, el social commerce y las estrategias omnicanal, que pueden aumentar la base de usuarios y elevar el ingreso promedio por cliente (ARPU).
+El avance de la inteligencia artificial abre un espacio importante para que Shopify mejore la personalización, el soporte automatizado y las recomendaciones dentro de la plataforma. Estas mejoras no solo pueden aumentar el gasto de los clientes actuales, sino también reducir costos operativos, impactando de forma positiva en los márgenes del negocio. Tal como se analizó en clase respecto a pricing y disposición a pagar (WTP), la creación de paquetes o add-ons de alto margen representa una oportunidad concreta para aumentar ingresos sin necesidad de adquirir nuevos clientes.
+Además, las alianzas estratégicas con empresas de logística y fintech pueden reforzar la propuesta de valor de Shopify y optimizar sus indicadores financieros, especialmente los asociados a eficiencia y recuperación del CAC. La incorporación continua de nuevas funcionalidades alineadas con las tendencias del mercado, como integraciones con redes sociales o herramientas para ventas omnicanal, también puede incentivar a los clientes a subir a planes superiores o incluso migrar a Shopify Plus.
+En conjunto, estas oportunidades permiten que Shopify aproveche plenamente la escalabilidad del modelo SaaS, donde el crecimiento depende más de la infraestructura y la automatización que del esfuerzo manual, generando una ventaja importante frente a modelos basados en servicios.
+Debilidades
+A pesar de sus ventajas, Shopify enfrenta algunas debilidades importantes dentro de su modelo de negocio. Una de las principales es la sensibilidad de su margen bruto a la mezcla de ingresos entre suscripciones y servicios transaccionales. El margen consolidado del 50,4% es significativamente menor al de un SaaS puro, justamente porque Merchant Solutions, aunque aporta la mayor parte de los ingresos, opera con márgenes más bajos. Esta estructura híbrida diversifica el negocio, pero también limita la eficiencia operativa que suele ser una de las grandes fortalezas del modelo SaaS.
+Otra debilidad es la dependencia del ecosistema de terceros, incluyendo desarrolladores, agencias y partners. Si bien este ecosistema es un motor de innovación, también implica que Shopify no controla completamente la calidad ni la consistencia de todas las funcionalidades que ofrecen los comerciantes. Cuando una aplicación externa falla o no está bien integrada, la experiencia del usuario se ve afectada, y la responsabilidad percibida recae en Shopify.
+Además, la estructura de precios puede resultar compleja, especialmente para pequeños comerciantes que están evaluando sus primeras opciones. Entre planes, promociones, add-ons y cobros por funcionalidades específicas, el usuario debe entender múltiples niveles de costos antes de elegir. La claridad en el pricing es clave para maximizar la disposición a pagar, si el cliente no entiende fácilmente el valor de cada plan, la conversión puede verse afectada.
+Finalmente, en el segmento enterprise, las migraciones a Shopify Plus suelen requerir trabajo de partners o consultores externos, lo que introduce tiempos de implementación más largos y costos adicionales. Esto se aleja del ideal del SaaS autoservicio, rápido y completamente escalable, y muestra una tensión natural entre atender a grandes empresas y mantener la simplicidad del modelo.
+Amenazas
+Shopify opera en un mercado altamente competitivo y dinámico, lo que implica varias amenazas que pueden afectar su crecimiento. Por un lado, compite directamente con plataformas como BigCommerce, Wix y Salesforce Commerce Cloud, y también de forma indirecta con marketplaces como Amazon o MercadoLibre, que atraen a los comerciantes ofreciéndoles soluciones integradas. Además, como la barrera de entrada para nuevos actores en el segmento SMB es relativamente baja, pueden surgir competidores con propuestas innovadoras que busquen captar parte de su mercado.
+Otro frente de amenaza proviene de los cambios regulatorios, especialmente en áreas como pagos, privacidad de datos y cumplimiento normativo. Shopify debe adaptarse constantemente a regulaciones y legislaciones locales, lo que implica mayores costos y complejidad operativa. Esto impacta de forma particular al componente transaccional del negocio, que ya opera con márgenes más acotados y es sensible a ajustes regulatorios y de tarifas en el ecosistema de pagos.
+También existen riesgos asociados al contexto macroeconómico. Cambios en los patrones de consumo, tasas de interés más altas o un aumento en los costos de adquisición de clientes pueden desacelerar el crecimiento. Aunque el modelo SaaS ofrece mayor previsibilidad que los modelos basados en proyectos, sigue dependiendo de la capacidad de pago de los comerciantes y de su estabilidad financiera. En tiempos de incertidumbre económica, algunas empresas pueden reducir gastos, pausar proyectos o incluso cerrar operaciones, afectando la retención.
+Finalmente, la posibilidad de consolidación del mercado, con grandes competidores adquiriendo startups o compitiendo agresivamente en precio, puede presionar aún más los márgenes y obligar a Shopify a invertir más en innovación y marketing para mantener su posición.
+Valuación de la empresa
+Valuar una empresa nunca es un proceso simple y en el caso de compañías tecnológicas, especialmente las que operan bajo modelos SaaS, la dificultad aumenta. El valor de estas empresas depende menos de sus activos físicos y más de su potencial de crecimiento futuro, lo que introduce un componente de incertidumbre mayor. Aunque existe la idea de que “una empresa vale lo que alguien esté dispuesto a pagar”, en compañías que cotizan en bolsa, como Shopify, contamos con información pública que permite utilizar métodos más estructurados y comparables.
+Para este análisis se utilizan dos métodos complementarios: múltiplos de mercado (que permiten entender cómo el mercado valora empresas similares) y el flujo de caja descontado (que proyecta el valor de los flujos futuros de la empresa).
+Ambos enfoques tienen limitaciones y deben interpretarse como herramientas de aproximación, no como valores absolutos. En un contexto real, estos análisis deberían contrastarse con datos de investor relations y con múltiplos vigentes del sector.
+Método 1: Múltiplos de mercado (EV/Revenue, P/S)
+El método de múltiplos se basa en comparar la empresa con otras del mismo sector a través de ratios financieros. Para compañías SaaS, uno de los indicadores más utilizados es EV/Revenue (Enterprise Value / Ingresos), ya que muestra cuántas veces el mercado está dispuesto a pagar por cada dólar de ingresos.
+Estos múltiplos ofrecen una forma rápida de evaluar empresas en función de su “economía interna” (crecimiento, márgenes, eficiencia y expectativas futuras).
+Para Shopify utilizamos los ingresos totales del año fiscal 2024, que alcanzaron 8.880 millones de dólares (incluyendo 2.350 millones de Subscription Solutions y 6.530 millones de Merchant Solutions). En empresas SaaS de alto crecimiento, los múltiplos de mercado suelen ubicarse entre 7x y 12x ingresos, dependiendo de factores como la velocidad de crecimiento, el margen bruto, la retención de clientes y las condiciones macroeconómicas.
+Este rango sirve como referencia para estimar el valor de Shopify desde una perspectiva comparativa.
+Cálculo ilustrativo (usar datos reales de mercado al momento del análisis):
+- Ingresos anuales FY2024: 8.88 Bn USD
+- Rango múltiplo EV/Revenue para SaaS crecimiento alto: 7x–12x
+- Resultado:
+  - Escenario pesimista (7x): EV ≈ 62.2 Bn USD
+  - Escenario base (9x): EV ≈ 79.9 Bn USD
+  - Escenario optimista (12x): EV ≈ 106.6 Bn USD[a]
+
+
+Limitaciones del método: La evaluación de empresas tecnológicas es complicada porque depende de múltiples factores. En el caso de Shopify, la mezcla de ingresos transaccionales (Merchant Solutions) con ingresos SaaS puros puede sesgar la comparabilidad con empresas SaaS puras que típicamente tienen múltiplos más altos. Además, los múltiplos varían según ciclos macroeconómicos y tasas de interés, por lo que es importante usar un peer set actualizado y una fecha de corte específica. El precio accionario refleja expectativas del mercado sobre el futuro, y el balance es solo uno de varios insumos para analizar solvencia y riesgo.
+
+
+Método 2: Flujo de caja descontado (DCF simplificado)
+El método de Flujo de Caja Descontado busca estimar el valor de una empresa proyectando los flujos de caja libres que generará en el futuro y trayéndonos al valor presente mediante una tasa de descuento. En otras palabras, intenta responder cuánto vale hoy Shopify en función del dinero que podría generar mañana.
+Este enfoque tiene una ventaja clave: permite analizar el valor desde la "economía interna" de la empresa, sin depender exclusivamente de las fluctuaciones del mercado. Sin embargo, también presenta un desafío importante, requiere asumir valores futuros de crecimiento, márgenes, costos de capital y tasas de continuidad a perpetuidad. En empresas tecnológicas, donde los ciclos de innovación cambian rápido, estas proyecciones pueden introducir un nivel alto de incertidumbre.
+Para Shopify, el flujo de caja libre reportado en el primer trimestre de 2024 fue de 232 millones de dólares. Para construir un DCF anualizado necesitamos proyectar cómo evolucionará ese flujo en los próximos años. En este trabajo se utilizan supuestos pedagógicos, pensados únicamente como guía conceptual, y que deberían reemplazarse por estimaciones más robustas basadas en reportes oficiales, presentaciones a inversores y expectativas comunicadas por la propia empresa.
+Supuestos para el cálculo (ejemplo pedagógico; reemplazar con datos de IR):
+- FCF actual (FCF0): Proyectado anualizado desde Q1 2024 ≈ 928 M USD (232 M × 4, ajustado por estacionalidad)
+- Crecimiento anual del FCF a 5 años: 12% (base), 16% (optimista), 8% (pesimista)
+- WACC (Costo Promedio Ponderado de Capital): 10% (base), 9% (optimista), 11% (pesimista)
+- Tasa de crecimiento a perpetuidad (g): 3% (base), 4% (optimista), 2% (pesimista)[b]
+
+
+Cálculo del escenario base (valores en miles de millones de USD):
+Proyección de flujos de caja libres anuales:
+* Año 1 (FCF1) = 0.928 × 1.12 = 1.039
+* Año 2 (FCF2) = 1.039 × 1.12 = 1.164
+* Año 3 (FCF3) = 1.164 × 1.12 = 1.304
+* Año 4 (FCF4) = 1.304 × 1.12 = 1.460
+* Año 5 (FCF5) = 1.460 × 1.12 = 1.636
+
+
+Valor presente de los flujos proyectados (PV de FCF):
+* PV_FCF = 1.039/(1.10)^1 + 1.164/(1.10)^2 + 1.304/(1.10)^3 + 1.460/(1.10)^4 + 1.636/(1.10)^5
+* PV_FCF ≈ 0.945 + 0.962 + 0.980 + 0.997 + 1.015 ≈ 4.90 Bn USD
+
+
+Valor terminal (Terminal Value):
+El valor terminal representa el valor de la empresa después del período de proyección explícita, asumiendo un crecimiento perpetuo.
+* FCF6 = FCF5 × (1 + g) = 1.636 × 1.03 = 1.685
+* TV = FCF6 / (WACC - g) = 1.685 / (0.10 - 0.03) = 1.685 / 0.07 ≈ 24.07 Bn USD
+
+
+Valor presente del valor terminal:
+* PV_TV = TV / (1 + WACC)^5 = 24.07 / (1.10)^5 ≈ 24.07 / 1.611 ≈ 14.94 Bn USD
+
+
+Enterprise Value (EV):
+* EV = PV_FCF + PV_TV ≈ 4.90 + 14.94 ≈ 19.84 Bn USD
+
+
+Análisis de sensibilidad:
+El Enterprise Value varía significativamente según los supuestos utilizados, lo cual refleja la complejidad mencionada en clase sobre la evaluación de empresas tecnológicas:
+- Escenario optimista (crecimiento FCF 16%, WACC 9%, g 4%): EV ≈ 35-40 Bn USD
+- Escenario base (crecimiento FCF 12%, WACC 10%, g 3%): EV ≈ 19.8 Bn USD
+- Escenario pesimista (crecimiento FCF 8%, WACC 11%, g 2%): EV ≈ 10-12 Bn USD
+
+
+  
+
+Figura 5: Análisis de sensibilidad DCF con escenarios base, optimista y pesimista. El Enterprise Value varía significativamente según los supuestos de crecimiento del flujo de caja libre, WACC y tasa de crecimiento a perpetuidad. Esta variabilidad refleja la complejidad de evaluar empresas tecnológicas mencionadas en clase. Fuente: Cálculos propios basados en supuestos pedagógicos y datos reales de Q1 2024.
+
+
+Limitaciones y consideraciones del método DCF:
+El driver clave del valor es el flujo de caja libre y su margen. Para Shopify, es importante separar los efectos del componente Merchant Solutions del componente SaaS puro. Además, deben considerarse adecuadamente los CAPEX y el working capital, que pueden variar significativamente según las inversiones en infraestructura y el crecimiento del negocio.
+
+
+El método DCF requiere validación con guías de investigación y reconciliación con múltiplos observados en el mercado (como EV/Revenue) para realizar un sanity check. Para empresas que cotizan en bolsa, la información pública permite interpretar estos valores, pero siempre existe incertidumbre sobre si el valor calculado refleja correctamente las expectativas del mercado.
+
+
+Reconciliación entre métodos
+La discrepancia entre los resultados del método de múltiplos y el DCF refleja las limitaciones de ambos métodos y la importancia de utilizar múltiples aproximaciones. Las consultoras de evaluación utilizan diversos métodos, pero al final del día "tu compañía vale lo que alguien está dispuesto a pagar por eso". Para empresas que cotizan en bolsa como Shopify, el precio de mercado observado refleja las expectativas del mercado, que incorpora no solo los flujos de caja proyectados, sino también factores como el potencial de crecimiento, la posición competitiva, y las condiciones macroeconómicas del momento.
+
+
+Conclusiones finales
+El análisis del modelo de negocio de Shopify muestra un caso particular dentro del mundo SaaS: una empresa que combina ingresos recurrentes escalables con un componente transaccional muy relevante. Esta estructura le otorga diversificación, pero también explica su margen bruto más bajo que el de un SaaS puro. Aun así la plataforma mantiene fortalezas clave del modelo, como su escalabilidad, un time to value muy bajo y un ecosistema que potencia la adopción y la retención.
+El crecimiento del MRR y del ARR indica que Shopify continúa consolidando su base de ingresos recurrentes, aunque la falta de datos públicos sobre KPIs internos, como churn, CAC o NRR, limita una evaluación completa. A nivel estratégico mejorar la retención y aumentar el ARPU aparecen como prioridades claras. Bundles segmentados, add-ons de alto margen y un onboarding más guiado para SMB pueden aumentar el valor por cliente y reducir churn. En el segmento enterprise, un uso más inteligente de señales de intención y procesos comerciales focalizados puede mejorar el CAC y acelerar el payback.
+En términos de pricing, Shopify debería reforzar la diferenciación entre tiers y clarificar la propuesta de valor de cada plan, aprovechando estrategias basadas en disposición a pagar. Esto permitiría incentivar upgrades sin depender exclusivamente del crecimiento del componente transaccional, que opera con márgenes más bajos. La expansión internacional, el desarrollo de verticales específicas y la adopción de inteligencia artificial representan oportunidades concretas tanto para mejorar la retención como para fortalecer los márgenes.
+Respecto a la evaluación, los métodos aplicados, múltiplos de mercado y DCF, muestran resultados muy distintos, lo que refleja las limitaciones y supuestos involucrados en cada enfoque. En empresas tecnológicas esto es habitual, el mercado suele valorar no sólo flujos de caja futuros, sino también el potencial de crecimiento, la posición competitiva y el contexto macroeconómico. En última instancia  “una empresa vale lo que alguien esté dispuesto a pagar por ella”, y en el caso de Shopify, el precio de mercado sintetiza esas expectativas.
+________________
+Bibliografía y fuentes consultadas
+Fuentes oficiales de Shopify:
+- Shopify Pricing (consulta 04/11/2025): https://www.shopify.com/pricing
+- Shopify About (consulta 04/11/2025): https://www.shopify.com/about
+- Shopify Investor Relations (consulta 04/11/2025): https://investors.shopify.com/
+- Shopify Plus plan (consulta 04/11/2025): https://help.shopify.com/en/manual/intro-to-shopify/pricing-plans/plans-features/shopify-plus-plan
+
+
+Fuentes financieras y noticias:
+- Investing.com. "Informe de resultados: Shopify registra un fuerte crecimiento en el primer trimestre y se centra en el éxito de los comerciantes" (consulta 04/11/2025): https://es.investing.com/news/stock-market-news/informe-de-resultados-shopify-registra-un-fuerte-crecimiento-en-el-primer-trimestre-y-se-centra-en-el-exito-de-los-comerciantes-93CH-2674588
+
+
+- Europa Press. "Shopify dispara su beneficio en 2024 a 1.957 millones" (consulta 04/11/2025): https://www.europapress.es/economia/noticia-shopify-dispara-beneficio-2024-1957-millones-20250211172509.html
+
+
+- Yahoo Finance (consulta 04/11/2025): https://finance.yahoo.com/quote/SHOP/
+
+
+- CompaniesMarketCap — Shopify (consulta 04/11/2025): https://companiesmarketcap.com/shopify/
+
+
+Fuentes de referencia general:
+- Wikipedia. "Shopify" (consulta 04/11/2025): https://en.wikipedia.org/wiki/Shopify
+
+
+Notas obligatorias sobre datos y accesos: 
+- Algunos KPIs (p. ej., churn, CAC, NRR) requieren datos internos no públicos. Metodología de estimación:
+  - Churn: conteo de bajas sobre base de inicio por mes.
+  - CAC: (gasto marketing+ventas)/nuevos clientes por periodo.
+  - NRR: comparar ingresos de cohorte existente (excluye nuevos), destacando expansión/contracción/churn.
+  - Validar series con finanzas/RevOps; anotar supuestos y fecha de corte.
+
+
+Nota sobre uso de inteligencia artificial:
+Este informe fue asistido por inteligencia artificial (IA) para la estructuración de secciones y redacción de borradores iniciales. Los contenidos críticos (precios públicos, datos de investor relations, métricas financieras reportadas) fueron verificados y citados directamente desde las fuentes oficiales listadas en la bibliografía. Todos los supuestos y estimaciones pedagógicas fueron marcados explícitamente como "supuesto" o "ejemplo pedagógico" en el texto, especialmente en las secciones de KPIs no públicos y en la evaluación DCF.
+
+
+
+
+
+
+________________
+
+
+ Camila Borthagaray / Sofía Andreoli / Agustin Repetto                                                      
+[a]revisar si hay que cmabiar esto
+[b]revisar

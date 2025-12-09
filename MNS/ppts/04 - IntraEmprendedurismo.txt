@@ -1,0 +1,129 @@
+﻿Intrapreneurship 
+Ing. Andrés Galiana 
+Trabajo integrador 
+Agosto 2025
+Agenda 
+• Breve repaso 
+• Emprendedurismo • Intra Emprendedurismo • Diferencias 
+• Ejemplos
+Breve repaso - MNS 
+• Modelo de empresas de servicios vs modelo SaaS. • Proceso de ideación. 
+• Equipo fundador.
+Emprender 
+• Es el proceso mediante el cual una persona o un grupo de  personas crea y desarrolla un nuevo negocio o proyecto  desde cero, asumiendo los riesgos y la responsabilidad de  organizar los recursos necesarios. 
+• El emprendedor busca generar valor a través de productos,  servicios o modelos de negocio innovadores en el mercado. 
+• Ejemplo: Una persona identifica una necesidad en el mercado  (comida saludable a domicilio) y funda su propia startup para  ofrecer ese servicio.
+Intra Emprender 
+• Es la práctica de emprender dentro de una organización,  donde los colaboradores generan y lideran proyectos  innovadores utilizando los recursos de la empresa. 
+• Permite impulsar nuevas ideas, mejorar procesos y crear  productos o servicios sin necesidad de fundar una empresa  independiente. 
+• Ejemplo: Un equipo de empleados desarrolla una nueva  aplicación o modelo de negocio dentro de la empresa en la  que trabaja.
+Emprender 
+ASPECTO 
+Definición 
+	Emprendimiento 
+Crear y desarrollar un negocio o  proyecto nuevo desde cero.
+	Intraemprendimiento 
+Innovar y desarrollar proyectos dentro de  una empresa existente.
+	Recursos 
+	Aportados por el emprendedor  (capital propio, inversores, préstamos).
+	Brindados por la organización (financieros,  humanos, tecnológicos).
+	Riesgo 
+	Asumido principalmente por el  emprendedor.
+	Asumido por la empresa; menor riesgo  personal para el intraemprendedor.
+	Autonomía 
+	Total: el emprendedor decide la  estrategia y dirección del negocio.
+	Parcial: el intraemprendedor debe  alinearse a la visión y objetivos de la  empresa.
+	Objetivo 
+	Crear valor en el mercado y lograr  crecimiento independiente.
+	Generar innovación y ventajas  
+competitivas para la empresa.
+	
+
+
+
+Ejemplo Fundar una startup de delivery de  comida saludable. 
+Un equipo de empleados crea una app  para mejorar la experiencia de clientes  dentro de la compañía.
+Intra Emprender 
+• Intra Emprendedurismo reactivo vs proactivo.
+TIPO 
+Proactiva
+	Definición 
+Surge de la iniciativa propia de los  colaboradores. Identifican  
+oportunidades o problemas antes de  que se conviertan en urgentes, y  proponen soluciones innovadoras.
+	Ejemplo 
+Un grupo de ingenieros en una empresa  de software detecta que el mercado se  está moviendo hacia la inteligencia  artificial y propone desarrollar un nuevo  módulo con IA antes de que los clientes lo  exijan.
+	Reactiva
+	Nace como respuesta a una  
+necesidad, problema o presión  externa (clientes, competencia,  regulaciones, etc.). El equipo actúa  cuando la empresa debe adaptarse  rápidamente.
+	Una empresa de retail recibe muchas  quejas por demoras en las entregas. El  área de logística desarrolla internamente  un sistema de seguimiento en tiempo real  para mejorar la experiencia del cliente.
+	
+
+
+
+Beneficios del Intraemprendimiento 
+• Para la empresa 
+• Innovación continua. 
+• Ventaja competitiva. 
+• Aprovechamiento del talento interno. • Motivación y compromiso. 
+• Diversificación de ingresos. 
+• Para los empleados 
+• Desarrollo de habilidades. 
+• Visibilidad y reconocimiento. 
+• Participación en la estrategia. 
+• Ambiente laboral enriquecido.
+Barreras o desafíos 
+• A nivel organizacional 
+• Resistencia al cambio. 
+• Falta de apoyo de la dirección. 
+• Cultura organizacional poco innovadora. • Escasez de recursos. 
+• A nivel personal (del intraemprendedor) • Falta de incentivos. 
+• Miedo al fracaso o a la exposición. • Conflicto de roles.
+Factores que favorecen el Intraemprendimiento 
+• A nivel organizacional 
+• Apoyo de la alta dirección. 
+• Cultura que acepta el error. 
+• Espacios de experimentación. 
+• Recursos asignados. 
+• Procesos ágiles y flexibles. 
+• A nivel personal (del intraemprendedor) 
+• Autonomía y confianza. 
+• Reconocimiento e incentivos. 
+• Acceso a formación y mentoring.
+Procesos y Metodologías aplicables 
+• Design Thinking: Metodología centrada en el usuario para resolver  problemas de forma creativa. 
+• Lean Startup: Método para crear productos minimizando riesgos e  inversión inicial. 
+• Agile / Scrum (gestión flexible de proyectos): Marco de trabajo  que organiza el desarrollo en ciclos cortos (sprints) para entregar valor de  manera incremental.
+Ejemplos reales 
+• Post-it (3M) 
+• Gmail (Google) 
+• PlayStation (Sony) 
+• Amazon Web Services • Autopilot (Tesla) 
+• iPhone (Apple) 
+• Dreamliner -787- (Boeing) • Walkman (Sony)
+Rol del intra emprendedor 
+• ¿Quién es un intraemprendedor? Es un colaborador dentro de una  organización que actúa con la mentalidad de un emprendedor: detecta  oportunidades, impulsa proyectos innovadores y asume la  responsabilidad de llevarlos adelante, usando los recursos de la empresa. 
+• Ejemplo real de intraemprendedor: Shigetaka Kurita (Japón),  trabajaba en una empresa de telecomunicaciones y creó los emojis para  mejorar la comunicación en celulares. Nació como un proyecto interno  pequeño y hoy es un estándar global. 
+• Muestra cómo un empleado, sin ser CEO ni fundador, puede generar un  impacto enorme.
+Rol del intra emprendedor 
+• Características personales 
+• Creatividad → encuentra soluciones nuevas a problemas existentes. • Proactividad → no espera instrucciones, se adelanta a los cambios. • Resiliencia → soporta obstáculos internos (burocracia, falta de  apoyo). 
+• Capacidad de persuasión → convence a líderes y colegas de apoyar  sus ideas. 
+• Visión estratégica → entiende cómo su idea encaja en los objetivos  de la empresa.
+Rol del intra emprendedor 
+• Habilidades necesarias 
+• Liderazgo → guía a equipos multidisciplinarios aunque no tenga un  cargo jerárquico. 
+• Gestión de proyectos → organiza tareas, plazos y recursos. • Comunicación efectiva → transmite la propuesta con claridad y logra  apoyo. 
+• Conocimiento técnico → domina su área (IT, marketing, procesos,  etc.) para dar sustento a las ideas. 
+• Mentalidad ágil → acepta la iteración, el prototipado y el aprendizaje  rápido.
+Tolerancia al fallo 
+• Sin tolerancia al fallo, no hay innovación: Innovar implica  experimentar, y experimentar significa que muchas veces las ideas no  van a funcionar a la primera. 
+• ¿Por qué es importante? 
+• Aprendizaje rápido → cada error revela información valiosa. • Cultura de seguridad psicológica → los empleados se animan a  proponer sin miedo a represalias. 
+• Iteración y mejora continua → los fallos son pasos necesarios hacia  soluciones más sólidas. 
+• Casos reales → productos icónicos como Post-it (3M) o PlayStation  (Sony) surgieron de errores o proyectos fallidos.
+Tolerancia al fallo 
+• Riesgo de no tolerar el fallo: 
+• Equipos que se autocensuran y no presentan ideas. • Se repite “lo de siempre” sin innovar. 
+• La empresa se estanca frente a competidores más flexibles.
+Intra Emprendedurismo 
+Muchas gracias

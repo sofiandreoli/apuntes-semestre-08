@@ -1,0 +1,223 @@
+﻿Gestión de  
+empresas SaaS 
+Ing. Andrés Galiana 
+Trabajo integrador 
+Agosto 2025
+Agenda 
+• Introducción 
+• Qué es una empresa SaaS • Ventas y desventajas 
+• Indicadores de performance • Métricas financieras 
+• Métricas de uso 
+• Métricas de satisfacción de clientes • Estrategias de gestión 
+• Caso de estudio
+Empresa SaaS 
+• Una empresa SaaS (Software as a Service) es una empresa  que proporciona software a sus clientes como un servicio a  través de internet. 
+• Este modelo de negocio permite a los clientes acceder al  software desde cualquier lugar y dispositivo con conexión a  internet, lo que aumenta la flexibilidad y la escalabilidad de la  solución.  
+• La empresa SaaS puede actualizar y mantener el software de  manera centralizada, lo que reduce la carga de trabajo y los  costos para los clientes.
+Modelo de negocio 
+• El modelo de negocio de una empresa SaaS se basa en la  suscripción o el pago de una tarifa mensual o anual por el uso  del software.  
+• Las empresas SaaS suelen ofrecer varios planes de suscripción,  que varían en función del número de usuarios, la capacidad  de almacenamiento y las características adicionales. 
+Ejemplos de SaaS • Salesforce 
+• Dropbox 
+• HubSpot 
+• Zoom 
+• Slack 
+• Google Workspace
+SaaS: algunas ventajas 
+• Ingresos recurrentes. 
+• Accesibilidad. 
+• Escalabilidad. 
+• Soporte técnico y seguridad.
+  
+
+SaaS: algunas desventajas 
+• Dependencia de Internet. 
+• Percepción de Costo a largo plazo. 
+• Percepción de Falta de control. 
+• Percepción de Riesgo de seguridad. 
+• Actualizaciones automáticas.
+  
+
+Indicadores de Performance 
+• Los indicadores de performance, también conocidos como  KPIs (Key Performance Indicators), son métricas que se utilizan  para medir el rendimiento de una empresa. 
+• Las métricas las podemos clasificar de la siguiente manera: 
+• Métricas financieras: ingresos, costos, lifetime value (LTV), coste de adquisición de  clientes (CAC). 
+• Métricas de uso: número de usuarios, tiempo de uso, frecuencia de uso, tasa de  conversión, retención de usuarios, tasa de adopción de nuevas funcionalidades. 
+• Métricas de satisfacción del cliente: Net Promoter Score (NPS), Customer Satisfaction  Score (CSAT), Customer Effort Score (CES).
+Métricas financieras 
+• Dentro de los indicadores de performance de las empresas  SaaS, las métricas financieras son de gran importancia ya que  permiten evaluar el desempeño financiero de la empresa. 
+• Ingresos totales 
+• EBIT y EBITDA 
+• Costo de adquisición de clientes 
+• Monthly Recurring Revenue 
+• Valor de por vida del cliente
+Ingresos totales 
+• Esta métrica mide la cantidad total de ingresos que la  empresa ha generado durante un período de tiempo  determinado. 
+• Los ingresos son una medida importante de la salud financiera  de la empresa, ya que representan el valor que los clientes  están dispuestos a pagar por los productos o servicios de la  empresa. 
+• Se mide en términos de dinero, por ejemplo, en USD.
+EBIT y EBITDA 
+• Son dos medidas financieras que se utilizan comúnmente para  evaluar la rentabilidad de una empresa. 
+• El EBIT (Earnings Before Interest and Taxes) es una medida de la  rentabilidad de una empresa antes de deducir los intereses y  los impuestos. 
+• El EBITDA (Earnings Before Interest, Taxes, Depreciation, and  Amortization) es una medida de la rentabilidad de una  empresa antes de deducir los intereses, los impuestos, la  depreciación y la amortización. 
+EBIT y EBITDA
+  
+
+CAC: Costo de adquisición de clientes 
+• El CAC es una métrica importante para las empresas SaaS, ya  que mide el costo promedio de adquirir un nuevo cliente.  
+• ¿Qué costos incluimos? ¿Cómo podemos discriminarlo? 
+• CAC Inicial, CAC de renovación, CAC de reactivación, CAC  de mercado, CAC del producto, CAC del cliente, CAC de  usuarios finales. 
+• Es importante que el CAC sea menor que el ingreso que el  cliente generará durante su vida útil como cliente, de lo  contrario, la empresa no será rentable a largo plazo.
+CAC: Costo de adquisición de clientes 
+• Una empresa tiene costos de adquisición trimestrales de  $520.000 y generó 175 clientes nuevos. 
+• 100 de esos nuevos clientes compraron 10 licencias. • 50 de esos nuevos clientes compraron 25 licencias. • 25 de esos nuevos clientes compraron 40 licencias. 
+• ¿Cuál es el costo de adquisición de usuarios finales? • CAC = 520.000 / (100+50+25) = 520.000 / 175 = $2.971 
+• CAC de usuario final = 520.000 / (100x10+50x25+25x40) =  520.000/3.250 = $160
+CAC: Costo de adquisición de clientes • ¿Cómo podemos gestionar a partir del CAC? • Segmentación para encontrar oportunidades. • Optimización del proceso de ventas. • Aportando valor para el cliente.
+MRR: Monthly Recurring Revenue 
+• Son los ingresos recurrentes mensuales. 
+• Es una métrica financiera crítica para las empresas SaaS. Es la cantidad  de ingresos que la empresa espera recibir cada mes de sus clientes, en  base a sus contratos de suscripción mensual. 
+• Se calcula sumando los ingresos recurrentes mensuales de todos los  clientes. 
+• MRR = Valor de la suscripción x Cantidad de suscriptores. • Ayuda a predecir los ingresos futuros y el crecimiento de la empresa.
+MRR: Monthly Recurring Revenue 
+• ¿Podemos desglosarlo? 
+• Por segmentos, por planes de suscripción, por tipo de cliente,  por canal de adquisición, por mercados, por regiones, etc. 
+• New MRR, Expansion MRR, Reactivation MRR, etc. 
+• Es importante tener en cuenta que MRR no tiene en cuenta los  ingresos únicos o no recurrentes, como las ventas de una sola  vez o las actualizaciones de productos.
+MRR: Monthly Recurring Revenue 
+• ¿Cómo podemos gestionar a partir del MRR? 
+• Segmentación para identificar oportunidades de crecimiento  y optimización. 
+• Foco en marketing (más rentables).
+ARR: Annual Recurring Revenue 
+• Ingresos Recurrentes Anuales. 
+• Aplica todo lo visto para MRR solo que el período es de 1 año. • Suaviza las fluctuaciones. 
+• Por lo general son indicadores que se utilizan juntos.
+ARR: Annual Recurring Revenue 
+• Una empresa SaaS cuenta con 300 clientes activos distribuidos  de esta forma: 
+• 180 clientes con suscripción A ($8 al mes). 
+• 90 clientes con suscripción B ($12 al mes). 
+• 30 clientes con suscripción C ($22 al mes). 
+• ARR = 180x8x12 + 90x12x12 + 30x22x12 = $38.160.
+CLV: Customer Lifetime Value 
+• Valor del cliente. 
+• ¿Cuántos ingresos generará un cliente típico durante su  relación con la empresa? Es la medida del valor que el cliente  generará para la empresa durante toda su vida útil como  cliente. 
+• Ayuda a determinar hasta cuánto es conveniente invertir para  captar un nuevo cliente y retenerlo.
+CLV: Customer Lifetime Value 
+• CLV y CAC por lo general se utilizan juntos. 
+• Juntos ayudan a determinar el retorno de la inversión (ROI). 
+• Si el CLV es mayor que el CAC, diremos que la empresa será  rentable a largo plazo. 
+• El CAC podemos verlo en términos relativos del CLV. Por  ejemplo, el aumento del CAC no es necesariamente un  problema si el CLV también aumenta. 
+• < 1:1 --- Cuesta más adquirir un cliente de lo que nos dará como ganancia. • 1:1 --- Punto de equilibrio. 
+• 3:1 --- Un punto de referencia al que apuntar (en empresas SaaS).
+ROI: Return On Investment 
+• Es el retorno de la inversión. 
+• Mide el beneficio que una empresa ha obtenido en relación  con el costo de la inversión. 
+• En modelos SaaS podemos aplicarlo a CAC y CLV.
+Payback Ratio 
+• Mide el tiempo que tarda un cliente en volverse rentable (punto de  equilibrio). 
+• Se divide el Costo de Adquisición del Cliente entre los Ingresos que  genera durante un período de tiempo (medido en meses, años, etc.). 
+• Payback Ratio = CAC / Ingreso recurrente 
+• ¿Período de recuperación largo o corto? 
+• El problema es que es demasiado genérico: 
+• No tiene en cuenta la rotación, supone una rentabilidad continua, no  tiene en cuenta la inflación. 
+Payback Ratio 
+• Ejercicio: Nos cuenta $100 adquirir un nuevo cliente que paga una  suscripción mensual de $10. ¿Cuál es el Payback Ratio? 
+• Respuesta: 10 meses. 
+• Ejercicio: El CAC de los clientes que pagan $250 en forma trimestral es de  5.000. ¿Cuál es el Payback Ratio? 
+• Respuesta: 20 trimestres. 
+• Ejercicio: El Payback Ratio de los clientes VIP es de 14 meses. Ellos pagan  una suscripción mensual de $40. ¿Cuanto es su CAC? 
+• Respuesta: $560.
+Métricas de uso 
+• Permiten evaluar la eficacia y el uso de sus productos o servicios por  parte de los clientes. 
+• Al monitorear y analizar estas métricas, las empresas pueden tomar  decisiones sobre cómo mejorar la experiencia del usuario, aumentar la  retención de clientes y aumentar el valor ofrecido por su solución. 
+• Activación de usuarios 
+• Tasa de conversión de prueba gratuita 
+• Churn Rate 
+• Tiempo de uso
+Activación de usuarios 
+• La activación de usuarios mide la cantidad de usuarios que han  realizado una acción específica en el producto o servicio. 
+• Indica que están utilizando activamente la solución. 
+• La activación de usuarios podría medir la cantidad de usuarios que han  creado una cuenta, completado un tutorial o utilizado una característica  específica.
+Tasa de conversión de prueba gratuita 
+• La tasa de conversión de prueba gratuita mide la cantidad de usuarios  que se convierten en clientes pagos después de haber probado una  versión gratuita o de prueba del producto o servicio. 
+• Esta métrica es importante porque indica la efectividad de la estrategia  de conversión y la calidad del producto o servicio ofrecido.
+Churn Rate 
+• El Churn Rate mide la cantidad de usuarios que cancelan su suscripción  o dejan de utilizar el producto o servicio en un período de tiempo  determinado. 
+• El Churn Rate es importante porque indica la cantidad de clientes que la  empresa pierde y su capacidad para retener a los clientes existentes. 
+• El Churn Rate puede tener impacto en el MRR. 
+• Churn Rate = (Clientes perdidos durante el período / Número de clientes  al inicio del período) x 100 
+• Por ejemplo, si una empresa tiene 1.000 clientes al comienzo del mes y  pierde 50 clientes durante el mismo mes, el Churn Rate sería del 5%.
+Tiempo de uso 
+• El tiempo de uso mide la cantidad de tiempo que los usuarios pasan  utilizando el producto o servicio. 
+• Esta métrica es importante porque indica la cantidad de valor que los  usuarios están recibiendo del producto o servicio y su nivel de  compromiso con la solución.
+Métricas de satisfacción de clientes 
+• La satisfacción del cliente es un factor determinante en la retención de  clientes y el crecimiento del negocio. 
+• Por eso es importante monitorear algunas de estas métricas. 
+• Nivel de satisfacción del cliente 
+• Net Promoter Score 
+• Customer Satisfaction Score 
+• Customer Effort Score
+Nivel de Satisfacción del cliente 
+• El nivel de satisfacción del cliente mide la satisfacción general de los  usuarios con el producto o servicio. 
+• Esta métrica es importante porque indica la calidad del producto o  servicio ofrecido y su capacidad para satisfacer las necesidades y  expectativas de los clientes.
+NPS: Net Promoter Score 
+• El NPS es una métrica que mide la lealtad del cliente preguntándoles si  recomendarían la empresa a un amigo o colega.  
+• Los clientes se clasifican en 3 categorías: 
+• Promotores: 9 o 10 
+• Pasivos: 7 u 8 
+• Detractores: 1, 2, 3, 4, 5, 6 
+• El NPS se calcula restando el porcentaje de detractores del porcentaje  de promotores.
+NPS: Net Promoter Score • Ejemplo: 
+• Promotores: 60 (64%) 
+• Pasivos: 22 (23%) 
+• Detractores: 12 (13%) 
+• El NPS es 64% - 13% = 51%
+CSAT: Customer Satisfaction Score 
+• El CSAT es una métrica que mide la satisfacción del cliente  preguntándoles directamente cómo se sienten sobre su experiencia con  el producto o servicio. 
+• Los clientes pueden calificar su experiencia en una escala de 1 a 5 o en  una escala del1 al 10. 
+• El CSAT se calcula dividiendo la cantidad de encuestados positivos sobre  la cantidad de encuestados.
+CSAT: Customer Satisfaction Score 
+• Ejemplo: Encuesta del 1 a 5, donde definimos que 4 y 5 son positivos. 
+• 1: Muy insatisfechos = 40 (5%) 
+• 2: Insatisfechos = 70 (9%) 
+• 3: Ni satisfechos, ni insatisfechos = 110 (14%) 
+• 4: Satisfechos = 300 (38%) 
+• 5: Muy satisfechos = 280 (35%) 
+• CSAT = (300+280) / 800 = 0,73 = 73%
+CES: Customer Effort Score 
+• El CES mide la facilidad con que los clientes pueden utilizar el producto o  servicio. 
+• Calcula el grado de dificultad que implica para el cliente resolver un  problema o lograr su objetivo, cada vez que interactúa con la empresa. 
+• Esta métrica es importante porque indica la calidad de la experiencia  del cliente y su capacidad para interactuar eficazmente con la empresa. 
+• Se calcula mediante encuestas.
+Estrategias de gestión 
+• ¿Para qué medimos? 
+• La industria SaaS es muy competitiva y, por lo tanto, las empresas  necesitan desarrollar y ejecutar estrategias efectivas para mejorar su  performance y mantener su ventaja competitiva.  
+• Mejora de la experiencia del usuario. 
+• Desarrollo de nuevas funcionalidades y productos. 
+• Aumento de la tasa de conversión y retención de usuarios. • Reducción del coste de adquisición de clientes. 
+• Expansión a nuevos mercados y segmentos de clientes.
+Mejora de la experiencia del usuario 
+• La experiencia del usuario es uno de los factores más importantes para la  retención de clientes en una empresa SaaS.  
+• Por lo tanto, las empresas deben dedicar recursos significativos a mejorar  la experiencia del usuario, incluyendo el diseño de interfaz de usuario, la  facilidad de uso, la personalización y la respuesta a las necesidades del  usuario. 
+• En general, la mejora de la experiencia del usuario puede lograrse a  través de diversas estrategias, como la personalización del software para  satisfacer las necesidades específicas de los usuarios, la implementación  de una navegación clara y fácil de seguir, la incorporación de  funcionalidades de ayuda y soporte, y la simplificación del proceso de  registro y de uso del software.
+Desarrollo de nuevas funcionalidades y  productos 
+• Las empresas SaaS deben innovar constantemente y desarrollar nuevas  funcionalidades y productos para mantenerse relevantes y satisfacer las  necesidades cambiantes de sus clientes.  
+• El desarrollo de nuevas funcionalidades y productos también puede  ayudar a las empresas a aumentar su base de clientes y retener a los  clientes existentes.
+Aumento de la tasa de conversión y  
+retención de usuarios 
+• Las empresas SaaS deben enfocarse en aumentar la tasa de conversión  de los usuarios y retener a los clientes existentes. 
+• Esto se puede lograr a través de diversas estrategias, como la mejora del  proceso de registro, la implementación de programas de fidelización de  clientes y la mejora de la experiencia del usuario.
+Reducción del CAC 
+• El costo de adquisición de clientes es uno de los mayores gastos para  una empresa SaaS.  
+• Por lo tanto, las empresas deben desarrollar estrategias efectivas para  reducir este costo y aumentar la eficiencia de sus esfuerzos de marketing  y ventas.  
+• Esto puede incluir la mejora del targeting de los anuncios, la  implementación de programas de referidos y el aumento de la retención  de clientes.
+Expansión a nuevos mercados y segmentos  de clientes 
+• Las empresas SaaS deben buscar constantemente oportunidades para  expandir su presencia en nuevos mercados y segmentos de clientes.  
+• Esto puede incluir la adaptación del producto o servicio para satisfacer  las necesidades de un mercado específico o la expansión a nuevos  mercados geográficos.
+Estrategias de gestión 
+• En resumen, para mejorar la performance de una empresa SaaS, es  necesario enfocarse en la mejora de la experiencia del usuario, el  desarrollo de nuevas funcionalidades y productos, el aumento de la tasa  de conversión y retención de usuarios, la reducción del costo de  adquisición de clientes y la expansión a nuevos mercados y segmentos  de clientes.  
+• Al implementar estas estrategias, las empresas SaaS pueden mantener su  ventaja competitiva y seguir creciendo en un mercado cada vez más  competitivo.
+Resumen 
+• En conclusión, las empresas SaaS tienen un modelo de  negocio único que les permite ofrecer software como  servicio a través de la nube, lo que las hace más accesibles  y convenientes para los usuarios finales. 
+• Las empresas SaaS también tienen una serie de métricas  clave que deben monitorear para medir su éxito, incluyendo  métricas financieras, de uso y de satisfacción de clientes. 
+• Existen varias estrategias para mejorar la performance de las  empresas SaaS, cada una de ellas puede ayudar a mejorar  su desempeño, aumentar su base de usuarios y su  rentabilidad.
+Gestión de empresas SaaS Muchas gracias

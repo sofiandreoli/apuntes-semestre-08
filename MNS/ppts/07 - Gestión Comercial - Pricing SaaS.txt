@@ -1,0 +1,62 @@
+﻿Gestión  
+Comercial 
+Ing. Andrés Galiana 
+Trabajo integrador 
+Agosto 2025
+Descremando el mercado (pricing) 
+• El tema de pricing no es trivial, implica entender algunos  conceptos, como: 
+• disposición a pagar 
+• curva de demanda 
+• discriminación de precios
+Distribución de Willingness to Pay (WTP) 
+• Disposición a pagar. Imaginemos un universo de 50 clientes  potenciales para un SaaS de gestión de inventario. Cada uno tiene un  WTP (willingness to pay) distinto: algunos pagarían poco, otros mucho  más, dependiendo de la complejidad de su negocio, márgenes o  presupuesto.
+  
+
+Precio único y excedente del consumidor 
+• Si fijamos el precio en $10, los primeros 8 clientes quedan fuera. Los  siguientes 42 entran, pagando $10 aunque muchos habrían pagado  más. Esa diferencia es lo que la microeconomía llama excedente del  consumidor: beneficio adicional que capturan al pagar menos de lo que  estaban dispuestos. 
+• Nuestro ingreso es $10 ×   
+42 clientes = $420, y el  
+excedente del  
+consumidor asciende a  
+$268.
+Precio único y excedente del consumidor 
+• ¿Qué pasa si subimos a $22? El mercado se achica: solo 13 clientes  compran, con ingresos de $286 y mucho menos beneficio percibido. Los  que entran están apenas convencidos, con mayor riesgo de churn.
+  
+
+Curva de demanda e ingresos totales 
+• Para encontrar el mejor precio único, construimos la curva de demanda:  número de clientes que comprarían a cada nivel de precio. 
+• Multiplicamos precio  
+por unidades vendidas  
+y obtenemos la curva    
+de ingresos: 
+• El máximo global está  
+en $10. 
+• Existen picos locales en  
+$22 y $32.
+Curva de demanda e ingresos totales
+  
+
+De ingresos a valor: LTV y LTV Total 
+• El problema de mirar solo ingresos es que nos quedamos con la foto del mes. En SaaS, lo  que importa no es cuánto facturamos hoy, sino cuánto valor retiene cada cohorte en el  tiempo. 
+  
+
+• Subir precio puede aumentar ARPU, pero a la vez achica Q(p) (menos clientes con WTP  ≥ p) y eleva churn. El óptimo no es el mayor ARPU, sino el máximo de LTV Total. 
+• En el siguiente ejemplo simplificado asumimos un costo marginal bajo ($2) y un margen  que mejora con el precio, pero también un churn que sube a medida que el producto  se percibe más caro. La tabla muestra cómo, aunque el LTV unitario crece a precios  altos, el LTV Total encuentra su máximo en $15 gracias a una mejor combinación de  volumen y retención.
+De ingresos a valor: LTV y LTV Total 
+• Con p = $15, el churn cae al 3% mensual, y aunque el ARPU es más bajo, el mayor  volumen y la mejor retención elevan el LTV Total. 
+• Con p = $24, el LTV unitario es mayor, pero la base servida se reduce (de 13 clientes a  10) y el valor total cae. 
+• La lección es simple: optimizar ingresos del mes puede llevarte a conclusiones falsas. Lo  que sostiene el valor de una startup no es el ARPU más alto, sino el LTV Total que surge  del equilibrio entre precio, volumen y retención.
+  
+
+Discriminación de precios: Good–Better–Best 
+• La teoría nos da una salida: discriminación de precios. En startups suele  implementarse como planes Good, Better, Best con fences (vallas) claros:  número de usuarios, cantidad de SKUs, reportes, SLA, seguridad. Así cada  cliente se auto-selecciona según sus necesidades. 
+• Si lanzamos tres planes: 
+• Good = $10 (42 clientes → $420) 
+• Better = $22 (13 clientes pagan $12 adicionales → $156 extra) • Best = $32 (3 clientes pagan $10 adicionales → $30 extra) 
+• Ingresos totales = $606, un 44% más que con precio único.
+Discriminación de precios: Good–Better–Best  
+Discriminación de precios: Good–Better–Best 
+• En este ejemplo asumimos un caso ideal de discriminación perfecta:  todos los clientes con WTP suficiente eligen el plan superior. En la  práctica, la eficiencia nunca es del 100%. Siempre habrá clientes que se  queden en planes inferiores pese a tener WTP más alto. Por eso los fences deben diseñarse con cuidado, de modo que la migración al plan  superior se perciba como natural y valiosa. 
+• Esto es “descremar el mercado”: cada plan superior incorpora una capa  extra de ingresos, capturando más valor sin expulsar al mid-market.
+Gestión comercial 
+Muchas gracias

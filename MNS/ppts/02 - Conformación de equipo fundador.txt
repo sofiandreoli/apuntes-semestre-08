@@ -1,0 +1,255 @@
+﻿Conformación  del equipo  
+fundador 
+Ing. Andrés Galiana 
+Trabajo integrador 
+Agosto 2025
+Agenda 
+• Breve repaso 
+• Conformación del equipo fundador • Importancia de un buen equipo • Características
+Breve repaso - MNS
+EMPRESA DE PRODUCTO 
+Empresa de Software as a Service (SaaS). 
+	EMPRESA DE SERVICIO 
+Empresa de Servicio de Software.
+	Vende un producto (en forma de servicio). 
+	Vende un servicio.
+	Negocio: vender un producto tal como es a  la mayor cantidad de clientes.
+	Negocio: vender proyectos únicos a una  cantidad reducida de clientes.
+	Ideal: vender el SW genérico a gran escala  en modalidad de suscripción.
+	Ideal: Productivizar un proyecto en una  solución a medida.
+	Realidad: Se ofrecen customizaciones,  mantenimientos, nuevas versiones, etc.
+	Realidad: Se ofrecen desarrollos a medida,  consultorías, soporte y mantenimiento, etc.
+	Dificultades: Inversión inicial, marketing,  canales de distribución, etc.
+	Dificultades: Ejecución de los proyectos,  cobro de los proyectos, flujo de caja, gestión  de personas.
+	
+
+
+
+Breve repaso - Innovación 
+• Aspectos de la innovación: 
+• Satisfacer una necesidad (creación de valor). • Novedad (algo diferente). 
+• Incertidumbre (riesgo). 
+• A nivel de: 
+• Producto 
+• Servicio 
+• Proceso de producción 
+• Modelo de negocio 
+• Tecnología 
+• Marketing 
+• Organizativa
+Breve repaso 
+• Sin la ejecución, la idea NO sirve para nada • Design Thinking 
+• Business Model Canvas
+Conformación del equipo fundador 
+• Los fundadores son las personas clave para que una idea se  transforme en un negocio sustentable. 
+• El equipo fundador es el motor fundamental para el  funcionamiento y crecimiento de una empresa.
+  
+  
+
+Equipo fundador 
+• Un equipo fundador fuerte es la columna vertebral del éxito de  cualquier emprendimiento. Un grupo de personas diversas,  cualificadas y motivadas que trabajen espalda con espalda  en pos de una visión compartida puede ser el factor  determinante para que una startup prospere o se desmorone.
+Conformación del equipo fundador 
+• Un equipo fundador es el grupo inicial de personas que crea la  empresa, define la visión, construye el primer producto y toma  las decisiones estratégicas más importantes. 
+• En el mundo del software, el equipo fundador no solo diseña el  negocio, sino que muchas veces construye el primer MVP y  consigue los primeros clientes antes de tener inversión externa. 
+• Las decisiones del equipo fundador afectan la cultura, la  velocidad de innovación y la capacidad de escalar.
+Conformación del equipo fundador 
+• Diferencias clave entre startups SaaS y empresas tipo Software  Factory en su etapa inicial. 
+• SaaS: requiere visión de producto, escalabilidad, innovación y  capacidad de crear algo propio que se pueda vender  globalmente. 
+• Software Factory: arranca resolviendo problemas para clientes  específicos, donde la habilidad clave es la gestión de  proyectos, calidad y relación con el cliente.
+Conformación del equipo fundador
+EMPRESA DE PRODUCTO 
+Foco inicial: Producto escalable 
+	EMPRESA DE SERVICIO 
+Foco inicial: Proyectos a medida
+	Perfil crítico: Producto + Tech 
+	Perfil crítico: Gestión + Tech + Negocio
+	Riesgo financiero: Alto (inversión antes de  vender)
+	Riesgo financiero: Menor (ingresos desde el  día 1)
+	Escalabilidad: Global 
+	Escalabilidad: Limitada a capacidad  operativa
+	
+
+
+
+Casos reales 
+• Casos reales: ejemplos de equipos fundadores exitosos. 
+• Slack: comenzó como una herramienta interna en una startup  fallida. Equipo fundador diverso en tech, producto y diseño →  reorientaron y crearon un unicornio. 
+• Globant: fundadores con perfiles complementarios (negocio,  tecnología, delivery) → crecieron desde servicios hacia  productos y consultoría global.
+Fundador técnico vs. fundador de negocio 
+• Fundador técnico (CTO o Tech Co-founder): 
+• Se encarga de la arquitectura tecnológica, desarrollo del  producto, infraestructura y decisiones técnicas estratégicas. • En SaaS, es quien lidera la construcción del MVP y asegura  que el producto sea escalable. 
+• Fundador de negocio (CEO o Business Co-founder): • Foco en la visión estratégica, relación con inversores,  modelo de negocio, marketing y ventas. 
+• Es quien “vende la visión” a clientes, inversores y  empleados.
+Perfiles complementarios 
+• Perfiles complementarios: tecnología, producto, negocio,  marketing, finanzas, cultura, etc. 
+• Tecnología: CTO o ingenieros líderes. 
+• Producto: alguien con foco en la experiencia del usuario, diseño y  Roadmap del producto. 
+• Negocio/ventas: habilidades para cerrar clientes, alianzas y generar  ingresos. 
+• Marketing: entender cómo posicionar y comunicar la propuesta de valor. • Finanzas/operaciones: control de costos, proyecciones y procesos. • Cultura/Recursos humanos: aunque al inicio sea implícito, alguien debe  velar por la cultura y el talento.
+Perfiles complementarios 
+• ¿Cómo identificar las habilidades críticas que no deben faltar? 
+• Preguntas clave: 
+• ¿Tenemos alguien que pueda construir el producto? 
+• ¿Alguien que pueda venderlo y conseguir usuarios? 
+• ¿Alguien que pueda diseñar la visión y conectar todos los puntos? 
+• Herramientas: 
+• Matriz de habilidades: técnica, negocio, diseño, marketing, finanzas. • Test de personalidad o fortalezas: entender estilos de liderazgo y  comunicación.
+Perfiles complementarios 
+• ¿Cómo identificar las habilidades críticas que no deben faltar?
+Área 
+	Responsable / Rol 
+	Habilidades Clave 
+Arquitectura, desarrollo,  escalabilidad
+	
+
+	
+
+	UX, diseño, visión de  
+producto
+	
+
+	
+
+	Estrategia, ventas, alianzas
+	
+
+	
+
+	Branding, comunicación,  adquisición
+	
+
+
+
+El rol del CTO, CEO y CPO 
+• CEO (Chief Executive Officer): visión, estrategia, liderazgo del  negocio. 
+• CTO (Chief Technology Officer): decisiones tecnológicas,  calidad del código, escalabilidad. 
+• CPO (Chief Product Officer): experiencia de usuario, diseño  funcional del producto, conexión con el cliente.
+Conformación del equipo fundador • Mucho tiempo juntos. 
+• Filosofía del negocio y valores. 
+• Confianza. 
+• Capacidades y roles (habilidades). • Compromiso con el proyecto.
+Conformación del equipo fundador 
+• Número ideal de cofundadores: ventajas y riesgos. 
+• 1 fundador: velocidad y autonomía, pero riesgo alto de  sesgos, falta de habilidades complementarias y aislamiento en  decisiones. 
+• 2 fundadores: equilibrio común → uno suele enfocarse en  producto/tecnología y el otro en negocio/estrategia. 
+• 3 o más: más diversidad de habilidades, pero riesgo de  conflictos si no hay claridad en roles y equity.
+Conformación del equipo fundador 
+• Diversidad de habilidades vs. visión compartida. 
+• Un equipo diverso trae más ideas y enfoques, pero necesita  visión y valores comunes para evitar choques constantes. 
+• En startups SaaS, diversidad = técnico, producto, ventas,  marketing. 
+• En Software Factory, diversidad = gestión, técnico, comercial,  calidad.
+Conformación del equipo fundador 
+• Modelos de equity y participación accionaria. 
+• Equity: porcentaje de propiedad de la empresa que  corresponde a cada fundador. 
+• Modelos más comunes 
+• Equidad igualitaria: todos reciben el mismo porcentaje →  simple, pero puede generar injusticias si algunos trabajan más  que otros. 
+• Equidad basada en contribución: se asigna según tiempo,  capital invertido, experiencia, red de contactos, etc.
+Cultura y valores del equipo fundador • La importancia del mindset emprendedor. 
+• Un equipo fundador con mentalidad emprendedora: • Tolera la incertidumbre. 
+• Aprende rápido de errores. 
+• Se enfoca en soluciones y no en problemas.
+Del equipo fundador al equipo de gestión • Fase inicial: fundadores = producto + negocio + ventas. 
+• Fase de crecimiento: aparecen áreas como finanzas,  marketing, operaciones. 
+• Fundadores deben soltar control para que entren  especialistas. 
+• Incorporar mentores, inversores, advisors cuando el equipo  necesita visión externa. 
+• Contratar especialistas cuando el producto ya tiene tracción y  necesita escalar.
+Riesgos de no profesionalizar la gestión a tiempo 
+• Problemas comunes: 
+• Falta de procesos → caos en la operación. 
+• Fundadores agotados → sin tiempo para estrategia. • Dificultad para atraer talento senior. 
+• La transición a una gestión profesional permite: • Crecimiento ordenado. 
+• Toma de decisiones basada en datos. 
+• Preparación para rondas de inversión.
+Dinámica de clase 
+• Contexto y objetivo: Los estudiantes recibirán el caso de una  startup SaaS ficticia que está en fase inicial y necesita formar  su equipo fundador. 
+• El objetivo es que analicen perfiles, elijan cofundadores y  justifiquen su decisión considerando: 
+• Complementariedad de habilidades. 
+• Estrategia de crecimiento. 
+• Cultura y visión del equipo.
+Dinámica de clase: idea de la startup: "FitTrack“ 
+• Descripción breve: FitTrack es una plataforma SaaS para gimnasios y entrenadores  personales que permite gestionar clientes, planes de entrenamiento y nutrición, con  métricas de progreso y recomendaciones automáticas de IA para optimizar rutinas. 
+• Problema que resuelve: La mayoría de los gimnasios usan hojas de cálculo y  sistemas desconectados, lo que dificulta el seguimiento personalizado y la fidelización  de clientes. 
+• Propuesta de valor: 
+• Dashboard para dueños de gimnasios: control de clientes, ingresos y desempeño. • App para entrenadores y usuarios con planes de entrenamiento personalizados. • Integración con wearables (smartwatches, pulseras) para métricas en tiempo real.
+Dinámica de clase: idea de la startup: "FitTrack“ 
+• Actor principal: Lucía (la de la idea 
+• Edad: 32 años 
+• Experiencia: ex Gerenta de Innovación en una cadena de gimnasios  regional. 
+• Fortalezas: 
+• Conoce el negocio fitness y las necesidades de los gimnasios. • Red de contactos con dueños de gimnasios y entrenadores  personales. 
+• Debilidades: 
+• Sin experiencia técnica en software. 
+• Nunca lideró una startup antes. 
+• Rol inicial: CEO provisional y dueña de la idea.
+Dinámica de clase: candidatos a cofundadores
+Candidato 
+Diego 
+	Perfil / Experiencia Principal 
+Ingeniero en Sistemas, 10 años  en desarrollo SaaS
+	Habilidades Clave 
+Arquitectura de  
+software, DevOps,  
+escalabilidad
+	Posibles Roles 
+CTO / Fundador  
+Técnico
+	Mariana 
+	MBA + 5 años en ventas B2B  SaaS
+	Estrategia comercial,  ventas corporativas,  pricing
+	CCO (Chief  
+Commercial Officer)
+	Andrés 
+	Diseñador UX/UI + experiencia  en apps de fitness
+	Diseño de interfaces,  experiencia del usuario
+	CPO (Chief Product  Officer)
+	Laura 
+	Contadora + 7 años en startups  fintech
+	Finanzas, métricas,  
+gestión de rondas de  inversión
+	CFO / Operaciones
+	Sofía 
+	Psicóloga Organizacional +  Cultura empresarial
+	RRHH, cultura, procesos  de talento
+	People & Culture (a  futuro)
+	Pablo 
+	Ex CEO de startup SaaS fallida
+	Estrategia, errores  
+aprendidos, visión  
+global
+	Asesor Estratégico /  Cofundador
+	
+
+
+
+Dinámica de clase: el dilema del Equity 
+• Objetivo: Que los estudiantes entiendan las complejidades  de repartir la propiedad (equity) en un equipo fundador y  cómo diferentes criterios pueden llevar a conflictos o acuerdos  justos. 
+• Consigna: Decidan cómo repartirían el equity entre los  fundadores y justifiquen. 
+• Si todos tienen igual porcentaje o no. 
+• Si consideran aportes de capital, tiempo, experiencia. • Si usarían vesting o cláusulas especiales.
+Dinámica de clase: el dilema del Equity
+Fundador 
+Martín (técnico) 
+	Aporta dinero 
+0 
+	Aporta tiempo 
+Full-time 
+	Experiencia  
+previa 
+Alta (3 startups)
+	Clara (negocios) 
+	USD 5.000 
+	Full-time 
+	Media (ventas  SaaS)
+	Luis (producto) 
+	0 
+	Part-time 
+	Alta (UX/UI)
+	Ana (marketing) 
+	0 
+	Full-time 
+	Baja
+	
+
+
+
+Conformación del equipo fundador Muchas gracias

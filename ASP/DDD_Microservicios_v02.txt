@@ -1,0 +1,327 @@
+﻿Definiendo microservicios en  función del dominio del negocio 
+Domain-Driven Design y microservicios
+Temas que vimos hasta el momento 
+• Características de los microservicios 
+• Principios de microservicios 
+• Extracción de microservicios 
+• Comunicación entre microservicios 
+• Datos y microservicios 
+• Seguridad en el contexto de microservicios
+Extracción de microservicios
+Patrones  
+Decompose by business capability 
+● Definir los servicios de manera que se  
+correspondan con Business capabilities   
+● Business Capability: concepto para modelado de  arquitecturas de negocio 
+● Es lo que hace una organización para generar valor
+Decompose by subdomain 
+Subdominio: definir servicios por medio de subdominios de  DDD  
+Un dominio está compuesto por muchos subdominios Cada subdominio corresponde con una parte del negocio Pueden ser clasificados: 
+● Core: diferenciador clave para el negocio 
+● Soporte: relacionado al negocio, pero no es un  diferenciador 
+● Genérico: no está relacionado al negocio en sí
+Domain-Driven Design y  Microservicios
+The term microservice is a label,  not a description. M. Fowler
+¿Como derivar módulos o microservicios?  • ¿De donde derivan los módulos o los microservicios ? 
+• ¿Cuál es el tamaño de un microservicio?
+  
+https://shopify.engineering/deconstructing-monolith-designing-software-maximizes-developer-productivity
+Big Ball of mud Distributed Big Ball of mud    
+Estilo de arquitectura de microservicios • Se corresponde con varios conceptos de Domain-Driven Design (DDD) • Es un estilo de arquitectura distribuida 
+• Se basa en “share nothing” 
+• No comparten Bases de Datos (en general) 
+• No comporten entidades 
+• No reusa código (salvo usando mecanismos particulares) 
+• Organizados en función de las capacidades del negocio
+Características de los microservicios 
+• Poco acoplados 
+• Altamente cohesivos 
+• Interfaces bien definidas,  
+• Se deployan independiente 
+• Propiedad de un equipo pequeño (2 pizza teams   )
+Microservicios y Atributos de calidad 
+1. Escalabilidad 
+2. Mantenibilidad 
+3. Desplegabilidad 
+4. Seguridad 
+5. Resiliencia 
+6. Observabilidad 
+7. Disponibilidad 
+8. Testeabilidad 
+9. Performance y costos de infra
+FSA 2da ed.
+Conceptos esenciales de diseño 
+• Ocultamiento de información 
+• El módulo o ms debe esconder la mayor cantidad de detalles dentro de  su frontera y detrás de su interfaz 
+• Los microservicios ocultan 
+• Sus entidades 
+• Sus bases de datos y esquemas 
+• Su lógica y mecanismos 
+• Solo exponen interfaces bien definidas
+Conceptos esenciales de diseño 
+• Cohesión 
+• El código que cambia junto, debe estar junto (Clausura común) 
+• Los microservicios deben ser altamente cohesivos • Encapsulan su estado y su comportamiento 
+• Su contexto es el de las transacciones (ACID) y son parte de las BASE • Su función tiene que se fácilmente comprensible
+Conceptos esenciales de diseño 
+• Acoplamiento 
+• Cuando el acoplamiento es bajo, la probabilidad de que el  cambio impacte en otro módulo es menor 
+• Tipos de acoplamiento 
+• Semántico o de dominio – es el acoplamiento inherente al  problema. factura -> producto 
+• Estático – función de las dependencias a nivel de código • Dinámico – depende de cómo un componente se comunica con  otros
+Acoplamiento de dominio 
+  
+Building Microservices, 2nd Edition
+Conceptos esenciales de diseño 
+• Relación Cohesión, Acoplamiento y ocultamiento de  información 
+• El ocultamiento de información impacta en la cohesión y el  acoplamiento 
+• Define la interfaz del modulo, esconde la implementación 
+• Una buena interfaz define el propósito del módulo, aumentando la  cohesión 
+• Cuando se aumenta la cohesión, se reduce el acoplamiento
+Ejemplo de acoplamiento poco visible 
+• Ocurre cuando un microservicio pasa información que necesita  otro servicio más abajo, pero que a ninguno de los del medio usan 
+  
+  
+  
+  
+Contiene información en formato        
+especifico sobre como se envían  
+los ítems y otros elementos sobre 
+la forma de envío 
+(tipo de delivery, direcciones, etc.)
+Acoplamiento de datos (evitar!) 
+Común cuando el estado de una entidad cambia por dos motivos  
+La arquitectura de un  microservicio
+Arquitectura hexagonal  
+En el estilo de  
+microservicios, en  general,  
+se implementan  siguiendo una  
+arquitectura  
+Hexagonal, Onion o  Clean
+Microservices Patterns cap 5 
+A.C.I.D. 
+Propiedades de las transacciones dentro de un microservicio 
+● Atomicity: son una unidad indivisible. Se hace todo o nada. ● Consistency: llevan a la base de un estado consistente a otro ● Isolation: transacciones concurrentes llevan al mismo estado que en  secuencia. 
+● Durability: una vez que se comitean quedan, no se pierden. 
+B.A.S.E. 
+Se dan en transacciones que involucran varios microservicios ● Basically Available – los datos están disponibles la mayor parte del tiempo 
+● Soft state – el estado puede cambiar en el tiempo mientras que se logra la  consistencia.  
+● Eventual Consistency – si le damos tiempo el sistema va a llegar a un estado  de consistencia. La consistencia de los datos no es inmediata.
+Conceptos de Domain Driven Design
+Domain-Driven Design 
+• Metodología de análisis y diseño de software • Creada por E. Evans (2003) 
+• Consiste de dos partes 
+• Diseño estratégico  
+• Responde a “para qué” o “por qué” estamos desarrollando  una solución de software 
+• Diseño táctico 
+• Responde a “cómo” implementar la solución de software • Es un proceso iterativo
+https://medium.com/@lambrych/domain-driven-design-ddd-strategic-design-explained-55e10b7ecc0f
+Diseño estratégico algunos patrones
+Dominios y subdominios 
+•Dominio 
+•Refiere al área de actividad de la empresa. • Las empresas pueden operar en múltiples  dominios 
+• FedEx – delivery de paquetes y cartas 
+• Amazon – retail y cloud computing 
+• La facultad ?
+Dominios y subdominios 
+• Subdominio 
+• Son áreas del negocio que permiten que la empresa  funcione en su dominio 
+• Ej. Uber  
+• dominio: transporte a demanda o servicios de movilidad • subdominios: 
+• Optimización de rutas 
+• Gestión de conductores 
+• Experiencia del viajero 
+• Procesamiento de pagos 
+• etc.
+Tipos de subdominios 
+• Los subdominios tienen distinto valor para el  negocio 
+• Core o núcleo 
+• Es lo que la empresa hace y que lo diferencia de sus  competidores 
+• Apple: Diseño y desarrollo de productos de tecnología al  consumidor y ecosistemas  
+• Universidad: Entrega de conocimiento y desarrollo de  programas académicos 
+Tipos de subdominios 
+• Los subdominios tienen distinto valor para el negocio • Genéricos 
+• Son actividades que en la mayoría de las empresas se hacen de  forma parecida 
+• No proveen ventaja competitiva; se usan soluciones de terceros • Ej. Autenticar usuarios 
+• Soporte 
+• Apoyan a los dominios Core 
+• Ej. Universidad: 
+• Bedelía 
+• Apoyo Tecnológico (aulas, gestión, etc.()
+https://medium.com/@lambrych/domain-driven-design-ddd-strategic-design-explained-55e10b7ecc0f
+Tipos de subdominios 
+• En general los distintos tipos de dominios guían  decisiones como: 
+• Designación de recursos 
+• Priorización de desarrollo de soluciones 
+• Decisiones de compras (genéricos) 
+• Decisiones de arquitectura (ACs) 
+• Clasificación de criticidad de servicios 
+• Etc. 
+Dominios y subdominios 
+•Subdominios y casos de uso 
+• Los subdominios agrupan conjuntos de casos  de uso que: 
+• involucran al mismo actor,  
+• las mismas entidades del negocio y,  
+• datos que están relacionados
+Dominios y subdominios – casos de uso del  negocio 
+Caso de uso / Escenarios BDD
+Learning Domain-Driven Design – cap 1 
+Lenguaje ubicuo Ubiquitous language
+No todos entendemos lo mismo 
+•Expertos del dominio 
+• Son expertos en el negocio, en particular en  subdominios 
+•Manejan un lenguaje especifico sobre su  dominio 
+•Conocen las reglas del negocio
+Comunicación - Expertos del dominio - Desarrolladores
+
+Modelo del dominio (Modelo único - no sirve) 
+Distintos expertos 
+distintas interpretaciones
+https://medium.com/@lambrych/domain-driven-design-ddd-strategic-design-explained-55e10b7ecc0f 
+Premisas de DDD 
+•Inconsistencias de modelos 
+• En general, los distintos interesados tienen distintas  interpretaciones de los elementos del negocio 
+• Los modelos a nivel del dominio son inconsistentes  (modelo de entidades)
+Premisas de DDD 
+• Para poder desarrollar soluciones de software es necesario: • Entender el lenguaje de los expertos, su forma de pensar y sus  requerimientos 
+•DDD propone utilizar un lenguaje ubicuo que: • Describe el dominio en su contexto 
+• Lo comprendan los expertos del dominio, los  
+desarrolladores y otros interesados 
+• Se utilice en las conversaciones, la documentación y el  código
+Contexto delimitado Bounded Context
+Bounded Context 
+• Bounded context (contexto delimitado) 
+• Es una frontera semántica de uno o más subdominios del negocio 
+• Dentro del BD, los expertos del dominio y los desarrolladores entienden lo  mismo (lenguaje ubicuo) 
+• Dentro del BC cada elemento del modelo tiene un sentido y semántica  especifica (cohesión) 
+• Oculta complejidad y provee funcionalidad a otras partes del sistema  (ocultamiento de información) 
+• Ej - Carrera vs. Producto, Estudiante vs Cliente
+Subdominios vs Bounded context 
+• Subdominios  
+• Espacio: problema 
+• Se identifican analizando el dominio del negocio • Sirven para entender el funcionamiento del negocio 
+• Definen un conjunto de casos de usos, entidades y  datos utilizados
+Subdominios vs Bounded context 
+•Bounded context 
+• Espacio: solución 
+• Es resultado del diseño 
+• Definen un modelo y sus elementos 
+• Implementa los casos de uso definidos para el/los  subdominios que abarca el BC 
+• En general para un subdominio puede haber uno o más  bounded contexts 
+• Un equipo es dueño de uno o más BCs
+Bounded Context Pensar en qué significa Student en  cada BC?
+
+
+Los BCs se pueden dividir de distintas  maneras 
+Learning Domain-Driven Design. – 14.8
+Se deben respetar las definiciones 
+del BC
+Poca cohesión 
+Integración de Bounded Context 
+• Existen distintos tipos de relaciones (patrones) entre los BC 
+• Los patrones de integración definen como colaboran los equipos  dueños de los BC para intercambiar información entre sus BC
+Integración de Bounded Context - Ejemplo 
+• Anticorruption Layer 
+• Se utiliza cuando el costo de “compatibilizar” ambos modelos es muy  grande (sistemas externos o legados) 
+• Se crea un mecanismo de “traducción” (Proxy) para las solicitudes de los  BC consumidores
+
+Integración de Bounded Context - Ejemplo 
+• Open-Host Service 
+• Se utiliza cuando el proveedor quiere aislar de sus cambios al  consumidor, traduciendo  
+• Se utilizan APIs para que los consumidores utilicen
+
+Context map
+
+Bounded context - destaques 
+• Los bounded context 
+• Implementan las funcionalidades en software 
+• Definen el ciclo de vida de sus elementos 
+• Son propiedad de un equipo 
+• Se relacionan con otros BCs 
+• Los mecanismos de integración de BC lo definen los equipos dueños de  los BC 
+• Son candidatos para ser microservicios
+Diseño táctico
+Diseño táctico 
+• Value object 
+• Es un objeto que se puede identificar por la composición de  sus calores (estado) 
+• Ej,. fechas, colores, números de teléfono, Nombres.  • Son inmutables
+Diseño táctico 
+• Entities 
+• Representan objectos del dominio  
+• Requieren un atributo de identificación 
+• Implementan la lógica del dominio 
+• Todos los cambios al estado del agregado se realizan en una  operación atómica (transacción) 
+• Persona, estudiante, curso, etc.  
+• Se utilizan en el contexto de los Agregados
+Diseño táctico 
+• Agregado 
+• Son elementos del dominio  
+• Requieren un atributo de identificación 
+• Agrupan una o más entidades y value objects 
+• Se manejan como un elemento único  
+• Tienen lógica del dominio 
+• Se manejan mediante una interfaz perteneciente al Aggregate Root • Maneja la integridad de sus elementos  
+• Todos los cambios al estado del agregado se realizan en una  operación atómica (transacción ACID) 
+• EJ: Factura, Pedido, Curso
+
+Conceptos DDD 
+• Domain service 
+• NO SON SERVICIOS O MICROSERVICIOS - NOMBRE SOBRE  CARGADO 
+• Son lógica del negocio que: 
+• No pertenece a ningún agregado o value object, o • Es lógica que involucra a varios agregados 
+• No tiene estado
+Agregados y Servicios del Dominio
+Mapeo a microservicios 
+• Tanto los Agregados como los BC pueden corresponderse con  microservicios
+Mapeo a microservicios – Bounded Context 
+• Los microservicios son BC, pero no siempre se cumple la regla en el otro  sentido, la cohesión del BC influye en la decisión 
+• Tener en cuenta la interfaz del BC, si es muy amplia, probablemente no  sea candidatos debido a que genera acoplamiento 
+• En las primeras iteraciones, queremos trabajar con menos servicios, se  seleccionan los MS en base a los BC 
+• Recordar 
+• Un BC puede manejar mas de un agregado 
+• Un agregado NO puede pertenecer a más de un BC
+Rango de descomposición
+La zona debajo de lo amarillo es segura para definir MS 
+Teniendo en cuenta los otros aspectos del diseño  
+Evolución de Microservicios
+
+Mapeo a microservicios - Agregados • Los agregados pueden corresponderse con Microservicios 
+• Son el elemento más pequeño de DDD que puede ser un MS 
+• Si los agregados son muy chicos necesitan interactuar con otros  agregados para lograr determinada funcionalidad, creando  Acoplamiento
+Siempre considerar otros  aspectos
+Microservicios y Atributos de calidad 
+1. Escalabilidad 
+2. Mantenibilidad 
+3. Desplegabilidad 
+4. Seguridad 
+5. Resiliencia 
+6. Observabilidad 
+7. Disponibilidad 
+8. Testeabilidad 
+9. Performance y costos de infra
+Otras consideraciones  
+• Volatilidad 
+• Los elementos que cambian más frecuentemente son candidatos a estar  en el mismo microservicio 
+• Seguridad de Datos 
+• El tipo de dato puede ser procesado de formas que la determinan los  servicios (ej. PII, tarjetas de crédito, etc). forzando un MS
+Otras consideraciones 
+
+Otras consideraciones  
+• Organizacionales 
+• La estructura organizacional debe estar alineada con la arquitectura  (Conway) y los microservicios deberían tener un solo dueño 
+• En las primeras etapas de la organización, idealmente tener servicios  más grandes que se puedan partir a medida que crece la empresa
+En resumen 
+• Comenzar seleccionando Bounded Context 
+• La funcionalidad de un microservicio no debe cruzar mas de un BC • Siguiente considerar los Agregados 
+• El agregado debe ser cohesivo 
+• El agregado debe ser lo más desacoplado posible 
+• El cambio de estado del agregado debe corresponder con una  transacción ACID 
+• Siempre tener en cuenta los Acs y aspectos organizacionales • Equipos y microservicios 
+• Escalabilidad, disponibilidad, deployabilidad, seguridad, integrabilidad,  etc. 
+Fuentes  
+• Building microservices 2 ed S. Newman 
+• Fundamentals of software architecture 2 ed –N. Ford, M. Richards • Domain Driven Design Distilled - Vaughn Vernon 
+• Domain-driven design - Eric Evans 
+• Learning Domain-Driven Design - Vlad Khononov 
+• https://ddd-practitioners.com/home/glossary/ 
+• https://medium.com/@lambrych/domain-driven-design-ddd strategic-design-explained-55e10b7ecc0f

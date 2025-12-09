@@ -1,0 +1,25 @@
+﻿Modelos de Negocios de Software 
+1. Para el caso de la empresa que está analizando en el obligatorio, comente cuál es  el modelo de negocio siguiendo la herramienta de análisis de Business Model  Canvas. 
+2. Para el caso de la empresa que está analizando en el obligatorio, comente su  opinión acerca de la conformación del equipo fundador. 
+3. Dos socios fundadores están emprendiendo con un modelo de software factory  cuando un primer cliente solicita facturación. Comente cuál sería la  recomendación para estos dos socios fundadores. 
+4. Analice los pros y las contras de un modelo SaaS. 
+5. ¿Por qué decimos que un modelo SaaS es más riesgoso que un modelo de  servicios de software? 
+6. ¿Cuál es la diferencia entre la misión y la visión de una organización? De un  ejemplo para clarificar su respuesta. 
+7. Considerando los distintos indicadores que podemos definir en una organización,  defina CAC y CLV, y explique cómo deben relacionarse entre sí. 
+8. ¿Qué es el Forecast en la gestión comercial? 
+9. ¿Por qué es importante que los vendedores en una organización tengan una  componente variable es su retribución? 
+10. ¿Cuáles son las características deseadas a la hora de conformar un equipo  fundador? 
+11. Brinde 3 ejemplos de aspectos que pueden incluirse en un acuerdo de  accionistas. 
+12. ¿Qué son los objetivos de una organización y qué características deben cumplir? 
+13. Definir la métrica Payback Ratio en un modelo SaaS. De un ejemplo para clarificar  su respuesta.  
+14. Brinde 3 ejemplos de objetivos correctamente definidos en el área comercial. 15. ¿Qué son las licitaciones públicas? 
+16. ¿Qué es el Cap Table de una organización?
+17. ¿Qué conviene evaluar de un posible inversor antes de que invierta en nuestro  negocio? 
+18. Una startup tiene 4 socios fundadores con el siguiente CAP table: Florencia: 40%,  Josefina: 25%, Juan Martín: 20% y Diego 15%. La empresa tiene una valuación pre money de USD 3.000.000 y un inversor ángel quiere invertir USD 500.000 en la  primera ronda. Analice: ¿quién es el socio más “diluido”? 
+19. Una empresa está evaluando el siguiente proyecto. Antes de decidir si lo ejecuta o  no desea conocer el ROI expresado en términos de CAC y CLV. 
+- Inversión inicial: USD 60.000 
+- CAC estimado: USD 18 por cliente 
+- Proyección de ventas (primer año): 6.000 clientes nuevos 
+- Precio mensual de la suscripción: USD 4 
+- Churn rate mensual: 7% 
+- Financiamiento: Se financiará con un préstamo bancario al 8% anual.
